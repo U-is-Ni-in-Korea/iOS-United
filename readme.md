@@ -12,8 +12,8 @@
 |------|---|---|---|
 |<a href="https://github.com/parkikbum"><img src="https://img.shields.io/badge/github-000000?style=flat-square&logo=Github&logoColor=white"/></a>|<a href="https://github.com/sarang3009"><img src="https://img.shields.io/badge/github-000000?style=flat-square&logo=Github&logoColor=white"/></a>|<a href="https://github.com/ryuchanghwi"><img src="https://img.shields.io/badge/github-000000?style=flat-square&logo=Github&logoColor=white"/></a>|<a href="https://github.com/hyj422"><img src="https://img.shields.io/badge/github-000000?style=flat-square&logo=Github&logoColor=white"/></a>|
 
-#Git flow
-# branch
+# GitFlow
+## branch
 
 ### main
 
@@ -36,7 +36,7 @@
 
 </aside>
 
-![Untitled](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/f7497795-62f3-4da0-b47e-8e874df9e350/Untitled.png)
+![Untitled](https://github.com/GGumPiece/GGumPiece_iOS/assets/73978827/6a90c619-6e0d-471f-80c7-0f8e072b791d)
 
 # Branch naming
 
@@ -49,19 +49,22 @@ fix_{issuenumber}_hong
 ```
 
 <aside>
-🤚 `feat`
+
+	🤚 `feat`
 UI작업이나 기능작업을 포함한 신규 구현 관련된 작업시의 브랜치 분기
 
 </aside>
 
 <aside>
-🤚 `refactor`
+
+	🤚 `refactor`
 기능의 변경 없이 앱의 구조 개선이나, 코드 개선작업시의 브랜치 분기
 
 </aside>
 
 <aside>
-🤚 `fix`
+
+	🤚 `fix`
 bug수정과 관련된 작업 진행시 
 브랜치 분기
 
@@ -277,35 +280,9 @@ bug수정과 관련된 작업 진행시
     
     ```
 
-#foldering 
-## 폴더링
+# foldering 
+<img width="690" alt="image" src="https://github.com/GGumPiece/GGumPiece_iOS/assets/73978827/f9f017d4-e0db-49d9-8587-fe9997f2a063">
 
-```swift
-Uni-iOS
-	│
-  |── Source
-  │   |── Extensions
-  │   |── Models
-  │   |── Repository
-  │   |── Global
-	│        └── Shared
-  │   |── Scene
-	│	  │   |── ViewController
-	│	  │	  |── View
-	│	  │	  |── Cells
-	│	  │	    |── CollectionViewCell
-	│	  │	    |── TableViewCell
-	│	  |		└── Components
-  │   └── Supports
-	│			    |── AppDelegate.swift
-	│					└── SceneDelegate.swift
-  └── Resource
-     |── LaunchScreen.storyboard
-     |── Assets.xcassets
-     └── Info.plist
-```
-
- 
 
 # 가용 라이브러리
 
