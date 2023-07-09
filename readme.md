@@ -6,9 +6,11 @@
 우리 둘만의 불꽃, SPARKLE
 
 # UNI iOS Developers
+![IMG_7613](https://github.com/U-is-Ni-in-Korea/iOS-United/assets/128811092/bb61e667-cde1-4c95-87f7-67b22a69b134)
+
 |박익범|김사랑|류창휘|홍유정|
 |------|---|---|---|
-|개인사진없는데|뭘넣으면|좋을까|단체사진?|
+|<a href="https://github.com/parkikbum"><img src="https://img.shields.io/badge/github-000000?style=flat-square&logo=Github&logoColor=white"/></a>|<a href="https://github.com/sarang3009"><img src="https://img.shields.io/badge/github-000000?style=flat-square&logo=Github&logoColor=white"/></a>|<a href="https://github.com/ryuchanghwi"><img src="https://img.shields.io/badge/github-000000?style=flat-square&logo=Github&logoColor=white"/></a>|<a href="https://github.com/hyj422"><img src="https://img.shields.io/badge/github-000000?style=flat-square&logo=Github&logoColor=white"/></a>|
 
 #Git flow
 # branch
