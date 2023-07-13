@@ -1,8 +1,19 @@
-//
-//  HomeRepository.swift
-//  Uni
-//
-//  Created by 박익범 on 2023/07/13.
-//
-
 import Foundation
+import Alamofire
+
+class HomeRepository {
+    func test(completion: (() -> Void)) {
+        completion()
+    }
+    
+    func getHomeData(completion: @escaping ((HomeDataModel) -> Void)) {
+        GetService.shared.getService(from: Config.baseURL + "api/home",
+                                     isUseHeader: false) { (data: HomeDataModel?, error) in
+            guard let data = data else {
+                print("error: \(error?.debugDescription)")
+                return
+            }
+            completion(data)
+        }
+    }
+}
