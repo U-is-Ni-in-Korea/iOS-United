@@ -506,7 +506,6 @@
 /* Begin XCBuildConfiguration section */
 		36012F1E2A55A9F6006B8A39 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 361FA3292A60199500C3BBFD /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = "http://uni-sparkle.kro.kr/";
@@ -568,7 +567,6 @@
 		};
 		36012F1F2A55A9F6006B8A39 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 361FA3292A60199500C3BBFD /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = "http://uni-sparkle.kro.kr/";
@@ -629,7 +627,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U24ZACT97M;
+				DEVELOPMENT_TEAM = JB8T59WMFR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Uni/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Uni;
@@ -661,7 +659,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = U24ZACT97M;
+				DEVELOPMENT_TEAM = JB8T59WMFR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Uni/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Uni;

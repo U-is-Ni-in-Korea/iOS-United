@@ -6,12 +6,19 @@
 //
 
 import UIKit
+
 class LoginViewController: BaseViewController {
     // MARK: - Property
+    private var loginView = LoginView()
     
     // MARK: - UI Property
     
     // MARK: - Life Cycle
+    override func loadView() {
+        super.loadView()
+        loginView = LoginView(frame: self.view.frame)
+        view = loginView
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayout()
