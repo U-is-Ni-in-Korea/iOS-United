@@ -31,6 +31,9 @@
 		36012F5F2A55D0A0006B8A39 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 36012F5E2A55D0A0006B8A39 /* Kingfisher */; };
 		36012F622A55D0F4006B8A39 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 36012F612A55D0F4006B8A39 /* Sentry */; };
 		36012F652A55D155006B8A39 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 36012F642A55D155006B8A39 /* KakaoSDK */; };
+		361FA3252A6012A600C3BBFD /* SDSKit in Frameworks */ = {isa = PBXBuildFile; productRef = 361FA3242A6012A600C3BBFD /* SDSKit */; };
+		361FA3282A60193B00C3BBFD /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3272A60193B00C3BBFD /* HomeRepository.swift */; };
+		361FA32B2A601A4100C3BBFD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA32A2A601A4100C3BBFD /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +57,9 @@
 		36012F4E2A55CF18006B8A39 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		36012F502A55CF2D006B8A39 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		36012F522A55CFAF006B8A39 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		361FA3272A60193B00C3BBFD /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		361FA3292A60199500C3BBFD /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		361FA32A2A601A4100C3BBFD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 				36012F622A55D0F4006B8A39 /* Sentry in Frameworks */,
 				36012F5F2A55D0A0006B8A39 /* Kingfisher in Frameworks */,
 				36012F5C2A55D08E006B8A39 /* Alamofire in Frameworks */,
+				361FA3252A6012A600C3BBFD /* SDSKit in Frameworks */,
 				36012F562A55D06C006B8A39 /* SnapKit in Frameworks */,
 				36012F592A55D07D006B8A39 /* Then in Frameworks */,
 				36012F652A55D155006B8A39 /* KakaoSDK in Frameworks */,
@@ -126,6 +133,7 @@
 			children = (
 				36012F0F2A55A9F4006B8A39 /* AppDelegate.swift */,
 				36012F112A55A9F4006B8A39 /* SceneDelegate.swift */,
+				361FA3292A60199500C3BBFD /* Config.xcconfig */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -149,6 +157,7 @@
 		36012F282A55AE4A006B8A39 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				361FA3262A60192B00C3BBFD /* HomeRepository */,
 				36012F392A55B5FD006B8A39 /* AuthRepository */,
 			);
 			path = Repository;
@@ -174,6 +183,7 @@
 				36012F4E2A55CF18006B8A39 /* UIStackView+.swift */,
 				36012F502A55CF2D006B8A39 /* UIView+.swift */,
 				36012F522A55CFAF006B8A39 /* UIViewController+.swift */,
+				361FA32A2A601A4100C3BBFD /* Config.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -267,6 +277,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		361FA3262A60192B00C3BBFD /* HomeRepository */ = {
+			isa = PBXGroup;
+			children = (
+				361FA3272A60193B00C3BBFD /* HomeRepository.swift */,
+			);
+			path = HomeRepository;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -290,6 +308,7 @@
 				36012F5E2A55D0A0006B8A39 /* Kingfisher */,
 				36012F612A55D0F4006B8A39 /* Sentry */,
 				36012F642A55D155006B8A39 /* KakaoSDK */,
+				361FA3242A6012A600C3BBFD /* SDSKit */,
 			);
 			productName = Uni;
 			productReference = 36012F0C2A55A9F4006B8A39 /* Uni.app */;
@@ -326,6 +345,7 @@
 				36012F5D2A55D0A0006B8A39 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				36012F602A55D0F4006B8A39 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 				36012F632A55D155006B8A39 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				361FA3232A6012A600C3BBFD /* XCRemoteSwiftPackageReference "iOS-SDS-United" */,
 			);
 			productRefGroup = 36012F0D2A55A9F4006B8A39 /* Products */;
 			projectDirPath = "";
@@ -361,8 +381,10 @@
 				36012F3B2A55B60F006B8A39 /* AuthRepository.swift in Sources */,
 				36012F122A55A9F4006B8A39 /* SceneDelegate.swift in Sources */,
 				36012F4D2A55CEF4006B8A39 /* UIButton+.swift in Sources */,
+				361FA3282A60193B00C3BBFD /* HomeRepository.swift in Sources */,
 				36012F492A55CE5D006B8A39 /* NSObject+.swift in Sources */,
 				36012F4F2A55CF18006B8A39 /* UIStackView+.swift in Sources */,
+				361FA32B2A601A4100C3BBFD /* Config.swift in Sources */,
 				36012F532A55CFAF006B8A39 /* UIViewController+.swift in Sources */,
 				36012F512A55CF2D006B8A39 /* UIView+.swift in Sources */,
 				36012F472A55CDEE006B8A39 /* Date+.swift in Sources */,
@@ -388,6 +410,7 @@
 /* Begin XCBuildConfiguration section */
 		36012F1E2A55A9F6006B8A39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 361FA3292A60199500C3BBFD /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -448,6 +471,7 @@
 		};
 		36012F1F2A55A9F6006B8A39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 361FA3292A60199500C3BBFD /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -636,6 +660,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		361FA3232A6012A600C3BBFD /* XCRemoteSwiftPackageReference "iOS-SDS-United" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/U-is-Ni-in-Korea/iOS-SDS-United";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -668,6 +700,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 36012F632A55D155006B8A39 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
 			productName = KakaoSDK;
+		};
+		361FA3242A6012A600C3BBFD /* SDSKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 361FA3232A6012A600C3BBFD /* XCRemoteSwiftPackageReference "iOS-SDS-United" */;
+			productName = SDSKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

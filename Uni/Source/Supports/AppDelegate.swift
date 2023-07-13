@@ -1,11 +1,5 @@
-//
-//  AppDelegate.swift
-//  Uni
-//
-//  Created by 박익범 on 2023/07/05.
-//
-
 import UIKit
+import Sentry
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,6 +8,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        SentrySDK.start { options in
+            options.dsn = "https://77bac313ebba4ca8b785852d9c36b39b@o4505393164124160.ingest.sentry.io/4505426124996608"
+            options.debug = true
+        }
         return true
     }
 
