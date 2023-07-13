@@ -51,6 +51,7 @@
 		361FA3522A602C0900C3BBFD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3512A602C0900C3BBFD /* Game.swift */; };
 		361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3532A602C1C00C3BBFD /* RoundGameList.swift */; };
 		A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */; };
+		A5B4B5922A604F43000C7555 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B5912A604F43000C7555 /* LoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +95,7 @@
 		361FA3512A602C0900C3BBFD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		361FA3532A602C1C00C3BBFD /* RoundGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundGameList.swift; sourceTree = "<group>"; };
 		A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A5B4B5912A604F43000C7555 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -348,6 +350,7 @@
 		A5B4B58D2A604C86000C7555 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A5B4B5912A604F43000C7555 /* LoginView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -478,6 +481,7 @@
 				361FA3322A601E7900C3BBFD /* PostService.swift in Sources */,
 				A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */,
 				36012F322A55AF16006B8A39 /* HomeViewController.swift in Sources */,
+				A5B4B5922A604F43000C7555 /* LoginView.swift in Sources */,
 				361FA3462A602A2800C3BBFD /* MissionContentList.swift in Sources */,
 				36012F4B2A55CE87006B8A39 /* String+.swift in Sources */,
 				36012F452A55CDAA006B8A39 /* CGPoint+.swift in Sources */,
