@@ -10,7 +10,7 @@
 Pods/
 
 ### Env
-Uni/Source/Supports/Config.xcconfig
+*.xcconfig
 
 ### macOS ###
 # General
