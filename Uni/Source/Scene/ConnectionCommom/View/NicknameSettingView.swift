@@ -1,5 +1,5 @@
 //
-//  CoupleConnectionMethodView.swift
+//  NicknameSettingView.swift
 //  Uni
 //
 //  Created by 류창휘 on 2023/07/14.
@@ -10,7 +10,7 @@ import UIKit
 import SDSKit
 import Then
 
-final class CoupleConnectionMethodView: UIView {
+final class NicknameSettingView: UIView {
 
     // MARK: - UI Property
     
@@ -36,13 +36,6 @@ final class CoupleConnectionMethodView: UIView {
     
     private let nickNameTextField = SDSTextfield(placeholder: "닉네임")
     
-    private let appleButton = UIButton().then {
-        $0.backgroundColor = UIColor(hex: 0x232323)
-        $0.setTitle("Apple 로그인", for: .normal)
-        $0.setTitleColor(UIColor.gray000, for: .normal)
-        $0.titleLabel?.font = SDSFont.btn2.font
-        $0.layer.cornerRadius = 10
-    }
     private let logoImageView = UIImageView().then {
         $0.backgroundColor = .red
     }

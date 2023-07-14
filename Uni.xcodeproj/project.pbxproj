@@ -182,7 +182,7 @@
 		36012F262A55AE3F006B8A39 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				A555AD972A60782F0083CD20 /* InvitationSender */,
+				A555AD972A60782F0083CD20 /* ConnectionCommom */,
 				36012F2B2A55AE8D006B8A39 /* Home */,
 			);
 			path = Scene;
@@ -343,13 +343,13 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		A555AD972A60782F0083CD20 /* InvitationSender */ = {
+		A555AD972A60782F0083CD20 /* ConnectionCommom */ = {
 			isa = PBXGroup;
 			children = (
 				A555AD992A6079470083CD20 /* ViewController */,
 				A555AD982A6079420083CD20 /* View */,
 			);
-			path = InvitationSender;
+			path = ConnectionCommom;
 			sourceTree = "<group>";
 		};
 		A555AD982A6079420083CD20 /* View */ = {
