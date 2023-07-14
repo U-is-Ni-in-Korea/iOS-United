@@ -16,11 +16,23 @@ final class NicknameSettingView: UIView {
     
     private let navigationBarView = SDSNavigationBar(hasBack: true, hasTitleItem: false)
     
-    private let nextButton = SDSButton(type: .fill, state: .disabled)
+    private let nextButton = SDSButton(type: .fill, state: .disabled).then {
+        $0.setButtonTitle(title: "다음")
+    }
     
-    private let nicknameSetTitleLabel = UILabel()
+    private let nicknameBackgroundView = UIView()
     
-    private let nicknameSetSubTitleLabel = UILabel()
+    private let nicknameSetTitleLabel = UILabel().then {
+        $0.text = "사용할 닉네임을 입력하세요"
+        $0.textColor = UIColor.gray600
+        $0.font = SDSFont.subTitle.font
+    }
+    
+    private let nicknameSetSubTitleLabel = UILabel().then {
+        $0.text = "내 애인이 나를 부르는 애칭은 무엇인가요?"
+        $0.textColor = UIColor.gray350
+        $0.font = SDSFont.body2.font
+    }
     
     private let nickNameTextField = SDSTextfield(placeholder: "닉네임")
     
@@ -65,27 +77,45 @@ final class NicknameSettingView: UIView {
 //        appleButton.configuration = appleConfig
 //        appleButton.layer.applyDepth1Shadow()
 
+        nextButton.layer.applyDepth1Shadow()
+        nextButton.isEnabled = false
+        nickNameTextField.layer.borderColor = UIColor.gray300.cgColor
     }
 
     private func setLayout() {
-        self.addSubviews([navigationBarView, nextButton])
-//        self.addSubviews([kakaoButton, appleButton, logoImageView])
-//
-//        kakaoButton.snp.makeConstraints {
-//            $0.bottom.equalTo(appleButton.snp.top).offset(-16)
-//            $0.leading.trailing.equalToSuperview().inset(20)
-//            $0.height.equalTo(48)
-//        }
-//        appleButton.snp.makeConstraints {
-//            $0.bottom.equalToSuperview().inset(155)
-//            $0.leading.trailing.equalToSuperview().inset(20)
-//            $0.height.equalTo(48)
-//        }
-//        logoImageView.snp.makeConstraints {
-//            $0.height.width.equalTo(160)
-//            $0.bottom.equalTo(kakaoButton.snp.top).offset(-139)
-//            $0.centerX.equalToSuperview()
-//        }
+        self.addSubviews([navigationBarView, nextButton, nicknameBackgroundView, nickNameTextField])
+        
+        nicknameBackgroundView.addSubviews([nicknameSetTitleLabel, nicknameSetSubTitleLabel])
+        
+        navigationBarView.snp.makeConstraints {
+            $0.top.equalTo(self.safeAreaLayoutGuide)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(52.adjusted)
+        }
+        nextButton.snp.makeConstraints {
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(48)
+            $0.bottom.equalTo(self.safeAreaLayoutGuide).offset(-16)
+        }
+        nicknameBackgroundView.snp.makeConstraints {
+            $0.top.equalTo(navigationBarView.snp.bottom).offset(58)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(50)
+        }
+        nicknameSetTitleLabel.snp.makeConstraints {
+            $0.height.equalTo(24)
+            $0.top.leading.equalToSuperview()
+        }
+        nicknameSetSubTitleLabel.snp.makeConstraints {
+            $0.leading.bottom.equalToSuperview()
+            $0.height.equalTo(20)
+        }
+        
+        nickNameTextField.snp.makeConstraints {
+            $0.top.equalTo(nicknameBackgroundView.snp.bottom).offset(27)
+            $0.leading.trailing.equalToSuperview().inset(20)
+        }
+        
     }
 
 }
