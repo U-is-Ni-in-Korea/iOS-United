@@ -50,6 +50,9 @@
 		361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */; };
 		361FA3522A602C0900C3BBFD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3512A602C0900C3BBFD /* Game.swift */; };
 		361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3532A602C1C00C3BBFD /* RoundGameList.swift */; };
+		A58C702B2A61C42D00327CD3 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = A58C702A2A61C42D00327CD3 /* Config.xcconfig */; };
+		A58C70302A61CE6300327CD3 /* EnterInvitationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C702F2A61CE6200327CD3 /* EnterInvitationView.swift */; };
+		A58C70322A61D3AC00327CD3 /* EnterInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C70312A61D3AC00327CD3 /* EnterInvitationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +76,6 @@
 		36012F502A55CF2D006B8A39 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		36012F522A55CFAF006B8A39 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		361FA3272A60193B00C3BBFD /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
-		361FA3292A60199500C3BBFD /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		361FA32A2A601A4100C3BBFD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		361FA32F2A601D2E00C3BBFD /* GetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetService.swift; sourceTree = "<group>"; };
@@ -92,6 +94,9 @@
 		361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGameHistoryList.swift; sourceTree = "<group>"; };
 		361FA3512A602C0900C3BBFD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		361FA3532A602C1C00C3BBFD /* RoundGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundGameList.swift; sourceTree = "<group>"; };
+		A58C702A2A61C42D00327CD3 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		A58C702F2A61CE6200327CD3 /* EnterInvitationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInvitationView.swift; sourceTree = "<group>"; };
+		A58C70312A61D3AC00327CD3 /* EnterInvitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInvitationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,9 +168,9 @@
 		36012F252A55AE35006B8A39 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
+				A58C702A2A61C42D00327CD3 /* Config.xcconfig */,
 				36012F0F2A55A9F4006B8A39 /* AppDelegate.swift */,
 				36012F112A55A9F4006B8A39 /* SceneDelegate.swift */,
-				361FA3292A60199500C3BBFD /* Config.xcconfig */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -173,6 +178,7 @@
 		36012F262A55AE3F006B8A39 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				A58C702C2A61CC4F00327CD3 /* EnterInvitation */,
 				36012F2B2A55AE8D006B8A39 /* Home */,
 			);
 			path = Scene;
@@ -333,6 +339,31 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		A58C702C2A61CC4F00327CD3 /* EnterInvitation */ = {
+			isa = PBXGroup;
+			children = (
+				A58C702D2A61CE3800327CD3 /* View */,
+				A58C702E2A61CE4800327CD3 /* ViewController */,
+			);
+			path = EnterInvitation;
+			sourceTree = "<group>";
+		};
+		A58C702D2A61CE3800327CD3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A58C702F2A61CE6200327CD3 /* EnterInvitationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A58C702E2A61CE4800327CD3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A58C70312A61D3AC00327CD3 /* EnterInvitationViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -410,6 +441,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36012F1C2A55A9F6006B8A39 /* LaunchScreen.storyboard in Resources */,
+				A58C702B2A61C42D00327CD3 /* Config.xcconfig in Resources */,
 				36012F192A55A9F6006B8A39 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -429,6 +461,8 @@
 				36012F3E2A55B64C006B8A39 /* HomeDataModel.swift in Sources */,
 				361FA3382A60223200C3BBFD /* HeaderUtils.swift in Sources */,
 				361FA33F2A60261000C3BBFD /* ShortGame.swift in Sources */,
+				A58C70322A61D3AC00327CD3 /* EnterInvitationViewController.swift in Sources */,
+				A58C70302A61CE6300327CD3 /* EnterInvitationView.swift in Sources */,
 				36012F342A55AF4D006B8A39 /* HomeView.swift in Sources */,
 				361FA3342A601EAA00C3BBFD /* PatchService.swift in Sources */,
 				361FA3482A602A5C00C3BBFD /* RoundMission.swift in Sources */,
@@ -474,7 +508,6 @@
 /* Begin XCBuildConfiguration section */
 		36012F1E2A55A9F6006B8A39 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 361FA3292A60199500C3BBFD /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = "http://uni-sparkle.kro.kr/";
@@ -536,7 +569,6 @@
 		};
 		36012F1F2A55A9F6006B8A39 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 361FA3292A60199500C3BBFD /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = "http://uni-sparkle.kro.kr/";
