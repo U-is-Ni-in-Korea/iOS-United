@@ -15,13 +15,15 @@ final class HomeViewController: BaseViewController {
     override func loadView() {
         super.loadView()
         self.view = homeView
+        
+        homeView.bindData(myScore: 15,
+                          partnerScore: 10,
+                          drawScore: 2,
+                          dDay: 100)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        homeRepository.getHomeData { [weak self] data in
-            print(data.userID)
-        }
     }
     
     //MARK: - set view config
@@ -34,5 +36,8 @@ final class HomeViewController: BaseViewController {
     }
     
     //MARK: - controll function
+    
+    
+    //MARK: - DataBinding
     
 }

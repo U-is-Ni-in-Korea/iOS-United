@@ -50,6 +50,8 @@
 		361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */; };
 		361FA3522A602C0900C3BBFD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3512A602C0900C3BBFD /* Game.swift */; };
 		361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3532A602C1C00C3BBFD /* RoundGameList.swift */; };
+		361FA35B2A60B2EB00C3BBFD /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA35A2A60B2EB00C3BBFD /* ScoreView.swift */; };
+		361FA35D2A60B85100C3BBFD /* ScoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA35C2A60B85100C3BBFD /* ScoreInfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +94,8 @@
 		361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGameHistoryList.swift; sourceTree = "<group>"; };
 		361FA3512A602C0900C3BBFD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		361FA3532A602C1C00C3BBFD /* RoundGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundGameList.swift; sourceTree = "<group>"; };
+		361FA35A2A60B2EB00C3BBFD /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		361FA35C2A60B85100C3BBFD /* ScoreInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreInfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -257,6 +261,8 @@
 		36012F302A55AEAD006B8A39 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				361FA35A2A60B2EB00C3BBFD /* ScoreView.swift */,
+				361FA35C2A60B85100C3BBFD /* ScoreInfoView.swift */,
 			);
 			name = Components;
 			sourceTree = "<group>";
@@ -425,6 +431,7 @@
 				36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */,
 				361FA3442A6029E400C3BBFD /* WishCoupon.swift in Sources */,
 				36012F102A55A9F4006B8A39 /* AppDelegate.swift in Sources */,
+				361FA35B2A60B2EB00C3BBFD /* ScoreView.swift in Sources */,
 				361FA3422A6027B400C3BBFD /* WishCouponList.swift in Sources */,
 				36012F3E2A55B64C006B8A39 /* HomeDataModel.swift in Sources */,
 				361FA3382A60223200C3BBFD /* HeaderUtils.swift in Sources */,
@@ -441,6 +448,7 @@
 				361FA3282A60193B00C3BBFD /* HomeRepository.swift in Sources */,
 				361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */,
 				36012F492A55CE5D006B8A39 /* NSObject+.swift in Sources */,
+				361FA35D2A60B85100C3BBFD /* ScoreInfoView.swift in Sources */,
 				36012F4F2A55CF18006B8A39 /* UIStackView+.swift in Sources */,
 				361FA32B2A601A4100C3BBFD /* Config.swift in Sources */,
 				361FA34A2A602AC000C3BBFD /* MissionContent.swift in Sources */,
