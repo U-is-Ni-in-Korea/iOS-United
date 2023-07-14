@@ -50,6 +50,19 @@
 		361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */; };
 		361FA3522A602C0900C3BBFD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3512A602C0900C3BBFD /* Game.swift */; };
 		361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3532A602C1C00C3BBFD /* RoundGameList.swift */; };
+		8D2B2E762A6161A900B75CDD /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E752A6161A900B75CDD /* SettingTableViewCell.swift */; };
+		8D2B2E782A6161D500B75CDD /* SettingTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E772A6161D500B75CDD /* SettingTitle.swift */; };
+		8D2B2E7A2A61623300B75CDD /* SettingProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E792A61623300B75CDD /* SettingProfileView.swift */; };
+		8D2B2E7C2A61638000B75CDD /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E7B2A61638000B75CDD /* SettingView.swift */; };
+		8D2B2E7E2A6163B400B75CDD /* SettingTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E7D2A6163B400B75CDD /* SettingTableViewHeaderView.swift */; };
+		8D2B2E802A6163E900B75CDD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E7F2A6163E900B75CDD /* SettingViewController.swift */; };
+		8D2B2E822A61643E00B75CDD /* Config.xcconfig in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E812A61643E00B75CDD /* Config.xcconfig */; };
+		8D2B2E842A616CDC00B75CDD /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E832A616CDC00B75CDD /* AccountViewController.swift */; };
+		8D2B2E862A616CFA00B75CDD /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E852A616CFA00B75CDD /* AccountView.swift */; };
+		8D2B2E882A61778900B75CDD /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E872A61778900B75CDD /* AccountTableViewCell.swift */; };
+		8D2B2E8A2A61786A00B75CDD /* AccountTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E892A61786A00B75CDD /* AccountTitle.swift */; };
+		8D2B2E8C2A619C0D00B75CDD /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E8B2A619C0D00B75CDD /* EditProfileViewController.swift */; };
+		8D2B2E8E2A619C2E00B75CDD /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E8D2A619C2E00B75CDD /* EditProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,7 +86,6 @@
 		36012F502A55CF2D006B8A39 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		36012F522A55CFAF006B8A39 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
 		361FA3272A60193B00C3BBFD /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
-		361FA3292A60199500C3BBFD /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		361FA32A2A601A4100C3BBFD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		361FA32F2A601D2E00C3BBFD /* GetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetService.swift; sourceTree = "<group>"; };
@@ -92,6 +104,19 @@
 		361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGameHistoryList.swift; sourceTree = "<group>"; };
 		361FA3512A602C0900C3BBFD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		361FA3532A602C1C00C3BBFD /* RoundGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundGameList.swift; sourceTree = "<group>"; };
+		8D2B2E752A6161A900B75CDD /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
+		8D2B2E772A6161D500B75CDD /* SettingTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTitle.swift; sourceTree = "<group>"; };
+		8D2B2E792A61623300B75CDD /* SettingProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileView.swift; sourceTree = "<group>"; };
+		8D2B2E7B2A61638000B75CDD /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		8D2B2E7D2A6163B400B75CDD /* SettingTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewHeaderView.swift; sourceTree = "<group>"; };
+		8D2B2E7F2A6163E900B75CDD /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		8D2B2E812A61643E00B75CDD /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		8D2B2E832A616CDC00B75CDD /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		8D2B2E852A616CFA00B75CDD /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		8D2B2E872A61778900B75CDD /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		8D2B2E892A61786A00B75CDD /* AccountTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTitle.swift; sourceTree = "<group>"; };
+		8D2B2E8B2A619C0D00B75CDD /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
+		8D2B2E8D2A619C2E00B75CDD /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,7 +190,7 @@
 			children = (
 				36012F0F2A55A9F4006B8A39 /* AppDelegate.swift */,
 				36012F112A55A9F4006B8A39 /* SceneDelegate.swift */,
-				361FA3292A60199500C3BBFD /* Config.xcconfig */,
+				8D2B2E812A61643E00B75CDD /* Config.xcconfig */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -173,6 +198,7 @@
 		36012F262A55AE3F006B8A39 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				8D2B2E712A61616400B75CDD /* Mypage */,
 				36012F2B2A55AE8D006B8A39 /* Home */,
 			);
 			path = Scene;
@@ -333,6 +359,49 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		8D2B2E712A61616400B75CDD /* Mypage */ = {
+			isa = PBXGroup;
+			children = (
+				8D2B2E722A61616900B75CDD /* Cells */,
+				8D2B2E732A61617300B75CDD /* View */,
+				8D2B2E742A61617800B75CDD /* ViewController */,
+			);
+			path = Mypage;
+			sourceTree = "<group>";
+		};
+		8D2B2E722A61616900B75CDD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				8D2B2E752A6161A900B75CDD /* SettingTableViewCell.swift */,
+				8D2B2E772A6161D500B75CDD /* SettingTitle.swift */,
+				8D2B2E872A61778900B75CDD /* AccountTableViewCell.swift */,
+				8D2B2E892A61786A00B75CDD /* AccountTitle.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8D2B2E732A61617300B75CDD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8D2B2E792A61623300B75CDD /* SettingProfileView.swift */,
+				8D2B2E7D2A6163B400B75CDD /* SettingTableViewHeaderView.swift */,
+				8D2B2E7B2A61638000B75CDD /* SettingView.swift */,
+				8D2B2E852A616CFA00B75CDD /* AccountView.swift */,
+				8D2B2E8D2A619C2E00B75CDD /* EditProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8D2B2E742A61617800B75CDD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8D2B2E7F2A6163E900B75CDD /* SettingViewController.swift */,
+				8D2B2E832A616CDC00B75CDD /* AccountViewController.swift */,
+				8D2B2E8B2A619C0D00B75CDD /* EditProfileViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -423,24 +492,33 @@
 			files = (
 				361FA3302A601D2E00C3BBFD /* GetService.swift in Sources */,
 				36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */,
+				8D2B2E842A616CDC00B75CDD /* AccountViewController.swift in Sources */,
 				361FA3442A6029E400C3BBFD /* WishCoupon.swift in Sources */,
 				36012F102A55A9F4006B8A39 /* AppDelegate.swift in Sources */,
+				8D2B2E882A61778900B75CDD /* AccountTableViewCell.swift in Sources */,
 				361FA3422A6027B400C3BBFD /* WishCouponList.swift in Sources */,
 				36012F3E2A55B64C006B8A39 /* HomeDataModel.swift in Sources */,
 				361FA3382A60223200C3BBFD /* HeaderUtils.swift in Sources */,
 				361FA33F2A60261000C3BBFD /* ShortGame.swift in Sources */,
+				8D2B2E8C2A619C0D00B75CDD /* EditProfileViewController.swift in Sources */,
 				36012F342A55AF4D006B8A39 /* HomeView.swift in Sources */,
 				361FA3342A601EAA00C3BBFD /* PatchService.swift in Sources */,
 				361FA3482A602A5C00C3BBFD /* RoundMission.swift in Sources */,
+				8D2B2E7E2A6163B400B75CDD /* SettingTableViewHeaderView.swift in Sources */,
 				36012F3B2A55B60F006B8A39 /* AuthRepository.swift in Sources */,
 				361FA3522A602C0900C3BBFD /* Game.swift in Sources */,
 				361FA33D2A6025E100C3BBFD /* Couple.swift in Sources */,
+				8D2B2E8E2A619C2E00B75CDD /* EditProfileView.swift in Sources */,
+				8D2B2E862A616CFA00B75CDD /* AccountView.swift in Sources */,
 				361FA34C2A602ADD00C3BBFD /* MissionCategory.swift in Sources */,
 				36012F122A55A9F4006B8A39 /* SceneDelegate.swift in Sources */,
+				8D2B2E822A61643E00B75CDD /* Config.xcconfig in Sources */,
+				8D2B2E762A6161A900B75CDD /* SettingTableViewCell.swift in Sources */,
 				36012F4D2A55CEF4006B8A39 /* UIButton+.swift in Sources */,
 				361FA3282A60193B00C3BBFD /* HomeRepository.swift in Sources */,
 				361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */,
 				36012F492A55CE5D006B8A39 /* NSObject+.swift in Sources */,
+				8D2B2E7A2A61623300B75CDD /* SettingProfileView.swift in Sources */,
 				36012F4F2A55CF18006B8A39 /* UIStackView+.swift in Sources */,
 				361FA32B2A601A4100C3BBFD /* Config.swift in Sources */,
 				361FA34A2A602AC000C3BBFD /* MissionContent.swift in Sources */,
@@ -448,9 +526,13 @@
 				36012F512A55CF2D006B8A39 /* UIView+.swift in Sources */,
 				36012F472A55CDEE006B8A39 /* Date+.swift in Sources */,
 				361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */,
+				8D2B2E7C2A61638000B75CDD /* SettingView.swift in Sources */,
 				361FA3322A601E7900C3BBFD /* PostService.swift in Sources */,
+				8D2B2E782A6161D500B75CDD /* SettingTitle.swift in Sources */,
 				36012F322A55AF16006B8A39 /* HomeViewController.swift in Sources */,
+				8D2B2E8A2A61786A00B75CDD /* AccountTitle.swift in Sources */,
 				361FA3462A602A2800C3BBFD /* MissionContentList.swift in Sources */,
+				8D2B2E802A6163E900B75CDD /* SettingViewController.swift in Sources */,
 				36012F4B2A55CE87006B8A39 /* String+.swift in Sources */,
 				36012F452A55CDAA006B8A39 /* CGPoint+.swift in Sources */,
 				361FA32E2A601D1B00C3BBFD /* NetworkResult.swift in Sources */,
@@ -474,7 +556,6 @@
 /* Begin XCBuildConfiguration section */
 		36012F1E2A55A9F6006B8A39 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 361FA3292A60199500C3BBFD /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = "http://uni-sparkle.kro.kr/";
@@ -536,7 +617,6 @@
 		};
 		36012F1F2A55A9F6006B8A39 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 361FA3292A60199500C3BBFD /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = "http://uni-sparkle.kro.kr/";
