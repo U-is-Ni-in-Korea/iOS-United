@@ -28,7 +28,7 @@ final class CoupleConnectionMethodView: UIView {
     
     private let orLabel = UILabel().then {
         $0.text = "or"
-        $0.textColor = UIColor(hex: 0x017495)
+        $0.textColor = .lightBlue600
         $0.font = SDSFont.body2.font
     }
     
