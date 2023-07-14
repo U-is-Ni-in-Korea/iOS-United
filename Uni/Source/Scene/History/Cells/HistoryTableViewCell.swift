@@ -9,7 +9,7 @@ import UIKit
 import Then
 import SDSKit
 
-class HistoryTableViewCell: UITableViewCell {
+final class HistoryTableViewCell: UITableViewCell {
     
     // MARK: - Property
     
@@ -78,14 +78,20 @@ class HistoryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 2, right: 0))
+    }
+    
     // MARK: - Setting
     
     private func setStyle() {
-        self.backgroundColor = .white
+        self.backgroundColor = .clear
+        self.contentView.backgroundColor = .white
+//        sel
     }
     
     private func setLayout() {
-//        self.contentView.addSubview(self.gameDateLabel)
         [gameDateLabel, gameImageView, textStackView, nextImageView].forEach {
             self.contentView.addSubview($0)
         }
@@ -93,38 +99,29 @@ class HistoryTableViewCell: UITableViewCell {
             textStackView.addArrangedSubview($0)
         }
         
-        contentView.snp.makeConstraints {
-            $0.top.bottom.equalToSuperview().inset(12)
-            $0.leading.trailing.equalToSuperview().inset(12)
-        }
-        
         gameDateLabel.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.leading.equalToSuperview()
+            $0.top.equalToSuperview().offset(12)
+            $0.leading.equalToSuperview().offset(12)
         }
         
         gameImageView.snp.makeConstraints {
             $0.top.equalTo(gameDateLabel.snp.bottom).offset(8)
-            $0.bottom.equalToSuperview()
-            $0.leading.equalToSuperview()
+            $0.bottom.equalToSuperview().inset(12)
+            $0.leading.equalToSuperview().offset(12)
             $0.height.width.equalTo(48)
         }
         
         textStackView.snp.makeConstraints {
             $0.top.equalTo(gameDateLabel.snp.bottom).offset(8)
-            $0.bottom.equalToSuperview()
+            $0.bottom.equalToSuperview().inset(12)
             $0.leading.equalTo(gameImageView.snp.trailing).offset(16)
         }
         
         nextImageView.snp.makeConstraints {
             $0.centerY.equalTo(gameImageView)
-            $0.trailing.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(12)
         }
-        
-        
     }
-    
-    
     
     // MARK: - Action Helper
     
@@ -135,5 +132,5 @@ class HistoryTableViewCell: UITableViewCell {
         gameResultLabel.text = "패배"
     }
     
-
+    
 }

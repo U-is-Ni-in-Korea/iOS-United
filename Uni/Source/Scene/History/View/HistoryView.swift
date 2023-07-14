@@ -14,19 +14,28 @@ final class HistoryView: UIView {
     
     // MARK: - Property
     
-    
-    
+    private var count = 0 {
+        didSet {
+            if count > 0 {
+                hasHistoryData(hasData: true)
+            }
+            else {
+                hasHistoryData(hasData: false)
+            }
+        }
+    }
+
     // MARK: - UI Property
+    
+    private var historyEmptyView = HistoryEmptyView()
     
     let navigationBar = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "승부 히스토리") // 폰트 변경
     
     let historyTableView = UITableView().then {
         $0.register(HistoryTableViewCell.self, forCellReuseIdentifier: HistoryTableViewCell.identifier)
-        $0.rowHeight = 101 // 셀의 높이
+        $0.rowHeight = 103 // 셀의 높이
         $0.separatorStyle = .none // 셀의 구분선 없애기
     }
-    
-    
     
     // MARK: - Life Cycle
     
@@ -34,29 +43,28 @@ final class HistoryView: UIView {
         super.init(coder: coder)
         setLayout()
         setStyle()
-        setDelegate()
     }
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
         setLayout()
         setStyle()
-        setDelegate()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+            self.count = 2
+        }) // 2초 뒤에 count가 2로 변하면서 앞의 didSet 작동하면서 hasHistoryData(hasData: true)함수 실행
     }
     
     // MARK: - Setting
     
-    private func setDelegate() {
-        historyTableView.dataSource = self
-        historyTableView.delegate = self
-    }
-    
     private func setStyle() {
-        self.backgroundColor = .white
+        self.backgroundColor = .gray100
+        self.historyTableView.isHidden = true
+        historyTableView.backgroundColor = .gray100
     }
     
     private func setLayout() {
-        [navigationBar, historyTableView]
+        [navigationBar, historyTableView, historyEmptyView]
             .forEach { addSubview($0) }
         
         
@@ -71,37 +79,32 @@ final class HistoryView: UIView {
             $0.bottom.equalToSuperview()
             $0.leading.trailing.equalToSuperview()
         }
+        
+        historyEmptyView.snp.makeConstraints {
+            $0.top.equalTo(navigationBar.snp.bottom)
+            $0.bottom.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
+        }
     }
     
     
     // MARK: - Action Helper
     
     // MARK: - Custom Method
-    
-}
 
-
-// MARK: - UITableView Delegate
-
-extension HistoryView: UITableViewDelegate {
-
-}
-
-
-// MARK: - UITableView DataSource
-
-extension HistoryView: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1 // 뷰 컨에 보일 셀 수
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: HistoryTableViewCell.identifier, for: indexPath) as? HistoryTableViewCell
-        else {
-            return UITableViewCell()
+    private func hasHistoryData(hasData: Bool) {
+        if hasData {
+            DispatchQueue.main.async {
+                self.historyEmptyView.isHidden = true
+                self.historyTableView.isHidden = false
+            }
         }
-        
-        cell.configureCell() // 셀에 내용을 붙여주는 함수를 불러온 것
-        return cell
+        else {
+            DispatchQueue.main.async {
+                self.historyEmptyView.isHidden = false
+                self.historyTableView.isHidden = true
+            }
+        }
     }
 }
+

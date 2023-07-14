@@ -23,9 +23,9 @@ class HistoryViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        setLayout()
-//        setConfig()
-//        setStyle()
+        setDelegate()
+        setLayout()
+        setStyle()
 
     }
     
@@ -37,8 +37,14 @@ class HistoryViewController: BaseViewController {
         }
     
     // MARK: - Setting
+    
+    private func setDelegate() {
+        historyView.historyTableView.dataSource = self
+        historyView.historyTableView.delegate = self
+    }
+    
     private func setStyle() {
-        
+
     }
     
     override func setLayout() {
@@ -54,4 +60,31 @@ class HistoryViewController: BaseViewController {
     
     // MARK: - Custom Method
     
+}
+
+
+// MARK: - UITableView Delegate
+
+extension HistoryViewController: UITableViewDelegate {
+    
+}
+
+
+// MARK: - UITableView DataSource
+
+extension HistoryViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 5 // 뷰 컨에 보일 셀 수
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: HistoryTableViewCell.identifier, for: indexPath) as? HistoryTableViewCell
+        else {
+            return UITableViewCell()
+        }
+        
+        cell.selectionStyle = .none // 셀 눌렀을 때 클릭한 거 안 보이게
+        cell.configureCell() // 셀에 내용을 붙여주는 함수를 불러온 것
+        return cell
+    }
 }
