@@ -1,5 +1,5 @@
 //
-//  NicknameSettingView.swift
+//  CoupleConnectionMethodView.swift
 //  Uni
 //
 //  Created by 류창휘 on 2023/07/14.
@@ -10,7 +10,7 @@ import UIKit
 import SDSKit
 import Then
 
-final class NicknameSettingView: UIView {
+final class CoupleConnectionMethodView: UIView {
 
     // MARK: - UI Property
     

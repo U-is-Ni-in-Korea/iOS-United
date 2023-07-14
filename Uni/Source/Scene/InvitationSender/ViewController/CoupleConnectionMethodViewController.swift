@@ -1,5 +1,5 @@
 //
-//  NicknameSettingViewController.swift
+//  CoupleConnectionMethodViewController.swift
 //  Uni
 //
 //  Created by 류창휘 on 2023/07/14.
@@ -8,17 +8,17 @@
 import Foundation
 import UIKit
 
-final class NicknameSettingViewController: BaseViewController {
+final class CoupleConnectionMethodViewController: BaseViewController {
     // MARK: - Property
-    private var nicknameSettingView = NicknameSettingView()
+    private var coupleConnectionMethodView = CoupleConnectionMethodView()
 
     // MARK: - UI Property
     
     // MARK: - Life Cycle
     override func loadView() {
         super.loadView()
-        nicknameSettingView = NicknameSettingView(frame: self.view.frame)
-        view = nicknameSettingView
+        coupleConnectionMethodView = CoupleConnectionMethodView(frame: self.view.frame)
+        view = coupleConnectionMethodView
     }
     override func viewDidLoad() {
         super.viewDidLoad()
