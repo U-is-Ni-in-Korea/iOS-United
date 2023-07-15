@@ -22,7 +22,7 @@ final class EnterInvitationView: UIView {
         $0.textColor = UIColor.gray600
     }
 
-    let invitationTextField = SDSTextfield(placeholder: "ag14f0hkl", errorMessage: "입력하신 코드 정보를 찾을 수 없어요", letterLimit: 9).then {
+    let invitationTextField = SDSTextfield(placeholder: "ag14f0hkl", errorMessage: "입력하신 코드 정보를 찾을 수 없어요", letterLimit: 11).then {
         $0.textfieldCountLabel.isHidden = true
     }
     
