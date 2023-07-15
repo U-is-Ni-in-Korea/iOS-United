@@ -20,6 +20,13 @@ final class LoginView: UIView {
         $0.setTitleColor(UIColor.gray600, for: .normal)
         $0.titleLabel?.font = SDSFont.btn2.font
         $0.layer.cornerRadius = 10
+        var kakaoConfig = UIButton.Configuration.plain()
+        kakaoConfig.image = SDSIcon.icKakaoLogin
+        kakaoConfig.imagePadding = 8
+        kakaoConfig.imagePlacement = .leading
+        kakaoConfig.titleAlignment = .center
+        $0.configuration = kakaoConfig
+        $0.layer.applyDepth1Shadow()
     }
     private let appleButton = UIButton().then {
         $0.backgroundColor = UIColor(hex: 0x232323)
@@ -27,6 +34,13 @@ final class LoginView: UIView {
         $0.setTitleColor(UIColor.gray000, for: .normal)
         $0.titleLabel?.font = SDSFont.btn2.font
         $0.layer.cornerRadius = 10
+        var appleConfig = UIButton.Configuration.plain()
+        appleConfig.image = SDSIcon.icAppleLogin
+        appleConfig.imagePadding = 8
+        appleConfig.imagePlacement = .leading
+        appleConfig.titleAlignment = .center
+        $0.configuration = appleConfig
+        $0.layer.applyDepth1Shadow()
     }
     private let logoImageView = UIImageView().then {
         $0.backgroundColor = .red
@@ -46,22 +60,6 @@ final class LoginView: UIView {
     
     private func setConfig() {
         self.backgroundColor = UIColor.gray000
-        
-        var kakaoConfig = UIButton.Configuration.plain()
-        kakaoConfig.image = SDSIcon.icKakaoLogin
-        kakaoConfig.imagePadding = 8
-        kakaoConfig.imagePlacement = .leading
-        kakaoConfig.titleAlignment = .center
-        kakaoButton.configuration = kakaoConfig
-        kakaoButton.layer.applyDepth1Shadow()
-
-        var appleConfig = UIButton.Configuration.plain()
-        appleConfig.image = SDSIcon.icAppleLogin
-        appleConfig.imagePadding = 8
-        appleConfig.imagePlacement = .leading
-        appleButton.configuration = appleConfig
-        appleButton.layer.applyDepth1Shadow()
-        
     }
     
     private func setLayout() {
