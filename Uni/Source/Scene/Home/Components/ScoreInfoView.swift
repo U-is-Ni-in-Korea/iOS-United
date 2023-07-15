@@ -4,7 +4,7 @@ import SDSKit
 import Then
 import SnapKit
 
-class ScoreInfoView: UIView {
+final class ScoreInfoView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }

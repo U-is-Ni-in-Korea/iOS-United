@@ -19,7 +19,9 @@ final class HomeViewController: BaseViewController {
         homeView.bindData(myScore: 15,
                           partnerScore: 10,
                           drawScore: 2,
-                          dDay: 100)
+                          dDay: 100,
+                          heartCount: 0,
+                          isPlayingBattle: true)
     }
     
     override func viewDidLoad() {

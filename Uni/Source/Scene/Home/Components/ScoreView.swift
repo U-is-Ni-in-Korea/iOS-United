@@ -4,7 +4,7 @@ import SDSKit
 import Then
 import SnapKit
 
-class ScoreView: UIView {
+final class ScoreView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
@@ -64,7 +64,9 @@ class ScoreView: UIView {
         
     }
     
-    private let backgroundBlurView = UIVisualEffectView(effect: UIBlurEffect(style: .light))
+    let backgroundBlurView = UIVisualEffectView(effect: UIBlurEffect(style: .systemUltraThinMaterial)).then {
+        $0.alpha = 1
+    }
     private let titleLabel = UILabel().then {
         $0.font = SDSFont.title1.font
         $0.textColor = .gray000
@@ -80,9 +82,11 @@ class ScoreView: UIView {
     }
     
     lazy var historyButton = UIButton().then {
+        $0.tintColor = .lightBlue100
+        let icon = SDSIcon.icChevron.resize(targetSize: .init(width: 24, height: 24))
         var config = UIButton.Configuration.plain()
-        config.image = SDSIcon.icChevron24.withTintColor(.white,
-                                                         renderingMode: .alwaysTemplate)
+        config.image = icon.withTintColor(.lightBlue100,
+                                          renderingMode: .alwaysTemplate)
         config.imagePlacement = .trailing
         config.titleAlignment = .leading
         config.contentInsets = .init(top: 0, leading: 0, bottom: 0, trailing: 0)

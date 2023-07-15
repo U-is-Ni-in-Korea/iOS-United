@@ -11,8 +11,6 @@
 		36012F122A55A9F4006B8A39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F112A55A9F4006B8A39 /* SceneDelegate.swift */; };
 		36012F192A55A9F6006B8A39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36012F182A55A9F6006B8A39 /* Assets.xcassets */; };
 		36012F1C2A55A9F6006B8A39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36012F1A2A55A9F6006B8A39 /* LaunchScreen.storyboard */; };
-		36012F322A55AF16006B8A39 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F312A55AF16006B8A39 /* HomeViewController.swift */; };
-		36012F342A55AF4D006B8A39 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F332A55AF4D006B8A39 /* HomeView.swift */; };
 		36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F372A55B18B006B8A39 /* BaseViewController.swift */; };
 		36012F3B2A55B60F006B8A39 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F3A2A55B60F006B8A39 /* AuthRepository.swift */; };
 		36012F3E2A55B64C006B8A39 /* HomeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F3D2A55B64C006B8A39 /* HomeDataModel.swift */; };
@@ -50,8 +48,13 @@
 		361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */; };
 		361FA3522A602C0900C3BBFD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3512A602C0900C3BBFD /* Game.swift */; };
 		361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3532A602C1C00C3BBFD /* RoundGameList.swift */; };
-		361FA35B2A60B2EB00C3BBFD /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA35A2A60B2EB00C3BBFD /* ScoreView.swift */; };
-		361FA35D2A60B85100C3BBFD /* ScoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA35C2A60B85100C3BBFD /* ScoreInfoView.swift */; };
+		361FA35F2A61CB1000C3BBFD /* UIImage+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA35E2A61CB1000C3BBFD /* UIImage+.swift */; };
+		361FA36F2A6268DD00C3BBFD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3662A6268DD00C3BBFD /* HomeViewController.swift */; };
+		361FA3702A6268DD00C3BBFD /* HomeBattleSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3682A6268DD00C3BBFD /* HomeBattleSelectView.swift */; };
+		361FA3712A6268DD00C3BBFD /* HomeBattleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3692A6268DD00C3BBFD /* HomeBattleView.swift */; };
+		361FA3722A6268DD00C3BBFD /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA36A2A6268DD00C3BBFD /* ScoreView.swift */; };
+		361FA3732A6268DD00C3BBFD /* ScoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA36B2A6268DD00C3BBFD /* ScoreInfoView.swift */; };
+		361FA3742A6268DD00C3BBFD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA36E2A6268DD00C3BBFD /* HomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,8 +64,6 @@
 		36012F182A55A9F6006B8A39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36012F1B2A55A9F6006B8A39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36012F1D2A55A9F6006B8A39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36012F312A55AF16006B8A39 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		36012F332A55AF4D006B8A39 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		36012F372A55B18B006B8A39 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		36012F3A2A55B60F006B8A39 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		36012F3D2A55B64C006B8A39 /* HomeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModel.swift; sourceTree = "<group>"; };
@@ -94,8 +95,13 @@
 		361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGameHistoryList.swift; sourceTree = "<group>"; };
 		361FA3512A602C0900C3BBFD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		361FA3532A602C1C00C3BBFD /* RoundGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundGameList.swift; sourceTree = "<group>"; };
-		361FA35A2A60B2EB00C3BBFD /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
-		361FA35C2A60B85100C3BBFD /* ScoreInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreInfoView.swift; sourceTree = "<group>"; };
+		361FA35E2A61CB1000C3BBFD /* UIImage+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+.swift"; sourceTree = "<group>"; };
+		361FA3662A6268DD00C3BBFD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		361FA3682A6268DD00C3BBFD /* HomeBattleSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBattleSelectView.swift; sourceTree = "<group>"; };
+		361FA3692A6268DD00C3BBFD /* HomeBattleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBattleView.swift; sourceTree = "<group>"; };
+		361FA36A2A6268DD00C3BBFD /* ScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		361FA36B2A6268DD00C3BBFD /* ScoreInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreInfoView.swift; sourceTree = "<group>"; };
+		361FA36E2A6268DD00C3BBFD /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +226,7 @@
 				36012F4E2A55CF18006B8A39 /* UIStackView+.swift */,
 				36012F502A55CF2D006B8A39 /* UIView+.swift */,
 				36012F522A55CFAF006B8A39 /* UIViewController+.swift */,
+				361FA35E2A61CB1000C3BBFD /* UIImage+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -227,44 +234,12 @@
 		36012F2B2A55AE8D006B8A39 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				36012F302A55AEAD006B8A39 /* Components */,
-				36012F2E2A55AE9F006B8A39 /* Cells */,
-				36012F2D2A55AE9B006B8A39 /* View */,
-				36012F2C2A55AE91006B8A39 /* ViewController */,
+				361FA36C2A6268DD00C3BBFD /* Cells */,
+				361FA3672A6268DD00C3BBFD /* Components */,
+				361FA36D2A6268DD00C3BBFD /* View */,
+				361FA3652A6268DD00C3BBFD /* ViewController */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		36012F2C2A55AE91006B8A39 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				36012F312A55AF16006B8A39 /* HomeViewController.swift */,
-			);
-			name = ViewController;
-			sourceTree = "<group>";
-		};
-		36012F2D2A55AE9B006B8A39 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				36012F332A55AF4D006B8A39 /* HomeView.swift */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		36012F2E2A55AE9F006B8A39 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Cells;
-			sourceTree = "<group>";
-		};
-		36012F302A55AEAD006B8A39 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-				361FA35A2A60B2EB00C3BBFD /* ScoreView.swift */,
-				361FA35C2A60B85100C3BBFD /* ScoreInfoView.swift */,
-			);
-			name = Components;
 			sourceTree = "<group>";
 		};
 		36012F362A55B17E006B8A39 /* Base */ = {
@@ -337,6 +312,40 @@
 				361FA3372A60223200C3BBFD /* HeaderUtils.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		361FA3652A6268DD00C3BBFD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				361FA3662A6268DD00C3BBFD /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		361FA3672A6268DD00C3BBFD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				361FA3682A6268DD00C3BBFD /* HomeBattleSelectView.swift */,
+				361FA3692A6268DD00C3BBFD /* HomeBattleView.swift */,
+				361FA36A2A6268DD00C3BBFD /* ScoreView.swift */,
+				361FA36B2A6268DD00C3BBFD /* ScoreInfoView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		361FA36C2A6268DD00C3BBFD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		361FA36D2A6268DD00C3BBFD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				361FA36E2A6268DD00C3BBFD /* HomeView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -430,17 +439,19 @@
 				361FA3302A601D2E00C3BBFD /* GetService.swift in Sources */,
 				36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */,
 				361FA3442A6029E400C3BBFD /* WishCoupon.swift in Sources */,
+				361FA36F2A6268DD00C3BBFD /* HomeViewController.swift in Sources */,
 				36012F102A55A9F4006B8A39 /* AppDelegate.swift in Sources */,
-				361FA35B2A60B2EB00C3BBFD /* ScoreView.swift in Sources */,
 				361FA3422A6027B400C3BBFD /* WishCouponList.swift in Sources */,
 				36012F3E2A55B64C006B8A39 /* HomeDataModel.swift in Sources */,
 				361FA3382A60223200C3BBFD /* HeaderUtils.swift in Sources */,
 				361FA33F2A60261000C3BBFD /* ShortGame.swift in Sources */,
-				36012F342A55AF4D006B8A39 /* HomeView.swift in Sources */,
+				361FA3722A6268DD00C3BBFD /* ScoreView.swift in Sources */,
 				361FA3342A601EAA00C3BBFD /* PatchService.swift in Sources */,
 				361FA3482A602A5C00C3BBFD /* RoundMission.swift in Sources */,
 				36012F3B2A55B60F006B8A39 /* AuthRepository.swift in Sources */,
+				361FA35F2A61CB1000C3BBFD /* UIImage+.swift in Sources */,
 				361FA3522A602C0900C3BBFD /* Game.swift in Sources */,
+				361FA3742A6268DD00C3BBFD /* HomeView.swift in Sources */,
 				361FA33D2A6025E100C3BBFD /* Couple.swift in Sources */,
 				361FA34C2A602ADD00C3BBFD /* MissionCategory.swift in Sources */,
 				36012F122A55A9F4006B8A39 /* SceneDelegate.swift in Sources */,
@@ -448,8 +459,8 @@
 				361FA3282A60193B00C3BBFD /* HomeRepository.swift in Sources */,
 				361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */,
 				36012F492A55CE5D006B8A39 /* NSObject+.swift in Sources */,
-				361FA35D2A60B85100C3BBFD /* ScoreInfoView.swift in Sources */,
 				36012F4F2A55CF18006B8A39 /* UIStackView+.swift in Sources */,
+				361FA3702A6268DD00C3BBFD /* HomeBattleSelectView.swift in Sources */,
 				361FA32B2A601A4100C3BBFD /* Config.swift in Sources */,
 				361FA34A2A602AC000C3BBFD /* MissionContent.swift in Sources */,
 				36012F532A55CFAF006B8A39 /* UIViewController+.swift in Sources */,
@@ -457,12 +468,13 @@
 				36012F472A55CDEE006B8A39 /* Date+.swift in Sources */,
 				361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */,
 				361FA3322A601E7900C3BBFD /* PostService.swift in Sources */,
-				36012F322A55AF16006B8A39 /* HomeViewController.swift in Sources */,
 				361FA3462A602A2800C3BBFD /* MissionContentList.swift in Sources */,
+				361FA3712A6268DD00C3BBFD /* HomeBattleView.swift in Sources */,
 				36012F4B2A55CE87006B8A39 /* String+.swift in Sources */,
 				36012F452A55CDAA006B8A39 /* CGPoint+.swift in Sources */,
 				361FA32E2A601D1B00C3BBFD /* NetworkResult.swift in Sources */,
 				361FA34E2A602B5400C3BBFD /* MyRoundMission.swift in Sources */,
+				361FA3732A6268DD00C3BBFD /* ScoreInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
