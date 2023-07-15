@@ -53,6 +53,8 @@
 		A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */; };
 		A54CD6312A5C328500C434B7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */; };
 		A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6332A5C347100C434B7 /* OnboardingCell.swift */; };
+		A578FC142A62D9210021A32E /* DDaySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578FC132A62D9210021A32E /* DDaySettingViewController.swift */; };
+		A578FC162A62D9380021A32E /* DDaySettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578FC152A62D9380021A32E /* DDaySettingView.swift */; };
 		A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -76,10 +78,6 @@
 		36012F4E2A55CF18006B8A39 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		36012F502A55CF2D006B8A39 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		36012F522A55CFAF006B8A39 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
-		A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		A54CD6332A5C347100C434B7 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
-		A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
 		361FA3272A60193B00C3BBFD /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		361FA3292A60199500C3BBFD /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		361FA32A2A601A4100C3BBFD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
@@ -100,6 +98,12 @@
 		361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGameHistoryList.swift; sourceTree = "<group>"; };
 		361FA3512A602C0900C3BBFD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		361FA3532A602C1C00C3BBFD /* RoundGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundGameList.swift; sourceTree = "<group>"; };
+		A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		A54CD6332A5C347100C434B7 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		A578FC132A62D9210021A32E /* DDaySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDaySettingViewController.swift; sourceTree = "<group>"; };
+		A578FC152A62D9380021A32E /* DDaySettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDaySettingView.swift; sourceTree = "<group>"; };
+		A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -181,6 +185,7 @@
 		36012F262A55AE3F006B8A39 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				A578FC102A62D8CF0021A32E /* SendInvitation */,
 				A54CD62B2A5C322600C434B7 /* Onboarding */,
 				36012F2B2A55AE8D006B8A39 /* Home */,
 			);
@@ -291,7 +296,6 @@
 			children = (
 				36012F432A55B672006B8A39 /* Home */,
 				A58C70332A627CA900327CD3 /* Onboarding */,
-				36012F402A55B659006B8A39 /* AuthRepository */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -331,6 +335,19 @@
 			path = HomeRepository;
 			sourceTree = "<group>";
 		};
+		361FA32C2A601C6500C3BBFD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				361FA32A2A601A4100C3BBFD /* Config.swift */,
+				361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */,
+				361FA32F2A601D2E00C3BBFD /* GetService.swift */,
+				361FA3312A601E7900C3BBFD /* PostService.swift */,
+				361FA3332A601EAA00C3BBFD /* PatchService.swift */,
+				361FA3372A60223200C3BBFD /* HeaderUtils.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		A54CD62B2A5C322600C434B7 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -365,25 +382,37 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		A578FC102A62D8CF0021A32E /* SendInvitation */ = {
+			isa = PBXGroup;
+			children = (
+				A578FC122A62D90D0021A32E /* ViewController */,
+				A578FC112A62D9080021A32E /* View */,
+			);
+			path = SendInvitation;
+			sourceTree = "<group>";
+		};
+		A578FC112A62D9080021A32E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A578FC152A62D9380021A32E /* DDaySettingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A578FC122A62D90D0021A32E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A578FC132A62D9210021A32E /* DDaySettingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		A58C70332A627CA900327CD3 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
 				A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */,
 			);
 			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		361FA32C2A601C6500C3BBFD /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				361FA32A2A601A4100C3BBFD /* Config.swift */,
-				361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */,
-				361FA32F2A601D2E00C3BBFD /* GetService.swift */,
-				361FA3312A601E7900C3BBFD /* PostService.swift */,
-				361FA3332A601EAA00C3BBFD /* PatchService.swift */,
-				361FA3372A60223200C3BBFD /* HeaderUtils.swift */,
-			);
-			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,6 +514,7 @@
 				36012F342A55AF4D006B8A39 /* HomeView.swift in Sources */,
 				361FA3342A601EAA00C3BBFD /* PatchService.swift in Sources */,
 				361FA3482A602A5C00C3BBFD /* RoundMission.swift in Sources */,
+				A578FC162A62D9380021A32E /* DDaySettingView.swift in Sources */,
 				36012F3B2A55B60F006B8A39 /* AuthRepository.swift in Sources */,
 				361FA3522A602C0900C3BBFD /* Game.swift in Sources */,
 				361FA33D2A6025E100C3BBFD /* Couple.swift in Sources */,
@@ -498,6 +528,7 @@
 				36012F492A55CE5D006B8A39 /* NSObject+.swift in Sources */,
 				36012F4F2A55CF18006B8A39 /* UIStackView+.swift in Sources */,
 				361FA32B2A601A4100C3BBFD /* Config.swift in Sources */,
+				A578FC142A62D9210021A32E /* DDaySettingViewController.swift in Sources */,
 				361FA34A2A602AC000C3BBFD /* MissionContent.swift in Sources */,
 				36012F532A55CFAF006B8A39 /* UIViewController+.swift in Sources */,
 				36012F512A55CF2D006B8A39 /* UIView+.swift in Sources */,
