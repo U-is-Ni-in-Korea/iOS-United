@@ -18,7 +18,6 @@ class HistoryViewController: BaseViewController {
     // MARK: - UI Property
     
     
-    
     // MARK: - Life Cycle
     
     override func viewDidLoad() {
@@ -30,11 +29,11 @@ class HistoryViewController: BaseViewController {
     }
     
     override func loadView() {
-            super.loadView()
-            
-            historyView = HistoryView(frame: self.view.frame)
-            self.view = historyView
-        }
+        super.loadView()
+        
+        historyView = HistoryView(frame: self.view.frame)
+        self.view = historyView
+    }
     
     // MARK: - Setting
     
@@ -55,7 +54,6 @@ class HistoryViewController: BaseViewController {
         
     }
     
-    
     // MARK: - Action Helper
     
     // MARK: - Custom Method
@@ -74,7 +72,7 @@ extension HistoryViewController: UITableViewDelegate {
 
 extension HistoryViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5 // 뷰 컨에 보일 셀 수
+        return 2 // 뷰 컨에 보일 셀 수
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -86,5 +84,13 @@ extension HistoryViewController: UITableViewDataSource {
         cell.selectionStyle = .none // 셀 눌렀을 때 클릭한 거 안 보이게
         cell.configureCell() // 셀에 내용을 붙여주는 함수를 불러온 것
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let historyDetailViewController = HistoryDetailViewController()
+        navigationController?.pushViewController(historyDetailViewController, animated: true)
+        
     }
 }

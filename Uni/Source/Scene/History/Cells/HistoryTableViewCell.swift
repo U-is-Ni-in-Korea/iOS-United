@@ -16,6 +16,9 @@ final class HistoryTableViewCell: UITableViewCell {
     static var identifier: String {
         return String(describing: self)
     }
+
+    
+    // MARK: - UI Property
     
     private let gameDateLabel = UILabel().then {
 //        $0.text = "23.06.20"
@@ -49,8 +52,6 @@ final class HistoryTableViewCell: UITableViewCell {
     private let nextImageView = UIImageView().then {
         $0.image = UIImage(named: "icChevron28")
     }
-    
-    // MARK: - UI Property
     
     // MARK: - Life Cycle
     
@@ -88,7 +89,6 @@ final class HistoryTableViewCell: UITableViewCell {
     private func setStyle() {
         self.backgroundColor = .clear
         self.contentView.backgroundColor = .white
-//        sel
     }
     
     private func setLayout() {
@@ -131,6 +131,4 @@ final class HistoryTableViewCell: UITableViewCell {
         gameNameLabel.text = "대답 유도하기"
         gameResultLabel.text = "패배"
     }
-    
-    
 }
