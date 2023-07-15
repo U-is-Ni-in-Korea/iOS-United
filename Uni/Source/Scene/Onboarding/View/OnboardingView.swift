@@ -38,22 +38,25 @@ final class OnboardingView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        self.setLayout()
+        setLayout()
+        setConfigure()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     
-    private func setLayout() {
+    private func setConfigure() {
         self.backgroundColor = .systemBackground
+    }
+    
+    private func setLayout() {
         self.addSubviews([onboardingCollectionView, pageControl, nextButton])
         
         onboardingCollectionView.snp.makeConstraints {
-            $0.top.greaterThanOrEqualTo(self.safeAreaLayoutGuide)
-            $0.top.lessThanOrEqualTo(self.safeAreaLayoutGuide).offset(72)
+            $0.top.equalTo(self.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(82 + 52 + UIScreen.main.bounds.size.width - 40)
+            $0.height.equalTo(82 + 52 + UIScreen.main.bounds.width - 40)
         }
         pageControl.snp.makeConstraints {
             $0.top.equalTo(onboardingCollectionView.snp.bottom).offset(42)

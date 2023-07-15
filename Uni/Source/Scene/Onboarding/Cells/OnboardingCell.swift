@@ -58,8 +58,7 @@ final class OnboardingCell: UICollectionViewCell {
         onboardingImageView.snp.makeConstraints {
             $0.top.equalTo(titleBaseView.snp.bottom).offset(52)
             $0.leading.trailing.equalToSuperview().inset(20)
-            $0.height.equalTo(UIScreen.main.bounds.width - 40)
-            $0.bottom.equalToSuperview()
+            $0.height.equalTo(UIScreen.main.bounds.size.width - 40)
         }
     }
     func configureCell(_ onboardingModel: OnboardingDataModel) {
