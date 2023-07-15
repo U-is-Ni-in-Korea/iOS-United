@@ -7,11 +7,6 @@
 
 import UIKit
 
-struct OnboardingData {
-    let title: String
-    let subTitle: String
-    let image: String
-}
 
 final class OnboardingViewController: BaseViewController {
     private var onboardingView = OnboardingView()
