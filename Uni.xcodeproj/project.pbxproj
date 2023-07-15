@@ -50,6 +50,12 @@
 		361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */; };
 		361FA3522A602C0900C3BBFD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3512A602C0900C3BBFD /* Game.swift */; };
 		361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3532A602C1C00C3BBFD /* RoundGameList.swift */; };
+		361FA37B2A62722A00C3BBFD /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA37A2A62722A00C3BBFD /* BattleViewController.swift */; };
+		361FA37D2A6277C300C3BBFD /* BattleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA37C2A6277C300C3BBFD /* BattleView.swift */; };
+		361FA37F2A62793B00C3BBFD /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA37E2A62793B00C3BBFD /* SectionView.swift */; };
+		361FA3822A62861C00C3BBFD /* BattleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3812A62861C00C3BBFD /* BattleCollectionViewCell.swift */; };
+		361FA3842A628A2100C3BBFD /* WishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3832A628A2100C3BBFD /* WishCollectionViewCell.swift */; };
+		361FA38A2A62D65800C3BBFD /* BattleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3892A62D65800C3BBFD /* BattleDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +98,12 @@
 		361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGameHistoryList.swift; sourceTree = "<group>"; };
 		361FA3512A602C0900C3BBFD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		361FA3532A602C1C00C3BBFD /* RoundGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundGameList.swift; sourceTree = "<group>"; };
+		361FA37A2A62722A00C3BBFD /* BattleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
+		361FA37C2A6277C300C3BBFD /* BattleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleView.swift; sourceTree = "<group>"; };
+		361FA37E2A62793B00C3BBFD /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		361FA3812A62861C00C3BBFD /* BattleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleCollectionViewCell.swift; sourceTree = "<group>"; };
+		361FA3832A628A2100C3BBFD /* WishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCollectionViewCell.swift; sourceTree = "<group>"; };
+		361FA3892A62D65800C3BBFD /* BattleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +185,7 @@
 		36012F262A55AE3F006B8A39 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				361FA3752A6271F900C3BBFD /* Battle */,
 				36012F2B2A55AE8D006B8A39 /* Home */,
 			);
 			path = Scene;
@@ -280,6 +293,7 @@
 		36012F3C2A55B61E006B8A39 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				361FA3882A62D64F00C3BBFD /* Battle */,
 				36012F432A55B672006B8A39 /* Home */,
 			);
 			path = DataModel;
@@ -331,6 +345,66 @@
 				361FA3372A60223200C3BBFD /* HeaderUtils.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		361FA3752A6271F900C3BBFD /* Battle */ = {
+			isa = PBXGroup;
+			children = (
+				361FA3792A62721700C3BBFD /* ViewController */,
+				361FA3782A62721300C3BBFD /* View */,
+				361FA3772A62720F00C3BBFD /* Cells */,
+				361FA3762A62720A00C3BBFD /* Components */,
+			);
+			path = Battle;
+			sourceTree = "<group>";
+		};
+		361FA3762A62720A00C3BBFD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				361FA37E2A62793B00C3BBFD /* SectionView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		361FA3772A62720F00C3BBFD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				361FA3802A62860100C3BBFD /* CollectionViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		361FA3782A62721300C3BBFD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				361FA37C2A6277C300C3BBFD /* BattleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		361FA3792A62721700C3BBFD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				361FA37A2A62722A00C3BBFD /* BattleViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		361FA3802A62860100C3BBFD /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				361FA3812A62861C00C3BBFD /* BattleCollectionViewCell.swift */,
+				361FA3832A628A2100C3BBFD /* WishCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		361FA3882A62D64F00C3BBFD /* Battle */ = {
+			isa = PBXGroup;
+			children = (
+				361FA3892A62D65800C3BBFD /* BattleDataModel.swift */,
+			);
+			path = Battle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,18 +497,22 @@
 			files = (
 				361FA3302A601D2E00C3BBFD /* GetService.swift in Sources */,
 				36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */,
+				361FA3842A628A2100C3BBFD /* WishCollectionViewCell.swift in Sources */,
 				361FA3442A6029E400C3BBFD /* WishCoupon.swift in Sources */,
 				36012F102A55A9F4006B8A39 /* AppDelegate.swift in Sources */,
+				361FA3822A62861C00C3BBFD /* BattleCollectionViewCell.swift in Sources */,
 				361FA3422A6027B400C3BBFD /* WishCouponList.swift in Sources */,
 				36012F3E2A55B64C006B8A39 /* HomeDataModel.swift in Sources */,
 				361FA3382A60223200C3BBFD /* HeaderUtils.swift in Sources */,
 				361FA33F2A60261000C3BBFD /* ShortGame.swift in Sources */,
 				36012F342A55AF4D006B8A39 /* HomeView.swift in Sources */,
+				361FA38A2A62D65800C3BBFD /* BattleDataModel.swift in Sources */,
 				361FA3342A601EAA00C3BBFD /* PatchService.swift in Sources */,
 				361FA3482A602A5C00C3BBFD /* RoundMission.swift in Sources */,
 				36012F3B2A55B60F006B8A39 /* AuthRepository.swift in Sources */,
 				361FA3522A602C0900C3BBFD /* Game.swift in Sources */,
 				361FA33D2A6025E100C3BBFD /* Couple.swift in Sources */,
+				361FA37B2A62722A00C3BBFD /* BattleViewController.swift in Sources */,
 				361FA34C2A602ADD00C3BBFD /* MissionCategory.swift in Sources */,
 				36012F122A55A9F4006B8A39 /* SceneDelegate.swift in Sources */,
 				36012F4D2A55CEF4006B8A39 /* UIButton+.swift in Sources */,
@@ -453,7 +531,9 @@
 				361FA3462A602A2800C3BBFD /* MissionContentList.swift in Sources */,
 				36012F4B2A55CE87006B8A39 /* String+.swift in Sources */,
 				36012F452A55CDAA006B8A39 /* CGPoint+.swift in Sources */,
+				361FA37F2A62793B00C3BBFD /* SectionView.swift in Sources */,
 				361FA32E2A601D1B00C3BBFD /* NetworkResult.swift in Sources */,
+				361FA37D2A6277C300C3BBFD /* BattleView.swift in Sources */,
 				361FA34E2A602B5400C3BBFD /* MyRoundMission.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
