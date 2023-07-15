@@ -71,7 +71,7 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.bounds.width, height: collectionView.bounds.height)
+        return collectionView.bounds.size
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
