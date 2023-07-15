@@ -46,7 +46,6 @@ final class EnterInvitationViewController: BaseViewController {
 
     // MARK: - Action Helper
     private func actions() {
-//        enterInvitationView.invitationTextField.sdsTextfield.addTarget(self, action: #selector(textfieldDidChange(_:)), for: .editingChanged)
     }
     
     // MARK: - Custom Method
@@ -94,33 +93,21 @@ extension EnterInvitationViewController: UITextFieldDelegate {
         keyboardState(up: false)
         return true
     }
-    
-//    @objc func textfieldDidChange(_ sender: Any) {
-//        guard let textFieldText = enterInvitationView.invitationTextField.sdsTextfield.text else {return}
-//        if textFieldText.count >= 9 {
-//            enterInvitationView.invitationTextField.sdsTextfield.deleteBackward()
-//            enterInvitationView.invitationTextField.errorLabel.isHidden = true
-//            enterInvitationView.invitationTextField.layer.borderColor = UIColor.lightBlue500.cgColor
-//            enterInvitationView.connectionButton.buttonState = .enabled
-//        }
-//        else {
-//            enterInvitationView.connectionButton.buttonState = .disabled
-//        }
-//    }
+
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+         guard let currentText = textField.text else { return }
+         if currentText.count >= 9 {
+             enterInvitationView.connectionButton.buttonState = .enabled
+         } else {
+             enterInvitationView.connectionButton.buttonState = .disabled
+         }
+     }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let currentText = enterInvitationView.invitationTextField.sdsTextfield.text ?? ""
-        guard let stringRange = Range(range, in: currentText) else { return false }
-        let changedText = currentText.replacingCharacters(in: stringRange, with: string)
-        print(changedText)
-        if changedText.count >= 10 {
-            enterInvitationView.invitationTextField.sdsTextfield.deleteBackward()
-            enterInvitationView.invitationTextField.errorLabel.isHidden = true
-            enterInvitationView.invitationTextField.layer.borderColor = UIColor.lightBlue500.cgColor
-            enterInvitationView.connectionButton.buttonState = .enabled
-        }
-        else {
-            enterInvitationView.connectionButton.buttonState = .disabled
-        }
-        return true
-    }
+         guard let currentText = textField.text else { return true }
+         let updatedText = (currentText as NSString).replacingCharacters(in: range, with: string)
+         if updatedText.count > 9 {
+             return false
+         }
+         return true
+     }
 }
