@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct OnboardingData {
+struct OnboardingDataModel {
     let title: String
     let subTitle: String
     let image: String

@@ -62,4 +62,9 @@ final class OnboardingCell: UICollectionViewCell {
             $0.bottom.equalToSuperview()
         }
     }
+    func configureCell(_ onboardingModel: OnboardingDataModel) {
+        titleLabel.text = onboardingModel.title
+        subTitleLabel.text = onboardingModel.subTitle
+        onboardingImageView.image = UIImage(systemName: onboardingModel.image)
+    }
 }
