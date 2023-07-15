@@ -14,7 +14,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             options.dsn = "https://77bac313ebba4ca8b785852d9c36b39b@o4505393164124160.ingest.sentry.io/4505426124996608"
             options.debug = true
         }
-        registerFonts()
         return true
     }
 
