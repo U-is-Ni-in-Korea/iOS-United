@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SDSKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -13,8 +14,12 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
+        registerFonts()
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
+        
+        
+        
         let navigationController = UINavigationController(rootViewController: HomeViewController())
         let test = OnboardingViewController()
         self.window?.rootViewController = test

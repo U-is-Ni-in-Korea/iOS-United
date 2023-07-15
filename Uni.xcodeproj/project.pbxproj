@@ -15,8 +15,7 @@
 		36012F342A55AF4D006B8A39 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F332A55AF4D006B8A39 /* HomeView.swift */; };
 		36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F372A55B18B006B8A39 /* BaseViewController.swift */; };
 		36012F3B2A55B60F006B8A39 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F3A2A55B60F006B8A39 /* AuthRepository.swift */; };
-		36012F3E2A55B64C006B8A39 /* HomeEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F3D2A55B64C006B8A39 /* HomeEntity.swift */; };
-		36012F422A55B66E006B8A39 /* LoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F412A55B66E006B8A39 /* LoginDataModel.swift */; };
+		36012F3E2A55B64C006B8A39 /* HomeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F3D2A55B64C006B8A39 /* HomeDataModel.swift */; };
 		36012F452A55CDAA006B8A39 /* CGPoint+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F442A55CDAA006B8A39 /* CGPoint+.swift */; };
 		36012F472A55CDEE006B8A39 /* Date+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F462A55CDEE006B8A39 /* Date+.swift */; };
 		36012F492A55CE5D006B8A39 /* NSObject+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F482A55CE5D006B8A39 /* NSObject+.swift */; };
@@ -31,6 +30,26 @@
 		36012F5F2A55D0A0006B8A39 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 36012F5E2A55D0A0006B8A39 /* Kingfisher */; };
 		36012F622A55D0F4006B8A39 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 36012F612A55D0F4006B8A39 /* Sentry */; };
 		36012F652A55D155006B8A39 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 36012F642A55D155006B8A39 /* KakaoSDK */; };
+		361FA3252A6012A600C3BBFD /* SDSKit in Frameworks */ = {isa = PBXBuildFile; productRef = 361FA3242A6012A600C3BBFD /* SDSKit */; };
+		361FA3282A60193B00C3BBFD /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3272A60193B00C3BBFD /* HomeRepository.swift */; };
+		361FA32B2A601A4100C3BBFD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA32A2A601A4100C3BBFD /* Config.swift */; };
+		361FA32E2A601D1B00C3BBFD /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */; };
+		361FA3302A601D2E00C3BBFD /* GetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA32F2A601D2E00C3BBFD /* GetService.swift */; };
+		361FA3322A601E7900C3BBFD /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3312A601E7900C3BBFD /* PostService.swift */; };
+		361FA3342A601EAA00C3BBFD /* PatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3332A601EAA00C3BBFD /* PatchService.swift */; };
+		361FA3382A60223200C3BBFD /* HeaderUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3372A60223200C3BBFD /* HeaderUtils.swift */; };
+		361FA33D2A6025E100C3BBFD /* Couple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA33C2A6025E100C3BBFD /* Couple.swift */; };
+		361FA33F2A60261000C3BBFD /* ShortGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA33E2A60261000C3BBFD /* ShortGame.swift */; };
+		361FA3422A6027B400C3BBFD /* WishCouponList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3412A6027B400C3BBFD /* WishCouponList.swift */; };
+		361FA3442A6029E400C3BBFD /* WishCoupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3432A6029E400C3BBFD /* WishCoupon.swift */; };
+		361FA3462A602A2800C3BBFD /* MissionContentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3452A602A2800C3BBFD /* MissionContentList.swift */; };
+		361FA3482A602A5C00C3BBFD /* RoundMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3472A602A5C00C3BBFD /* RoundMission.swift */; };
+		361FA34A2A602AC000C3BBFD /* MissionContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3492A602AC000C3BBFD /* MissionContent.swift */; };
+		361FA34C2A602ADD00C3BBFD /* MissionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA34B2A602ADD00C3BBFD /* MissionCategory.swift */; };
+		361FA34E2A602B5400C3BBFD /* MyRoundMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA34D2A602B5400C3BBFD /* MyRoundMission.swift */; };
+		361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */; };
+		361FA3522A602C0900C3BBFD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3512A602C0900C3BBFD /* Game.swift */; };
+		361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3532A602C1C00C3BBFD /* RoundGameList.swift */; };
 		A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */; };
 		A54CD6312A5C328500C434B7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */; };
 		A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6332A5C347100C434B7 /* OnboardingCell.swift */; };
@@ -48,8 +67,7 @@
 		36012F332A55AF4D006B8A39 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		36012F372A55B18B006B8A39 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		36012F3A2A55B60F006B8A39 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
-		36012F3D2A55B64C006B8A39 /* HomeEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeEntity.swift; sourceTree = "<group>"; };
-		36012F412A55B66E006B8A39 /* LoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginDataModel.swift; sourceTree = "<group>"; };
+		36012F3D2A55B64C006B8A39 /* HomeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModel.swift; sourceTree = "<group>"; };
 		36012F442A55CDAA006B8A39 /* CGPoint+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGPoint+.swift"; sourceTree = "<group>"; };
 		36012F462A55CDEE006B8A39 /* Date+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+.swift"; sourceTree = "<group>"; };
 		36012F482A55CE5D006B8A39 /* NSObject+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+.swift"; sourceTree = "<group>"; };
@@ -62,6 +80,26 @@
 		A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		A54CD6332A5C347100C434B7 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
 		A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
+		361FA3272A60193B00C3BBFD /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
+		361FA3292A60199500C3BBFD /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		361FA32A2A601A4100C3BBFD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		361FA32F2A601D2E00C3BBFD /* GetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetService.swift; sourceTree = "<group>"; };
+		361FA3312A601E7900C3BBFD /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		361FA3332A601EAA00C3BBFD /* PatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchService.swift; sourceTree = "<group>"; };
+		361FA3372A60223200C3BBFD /* HeaderUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderUtils.swift; sourceTree = "<group>"; };
+		361FA33C2A6025E100C3BBFD /* Couple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Couple.swift; sourceTree = "<group>"; };
+		361FA33E2A60261000C3BBFD /* ShortGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortGame.swift; sourceTree = "<group>"; };
+		361FA3412A6027B400C3BBFD /* WishCouponList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponList.swift; sourceTree = "<group>"; };
+		361FA3432A6029E400C3BBFD /* WishCoupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCoupon.swift; sourceTree = "<group>"; };
+		361FA3452A602A2800C3BBFD /* MissionContentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionContentList.swift; sourceTree = "<group>"; };
+		361FA3472A602A5C00C3BBFD /* RoundMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundMission.swift; sourceTree = "<group>"; };
+		361FA3492A602AC000C3BBFD /* MissionContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionContent.swift; sourceTree = "<group>"; };
+		361FA34B2A602ADD00C3BBFD /* MissionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCategory.swift; sourceTree = "<group>"; };
+		361FA34D2A602B5400C3BBFD /* MyRoundMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRoundMission.swift; sourceTree = "<group>"; };
+		361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGameHistoryList.swift; sourceTree = "<group>"; };
+		361FA3512A602C0900C3BBFD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		361FA3532A602C1C00C3BBFD /* RoundGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundGameList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +110,7 @@
 				36012F622A55D0F4006B8A39 /* Sentry in Frameworks */,
 				36012F5F2A55D0A0006B8A39 /* Kingfisher in Frameworks */,
 				36012F5C2A55D08E006B8A39 /* Alamofire in Frameworks */,
+				361FA3252A6012A600C3BBFD /* SDSKit in Frameworks */,
 				36012F562A55D06C006B8A39 /* SnapKit in Frameworks */,
 				36012F592A55D07D006B8A39 /* Then in Frameworks */,
 				36012F652A55D155006B8A39 /* KakaoSDK in Frameworks */,
@@ -134,6 +173,7 @@
 			children = (
 				36012F0F2A55A9F4006B8A39 /* AppDelegate.swift */,
 				36012F112A55A9F4006B8A39 /* SceneDelegate.swift */,
+				361FA3292A60199500C3BBFD /* Config.xcconfig */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -158,6 +198,8 @@
 		36012F282A55AE4A006B8A39 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				361FA32C2A601C6500C3BBFD /* Base */,
+				361FA3262A60192B00C3BBFD /* HomeRepository */,
 				36012F392A55B5FD006B8A39 /* AuthRepository */,
 			);
 			path = Repository;
@@ -247,6 +289,7 @@
 		36012F3C2A55B61E006B8A39 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				36012F432A55B672006B8A39 /* Home */,
 				A58C70332A627CA900327CD3 /* Onboarding */,
 				36012F402A55B659006B8A39 /* AuthRepository */,
 			);
@@ -256,25 +299,36 @@
 		36012F3F2A55B650006B8A39 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
-				36012F432A55B672006B8A39 /* Home */,
+				361FA33C2A6025E100C3BBFD /* Couple.swift */,
+				361FA33E2A60261000C3BBFD /* ShortGame.swift */,
+				361FA3412A6027B400C3BBFD /* WishCouponList.swift */,
+				361FA3432A6029E400C3BBFD /* WishCoupon.swift */,
+				361FA3452A602A2800C3BBFD /* MissionContentList.swift */,
+				361FA3472A602A5C00C3BBFD /* RoundMission.swift */,
+				361FA3492A602AC000C3BBFD /* MissionContent.swift */,
+				361FA34B2A602ADD00C3BBFD /* MissionCategory.swift */,
+				361FA34D2A602B5400C3BBFD /* MyRoundMission.swift */,
+				361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */,
+				361FA3512A602C0900C3BBFD /* Game.swift */,
+				361FA3532A602C1C00C3BBFD /* RoundGameList.swift */,
 			);
 			path = Entity;
-			sourceTree = "<group>";
-		};
-		36012F402A55B659006B8A39 /* AuthRepository */ = {
-			isa = PBXGroup;
-			children = (
-				36012F412A55B66E006B8A39 /* LoginDataModel.swift */,
-			);
-			path = AuthRepository;
 			sourceTree = "<group>";
 		};
 		36012F432A55B672006B8A39 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				36012F3D2A55B64C006B8A39 /* HomeEntity.swift */,
+				36012F3D2A55B64C006B8A39 /* HomeDataModel.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		361FA3262A60192B00C3BBFD /* HomeRepository */ = {
+			isa = PBXGroup;
+			children = (
+				361FA3272A60193B00C3BBFD /* HomeRepository.swift */,
+			);
+			path = HomeRepository;
 			sourceTree = "<group>";
 		};
 		A54CD62B2A5C322600C434B7 /* Onboarding */ = {
@@ -319,6 +373,19 @@
 			path = Onboarding;
 			sourceTree = "<group>";
 		};
+		361FA32C2A601C6500C3BBFD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				361FA32A2A601A4100C3BBFD /* Config.swift */,
+				361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */,
+				361FA32F2A601D2E00C3BBFD /* GetService.swift */,
+				361FA3312A601E7900C3BBFD /* PostService.swift */,
+				361FA3332A601EAA00C3BBFD /* PatchService.swift */,
+				361FA3372A60223200C3BBFD /* HeaderUtils.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -342,6 +409,7 @@
 				36012F5E2A55D0A0006B8A39 /* Kingfisher */,
 				36012F612A55D0F4006B8A39 /* Sentry */,
 				36012F642A55D155006B8A39 /* KakaoSDK */,
+				361FA3242A6012A600C3BBFD /* SDSKit */,
 			);
 			productName = Uni;
 			productReference = 36012F0C2A55A9F4006B8A39 /* Uni.app */;
@@ -378,6 +446,7 @@
 				36012F5D2A55D0A0006B8A39 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				36012F602A55D0F4006B8A39 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 				36012F632A55D155006B8A39 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
+				361FA3232A6012A600C3BBFD /* XCRemoteSwiftPackageReference "iOS-SDS-United" */,
 			);
 			productRefGroup = 36012F0D2A55A9F4006B8A39 /* Products */;
 			projectDirPath = "";
@@ -405,26 +474,44 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				361FA3302A601D2E00C3BBFD /* GetService.swift in Sources */,
 				36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */,
+				361FA3442A6029E400C3BBFD /* WishCoupon.swift in Sources */,
 				36012F102A55A9F4006B8A39 /* AppDelegate.swift in Sources */,
-				36012F3E2A55B64C006B8A39 /* HomeEntity.swift in Sources */,
-				36012F422A55B66E006B8A39 /* LoginDataModel.swift in Sources */,
+				361FA3422A6027B400C3BBFD /* WishCouponList.swift in Sources */,
+				36012F3E2A55B64C006B8A39 /* HomeDataModel.swift in Sources */,
+				361FA3382A60223200C3BBFD /* HeaderUtils.swift in Sources */,
+				361FA33F2A60261000C3BBFD /* ShortGame.swift in Sources */,
 				36012F342A55AF4D006B8A39 /* HomeView.swift in Sources */,
+				361FA3342A601EAA00C3BBFD /* PatchService.swift in Sources */,
+				361FA3482A602A5C00C3BBFD /* RoundMission.swift in Sources */,
 				36012F3B2A55B60F006B8A39 /* AuthRepository.swift in Sources */,
+				361FA3522A602C0900C3BBFD /* Game.swift in Sources */,
+				361FA33D2A6025E100C3BBFD /* Couple.swift in Sources */,
+				361FA34C2A602ADD00C3BBFD /* MissionCategory.swift in Sources */,
 				36012F122A55A9F4006B8A39 /* SceneDelegate.swift in Sources */,
 				A54CD6312A5C328500C434B7 /* OnboardingViewController.swift in Sources */,
 				36012F4D2A55CEF4006B8A39 /* UIButton+.swift in Sources */,
 				A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */,
+				361FA3282A60193B00C3BBFD /* HomeRepository.swift in Sources */,
+				361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */,
 				36012F492A55CE5D006B8A39 /* NSObject+.swift in Sources */,
 				36012F4F2A55CF18006B8A39 /* UIStackView+.swift in Sources */,
+				361FA32B2A601A4100C3BBFD /* Config.swift in Sources */,
+				361FA34A2A602AC000C3BBFD /* MissionContent.swift in Sources */,
 				36012F532A55CFAF006B8A39 /* UIViewController+.swift in Sources */,
 				36012F512A55CF2D006B8A39 /* UIView+.swift in Sources */,
 				36012F472A55CDEE006B8A39 /* Date+.swift in Sources */,
+				361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */,
+				361FA3322A601E7900C3BBFD /* PostService.swift in Sources */,
 				36012F322A55AF16006B8A39 /* HomeViewController.swift in Sources */,
+				361FA3462A602A2800C3BBFD /* MissionContentList.swift in Sources */,
 				36012F4B2A55CE87006B8A39 /* String+.swift in Sources */,
 				A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */,
 				A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */,
 				36012F452A55CDAA006B8A39 /* CGPoint+.swift in Sources */,
+				361FA32E2A601D1B00C3BBFD /* NetworkResult.swift in Sources */,
+				361FA34E2A602B5400C3BBFD /* MyRoundMission.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,8 +531,10 @@
 /* Begin XCBuildConfiguration section */
 		36012F1E2A55A9F6006B8A39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 361FA3292A60199500C3BBFD /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BASE_URL = "http://uni-sparkle.kro.kr/";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -504,8 +593,10 @@
 		};
 		36012F1F2A55A9F6006B8A39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 361FA3292A60199500C3BBFD /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				BASE_URL = "http://uni-sparkle.kro.kr/";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -692,6 +783,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		361FA3232A6012A600C3BBFD /* XCRemoteSwiftPackageReference "iOS-SDS-United" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/U-is-Ni-in-Korea/iOS-SDS-United";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -724,6 +823,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 36012F632A55D155006B8A39 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
 			productName = KakaoSDK;
+		};
+		361FA3242A6012A600C3BBFD /* SDSKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 361FA3232A6012A600C3BBFD /* XCRemoteSwiftPackageReference "iOS-SDS-United" */;
+			productName = SDSKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

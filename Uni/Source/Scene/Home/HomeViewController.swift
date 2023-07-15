@@ -9,6 +9,7 @@ import UIKit
 
 final class HomeViewController: BaseViewController {
     let homeView = HomeView()
+    private let homeRepository = HomeRepository()
 
     //MARK: - life cycle
     override func loadView() {
@@ -18,6 +19,9 @@ final class HomeViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        homeRepository.getHomeData { [weak self] data in
+            print(data.userID)
+        }
     }
     
     //MARK: - set view config
