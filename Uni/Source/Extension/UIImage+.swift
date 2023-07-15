@@ -1,8 +1,9 @@
-//
-//  UIImage+.swift
-//  Uni
-//
-//  Created by 박익범 on 2023/07/15.
-//
+import UIKit
 
-import Foundation
+extension UIImage {
+    func resize(targetSize: CGSize) -> UIImage {
+        return UIGraphicsImageRenderer(size:targetSize).image { _ in
+            self.draw(in: CGRect(origin: .zero, size: targetSize))
+        }
+    }
+}
