@@ -11,8 +11,6 @@
 		36012F122A55A9F4006B8A39 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F112A55A9F4006B8A39 /* SceneDelegate.swift */; };
 		36012F192A55A9F6006B8A39 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 36012F182A55A9F6006B8A39 /* Assets.xcassets */; };
 		36012F1C2A55A9F6006B8A39 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36012F1A2A55A9F6006B8A39 /* LaunchScreen.storyboard */; };
-		36012F322A55AF16006B8A39 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F312A55AF16006B8A39 /* HomeViewController.swift */; };
-		36012F342A55AF4D006B8A39 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F332A55AF4D006B8A39 /* HomeView.swift */; };
 		36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F372A55B18B006B8A39 /* BaseViewController.swift */; };
 		36012F3B2A55B60F006B8A39 /* AuthRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F3A2A55B60F006B8A39 /* AuthRepository.swift */; };
 		36012F3E2A55B64C006B8A39 /* HomeDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F3D2A55B64C006B8A39 /* HomeDataModel.swift */; };
@@ -50,6 +48,12 @@
 		361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */; };
 		361FA3522A602C0900C3BBFD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3512A602C0900C3BBFD /* Game.swift */; };
 		361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3532A602C1C00C3BBFD /* RoundGameList.swift */; };
+		361FA36F2A6268DD00C3BBFD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3662A6268DD00C3BBFD /* HomeViewController.swift */; };
+		361FA3702A6268DD00C3BBFD /* HomeBattleSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3682A6268DD00C3BBFD /* HomeBattleSelectView.swift */; };
+		361FA3722A6268DD00C3BBFD /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA36A2A6268DD00C3BBFD /* ScoreView.swift */; };
+		361FA3712A6268DD00C3BBFD /* HomeBattleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3692A6268DD00C3BBFD /* HomeBattleView.swift */; };
+		361FA3732A6268DD00C3BBFD /* ScoreInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA36B2A6268DD00C3BBFD /* ScoreInfoView.swift */; };
+		361FA3742A6268DD00C3BBFD /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA36E2A6268DD00C3BBFD /* HomeView.swift */; };
 		8D2B2E762A6161A900B75CDD /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E752A6161A900B75CDD /* SettingTableViewCell.swift */; };
 		8D2B2E782A6161D500B75CDD /* SettingTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E772A6161D500B75CDD /* SettingTitle.swift */; };
 		8D2B2E7A2A61623300B75CDD /* SettingProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E792A61623300B75CDD /* SettingProfileView.swift */; };
@@ -91,8 +95,6 @@
 		36012F182A55A9F6006B8A39 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		36012F1B2A55A9F6006B8A39 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		36012F1D2A55A9F6006B8A39 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		36012F312A55AF16006B8A39 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		36012F332A55AF4D006B8A39 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		36012F372A55B18B006B8A39 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		36012F3A2A55B60F006B8A39 /* AuthRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepository.swift; sourceTree = "<group>"; };
 		36012F3D2A55B64C006B8A39 /* HomeDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModel.swift; sourceTree = "<group>"; };
@@ -127,6 +129,12 @@
 		361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGameHistoryList.swift; sourceTree = "<group>"; };
 		361FA3512A602C0900C3BBFD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		361FA3532A602C1C00C3BBFD /* RoundGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundGameList.swift; sourceTree = "<group>"; };
+		361FA3662A6268DD00C3BBFD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		361FA3692A6268DD00C3BBFD /* HomeBattleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBattleView.swift; sourceTree = "<group>"; };
+		361FA3682A6268DD00C3BBFD /* HomeBattleSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBattleSelectView.swift; sourceTree = "<group>"; };
+		361FA36A2A6268DD00C3BBFD /* ScoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		361FA36B2A6268DD00C3BBFD /* ScoreInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreInfoView.swift; sourceTree = "<group>"; };
+		361FA36E2A6268DD00C3BBFD /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		8D2B2E752A6161A900B75CDD /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		8D2B2E772A6161D500B75CDD /* SettingTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTitle.swift; sourceTree = "<group>"; };
 		8D2B2E792A61623300B75CDD /* SettingProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileView.swift; sourceTree = "<group>"; };
@@ -284,6 +292,7 @@
 				36012F4E2A55CF18006B8A39 /* UIStackView+.swift */,
 				36012F502A55CF2D006B8A39 /* UIView+.swift */,
 				36012F522A55CFAF006B8A39 /* UIViewController+.swift */,
+				361FA35E2A61CB1000C3BBFD /* UIImage+.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -291,42 +300,12 @@
 		36012F2B2A55AE8D006B8A39 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				36012F302A55AEAD006B8A39 /* Components */,
-				36012F2E2A55AE9F006B8A39 /* Cells */,
-				36012F2D2A55AE9B006B8A39 /* View */,
-				36012F2C2A55AE91006B8A39 /* ViewController */,
+				361FA36C2A6268DD00C3BBFD /* Cells */,
+				361FA3672A6268DD00C3BBFD /* Components */,
+				361FA36D2A6268DD00C3BBFD /* View */,
+				361FA3652A6268DD00C3BBFD /* ViewController */,
 			);
 			path = Home;
-			sourceTree = "<group>";
-		};
-		36012F2C2A55AE91006B8A39 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				36012F312A55AF16006B8A39 /* HomeViewController.swift */,
-			);
-			name = ViewController;
-			sourceTree = "<group>";
-		};
-		36012F2D2A55AE9B006B8A39 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				36012F332A55AF4D006B8A39 /* HomeView.swift */,
-			);
-			name = View;
-			sourceTree = "<group>";
-		};
-		36012F2E2A55AE9F006B8A39 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Cells;
-			sourceTree = "<group>";
-		};
-		36012F302A55AEAD006B8A39 /* Components */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Components;
 			sourceTree = "<group>";
 		};
 		36012F362A55B17E006B8A39 /* Base */ = {
@@ -443,6 +422,40 @@
 				361FA3372A60223200C3BBFD /* HeaderUtils.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		361FA3652A6268DD00C3BBFD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				361FA3662A6268DD00C3BBFD /* HomeViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		361FA3672A6268DD00C3BBFD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				361FA3682A6268DD00C3BBFD /* HomeBattleSelectView.swift */,
+				361FA3692A6268DD00C3BBFD /* HomeBattleView.swift */,
+				361FA36A2A6268DD00C3BBFD /* ScoreView.swift */,
+				361FA36B2A6268DD00C3BBFD /* ScoreInfoView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		361FA36C2A6268DD00C3BBFD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		361FA36D2A6268DD00C3BBFD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				361FA36E2A6268DD00C3BBFD /* HomeView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		8D2B2E712A61616400B75CDD /* Mypage */ = {
@@ -670,6 +683,7 @@
 				36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */,
 				8D2B2E842A616CDC00B75CDD /* AccountViewController.swift in Sources */,
 				361FA3442A6029E400C3BBFD /* WishCoupon.swift in Sources */,
+				361FA36F2A6268DD00C3BBFD /* HomeViewController.swift in Sources */,
 				36012F102A55A9F4006B8A39 /* AppDelegate.swift in Sources */,
 				8D2B2E882A61778900B75CDD /* AccountTableViewCell.swift in Sources */,
 				361FA3422A6027B400C3BBFD /* WishCouponList.swift in Sources */,
@@ -682,12 +696,14 @@
 				A555AD9B2A6079790083CD20 /* NicknameSettingViewController.swift in Sources */,
 				8D2B2E8C2A619C0D00B75CDD /* EditProfileViewController.swift in Sources */,
 				36012F342A55AF4D006B8A39 /* HomeView.swift in Sources */,
+				361FA3722A6268DD00C3BBFD /* ScoreView.swift in Sources */,
 				361FA3342A601EAA00C3BBFD /* PatchService.swift in Sources */,
 				361FA3482A602A5C00C3BBFD /* RoundMission.swift in Sources */,
 				8D2B2E7E2A6163B400B75CDD /* SettingTableViewHeaderView.swift in Sources */,
 				36012F3B2A55B60F006B8A39 /* AuthRepository.swift in Sources */,
 				7E37BAE92A6284EE00A3CF64 /* HistoryDetailResultView.swift in Sources */,
 				361FA3522A602C0900C3BBFD /* Game.swift in Sources */,
+				361FA3742A6268DD00C3BBFD /* HomeView.swift in Sources */,
 				361FA33D2A6025E100C3BBFD /* Couple.swift in Sources */,
 				7EE3B1A12A60507F00962F4C /* HistoryViewController.swift in Sources */,
 				8D2B2E8E2A619C2E00B75CDD /* EditProfileView.swift in Sources */,
@@ -705,6 +721,7 @@
 				36012F492A55CE5D006B8A39 /* NSObject+.swift in Sources */,
 				8D2B2E7A2A61623300B75CDD /* SettingProfileView.swift in Sources */,
 				36012F4F2A55CF18006B8A39 /* UIStackView+.swift in Sources */,
+				361FA3702A6268DD00C3BBFD /* HomeBattleSelectView.swift in Sources */,
 				7EE3B1A62A6138F900962F4C /* Config.xcconfig in Sources */,
 				361FA32B2A601A4100C3BBFD /* Config.swift in Sources */,
 				7EE3B1A42A60602A00962F4C /* HistoryTableViewCell.swift in Sources */,
@@ -726,12 +743,14 @@
 				A555AD9D2A6079840083CD20 /* NicknameSettingView.swift in Sources */,
 				A55150BA2A6137ED00481F57 /* Config.xcconfig in Sources */,
 				8D2B2E802A6163E900B75CDD /* SettingViewController.swift in Sources */,
+				361FA3712A6268DD00C3BBFD /* HomeBattleView.swift in Sources */,
 				36012F4B2A55CE87006B8A39 /* String+.swift in Sources */,
 				A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */,
 				A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */,
 				36012F452A55CDAA006B8A39 /* CGPoint+.swift in Sources */,
 				361FA32E2A601D1B00C3BBFD /* NetworkResult.swift in Sources */,
 				361FA34E2A602B5400C3BBFD /* MyRoundMission.swift in Sources */,
+				361FA3732A6268DD00C3BBFD /* ScoreInfoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
