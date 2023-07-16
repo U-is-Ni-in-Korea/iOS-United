@@ -34,7 +34,9 @@ final class NicknameSettingView: UIView {
         $0.font = SDSFont.body2.font
     }
     
-    private let nickNameTextField = SDSTextfield(placeholder: "닉네임")
+    private let nickNameTextField = SDSTextfield(placeholder: "닉네임",
+                                                 errorMessage: "글자수를 초과했어요",
+                                                 letterLimit: 10)
     
     private let logoImageView = UIImageView().then {
         $0.backgroundColor = .red
