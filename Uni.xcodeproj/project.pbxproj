@@ -52,6 +52,18 @@
 		361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3532A602C1C00C3BBFD /* RoundGameList.swift */; };
 		A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */; };
 		A5B4B5922A604F43000C7555 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B5912A604F43000C7555 /* LoginView.swift */; };
+		7E37BAE32A618DE900A3CF64 /* HistoryEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE22A618DE900A3CF64 /* HistoryEmptyView.swift */; };
+		7E37BAE52A6271B700A3CF64 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE42A6271B700A3CF64 /* HistoryDetailViewController.swift */; };
+		7E37BAE72A6271DC00A3CF64 /* HistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE62A6271DC00A3CF64 /* HistoryDetailView.swift */; };
+		7E37BAE92A6284EE00A3CF64 /* HistoryDetailResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE82A6284EE00A3CF64 /* HistoryDetailResultView.swift */; };
+		7EE3B19F2A604FE900962F4C /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3B19E2A604FE900962F4C /* HistoryView.swift */; };
+		7EE3B1A12A60507F00962F4C /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3B1A02A60507F00962F4C /* HistoryViewController.swift */; };
+		7EE3B1A42A60602A00962F4C /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3B1A32A60602A00962F4C /* HistoryTableViewCell.swift */; };
+		7EE3B1A62A6138F900962F4C /* Config.xcconfig in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3B1A52A6138F900962F4C /* Config.xcconfig */; };
+		A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */; };
+		A54CD6312A5C328500C434B7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */; };
+		A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6332A5C347100C434B7 /* OnboardingCell.swift */; };
+		A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,8 +86,11 @@
 		36012F4E2A55CF18006B8A39 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		36012F502A55CF2D006B8A39 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		36012F522A55CFAF006B8A39 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		A54CD6332A5C347100C434B7 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
 		361FA3272A60193B00C3BBFD /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
-		361FA3292A60199500C3BBFD /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		361FA32A2A601A4100C3BBFD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		361FA32F2A601D2E00C3BBFD /* GetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetService.swift; sourceTree = "<group>"; };
@@ -96,6 +111,14 @@
 		361FA3532A602C1C00C3BBFD /* RoundGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundGameList.swift; sourceTree = "<group>"; };
 		A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5B4B5912A604F43000C7555 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		7E37BAE22A618DE900A3CF64 /* HistoryEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEmptyView.swift; sourceTree = "<group>"; };
+		7E37BAE42A6271B700A3CF64 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
+		7E37BAE62A6271DC00A3CF64 /* HistoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailView.swift; sourceTree = "<group>"; };
+		7E37BAE82A6284EE00A3CF64 /* HistoryDetailResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailResultView.swift; sourceTree = "<group>"; };
+		7EE3B19E2A604FE900962F4C /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
+		7EE3B1A02A60507F00962F4C /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		7EE3B1A32A60602A00962F4C /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
+		7EE3B1A52A6138F900962F4C /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,7 +192,7 @@
 			children = (
 				36012F0F2A55A9F4006B8A39 /* AppDelegate.swift */,
 				36012F112A55A9F4006B8A39 /* SceneDelegate.swift */,
-				361FA3292A60199500C3BBFD /* Config.xcconfig */,
+				7EE3B1A52A6138F900962F4C /* Config.xcconfig */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -178,6 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				A5B4B58C2A604C2F000C7555 /* Login */,
+				7EE3B19B2A604FAC00962F4C /* History */,
+				A54CD62B2A5C322600C434B7 /* Onboarding */,
 				36012F2B2A55AE8D006B8A39 /* Home */,
 			);
 			path = Scene;
@@ -286,6 +311,8 @@
 			isa = PBXGroup;
 			children = (
 				36012F432A55B672006B8A39 /* Home */,
+				A58C70332A627CA900327CD3 /* Onboarding */,
+				36012F402A55B659006B8A39 /* AuthRepository */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -325,6 +352,48 @@
 			path = HomeRepository;
 			sourceTree = "<group>";
 		};
+		A54CD62B2A5C322600C434B7 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				A54CD6322A5C346500C434B7 /* Cells */,
+				A54CD62C2A5C326300C434B7 /* View */,
+				A54CD62F2A5C327200C434B7 /* ViewController */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		A54CD62C2A5C326300C434B7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A54CD62F2A5C327200C434B7 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A54CD6322A5C346500C434B7 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				A54CD6332A5C347100C434B7 /* OnboardingCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		A58C70332A627CA900327CD3 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
 		361FA32C2A601C6500C3BBFD /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +405,44 @@
 				361FA3372A60223200C3BBFD /* HeaderUtils.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		7EE3B19B2A604FAC00962F4C /* History */ = {
+			isa = PBXGroup;
+			children = (
+				7EE3B1A22A605FF700962F4C /* Cells */,
+				7EE3B19D2A604FC700962F4C /* ViewController */,
+				7EE3B19C2A604FBF00962F4C /* View */,
+			);
+			path = History;
+			sourceTree = "<group>";
+		};
+		7EE3B19C2A604FBF00962F4C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7EE3B19E2A604FE900962F4C /* HistoryView.swift */,
+				7E37BAE22A618DE900A3CF64 /* HistoryEmptyView.swift */,
+				7E37BAE62A6271DC00A3CF64 /* HistoryDetailView.swift */,
+				7E37BAE82A6284EE00A3CF64 /* HistoryDetailResultView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7EE3B19D2A604FC700962F4C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7EE3B1A02A60507F00962F4C /* HistoryViewController.swift */,
+				7E37BAE42A6271B700A3CF64 /* HistoryDetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7EE3B1A22A605FF700962F4C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7EE3B1A32A60602A00962F4C /* HistoryTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		A5B4B58C2A604C2F000C7555 /* Login */ = {
@@ -457,22 +564,32 @@
 				36012F102A55A9F4006B8A39 /* AppDelegate.swift in Sources */,
 				361FA3422A6027B400C3BBFD /* WishCouponList.swift in Sources */,
 				36012F3E2A55B64C006B8A39 /* HomeDataModel.swift in Sources */,
+				7E37BAE72A6271DC00A3CF64 /* HistoryDetailView.swift in Sources */,
 				361FA3382A60223200C3BBFD /* HeaderUtils.swift in Sources */,
+				7EE3B19F2A604FE900962F4C /* HistoryView.swift in Sources */,
+				7E37BAE52A6271B700A3CF64 /* HistoryDetailViewController.swift in Sources */,
 				361FA33F2A60261000C3BBFD /* ShortGame.swift in Sources */,
 				36012F342A55AF4D006B8A39 /* HomeView.swift in Sources */,
 				361FA3342A601EAA00C3BBFD /* PatchService.swift in Sources */,
 				361FA3482A602A5C00C3BBFD /* RoundMission.swift in Sources */,
 				36012F3B2A55B60F006B8A39 /* AuthRepository.swift in Sources */,
+				7E37BAE92A6284EE00A3CF64 /* HistoryDetailResultView.swift in Sources */,
 				361FA3522A602C0900C3BBFD /* Game.swift in Sources */,
 				361FA33D2A6025E100C3BBFD /* Couple.swift in Sources */,
+				7EE3B1A12A60507F00962F4C /* HistoryViewController.swift in Sources */,
 				361FA34C2A602ADD00C3BBFD /* MissionCategory.swift in Sources */,
 				36012F122A55A9F4006B8A39 /* SceneDelegate.swift in Sources */,
+				A54CD6312A5C328500C434B7 /* OnboardingViewController.swift in Sources */,
 				36012F4D2A55CEF4006B8A39 /* UIButton+.swift in Sources */,
+				A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */,
 				361FA3282A60193B00C3BBFD /* HomeRepository.swift in Sources */,
+				7E37BAE32A618DE900A3CF64 /* HistoryEmptyView.swift in Sources */,
 				361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */,
 				36012F492A55CE5D006B8A39 /* NSObject+.swift in Sources */,
 				36012F4F2A55CF18006B8A39 /* UIStackView+.swift in Sources */,
+				7EE3B1A62A6138F900962F4C /* Config.xcconfig in Sources */,
 				361FA32B2A601A4100C3BBFD /* Config.swift in Sources */,
+				7EE3B1A42A60602A00962F4C /* HistoryTableViewCell.swift in Sources */,
 				361FA34A2A602AC000C3BBFD /* MissionContent.swift in Sources */,
 				36012F532A55CFAF006B8A39 /* UIViewController+.swift in Sources */,
 				36012F512A55CF2D006B8A39 /* UIView+.swift in Sources */,
@@ -484,6 +601,8 @@
 				A5B4B5922A604F43000C7555 /* LoginView.swift in Sources */,
 				361FA3462A602A2800C3BBFD /* MissionContentList.swift in Sources */,
 				36012F4B2A55CE87006B8A39 /* String+.swift in Sources */,
+				A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */,
+				A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */,
 				36012F452A55CDAA006B8A39 /* CGPoint+.swift in Sources */,
 				361FA32E2A601D1B00C3BBFD /* NetworkResult.swift in Sources */,
 				361FA34E2A602B5400C3BBFD /* MyRoundMission.swift in Sources */,
@@ -506,6 +625,7 @@
 /* Begin XCBuildConfiguration section */
 		36012F1E2A55A9F6006B8A39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EE3B1A52A6138F900962F4C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = "http://uni-sparkle.kro.kr/";
@@ -567,6 +687,7 @@
 		};
 		36012F1F2A55A9F6006B8A39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7EE3B1A52A6138F900962F4C /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = "http://uni-sparkle.kro.kr/";
