@@ -87,6 +87,10 @@
 		A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */; };
 		A54CD6312A5C328500C434B7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */; };
 		A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6332A5C347100C434B7 /* OnboardingCell.swift */; };
+		A578FC142A62D9210021A32E /* DDaySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578FC132A62D9210021A32E /* DDaySettingViewController.swift */; };
+		A578FC162A62D9380021A32E /* DDaySettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578FC152A62D9380021A32E /* DDaySettingView.swift */; };
+		A578FC182A62D9AB0021A32E /* CodeGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578FC172A62D9AB0021A32E /* CodeGeneratorViewController.swift */; };
+		A578FC1A2A62D9B70021A32E /* CodeGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578FC192A62D9B70021A32E /* CodeGeneratorView.swift */; };
 		A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -108,10 +112,6 @@
 		36012F4E2A55CF18006B8A39 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		36012F502A55CF2D006B8A39 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		36012F522A55CFAF006B8A39 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
-		A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		A54CD6332A5C347100C434B7 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
-		A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
 		361FA3272A60193B00C3BBFD /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		361FA32A2A601A4100C3BBFD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
@@ -131,6 +131,14 @@
 		361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGameHistoryList.swift; sourceTree = "<group>"; };
 		361FA3512A602C0900C3BBFD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		361FA3532A602C1C00C3BBFD /* RoundGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundGameList.swift; sourceTree = "<group>"; };
+		A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		A54CD6332A5C347100C434B7 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		A578FC132A62D9210021A32E /* DDaySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDaySettingViewController.swift; sourceTree = "<group>"; };
+		A578FC152A62D9380021A32E /* DDaySettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDaySettingView.swift; sourceTree = "<group>"; };
+		A578FC172A62D9AB0021A32E /* CodeGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeGeneratorViewController.swift; sourceTree = "<group>"; };
+		A578FC192A62D9B70021A32E /* CodeGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeGeneratorView.swift; sourceTree = "<group>"; };
+		A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
 		A58C702F2A61CE6200327CD3 /* EnterInvitationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInvitationView.swift; sourceTree = "<group>"; };
 		A58C70312A61D3AC00327CD3 /* EnterInvitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInvitationViewController.swift; sourceTree = "<group>"; };
 		361FA3662A6268DD00C3BBFD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -252,6 +260,7 @@
 				A555AD972A60782F0083CD20 /* ConnectionCommom */,
 				A5B4B58C2A604C2F000C7555 /* Login */,
 				7EE3B19B2A604FAC00962F4C /* History */,
+				A578FC102A62D8CF0021A32E /* SendInvitation */,
 				A54CD62B2A5C322600C434B7 /* Onboarding */,
 				A58C702C2A61CC4F00327CD3 /* EnterInvitation */,
 				36012F2B2A55AE8D006B8A39 /* Home */,
@@ -334,7 +343,6 @@
 			children = (
 				36012F432A55B672006B8A39 /* Home */,
 				A58C70332A627CA900327CD3 /* Onboarding */,
-				36012F402A55B659006B8A39 /* AuthRepository */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -374,6 +382,19 @@
 			path = HomeRepository;
 			sourceTree = "<group>";
 		};
+		361FA32C2A601C6500C3BBFD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				361FA32A2A601A4100C3BBFD /* Config.swift */,
+				361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */,
+				361FA32F2A601D2E00C3BBFD /* GetService.swift */,
+				361FA3312A601E7900C3BBFD /* PostService.swift */,
+				361FA3332A601EAA00C3BBFD /* PatchService.swift */,
+				361FA3372A60223200C3BBFD /* HeaderUtils.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 		A54CD62B2A5C322600C434B7 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,25 +429,39 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		A578FC102A62D8CF0021A32E /* SendInvitation */ = {
+			isa = PBXGroup;
+			children = (
+				A578FC122A62D90D0021A32E /* ViewController */,
+				A578FC112A62D9080021A32E /* View */,
+			);
+			path = SendInvitation;
+			sourceTree = "<group>";
+		};
+		A578FC112A62D9080021A32E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A578FC152A62D9380021A32E /* DDaySettingView.swift */,
+				A578FC192A62D9B70021A32E /* CodeGeneratorView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A578FC122A62D90D0021A32E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A578FC132A62D9210021A32E /* DDaySettingViewController.swift */,
+				A578FC172A62D9AB0021A32E /* CodeGeneratorViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		A58C70332A627CA900327CD3 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
 				A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */,
 			);
 			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		361FA32C2A601C6500C3BBFD /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				361FA32A2A601A4100C3BBFD /* Config.swift */,
-				361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */,
-				361FA32F2A601D2E00C3BBFD /* GetService.swift */,
-				361FA3312A601E7900C3BBFD /* PostService.swift */,
-				361FA3332A601EAA00C3BBFD /* PatchService.swift */,
-				361FA3372A60223200C3BBFD /* HeaderUtils.swift */,
-			);
-			path = Base;
 			sourceTree = "<group>";
 		};
 		A58C702C2A61CC4F00327CD3 /* EnterInvitation */ = {
@@ -720,6 +755,7 @@
 				361FA3422A6027B400C3BBFD /* WishCouponList.swift in Sources */,
 				36012F3E2A55B64C006B8A39 /* HomeDataModel.swift in Sources */,
 				7E37BAE72A6271DC00A3CF64 /* HistoryDetailView.swift in Sources */,
+				A578FC182A62D9AB0021A32E /* CodeGeneratorViewController.swift in Sources */,
 				361FA3382A60223200C3BBFD /* HeaderUtils.swift in Sources */,
 				7EE3B19F2A604FE900962F4C /* HistoryView.swift in Sources */,
 				7E37BAE52A6271B700A3CF64 /* HistoryDetailViewController.swift in Sources */,
@@ -732,6 +768,7 @@
 				361FA3722A6268DD00C3BBFD /* ScoreView.swift in Sources */,
 				361FA3342A601EAA00C3BBFD /* PatchService.swift in Sources */,
 				361FA3482A602A5C00C3BBFD /* RoundMission.swift in Sources */,
+				A578FC162A62D9380021A32E /* DDaySettingView.swift in Sources */,
 				8D2B2E7E2A6163B400B75CDD /* SettingTableViewHeaderView.swift in Sources */,
 				36012F3B2A55B60F006B8A39 /* AuthRepository.swift in Sources */,
 				7E37BAE92A6284EE00A3CF64 /* HistoryDetailResultView.swift in Sources */,
@@ -758,6 +795,7 @@
 				7EE3B1A62A6138F900962F4C /* Config.xcconfig in Sources */,
 				361FA32B2A601A4100C3BBFD /* Config.swift in Sources */,
 				7EE3B1A42A60602A00962F4C /* HistoryTableViewCell.swift in Sources */,
+				A578FC142A62D9210021A32E /* DDaySettingViewController.swift in Sources */,
 				361FA34A2A602AC000C3BBFD /* MissionContent.swift in Sources */,
 				36012F532A55CFAF006B8A39 /* UIViewController+.swift in Sources */,
 				36012F512A55CF2D006B8A39 /* UIView+.swift in Sources */,
@@ -781,6 +819,7 @@
 				A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */,
 				A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */,
 				36012F452A55CDAA006B8A39 /* CGPoint+.swift in Sources */,
+				A578FC1A2A62D9B70021A32E /* CodeGeneratorView.swift in Sources */,
 				361FA32E2A601D1B00C3BBFD /* NetworkResult.swift in Sources */,
 				361FA34E2A602B5400C3BBFD /* MyRoundMission.swift in Sources */,
 				361FA3732A6268DD00C3BBFD /* ScoreInfoView.swift in Sources */,
