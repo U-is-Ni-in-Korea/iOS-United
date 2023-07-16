@@ -17,17 +17,6 @@ class AccountTableViewCell: UITableViewCell {
         $0.font = SDSFont.body2.font
         $0.textColor = .gray600
     }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -49,9 +38,7 @@ class AccountTableViewCell: UITableViewCell {
     }
     
     func configureCell(_ accountTitle: AccountTitle) {
-        
         accountTitleLabel.text = accountTitle.title
-        
     }
 
 }

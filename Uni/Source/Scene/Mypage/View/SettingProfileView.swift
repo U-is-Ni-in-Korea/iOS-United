@@ -45,6 +45,7 @@ class SettingProfileView: UIView {
     }
     
     private func setLayout() {
+        
         [userImageView, userNameLabel, userEmailLabel, editProfileButton] .forEach{ addSubview($0) }
         
         userImageView.snp.makeConstraints {
@@ -69,7 +70,5 @@ class SettingProfileView: UIView {
             $0.leading.equalTo(userEmailLabel.snp.trailing).offset(34)
             $0.centerY.equalToSuperview()
         }
-        
     }
-
 }

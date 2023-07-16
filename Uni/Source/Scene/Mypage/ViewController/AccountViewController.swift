@@ -9,9 +9,9 @@ import UIKit
 import SDSKit
 import Then
 
-class AccountViewController: UIViewController {
-
-    var accountView: AccountView!
+class AccountViewController: UIViewController, AccountViewDelegate {
+    
+    var accountView = AccountView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +21,14 @@ class AccountViewController: UIViewController {
         super.loadView()
         
         accountView = AccountView(frame: self.view.frame)
+        accountView.delegate = self
         self.view = accountView
+    }
+    
+    func didSelectCell(at indexPath: IndexPath) {
+        
+        print("alert 만들기")
+
     }
 
 }

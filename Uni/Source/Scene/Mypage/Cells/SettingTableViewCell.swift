@@ -22,15 +22,6 @@ class SettingTableViewCell: UITableViewCell {
         $0.font = SDSFont.body2.font
         $0.textColor = .gray600
     }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-    }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -57,10 +48,7 @@ class SettingTableViewCell: UITableViewCell {
     }
     
     func configureCell(_ settingTitle: SettingTitle) {
-        
         settingTitleLabel.text = settingTitle.title
-        
     }
-
 }
 

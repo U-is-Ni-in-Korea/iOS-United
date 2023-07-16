@@ -9,9 +9,11 @@ import UIKit
 import SDSKit
 import Then
 
-class AccountView: UIView {
+final class AccountView: UIView {
     
-    private let accountViewNavi = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "계정")
+    weak var delegate: AccountViewDelegate?
+    
+    public var accountViewNavi = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "계정")
     private let accountTitleList = AccountTitle.accountTitleList()
     
     private let accountTableView = UITableView().then {
@@ -35,6 +37,7 @@ class AccountView: UIView {
     private func setStyle() {
         self.backgroundColor = .gray000
     }
+    
     private func setLayout() {
         
         addSubviews([accountViewNavi, accountTableView])
@@ -54,17 +57,19 @@ class AccountView: UIView {
 }
 
 extension AccountView: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return accountTitleList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: AccountTableViewCell.idf, for: indexPath) as? AccountTableViewCell else { return UITableViewCell() }
-        
         cell.configureCell(accountTitleList[indexPath.row])
         cell.selectionStyle = .none
-        
         return cell
     }
+}
+
+protocol AccountViewDelegate: AnyObject {
+    func didSelectCell(at indexPath: IndexPath)
 }
