@@ -48,6 +48,8 @@
 		361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */; };
 		361FA3522A602C0900C3BBFD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3512A602C0900C3BBFD /* Game.swift */; };
 		361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3532A602C1C00C3BBFD /* RoundGameList.swift */; };
+		A58C70302A61CE6300327CD3 /* EnterInvitationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C702F2A61CE6200327CD3 /* EnterInvitationView.swift */; };
+		A58C70322A61D3AC00327CD3 /* EnterInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C70312A61D3AC00327CD3 /* EnterInvitationViewController.swift */; };
 		361FA36F2A6268DD00C3BBFD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3662A6268DD00C3BBFD /* HomeViewController.swift */; };
 		361FA3702A6268DD00C3BBFD /* HomeBattleSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3682A6268DD00C3BBFD /* HomeBattleSelectView.swift */; };
 		361FA3722A6268DD00C3BBFD /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA36A2A6268DD00C3BBFD /* ScoreView.swift */; };
@@ -129,6 +131,8 @@
 		361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGameHistoryList.swift; sourceTree = "<group>"; };
 		361FA3512A602C0900C3BBFD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		361FA3532A602C1C00C3BBFD /* RoundGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundGameList.swift; sourceTree = "<group>"; };
+		A58C702F2A61CE6200327CD3 /* EnterInvitationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInvitationView.swift; sourceTree = "<group>"; };
+		A58C70312A61D3AC00327CD3 /* EnterInvitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInvitationViewController.swift; sourceTree = "<group>"; };
 		361FA3662A6268DD00C3BBFD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		361FA3692A6268DD00C3BBFD /* HomeBattleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBattleView.swift; sourceTree = "<group>"; };
 		361FA3682A6268DD00C3BBFD /* HomeBattleSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBattleSelectView.swift; sourceTree = "<group>"; };
@@ -234,9 +238,9 @@
 		36012F252A55AE35006B8A39 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
+				A58C702A2A61C42D00327CD3 /* Config.xcconfig */,
 				36012F0F2A55A9F4006B8A39 /* AppDelegate.swift */,
 				36012F112A55A9F4006B8A39 /* SceneDelegate.swift */,
-				7EE3B1A52A6138F900962F4C /* Config.xcconfig */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -249,6 +253,7 @@
 				A5B4B58C2A604C2F000C7555 /* Login */,
 				7EE3B19B2A604FAC00962F4C /* History */,
 				A54CD62B2A5C322600C434B7 /* Onboarding */,
+				A58C702C2A61CC4F00327CD3 /* EnterInvitation */,
 				36012F2B2A55AE8D006B8A39 /* Home */,
 			);
 			path = Scene;
@@ -422,6 +427,31 @@
 				361FA3372A60223200C3BBFD /* HeaderUtils.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		A58C702C2A61CC4F00327CD3 /* EnterInvitation */ = {
+			isa = PBXGroup;
+			children = (
+				A58C702D2A61CE3800327CD3 /* View */,
+				A58C702E2A61CE4800327CD3 /* ViewController */,
+			);
+			path = EnterInvitation;
+			sourceTree = "<group>";
+		};
+		A58C702D2A61CE3800327CD3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A58C702F2A61CE6200327CD3 /* EnterInvitationView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A58C702E2A61CE4800327CD3 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A58C70312A61D3AC00327CD3 /* EnterInvitationViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		361FA3652A6268DD00C3BBFD /* ViewController */ = {
@@ -668,6 +698,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36012F1C2A55A9F6006B8A39 /* LaunchScreen.storyboard in Resources */,
+				A58C702B2A61C42D00327CD3 /* Config.xcconfig in Resources */,
 				36012F192A55A9F6006B8A39 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,6 +726,8 @@
 				361FA33F2A60261000C3BBFD /* ShortGame.swift in Sources */,
 				A555AD9B2A6079790083CD20 /* NicknameSettingViewController.swift in Sources */,
 				8D2B2E8C2A619C0D00B75CDD /* EditProfileViewController.swift in Sources */,
+				A58C70322A61D3AC00327CD3 /* EnterInvitationViewController.swift in Sources */,
+				A58C70302A61CE6300327CD3 /* EnterInvitationView.swift in Sources */,
 				36012F342A55AF4D006B8A39 /* HomeView.swift in Sources */,
 				361FA3722A6268DD00C3BBFD /* ScoreView.swift in Sources */,
 				361FA3342A601EAA00C3BBFD /* PatchService.swift in Sources */,
