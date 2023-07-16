@@ -48,6 +48,12 @@
 		361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */; };
 		361FA3522A602C0900C3BBFD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3512A602C0900C3BBFD /* Game.swift */; };
 		361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3532A602C1C00C3BBFD /* RoundGameList.swift */; };
+		361FA37B2A62722A00C3BBFD /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA37A2A62722A00C3BBFD /* BattleViewController.swift */; };
+		361FA37D2A6277C300C3BBFD /* BattleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA37C2A6277C300C3BBFD /* BattleView.swift */; };
+		361FA37F2A62793B00C3BBFD /* SectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA37E2A62793B00C3BBFD /* SectionView.swift */; };
+		361FA3822A62861C00C3BBFD /* BattleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3812A62861C00C3BBFD /* BattleCollectionViewCell.swift */; };
+		361FA3842A628A2100C3BBFD /* WishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3832A628A2100C3BBFD /* WishCollectionViewCell.swift */; };
+		361FA38A2A62D65800C3BBFD /* BattleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3892A62D65800C3BBFD /* BattleDataModel.swift */; };
 		A58C70302A61CE6300327CD3 /* EnterInvitationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C702F2A61CE6200327CD3 /* EnterInvitationView.swift */; };
 		A58C70322A61D3AC00327CD3 /* EnterInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C70312A61D3AC00327CD3 /* EnterInvitationViewController.swift */; };
 		361FA36F2A6268DD00C3BBFD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3662A6268DD00C3BBFD /* HomeViewController.swift */; };
@@ -131,6 +137,12 @@
 		361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGameHistoryList.swift; sourceTree = "<group>"; };
 		361FA3512A602C0900C3BBFD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		361FA3532A602C1C00C3BBFD /* RoundGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundGameList.swift; sourceTree = "<group>"; };
+		361FA37A2A62722A00C3BBFD /* BattleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
+		361FA37C2A6277C300C3BBFD /* BattleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleView.swift; sourceTree = "<group>"; };
+		361FA37E2A62793B00C3BBFD /* SectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionView.swift; sourceTree = "<group>"; };
+		361FA3812A62861C00C3BBFD /* BattleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleCollectionViewCell.swift; sourceTree = "<group>"; };
+		361FA3832A628A2100C3BBFD /* WishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCollectionViewCell.swift; sourceTree = "<group>"; };
+		361FA3892A62D65800C3BBFD /* BattleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleDataModel.swift; sourceTree = "<group>"; };
 		A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		A54CD6332A5C347100C434B7 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
@@ -262,6 +274,7 @@
 				7EE3B19B2A604FAC00962F4C /* History */,
 				A578FC102A62D8CF0021A32E /* SendInvitation */,
 				A54CD62B2A5C322600C434B7 /* Onboarding */,
+				361FA3752A6271F900C3BBFD /* Battle */,
 				A58C702C2A61CC4F00327CD3 /* EnterInvitation */,
 				36012F2B2A55AE8D006B8A39 /* Home */,
 			);
@@ -341,6 +354,7 @@
 		36012F3C2A55B61E006B8A39 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				361FA3882A62D64F00C3BBFD /* Battle */,
 				36012F432A55B672006B8A39 /* Home */,
 				A58C70332A627CA900327CD3 /* Onboarding */,
 			);
@@ -471,6 +485,66 @@
 				A58C702E2A61CE4800327CD3 /* ViewController */,
 			);
 			path = EnterInvitation;
+			sourceTree = "<group>";
+		};
+		361FA3752A6271F900C3BBFD /* Battle */ = {
+			isa = PBXGroup;
+			children = (
+				361FA3792A62721700C3BBFD /* ViewController */,
+				361FA3782A62721300C3BBFD /* View */,
+				361FA3772A62720F00C3BBFD /* Cells */,
+				361FA3762A62720A00C3BBFD /* Components */,
+			);
+			path = Battle;
+			sourceTree = "<group>";
+		};
+		361FA3762A62720A00C3BBFD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				361FA37E2A62793B00C3BBFD /* SectionView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		361FA3772A62720F00C3BBFD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				361FA3802A62860100C3BBFD /* CollectionViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		361FA3782A62721300C3BBFD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				361FA37C2A6277C300C3BBFD /* BattleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		361FA3792A62721700C3BBFD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				361FA37A2A62722A00C3BBFD /* BattleViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		361FA3802A62860100C3BBFD /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				361FA3812A62861C00C3BBFD /* BattleCollectionViewCell.swift */,
+				361FA3832A628A2100C3BBFD /* WishCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		361FA3882A62D64F00C3BBFD /* Battle */ = {
+			isa = PBXGroup;
+			children = (
+				361FA3892A62D65800C3BBFD /* BattleDataModel.swift */,
+			);
+			path = Battle;
 			sourceTree = "<group>";
 		};
 		A58C702D2A61CE3800327CD3 /* View */ = {
@@ -747,10 +821,12 @@
 			files = (
 				361FA3302A601D2E00C3BBFD /* GetService.swift in Sources */,
 				36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */,
+				361FA3842A628A2100C3BBFD /* WishCollectionViewCell.swift in Sources */,
 				8D2B2E842A616CDC00B75CDD /* AccountViewController.swift in Sources */,
 				361FA3442A6029E400C3BBFD /* WishCoupon.swift in Sources */,
 				361FA36F2A6268DD00C3BBFD /* HomeViewController.swift in Sources */,
 				36012F102A55A9F4006B8A39 /* AppDelegate.swift in Sources */,
+				361FA3822A62861C00C3BBFD /* BattleCollectionViewCell.swift in Sources */,
 				8D2B2E882A61778900B75CDD /* AccountTableViewCell.swift in Sources */,
 				361FA3422A6027B400C3BBFD /* WishCouponList.swift in Sources */,
 				36012F3E2A55B64C006B8A39 /* HomeDataModel.swift in Sources */,
@@ -765,6 +841,7 @@
 				A58C70322A61D3AC00327CD3 /* EnterInvitationViewController.swift in Sources */,
 				A58C70302A61CE6300327CD3 /* EnterInvitationView.swift in Sources */,
 				36012F342A55AF4D006B8A39 /* HomeView.swift in Sources */,
+				361FA38A2A62D65800C3BBFD /* BattleDataModel.swift in Sources */,
 				361FA3722A6268DD00C3BBFD /* ScoreView.swift in Sources */,
 				361FA3342A601EAA00C3BBFD /* PatchService.swift in Sources */,
 				361FA3482A602A5C00C3BBFD /* RoundMission.swift in Sources */,
@@ -775,6 +852,7 @@
 				361FA3522A602C0900C3BBFD /* Game.swift in Sources */,
 				361FA3742A6268DD00C3BBFD /* HomeView.swift in Sources */,
 				361FA33D2A6025E100C3BBFD /* Couple.swift in Sources */,
+				361FA37B2A62722A00C3BBFD /* BattleViewController.swift in Sources */,
 				7EE3B1A12A60507F00962F4C /* HistoryViewController.swift in Sources */,
 				8D2B2E8E2A619C2E00B75CDD /* EditProfileView.swift in Sources */,
 				8D2B2E862A616CFA00B75CDD /* AccountView.swift in Sources */,
@@ -820,7 +898,9 @@
 				A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */,
 				36012F452A55CDAA006B8A39 /* CGPoint+.swift in Sources */,
 				A578FC1A2A62D9B70021A32E /* CodeGeneratorView.swift in Sources */,
+				361FA37F2A62793B00C3BBFD /* SectionView.swift in Sources */,
 				361FA32E2A601D1B00C3BBFD /* NetworkResult.swift in Sources */,
+				361FA37D2A6277C300C3BBFD /* BattleView.swift in Sources */,
 				361FA34E2A602B5400C3BBFD /* MyRoundMission.swift in Sources */,
 				361FA3732A6268DD00C3BBFD /* ScoreInfoView.swift in Sources */,
 			);
