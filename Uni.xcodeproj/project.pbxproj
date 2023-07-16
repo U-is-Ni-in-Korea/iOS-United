@@ -50,6 +50,8 @@
 		361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */; };
 		361FA3522A602C0900C3BBFD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3512A602C0900C3BBFD /* Game.swift */; };
 		361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3532A602C1C00C3BBFD /* RoundGameList.swift */; };
+		A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */; };
+		A5B4B5922A604F43000C7555 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B5912A604F43000C7555 /* LoginView.swift */; };
 		7E37BAE32A618DE900A3CF64 /* HistoryEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE22A618DE900A3CF64 /* HistoryEmptyView.swift */; };
 		7E37BAE52A6271B700A3CF64 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE42A6271B700A3CF64 /* HistoryDetailViewController.swift */; };
 		7E37BAE72A6271DC00A3CF64 /* HistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE62A6271DC00A3CF64 /* HistoryDetailView.swift */; };
@@ -107,6 +109,8 @@
 		361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGameHistoryList.swift; sourceTree = "<group>"; };
 		361FA3512A602C0900C3BBFD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		361FA3532A602C1C00C3BBFD /* RoundGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundGameList.swift; sourceTree = "<group>"; };
+		A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A5B4B5912A604F43000C7555 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7E37BAE22A618DE900A3CF64 /* HistoryEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEmptyView.swift; sourceTree = "<group>"; };
 		7E37BAE42A6271B700A3CF64 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
 		7E37BAE62A6271DC00A3CF64 /* HistoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailView.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 		36012F262A55AE3F006B8A39 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				A5B4B58C2A604C2F000C7555 /* Login */,
 				7EE3B19B2A604FAC00962F4C /* History */,
 				A54CD62B2A5C322600C434B7 /* Onboarding */,
 				36012F2B2A55AE8D006B8A39 /* Home */,
@@ -440,6 +445,31 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		A5B4B58C2A604C2F000C7555 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A5B4B58E2A604C8C000C7555 /* ViewController */,
+				A5B4B58D2A604C86000C7555 /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A5B4B58D2A604C86000C7555 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5B4B5912A604F43000C7555 /* LoginView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A5B4B58E2A604C8C000C7555 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -566,7 +596,9 @@
 				36012F472A55CDEE006B8A39 /* Date+.swift in Sources */,
 				361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */,
 				361FA3322A601E7900C3BBFD /* PostService.swift in Sources */,
+				A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */,
 				36012F322A55AF16006B8A39 /* HomeViewController.swift in Sources */,
+				A5B4B5922A604F43000C7555 /* LoginView.swift in Sources */,
 				361FA3462A602A2800C3BBFD /* MissionContentList.swift in Sources */,
 				36012F4B2A55CE87006B8A39 /* String+.swift in Sources */,
 				A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */,
