@@ -1,5 +1,6 @@
 import UIKit
 import Sentry
+import SDSKit
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
