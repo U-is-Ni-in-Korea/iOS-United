@@ -9,7 +9,7 @@ import UIKit
 import SDSKit
 import Then
 
-class SettingProfileView: UIView {
+final class SettingProfileView: UIView {
     
     lazy var userImageView = UIImageView().then {
         $0.layer.cornerRadius = 8
@@ -69,7 +69,5 @@ class SettingProfileView: UIView {
             $0.leading.equalTo(userEmailLabel.snp.trailing).offset(34)
             $0.centerY.equalToSuperview()
         }
-        
     }
-
 }

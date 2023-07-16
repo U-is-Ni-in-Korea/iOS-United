@@ -9,9 +9,7 @@ import UIKit
 import SDSKit
 import Then
 
-class SettingTableViewCell: UITableViewCell {
-    
-    static let idf = "SettingTableViewCell"
+final class SettingTableViewCell: UITableViewCell {
     
     private let settingImageView = UIImageView().then {
         $0.layer.cornerRadius = 3
@@ -23,15 +21,6 @@ class SettingTableViewCell: UITableViewCell {
         $0.textColor = .gray600
     }
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-    }
-    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setLayout()
@@ -57,9 +46,7 @@ class SettingTableViewCell: UITableViewCell {
     }
     
     func configureCell(_ settingTitle: SettingTitle) {
-        
         settingTitleLabel.text = settingTitle.title
-        
     }
 
 }

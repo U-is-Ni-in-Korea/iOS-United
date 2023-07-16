@@ -9,7 +9,7 @@ import UIKit
 import SDSKit
 import Then
 
-class SettingViewController: UIViewController {
+final class SettingViewController: UIViewController {
 
     var settingView: SettingView!
     

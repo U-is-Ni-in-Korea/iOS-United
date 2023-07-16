@@ -9,24 +9,13 @@ import UIKit
 import SDSKit
 import Then
 
-class AccountTableViewCell: UITableViewCell {
+final class AccountTableViewCell: UITableViewCell {
     
     static let idf = "AccountTableViewCell"
     
     private let accountTitleLabel = UILabel().then {
         $0.font = SDSFont.body2.font
         $0.textColor = .gray600
-    }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -39,9 +28,7 @@ class AccountTableViewCell: UITableViewCell {
     }
     
     private func setLayout() {
-        
         addSubview(accountTitleLabel)
-        
         accountTitleLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(16)
             $0.centerY.equalToSuperview()
@@ -49,9 +36,7 @@ class AccountTableViewCell: UITableViewCell {
     }
     
     func configureCell(_ accountTitle: AccountTitle) {
-        
         accountTitleLabel.text = accountTitle.title
-        
     }
 
 }

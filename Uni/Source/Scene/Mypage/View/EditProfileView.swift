@@ -9,8 +9,6 @@ import UIKit
 import SDSKit
 import Then
 
-class EditProfileView: UIView {
-    
+final class EditProfileView: UIView {
     private let accountViewNavi = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "프로필 수정")
-
 }

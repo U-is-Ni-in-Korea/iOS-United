@@ -9,7 +9,7 @@ import UIKit
 import SDSKit
 import Then
 
-class AccountView: UIView {
+final class AccountView: UIView {
     
     private let accountViewNavi = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "계정")
     private let accountTitleList = AccountTitle.accountTitleList()

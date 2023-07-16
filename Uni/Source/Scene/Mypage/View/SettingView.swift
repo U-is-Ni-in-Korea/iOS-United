@@ -9,14 +9,14 @@ import UIKit
 import SDSKit
 import Then
 
-class SettingView: UIView {
+final class SettingView: UIView {
         
     private let settingViewNavi = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "설정")
     private let profileView = SettingProfileView()
     private let settingTitleList = SettingTitle.settingTitleList()
             
     private let settingTableView = UITableView().then {
-        $0.register(SettingTableViewCell.self, forCellReuseIdentifier: SettingTableViewCell.idf)
+        $0.register(SettingTableViewCell.self, forCellReuseIdentifier: SettingTableViewCell.reuseIdentifier)
         $0.rowHeight = 56
         $0.separatorStyle = .none
     }
@@ -67,7 +67,7 @@ extension SettingView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingTableViewCell.idf, for: indexPath) as? SettingTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingTableViewCell.reuseIdentifier, for: indexPath) as? SettingTableViewCell else { return UITableViewCell() }
         
         cell.configureCell(settingTitleList[indexPath.row])
         cell.selectionStyle = .none
@@ -85,9 +85,7 @@ extension SettingView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         let rowNum = indexPath.row
-        
         print(rowNum)
     }
     
