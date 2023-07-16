@@ -9,7 +9,7 @@ import UIKit
 import SDSKit
 import Then
 
-class SettingTableViewHeaderView: UIView {
+final class SettingTableViewHeaderView: UIView {
     
     private let headerTitleLabel = UILabel().then {
         $0.text = "서비스 이용"
@@ -27,9 +27,7 @@ class SettingTableViewHeaderView: UIView {
     }
     
     private func setLayout() {
-        
         addSubview(headerTitleLabel)
-
         headerTitleLabel.snp.makeConstraints {
             $0.leading.equalTo(20)
             $0.centerY.equalToSuperview()

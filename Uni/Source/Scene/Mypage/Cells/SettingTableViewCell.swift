@@ -9,9 +9,7 @@ import UIKit
 import SDSKit
 import Then
 
-class SettingTableViewCell: UITableViewCell {
-    
-    static let idf = "SettingTableViewCell"
+final class SettingTableViewCell: UITableViewCell {
     
     private let settingImageView = UIImageView().then {
         $0.layer.cornerRadius = 3

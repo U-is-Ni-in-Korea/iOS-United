@@ -9,7 +9,7 @@ import UIKit
 import SDSKit
 import Then
 
-class SettingProfileView: UIView {
+final class SettingProfileView: UIView {
     
     lazy var userImageView = UIImageView().then {
         $0.layer.cornerRadius = 8

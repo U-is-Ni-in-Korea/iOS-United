@@ -19,7 +19,7 @@ final class SettingView: UIView {
     var selectedRowNum: Int = 100
             
     private let settingTableView = UITableView().then {
-        $0.register(SettingTableViewCell.self, forCellReuseIdentifier: SettingTableViewCell.idf)
+        $0.register(SettingTableViewCell.self, forCellReuseIdentifier: SettingTableViewCell.reuseIdentifier)
         $0.rowHeight = 56
         $0.separatorStyle = .none
     }
@@ -70,7 +70,7 @@ extension SettingView: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingTableViewCell.idf, for: indexPath) as? SettingTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingTableViewCell.reuseIdentifier, for: indexPath) as? SettingTableViewCell else { return UITableViewCell() }
         
         cell.configureCell(settingTitleList[indexPath.row])
         cell.selectionStyle = .none

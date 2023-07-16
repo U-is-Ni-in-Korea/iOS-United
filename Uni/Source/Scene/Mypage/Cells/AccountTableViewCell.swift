@@ -9,7 +9,7 @@ import UIKit
 import SDSKit
 import Then
 
-class AccountTableViewCell: UITableViewCell {
+final class AccountTableViewCell: UITableViewCell {
     
     static let idf = "AccountTableViewCell"
     
@@ -28,9 +28,7 @@ class AccountTableViewCell: UITableViewCell {
     }
     
     private func setLayout() {
-        
         addSubview(accountTitleLabel)
-        
         accountTitleLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(16)
             $0.centerY.equalToSuperview()
