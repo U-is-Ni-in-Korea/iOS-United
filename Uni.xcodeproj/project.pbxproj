@@ -61,6 +61,9 @@
 		361FA3842A628A2100C3BBFD /* WishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3832A628A2100C3BBFD /* WishCollectionViewCell.swift */; };
 		361FA38A2A62D65800C3BBFD /* BattleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3892A62D65800C3BBFD /* BattleDataModel.swift */; };
 		36CF2F642A63F31100D8F8E1 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 36CF2F622A63F2FF00D8F8E1 /* Config.xcconfig */; };
+		36CF2F662A643C6900D8F8E1 /* BattleWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F652A643C6900D8F8E1 /* BattleWriteViewController.swift */; };
+		36CF2F682A643C8900D8F8E1 /* BattleWriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F672A643C8900D8F8E1 /* BattleWriteView.swift */; };
+		36CF2F6A2A643CFB00D8F8E1 /* BattleNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F692A643CFB00D8F8E1 /* BattleNavigationBar.swift */; };
 		7E37BAE32A618DE900A3CF64 /* HistoryEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE22A618DE900A3CF64 /* HistoryEmptyView.swift */; };
 		7E37BAE52A6271B700A3CF64 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE42A6271B700A3CF64 /* HistoryDetailViewController.swift */; };
 		7E37BAE72A6271DC00A3CF64 /* HistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE62A6271DC00A3CF64 /* HistoryDetailView.swift */; };
@@ -151,6 +154,9 @@
 		361FA3832A628A2100C3BBFD /* WishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCollectionViewCell.swift; sourceTree = "<group>"; };
 		361FA3892A62D65800C3BBFD /* BattleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleDataModel.swift; sourceTree = "<group>"; };
 		36CF2F622A63F2FF00D8F8E1 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		36CF2F652A643C6900D8F8E1 /* BattleWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleWriteViewController.swift; sourceTree = "<group>"; };
+		36CF2F672A643C8900D8F8E1 /* BattleWriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleWriteView.swift; sourceTree = "<group>"; };
+		36CF2F692A643CFB00D8F8E1 /* BattleNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleNavigationBar.swift; sourceTree = "<group>"; };
 		7E37BAE22A618DE900A3CF64 /* HistoryEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEmptyView.swift; sourceTree = "<group>"; };
 		7E37BAE42A6271B700A3CF64 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
 		7E37BAE62A6271DC00A3CF64 /* HistoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailView.swift; sourceTree = "<group>"; };
@@ -460,6 +466,7 @@
 			isa = PBXGroup;
 			children = (
 				361FA37E2A62793B00C3BBFD /* SectionView.swift */,
+				36CF2F692A643CFB00D8F8E1 /* BattleNavigationBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -476,6 +483,7 @@
 			isa = PBXGroup;
 			children = (
 				361FA37C2A6277C300C3BBFD /* BattleView.swift */,
+				36CF2F672A643C8900D8F8E1 /* BattleWriteView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -484,6 +492,7 @@
 			isa = PBXGroup;
 			children = (
 				361FA37A2A62722A00C3BBFD /* BattleViewController.swift */,
+				36CF2F652A643C6900D8F8E1 /* BattleWriteViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -885,7 +894,9 @@
 				361FA32B2A601A4100C3BBFD /* Config.swift in Sources */,
 				7EE3B1A42A60602A00962F4C /* HistoryTableViewCell.swift in Sources */,
 				A578FC142A62D9210021A32E /* DDaySettingViewController.swift in Sources */,
+				36CF2F682A643C8900D8F8E1 /* BattleWriteView.swift in Sources */,
 				361FA34A2A602AC000C3BBFD /* MissionContent.swift in Sources */,
+				36CF2F662A643C6900D8F8E1 /* BattleWriteViewController.swift in Sources */,
 				36012F532A55CFAF006B8A39 /* UIViewController+.swift in Sources */,
 				36012F512A55CF2D006B8A39 /* UIView+.swift in Sources */,
 				A55150BC2A614A2000481F57 /* CoupleConnectionMethodView.swift in Sources */,
@@ -910,6 +921,7 @@
 				A578FC1A2A62D9B70021A32E /* CodeGeneratorView.swift in Sources */,
 				361FA37F2A62793B00C3BBFD /* SectionView.swift in Sources */,
 				361FA32E2A601D1B00C3BBFD /* NetworkResult.swift in Sources */,
+				36CF2F6A2A643CFB00D8F8E1 /* BattleNavigationBar.swift in Sources */,
 				361FA37D2A6277C300C3BBFD /* BattleView.swift in Sources */,
 				361FA34E2A602B5400C3BBFD /* MyRoundMission.swift in Sources */,
 				361FA3732A6268DD00C3BBFD /* ScoreInfoView.swift in Sources */,
