@@ -50,6 +50,10 @@
 		361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */; };
 		361FA3522A602C0900C3BBFD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3512A602C0900C3BBFD /* Game.swift */; };
 		361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3532A602C1C00C3BBFD /* RoundGameList.swift */; };
+		7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */; };
+		7E25F6502A6330EB003E82F6 /* WishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */; };
+		7E25F6522A6339E8003E82F6 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7E25F6512A6339E8003E82F6 /* Config.xcconfig */; };
+		7E25F6542A633ACA003E82F6 /* WishCouponCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F6532A633ACA003E82F6 /* WishCouponCountView.swift */; };
 		A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */; };
 		A54CD6312A5C328500C434B7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */; };
 		A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6332A5C347100C434B7 /* OnboardingCell.swift */; };
@@ -76,12 +80,7 @@
 		36012F4E2A55CF18006B8A39 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
 		36012F502A55CF2D006B8A39 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 		36012F522A55CFAF006B8A39 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
-		A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
-		A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
-		A54CD6332A5C347100C434B7 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
-		A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
 		361FA3272A60193B00C3BBFD /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
-		361FA3292A60199500C3BBFD /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		361FA32A2A601A4100C3BBFD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		361FA32F2A601D2E00C3BBFD /* GetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetService.swift; sourceTree = "<group>"; };
@@ -100,6 +99,14 @@
 		361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGameHistoryList.swift; sourceTree = "<group>"; };
 		361FA3512A602C0900C3BBFD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		361FA3532A602C1C00C3BBFD /* RoundGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundGameList.swift; sourceTree = "<group>"; };
+		7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponViewController.swift; sourceTree = "<group>"; };
+		7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponView.swift; sourceTree = "<group>"; };
+		7E25F6512A6339E8003E82F6 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		7E25F6532A633ACA003E82F6 /* WishCouponCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponCountView.swift; sourceTree = "<group>"; };
+		A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		A54CD6332A5C347100C434B7 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
+		A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,7 +180,7 @@
 			children = (
 				36012F0F2A55A9F4006B8A39 /* AppDelegate.swift */,
 				36012F112A55A9F4006B8A39 /* SceneDelegate.swift */,
-				361FA3292A60199500C3BBFD /* Config.xcconfig */,
+				7E25F6512A6339E8003E82F6 /* Config.xcconfig */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -181,6 +188,7 @@
 		36012F262A55AE3F006B8A39 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				7E25F6482A632E7B003E82F6 /* WishCoupon */,
 				A54CD62B2A5C322600C434B7 /* Onboarding */,
 				36012F2B2A55AE8D006B8A39 /* Home */,
 			);
@@ -291,7 +299,6 @@
 			children = (
 				36012F432A55B672006B8A39 /* Home */,
 				A58C70332A627CA900327CD3 /* Onboarding */,
-				36012F402A55B659006B8A39 /* AuthRepository */,
 			);
 			path = DataModel;
 			sourceTree = "<group>";
@@ -329,6 +336,45 @@
 				361FA3272A60193B00C3BBFD /* HomeRepository.swift */,
 			);
 			path = HomeRepository;
+			sourceTree = "<group>";
+		};
+		361FA32C2A601C6500C3BBFD /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				361FA32A2A601A4100C3BBFD /* Config.swift */,
+				361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */,
+				361FA32F2A601D2E00C3BBFD /* GetService.swift */,
+				361FA3312A601E7900C3BBFD /* PostService.swift */,
+				361FA3332A601EAA00C3BBFD /* PatchService.swift */,
+				361FA3372A60223200C3BBFD /* HeaderUtils.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		7E25F6482A632E7B003E82F6 /* WishCoupon */ = {
+			isa = PBXGroup;
+			children = (
+				7E25F64C2A6330B1003E82F6 /* View */,
+				7E25F64B2A6330A2003E82F6 /* ViewController */,
+			);
+			path = WishCoupon;
+			sourceTree = "<group>";
+		};
+		7E25F64B2A6330A2003E82F6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7E25F64C2A6330B1003E82F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */,
+				7E25F6532A633ACA003E82F6 /* WishCouponCountView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A54CD62B2A5C322600C434B7 /* Onboarding */ = {
@@ -371,19 +417,6 @@
 				A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */,
 			);
 			path = Onboarding;
-			sourceTree = "<group>";
-		};
-		361FA32C2A601C6500C3BBFD /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				361FA32A2A601A4100C3BBFD /* Config.swift */,
-				361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */,
-				361FA32F2A601D2E00C3BBFD /* GetService.swift */,
-				361FA3312A601E7900C3BBFD /* PostService.swift */,
-				361FA3332A601EAA00C3BBFD /* PatchService.swift */,
-				361FA3372A60223200C3BBFD /* HeaderUtils.swift */,
-			);
-			path = Base;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				36012F1C2A55A9F6006B8A39 /* LaunchScreen.storyboard in Resources */,
+				7E25F6522A6339E8003E82F6 /* Config.xcconfig in Resources */,
 				36012F192A55A9F6006B8A39 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				361FA3302A601D2E00C3BBFD /* GetService.swift in Sources */,
+				7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */,
 				36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */,
 				361FA3442A6029E400C3BBFD /* WishCoupon.swift in Sources */,
 				36012F102A55A9F4006B8A39 /* AppDelegate.swift in Sources */,
@@ -490,6 +525,7 @@
 				361FA33D2A6025E100C3BBFD /* Couple.swift in Sources */,
 				361FA34C2A602ADD00C3BBFD /* MissionCategory.swift in Sources */,
 				36012F122A55A9F4006B8A39 /* SceneDelegate.swift in Sources */,
+				7E25F6502A6330EB003E82F6 /* WishCouponView.swift in Sources */,
 				A54CD6312A5C328500C434B7 /* OnboardingViewController.swift in Sources */,
 				36012F4D2A55CEF4006B8A39 /* UIButton+.swift in Sources */,
 				A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */,
@@ -506,6 +542,7 @@
 				361FA3322A601E7900C3BBFD /* PostService.swift in Sources */,
 				36012F322A55AF16006B8A39 /* HomeViewController.swift in Sources */,
 				361FA3462A602A2800C3BBFD /* MissionContentList.swift in Sources */,
+				7E25F6542A633ACA003E82F6 /* WishCouponCountView.swift in Sources */,
 				36012F4B2A55CE87006B8A39 /* String+.swift in Sources */,
 				A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */,
 				A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */,
@@ -531,7 +568,6 @@
 /* Begin XCBuildConfiguration section */
 		36012F1E2A55A9F6006B8A39 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 361FA3292A60199500C3BBFD /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = "http://uni-sparkle.kro.kr/";
@@ -593,7 +629,6 @@
 		};
 		36012F1F2A55A9F6006B8A39 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 361FA3292A60199500C3BBFD /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = "http://uni-sparkle.kro.kr/";

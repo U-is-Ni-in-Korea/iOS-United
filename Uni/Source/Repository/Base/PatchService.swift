@@ -11,7 +11,8 @@ class PatchService {
                                       from url: String,
                                       callback: @escaping (_ data: T?, _ error: String?) -> ()) {
                                    AF.request(url,
-                                     method: .patch,
+                           
+                                              method: .patch,
                                      parameters: param,
                                      encoding: JSONEncoding.default,
                                      headers: isUseHeader ? tokenUtils.getAuthorizationHeader(): tokenUtils.getNormalHeader()).response { response in

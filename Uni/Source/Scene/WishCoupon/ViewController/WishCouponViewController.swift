@@ -6,24 +6,49 @@
 //
 
 import UIKit
+import Then
+import SDSKit
 
-class WishCouponViewController: UIViewController {
-
+class WishCouponViewController: BaseViewController {
+    
+    // MARK: - Property
+    
+    private var wishCouponView = WishCouponView()
+    
+    // MARK: - UI Property
+    
+    // MARK: - Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setDelegate()
+        setStyle()
+        setLayout()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func loadView() {
+        super.loadView()
+        
+        wishCouponView = WishCouponView(frame: self.view.frame)
+        self.view = wishCouponView
     }
-    */
-
+    
+    // MARK: - Setting
+    
+    private func setDelegate() {
+        
+    }
+    
+    private func setStyle() {
+        
+    }
+    
+    override func setLayout() {
+        
+    }
+    
+    // MARK: - Action Helper
+    
+    // MARK: - Custom Method
+    
 }
