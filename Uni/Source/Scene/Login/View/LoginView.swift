@@ -14,7 +14,7 @@ final class LoginView: UIView {
     
     // MARK: - UI Property
     
-    private let kakaoButton = UIButton().then {
+    let kakaoButton = UIButton().then {
         $0.backgroundColor = UIColor(hex: 0xFEE500)
         $0.setTitle("카카오 로그인", for: .normal)
         $0.setTitleColor(UIColor.gray600, for: .normal)
@@ -43,7 +43,7 @@ final class LoginView: UIView {
         $0.layer.applyDepth1Shadow()
     }
     private let logoImageView = UIImageView().then {
-        $0.backgroundColor = .red
+        $0.image = UIImage(named: "logo")
     }
     
     
@@ -76,8 +76,9 @@ final class LoginView: UIView {
             $0.height.equalTo(48)
         }
         logoImageView.snp.makeConstraints {
-            $0.height.width.equalTo(160)
-            $0.bottom.equalTo(kakaoButton.snp.top).offset(-139)
+            $0.height.equalTo(208)
+            $0.width.equalTo(220)
+            $0.bottom.equalTo(kakaoButton.snp.top).offset(-139.adjustedH)
             $0.centerX.equalToSuperview()
         }
     }

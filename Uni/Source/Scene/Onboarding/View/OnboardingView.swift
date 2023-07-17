@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import SDSKit
 
 final class OnboardingView: UIView {
     
@@ -26,14 +27,14 @@ final class OnboardingView: UIView {
         $0.numberOfPages = 3
         $0.currentPage = 0
         $0.isUserInteractionEnabled = false
-        
-        $0.pageIndicatorTintColor = .red
-        $0.currentPageIndicatorTintColor = .black
+        $0.pageIndicatorTintColor = .lightBlue100
+        $0.currentPageIndicatorTintColor = .lightBlue600
     }
     
     let nextButton = UIButton().then {
-        $0.backgroundColor = .red
+        $0.setTitleColor(.lightBlue600, for: .normal)
         $0.setTitle("건너뛰기", for: .normal)
+        $0.titleLabel?.font = SDSFont.body2.font
     }
     
     override init(frame: CGRect) {
@@ -47,7 +48,7 @@ final class OnboardingView: UIView {
     }
     
     private func setConfigure() {
-        self.backgroundColor = .systemBackground
+        self.backgroundColor = .gray000
     }
     
     private func setLayout() {
@@ -56,15 +57,17 @@ final class OnboardingView: UIView {
         onboardingCollectionView.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(82 + 52 + UIScreen.main.bounds.width - 40)
+            let height: Double = 88 + 50 + 52
+            let adjustedHeight = UIScreen.main.bounds.width - 40
+            $0.height.equalTo(height.adjustedH + adjustedHeight)
         }
         pageControl.snp.makeConstraints {
-            $0.top.equalTo(onboardingCollectionView.snp.bottom).offset(42)
+            $0.top.equalTo(onboardingCollectionView.snp.bottom).offset(42.adjustedH)
             $0.height.equalTo(26)
             $0.leading.trailing.equalToSuperview()
         }
         nextButton.snp.makeConstraints {
-            $0.trailing.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(5)
             $0.bottom.equalTo(self.safeAreaLayoutGuide).offset(-40)
             $0.height.equalTo(34)
             $0.width.equalTo(77)

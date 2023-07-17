@@ -45,6 +45,7 @@ final class SettingProfileView: UIView {
     }
     
     private func setLayout() {
+        
         [userImageView, userNameLabel, userEmailLabel, editProfileButton] .forEach{ addSubview($0) }
         
         userImageView.snp.makeConstraints {

@@ -10,6 +10,7 @@ import UIKit
 class LoginViewController: BaseViewController {
     // MARK: - Property
     private var loginView = LoginView()
+    private lazy var kakaoAuthViewModel = KakaoAuthViewModel()
     
     // MARK: - UI Property
     
@@ -23,6 +24,7 @@ class LoginViewController: BaseViewController {
         super.viewDidLoad()
         setLayout()
         setConfig()
+        actions()
     }
     // MARK: - Setting
     override func setLayout() {
@@ -33,9 +35,14 @@ class LoginViewController: BaseViewController {
     }
     
     // MARK: - Action Helper
+    private func actions() {
+        loginView.kakaoButton.addTarget(self, action: #selector(kakaoButtonTapped), for: .touchUpInside)
+    }
     
     // MARK: - Custom Method
-    
+    @objc func kakaoButtonTapped() {
+        kakaoAuthViewModel.hanldeKakaoLogin()
+    }
 }
 
 // MARK: - UITableView Delegate

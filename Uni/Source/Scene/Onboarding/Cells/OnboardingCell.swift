@@ -8,6 +8,7 @@
 import UIKit
 import SnapKit
 import Then
+import SDSKit
 
 final class OnboardingCell: UICollectionViewCell {
     static let identifier = "OnboardingCell"
@@ -16,11 +17,14 @@ final class OnboardingCell: UICollectionViewCell {
     let titleBaseView = UIView()
     
     let titleLabel = UILabel().then {
-        $0.textColor = .black
+        $0.textColor = .gray600
+        $0.font = SDSFont.subTitle.font
     }
     
     let subTitleLabel = UILabel().then {
-        $0.textColor = .black
+        $0.textColor = .gray350
+        $0.font = SDSFont.body2.font
+        
     }
     
     let onboardingImageView = UIImageView()
@@ -29,7 +33,6 @@ final class OnboardingCell: UICollectionViewCell {
     //MARK: - life cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         setLayout()
     }
     
@@ -42,28 +45,29 @@ final class OnboardingCell: UICollectionViewCell {
         titleBaseView.addSubviews([titleLabel, subTitleLabel])
         
         titleBaseView.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(72)
+            $0.top.equalToSuperview().inset(88.adjustedH)
             $0.leading.trailing.equalToSuperview().inset(20)
-            $0.height.equalTo(82)
+            $0.height.equalTo(50)
         }
         
         titleLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(16)
+            $0.top.equalToSuperview()
             $0.leading.equalToSuperview()
         }
         subTitleLabel.snp.makeConstraints {
-            $0.bottom.equalToSuperview().inset(16)
+            $0.bottom.equalToSuperview()
             $0.leading.equalToSuperview()
         }
         onboardingImageView.snp.makeConstraints {
-            $0.top.equalTo(titleBaseView.snp.bottom).offset(52)
+            $0.top.equalTo(titleBaseView.snp.bottom).offset(68.adjustedH)
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.height.equalTo(UIScreen.main.bounds.size.width - 40)
+            $0.bottom.equalToSuperview()
         }
     }
     func configureCell(_ onboardingModel: OnboardingDataModel) {
         titleLabel.text = onboardingModel.title
         subTitleLabel.text = onboardingModel.subTitle
-        onboardingImageView.image = UIImage(systemName: onboardingModel.image)
+        onboardingImageView.image = UIImage(named: onboardingModel.image)
     }
 }
