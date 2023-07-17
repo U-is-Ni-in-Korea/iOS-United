@@ -82,6 +82,14 @@
 		8D2B2E8A2A61786A00B75CDD /* AccountTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E892A61786A00B75CDD /* AccountTitle.swift */; };
 		8D2B2E8C2A619C0D00B75CDD /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E8B2A619C0D00B75CDD /* EditProfileViewController.swift */; };
 		8D2B2E8E2A619C2E00B75CDD /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E8D2A619C2E00B75CDD /* EditProfileView.swift */; };
+		8D6CB1F42A6501B400FE46C2 /* LogoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB1F32A6501B400FE46C2 /* LogoutView.swift */; };
+		8D6CB1F62A6505E300FE46C2 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB1F52A6505E300FE46C2 /* LogoutViewController.swift */; };
+		8D6CB1F82A65092900FE46C2 /* WithdrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB1F72A65092900FE46C2 /* WithdrawView.swift */; };
+		8D6CB1FA2A65093600FE46C2 /* WithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB1F92A65093600FE46C2 /* WithdrawViewController.swift */; };
+		8D6CB1FC2A6509B300FE46C2 /* DisconnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB1FB2A6509B300FE46C2 /* DisconnectView.swift */; };
+		8D6CB1FE2A6509C200FE46C2 /* DisconnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB1FD2A6509C200FE46C2 /* DisconnectViewController.swift */; };
+		8DAAB2B62A61CD9700E25CF4 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAB2B52A61CD9700E25CF4 /* DatePickerViewController.swift */; };
+		8DAAB2B82A61CDB700E25CF4 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAB2B72A61CDB700E25CF4 /* DatePickerView.swift */; };
 		A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */; };
 		A54CD6312A5C328500C434B7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */; };
 		A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6332A5C347100C434B7 /* OnboardingCell.swift */; };
@@ -172,6 +180,14 @@
 		8D2B2E892A61786A00B75CDD /* AccountTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTitle.swift; sourceTree = "<group>"; };
 		8D2B2E8B2A619C0D00B75CDD /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		8D2B2E8D2A619C2E00B75CDD /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
+		8D6CB1F32A6501B400FE46C2 /* LogoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutView.swift; sourceTree = "<group>"; };
+		8D6CB1F52A6505E300FE46C2 /* LogoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
+		8D6CB1F72A65092900FE46C2 /* WithdrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawView.swift; sourceTree = "<group>"; };
+		8D6CB1F92A65093600FE46C2 /* WithdrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawViewController.swift; sourceTree = "<group>"; };
+		8D6CB1FB2A6509B300FE46C2 /* DisconnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisconnectView.swift; sourceTree = "<group>"; };
+		8D6CB1FD2A6509C200FE46C2 /* DisconnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisconnectViewController.swift; sourceTree = "<group>"; };
+		8DAAB2B52A61CD9700E25CF4 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		8DAAB2B72A61CDB700E25CF4 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		A54CD6332A5C347100C434B7 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
@@ -582,6 +598,10 @@
 				8D2B2E7B2A61638000B75CDD /* SettingView.swift */,
 				8D2B2E852A616CFA00B75CDD /* AccountView.swift */,
 				8D2B2E8D2A619C2E00B75CDD /* EditProfileView.swift */,
+				8DAAB2B72A61CDB700E25CF4 /* DatePickerView.swift */,
+				8D6CB1F32A6501B400FE46C2 /* LogoutView.swift */,
+				8D6CB1F72A65092900FE46C2 /* WithdrawView.swift */,
+				8D6CB1FB2A6509B300FE46C2 /* DisconnectView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -592,6 +612,10 @@
 				8D2B2E7F2A6163E900B75CDD /* SettingViewController.swift */,
 				8D2B2E832A616CDC00B75CDD /* AccountViewController.swift */,
 				8D2B2E8B2A619C0D00B75CDD /* EditProfileViewController.swift */,
+				8DAAB2B52A61CD9700E25CF4 /* DatePickerViewController.swift */,
+				8D6CB1F52A6505E300FE46C2 /* LogoutViewController.swift */,
+				8D6CB1F92A65093600FE46C2 /* WithdrawViewController.swift */,
+				8D6CB1FD2A6509C200FE46C2 /* DisconnectViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -841,14 +865,18 @@
 				361FA3822A62861C00C3BBFD /* BattleCollectionViewCell.swift in Sources */,
 				8D2B2E882A61778900B75CDD /* AccountTableViewCell.swift in Sources */,
 				361FA3422A6027B400C3BBFD /* WishCouponList.swift in Sources */,
+				8D6CB1FE2A6509C200FE46C2 /* DisconnectViewController.swift in Sources */,
 				36012F3E2A55B64C006B8A39 /* HomeDataModel.swift in Sources */,
 				7E37BAE72A6271DC00A3CF64 /* HistoryDetailView.swift in Sources */,
 				A578FC182A62D9AB0021A32E /* CodeGeneratorViewController.swift in Sources */,
 				361FA3382A60223200C3BBFD /* HeaderUtils.swift in Sources */,
 				7EE3B19F2A604FE900962F4C /* HistoryView.swift in Sources */,
 				7E37BAE52A6271B700A3CF64 /* HistoryDetailViewController.swift in Sources */,
+				8D6CB1FA2A65093600FE46C2 /* WithdrawViewController.swift in Sources */,
 				361FA33F2A60261000C3BBFD /* ShortGame.swift in Sources */,
+				8D6CB1FC2A6509B300FE46C2 /* DisconnectView.swift in Sources */,
 				A555AD9B2A6079790083CD20 /* NicknameSettingViewController.swift in Sources */,
+				8D6CB1F62A6505E300FE46C2 /* LogoutViewController.swift in Sources */,
 				8D2B2E8C2A619C0D00B75CDD /* EditProfileViewController.swift in Sources */,
 				A58C70322A61D3AC00327CD3 /* EnterInvitationViewController.swift in Sources */,
 				A58C70302A61CE6300327CD3 /* EnterInvitationView.swift in Sources */,
@@ -867,11 +895,13 @@
 				7EE3B1A12A60507F00962F4C /* HistoryViewController.swift in Sources */,
 				8D2B2E8E2A619C2E00B75CDD /* EditProfileView.swift in Sources */,
 				8D2B2E862A616CFA00B75CDD /* AccountView.swift in Sources */,
+				8DAAB2B62A61CD9700E25CF4 /* DatePickerViewController.swift in Sources */,
 				361FA34C2A602ADD00C3BBFD /* MissionCategory.swift in Sources */,
 				36012F122A55A9F4006B8A39 /* SceneDelegate.swift in Sources */,
 				A54CD6312A5C328500C434B7 /* OnboardingViewController.swift in Sources */,
 				8D2B2E822A61643E00B75CDD /* Config.xcconfig in Sources */,
 				8D2B2E762A6161A900B75CDD /* SettingTableViewCell.swift in Sources */,
+				8D6CB1F42A6501B400FE46C2 /* LogoutView.swift in Sources */,
 				36012F4D2A55CEF4006B8A39 /* UIButton+.swift in Sources */,
 				A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */,
 				361FA3282A60193B00C3BBFD /* HomeRepository.swift in Sources */,
@@ -887,6 +917,7 @@
 				A578FC142A62D9210021A32E /* DDaySettingViewController.swift in Sources */,
 				361FA34A2A602AC000C3BBFD /* MissionContent.swift in Sources */,
 				36012F532A55CFAF006B8A39 /* UIViewController+.swift in Sources */,
+				8D6CB1F82A65092900FE46C2 /* WithdrawView.swift in Sources */,
 				36012F512A55CF2D006B8A39 /* UIView+.swift in Sources */,
 				A55150BC2A614A2000481F57 /* CoupleConnectionMethodView.swift in Sources */,
 				36012F472A55CDEE006B8A39 /* Date+.swift in Sources */,
@@ -909,6 +940,7 @@
 				36012F452A55CDAA006B8A39 /* CGPoint+.swift in Sources */,
 				A578FC1A2A62D9B70021A32E /* CodeGeneratorView.swift in Sources */,
 				361FA37F2A62793B00C3BBFD /* SectionView.swift in Sources */,
+				8DAAB2B82A61CDB700E25CF4 /* DatePickerView.swift in Sources */,
 				361FA32E2A601D1B00C3BBFD /* NetworkResult.swift in Sources */,
 				361FA37D2A6277C300C3BBFD /* BattleView.swift in Sources */,
 				361FA34E2A602B5400C3BBFD /* MyRoundMission.swift in Sources */,
