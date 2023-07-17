@@ -19,12 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
         
-        
-        
-        let navigationController = UINavigationController(rootViewController: OnboardingViewController())
-
-        self.window?.rootViewController = navigationController
-        self.window?.makeKeyAndVisible()
+        setScene(scene)
     }
     
     func scene(_ scene: UIScene, openURLContexts URLContexts: Set<UIOpenURLContext>) {
@@ -65,4 +60,30 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 
 }
-
+extension SceneDelegate {
+    private func setScene(_ scene: UIScene) {
+        let userDefaultsManager = UserDefaultsManager.shared
+        
+        ///온보딩 마쳤을 때
+        if userDefaultsManager.hasOnboarded {
+            // MARK: - TODO
+            print("로그인")
+            /// 토큰 여부에 따라 로그인 화면, 커플연결 화면, 홈 화면을 나눠야함
+            let loginViewController = LoginViewController()
+            setRootViewController(scene, viewController: UINavigationController(rootViewController: loginViewController))
+        }
+        ///온보딩이 처음일 때
+        else {
+            print("온보딩")
+            setRootViewController(scene, viewController: OnboardingViewController())
+        }
+    }
+    
+    private func setRootViewController(_ scene: UIScene, viewController: UIViewController) {
+        guard let windowScene = (scene as? UIWindowScene) else { return }
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = viewController
+        window?.makeKeyAndVisible()
+        window?.windowScene = windowScene
+    }
+}

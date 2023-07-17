@@ -94,6 +94,7 @@
 		8DAAB2B62A61CD9700E25CF4 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAB2B52A61CD9700E25CF4 /* DatePickerViewController.swift */; };
 		8DAAB2B82A61CDB700E25CF4 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAB2B72A61CDB700E25CF4 /* DatePickerView.swift */; };
 		A53C62F22A65322C00AE3B45 /* KakaoAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F12A65322C00AE3B45 /* KakaoAuthViewModel.swift */; };
+		A53C62F62A65719600AE3B45 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */; };
 		A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */; };
 		A54CD6312A5C328500C434B7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */; };
 		A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6332A5C347100C434B7 /* OnboardingCell.swift */; };
@@ -196,6 +197,7 @@
 		8DAAB2B52A61CD9700E25CF4 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		8DAAB2B72A61CDB700E25CF4 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		A53C62F12A65322C00AE3B45 /* KakaoAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthViewModel.swift; sourceTree = "<group>"; };
+		A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		A54CD6332A5C347100C434B7 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 		36012F272A55AE44006B8A39 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				A53C62F42A65714400AE3B45 /* Shared */,
 				36012F362A55B17E006B8A39 /* Base */,
 			);
 			path = Global;
@@ -648,6 +651,14 @@
 			path = SocialLogin;
 			sourceTree = "<group>";
 		};
+		A53C62F42A65714400AE3B45 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		A54CD62B2A5C322600C434B7 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -913,6 +924,7 @@
 				361FA3722A6268DD00C3BBFD /* ScoreView.swift in Sources */,
 				361FA3342A601EAA00C3BBFD /* PatchService.swift in Sources */,
 				361FA3482A602A5C00C3BBFD /* RoundMission.swift in Sources */,
+				A53C62F62A65719600AE3B45 /* UserDefaultsManager.swift in Sources */,
 				A578FC162A62D9380021A32E /* DDaySettingView.swift in Sources */,
 				8D2B2E7E2A6163B400B75CDD /* SettingTableViewHeaderView.swift in Sources */,
 				36012F3B2A55B60F006B8A39 /* AuthRepository.swift in Sources */,
