@@ -70,8 +70,8 @@ class BattleViewController: BaseViewController {
                                                 withReuseIdentifier: SectionView.reuseIdentifier)
         self.battleView.collectionView.register(BattleCollectionViewCell.self,
                                                 forCellWithReuseIdentifier: BattleCollectionViewCell.reuseIdentifier)
-        self.battleView.collectionView.register(WishCollectionViewCell.self,
-                                                forCellWithReuseIdentifier: WishCollectionViewCell.reuseIdentifier)
+        self.battleView.collectionView.register(BattleWishCollectionViewCell.self,
+                                                forCellWithReuseIdentifier: BattleWishCollectionViewCell.reuseIdentifier)
     }
     
     private let battleView = BattleView()
@@ -112,7 +112,7 @@ extension BattleViewController: UICollectionViewDataSource {
             cell.bindText(iconImage: SDSIcon.icGooleLogin, title: missionMokData[indexPath.row].title)
             return cell
         default: // section 1
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WishCollectionViewCell.reuseIdentifier, for: indexPath) as? WishCollectionViewCell else {return UICollectionViewCell()}
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BattleWishCollectionViewCell.reuseIdentifier, for: indexPath) as? BattleWishCollectionViewCell else {return UICollectionViewCell()}
             return cell
         }
     }
