@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LogoutViewController: UIViewController {
+class LogoutViewController: BaseViewController {
     
     var logoutView = LogoutView()
 

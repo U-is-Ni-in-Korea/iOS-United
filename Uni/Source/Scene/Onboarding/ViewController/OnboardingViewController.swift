@@ -62,6 +62,8 @@ final class OnboardingViewController: BaseViewController {
     
     // MARK: - Custom Method
     @objc func nextButtonTapped() {
+        
+        UserDefaultsManager.shared.save(value: true, forkey: .hasOnboarded)
         let loginViewController = LoginViewController()
         let navigationController = UINavigationController(rootViewController: loginViewController)
         navigationController.modalTransitionStyle = .crossDissolve
