@@ -76,10 +76,8 @@ final class LoginView: UIView {
             $0.height.equalTo(48)
         }
         logoImageView.snp.makeConstraints {
-//            $0.height.width.equalTo(160)
             $0.height.equalTo(208)
             $0.width.equalTo(220)
-//            $0.top.equalTo(self.safeAreaLayoutGuide).offset(151.adjustedH)
             $0.bottom.equalTo(kakaoButton.snp.top).offset(-139.adjustedH)
             $0.centerX.equalToSuperview()
         }
