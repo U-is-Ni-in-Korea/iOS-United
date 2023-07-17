@@ -9,7 +9,7 @@ import UIKit
 import SDSKit
 import Then
 
-class AccountViewController: UIViewController, AccountViewDelegate {
+class AccountViewController: BaseViewController, AccountViewDelegate {
     
     var accountView = AccountView()
     

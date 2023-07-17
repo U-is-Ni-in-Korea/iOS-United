@@ -9,7 +9,7 @@ import UIKit
 import SDSKit
 import Then
 
-class SettingViewController: UIViewController, SettingViewDelegate {
+class SettingViewController: BaseViewController, SettingViewDelegate {
 
     var settingView = SettingView()
     
