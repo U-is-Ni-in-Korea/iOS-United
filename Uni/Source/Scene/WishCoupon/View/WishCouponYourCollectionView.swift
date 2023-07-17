@@ -67,6 +67,11 @@ final class WishCouponYourCollectionView: UIView {
     
     // MARK: - Custom Method
     
+    func scrollToInitialPosition() {
+        let initialOffset = CGPoint(x: -wishCouponYourCollectionView.contentInset.left, y: -wishCouponYourCollectionView.contentInset.top)
+        wishCouponYourCollectionView.setContentOffset(initialOffset, animated: true)
+    }
+    
 }
 
 

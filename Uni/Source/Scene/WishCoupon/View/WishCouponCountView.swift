@@ -27,7 +27,7 @@ final class WishCouponCountView: UIView {
         $0.font = SDSFont.body2.font
     }
     
-    private let myButton = UIButton().then {
+    let myButton = UIButton().then {
         $0.setTitle("나의 소원권", for: .normal)
         $0.setTitleColor(.lightBlue600, for: .normal)
         $0.titleLabel?.font = SDSFont.subTitle.font
@@ -37,7 +37,7 @@ final class WishCouponCountView: UIView {
         $0.backgroundColor = .gray200
     }
     
-    private let yourButton = UIButton().then {
+    let yourButton = UIButton().then {
         $0.setTitle("상대 소원권", for: .normal)
         $0.setTitleColor(.gray300, for: .normal)
         $0.titleLabel?.font = SDSFont.body1Regular.font
@@ -103,6 +103,16 @@ final class WishCouponCountView: UIView {
     }
     
     // MARK: - Action Helper
+    
+//    @objc private func myButtonTapped() {
+//        let wishCouponCollectionView = WishCouponCollectionView()
+//        navigationController?.pushViewController(wishCouponCollectionView, animated: true)
+//    }
+//    
+//    @objc private func youtButtonTapped() {
+//        let wishCouponYourCollectionView = wishCouponYoutCollectionView()
+//        navigationController?.pushViewController(wishCouponYourCollectionView, animated: true)
+//    }
     
     // MARK: - Custom Method
     

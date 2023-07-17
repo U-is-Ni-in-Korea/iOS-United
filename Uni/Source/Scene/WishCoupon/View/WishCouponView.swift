@@ -30,22 +30,26 @@ final class WishCouponView: UIView {
         super.init(coder: coder)
         setStyle()
         setLayout()
+        setupButtons()
     }
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
         setStyle()
         setLayout()
+        setupButtons()
     }
     
     // MARK: - Setting
     
     private func setStyle() {
         self.backgroundColor = .gray100
+        wishCouponCollectionView.isHidden = false
+        wishCouponYourCollectionView.isHidden = true
     }
     
     private func setLayout() {
-        [navigationBar, wishCouponCountView,wishCouponCollectionView].forEach {
+        [navigationBar, wishCouponCountView,wishCouponCollectionView, wishCouponYourCollectionView].forEach {
             addSubview($0)
         }
         
@@ -67,16 +71,57 @@ final class WishCouponView: UIView {
             $0.leading.trailing.equalToSuperview()
         }
         
-//        wishCouponYourCollectionView.snp.makeConstraints {
-//            $0.top.equalTo(wishCouponCountView.snp.bottom)
-//            $0.bottom.equalToSuperview()
-//            $0.leading.trailing.equalToSuperview()
-//        }
+        wishCouponYourCollectionView.snp.makeConstraints {
+            $0.top.equalTo(wishCouponCountView.snp.bottom)
+            $0.bottom.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
+        }
     }
     
     // MARK: - Action Helper
     
+    @objc func myButtonTapped() {
+        switchToMyWishCouponView(showMyWishCoupon: true)
+        print("switchMyButton")
+        
+        
+    }
+    
+    @objc func yourButtonTapped() {
+        switchToMyWishCouponView(showMyWishCoupon: false)
+        print("switchYourButton")
+    }
+    
+    private func setupButtons() {
+        wishCouponCountView.myButton.addTarget(self, action: #selector(myButtonTapped), for: .touchUpInside)
+        wishCouponCountView.yourButton.addTarget(self, action: #selector(yourButtonTapped), for: .touchUpInside)
+        
+    }
+    
     // MARK: - Custom Method
     
-    
+    private func switchToMyWishCouponView(showMyWishCoupon: Bool) {
+        if showMyWishCoupon {
+            DispatchQueue.main.async {
+                self.wishCouponCollectionView.isHidden = false
+                self.wishCouponYourCollectionView.isHidden = true
+                self.wishCouponCountView.yourButton.setTitleColor(.gray300, for: .normal)
+                self.wishCouponCountView.yourButton.titleLabel?.font = SDSFont.body1Regular.font
+                self.wishCouponCountView.myButton.setTitleColor(.lightBlue600, for: .normal)
+                self.wishCouponCountView.myButton.titleLabel?.font = SDSFont.subTitle.font
+                self.wishCouponCollectionView.scrollToInitialPosition()
+            }
+        }
+        else {
+            DispatchQueue.main.async {
+                self.wishCouponCollectionView.isHidden = true
+                self.wishCouponYourCollectionView.isHidden = false
+                self.wishCouponCountView.myButton.setTitleColor(.gray300, for: .normal)
+                self.wishCouponCountView.myButton.titleLabel?.font = SDSFont.body1Regular.font
+                self.wishCouponCountView.yourButton.setTitleColor(.lightBlue600, for: .normal)
+                self.wishCouponCountView.yourButton.titleLabel?.font = SDSFont.subTitle.font
+                self.wishCouponYourCollectionView.scrollToInitialPosition()
+            }
+        }
+    }
 }

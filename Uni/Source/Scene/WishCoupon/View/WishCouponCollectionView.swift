@@ -67,6 +67,11 @@ final class WishCouponCollectionView: UIView {
     
     // MARK: - Custom Method
     
+    func scrollToInitialPosition() {
+        let initialOffset = CGPoint(x: -wishCouponCollectionView.contentInset.left, y: -wishCouponCollectionView.contentInset.top)
+        wishCouponCollectionView.setContentOffset(initialOffset, animated: true)
+    }
+    
 }
 
 
@@ -77,7 +82,7 @@ extension WishCouponCollectionView: UICollectionViewDelegate {}
 // MARK: - UICollectionView Datasource
 extension WishCouponCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 20
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
