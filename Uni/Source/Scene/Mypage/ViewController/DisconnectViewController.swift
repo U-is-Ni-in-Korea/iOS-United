@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DisconnectViewController: UIViewController {
+class DisconnectViewController: BaseViewController {
 
     var disconnectView = DisconnectView()
 

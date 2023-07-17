@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DatePickerViewController: UIViewController {
+class DatePickerViewController: BaseViewController {
 
     var dateCompletionHandler: ((String) -> Void)?
 
