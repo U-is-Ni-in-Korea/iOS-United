@@ -9,10 +9,12 @@ import UIKit
 import SDSKit
 import Then
 
-final class SettingView: UIView {
-        
-    private let settingViewNavi = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "설정")
-    private let profileView = SettingProfileView()
+class SettingView: UIView {
+    
+    weak var delegate: SettingViewDelegate?
+
+    let settingViewNavi = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "설정")
+    public let profileView = SettingProfileView()
     private let settingTitleList = SettingTitle.settingTitleList()
             
     private let settingTableView = UITableView().then {
@@ -85,8 +87,11 @@ extension SettingView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let rowNum = indexPath.row
-        print(rowNum)
+        delegate?.didSelectCell(at: indexPath)
     }
-    
+
+}
+
+protocol SettingViewDelegate: AnyObject {
+    func didSelectCell(at indexPath: IndexPath)
 }
