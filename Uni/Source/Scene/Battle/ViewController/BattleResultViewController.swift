@@ -1,29 +1,19 @@
-//
-//  BattleResultViewController.swift
-//  Uni
-//
-//  Created by 박익범 on 2023/07/17.
-//
-
 import UIKit
+import SDSKit
+import SnapKit
+import Then
 
-class BattleResultViewController: UIViewController {
+final class BattleResultViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func loadView() {
+        super.loadView()
+        self.view = battleResultView
     }
-    */
+    
+    private let battleResultView = BattleResultView()
 
 }
