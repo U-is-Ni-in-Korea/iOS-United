@@ -9,25 +9,27 @@ import UIKit
 
 
 final class OnboardingViewController: BaseViewController {
-    private var onboardingView = OnboardingView()
-    
-    private let numberOfPages : Int = 3
-    var currentPage : Int = 0
-    
+    // MARK: - Property
     private let onboardingData = [
         OnboardingDataModel(
             title: "다양한 카테고리의 미션을 함께 즐겨보세요",
             subTitle: "연인의 새로운 매력을 발견할 수 있어요",
-            image: "pencil"),
+            image: "onboarding1"),
         OnboardingDataModel(
             title: "장기 승부와 한판 승부를 선택할 수 있어요",
             subTitle: "설렘 가득한 짜릿한 승부를 진행해 보세요",
-            image: "pencil"),
+            image: "onboarding2"),
         OnboardingDataModel(
             title: "승부를 통해 우리 둘만의 소원권을 생성",
             subTitle: "소중한 추억을 만들고 기록할 수 있어요",
-            image: "pencil")
+            image: "onboarding3")
     ]
+    private let numberOfPages : Int = 3
+    var currentPage : Int = 0
+    
+    // MARK: - UI Property
+    private var onboardingView = OnboardingView()
+
 
     //MARK: - life cycle
     override func loadView() {
@@ -37,8 +39,8 @@ final class OnboardingViewController: BaseViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setConfig()
-        
+        setConfig()
+        actions()
     }
     
     //MARK: - set view config
@@ -53,7 +55,19 @@ final class OnboardingViewController: BaseViewController {
         super.setLayout()
     }
     
-    //MARK: - controll function
+    // MARK: - Action Helper
+    private func actions() {
+        onboardingView.nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
+    }
+    
+    // MARK: - Custom Method
+    @objc func nextButtonTapped() {
+        let loginViewController = LoginViewController()
+        let navigationController = UINavigationController(rootViewController: loginViewController)
+        navigationController.modalTransitionStyle = .crossDissolve
+        navigationController.modalPresentationStyle = .fullScreen
+        self.present(navigationController, animated: true)
+    }
 }
 
 extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -73,8 +87,7 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
     }
 
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        currentPage = Int(scrollView.contentOffset.x / scrollView.frame.width)
-        print(currentPage)
+        let currentPage = lround(Double(scrollView.contentOffset.x / scrollView.frame.width))
         onboardingView.pageControl.currentPage = currentPage
     }
 
