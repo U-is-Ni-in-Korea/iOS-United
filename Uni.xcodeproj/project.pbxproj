@@ -91,6 +91,9 @@
 		8D6CB1FA2A65093600FE46C2 /* WithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB1F92A65093600FE46C2 /* WithdrawViewController.swift */; };
 		8D6CB1FC2A6509B300FE46C2 /* DisconnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB1FB2A6509B300FE46C2 /* DisconnectView.swift */; };
 		8D6CB1FE2A6509C200FE46C2 /* DisconnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB1FD2A6509C200FE46C2 /* DisconnectViewController.swift */; };
+		8D6CB2032A652E8300FE46C2 /* MakeWishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB2022A652E8300FE46C2 /* MakeWishView.swift */; };
+		8D6CB2052A6531EA00FE46C2 /* WriteWishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB2042A6531EA00FE46C2 /* WriteWishView.swift */; };
+		8D6CB2072A653EDF00FE46C2 /* MakeWishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB2062A653EDF00FE46C2 /* MakeWishViewController.swift */; };
 		8DAAB2B62A61CD9700E25CF4 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAB2B52A61CD9700E25CF4 /* DatePickerViewController.swift */; };
 		8DAAB2B82A61CDB700E25CF4 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAB2B72A61CDB700E25CF4 /* DatePickerView.swift */; };
 		A53C62F22A65322C00AE3B45 /* KakaoAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F12A65322C00AE3B45 /* KakaoAuthViewModel.swift */; };
@@ -194,6 +197,9 @@
 		8D6CB1F92A65093600FE46C2 /* WithdrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawViewController.swift; sourceTree = "<group>"; };
 		8D6CB1FB2A6509B300FE46C2 /* DisconnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisconnectView.swift; sourceTree = "<group>"; };
 		8D6CB1FD2A6509C200FE46C2 /* DisconnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisconnectViewController.swift; sourceTree = "<group>"; };
+		8D6CB2022A652E8300FE46C2 /* MakeWishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeWishView.swift; sourceTree = "<group>"; };
+		8D6CB2042A6531EA00FE46C2 /* WriteWishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteWishView.swift; sourceTree = "<group>"; };
+		8D6CB2062A653EDF00FE46C2 /* MakeWishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeWishViewController.swift; sourceTree = "<group>"; };
 		8DAAB2B52A61CD9700E25CF4 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		8DAAB2B72A61CDB700E25CF4 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		A53C62F12A65322C00AE3B45 /* KakaoAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthViewModel.swift; sourceTree = "<group>"; };
@@ -298,6 +304,7 @@
 		36012F262A55AE3F006B8A39 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				8D6CB1FF2A652E3300FE46C2 /* MakeWishCoupon */,
 				8D2B2E712A61616400B75CDD /* Mypage */,
 				A555AD972A60782F0083CD20 /* ConnectionCommom */,
 				A5B4B58C2A604C2F000C7555 /* Login */,
@@ -651,6 +658,30 @@
 			path = SocialLogin;
 			sourceTree = "<group>";
 		};
+		8D6CB1FF2A652E3300FE46C2 /* MakeWishCoupon */ = {
+			isa = PBXGroup;
+			children = (
+				8D6CB2002A652E3E00FE46C2 /* View */,
+				8D6CB2012A652E4A00FE46C2 /* ViewController */,
+			);
+			path = MakeWishCoupon;
+			sourceTree = "<group>";
+		};
+		8D6CB2002A652E3E00FE46C2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8D6CB2042A6531EA00FE46C2 /* WriteWishView.swift */,
+				8D6CB2022A652E8300FE46C2 /* MakeWishView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8D6CB2012A652E4A00FE46C2 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8D6CB2062A653EDF00FE46C2 /* MakeWishViewController.swift */,
+			);
+			path = ViewController;
 		A53C62F42A65714400AE3B45 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -917,6 +948,7 @@
 				8D6CB1FC2A6509B300FE46C2 /* DisconnectView.swift in Sources */,
 				A555AD9B2A6079790083CD20 /* NicknameSettingViewController.swift in Sources */,
 				8D6CB1F62A6505E300FE46C2 /* LogoutViewController.swift in Sources */,
+				8D6CB2072A653EDF00FE46C2 /* MakeWishViewController.swift in Sources */,
 				8D2B2E8C2A619C0D00B75CDD /* EditProfileViewController.swift in Sources */,
 				A58C70322A61D3AC00327CD3 /* EnterInvitationViewController.swift in Sources */,
 				A58C70302A61CE6300327CD3 /* EnterInvitationView.swift in Sources */,
@@ -965,6 +997,7 @@
 				A55150BC2A614A2000481F57 /* CoupleConnectionMethodView.swift in Sources */,
 				36012F472A55CDEE006B8A39 /* Date+.swift in Sources */,
 				361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */,
+				8D6CB2052A6531EA00FE46C2 /* WriteWishView.swift in Sources */,
 				8D2B2E7C2A61638000B75CDD /* SettingView.swift in Sources */,
 				361FA3322A601E7900C3BBFD /* PostService.swift in Sources */,
 				A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */,
@@ -974,6 +1007,7 @@
 				361FA3462A602A2800C3BBFD /* MissionContentList.swift in Sources */,
 				A55150BE2A614A2A00481F57 /* CoupleConnectionMethodViewController.swift in Sources */,
 				A555AD9D2A6079840083CD20 /* NicknameSettingView.swift in Sources */,
+				8D6CB2032A652E8300FE46C2 /* MakeWishView.swift in Sources */,
 				A55150BA2A6137ED00481F57 /* Config.xcconfig in Sources */,
 				8D2B2E802A6163E900B75CDD /* SettingViewController.swift in Sources */,
 				361FA3712A6268DD00C3BBFD /* HomeBattleView.swift in Sources */,
