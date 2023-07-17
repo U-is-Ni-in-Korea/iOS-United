@@ -8,6 +8,7 @@
 import UIKit
 import Then
 import SDSKit
+import CHTCollectionViewWaterfallLayout
 
 final class WishCouponView: UIView {
     
@@ -15,15 +16,13 @@ final class WishCouponView: UIView {
     
     // MARK: - UI Property
     
-    private var wishCouponCountView = WishCouponCountView()
-    
     let navigationBar = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "소원권") //백버튼 크기 변경
     
-//    let historyTableView = UITableView().then {
-//        $0.register(HistoryTableViewCell.self, forCellReuseIdentifier: HistoryTableViewCell.identifier)
-//        $0.rowHeight = 103 // 셀의 높이
-//        $0.separatorStyle = .none // 셀의 구분선 없애기
-//    }
+    private var wishCouponCountView = WishCouponCountView()
+    /**내 소원권**/
+    private var wishCouponCollectionView = WishCouponCollectionView()
+    /**상대 소원권**/
+    private var wishCouponYourCollectionView = WishCouponYourCollectionView()
     
     // MARK: - Life Cycle
     
@@ -46,7 +45,7 @@ final class WishCouponView: UIView {
     }
     
     private func setLayout() {
-        [navigationBar, wishCouponCountView].forEach {
+        [navigationBar, wishCouponCountView, wishCouponYourCollectionView].forEach {
             addSubview($0)
         }
         
@@ -59,7 +58,17 @@ final class WishCouponView: UIView {
         wishCouponCountView.snp.makeConstraints {
             $0.top.equalTo(navigationBar.snp.bottom)
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(82)
+            $0.height.equalTo(128)
+        }
+        
+//        wishCouponCollectionView.snp.makeConstraints {
+//            $0.top.equalTo(wishCouponCountView.snp.bottom)
+//        }
+        
+        wishCouponYourCollectionView.snp.makeConstraints {
+            $0.top.equalTo(wishCouponCountView.snp.bottom)
+            $0.bottom.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
         }
     }
     

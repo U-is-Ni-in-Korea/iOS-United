@@ -8,6 +8,7 @@
 import UIKit
 import Then
 import SDSKit
+import CHTCollectionViewWaterfallLayout
 
 class WishCouponViewController: BaseViewController {
     
@@ -21,7 +22,6 @@ class WishCouponViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setDelegate()
         setStyle()
         setLayout()
     }
@@ -34,10 +34,6 @@ class WishCouponViewController: BaseViewController {
     }
     
     // MARK: - Setting
-    
-    private func setDelegate() {
-        
-    }
     
     private func setStyle() {
         
@@ -52,3 +48,4 @@ class WishCouponViewController: BaseViewController {
     // MARK: - Custom Method
     
 }
+
