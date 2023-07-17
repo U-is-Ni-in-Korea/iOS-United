@@ -20,7 +20,7 @@ final class SettingTableViewCell: UITableViewCell {
         $0.font = SDSFont.body2.font
         $0.textColor = .gray600
     }
-
+    
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setLayout()
@@ -48,6 +48,5 @@ final class SettingTableViewCell: UITableViewCell {
     func configureCell(_ settingTitle: SettingTitle) {
         settingTitleLabel.text = settingTitle.title
     }
-
 }
 
