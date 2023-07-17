@@ -11,6 +11,7 @@ import SDSKit
 import CHTCollectionViewWaterfallLayout
 
 final class WishCouponCollectionView: UIView {
+    var wishCouponData: Int = 0 
     
     // MARK: - Property
     
@@ -82,7 +83,7 @@ extension WishCouponCollectionView: UICollectionViewDelegate {}
 // MARK: - UICollectionView Datasource
 extension WishCouponCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 20
+        return wishCouponData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

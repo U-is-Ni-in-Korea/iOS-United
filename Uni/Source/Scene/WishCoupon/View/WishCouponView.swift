@@ -11,18 +11,27 @@ import SDSKit
 import CHTCollectionViewWaterfallLayout
 
 final class WishCouponView: UIView {
-    
+    var wishCouponeData: Int = 0 {
+        didSet {
+            wishCouponCollectionView.wishCouponData = wishCouponeData
+            wishCouponCollectionView.wishCouponCollectionView.reloadData()
+            print(wishCouponeData, "데이터")
+        }
+    }
     // MARK: - Property
     
     // MARK: - UI Property
     
     let navigationBar = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "소원권") //백버튼 크기 변경
     
-    private var wishCouponCountView = WishCouponCountView()
+    var wishCouponCountView = WishCouponCountView()
     /**내 소원권**/
-    private var wishCouponCollectionView = WishCouponCollectionView()
+    var wishCouponCollectionView = WishCouponCollectionView()
     /**상대 소원권**/
-    private var wishCouponYourCollectionView = WishCouponYourCollectionView()
+    var wishCouponYourCollectionView = WishCouponYourCollectionView()
+    
+    var wishCouponEmptyView = WishCouponEmptyView()
+
     
     // MARK: - Life Cycle
     
@@ -49,7 +58,7 @@ final class WishCouponView: UIView {
     }
     
     private func setLayout() {
-        [navigationBar, wishCouponCountView,wishCouponCollectionView, wishCouponYourCollectionView].forEach {
+        [navigationBar, wishCouponEmptyView, wishCouponCountView,wishCouponCollectionView, wishCouponYourCollectionView].forEach {
             addSubview($0)
         }
         
@@ -63,6 +72,12 @@ final class WishCouponView: UIView {
             $0.top.equalTo(navigationBar.snp.bottom)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(128)
+        }
+        
+        wishCouponEmptyView.snp.makeConstraints {
+            $0.top.equalTo(wishCouponCountView.snp.bottom)
+            $0.bottom.equalToSuperview()
+            $0.leading.trailing.equalToSuperview()
         }
         
         wishCouponCollectionView.snp.makeConstraints {
@@ -80,48 +95,12 @@ final class WishCouponView: UIView {
     
     // MARK: - Action Helper
     
-    @objc func myButtonTapped() {
-        switchToMyWishCouponView(showMyWishCoupon: true)
-        print("switchMyButton")
-        
-        
-    }
-    
-    @objc func yourButtonTapped() {
-        switchToMyWishCouponView(showMyWishCoupon: false)
-        print("switchYourButton")
-    }
+
     
     private func setupButtons() {
-        wishCouponCountView.myButton.addTarget(self, action: #selector(myButtonTapped), for: .touchUpInside)
-        wishCouponCountView.yourButton.addTarget(self, action: #selector(yourButtonTapped), for: .touchUpInside)
+
         
     }
     
-    // MARK: - Custom Method
-    
-    private func switchToMyWishCouponView(showMyWishCoupon: Bool) {
-        if showMyWishCoupon {
-            DispatchQueue.main.async {
-                self.wishCouponCollectionView.isHidden = false
-                self.wishCouponYourCollectionView.isHidden = true
-                self.wishCouponCountView.yourButton.setTitleColor(.gray300, for: .normal)
-                self.wishCouponCountView.yourButton.titleLabel?.font = SDSFont.body1Regular.font
-                self.wishCouponCountView.myButton.setTitleColor(.lightBlue600, for: .normal)
-                self.wishCouponCountView.myButton.titleLabel?.font = SDSFont.subTitle.font
-                self.wishCouponCollectionView.scrollToInitialPosition()
-            }
-        }
-        else {
-            DispatchQueue.main.async {
-                self.wishCouponCollectionView.isHidden = true
-                self.wishCouponYourCollectionView.isHidden = false
-                self.wishCouponCountView.myButton.setTitleColor(.gray300, for: .normal)
-                self.wishCouponCountView.myButton.titleLabel?.font = SDSFont.body1Regular.font
-                self.wishCouponCountView.yourButton.setTitleColor(.lightBlue600, for: .normal)
-                self.wishCouponCountView.yourButton.titleLabel?.font = SDSFont.subTitle.font
-                self.wishCouponYourCollectionView.scrollToInitialPosition()
-            }
-        }
-    }
+
 }
