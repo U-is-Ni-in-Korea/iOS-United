@@ -1,6 +1,8 @@
 import UIKit
 import Sentry
 import SDSKit
+import KakaoSDKCommon
+import KakaoSDKAuth
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -14,8 +16,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             options.dsn = "https://77bac313ebba4ca8b785852d9c36b39b@o4505393164124160.ingest.sentry.io/4505426124996608"
             options.debug = true
         }
+        let nativeAppKey = Bundle.main.infoDictionary?["KAKAO_NATIVE_APP_KEY"] ?? ""
+        KakaoSDK.initSDK(appKey: nativeAppKey as! String)
+
         registerFonts()
         return true
+    }
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        if (AuthApi.isKakaoTalkLoginUrl(url)) {
+            return AuthController.handleOpenUrl(url: url)
+        }
+
+        return false
     }
 
     // MARK: UISceneSession Lifecycle
