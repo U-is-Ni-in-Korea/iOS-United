@@ -1,15 +1,15 @@
 import UIKit
 
-final class BattleWriteViewController: BaseViewController {
+final class BattleHistoryViewController: BaseViewController {
 
     override func loadView() {
         super.loadView()
-        self.view = battleWriteView
+        self.view = battleHistoryView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
     
-    private var battleWriteView = BattleWriteView()
+    private var battleHistoryView = BattleHistoryView()
 }

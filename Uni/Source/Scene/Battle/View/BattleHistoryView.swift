@@ -4,7 +4,7 @@ import SDSKit
 import SnapKit
 import Then
 
-final class BattleWriteView: UIView {
+final class BattleHistoryView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }

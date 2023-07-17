@@ -3,7 +3,7 @@ import SDSKit
 import SnapKit
 import Then
 
-class WishCollectionViewCell: UICollectionViewCell {
+class BattleWishCollectionViewCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
