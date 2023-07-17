@@ -14,7 +14,7 @@ final class LoginView: UIView {
     
     // MARK: - UI Property
     
-    private let kakaoButton = UIButton().then {
+    let kakaoButton = UIButton().then {
         $0.backgroundColor = UIColor(hex: 0xFEE500)
         $0.setTitle("카카오 로그인", for: .normal)
         $0.setTitleColor(UIColor.gray600, for: .normal)

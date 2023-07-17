@@ -90,6 +90,7 @@
 		8D6CB1FE2A6509C200FE46C2 /* DisconnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB1FD2A6509C200FE46C2 /* DisconnectViewController.swift */; };
 		8DAAB2B62A61CD9700E25CF4 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAB2B52A61CD9700E25CF4 /* DatePickerViewController.swift */; };
 		8DAAB2B82A61CDB700E25CF4 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAB2B72A61CDB700E25CF4 /* DatePickerView.swift */; };
+		A53C62F22A65322C00AE3B45 /* KakaoAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F12A65322C00AE3B45 /* KakaoAuthViewModel.swift */; };
 		A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */; };
 		A54CD6312A5C328500C434B7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */; };
 		A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6332A5C347100C434B7 /* OnboardingCell.swift */; };
@@ -188,6 +189,7 @@
 		8D6CB1FD2A6509C200FE46C2 /* DisconnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisconnectViewController.swift; sourceTree = "<group>"; };
 		8DAAB2B52A61CD9700E25CF4 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		8DAAB2B72A61CDB700E25CF4 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		A53C62F12A65322C00AE3B45 /* KakaoAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthViewModel.swift; sourceTree = "<group>"; };
 		A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		A54CD6332A5C347100C434B7 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				36012F182A55A9F6006B8A39 /* Assets.xcassets */,
 				36012F1A2A55A9F6006B8A39 /* LaunchScreen.storyboard */,
 				36012F1D2A55A9F6006B8A39 /* Info.plist */,
+				A53C62EF2A652F2000AE3B45 /* New Group */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -311,6 +314,7 @@
 		36012F282A55AE4A006B8A39 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				A53C62F02A65320F00AE3B45 /* SocialLogin */,
 				361FA32C2A601C6500C3BBFD /* Base */,
 				361FA3262A60192B00C3BBFD /* HomeRepository */,
 				36012F392A55B5FD006B8A39 /* AuthRepository */,
@@ -620,6 +624,21 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		A53C62EF2A652F2000AE3B45 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		A53C62F02A65320F00AE3B45 /* SocialLogin */ = {
+			isa = PBXGroup;
+			children = (
+				A53C62F12A65322C00AE3B45 /* KakaoAuthViewModel.swift */,
+			);
+			path = SocialLogin;
+			sourceTree = "<group>";
+		};
 		A54CD62B2A5C322600C434B7 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -874,6 +893,7 @@
 				7E37BAE52A6271B700A3CF64 /* HistoryDetailViewController.swift in Sources */,
 				8D6CB1FA2A65093600FE46C2 /* WithdrawViewController.swift in Sources */,
 				361FA33F2A60261000C3BBFD /* ShortGame.swift in Sources */,
+				A53C62F22A65322C00AE3B45 /* KakaoAuthViewModel.swift in Sources */,
 				8D6CB1FC2A6509B300FE46C2 /* DisconnectView.swift in Sources */,
 				A555AD9B2A6079790083CD20 /* NicknameSettingViewController.swift in Sources */,
 				8D6CB1F62A6505E300FE46C2 /* LogoutViewController.swift in Sources */,
