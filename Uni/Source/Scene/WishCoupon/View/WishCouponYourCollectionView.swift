@@ -20,7 +20,7 @@ final class WishCouponYourCollectionView: UIView {
     lazy var wishCouponYourCollectionView = UICollectionView(frame: .zero, collectionViewLayout: wishCouponFlowLayout).then {
         $0.register(WishCouponYourCollectionViewCell.self, forCellWithReuseIdentifier: WishCouponYourCollectionViewCell.identifier)
         $0.isScrollEnabled = true
-        $0.showsVerticalScrollIndicator = true
+        $0.showsVerticalScrollIndicator = false
         $0.contentInset = .init(top: 16, left: 20, bottom: 120, right: 20)
         $0.alwaysBounceVertical = true
         $0.backgroundColor = .clear
@@ -52,8 +52,8 @@ final class WishCouponYourCollectionView: UIView {
         let itemWidthSize = (UIScreen.main.bounds.width - 55) / 2
         wishCouponFlowLayout.scrollDirection = .vertical
         wishCouponFlowLayout.itemSize = .init(width: itemWidthSize, height: itemWidthSize / 160 * 206)
-        wishCouponFlowLayout.minimumLineSpacing = 15
-        wishCouponFlowLayout.minimumInteritemSpacing = 15
+        wishCouponFlowLayout.minimumLineSpacing = 15 //수직 간격
+        wishCouponFlowLayout.minimumInteritemSpacing = 15 //수평 간격
     }
     
     private func setLayout() {

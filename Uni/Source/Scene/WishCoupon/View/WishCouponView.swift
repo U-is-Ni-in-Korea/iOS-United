@@ -45,7 +45,7 @@ final class WishCouponView: UIView {
     }
     
     private func setLayout() {
-        [navigationBar, wishCouponCountView, wishCouponYourCollectionView].forEach {
+        [navigationBar, wishCouponCountView,wishCouponCollectionView].forEach {
             addSubview($0)
         }
         
@@ -61,19 +61,22 @@ final class WishCouponView: UIView {
             $0.height.equalTo(128)
         }
         
-//        wishCouponCollectionView.snp.makeConstraints {
-//            $0.top.equalTo(wishCouponCountView.snp.bottom)
-//        }
-        
-        wishCouponYourCollectionView.snp.makeConstraints {
+        wishCouponCollectionView.snp.makeConstraints {
             $0.top.equalTo(wishCouponCountView.snp.bottom)
             $0.bottom.equalToSuperview()
             $0.leading.trailing.equalToSuperview()
         }
+        
+//        wishCouponYourCollectionView.snp.makeConstraints {
+//            $0.top.equalTo(wishCouponCountView.snp.bottom)
+//            $0.bottom.equalToSuperview()
+//            $0.leading.trailing.equalToSuperview()
+//        }
     }
     
     // MARK: - Action Helper
     
     // MARK: - Custom Method
+    
     
 }
