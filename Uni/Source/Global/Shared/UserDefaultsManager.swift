@@ -7,10 +7,11 @@
 
 import Foundation
 
+enum Key: String {
+    case hasOnboarded
+}
+
 class UserDefaultsManager {
-    enum Key: String {
-        case hasOnboarded
-    }
     
     let defaults = UserDefaults.standard
     static let shared = UserDefaultsManager()
@@ -21,6 +22,7 @@ class UserDefaultsManager {
             return false
         }
         else {
+            print("트루????")
             return true
         }
     }
@@ -33,6 +35,10 @@ class UserDefaultsManager {
     }
     
     func loadBool(_ key: Key) -> Bool? {
-        return defaults.object(forKey: key.rawValue) as? Bool ?? false
+        return defaults.object(forKey: key.rawValue) as? Bool
+    }
+    
+    func save( value: Any, forkey key: Key) {
+        defaults.set(value, forKey: key.rawValue)
     }
 }
