@@ -11,7 +11,7 @@ import Then
 
 class EditProfileView: UIView {
 
-    private let editProfileViewNavi = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "프로필 수정")
+    let editProfileViewNavi = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "프로필 수정")
     
     lazy var profileImageView = UIImageView().then {
         $0.contentMode = .scaleToFill

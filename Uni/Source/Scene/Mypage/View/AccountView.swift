@@ -68,6 +68,10 @@ extension AccountView: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.didSelectCell(at: indexPath)
+    }
 }
 
 protocol AccountViewDelegate: AnyObject {

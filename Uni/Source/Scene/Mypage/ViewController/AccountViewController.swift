@@ -15,6 +15,7 @@ class AccountViewController: UIViewController, AccountViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        accountActions()
     }
     
     override func loadView() {
@@ -25,10 +26,32 @@ class AccountViewController: UIViewController, AccountViewDelegate {
         self.view = accountView
     }
     
+    func accountActions() {
+        self.accountView.accountViewNavi.backButtonCompletionHandler = { [self] in self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
     func didSelectCell(at indexPath: IndexPath) {
         
-        print("alert 만들기")
+        switch indexPath.row {
+            
+        case 0 : let logoutViewController = LogoutViewController()
+            logoutViewController.modalPresentationStyle = .overFullScreen
+            logoutViewController.modalTransitionStyle = .crossDissolve
+            self.present(logoutViewController, animated: true, completion: nil)
 
+        case 1 : let withdrawViewController = WithdrawViewController()
+            withdrawViewController.modalPresentationStyle = .overFullScreen
+            withdrawViewController.modalTransitionStyle = .crossDissolve
+            self.present(withdrawViewController, animated: true, completion: nil)
+            
+        case 2 : let disconnectViewController = DisconnectViewController()
+            disconnectViewController.modalPresentationStyle = .overFullScreen
+            disconnectViewController.modalTransitionStyle = .crossDissolve
+            self.present(disconnectViewController, animated: true, completion: nil)
+
+        default:
+            return
+        }
     }
-
 }

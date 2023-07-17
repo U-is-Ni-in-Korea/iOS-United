@@ -27,13 +27,13 @@ class SettingViewController: UIViewController, SettingViewDelegate {
     }
     
     func settingViewActions() {
+
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(editProfileTapped(_:)))
         settingView.profileView.editProfileButton.addGestureRecognizer(tapGesture)
         settingView.isUserInteractionEnabled = true
     }
     
     @objc func editProfileTapped(_ gesture: UITapGestureRecognizer) {
-        print("tappppppppp")
         let editProfileViewController = EditProfileViewController()
         self.navigationController?.pushViewController(editProfileViewController, animated: true)
     }
@@ -41,7 +41,7 @@ class SettingViewController: UIViewController, SettingViewDelegate {
     func didSelectCell(at indexPath: IndexPath) {
         switch indexPath.row {
         case 0 :  let accountViewController = AccountViewController()
-            self.present(accountViewController,animated: true, completion: nil)
+            self.navigationController?.pushViewController(accountViewController, animated: true)
         default:
             return
         }

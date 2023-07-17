@@ -10,10 +10,7 @@ import SDSKit
 import Then
 
 class DatePickerView: UIView {
-    
-//    var cancelButtonTapClosure: ((_ result: Bool) -> Void)?
-//    var doneButtonTapClosure: ((_ result: Bool) -> Void)?
-        
+
     let baseButton = UIButton()
     
     let emptyView = UIView().then {

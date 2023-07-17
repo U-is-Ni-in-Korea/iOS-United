@@ -9,21 +9,23 @@ import UIKit
 
 class WithdrawViewController: UIViewController {
 
+    var withdrawView = WithdrawView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        withdrawActions()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func loadView() {
+        super.loadView()
+        
+        withdrawView = WithdrawView(frame: self.view.frame)
+        self.view = withdrawView
     }
-    */
-
+    
+    func withdrawActions() {
+        self.withdrawView.askWithdrawAlertView.cancelButtonTapCompletion = { [self] in
+            self.dismiss(animated: true)
+        }
+    }
 }

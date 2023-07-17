@@ -25,6 +25,10 @@ class EditProfileViewController: UIViewController, UIImagePickerControllerDelega
     }
     
     func editProfileViewActions() {
+        
+        self.editProfileView.editProfileViewNavi.backButtonCompletionHandler = { [self] in self.navigationController?.popViewController(animated: true)
+        }
+        
         editProfileView.anniversaryButton.addTarget(self, action: #selector(anniversaryButtonTapped), for: .touchUpInside)
         
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(changeProfileImageTapped(_:)))

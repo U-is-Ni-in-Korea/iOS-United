@@ -9,21 +9,25 @@ import UIKit
 
 class DisconnectViewController: UIViewController {
 
+    var disconnectView = DisconnectView()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        disconnectActions()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func loadView() {
+        super.loadView()
+        
+        disconnectView = DisconnectView(frame: self.view.frame)
+        self.view = disconnectView
     }
-    */
+    
+    func disconnectActions() {
+        self.disconnectView.askDisconnectAlertView.cancelButtonTapCompletion = { [self] in
+            self.dismiss(animated: true)
+        }
+    }
+
 
 }
