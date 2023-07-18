@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WithdrawViewController: UIViewController {
+class WithdrawViewController: BaseViewController {
 
     var withdrawView = WithdrawView()
 
