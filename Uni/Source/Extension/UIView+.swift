@@ -61,5 +61,32 @@ extension UIView {
         guard let pngData = image.pngData() else { return nil }
         return UIImage(data: pngData)
     }
+    
+    func showIndicator() {
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = .gray600.withAlphaComponent(0.4)
+        backgroundView.tag = 99
+        let indicatorView = UIActivityIndicatorView(style: .medium)
+        
+        self.addSubview(backgroundView)
+        backgroundView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        backgroundView.addSubview(indicatorView)
+        
+        indicatorView.snp.makeConstraints {
+            $0.centerX.centerY.equalToSuperview()
+            $0.width.height.equalTo(48)
+        }
+        indicatorView.startAnimating()
+    }
+    
+    func removeIndicator() {
+        self.subviews.forEach {
+            if $0.tag == 99 { 
+                $0.removeFromSuperview()
+            }
+        }
+    }
 
 }
