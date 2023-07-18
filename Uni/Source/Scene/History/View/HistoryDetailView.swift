@@ -9,13 +9,21 @@ import UIKit
 import Then
 import SDSKit
 
+protocol HistoryDetailViewDelegate: AnyObject {
+    func backButtonTapped()
+}
+
 final class HistoryDetailView: UIView {
     
     // MARK: - Property
     
+    weak var delegate: HistoryDetailViewDelegate?
+    
     // MARK: - UI Property
     
     let navigationBar = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "승부 히스토리") // 폰트 변경
+    
+    
     
     private var  historyDetailResultView = HistoryDetailResultView()
     
@@ -61,5 +69,9 @@ final class HistoryDetailView: UIView {
     // MARK: - Action Helper
     
     // MARK: - Custom Method
+    
+    func backButtonTapped() {
+        delegate?.backButtonTapped()
+    }
     
 }

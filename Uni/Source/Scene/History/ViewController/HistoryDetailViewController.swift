@@ -9,7 +9,7 @@ import UIKit
 import Then
 import SDSKit
 
-class HistoryDetailViewController: BaseViewController {
+class HistoryDetailViewController: BaseViewController, HistoryDetailViewDelegate {
 
     // MARK: - Property
     
@@ -21,7 +21,7 @@ class HistoryDetailViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        backButtonTapped()
         // Do any additional setup after loading the view.
     }
     
@@ -29,10 +29,13 @@ class HistoryDetailViewController: BaseViewController {
         super.loadView()
         
         historyDetailView = HistoryDetailView(frame: self.view.frame)
+        historyDetailView.delegate = self
         self.view = historyDetailView
     }
     
     // MARK: - Setting
+    
+ 
     
     private func setStyle() {
         
@@ -46,8 +49,9 @@ class HistoryDetailViewController: BaseViewController {
     
     // MARK: - Action Helper
     
-    private func actions() {
-    
+    func backButtonTapped() {
+        self.historyDetailView.navigationBar.backButtonCompletionHandler = { [self] in self.navigationController?.popViewController(animated: true)
+        }
     }
     
     // MARK: - Custom Method

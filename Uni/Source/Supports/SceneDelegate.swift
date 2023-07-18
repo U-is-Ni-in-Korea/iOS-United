@@ -70,7 +70,7 @@ extension SceneDelegate {
             print("로그인")
             /// 토큰 여부에 따라 로그인 화면, 커플연결 화면, 홈 화면을 나눠야함
             let loginViewController = LoginViewController()
-            setRootViewController(scene, viewController: UINavigationController(rootViewController: loginViewController))
+            setRootViewController(scene, viewController: UINavigationController(rootViewController: HistoryViewController()))
         }
         ///온보딩이 처음일 때
         else {

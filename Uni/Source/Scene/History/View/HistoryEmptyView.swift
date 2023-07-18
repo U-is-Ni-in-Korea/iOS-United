@@ -16,7 +16,8 @@ final class HistoryEmptyView: UIView {
     // MARK: - UI Property
     
     private let gameImageView = UIImageView().then {
-        $0.backgroundColor = .gray200 //이미지 변경하기
+        $0.image = SDSIcon.icSad.withTintColor(.lightBlue500)
+//        $0.tintColor = .lightBlue500
         $0.layer.cornerRadius = 10
     }
     
