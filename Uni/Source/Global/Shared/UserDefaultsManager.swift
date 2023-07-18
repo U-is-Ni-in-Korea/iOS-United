@@ -10,6 +10,7 @@ import Foundation
 enum Key: String {
     case hasOnboarded
     case hasCoupleCode
+    case isAlreadyFinish
 }
 
 class UserDefaultsManager {
@@ -40,6 +41,8 @@ class UserDefaultsManager {
         case .hasOnboarded:
             return loadBool(key)
         case .hasCoupleCode:
+            return loadBool(key)
+        case .isAlreadyFinish:
             return loadBool(key)
         }
     }
