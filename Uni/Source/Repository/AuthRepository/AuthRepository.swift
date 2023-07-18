@@ -7,6 +7,7 @@ class AuthRepository {
         let params: Parameters = [
             "code": "\(token)"
         ]
+        print("?????????????")
         PostService.shared.postService(with: params, isUseHeader: false, from: Config.baseURL + "auth/kakao", callback: {
             (data: KakaoLoginDataModel?, error: String?) in
             if let error = error {

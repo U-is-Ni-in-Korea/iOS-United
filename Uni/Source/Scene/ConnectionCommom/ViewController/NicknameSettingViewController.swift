@@ -11,6 +11,7 @@ import UIKit
 final class NicknameSettingViewController: BaseViewController {
     // MARK: - Property
     private var nicknameSettingView = NicknameSettingView()
+    private let keyChains = HeaderUtils()
 
     // MARK: - UI Property
     
@@ -24,6 +25,7 @@ final class NicknameSettingViewController: BaseViewController {
         super.viewDidLoad()
         setLayout()
         setConfig()
+        actions()
     }
     // MARK: - Setting
     override func setLayout() {
@@ -34,6 +36,19 @@ final class NicknameSettingViewController: BaseViewController {
     }
 
     // MARK: - Action Helper
+    private func actions() {
+        nicknameSettingView.navigationBarView.backButtonCompletionHandler = {
+//            self.keyChains.read(account: "accessToken") = {
+//                print("성공")
+//            }
+            let isTokenExists = self.keyChains.isTokenExists(account: "accessToken")
+            if isTokenExists {
+                print("존재")
+                self.keyChains.delete("accessToken")
+            }
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
     
     // MARK: - Custom Method
     

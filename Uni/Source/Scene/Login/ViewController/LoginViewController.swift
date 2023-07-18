@@ -12,7 +12,8 @@ import KakaoSDKUser
 class LoginViewController: BaseViewController {
     // MARK: - Property
     private var loginView = LoginView()
-    let authRepository = AuthRepository()
+    private let authRepository = AuthRepository()
+    private let keyChains = HeaderUtils()
     
     // MARK: - UI Property
     
@@ -28,6 +29,10 @@ class LoginViewController: BaseViewController {
         setConfig()
         actions()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        checkAccessToken()
+    }
     // MARK: - Setting
     override func setLayout() {
         super.setLayout()
@@ -42,17 +47,33 @@ class LoginViewController: BaseViewController {
     }
     @objc func kakaoButtonTapped() {
         hanldeKakaoLogin(completion: { kakaoToken in
+            print("---------유니토큰!!!!!!!--------------")
             self.authRepository.postToken(token: kakaoToken) { data in
                 print(data.accessToken, "유니토큰!!!!!!!")
+                
+                if let accessToken = data.accessToken {
+                    self.keyChains.create(account: "accessToken", value: accessToken)
+                    self.pushNicknameSettingViewController()
+                }
             }
         })
     }
     
     // MARK: - Custom Method
+    private func checkAccessToken() {
+        let tokenExist = self.keyChains.isTokenExists(account: "accessToken")
+        if tokenExist {
+           pushNicknameSettingViewController()
+        }
+    }
     
+    private func pushNicknameSettingViewController() {
+        let nicknameSettingViewController = NicknameSettingViewController()
+        navigationController?.pushViewController(nicknameSettingViewController, animated: false)
+    }
     
     // MARK: - 카카오 로그인
-    func hanldeKakaoLogin(completion: @escaping ((String) -> Void)) {
+    private func hanldeKakaoLogin(completion: @escaping ((String) -> Void)) {
         print("KakaoAuthVM - handleKakaoLogin() called()")
         //카카오톡 설치 여부 확인
         if (UserApi.isKakaoTalkLoginAvailable()) {
