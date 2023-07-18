@@ -72,6 +72,11 @@
 		7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */; };
 		7E25F6502A6330EB003E82F6 /* WishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */; };
 		7E25F6542A633ACA003E82F6 /* WishCouponCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F6532A633ACA003E82F6 /* WishCouponCountView.swift */; };
+		36CF2F792A65B06000D8F8E1 /* SelectBattleCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F782A65B06000D8F8E1 /* SelectBattleCategoryViewController.swift */; };
+		36CF2F7B2A65B08B00D8F8E1 /* BattleCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F7A2A65B08B00D8F8E1 /* BattleCategoryView.swift */; };
+		36CF2F7E2A65B0B600D8F8E1 /* CategoryDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F7D2A65B0B600D8F8E1 /* CategoryDescriptionView.swift */; };
+		36CF2F822A65BC3500D8F8E1 /* BattleCategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F812A65BC3500D8F8E1 /* BattleCategoryType.swift */; };
+		36CF2F842A65C77C00D8F8E1 /* BattleCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F832A65C77C00D8F8E1 /* BattleCategoryViewController.swift */; };
 		7E37BAE32A618DE900A3CF64 /* HistoryEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE22A618DE900A3CF64 /* HistoryEmptyView.swift */; };
 		7E37BAE52A6271B700A3CF64 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE42A6271B700A3CF64 /* HistoryDetailViewController.swift */; };
 		7E37BAE72A6271DC00A3CF64 /* HistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE62A6271DC00A3CF64 /* HistoryDetailView.swift */; };
@@ -190,6 +195,11 @@
 		36CF2F6F2A657B4D00D8F8E1 /* BattleStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleStatusView.swift; sourceTree = "<group>"; };
 		36CF2F712A657DD400D8F8E1 /* BattleChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleChipView.swift; sourceTree = "<group>"; };
 		36CF2F732A6583D700D8F8E1 /* BattleStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleStatus.swift; sourceTree = "<group>"; };
+		36CF2F782A65B06000D8F8E1 /* SelectBattleCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectBattleCategoryViewController.swift; sourceTree = "<group>"; };
+		36CF2F7A2A65B08B00D8F8E1 /* BattleCategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleCategoryView.swift; sourceTree = "<group>"; };
+		36CF2F7D2A65B0B600D8F8E1 /* CategoryDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDescriptionView.swift; sourceTree = "<group>"; };
+		36CF2F812A65BC3500D8F8E1 /* BattleCategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleCategoryType.swift; sourceTree = "<group>"; };
+		36CF2F832A65C77C00D8F8E1 /* BattleCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleCategoryViewController.swift; sourceTree = "<group>"; };
 		7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponViewController.swift; sourceTree = "<group>"; };
 		7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponView.swift; sourceTree = "<group>"; };
 		7E25F6512A6339E8003E82F6 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -335,6 +345,7 @@
 		36012F262A55AE3F006B8A39 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				36CF2F752A65B00700D8F8E1 /* BattleCategory */,
 				8D17B8862A659A740091D7AD /* MakeWishCoupon */,
 				7E25F6482A632E7B003E82F6 /* WishCoupon */,
 				8D2B2E712A61616400B75CDD /* Mypage */,
@@ -590,6 +601,42 @@
 				7E25F6512A6339E8003E82F6 /* Config.xcconfig */,
 			);
 			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		36CF2F752A65B00700D8F8E1 /* BattleCategory */ = {
+			isa = PBXGroup;
+			children = (
+				36CF2F7C2A65B0A400D8F8E1 /* Component */,
+				36CF2F772A65B01700D8F8E1 /* ViewController */,
+				36CF2F762A65B01300D8F8E1 /* View */,
+			);
+			path = BattleCategory;
+			sourceTree = "<group>";
+		};
+		36CF2F762A65B01300D8F8E1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				36CF2F7A2A65B08B00D8F8E1 /* BattleCategoryView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		36CF2F772A65B01700D8F8E1 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36CF2F782A65B06000D8F8E1 /* SelectBattleCategoryViewController.swift */,
+				36CF2F832A65C77C00D8F8E1 /* BattleCategoryViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		36CF2F7C2A65B0A400D8F8E1 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				36CF2F7D2A65B0B600D8F8E1 /* CategoryDescriptionView.swift */,
+				36CF2F812A65BC3500D8F8E1 /* BattleCategoryType.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		7E25F6482A632E7B003E82F6 /* WishCoupon */ = {
@@ -1009,6 +1056,7 @@
 			files = (
 				361FA3302A601D2E00C3BBFD /* GetService.swift in Sources */,
 				7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */,
+				36CF2F7E2A65B0B600D8F8E1 /* CategoryDescriptionView.swift in Sources */,
 				36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */,
 				36CF2F722A657DD400D8F8E1 /* BattleChipView.swift in Sources */,
 				361FA3842A628A2100C3BBFD /* BattleWishCollectionViewCell.swift in Sources */,
@@ -1042,6 +1090,7 @@
 				361FA3482A602A5C00C3BBFD /* RoundMission.swift in Sources */,
 				A53C62F62A65719600AE3B45 /* UserDefaultsManager.swift in Sources */,
 				A578FC162A62D9380021A32E /* DDaySettingView.swift in Sources */,
+				36CF2F822A65BC3500D8F8E1 /* BattleCategoryType.swift in Sources */,
 				8D2B2E7E2A6163B400B75CDD /* SettingTableViewHeaderView.swift in Sources */,
 				36012F3B2A55B60F006B8A39 /* AuthRepository.swift in Sources */,
 				7E37BAE92A6284EE00A3CF64 /* HistoryDetailResultView.swift in Sources */,
@@ -1058,6 +1107,7 @@
 				7E25F6502A6330EB003E82F6 /* WishCouponView.swift in Sources */,
 				A54CD6312A5C328500C434B7 /* OnboardingViewController.swift in Sources */,
 				8D2B2E822A61643E00B75CDD /* Config.xcconfig in Sources */,
+				36CF2F7B2A65B08B00D8F8E1 /* BattleCategoryView.swift in Sources */,
 				8D17B88A2A659CF00091D7AD /* WriteWishView.swift in Sources */,
 				8D2B2E762A6161A900B75CDD /* SettingTableViewCell.swift in Sources */,
 				8D6CB1F42A6501B400FE46C2 /* LogoutView.swift in Sources */,
@@ -1075,7 +1125,9 @@
 				361FA32B2A601A4100C3BBFD /* Config.swift in Sources */,
 				7EE3B1A42A60602A00962F4C /* HistoryTableViewCell.swift in Sources */,
 				A578FC142A62D9210021A32E /* DDaySettingViewController.swift in Sources */,
+				36CF2F792A65B06000D8F8E1 /* SelectBattleCategoryViewController.swift in Sources */,
 				36CF2F6C2A6579B600D8F8E1 /* BattleResultViewController.swift in Sources */,
+				36CF2F842A65C77C00D8F8E1 /* BattleCategoryViewController.swift in Sources */,
 				36CF2F682A643C8900D8F8E1 /* BattleHistoryView.swift in Sources */,
 				361FA34A2A602AC000C3BBFD /* MissionContent.swift in Sources */,
 				36CF2F662A643C6900D8F8E1 /* BattleHistoryViewController.swift in Sources */,
