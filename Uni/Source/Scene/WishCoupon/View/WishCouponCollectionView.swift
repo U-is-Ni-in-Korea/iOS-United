@@ -11,9 +11,10 @@ import SDSKit
 import CHTCollectionViewWaterfallLayout
 
 final class WishCouponCollectionView: UIView {
-    var wishCouponData: Int = 0 
     
     // MARK: - Property
+    
+    var wishCouponData: Int = 0
     
     // MARK: - UI Property
     
@@ -103,12 +104,10 @@ extension WishCouponCollectionView: UICollectionViewDataSource {
 extension WishCouponCollectionView: CHTCollectionViewDelegateWaterfallLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-//        let columnSpacing = 30
-        
         let itemWidthSize = (UIScreen.main.bounds.width - 55) / 2
         // 셀의 크기를 반환
         if indexPath.item == 0 {
-            return CGSize(width: itemWidthSize, height: 122)
+            return CGSize(width: itemWidthSize, height: itemWidthSize / 160 * 122)
         } else {
             return CGSize(width: itemWidthSize, height: itemWidthSize / 160 * 206)
         }

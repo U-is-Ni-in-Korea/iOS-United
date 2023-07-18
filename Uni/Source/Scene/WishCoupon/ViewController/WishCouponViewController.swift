@@ -15,21 +15,23 @@ class WishCouponViewController: BaseViewController {
         didSet {
             if myWishCouponData == 0 {
                 wishCouponView.wishCouponCollectionView.backgroundColor = .clear
-                wishCouponView.wishCouponeData = myWishCouponData
+                wishCouponView.wishCouponData = myWishCouponData
             }
             else {
                 wishCouponView.wishCouponCollectionView.backgroundColor = .gray100
-                wishCouponView.wishCouponeData = myWishCouponData
+                wishCouponView.wishCouponData = myWishCouponData
             }
         }
     }
     private var yourWishCouponData: Int = 0 {
         didSet {
             if yourWishCouponData == 0 {
-                
+                wishCouponView.wishCouponYourCollectionView.backgroundColor = .clear
+                wishCouponView.wishCouponData = yourWishCouponData
             }
             else {
-                
+                wishCouponView.wishCouponYourCollectionView.backgroundColor = .gray100
+                wishCouponView.wishCouponYourCollectionView.wishCouponData = yourWishCouponData // wishCouponData가 겹치지 않도록 상대소원권 컬렉션뷰에 따로 뺌
             }
         }
     }
@@ -49,7 +51,11 @@ class WishCouponViewController: BaseViewController {
         actions()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-            self.myWishCouponData = 2
+            self.myWishCouponData = 8
+        })
+
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+            self.yourWishCouponData = 9
         })
     }
     
@@ -79,8 +85,7 @@ class WishCouponViewController: BaseViewController {
     @objc func myButtonTapped() {
         switchToMyWishCouponView(showMyWishCoupon: true)
         print("switchMyButton")
-        
-        
+
     }
     
     @objc func yourButtonTapped() {

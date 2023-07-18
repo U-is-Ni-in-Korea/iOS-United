@@ -101,19 +101,5 @@ final class WishCouponCountView: UIView {
             $0.leading.equalTo(lineView.snp.trailing)
         }
     }
-    
-    // MARK: - Action Helper
-    
-//    @objc private func myButtonTapped() {
-//        let wishCouponCollectionView = WishCouponCollectionView()
-//        navigationController?.pushViewController(wishCouponCollectionView, animated: true)
-//    }
-//    
-//    @objc private func youtButtonTapped() {
-//        let wishCouponYourCollectionView = wishCouponYoutCollectionView()
-//        navigationController?.pushViewController(wishCouponYourCollectionView, animated: true)
-//    }
-    
-    // MARK: - Custom Method
-    
+
 }

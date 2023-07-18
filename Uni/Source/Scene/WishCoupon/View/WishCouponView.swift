@@ -11,14 +11,15 @@ import SDSKit
 import CHTCollectionViewWaterfallLayout
 
 final class WishCouponView: UIView {
-    var wishCouponeData: Int = 0 {
+    
+    // MARK: - Property
+    
+    var wishCouponData: Int = 0 { //내소원권 컬렉션 뷰 데이터
         didSet {
-            wishCouponCollectionView.wishCouponData = wishCouponeData
+            wishCouponCollectionView.wishCouponData = wishCouponData
             wishCouponCollectionView.wishCouponCollectionView.reloadData()
-            print(wishCouponeData, "데이터")
         }
     }
-    // MARK: - Property
     
     // MARK: - UI Property
     
@@ -39,14 +40,12 @@ final class WishCouponView: UIView {
         super.init(coder: coder)
         setStyle()
         setLayout()
-        setupButtons()
     }
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
         setStyle()
         setLayout()
-        setupButtons()
     }
     
     // MARK: - Setting
@@ -92,15 +91,4 @@ final class WishCouponView: UIView {
             $0.leading.trailing.equalToSuperview()
         }
     }
-    
-    // MARK: - Action Helper
-    
-
-    
-    private func setupButtons() {
-
-        
-    }
-    
-
 }

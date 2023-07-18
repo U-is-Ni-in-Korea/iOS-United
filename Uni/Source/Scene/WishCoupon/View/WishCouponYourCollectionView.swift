@@ -13,6 +13,15 @@ final class WishCouponYourCollectionView: UIView {
     
     // MARK: - Property
     
+    var wishCouponData: Int = 0 { //상대소원권 컬렉션뷰 데이터
+        didSet {
+            self.wishCouponYourData = wishCouponData
+            self.wishCouponYourCollectionView.reloadData()
+        }
+    }
+    
+    var wishCouponYourData: Int = 0 // viewDidLoad에서 바뀐 wishCouponData 받기 위한 변수
+    
     // MARK: - UI Property
     
     let wishCouponFlowLayout = UICollectionViewFlowLayout()
@@ -82,13 +91,12 @@ extension WishCouponYourCollectionView: UICollectionViewDelegate {}
 // MARK: - UICollectionView Datasource
 extension WishCouponYourCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return wishCouponYourData
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = wishCouponYourCollectionView.dequeueReusableCell(withReuseIdentifier: WishCouponYourCollectionViewCell.identifier, for: indexPath) as? WishCouponYourCollectionViewCell
         else { return UICollectionViewCell() }
-//        cell.configureCell(with: postDummyData[indexPath.row])
         return cell
     }
 }
