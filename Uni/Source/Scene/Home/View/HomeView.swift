@@ -29,7 +29,7 @@ final class HomeView: UIView {
     }
     
     private func setLayout() {
-        self.backgroundColor = .white
+        self.backgroundColor = .gray50
         scoreShadowView.addSubview(scoreView)
         self.addSubviews([topView, scoreShadowView, battleView])
         
@@ -84,6 +84,8 @@ final class HomeView: UIView {
         $0.backgroundColor = .clear
     }
     var scoreView = ScoreView()
-    var battleView = HomeBattleView()
+    var battleView = HomeBattleView().then {
+        $0.isUserInteractionEnabled = true
+    }
     
 }

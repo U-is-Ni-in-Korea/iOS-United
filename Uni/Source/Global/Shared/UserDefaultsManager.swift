@@ -9,6 +9,8 @@ import Foundation
 
 enum Key: String {
     case hasOnboarded
+    case hasCoupleCode
+    case isAlreadyFinish
 }
 
 class UserDefaultsManager {
@@ -22,7 +24,14 @@ class UserDefaultsManager {
             return false
         }
         else {
-            print("트루????")
+            return true
+        }
+    }
+    var hasCoupleCode: Bool {
+        if load(.hasCoupleCode) == nil {
+            return false
+        }
+        else {
             return true
         }
     }
@@ -30,6 +39,10 @@ class UserDefaultsManager {
     func load(_ key: Key) -> Any? {
         switch key {
         case .hasOnboarded:
+            return loadBool(key)
+        case .hasCoupleCode:
+            return loadBool(key)
+        case .isAlreadyFinish:
             return loadBool(key)
         }
     }
