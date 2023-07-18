@@ -3,6 +3,7 @@ import UIKit
 import SDSKit
 import SnapKit
 import Then
+import Kingfisher
 
 class BattleCollectionViewCell: UICollectionViewCell {
     
@@ -26,9 +27,11 @@ class BattleCollectionViewCell: UICollectionViewCell {
         super.init(coder: coder)
     }
     
-    func bindText(iconImage: UIImage,
+    func bindText(iconImage: String,
                   title: String) {
-        self.iconImageView.image = iconImage
+        if let url = URL(string: iconImage) {
+            self.iconImageView.kf.setImage(with: url)
+        }
         self.titleLabel.text = title
     }
     

@@ -3,11 +3,13 @@ import SDSKit
 
 class BattleViewController: BaseViewController {
     
+    //MARK: - life cycle
+    
     override func loadView() {
         super.loadView()
         self.view = battleView
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setConfig()
@@ -33,6 +35,15 @@ class BattleViewController: BaseViewController {
         super.viewDidDisappear(animated)
         self.removeNotiObserver()
     }
+    
+    //MARK: -controll function
+    //MARK: -network func
+    private func getBattleList() {
+        self.battleRepository.getGameList { [weak self] data in
+        }
+    }
+    
+    //MARK: -add Observer
     
     private func addNotiObserver() {
         NotificationCenter.default.addObserver(self,
@@ -84,7 +95,8 @@ class BattleViewController: BaseViewController {
     }
     
     private let battleView = BattleView()
-    
+    private let battleRepository = BattleRepository()
+    private var battleData: [BattleDataModel] = []
 }
 extension BattleViewController: UICollectionViewDelegate {}
 extension BattleViewController: UICollectionViewDataSource {
@@ -108,7 +120,7 @@ extension BattleViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section{
         case 0:
-            return missionMokData.count
+            return battleData.count
         default:
             return 1
         }
@@ -118,7 +130,8 @@ extension BattleViewController: UICollectionViewDataSource {
         switch indexPath.section {
         case 0:
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BattleCollectionViewCell.reuseIdentifier, for: indexPath) as? BattleCollectionViewCell else {return UICollectionViewCell()}
-            cell.bindText(iconImage: SDSIcon.icGooleLogin, title: missionMokData[indexPath.row].title)
+            cell.bindText(iconImage: battleData[indexPath.row].image,
+                          title: battleData[indexPath.row].title)
             return cell
         default: // section 1
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BattleWishCollectionViewCell.reuseIdentifier, for: indexPath) as? BattleWishCollectionViewCell else {return UICollectionViewCell()}
@@ -127,8 +140,7 @@ extension BattleViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BattleCollectionViewCell.reuseIdentifier, for: indexPath) as? BattleCollectionViewCell {
-//        }
+        
     }
 }
 extension BattleViewController: UICollectionViewDelegateFlowLayout {
