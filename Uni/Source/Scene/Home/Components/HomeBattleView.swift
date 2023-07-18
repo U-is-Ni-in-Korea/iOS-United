@@ -18,7 +18,7 @@ final class HomeBattleView: UIView {
     func setHeartCount(count: Int) {
         var config = self.heartButton.configuration
         config?.attributedTitle = "x\(count)".setAttributeString(textColor: .lightBlue600,
-                                                                font: SDSFont.btn2.font)
+                                                                 font: SDSFont.btn2.font)
         config?.image = count > 0 ? SDSIcon.icHeartFill: SDSIcon.icHeartEmpty
         self.heartButton.configuration = config
     }
@@ -88,6 +88,8 @@ final class HomeBattleView: UIView {
         $0.spacing = 16
         $0.distribution = .fillEqually
     }
-    private lazy var shortBattleButton = HomeBattleSelectView(title: "한판 승부", image: SDSIcon.icLogo)
-    private let wishCouponButton = HomeBattleSelectView(title: "소원권", image: SDSIcon.icLogo)
+    let shortBattleButton = HomeBattleSelectView(title: "한판 승부",
+                                                 image: UIImage(named: "imgShortGameLogo")!)
+    let wishCouponButton = HomeBattleSelectView(title: "소원권",
+                                                image: UIImage(named: "imgWishCouponLogo")!)
 }
