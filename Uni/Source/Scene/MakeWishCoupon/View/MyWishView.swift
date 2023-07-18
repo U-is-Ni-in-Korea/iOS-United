@@ -1,16 +1,16 @@
 //
-//  MakeWishView.swift
+//  MyWishCouponView.swift
 //  Uni
 //
-//  Created by 홍유정 on 2023/07/17.
+//  Created by 홍유정 on 2023/07/18.
 //
 
 import UIKit
 import SDSKit
 import Then
 
-class MakeWishView: UIView {
-        
+class MyWishView: UIView {
+
     let leftBackgroundImageView = UIImageView().then {
         $0.image = UIImage(named: "leftBackground")
     }
@@ -19,7 +19,7 @@ class MakeWishView: UIView {
         $0.image = UIImage(named: "rightBackground")
     }
     
-    let makeWishBackgroundView = UIView().then {
+    let myWishBackgroundView = UIView().then {
         $0.backgroundColor = .clear
     }
     
@@ -27,32 +27,28 @@ class MakeWishView: UIView {
         $0.applyNavigationBarShadow()
     }
     
-    let makeWishViewNavi = SDSNavigationBar(hasBack: false, hasTitleItem: false, navigationTitle: "소원권 만들기", rightBarButtonImages: [SDSIcon.icDismiss])
+    let myWishViewNavi = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "나의 소원권")
     
-    let writeWishTitleLabel = UILabel().then {
-        $0.text = "소원 작성하기"
-        $0.font = SDSFont.subTitle.font
-        $0.textColor = .gray600
-    }
+    let shareWishCouponButton = SDSChips(type: .blue, title: "공유하기 >")
     
-    let writeWishMessageLabel = UILabel().then {
-        $0.text = "한번 입력된 소원은 수정할 수 없어요"
-        $0.font = SDSFont.body2.font
-        $0.textColor = .gray400
-    }
-    
-    let writeWishView = WriteWishView().then {
+    let myWishCouponView = MyWishCouponView().then {
         $0.layer.cornerRadius = 16
     }
-        
-    var makeWishButton = SDSButton(type: .fill, state: .disabled).then {
+    
+    var useWishCouponButton = SDSButton(type: .fill, state: .enabled).then {
         $0.titleLabel?.textColor = .gray000
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setLayout()
         setStyle()
+        setLayout()
+    }
+    
+    init() {
+        super.init(frame: .zero)
+        setStyle()
+        setLayout()
     }
     
     required init?(coder: NSCoder) {
@@ -64,11 +60,9 @@ class MakeWishView: UIView {
     }
     
     private func setLayout() {
+        addSubviews([leftBackgroundImageView,rightBackgroundImageView,myWishBackgroundView])
         
-        
-        addSubviews([leftBackgroundImageView,rightBackgroundImageView,makeWishBackgroundView])
-        
-        makeWishBackgroundView.addSubviews([naviBackgroundView, makeWishViewNavi, writeWishTitleLabel, writeWishMessageLabel, writeWishView, makeWishButton])
+        myWishBackgroundView.addSubviews([naviBackgroundView, myWishViewNavi, shareWishCouponButton, myWishCouponView, useWishCouponButton])
         
         leftBackgroundImageView.snp.makeConstraints {
             $0.top.equalToSuperview()
@@ -80,11 +74,11 @@ class MakeWishView: UIView {
             $0.bottom.equalToSuperview().inset(UIScreen.main.bounds.height/7)
         }
         
-        makeWishBackgroundView.snp.makeConstraints {
+        myWishBackgroundView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
                 
-        makeWishViewNavi.snp.makeConstraints {
+        myWishViewNavi.snp.makeConstraints {
             $0.top.equalTo(safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(52)
@@ -92,32 +86,28 @@ class MakeWishView: UIView {
         
         naviBackgroundView.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
-            $0.bottom.equalTo(makeWishViewNavi.snp.bottom)
+            $0.bottom.equalTo(myWishViewNavi.snp.bottom)
         }
         
-        writeWishTitleLabel.snp.makeConstraints {
-            $0.top.equalTo(makeWishViewNavi.snp.bottom).offset(UIScreen.main.bounds.height/50)
-            $0.leading.equalToSuperview().inset(20)
+        shareWishCouponButton.snp.makeConstraints {
+            $0.top.equalTo(myWishViewNavi.snp.bottom).offset(UIScreen.main.bounds.height/21)
+            $0.centerX.equalToSuperview()
         }
         
-        writeWishMessageLabel.snp.makeConstraints {
-            $0.top.equalTo(writeWishTitleLabel.snp.bottom).offset(UIScreen.main.bounds.height/135)
-            $0.leading.equalToSuperview().inset(20)
-        }
-        
-        writeWishView.snp.makeConstraints {
-            $0.top.equalTo(writeWishMessageLabel.snp.bottom).offset(UIScreen.main.bounds.height/50)
+        myWishCouponView.snp.makeConstraints {
+            $0.top.equalTo(shareWishCouponButton.snp.bottom).offset(UIScreen.main.bounds.height/50)
             $0.leading.equalToSuperview().offset(37)
             $0.trailing.equalToSuperview().inset(37)
             $0.bottom.equalToSuperview().inset(UIScreen.main.bounds.height/5)
         }
         
-        makeWishButton.snp.makeConstraints {
-            $0.top.equalTo(writeWishView.snp.bottom).offset(UIScreen.main.bounds.height/14)
+        useWishCouponButton.snp.makeConstraints {
+            $0.top.equalTo(myWishCouponView.snp.bottom).offset(UIScreen.main.bounds.height/14)
             $0.centerX.equalToSuperview()
             $0.bottom.equalToSuperview().inset(UIScreen.main.bounds.height/16)
             $0.leading.trailing.equalToSuperview().inset(20)
         }
+
     }
 
 }
