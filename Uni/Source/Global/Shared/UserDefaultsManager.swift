@@ -9,6 +9,7 @@ import Foundation
 
 enum Key: String {
     case hasOnboarded
+    case isAlreadyFinish
 }
 
 class UserDefaultsManager {
@@ -30,6 +31,8 @@ class UserDefaultsManager {
     func load(_ key: Key) -> Any? {
         switch key {
         case .hasOnboarded:
+            return loadBool(key)
+        case .isAlreadyFinish:
             return loadBool(key)
         }
     }

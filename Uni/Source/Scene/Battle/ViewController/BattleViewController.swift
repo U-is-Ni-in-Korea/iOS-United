@@ -11,8 +11,17 @@ class BattleViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setConfig()
+        self.setButtonTarget()
         self.hideKeyboardWhenTappedAround()
         
+        
+    }
+    
+    func setButtonTarget() {
+        self.battleView.navigationBar.rightBarRightButtonItemCompletionHandler = { [weak self] in
+            guard let strongSelf = self else {return}
+            strongSelf.dismiss(animated: true)
+        }
     }
     
     override func viewDidAppear(_ animated: Bool) {
