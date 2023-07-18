@@ -14,7 +14,7 @@ final class NicknameSettingView: UIView {
 
     // MARK: - UI Property
     
-    private let navigationBarView = SDSNavigationBar(hasBack: true, hasTitleItem: false)
+    let navigationBarView = SDSNavigationBar(hasBack: true, hasTitleItem: false)
     
     private let nextButton = SDSButton(type: .fill, state: .disabled).then {
         $0.setButtonTitle(title: "다음")
