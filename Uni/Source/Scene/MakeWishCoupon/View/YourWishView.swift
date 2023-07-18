@@ -104,5 +104,11 @@ class YourWishView: UIView {
         }
 
     }
+    
+    func transformViewToImage() -> UIImage {
+        let renderer = UIGraphicsImageRenderer(bounds: yourWishCouponView.bounds)
+        return renderer.image {rendererContext in yourWishCouponView.layer.render(in: rendererContext.cgContext)
+        }
+    }
 
 }

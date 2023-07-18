@@ -24,7 +24,23 @@ class YourWishViewController: BaseViewController {
     }
     
     func yourWishActions() {
-        self.yourWishView.yourWishViewNavi.backButtonCompletionHandler = { [self] in self.navigationController?.popViewController(animated: true)}
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(shareActions(_:)))
+        yourWishView.shareWishCouponButton.addGestureRecognizer(tapGesture)
+        yourWishView.isUserInteractionEnabled = true
+        
+        self.yourWishView.yourWishViewNavi.backButtonCompletionHandler = { [weak self] in
+            guard let strongSelf = self else {return}
+            strongSelf.navigationController?.popViewController(animated: true)}
+    }
+    
+    @objc func shareActions(_ gesture: UITapGestureRecognizer) {
+        
+        let yourWishCouponImage = yourWishView.transformViewToImage()
+        
+        let activityViewController = UIActivityViewController(activityItems: [yourWishCouponImage], applicationActivities: nil)
+        UIApplication.shared.windows.first?.rootViewController?.present(activityViewController, animated: true, completion: nil)
+        
     }
 
 

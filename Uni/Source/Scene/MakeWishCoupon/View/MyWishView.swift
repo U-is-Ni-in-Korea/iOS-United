@@ -29,7 +29,7 @@ class MyWishView: UIView {
     
     let myWishViewNavi = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "나의 소원권")
     
-    let shareWishCouponButton = SDSChips(type: .blue, title: "공유하기 >")
+    public var shareWishCouponButton = SDSChips(type: .blue, title: "공유하기 >")
     
     let myWishCouponView = MyWishCouponView().then {
         $0.layer.cornerRadius = 16
@@ -108,6 +108,12 @@ class MyWishView: UIView {
             $0.leading.trailing.equalToSuperview().inset(20)
         }
 
+    }
+    
+    func transformViewToImage() -> UIImage {
+        let renderer = UIGraphicsImageRenderer(bounds: myWishCouponView.bounds)
+        return renderer.image {rendererContext in myWishCouponView.layer.render(in: rendererContext.cgContext)
+        }
     }
 
 }

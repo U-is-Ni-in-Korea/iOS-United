@@ -13,7 +13,7 @@ class YourWishCouponView: UIView {
 
     
     var yourWishImageView = UIImageView().then {
-        $0.backgroundColor = .gray200 // 이미지
+        $0.image = UIImage(named: "logo")
     }
 
     let yourWishIsLabel = UILabel().then {
