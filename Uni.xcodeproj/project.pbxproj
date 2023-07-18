@@ -64,6 +64,9 @@
 		36CF2F662A643C6900D8F8E1 /* BattleHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F652A643C6900D8F8E1 /* BattleHistoryViewController.swift */; };
 		36CF2F682A643C8900D8F8E1 /* BattleHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F672A643C8900D8F8E1 /* BattleHistoryView.swift */; };
 		36CF2F6A2A643CFB00D8F8E1 /* BattleNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F692A643CFB00D8F8E1 /* BattleNavigationBar.swift */; };
+		7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */; };
+		7E25F6502A6330EB003E82F6 /* WishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */; };
+		7E25F6542A633ACA003E82F6 /* WishCouponCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F6532A633ACA003E82F6 /* WishCouponCountView.swift */; };
 		36CF2F6C2A6579B600D8F8E1 /* BattleResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F6B2A6579B600D8F8E1 /* BattleResultViewController.swift */; };
 		36CF2F6E2A6579CA00D8F8E1 /* BattleResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F6D2A6579CA00D8F8E1 /* BattleResultView.swift */; };
 		36CF2F702A657B4D00D8F8E1 /* BattleStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F6F2A657B4D00D8F8E1 /* BattleStatusView.swift */; };
@@ -78,6 +81,13 @@
 		7E37BAE52A6271B700A3CF64 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE42A6271B700A3CF64 /* HistoryDetailViewController.swift */; };
 		7E37BAE72A6271DC00A3CF64 /* HistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE62A6271DC00A3CF64 /* HistoryDetailView.swift */; };
 		7E37BAE92A6284EE00A3CF64 /* HistoryDetailResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE82A6284EE00A3CF64 /* HistoryDetailResultView.swift */; };
+		7E64995A2A6503B100B2F86C /* WishCouponCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6499592A6503B100B2F86C /* WishCouponCollectionViewCell.swift */; };
+		7E64995D2A650C4800B2F86C /* CHTCollectionViewWaterfallLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 7E64995C2A650C4800B2F86C /* CHTCollectionViewWaterfallLayout */; };
+		7E64995F2A650C4800B2F86C /* CHTCollectionViewWaterfallLayoutObjC in Frameworks */ = {isa = PBXBuildFile; productRef = 7E64995E2A650C4800B2F86C /* CHTCollectionViewWaterfallLayoutObjC */; };
+		7E6499612A65178D00B2F86C /* WishCouponYourCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6499602A65178D00B2F86C /* WishCouponYourCollectionViewCell.swift */; };
+		7E6499632A652A5400B2F86C /* WishCouponCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6499622A652A5400B2F86C /* WishCouponCollectionView.swift */; };
+		7E6499652A652A6700B2F86C /* WishCouponYourCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6499642A652A6700B2F86C /* WishCouponYourCollectionView.swift */; };
+		7E6499672A65AD0500B2F86C /* WishCouponEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6499662A65AD0400B2F86C /* WishCouponEmptyView.swift */; };
 		7EE3B19F2A604FE900962F4C /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3B19E2A604FE900962F4C /* HistoryView.swift */; };
 		7EE3B1A12A60507F00962F4C /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3B1A02A60507F00962F4C /* HistoryViewController.swift */; };
 		7EE3B1A42A60602A00962F4C /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3B1A32A60602A00962F4C /* HistoryTableViewCell.swift */; };
@@ -190,10 +200,19 @@
 		36CF2F7D2A65B0B600D8F8E1 /* CategoryDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDescriptionView.swift; sourceTree = "<group>"; };
 		36CF2F812A65BC3500D8F8E1 /* BattleCategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleCategoryType.swift; sourceTree = "<group>"; };
 		36CF2F832A65C77C00D8F8E1 /* BattleCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleCategoryViewController.swift; sourceTree = "<group>"; };
+		7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponViewController.swift; sourceTree = "<group>"; };
+		7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponView.swift; sourceTree = "<group>"; };
+		7E25F6512A6339E8003E82F6 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		7E25F6532A633ACA003E82F6 /* WishCouponCountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponCountView.swift; sourceTree = "<group>"; };
 		7E37BAE22A618DE900A3CF64 /* HistoryEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryEmptyView.swift; sourceTree = "<group>"; };
 		7E37BAE42A6271B700A3CF64 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
 		7E37BAE62A6271DC00A3CF64 /* HistoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailView.swift; sourceTree = "<group>"; };
 		7E37BAE82A6284EE00A3CF64 /* HistoryDetailResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailResultView.swift; sourceTree = "<group>"; };
+		7E6499592A6503B100B2F86C /* WishCouponCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponCollectionViewCell.swift; sourceTree = "<group>"; };
+		7E6499602A65178D00B2F86C /* WishCouponYourCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponYourCollectionViewCell.swift; sourceTree = "<group>"; };
+		7E6499622A652A5400B2F86C /* WishCouponCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponCollectionView.swift; sourceTree = "<group>"; };
+		7E6499642A652A6700B2F86C /* WishCouponYourCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponYourCollectionView.swift; sourceTree = "<group>"; };
+		7E6499662A65AD0400B2F86C /* WishCouponEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponEmptyView.swift; sourceTree = "<group>"; };
 		7EE3B19E2A604FE900962F4C /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		7EE3B1A02A60507F00962F4C /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		7EE3B1A32A60602A00962F4C /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -249,9 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				36012F622A55D0F4006B8A39 /* Sentry in Frameworks */,
+				7E64995F2A650C4800B2F86C /* CHTCollectionViewWaterfallLayoutObjC in Frameworks */,
 				36012F5F2A55D0A0006B8A39 /* Kingfisher in Frameworks */,
 				36012F5C2A55D08E006B8A39 /* Alamofire in Frameworks */,
 				361FA3252A6012A600C3BBFD /* SDSKit in Frameworks */,
+				7E64995D2A650C4800B2F86C /* CHTCollectionViewWaterfallLayout in Frameworks */,
 				36012F562A55D06C006B8A39 /* SnapKit in Frameworks */,
 				36012F592A55D07D006B8A39 /* Then in Frameworks */,
 				36012F652A55D155006B8A39 /* KakaoSDK in Frameworks */,
@@ -326,6 +347,7 @@
 			children = (
 				36CF2F752A65B00700D8F8E1 /* BattleCategory */,
 				8D17B8862A659A740091D7AD /* MakeWishCoupon */,
+				7E25F6482A632E7B003E82F6 /* WishCoupon */,
 				8D2B2E712A61616400B75CDD /* Mypage */,
 				A555AD972A60782F0083CD20 /* ConnectionCommom */,
 				A5B4B58C2A604C2F000C7555 /* Login */,
@@ -576,6 +598,7 @@
 				8D2B2E812A61643E00B75CDD /* Config.xcconfig */,
 				7EE3B1A52A6138F900962F4C /* Config.xcconfig */,
 				A55150B92A6137ED00481F57 /* Config.xcconfig */,
+				7E25F6512A6339E8003E82F6 /* Config.xcconfig */,
 			);
 			name = "Recovered References";
 			sourceTree = "<group>";
@@ -614,6 +637,45 @@
 				36CF2F812A65BC3500D8F8E1 /* BattleCategoryType.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		7E25F6482A632E7B003E82F6 /* WishCoupon */ = {
+			isa = PBXGroup;
+			children = (
+				7E6499582A65039300B2F86C /* Cells */,
+				7E25F64C2A6330B1003E82F6 /* View */,
+				7E25F64B2A6330A2003E82F6 /* ViewController */,
+			);
+			path = WishCoupon;
+			sourceTree = "<group>";
+		};
+		7E25F64B2A6330A2003E82F6 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		7E25F64C2A6330B1003E82F6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */,
+				7E25F6532A633ACA003E82F6 /* WishCouponCountView.swift */,
+				7E6499622A652A5400B2F86C /* WishCouponCollectionView.swift */,
+				7E6499642A652A6700B2F86C /* WishCouponYourCollectionView.swift */,
+				7E6499662A65AD0400B2F86C /* WishCouponEmptyView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7E6499582A65039300B2F86C /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				7E6499592A6503B100B2F86C /* WishCouponCollectionViewCell.swift */,
+				7E6499602A65178D00B2F86C /* WishCouponYourCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		7EE3B19B2A604FAC00962F4C /* History */ = {
@@ -924,6 +986,8 @@
 				36012F612A55D0F4006B8A39 /* Sentry */,
 				36012F642A55D155006B8A39 /* KakaoSDK */,
 				361FA3242A6012A600C3BBFD /* SDSKit */,
+				7E64995C2A650C4800B2F86C /* CHTCollectionViewWaterfallLayout */,
+				7E64995E2A650C4800B2F86C /* CHTCollectionViewWaterfallLayoutObjC */,
 			);
 			productName = Uni;
 			productReference = 36012F0C2A55A9F4006B8A39 /* Uni.app */;
@@ -961,6 +1025,7 @@
 				36012F602A55D0F4006B8A39 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 				36012F632A55D155006B8A39 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				361FA3232A6012A600C3BBFD /* XCRemoteSwiftPackageReference "iOS-SDS-United" */,
+				7E64995B2A650C4800B2F86C /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */,
 			);
 			productRefGroup = 36012F0D2A55A9F4006B8A39 /* Products */;
 			projectDirPath = "";
@@ -990,6 +1055,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				361FA3302A601D2E00C3BBFD /* GetService.swift in Sources */,
+				7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */,
 				36CF2F7E2A65B0B600D8F8E1 /* CategoryDescriptionView.swift in Sources */,
 				36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */,
 				36CF2F722A657DD400D8F8E1 /* BattleChipView.swift in Sources */,
@@ -1016,6 +1082,7 @@
 				A555AD9B2A6079790083CD20 /* NicknameSettingViewController.swift in Sources */,
 				8D6CB1F62A6505E300FE46C2 /* LogoutViewController.swift in Sources */,
 				8D2B2E8C2A619C0D00B75CDD /* EditProfileViewController.swift in Sources */,
+				7E6499672A65AD0500B2F86C /* WishCouponEmptyView.swift in Sources */,
 				A58C70322A61D3AC00327CD3 /* EnterInvitationViewController.swift in Sources */,
 				A58C70302A61CE6300327CD3 /* EnterInvitationView.swift in Sources */,
 				361FA38A2A62D65800C3BBFD /* BattleDataModel.swift in Sources */,
@@ -1038,6 +1105,7 @@
 				8DAAB2B62A61CD9700E25CF4 /* DatePickerViewController.swift in Sources */,
 				361FA34C2A602ADD00C3BBFD /* MissionCategory.swift in Sources */,
 				36012F122A55A9F4006B8A39 /* SceneDelegate.swift in Sources */,
+				7E25F6502A6330EB003E82F6 /* WishCouponView.swift in Sources */,
 				A54CD6312A5C328500C434B7 /* OnboardingViewController.swift in Sources */,
 				8D2B2E822A61643E00B75CDD /* Config.xcconfig in Sources */,
 				36CF2F7B2A65B08B00D8F8E1 /* BattleCategoryView.swift in Sources */,
@@ -1047,6 +1115,7 @@
 				36012F4D2A55CEF4006B8A39 /* UIButton+.swift in Sources */,
 				A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */,
 				361FA3282A60193B00C3BBFD /* HomeRepository.swift in Sources */,
+				7E6499652A652A6700B2F86C /* WishCouponYourCollectionView.swift in Sources */,
 				7E37BAE32A618DE900A3CF64 /* HistoryEmptyView.swift in Sources */,
 				361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */,
 				36012F492A55CE5D006B8A39 /* NSObject+.swift in Sources */,
@@ -1082,9 +1151,12 @@
 				A55150BA2A6137ED00481F57 /* Config.xcconfig in Sources */,
 				8D17B88C2A659D0C0091D7AD /* MakeWishView.swift in Sources */,
 				8D2B2E802A6163E900B75CDD /* SettingViewController.swift in Sources */,
+				7E64995A2A6503B100B2F86C /* WishCouponCollectionViewCell.swift in Sources */,
 				361FA3712A6268DD00C3BBFD /* HomeBattleView.swift in Sources */,
+				7E25F6542A633ACA003E82F6 /* WishCouponCountView.swift in Sources */,
 				36012F4B2A55CE87006B8A39 /* String+.swift in Sources */,
 				36CF2F742A6583D700D8F8E1 /* BattleStatus.swift in Sources */,
+				7E6499612A65178D00B2F86C /* WishCouponYourCollectionViewCell.swift in Sources */,
 				A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */,
 				A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */,
 				36012F452A55CDAA006B8A39 /* CGPoint+.swift in Sources */,
@@ -1097,6 +1169,7 @@
 				361FA34E2A602B5400C3BBFD /* MyRoundMission.swift in Sources */,
 				36CF2F702A657B4D00D8F8E1 /* BattleStatusView.swift in Sources */,
 				361FA3732A6268DD00C3BBFD /* ScoreInfoView.swift in Sources */,
+				7E6499632A652A5400B2F86C /* WishCouponCollectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1376,6 +1449,14 @@
 				minimumVersion = 1.0.0;
 			};
 		};
+		7E64995B2A650C4800B2F86C /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/chiahsien/CHTCollectionViewWaterfallLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.10;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1413,6 +1494,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 361FA3232A6012A600C3BBFD /* XCRemoteSwiftPackageReference "iOS-SDS-United" */;
 			productName = SDSKit;
+		};
+		7E64995C2A650C4800B2F86C /* CHTCollectionViewWaterfallLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E64995B2A650C4800B2F86C /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */;
+			productName = CHTCollectionViewWaterfallLayout;
+		};
+		7E64995E2A650C4800B2F86C /* CHTCollectionViewWaterfallLayoutObjC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7E64995B2A650C4800B2F86C /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */;
+			productName = CHTCollectionViewWaterfallLayoutObjC;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
