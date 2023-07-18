@@ -64,18 +64,22 @@
 		36CF2F662A643C6900D8F8E1 /* BattleHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F652A643C6900D8F8E1 /* BattleHistoryViewController.swift */; };
 		36CF2F682A643C8900D8F8E1 /* BattleHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F672A643C8900D8F8E1 /* BattleHistoryView.swift */; };
 		36CF2F6A2A643CFB00D8F8E1 /* BattleNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F692A643CFB00D8F8E1 /* BattleNavigationBar.swift */; };
-		7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */; };
-		7E25F6502A6330EB003E82F6 /* WishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */; };
-		7E25F6542A633ACA003E82F6 /* WishCouponCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F6532A633ACA003E82F6 /* WishCouponCountView.swift */; };
 		36CF2F6C2A6579B600D8F8E1 /* BattleResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F6B2A6579B600D8F8E1 /* BattleResultViewController.swift */; };
 		36CF2F6E2A6579CA00D8F8E1 /* BattleResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F6D2A6579CA00D8F8E1 /* BattleResultView.swift */; };
 		36CF2F702A657B4D00D8F8E1 /* BattleStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F6F2A657B4D00D8F8E1 /* BattleStatusView.swift */; };
 		36CF2F722A657DD400D8F8E1 /* BattleChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F712A657DD400D8F8E1 /* BattleChipView.swift */; };
 		36CF2F742A6583D700D8F8E1 /* BattleStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F732A6583D700D8F8E1 /* BattleStatus.swift */; };
+		7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */; };
+		7E25F6502A6330EB003E82F6 /* WishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */; };
+		7E25F6542A633ACA003E82F6 /* WishCouponCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F6532A633ACA003E82F6 /* WishCouponCountView.swift */; };
 		7E37BAE32A618DE900A3CF64 /* HistoryEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE22A618DE900A3CF64 /* HistoryEmptyView.swift */; };
 		7E37BAE52A6271B700A3CF64 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE42A6271B700A3CF64 /* HistoryDetailViewController.swift */; };
 		7E37BAE72A6271DC00A3CF64 /* HistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE62A6271DC00A3CF64 /* HistoryDetailView.swift */; };
 		7E37BAE92A6284EE00A3CF64 /* HistoryDetailResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE82A6284EE00A3CF64 /* HistoryDetailResultView.swift */; };
+		7E5C9D892A66E1B700488DBD /* HistoryDetailResultMissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5C9D882A66E1B700488DBD /* HistoryDetailResultMissionView.swift */; };
+		7E5C9D8C2A66E74A00488DBD /* HistoryStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5C9D8B2A66E74A00488DBD /* HistoryStatusView.swift */; };
+		7E5C9D8E2A66E82400488DBD /* HistoryStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5C9D8D2A66E82400488DBD /* HistoryStatus.swift */; };
+		7E5C9D922A66E83D00488DBD /* HistoryChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5C9D912A66E83D00488DBD /* HistoryChipView.swift */; };
 		7E64995A2A6503B100B2F86C /* WishCouponCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6499592A6503B100B2F86C /* WishCouponCollectionViewCell.swift */; };
 		7E64995D2A650C4800B2F86C /* CHTCollectionViewWaterfallLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 7E64995C2A650C4800B2F86C /* CHTCollectionViewWaterfallLayout */; };
 		7E64995F2A650C4800B2F86C /* CHTCollectionViewWaterfallLayoutObjC in Frameworks */ = {isa = PBXBuildFile; productRef = 7E64995E2A650C4800B2F86C /* CHTCollectionViewWaterfallLayoutObjC */; };
@@ -198,6 +202,10 @@
 		7E37BAE42A6271B700A3CF64 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
 		7E37BAE62A6271DC00A3CF64 /* HistoryDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailView.swift; sourceTree = "<group>"; };
 		7E37BAE82A6284EE00A3CF64 /* HistoryDetailResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailResultView.swift; sourceTree = "<group>"; };
+		7E5C9D882A66E1B700488DBD /* HistoryDetailResultMissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailResultMissionView.swift; sourceTree = "<group>"; };
+		7E5C9D8B2A66E74A00488DBD /* HistoryStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStatusView.swift; sourceTree = "<group>"; };
+		7E5C9D8D2A66E82400488DBD /* HistoryStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryStatus.swift; sourceTree = "<group>"; };
+		7E5C9D912A66E83D00488DBD /* HistoryChipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryChipView.swift; sourceTree = "<group>"; };
 		7E6499592A6503B100B2F86C /* WishCouponCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponCollectionViewCell.swift; sourceTree = "<group>"; };
 		7E6499602A65178D00B2F86C /* WishCouponYourCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponYourCollectionViewCell.swift; sourceTree = "<group>"; };
 		7E6499622A652A5400B2F86C /* WishCouponCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponCollectionView.swift; sourceTree = "<group>"; };
@@ -317,7 +325,6 @@
 				36012F182A55A9F6006B8A39 /* Assets.xcassets */,
 				36012F1A2A55A9F6006B8A39 /* LaunchScreen.storyboard */,
 				36012F1D2A55A9F6006B8A39 /* Info.plist */,
-				A53C62EF2A652F2000AE3B45 /* New Group */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -622,6 +629,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		7E5C9D8A2A66E6EC00488DBD /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				7E5C9D8B2A66E74A00488DBD /* HistoryStatusView.swift */,
+				7E5C9D8D2A66E82400488DBD /* HistoryStatus.swift */,
+				7E5C9D912A66E83D00488DBD /* HistoryChipView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		7E6499582A65039300B2F86C /* Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -634,6 +651,7 @@
 		7EE3B19B2A604FAC00962F4C /* History */ = {
 			isa = PBXGroup;
 			children = (
+				7E5C9D8A2A66E6EC00488DBD /* Components */,
 				7EE3B1A22A605FF700962F4C /* Cells */,
 				7EE3B19D2A604FC700962F4C /* ViewController */,
 				7EE3B19C2A604FBF00962F4C /* View */,
@@ -648,6 +666,7 @@
 				7E37BAE22A618DE900A3CF64 /* HistoryEmptyView.swift */,
 				7E37BAE62A6271DC00A3CF64 /* HistoryDetailView.swift */,
 				7E37BAE82A6284EE00A3CF64 /* HistoryDetailResultView.swift */,
+				7E5C9D882A66E1B700488DBD /* HistoryDetailResultMissionView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -744,13 +763,6 @@
 				8D6CB1FD2A6509C200FE46C2 /* DisconnectViewController.swift */,
 			);
 			path = ViewController;
-			sourceTree = "<group>";
-		};
-		A53C62EF2A652F2000AE3B45 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		A53C62F02A65320F00AE3B45 /* SocialLogin */ = {
@@ -1007,11 +1019,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E5C9D892A66E1B700488DBD /* HistoryDetailResultMissionView.swift in Sources */,
 				361FA3302A601D2E00C3BBFD /* GetService.swift in Sources */,
 				7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */,
 				36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */,
 				36CF2F722A657DD400D8F8E1 /* BattleChipView.swift in Sources */,
 				361FA3842A628A2100C3BBFD /* BattleWishCollectionViewCell.swift in Sources */,
+				7E5C9D8E2A66E82400488DBD /* HistoryStatus.swift in Sources */,
 				8D2B2E842A616CDC00B75CDD /* AccountViewController.swift in Sources */,
 				361FA3442A6029E400C3BBFD /* WishCoupon.swift in Sources */,
 				361FA36F2A6268DD00C3BBFD /* HomeViewController.swift in Sources */,
@@ -1061,6 +1075,7 @@
 				8D2B2E822A61643E00B75CDD /* Config.xcconfig in Sources */,
 				8D17B88A2A659CF00091D7AD /* WriteWishView.swift in Sources */,
 				8D2B2E762A6161A900B75CDD /* SettingTableViewCell.swift in Sources */,
+				7E5C9D8C2A66E74A00488DBD /* HistoryStatusView.swift in Sources */,
 				8D6CB1F42A6501B400FE46C2 /* LogoutView.swift in Sources */,
 				36012F4D2A55CEF4006B8A39 /* UIButton+.swift in Sources */,
 				A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */,
@@ -1112,6 +1127,7 @@
 				361FA37F2A62793B00C3BBFD /* SectionView.swift in Sources */,
 				8DAAB2B82A61CDB700E25CF4 /* DatePickerView.swift in Sources */,
 				361FA32E2A601D1B00C3BBFD /* NetworkResult.swift in Sources */,
+				7E5C9D922A66E83D00488DBD /* HistoryChipView.swift in Sources */,
 				36CF2F6A2A643CFB00D8F8E1 /* BattleNavigationBar.swift in Sources */,
 				361FA37D2A6277C300C3BBFD /* BattleView.swift in Sources */,
 				361FA34E2A602B5400C3BBFD /* MyRoundMission.swift in Sources */,

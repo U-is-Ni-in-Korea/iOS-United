@@ -49,9 +49,11 @@ final class HistoryTableViewCell: UITableViewCell {
         $0.font = SDSFont.body2.font
     }
     
-    private let nextImageView = UIImageView().then {
-        $0.image = UIImage(named: "icChevron28")
-    }
+    private let nextImageView = UIImageView(image: SDSIcon.icChevron.resize(targetSize: .init(width: 28, height: 28)).withTintColor(.gray200))
+//        $0.clipsToBounds = true
+//        $0.frame = CGRect(x: 0, y: 0, width: 28, height: 28)
+//        $0.resize(to: CGSize(width: 28, height: 28))
+    
     
     // MARK: - Life Cycle
     
@@ -120,6 +122,7 @@ final class HistoryTableViewCell: UITableViewCell {
         nextImageView.snp.makeConstraints {
             $0.centerY.equalTo(gameImageView)
             $0.trailing.equalToSuperview().inset(12)
+            $0.width.height.equalTo(28)
         }
     }
     

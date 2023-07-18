@@ -38,7 +38,6 @@ class HistoryDetailViewController: BaseViewController, HistoryDetailViewDelegate
  
     
     private func setStyle() {
-        
     }
     
     override func setLayout() {

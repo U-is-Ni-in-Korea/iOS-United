@@ -17,7 +17,6 @@ final class HistoryEmptyView: UIView {
     
     private let gameImageView = UIImageView().then {
         $0.image = SDSIcon.icSad.withTintColor(.lightBlue500)
-//        $0.tintColor = .lightBlue500
         $0.layer.cornerRadius = 10
     }
     
