@@ -64,14 +64,14 @@
 		36CF2F662A643C6900D8F8E1 /* BattleHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F652A643C6900D8F8E1 /* BattleHistoryViewController.swift */; };
 		36CF2F682A643C8900D8F8E1 /* BattleHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F672A643C8900D8F8E1 /* BattleHistoryView.swift */; };
 		36CF2F6A2A643CFB00D8F8E1 /* BattleNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F692A643CFB00D8F8E1 /* BattleNavigationBar.swift */; };
-		7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */; };
-		7E25F6502A6330EB003E82F6 /* WishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */; };
-		7E25F6542A633ACA003E82F6 /* WishCouponCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F6532A633ACA003E82F6 /* WishCouponCountView.swift */; };
 		36CF2F6C2A6579B600D8F8E1 /* BattleResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F6B2A6579B600D8F8E1 /* BattleResultViewController.swift */; };
 		36CF2F6E2A6579CA00D8F8E1 /* BattleResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F6D2A6579CA00D8F8E1 /* BattleResultView.swift */; };
 		36CF2F702A657B4D00D8F8E1 /* BattleStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F6F2A657B4D00D8F8E1 /* BattleStatusView.swift */; };
 		36CF2F722A657DD400D8F8E1 /* BattleChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F712A657DD400D8F8E1 /* BattleChipView.swift */; };
 		36CF2F742A6583D700D8F8E1 /* BattleStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F732A6583D700D8F8E1 /* BattleStatus.swift */; };
+		7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */; };
+		7E25F6502A6330EB003E82F6 /* WishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */; };
+		7E25F6542A633ACA003E82F6 /* WishCouponCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F6532A633ACA003E82F6 /* WishCouponCountView.swift */; };
 		7E37BAE32A618DE900A3CF64 /* HistoryEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE22A618DE900A3CF64 /* HistoryEmptyView.swift */; };
 		7E37BAE52A6271B700A3CF64 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE42A6271B700A3CF64 /* HistoryDetailViewController.swift */; };
 		7E37BAE72A6271DC00A3CF64 /* HistoryDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E37BAE62A6271DC00A3CF64 /* HistoryDetailView.swift */; };
@@ -113,6 +113,7 @@
 		8DAAB2B82A61CDB700E25CF4 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAB2B72A61CDB700E25CF4 /* DatePickerView.swift */; };
 		A53C62F22A65322C00AE3B45 /* KakaoAuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F12A65322C00AE3B45 /* KakaoAuthViewModel.swift */; };
 		A53C62F62A65719600AE3B45 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */; };
+		A53C62F92A6682A600AE3B45 /* KakaoLoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */; };
 		A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */; };
 		A54CD6312A5C328500C434B7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */; };
 		A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6332A5C347100C434B7 /* OnboardingCell.swift */; };
@@ -233,6 +234,7 @@
 		8DAAB2B72A61CDB700E25CF4 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		A53C62F12A65322C00AE3B45 /* KakaoAuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoAuthViewModel.swift; sourceTree = "<group>"; };
 		A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
+		A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginDataModel.swift; sourceTree = "<group>"; };
 		A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		A54CD6332A5C347100C434B7 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 		36012F3C2A55B61E006B8A39 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				A53C62F72A66829200AE3B45 /* Login */,
 				361FA3882A62D64F00C3BBFD /* Battle */,
 				36012F432A55B672006B8A39 /* Home */,
 				A58C70332A627CA900327CD3 /* Onboarding */,
@@ -769,6 +772,14 @@
 			path = Shared;
 			sourceTree = "<group>";
 		};
+		A53C62F72A66829200AE3B45 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		A54CD62B2A5C322600C434B7 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -1088,6 +1099,7 @@
 				361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */,
 				36CF2F6E2A6579CA00D8F8E1 /* BattleResultView.swift in Sources */,
 				8D2B2E7C2A61638000B75CDD /* SettingView.swift in Sources */,
+				A53C62F92A6682A600AE3B45 /* KakaoLoginDataModel.swift in Sources */,
 				361FA3322A601E7900C3BBFD /* PostService.swift in Sources */,
 				A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */,
 				8D2B2E782A6161D500B75CDD /* SettingTitle.swift in Sources */,
