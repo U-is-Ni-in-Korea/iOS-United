@@ -137,18 +137,25 @@ extension WriteWishView: UITextViewDelegate {
         style.lineSpacing = 5
         textView.attributedText = NSAttributedString(string: textView.text, attributes: [NSAttributedString.Key.paragraphStyle: style])
         
-        if writeWishTextView.text.count > 54 {
+        if writeWishTextView.text.count > 60 {
             writeWishTextView.deleteBackward()
-        } else if writeWishTextView.text.count == 54 {
+            writeWishTextView.layer.borderWidth = 1
+            writeWishTextView.layer.borderColor = UIColor.red500.cgColor
+        } else if 54 < writeWishTextView.text.count  {
             wishLetterCountLabel.textColor = .red500
+            writeWishTextView.layer.borderWidth = 1
+            writeWishTextView.layer.borderColor = UIColor.red500.cgColor
         }
         else {
             writeWishTextView.textColor = .gray600
             wishLetterCountLabel.textColor = .gray400
+            writeWishTextView.layer.borderWidth = 0
 
         }
+        
         wishLetterCountLabel.text = "\(writeWishTextView.text.count)/54"
-        if writeWishTextView.text.isEmpty {
+        
+        if writeWishTextView.text.isEmpty || writeWishTextView.text.count > 54 {
             delegate?.disableTextView()
         } else if writeWishTextView.text != writeWishPlaceholder {
             delegate?.enableTextView()
@@ -156,6 +163,8 @@ extension WriteWishView: UITextViewDelegate {
     }
     
     public func textViewDidEndEditing(_ textView: UITextView) {
+        writeWishTextView.layer.borderWidth = 0
+        
         if writeWishTextView.text.isEmpty {
             writeWishTextView.text = writeWishPlaceholder
             writeWishTextView.textColor = .gray300
