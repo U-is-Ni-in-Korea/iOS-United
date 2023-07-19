@@ -60,6 +60,7 @@
 		361FA3822A62861C00C3BBFD /* BattleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3812A62861C00C3BBFD /* BattleCollectionViewCell.swift */; };
 		361FA3842A628A2100C3BBFD /* BattleWishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3832A628A2100C3BBFD /* BattleWishCollectionViewCell.swift */; };
 		361FA38A2A62D65800C3BBFD /* BattleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3892A62D65800C3BBFD /* BattleDataModel.swift */; };
+		3698B2142A683C35006314FE /* MakeBattleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B2132A683C35006314FE /* MakeBattleDataModel.swift */; };
 		36CF2F642A63F31100D8F8E1 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 36CF2F622A63F2FF00D8F8E1 /* Config.xcconfig */; };
 		36CF2F662A643C6900D8F8E1 /* BattleHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F652A643C6900D8F8E1 /* BattleHistoryViewController.swift */; };
 		36CF2F682A643C8900D8F8E1 /* BattleHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F672A643C8900D8F8E1 /* BattleHistoryView.swift */; };
@@ -69,17 +70,11 @@
 		36CF2F702A657B4D00D8F8E1 /* BattleStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F6F2A657B4D00D8F8E1 /* BattleStatusView.swift */; };
 		36CF2F722A657DD400D8F8E1 /* BattleChipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F712A657DD400D8F8E1 /* BattleChipView.swift */; };
 		36CF2F742A6583D700D8F8E1 /* BattleStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F732A6583D700D8F8E1 /* BattleStatus.swift */; };
-		7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */; };
-		7E25F6502A6330EB003E82F6 /* WishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */; };
-		7E25F6542A633ACA003E82F6 /* WishCouponCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F6532A633ACA003E82F6 /* WishCouponCountView.swift */; };
 		36CF2F792A65B06000D8F8E1 /* SelectBattleCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F782A65B06000D8F8E1 /* SelectBattleCategoryViewController.swift */; };
 		36CF2F7B2A65B08B00D8F8E1 /* BattleCategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F7A2A65B08B00D8F8E1 /* BattleCategoryView.swift */; };
 		36CF2F7E2A65B0B600D8F8E1 /* CategoryDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F7D2A65B0B600D8F8E1 /* CategoryDescriptionView.swift */; };
 		36CF2F822A65BC3500D8F8E1 /* BattleCategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F812A65BC3500D8F8E1 /* BattleCategoryType.swift */; };
 		36CF2F842A65C77C00D8F8E1 /* BattleCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F832A65C77C00D8F8E1 /* BattleCategoryViewController.swift */; };
-		7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */; };
-		7E25F6502A6330EB003E82F6 /* WishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */; };
-		7E25F6542A633ACA003E82F6 /* WishCouponCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F6532A633ACA003E82F6 /* WishCouponCountView.swift */; };
 		36CF2F892A67144F00D8F8E1 /* BattleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F882A67144F00D8F8E1 /* BattleRepository.swift */; };
 		7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */; };
 		7E25F6502A6330EB003E82F6 /* WishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */; };
@@ -199,6 +194,7 @@
 		361FA3812A62861C00C3BBFD /* BattleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleCollectionViewCell.swift; sourceTree = "<group>"; };
 		361FA3832A628A2100C3BBFD /* BattleWishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleWishCollectionViewCell.swift; sourceTree = "<group>"; };
 		361FA3892A62D65800C3BBFD /* BattleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleDataModel.swift; sourceTree = "<group>"; };
+		3698B2132A683C35006314FE /* MakeBattleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeBattleDataModel.swift; sourceTree = "<group>"; };
 		36CF2F622A63F2FF00D8F8E1 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		36CF2F652A643C6900D8F8E1 /* BattleHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryViewController.swift; sourceTree = "<group>"; };
 		36CF2F672A643C8900D8F8E1 /* BattleHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryView.swift; sourceTree = "<group>"; };
@@ -394,7 +390,6 @@
 			isa = PBXGroup;
 			children = (
 				36CF2F872A67144500D8F8E1 /* BattleRepository */,
-				A53C62F02A65320F00AE3B45 /* SocialLogin */,
 				361FA32C2A601C6500C3BBFD /* Base */,
 				361FA3262A60192B00C3BBFD /* HomeRepository */,
 				36012F392A55B5FD006B8A39 /* AuthRepository */,
@@ -610,6 +605,7 @@
 			isa = PBXGroup;
 			children = (
 				361FA3892A62D65800C3BBFD /* BattleDataModel.swift */,
+				3698B2132A683C35006314FE /* MakeBattleDataModel.swift */,
 			);
 			path = Battle;
 			sourceTree = "<group>";
@@ -1111,6 +1107,7 @@
 				36CF2F7E2A65B0B600D8F8E1 /* CategoryDescriptionView.swift in Sources */,
 				36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */,
 				36CF2F722A657DD400D8F8E1 /* BattleChipView.swift in Sources */,
+				3698B2142A683C35006314FE /* MakeBattleDataModel.swift in Sources */,
 				361FA3842A628A2100C3BBFD /* BattleWishCollectionViewCell.swift in Sources */,
 				8D2B2E842A616CDC00B75CDD /* AccountViewController.swift in Sources */,
 				361FA3442A6029E400C3BBFD /* WishCoupon.swift in Sources */,

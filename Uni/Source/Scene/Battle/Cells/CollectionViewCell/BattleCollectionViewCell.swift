@@ -6,15 +6,26 @@ import Then
 import Kingfisher
 
 class BattleCollectionViewCell: UICollectionViewCell {
+    var buttonTapCompletion: (() -> Void)?
     
-    override var isSelected: Bool {
-        didSet {
-            if isSelected {
-                self.contentView.layer.borderColor = UIColor.lightBlue500.cgColor
-                self.contentView.layer.borderWidth = 1
-            } else {
-                self.contentView.layer.borderWidth = 0
-            }
+//    override var isSelected: Bool {
+//        didSet {
+//            if isSelected {
+//                self.contentView.layer.borderColor = UIColor.lightBlue500.cgColor
+//                self.contentView.layer.borderWidth = 1
+//            } else {
+//                self.contentView.layer.borderWidth = 0
+//            }
+//        }
+//    }
+    
+    func update(_ status:Bool?){
+        if let status = status,
+            status {
+            self.contentView.layer.borderColor = UIColor.lightBlue500.cgColor
+            self.contentView.layer.borderWidth = 1
+        } else {
+            self.contentView.layer.borderWidth = 0
         }
     }
     
@@ -59,6 +70,11 @@ class BattleCollectionViewCell: UICollectionViewCell {
         self.contentView.backgroundColor = .gray000
     }
     
+    @objc private func didArrowButtonTap() {
+        guard let completion = buttonTapCompletion else {return}
+        completion()
+    }
+    
     private func updateCell() {
         self.contentView.layer.borderColor = UIColor.lightBlue500.cgColor
         self.contentView.layer.borderWidth = 1
@@ -69,7 +85,10 @@ class BattleCollectionViewCell: UICollectionViewCell {
         $0.font = SDSFont.btn2.font
         $0.textColor = .gray600
     }
-    private let arrowButton = UIButton().then {
+    private lazy var arrowButton = UIButton().then {
+        $0.addTarget(self,
+                     action: #selector(didArrowButtonTap),
+                     for: .touchUpInside)
         $0.tintColor = .gray250
         $0.setImage(SDSIcon.icChevron.withTintColor(.gray250, renderingMode: .alwaysTemplate), for: .normal)
     }
