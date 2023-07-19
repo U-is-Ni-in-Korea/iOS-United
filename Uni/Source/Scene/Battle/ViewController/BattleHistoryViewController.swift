@@ -12,4 +12,5 @@ final class BattleHistoryViewController: BaseViewController {
     }
     
     private var battleHistoryView = BattleHistoryView()
+    var roundId: Int = 0
 }

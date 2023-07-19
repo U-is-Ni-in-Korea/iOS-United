@@ -31,6 +31,7 @@ class SettingViewController: BaseViewController, SettingViewDelegate {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(editProfileTapped(_:)))
         settingView.profileView.editProfileButton.addGestureRecognizer(tapGesture)
         settingView.isUserInteractionEnabled = true
+        
     }
     
     @objc func editProfileTapped(_ gesture: UITapGestureRecognizer) {

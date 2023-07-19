@@ -1,5 +1,5 @@
 import UIKit
-
+import Sentry
 
 extension String {
     func setAttributeString(textColor: UIColor, font: UIFont) -> AttributedString {
@@ -48,6 +48,24 @@ extension String {
         let pattern = "^[0-9a-zA-Z]*$"
         guard let isContain = self.range(of: pattern, options: .regularExpression) else { return false}
         return true
+    }
+    
+    func setRemoveImoji() -> String {
+        let emojiPattern = "[\\p{Emoji}]"
+        if let regex = try? NSRegularExpression(pattern: emojiPattern, options: []) {
+            let modifiedString = regex.stringByReplacingMatches(
+                in: self,
+                options: [],
+                range: NSRange(location: 0, length: self.utf16.count),
+                withTemplate: ""
+            )
+            
+            print(modifiedString)
+            return modifiedString
+        } else {
+            return ""
+        }
+        
     }
     
     func isLengthOver(lenght: Int) -> Bool {

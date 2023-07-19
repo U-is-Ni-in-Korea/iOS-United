@@ -38,6 +38,4 @@ final class MakeWishViewController: BaseViewController, WriteWishViewDelegate {
         makeWishView.makeWishButton.buttonState = .disabled
     }
     
-    
-    
 }

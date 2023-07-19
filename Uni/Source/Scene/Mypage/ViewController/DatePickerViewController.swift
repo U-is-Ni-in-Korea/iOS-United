@@ -15,7 +15,7 @@ class DatePickerViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        actions()
+        datePickerViewActions()
     }
     
     override func loadView() {
@@ -24,7 +24,7 @@ class DatePickerViewController: BaseViewController {
         self.view = datePickerView
     }
     
-    private func actions() {
+    private func datePickerViewActions() {
         datePickerView.baseButton.addTarget(self, action: #selector(baseButtonTapped), for: .touchUpInside)
         datePickerView.cancelButton.addTarget(self, action: #selector(baseButtonTapped), for: .touchUpInside)
         datePickerView.doneButton.addTarget(self, action: #selector(doneButtonTapped), for: .touchUpInside)
