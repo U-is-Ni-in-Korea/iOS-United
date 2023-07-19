@@ -9,15 +9,23 @@ import UIKit
 import Then
 import SDSKit
 
+protocol HistoryDetailViewDelegate: AnyObject {
+    func backButtonTapped()
+}
+
 final class HistoryDetailView: UIView {
     
     // MARK: - Property
     
+    weak var delegate: HistoryDetailViewDelegate?
+    
     // MARK: - UI Property
     
-    let navigationBar = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "승부 히스토리") // 폰트 변경
+    let navigationBar = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "승부 히스토리")
     
-    private var  historyDetailResultView = HistoryDetailResultView()
+    private var historyDetailResultView = HistoryDetailResultView()
+    
+    private var historyDetailResultMissionView = HistoryDetailResultMissionView()
     
     // MARK: - Life Cycle
     
@@ -37,11 +45,10 @@ final class HistoryDetailView: UIView {
     
     private func setStyle() {
         self.backgroundColor = .gray100
-//        navigationBar.backButton.frame = CGRect(x: 0, y: 0, width: 24, height: 24) // 네비바 백버튼 크기 조정
     }
     
     private func setLayout() {
-        [navigationBar, historyDetailResultView]
+        [navigationBar, historyDetailResultView, historyDetailResultMissionView]
             .forEach { addSubview($0) }
         
         navigationBar.snp.makeConstraints {
@@ -55,11 +62,21 @@ final class HistoryDetailView: UIView {
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(133)
         }
+        
+        historyDetailResultMissionView.snp.makeConstraints {
+            $0.top.equalTo(historyDetailResultView.snp.bottom)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(176)
+        }
 
     }
     
     // MARK: - Action Helper
     
     // MARK: - Custom Method
+    
+    func backButtonTapped() {
+        delegate?.backButtonTapped()
+    }
     
 }
