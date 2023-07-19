@@ -130,6 +130,6 @@ final class HistoryTableViewCell: UITableViewCell {
     func configureCell(historyData: HistoryDataModel) { // 내용을 붙여주는 함수
         gameDateLabel.text = historyData.date ?? ""
         gameNameLabel.text = historyData.title ?? ""
-        gameResultLabel.text = HistoryStatus(rawValue: historyData.result ?? "")?.getStatus()
+        gameResultLabel.text = HistoryStatus(rawValue: historyData.result ?? "")?.getStatusT()
     }
 }

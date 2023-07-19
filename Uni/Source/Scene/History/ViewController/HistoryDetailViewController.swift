@@ -62,21 +62,45 @@ class HistoryDetailViewController: BaseViewController, HistoryDetailViewDelegate
     func dataBind(historyData: HistoryDataModel) {
         print(historyData, "데이터")
         historyDetailData = historyData
+
+        if let myState = historyData.myMission.result {
+            if myState == "WIN" {
+                historyDetailView.historyDetailResultMissionView.myHistoryResultView.bindChipText(title: historyDetailData?.myMission.time, subTitle: "미션 성공", status: .win)
+            } else if myState == "LOSE"{
+                historyDetailView.historyDetailResultMissionView.myHistoryResultView.bindChipText(subTitle: "미션 실패", status: .lose)
+            }
+            else {
+                historyDetailView.historyDetailResultMissionView.myHistoryResultView.bindChipText(subTitle: "무승부", status: .draw)
+            }
+        }
+        
+        if let partnerState = historyData.partnerMission.result {
+            if partnerState == "WIN" {
+                historyDetailView.historyDetailResultMissionView.yourHistoryResultView.bindChipText(title:  historyDetailData?.partnerMission.time, subTitle: "미션 성공", status: .win)
+            } else if partnerState == "LOSE"{
+                historyDetailView.historyDetailResultMissionView.yourHistoryResultView.bindChipText(subTitle: "미션 실패", status: .lose)
+            }
+            else {
+                historyDetailView.historyDetailResultMissionView.yourHistoryResultView.bindChipText(subTitle: "무승부", status: .draw)
+            }
+        }
         
         historyDetailView.historyDetailResultView.gameDateLabel.text = historyDetailData?.date ?? ""
         historyDetailView.historyDetailResultView.gameNameLabel.text = historyDetailData?.title ?? ""
         historyDetailView.historyDetailResultView.gameResultLabel.text = "\(historyDetailData?.winner ?? "")님이 이겼어요"
-        historyDetailView.historyDetailResultMissionView.myHistoryResultView.missionTitleLabel.text = historyData.myMission.content
-        historyDetailView.historyDetailResultMissionView.myHistoryResultView.chipView.titleLabel.text = historyData.myMission.time
-        historyDetailView.historyDetailResultMissionView.myHistoryResultView.chipView.subTitleLabel.text = HistoryStatus(rawValue: historyDetailData?.myMission.result ?? "")?.getStatus()
-        
-        historyDetailView.historyDetailResultMissionView.yourHistoryResultView.missionTitleLabel.text = historyData.partnerMission.content
-        historyDetailView.historyDetailResultMissionView.yourHistoryResultView.chipView.titleLabel.text = historyData.partnerMission.time
-        historyDetailView.historyDetailResultMissionView.yourHistoryResultView.chipView.subTitleLabel.text = HistoryStatus(rawValue: historyDetailData?.partnerMission.result ?? "")?.getStatus()
+        historyDetailView.historyDetailResultMissionView.myHistoryResultView.missionTitleLabel.text = historyDetailData?.myMission.content
+//        historyDetailView.historyDetailResultMissionView.myHistoryResultView.chipView.titleLabel.text = historyDetailData?.myMission.time
+//        historyDetailView.historyDetailResultMissionView.myHistoryResultView.chipView.subTitleLabel.text = HistoryStatus(rawValue: historyDetailData?.myMission.result ?? "")?.getStatus()
 //
-//        historyDetailView.historyDetailResultMissionView.bindMyMissionData(missionTitle: historyData.myMission.content ?? "", clearAt: historyData.myMission.time ?? "", status: HistoryStatus(rawValue: historyData.myMission.result ?? "") ?? <#default value#>)
-//
-//        historyDetailView.historyDetailResultMissionView.bindYourMissionData(missionTitle: historyData.partnerMission.content ?? "", clearAt: historyData.partnerMission.time ?? "", status: HistoryStatus(rawValue: historyData.partnerMission.result ?? "") ?? <#default value#>)
+        historyDetailView.historyDetailResultMissionView.yourHistoryResultView.missionTitleLabel.text = historyDetailData?.partnerMission.content
+//        historyDetailView.historyDetailResultMissionView.yourHistoryResultView.chipView.titleLabel.text = historyDetailData?.partnerMission.time
+//        historyDetailView.historyDetailResultMissionView.yourHistoryResultView.chipView.subTitleLabel.text = HistoryStatus(rawValue: historyDetailData?.partnerMission.result ?? "")?.getStatus()
+        //1. 미션 성공/실패 여부 확인
+        //2. 성공은 타이틀, 서브타이틀 둘다 있어야 하고
+        //2. 실패는 타이틀만 있으면 됨
+//        historyDetailView.historyDetailResultMissionView.yourHistoryResultView.bindChipText(title: historyDetailData?.partnerMission.time,
+//                                                                                            subTitle: HistoryStatus(rawValue: historyDetailData?.partnerMission.result ?? "")?.getStatus(),
+//                                                                                            status: state)
         
     }
     

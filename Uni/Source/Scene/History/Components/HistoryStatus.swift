@@ -28,4 +28,15 @@ enum HistoryStatus: String {
             return "미션 실패"
         }
     }
+    
+    func getStatusT() -> String {
+        switch self {
+        case .win:
+            return "승리"
+        case .draw:
+            return "무승부"
+        case .lose:
+            return "패배"
+        }
+    }
 }

@@ -79,15 +79,4 @@ final class HistoryDetailView: UIView {
         delegate?.backButtonTapped()
     }
     
-//    func dataBind(historyData: HistoryDataModel) {
-//        historyDetailResultView.gameDateLabel.text = historyData.date ?? ""
-//        historyDetailResultView.gameNameLabel.text = historyData.title ?? ""
-//        historyDetailResultView.gameResultLabel.text = "\(String(describing: historyData.winner))님이 이겼어요"
-//
-//        historyDetailResultMissionView.bindMyMissionData(missionTitle: historyData.myMission.content ?? "", clearAt: historyData.myMission.time ?? "", status: HistoryStatus(rawValue: historyData.myMission.result ?? "") ?? <#default value#>)
-//
-//        historyDetailResultMissionView.bindYourMissionData(missionTitle: historyData.partnerMission.content ?? "", clearAt: historyData.partnerMission.time ?? "", status: HistoryStatus(rawValue: historyData.partnerMission.result ?? "") ?? <#default value#>)
-//
-//    }
-    
 }
