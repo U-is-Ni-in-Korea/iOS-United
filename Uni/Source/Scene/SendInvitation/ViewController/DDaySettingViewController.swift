@@ -40,6 +40,10 @@ final class DDaySettingViewController: BaseViewController {
 
     // MARK: - Action Helper
     private func actions() {
+        dDaySettingView.navigationBarView.backButtonCompletionHandler = {
+            self.navigationController?.popViewController(animated: true)
+        }
+        
         let tapGesture = UITapGestureRecognizer(target: self,
                                                 action: #selector(nextButtonTapped))
         tapGesture.delegate = self
