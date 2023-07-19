@@ -13,6 +13,14 @@ class HistoryStatusView: UIView {
     
     // MARK: - Property
     
+    lazy var contentWidth: CGFloat = {
+        return (UIScreen.main.bounds.width - 49 ) / 2
+    }()
+    
+    lazy var contentHeight: CGFloat = {
+        return self.contentWidth / 163 * 104
+    }()
+    
     // MARK: - UI Property
     
     private let sectionTitleLabel = UILabel().then {
@@ -50,6 +58,7 @@ class HistoryStatusView: UIView {
     init() {
         super.init(frame: .zero)
         self.setLayout()
+        
     }
     
     // MARK: - Setting
@@ -59,19 +68,17 @@ class HistoryStatusView: UIView {
         
         sectionTitleLabel.snp.makeConstraints {
             $0.top.leading.equalToSuperview()
-//            $0.bottom.equalTo(backGroundContentView.snp.top).offset(-16)
         }
         
         backGroundContentView.snp.makeConstraints {
             $0.top.equalTo(sectionTitleLabel.snp.bottom).offset(16)
             $0.leading.trailing.bottom.equalToSuperview()
-//            $0.height.equalTo(104)
         }
         
         backGroundContentView.addSubviews([backGroundStackView])
         
         backGroundStackView.snp.makeConstraints {
-            $0.height.equalTo(104)
+            $0.height.equalTo(contentHeight)
             $0.edges.equalToSuperview().inset(20)
         }
         

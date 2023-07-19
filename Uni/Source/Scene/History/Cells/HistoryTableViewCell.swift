@@ -16,12 +16,12 @@ final class HistoryTableViewCell: UITableViewCell {
     static var identifier: String {
         return String(describing: self)
     }
-
+    
     
     // MARK: - UI Property
     
     private let gameDateLabel = UILabel().then {
-//        $0.text = "23.06.20"
+        //        $0.text = "23.06.20"
         $0.textColor = .gray400
         $0.font = SDSFont.body2.font
     }
@@ -38,22 +38,20 @@ final class HistoryTableViewCell: UITableViewCell {
     }
     
     private let gameNameLabel = UILabel().then {
-//        $0.text = "대답 유도하기"
+        //        $0.text = "대답 유도하기"
         $0.textColor = .gray600
         $0.font = SDSFont.body1.font
     }
     
     private let gameResultLabel = UILabel().then {
-//        $0.text = "패배"
+        //        $0.text = "패배"
         $0.textColor = .lightBlue500
         $0.font = SDSFont.body2.font
     }
     
-    private let nextImageView = UIImageView(image: SDSIcon.icChevron.resize(targetSize: .init(width: 28, height: 28)).withTintColor(.gray200))
-//        $0.clipsToBounds = true
-//        $0.frame = CGRect(x: 0, y: 0, width: 28, height: 28)
-//        $0.resize(to: CGSize(width: 28, height: 28))
-    
+    private let nextImageView = UIImageView().then {
+        $0.image = SDSIcon.icChevron.resize(targetSize: .init(width: 28, height: 28)).withTintColor(.gray200)
+    }
     
     // MARK: - Life Cycle
     
