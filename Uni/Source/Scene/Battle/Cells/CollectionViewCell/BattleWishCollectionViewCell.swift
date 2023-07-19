@@ -4,12 +4,14 @@ import SnapKit
 import Then
 
 class BattleWishCollectionViewCell: UICollectionViewCell {
+    var makeButtonTapCompletion: ((SDSButtonState) -> Void)?
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setLayout()
+        self.addButtonGesture()
     }
     
     
@@ -28,8 +30,25 @@ class BattleWishCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    func addButtonGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self,
+                                                action: #selector(createButtonTap))
+        tapGesture.delegate = self
+        self.creatButton.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func createButtonTap() {
+        guard let completion = makeButtonTapCompletion else {return}
+        completion(creatButton.buttonState)
+    }
+    
     let couponView = SDSCardWishCoupon()
     let creatButton = SDSButton(type: .fill, state: .disabled).then {
         $0.setButtonTitle(title: "한판 승부 만들기")
+    }
+}
+extension BattleWishCollectionViewCell: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 }
