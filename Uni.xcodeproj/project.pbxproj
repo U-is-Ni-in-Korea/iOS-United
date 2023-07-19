@@ -74,6 +74,8 @@
 		36CF2F7E2A65B0B600D8F8E1 /* CategoryDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F7D2A65B0B600D8F8E1 /* CategoryDescriptionView.swift */; };
 		36CF2F822A65BC3500D8F8E1 /* BattleCategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F812A65BC3500D8F8E1 /* BattleCategoryType.swift */; };
 		36CF2F842A65C77C00D8F8E1 /* BattleCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F832A65C77C00D8F8E1 /* BattleCategoryViewController.swift */; };
+		7E12E5FE2A67E66A00C656AB /* CompletedWishCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12E5FD2A67E66A00C656AB /* CompletedWishCouponViewController.swift */; };
+		7E12E6002A67E67F00C656AB /* CompletedWishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12E5FF2A67E67F00C656AB /* CompletedWishCouponView.swift */; };
 		7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */; };
 		7E25F6502A6330EB003E82F6 /* WishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */; };
 		7E25F6542A633ACA003E82F6 /* WishCouponCountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F6532A633ACA003E82F6 /* WishCouponCountView.swift */; };
@@ -214,6 +216,8 @@
 		36CF2F7D2A65B0B600D8F8E1 /* CategoryDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDescriptionView.swift; sourceTree = "<group>"; };
 		36CF2F812A65BC3500D8F8E1 /* BattleCategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleCategoryType.swift; sourceTree = "<group>"; };
 		36CF2F832A65C77C00D8F8E1 /* BattleCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleCategoryViewController.swift; sourceTree = "<group>"; };
+		7E12E5FD2A67E66A00C656AB /* CompletedWishCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedWishCouponViewController.swift; sourceTree = "<group>"; };
+		7E12E5FF2A67E67F00C656AB /* CompletedWishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedWishCouponView.swift; sourceTree = "<group>"; };
 		7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponViewController.swift; sourceTree = "<group>"; };
 		7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponView.swift; sourceTree = "<group>"; };
 		7E25F6512A6339E8003E82F6 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -774,6 +778,7 @@
 				8DAEBB0C2A66D718007B818A /* MyWishView.swift */,
 				8DAEBB142A66E92C007B818A /* YourWishView.swift */,
 				8D8DB0BD2A67CAC0003E1CA8 /* UseWishCouponView.swift */,
+				7E12E5FF2A67E67F00C656AB /* CompletedWishCouponView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -785,6 +790,7 @@
 				8DAEBB102A66E317007B818A /* MyWishViewController.swift */,
 				8DAEBB162A66F9BF007B818A /* YourWishViewController.swift */,
 				8D8DB0BF2A67CB9F003E1CA8 /* UseWishCouponViewController.swift */,
+				7E12E5FD2A67E66A00C656AB /* CompletedWishCouponViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -856,13 +862,6 @@
 				8DAEBB122A66E8C8007B818A /* YourWishCouponView.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		A53C62EF2A652F2000AE3B45 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		A53C62F42A65714400AE3B45 /* Shared */ = {
@@ -1190,6 +1189,7 @@
 				8D8DB0C02A67CB9F003E1CA8 /* UseWishCouponViewController.swift in Sources */,
 				7EE3B1A12A60507F00962F4C /* HistoryViewController.swift in Sources */,
 				8D8DB0BE2A67CAC0003E1CA8 /* UseWishCouponView.swift in Sources */,
+				7E12E5FE2A67E66A00C656AB /* CompletedWishCouponViewController.swift in Sources */,
 				8D2B2E8E2A619C2E00B75CDD /* EditProfileView.swift in Sources */,
 				8D2B2E862A616CFA00B75CDD /* AccountView.swift in Sources */,
 				8DAAB2B62A61CD9700E25CF4 /* DatePickerViewController.swift in Sources */,
@@ -1214,6 +1214,7 @@
 				8D2B2E7A2A61623300B75CDD /* SettingProfileView.swift in Sources */,
 				36012F4F2A55CF18006B8A39 /* UIStackView+.swift in Sources */,
 				361FA3702A6268DD00C3BBFD /* HomeBattleSelectView.swift in Sources */,
+				7E12E6002A67E67F00C656AB /* CompletedWishCouponView.swift in Sources */,
 				7EE3B1A62A6138F900962F4C /* Config.xcconfig in Sources */,
 				361FA32B2A601A4100C3BBFD /* Config.swift in Sources */,
 				7EE3B1A42A60602A00962F4C /* HistoryTableViewCell.swift in Sources */,
