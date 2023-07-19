@@ -17,7 +17,7 @@ final class CodeGeneratorView: UIView {
     let navigationBarView = SDSNavigationBar(hasBack: true, hasTitleItem: false)
     
     private let logoImageView = UIImageView().then {
-        $0.backgroundColor = .red
+        $0.image = UIImage(named: "symbol")
     }
     
     let nextButton = SDSButton(type: .fill, state: .enabled).then {
@@ -69,7 +69,8 @@ final class CodeGeneratorView: UIView {
         }
         
         logoImageView.snp.makeConstraints {
-            $0.height.width.equalTo(158)
+            $0.height.equalTo(140)
+            $0.width.equalTo(120)
             $0.top.equalTo(navigationBarView.snp.bottom).offset(128)
             $0.centerX.equalToSuperview()
         }
@@ -78,7 +79,7 @@ final class CodeGeneratorView: UIView {
         connectionCheckButton.snp.makeConstraints {
             $0.height.equalTo(48)
             $0.leading.trailing.equalToSuperview().inset(20)
-            $0.bottom.equalToSuperview().inset(16)
+            $0.bottom.equalTo(self.safeAreaLayoutGuide).offset(-16)
         }
         
         codeCodyButton.snp.makeConstraints {

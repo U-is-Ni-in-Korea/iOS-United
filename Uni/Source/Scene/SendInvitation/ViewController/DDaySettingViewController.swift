@@ -61,8 +61,8 @@ final class DDaySettingViewController: BaseViewController {
         dDayRepository.postDday(startDate: dateString) { success in
             if success {
                 self.view.removeIndicator()
-                let coupleConnectionMethodView = CoupleConnectionMethodViewController()
-                self.navigationController?.pushViewController(coupleConnectionMethodView, animated: true)
+                let codeGeneratorViewController = CodeGeneratorViewController()
+                self.navigationController?.pushViewController(codeGeneratorViewController, animated: true)
             }
             else {
                 self.view.removeIndicator()

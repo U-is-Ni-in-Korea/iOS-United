@@ -103,7 +103,8 @@ final class CoupleConnectionMethodView: UIView {
             $0.height.equalTo(1)
         }
         logoImageView.snp.makeConstraints {
-            $0.height.width.equalTo(158)
+            $0.width.equalTo(220)
+            $0.height.equalTo(208)
             $0.centerX.equalToSuperview()
             $0.top.equalTo(self.safeAreaLayoutGuide).offset(155)
         }
