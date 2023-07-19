@@ -16,7 +16,7 @@ final class NicknameSettingView: UIView {
     
     let navigationBarView = SDSNavigationBar(hasBack: true, hasTitleItem: false)
     
-    private let nextButton = SDSButton(type: .fill, state: .disabled).then {
+    let nextButton = SDSButton(type: .fill, state: .disabled).then {
         $0.setButtonTitle(title: "다음")
     }
     
@@ -34,13 +34,10 @@ final class NicknameSettingView: UIView {
         $0.font = SDSFont.body2.font
     }
     
-    private let nickNameTextField = SDSTextfield(placeholder: "닉네임",
+    let nickNameTextField = SDSTextfield(placeholder: "닉네임",
                                                  errorMessage: "글자수를 초과했어요",
-                                                 letterLimit: 10)
-    
-    private let logoImageView = UIImageView().then {
-        $0.backgroundColor = .red
-    }
+                                                 letterLimit: 15)
+
 
 
     override init(frame: CGRect) {
@@ -60,6 +57,8 @@ final class NicknameSettingView: UIView {
         nextButton.layer.applyDepth1Shadow()
         nextButton.isEnabled = false
         nickNameTextField.layer.borderColor = UIColor.gray300.cgColor
+        nickNameTextField.textfieldCountLabel.text = "0/10"
+        
     }
 
     private func setLayout() {
