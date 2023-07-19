@@ -14,7 +14,7 @@ final class HistoryView: UIView {
     
     // MARK: - Property
     
-    private var count = 0 {
+    var count = 0 {
         didSet {
             if count > 0 {
                 hasHistoryData(hasData: true)
@@ -51,7 +51,7 @@ final class HistoryView: UIView {
         setStyle()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-            self.count = 2
+            self.count = 5
         }) // 2초 뒤에 count가 2로 변하면서 앞의 didSet 작동하면서 hasHistoryData(hasData: true)함수 실행
     }
     
