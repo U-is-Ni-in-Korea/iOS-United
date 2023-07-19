@@ -130,6 +130,8 @@
 		8DAEBB172A66F9BF007B818A /* YourWishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEBB162A66F9BF007B818A /* YourWishViewController.swift */; };
 		A53C62F62A65719600AE3B45 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */; };
 		A53C62F92A6682A600AE3B45 /* KakaoLoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */; };
+		A53C62FE2A67DAC600AE3B45 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62FD2A67DAC600AE3B45 /* UserRepository.swift */; };
+		A53C63012A67DE6100AE3B45 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C63002A67DE6100AE3B45 /* UserDataModel.swift */; };
 		A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */; };
 		A54CD6312A5C328500C434B7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */; };
 		A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6332A5C347100C434B7 /* OnboardingCell.swift */; };
@@ -267,6 +269,8 @@
 		8DAEBB162A66F9BF007B818A /* YourWishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourWishViewController.swift; sourceTree = "<group>"; };
 		A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginDataModel.swift; sourceTree = "<group>"; };
+		A53C62FD2A67DAC600AE3B45 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
+		A53C63002A67DE6100AE3B45 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
 		A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		A54CD6332A5C347100C434B7 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
@@ -396,6 +400,7 @@
 		36012F282A55AE4A006B8A39 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				A53C62FC2A67DAB500AE3B45 /* UserRepository */,
 				361FA32C2A601C6500C3BBFD /* Base */,
 				361FA3262A60192B00C3BBFD /* HomeRepository */,
 				36012F392A55B5FD006B8A39 /* AuthRepository */,
@@ -457,6 +462,7 @@
 		36012F3C2A55B61E006B8A39 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				A53C62FF2A67DCDB00AE3B45 /* User */,
 				A53C62F72A66829200AE3B45 /* Login */,
 				361FA3882A62D64F00C3BBFD /* Battle */,
 				36012F432A55B672006B8A39 /* Home */,
@@ -875,6 +881,22 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		A53C62FC2A67DAB500AE3B45 /* UserRepository */ = {
+			isa = PBXGroup;
+			children = (
+				A53C62FD2A67DAC600AE3B45 /* UserRepository.swift */,
+			);
+			path = UserRepository;
+			sourceTree = "<group>";
+		};
+		A53C62FF2A67DCDB00AE3B45 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				A53C63002A67DE6100AE3B45 /* UserDataModel.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
 		A54CD62B2A5C322600C434B7 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
@@ -1114,6 +1136,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E5C9D892A66E1B700488DBD /* HistoryDetailResultMissionView.swift in Sources */,
+				A53C62FE2A67DAC600AE3B45 /* UserRepository.swift in Sources */,
 				361FA3302A601D2E00C3BBFD /* GetService.swift in Sources */,
 				7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */,
 				36CF2F7E2A65B0B600D8F8E1 /* CategoryDescriptionView.swift in Sources */,
@@ -1180,6 +1203,7 @@
 				8D2B2E762A6161A900B75CDD /* SettingTableViewCell.swift in Sources */,
 				7E5C9D8C2A66E74A00488DBD /* HistoryStatusView.swift in Sources */,
 				8D6CB1F42A6501B400FE46C2 /* LogoutView.swift in Sources */,
+				A53C63012A67DE6100AE3B45 /* UserDataModel.swift in Sources */,
 				36012F4D2A55CEF4006B8A39 /* UIButton+.swift in Sources */,
 				A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */,
 				361FA3282A60193B00C3BBFD /* HomeRepository.swift in Sources */,
