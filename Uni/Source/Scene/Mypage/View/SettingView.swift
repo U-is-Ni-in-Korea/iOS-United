@@ -35,6 +35,11 @@ class SettingView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    func bindData(userName: String) {
+        self.profileView.userNameLabel.text = userName
+        print("바인드성공")
+    }
+    
     func setStyle() {
         self.backgroundColor = .gray000
     }
