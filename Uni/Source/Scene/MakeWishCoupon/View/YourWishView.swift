@@ -38,7 +38,6 @@ class YourWishView: UIView {
     var isCouponUsedLabel = UILabel().then {
         $0.font = SDSFont.body1.font
         $0.textColor = .gray300
-        $0.text = "이미 사용한 소원권이에요"
     }
     
     override init(frame: CGRect) {
@@ -103,6 +102,12 @@ class YourWishView: UIView {
             $0.height.equalTo(24)
         }
 
+    }
+    
+    func transformViewToImage() -> UIImage {
+        let renderer = UIGraphicsImageRenderer(bounds: yourWishCouponView.bounds)
+        return renderer.image {rendererContext in yourWishCouponView.layer.render(in: rendererContext.cgContext)
+        }
     }
 
 }

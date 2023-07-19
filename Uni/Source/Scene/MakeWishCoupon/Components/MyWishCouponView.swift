@@ -12,7 +12,7 @@ import Then
 class MyWishCouponView: UIView {
     
     var myWishImageView = UIImageView().then {
-        $0.backgroundColor = .gray200 // 이미지
+        $0.image = UIImage(named: "logo")
     }
 
     let myWishIsLabel = UILabel().then {

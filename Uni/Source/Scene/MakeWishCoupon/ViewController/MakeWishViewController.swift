@@ -26,7 +26,9 @@ final class MakeWishViewController: BaseViewController, WriteWishViewDelegate {
     }
     
     func makeWishActions() {
-        self.makeWishView.makeWishViewNavi.rightBarRightButtonItemCompletionHandler = { [self] in self.navigationController?.popViewController(animated: true)}
+        self.makeWishView.makeWishViewNavi.rightBarRightButtonItemCompletionHandler = { [weak self] in
+            guard let strongSelf = self else {return}
+            strongSelf.navigationController?.popViewController(animated: true)}
     }
     
     func enableTextView() {
