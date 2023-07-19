@@ -16,11 +16,11 @@ final class BattleCategoryView: UIView {
         self.setLayout(type: type)
     }
     
-    func bindText(missionData: MissionContent, contentList: [MissionContentList]? = nil, type: BattleCategoryType) {
-        missionTitleLabel.text = missionData.missionCategory.title
-        missionDescriptionLabel.text = missionData.content
-        ruleDescriptionView.bindText(description: missionData.missionCategory.description)
-        tipDescriptionView.bindText(description: missionData.missionCategory.tip)
+    func bindText(missionData: BattleDataModel, contentList: [MissionContentList]? = nil, type: BattleCategoryType) {
+        missionTitleLabel.text = missionData.title
+        missionDescriptionLabel.text = missionData.description
+        ruleDescriptionView.bindText(description: missionData.rule)
+        tipDescriptionView.bindText(description: missionData.tip)
         if let url = URL(string: missionData.image) {
             iconImageView.kf.setImage(with: url)
         }
