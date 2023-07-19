@@ -11,6 +11,7 @@ import UIKit
 final class DDaySettingViewController: BaseViewController {
     // MARK: - Property
     private var dateString: String = ""
+    private let dDayRepository = DDayRepository()
 
     // MARK: - UI Property
     private var dDaySettingView = DDaySettingView()
@@ -50,10 +51,18 @@ final class DDaySettingViewController: BaseViewController {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             dateString = dateFormatter.string(from: Date())
-            print(dateString)
         }
-        else {
-            print(dateString)
+        print(dateString)
+        view.showIndicator()
+        dDayRepository.postDday(startDate: dateString) { success in
+            if success {
+                self.view.removeIndicator()
+                let coupleConnectionMethodView = CoupleConnectionMethodViewController()
+                self.navigationController?.pushViewController(coupleConnectionMethodView, animated: true)
+            }
+            else {
+                self.view.removeIndicator()
+            }
         }
     }
     @objc func dateChanged() {
