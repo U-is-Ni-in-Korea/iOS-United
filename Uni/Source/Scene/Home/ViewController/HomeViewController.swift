@@ -8,12 +8,12 @@ final class HomeViewController: BaseViewController {
     override func loadView() {
         super.loadView()
         self.view = homeView
-        self.getHomeList()
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.addEvent()
+        self.getHomeList()
     }
     
     //MARK: - set view config
@@ -47,7 +47,7 @@ final class HomeViewController: BaseViewController {
             } else {
                 let createBattleVC = BattleViewController()
                 createBattleVC.modalPresentationStyle = .overFullScreen
-                strongSelf.navigationController?.present(createBattleVC, animated: true)
+                strongSelf.navigationController?.pushViewController(createBattleVC, animated: true)
             }
         }
     }
