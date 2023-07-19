@@ -51,7 +51,7 @@ class DatePickerView: UIView {
         $0.backgroundColor = .gray000
     }
     
-    var newAnniversaryDate: String = "****년 **월 **일"
+    var newAnniversaryDate: String = "****년 **월 **일" //서버 데이터 넣기
     
     @objc func dateChange(_ sender: UIDatePicker) {
         newAnniversaryDate = dateFormat(date: sender.date)

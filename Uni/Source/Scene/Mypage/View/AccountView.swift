@@ -17,7 +17,7 @@ final class AccountView: UIView {
     private let accountTitleList = AccountTitle.accountTitleList()
     
     private let accountTableView = UITableView().then {
-        $0.register(AccountTableViewCell.self, forCellReuseIdentifier: AccountTableViewCell.idf)
+        $0.register(MyPageTableViewCell.self, forCellReuseIdentifier: MyPageTableViewCell.idf)
         $0.rowHeight = 56
         $0.separatorStyle = .none
     }
@@ -63,8 +63,8 @@ extension AccountView: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: AccountTableViewCell.idf, for: indexPath) as? AccountTableViewCell else { return UITableViewCell() }
-        cell.configureCell(accountTitleList[indexPath.row])
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MyPageTableViewCell.idf, for: indexPath) as? MyPageTableViewCell else { return UITableViewCell() }
+        cell.accountConfigureCell(accountTitleList[indexPath.row])
         cell.selectionStyle = .none
         return cell
     }

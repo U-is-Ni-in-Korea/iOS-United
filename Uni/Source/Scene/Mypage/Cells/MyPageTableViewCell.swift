@@ -1,5 +1,5 @@
 //
-//  AccountTableViewCell.swift
+//  MyPageTableViewCell.swift
 //  Uni
 //
 //  Created by 홍유정 on 2023/07/14.
@@ -9,11 +9,11 @@ import UIKit
 import SDSKit
 import Then
 
-final class AccountTableViewCell: UITableViewCell {
+final class MyPageTableViewCell: UITableViewCell {
     
-    static let idf = "AccountTableViewCell"
+    static let idf = "MyPageTableViewCell"
     
-    private let accountTitleLabel = UILabel().then {
+    private let myPageTitleLabel = UILabel().then {
         $0.font = SDSFont.body2.font
         $0.textColor = .gray600
     }
@@ -28,15 +28,19 @@ final class AccountTableViewCell: UITableViewCell {
     }
     
     private func setLayout() {
-        addSubview(accountTitleLabel)
-        accountTitleLabel.snp.makeConstraints {
+        addSubview(myPageTitleLabel)
+        myPageTitleLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(16)
             $0.centerY.equalToSuperview()
         }
     }
     
-    func configureCell(_ accountTitle: AccountTitle) {
-        accountTitleLabel.text = accountTitle.title
+    func myPageConfigureCell(_ myPageTitle: MyPageTitle) {
+        myPageTitleLabel.text = myPageTitle.title
+    }
+    
+    func accountConfigureCell(_ accountTitle: AccountTitle) {
+        myPageTitleLabel.text = accountTitle.title
     }
 
 }

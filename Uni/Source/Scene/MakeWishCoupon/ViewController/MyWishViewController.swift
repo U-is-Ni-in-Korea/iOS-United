@@ -13,7 +13,7 @@ class MyWishViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        myWishBackActions()
+        myWishNaviActions()
         myWishShareTapped()
         setUseWishCouponButton()
     }
@@ -25,7 +25,7 @@ class MyWishViewController: BaseViewController {
         self.view = myWishView
     }
     
-    func myWishBackActions() {
+    func myWishNaviActions() {
         self.myWishView.myWishViewNavi.backButtonCompletionHandler = { [weak self] in
             guard let strongSelf = self else {return}
             strongSelf.navigationController?.popViewController(animated: true)}

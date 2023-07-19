@@ -13,12 +13,12 @@ class SettingView: UIView {
     
     weak var delegate: SettingViewDelegate?
 
-    let settingViewNavi = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "설정")
-    public let profileView = SettingProfileView()
-    private let settingTitleList = SettingTitle.settingTitleList()
+    let settingViewNavi = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "마이페이지")
+    public let profileView = MyPageProfileView()
+    private let myPageTitleList = MyPageTitle.myPageTitleList()
             
-    private let settingTableView = UITableView().then {
-        $0.register(SettingTableViewCell.self, forCellReuseIdentifier: SettingTableViewCell.reuseIdentifier)
+    private let myPageTableView = UITableView().then {
+        $0.register(MyPageTableViewCell.self, forCellReuseIdentifier: MyPageTableViewCell.reuseIdentifier)
         $0.rowHeight = 56
         $0.separatorStyle = .none
     }
@@ -27,8 +27,8 @@ class SettingView: UIView {
         super.init(frame: frame)
         setLayout()
         setStyle()
-        settingTableView.delegate = self
-        settingTableView.dataSource = self
+        myPageTableView.delegate = self
+        myPageTableView.dataSource = self
     }
     
     required init?(coder: NSCoder) {
@@ -40,7 +40,7 @@ class SettingView: UIView {
     }
     
     func setLayout() {
-        addSubviews([settingViewNavi,profileView,settingTableView])
+        addSubviews([settingViewNavi,profileView,myPageTableView])
         
         settingViewNavi.snp.makeConstraints{
             $0.top.equalTo(safeAreaLayoutGuide)
@@ -54,7 +54,7 @@ class SettingView: UIView {
             $0.height.equalTo(148)
         }
         
-        settingTableView.snp.makeConstraints {
+        myPageTableView.snp.makeConstraints {
             $0.top.equalTo(profileView.snp.bottom)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(400)
@@ -64,14 +64,14 @@ class SettingView: UIView {
 
 extension SettingView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return settingTitleList.count
+        return myPageTitleList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingTableViewCell.reuseIdentifier, for: indexPath) as? SettingTableViewCell else { return UITableViewCell() }
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MyPageTableViewCell.reuseIdentifier, for: indexPath) as? MyPageTableViewCell else { return UITableViewCell() }
         
-        cell.configureCell(settingTitleList[indexPath.row])
+        cell.myPageConfigureCell(myPageTitleList[indexPath.row])
         cell.selectionStyle = .none
         
         return cell

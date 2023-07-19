@@ -13,7 +13,7 @@ class WithdrawViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        withdrawActions()
+        withdrawViewActions()
     }
     
     override func loadView() {
@@ -23,7 +23,7 @@ class WithdrawViewController: BaseViewController {
         self.view = withdrawView
     }
     
-    func withdrawActions() {
+    func withdrawViewActions() {
         self.withdrawView.askWithdrawAlertView.cancelButtonTapCompletion = { [self] in
             self.dismiss(animated: true)
         }

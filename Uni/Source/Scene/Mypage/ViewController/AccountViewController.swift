@@ -15,7 +15,7 @@ class AccountViewController: BaseViewController, AccountViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        accountActions()
+        accountNaviActions()
     }
     
     override func loadView() {
@@ -26,7 +26,7 @@ class AccountViewController: BaseViewController, AccountViewDelegate {
         self.view = accountView
     }
     
-    func accountActions() {
+    func accountNaviActions() {
         self.accountView.accountViewNavi.backButtonCompletionHandler = { [self] in self.navigationController?.popViewController(animated: true)
         }
     }
