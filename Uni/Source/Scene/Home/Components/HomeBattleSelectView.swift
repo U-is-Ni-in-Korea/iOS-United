@@ -46,6 +46,7 @@ final class HomeBattleSelectView: UIView {
     var originColor: UIColor = .gray000
     func addHoverEffect() {
         let pressGesture = UILongPressGestureRecognizer(target: self, action: #selector(buttonLongPress(_:)))
+        pressGesture.delegate = self
         pressGesture.minimumPressDuration = 0.0
         self.addGestureRecognizer(pressGesture)
     }
@@ -74,3 +75,4 @@ final class HomeBattleSelectView: UIView {
         $0.clipsToBounds = true
     }
 }
+extension HomeBattleSelectView: UIGestureRecognizerDelegate {}

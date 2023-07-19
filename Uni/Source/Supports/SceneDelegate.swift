@@ -10,6 +10,7 @@ import SDSKit
 import KakaoSDKAuth
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
+    let keyChains = HeaderUtils()
 
     var window: UIWindow?
 
@@ -69,8 +70,24 @@ extension SceneDelegate {
             // MARK: - TODO
             print("로그인")
             /// 토큰 여부에 따라 로그인 화면, 커플연결 화면, 홈 화면을 나눠야함
-            let loginViewController = LoginViewController()
-            setRootViewController(scene, viewController: UINavigationController(rootViewController: HistoryViewController()))
+            
+            if keyChains.isTokenExists(account: "accessToken") {
+                print("존재존재")
+                if userDefaultsManager.hasCoupleCode {
+                    ///홈화면
+                    let homeViewController = HomeViewController()
+                    setRootViewController(scene, viewController: UINavigationController(rootViewController: homeViewController))
+                }
+                else {
+                    ///로그인뷰컨 + nicknameSettingVC로 push
+                    let loginViewController = LoginViewController()
+                    setRootViewController(scene, viewController: UINavigationController(rootViewController: loginViewController))
+                }
+            }
+            else {
+                let loginViewController = LoginViewController()
+                setRootViewController(scene, viewController: UINavigationController(rootViewController: loginViewController))
+            }
         }
         ///온보딩이 처음일 때
         else {

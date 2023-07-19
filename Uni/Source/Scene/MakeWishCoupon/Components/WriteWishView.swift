@@ -89,7 +89,7 @@ class WriteWishView: UIView {
         }
         
         writeWishTextView.snp.makeConstraints {
-            $0.top.equalTo(myWishIsLabel.snp.bottom).offset(28)
+            $0.top.equalTo(myWishIsLabel.snp.bottom).offset(UIScreen.main.bounds.height/29)
             $0.leading.equalToSuperview().offset(24)
             $0.trailing.equalToSuperview().inset(24)
             $0.height.equalTo(UIScreen.main.bounds.height/10)
