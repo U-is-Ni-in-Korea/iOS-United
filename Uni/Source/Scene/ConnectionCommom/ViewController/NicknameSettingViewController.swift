@@ -50,6 +50,8 @@ final class NicknameSettingViewController: BaseViewController {
 //                }
 //            }
 //        }
+        let key = keyChains.read(account: "accessToken")
+        print(key)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

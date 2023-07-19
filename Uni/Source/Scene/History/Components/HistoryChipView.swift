@@ -20,10 +20,10 @@ final class HistoryChipView: UIView {
         $0.distribution = .equalSpacing
         $0.spacing = 6
     }
-    private let titleLabel = UILabel().then {
+    let titleLabel = UILabel().then {
         $0.font = SDSFont.caption.font
     }
-    private let subTitleLabel = UILabel().then {
+    let subTitleLabel = UILabel().then {
         $0.font = SDSFont.caption.font
     }
     

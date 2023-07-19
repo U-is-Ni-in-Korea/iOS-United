@@ -23,9 +23,9 @@ final class HistoryDetailView: UIView {
     
     let navigationBar = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "승부 히스토리")
     
-    private var historyDetailResultView = HistoryDetailResultView()
+    var historyDetailResultView = HistoryDetailResultView()
     
-    private var historyDetailResultMissionView = HistoryDetailResultMissionView()
+    var historyDetailResultMissionView = HistoryDetailResultMissionView()
     
     // MARK: - Life Cycle
     
@@ -78,5 +78,16 @@ final class HistoryDetailView: UIView {
     func backButtonTapped() {
         delegate?.backButtonTapped()
     }
+    
+//    func dataBind(historyData: HistoryDataModel) {
+//        historyDetailResultView.gameDateLabel.text = historyData.date ?? ""
+//        historyDetailResultView.gameNameLabel.text = historyData.title ?? ""
+//        historyDetailResultView.gameResultLabel.text = "\(String(describing: historyData.winner))님이 이겼어요"
+//
+//        historyDetailResultMissionView.bindMyMissionData(missionTitle: historyData.myMission.content ?? "", clearAt: historyData.myMission.time ?? "", status: HistoryStatus(rawValue: historyData.myMission.result ?? "") ?? <#default value#>)
+//
+//        historyDetailResultMissionView.bindYourMissionData(missionTitle: historyData.partnerMission.content ?? "", clearAt: historyData.partnerMission.time ?? "", status: HistoryStatus(rawValue: historyData.partnerMission.result ?? "") ?? <#default value#>)
+//
+//    }
     
 }
