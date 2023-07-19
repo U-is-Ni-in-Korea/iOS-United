@@ -11,12 +11,15 @@ import Then
 
 class EditProfileView: UIView {
 
-    let editProfileViewNavi = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "프로필 수정")
+    let editProfileViewNavi = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "프로필 수정").then {
+        $0.rightBarSingleButtonLabel.text = "저장"
+    }
     
     lazy var profileImageView = UIImageView().then {
         $0.contentMode = .scaleToFill
         $0.layer.borderColor = UIColor.clear.cgColor
         $0.layer.borderWidth = 1
+        $0.backgroundColor = .gray200
     }
 
     var changeProfileImageButton = SDSChips(type: .blue, title: "사진 변경하기")
@@ -27,8 +30,9 @@ class EditProfileView: UIView {
         $0.textColor = .gray400
     }
     
-    lazy var nicknameTextfield = SDSTextfield(placeholder: "", errorMessage: "글자수를 초과했어요", letterLimit: 10).then {
+    public lazy var nicknameTextfield = SDSTextfield(placeholder: "", errorMessage: "글자수를 초과했어요", letterLimit: 15).then {
         $0.sdsTextfield.text = "김유니"
+        $0.sdsTextfield.layer.borderColor = UIColor.lightBlue500.cgColor
     }
     
     private let anniversaryLabel = UILabel().then {
@@ -51,30 +55,17 @@ class EditProfileView: UIView {
         $0.textColor = .gray600
         $0.textAlignment = .left
     }
-    
-    private let emailLabel = UILabel().then {
-        $0.text = "연동 이메일"
-        $0.font = SDSFont.body2.font
-        $0.textColor = .gray400
-    }
-    
-    lazy var emailTextfield = UITextField().then {
-        $0.layer.cornerRadius = 10
-        $0.layer.borderWidth = 1
-        $0.layer.borderColor = UIColor.lightBlue500.cgColor
-        $0.font = SDSFont.body2.font
-        $0.backgroundColor = .gray000
-        $0.text = "uni@sparkle.com"
-        $0.leftView = UIView(frame: CGRect(x: 0.0, y: 0.0, width: 10.0, height: 0.0)) //왼쪽 여백 주기
-        $0.leftViewMode = .always
-
-    }
-    
+        
     override func layoutSubviews() {
         super.layoutSubviews()
         
         profileImageView.layer.cornerRadius = 8
         profileImageView.clipsToBounds = true
+        
+        guard let nickname = nicknameTextfield.sdsTextfield.text else {
+            return
+        }
+        nicknameTextfield.textfieldCountLabel.text = "\(nickname.count)/15"
         
     }
     
@@ -94,7 +85,7 @@ class EditProfileView: UIView {
     
     private func setLayout() {
         
-        addSubviews([editProfileViewNavi, profileImageView, changeProfileImageButton, nicknameLabel, nicknameTextfield, anniversaryLabel, anniversaryButton, emailLabel, emailTextfield])
+        addSubviews([editProfileViewNavi, profileImageView, changeProfileImageButton, nicknameLabel, nicknameTextfield, anniversaryLabel, anniversaryButton])
         anniversaryButton.addSubview(anniversaryDateLabel)
         
         editProfileViewNavi.snp.makeConstraints {
@@ -138,17 +129,6 @@ class EditProfileView: UIView {
         anniversaryDateLabel.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(15)
             $0.centerY.equalToSuperview()
-        }
-        
-        emailLabel.snp.makeConstraints {
-            $0.top.equalTo(anniversaryButton.snp.bottom).offset(17)
-            $0.leading.equalToSuperview().offset(20)
-        }
-        
-        emailTextfield.snp.makeConstraints {
-            $0.top.equalTo(emailLabel.snp.bottom).offset(13)
-            $0.leading.trailing.equalToSuperview().inset(20)
-            $0.height.equalTo(48)
         }
     }
 }

@@ -100,15 +100,15 @@
 		8D17B88C2A659D0C0091D7AD /* MakeWishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17B88B2A659D0C0091D7AD /* MakeWishView.swift */; };
 		8D17B88E2A659D2F0091D7AD /* MakeWishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17B88D2A659D2F0091D7AD /* MakeWishViewController.swift */; };
 		8D2B2E762A6161A900B75CDD /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E752A6161A900B75CDD /* SettingTableViewCell.swift */; };
-		8D2B2E782A6161D500B75CDD /* SettingTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E772A6161D500B75CDD /* SettingTitle.swift */; };
-		8D2B2E7A2A61623300B75CDD /* SettingProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E792A61623300B75CDD /* SettingProfileView.swift */; };
+		8D2B2E782A6161D500B75CDD /* MyPageTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E772A6161D500B75CDD /* MyPageTitle.swift */; };
+		8D2B2E7A2A61623300B75CDD /* MyPageProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E792A61623300B75CDD /* MyPageProfileView.swift */; };
 		8D2B2E7C2A61638000B75CDD /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E7B2A61638000B75CDD /* SettingView.swift */; };
 		8D2B2E7E2A6163B400B75CDD /* SettingTableViewHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E7D2A6163B400B75CDD /* SettingTableViewHeaderView.swift */; };
 		8D2B2E802A6163E900B75CDD /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E7F2A6163E900B75CDD /* SettingViewController.swift */; };
 		8D2B2E822A61643E00B75CDD /* Config.xcconfig in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E812A61643E00B75CDD /* Config.xcconfig */; };
 		8D2B2E842A616CDC00B75CDD /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E832A616CDC00B75CDD /* AccountViewController.swift */; };
 		8D2B2E862A616CFA00B75CDD /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E852A616CFA00B75CDD /* AccountView.swift */; };
-		8D2B2E882A61778900B75CDD /* AccountTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E872A61778900B75CDD /* AccountTableViewCell.swift */; };
+		8D2B2E882A61778900B75CDD /* MyPageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E872A61778900B75CDD /* MyPageTableViewCell.swift */; };
 		8D2B2E8A2A61786A00B75CDD /* AccountTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E892A61786A00B75CDD /* AccountTitle.swift */; };
 		8D2B2E8C2A619C0D00B75CDD /* EditProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E8B2A619C0D00B75CDD /* EditProfileViewController.swift */; };
 		8D2B2E8E2A619C2E00B75CDD /* EditProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E8D2A619C2E00B75CDD /* EditProfileView.swift */; };
@@ -237,15 +237,15 @@
 		8D17B88B2A659D0C0091D7AD /* MakeWishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeWishView.swift; sourceTree = "<group>"; };
 		8D17B88D2A659D2F0091D7AD /* MakeWishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeWishViewController.swift; sourceTree = "<group>"; };
 		8D2B2E752A6161A900B75CDD /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
-		8D2B2E772A6161D500B75CDD /* SettingTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTitle.swift; sourceTree = "<group>"; };
-		8D2B2E792A61623300B75CDD /* SettingProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingProfileView.swift; sourceTree = "<group>"; };
+		8D2B2E772A6161D500B75CDD /* MyPageTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTitle.swift; sourceTree = "<group>"; };
+		8D2B2E792A61623300B75CDD /* MyPageProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageProfileView.swift; sourceTree = "<group>"; };
 		8D2B2E7B2A61638000B75CDD /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		8D2B2E7D2A6163B400B75CDD /* SettingTableViewHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewHeaderView.swift; sourceTree = "<group>"; };
 		8D2B2E7F2A6163E900B75CDD /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		8D2B2E812A61643E00B75CDD /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		8D2B2E832A616CDC00B75CDD /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		8D2B2E852A616CFA00B75CDD /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
-		8D2B2E872A61778900B75CDD /* AccountTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTableViewCell.swift; sourceTree = "<group>"; };
+		8D2B2E872A61778900B75CDD /* MyPageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTableViewCell.swift; sourceTree = "<group>"; };
 		8D2B2E892A61786A00B75CDD /* AccountTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTitle.swift; sourceTree = "<group>"; };
 		8D2B2E8B2A619C0D00B75CDD /* EditProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewController.swift; sourceTree = "<group>"; };
 		8D2B2E8D2A619C2E00B75CDD /* EditProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileView.swift; sourceTree = "<group>"; };
@@ -798,8 +798,8 @@
 			isa = PBXGroup;
 			children = (
 				8D2B2E752A6161A900B75CDD /* SettingTableViewCell.swift */,
-				8D2B2E772A6161D500B75CDD /* SettingTitle.swift */,
-				8D2B2E872A61778900B75CDD /* AccountTableViewCell.swift */,
+				8D2B2E772A6161D500B75CDD /* MyPageTitle.swift */,
+				8D2B2E872A61778900B75CDD /* MyPageTableViewCell.swift */,
 				8D2B2E892A61786A00B75CDD /* AccountTitle.swift */,
 			);
 			path = Cells;
@@ -836,7 +836,7 @@
 		8DAEBB0A2A66D5C0007B818A /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				8D2B2E792A61623300B75CDD /* SettingProfileView.swift */,
+				8D2B2E792A61623300B75CDD /* MyPageProfileView.swift */,
 				8D2B2E7D2A6163B400B75CDD /* SettingTableViewHeaderView.swift */,
 			);
 			path = Components;
@@ -850,13 +850,6 @@
 				8DAEBB122A66E8C8007B818A /* YourWishCouponView.swift */,
 			);
 			path = Components;
-			sourceTree = "<group>";
-		};
-		A53C62EF2A652F2000AE3B45 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		A53C62F42A65714400AE3B45 /* Shared */ = {
@@ -1126,7 +1119,7 @@
 				361FA36F2A6268DD00C3BBFD /* HomeViewController.swift in Sources */,
 				36012F102A55A9F4006B8A39 /* AppDelegate.swift in Sources */,
 				361FA3822A62861C00C3BBFD /* BattleCollectionViewCell.swift in Sources */,
-				8D2B2E882A61778900B75CDD /* AccountTableViewCell.swift in Sources */,
+				8D2B2E882A61778900B75CDD /* MyPageTableViewCell.swift in Sources */,
 				361FA3422A6027B400C3BBFD /* WishCouponList.swift in Sources */,
 				8D6CB1FE2A6509C200FE46C2 /* DisconnectViewController.swift in Sources */,
 				36012F3E2A55B64C006B8A39 /* HomeDataModel.swift in Sources */,
@@ -1187,7 +1180,7 @@
 				7E37BAE32A618DE900A3CF64 /* HistoryEmptyView.swift in Sources */,
 				361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */,
 				36012F492A55CE5D006B8A39 /* NSObject+.swift in Sources */,
-				8D2B2E7A2A61623300B75CDD /* SettingProfileView.swift in Sources */,
+				8D2B2E7A2A61623300B75CDD /* MyPageProfileView.swift in Sources */,
 				36012F4F2A55CF18006B8A39 /* UIStackView+.swift in Sources */,
 				361FA3702A6268DD00C3BBFD /* HomeBattleSelectView.swift in Sources */,
 				7EE3B1A62A6138F900962F4C /* Config.xcconfig in Sources */,
@@ -1212,7 +1205,7 @@
 				8DAEBB0D2A66D718007B818A /* MyWishView.swift in Sources */,
 				361FA3322A601E7900C3BBFD /* PostService.swift in Sources */,
 				A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */,
-				8D2B2E782A6161D500B75CDD /* SettingTitle.swift in Sources */,
+				8D2B2E782A6161D500B75CDD /* MyPageTitle.swift in Sources */,
 				A5B4B5922A604F43000C7555 /* LoginView.swift in Sources */,
 				8D2B2E8A2A61786A00B75CDD /* AccountTitle.swift in Sources */,
 				361FA3462A602A2800C3BBFD /* MissionContentList.swift in Sources */,
@@ -1383,7 +1376,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JB8T59WMFR;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Uni/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Uni;
@@ -1415,7 +1408,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JB8T59WMFR;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Uni/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Uni;

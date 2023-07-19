@@ -13,7 +13,7 @@ class DisconnectViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        disconnectActions()
+        disconnectViewActions()
     }
     
     override func loadView() {
@@ -23,7 +23,7 @@ class DisconnectViewController: BaseViewController {
         self.view = disconnectView
     }
     
-    func disconnectActions() {
+    func disconnectViewActions() {
         self.disconnectView.askDisconnectAlertView.cancelButtonTapCompletion = { [self] in
             self.dismiss(animated: true)
         }

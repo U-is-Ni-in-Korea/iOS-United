@@ -13,7 +13,7 @@ class LogoutViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        logoutActions()
+        logoutViewActions()
     }
     
     override func loadView() {
@@ -23,7 +23,7 @@ class LogoutViewController: BaseViewController {
         self.view = logoutView
     }
     
-    func logoutActions() {
+    func logoutViewActions() {
         self.logoutView.askLogoutAlertView.cancelButtonTapCompletion = { [self] in
             self.dismiss(animated: true)
         }
