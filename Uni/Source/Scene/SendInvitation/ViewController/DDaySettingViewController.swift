@@ -58,15 +58,13 @@ final class DDaySettingViewController: BaseViewController {
         }
         print(dateString)
         view.showIndicator()
-        dDayRepository.postDday(startDate: dateString) { success in
-            if success {
-                self.view.removeIndicator()
-                let codeGeneratorViewController = CodeGeneratorViewController()
-                self.navigationController?.pushViewController(codeGeneratorViewController, animated: true)
+        dDayRepository.postDday(startDate: dateString) { data in
+            self.view.removeIndicator()
+            let codeGeneratorViewController = CodeGeneratorViewController()
+            if let inviteCode = data.inviteCode {
+                codeGeneratorViewController.inviteCode = inviteCode
             }
-            else {
-                self.view.removeIndicator()
-            }
+            self.navigationController?.pushViewController(codeGeneratorViewController, animated: true)
         }
     }
     @objc func dateChanged() {

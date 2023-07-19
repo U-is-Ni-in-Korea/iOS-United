@@ -26,14 +26,14 @@ final class CodeGeneratorView: UIView {
     
     let myCodeLabel = SDSChips(type: .blue, title: "나의 코드")
     
-    private let codeLabel = UILabel().then {
+    let codeLabel = UILabel().then {
         $0.text = "123 456 789"
         $0.textColor = .lightBlue950
         $0.font = SDSFont.subTitle.font
     }
     
     let codeCodyButton = SDSButton(type: .fill, state: .enabled).then {
-        $0.setButtonTitle(title: "초대코드 복사하기")
+        $0.setButtonTitle(title: "초대코드 공유g하기")
     }
     
     let connectionCheckButton = SDSButton(type: .line, state: .enabled).then {

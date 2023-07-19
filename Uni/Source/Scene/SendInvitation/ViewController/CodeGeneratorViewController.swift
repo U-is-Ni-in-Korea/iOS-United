@@ -10,6 +10,7 @@ import UIKit
 
 final class CodeGeneratorViewController: BaseViewController {
     // MARK: - Property
+    var inviteCode: String = ""
     private var codeGeneratorView = CodeGeneratorView()
 
     // MARK: - UI Property
@@ -33,7 +34,7 @@ final class CodeGeneratorViewController: BaseViewController {
     }
     override func setConfig() {
         super.setConfig()
-
+        codeGeneratorView.codeLabel.text = inviteCode 
     }
 
     // MARK: - Action Helper
