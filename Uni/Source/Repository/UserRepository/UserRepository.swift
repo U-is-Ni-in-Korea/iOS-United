@@ -9,7 +9,7 @@ import Foundation
 import Alamofire
 
 class UserRepository {
-    func patchUser(token: String, nickname: String, completion: @escaping ((Bool) -> Void)) {
+    func patchUser(nickname: String, completion: @escaping ((Bool) -> Void)) {
         let params: Parameters = [
             "nickname": "\(nickname)"
         ]

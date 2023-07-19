@@ -14,13 +14,17 @@ final class CoupleConnectionMethodView: UIView {
 
     // MARK: - UI Property
     
-    private let logoImageView = UIImageView()
+    let navigationBarView = SDSNavigationBar(hasBack: true, hasTitleItem: false)
     
-    private let enterInvitationCodeButton = SDSButton(type: .line, state: .enabled).then {
+    private let logoImageView = UIImageView().then {
+        $0.image = UIImage(named: "logo")
+    }
+    
+    let enterInvitationCodeButton = SDSButton(type: .line, state: .enabled).then {
         $0.setButtonTitle(title: "초대코드 입력하기")
     }
     
-    private let sendInvitationCodeButton = SDSButton(type: .fill, state: .enabled).then {
+    let sendInvitationCodeButton = SDSButton(type: .fill, state: .enabled).then {
         $0.setButtonTitle(title: "초대코드 보내기")
     }
     
@@ -55,14 +59,18 @@ final class CoupleConnectionMethodView: UIView {
 
     private func setConfig() {
         self.backgroundColor = UIColor.gray000
-        logoImageView.backgroundColor = .red
-
     }
 
     private func setLayout() {
-        self.addSubviews([enterInvitationCodeButton, sendInvitationCodeButton, orBackgroundView, logoImageView])
+        self.addSubviews([enterInvitationCodeButton, sendInvitationCodeButton, orBackgroundView, logoImageView, navigationBarView])
         
         orBackgroundView.addSubviews([separateLeftView, orLabel, separateRightView])
+        
+        navigationBarView.snp.makeConstraints {
+            $0.top.equalTo(self.safeAreaLayoutGuide)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(52)
+        }
         
         enterInvitationCodeButton.snp.makeConstraints {
             $0.bottom.equalTo(self.safeAreaLayoutGuide).offset(-66)
@@ -95,7 +103,8 @@ final class CoupleConnectionMethodView: UIView {
             $0.height.equalTo(1)
         }
         logoImageView.snp.makeConstraints {
-            $0.height.width.equalTo(158)
+            $0.width.equalTo(220)
+            $0.height.equalTo(208)
             $0.centerX.equalToSuperview()
             $0.top.equalTo(self.safeAreaLayoutGuide).offset(155)
         }
