@@ -15,7 +15,7 @@ final class NicknameSettingView: UIView {
     // MARK: - UI Property
     
     let navigationBarView = SDSNavigationBar(hasBack: true, hasTitleItem: false)
-    
+
     let nextButton = SDSButton(type: .fill, state: .disabled).then {
         $0.setButtonTitle(title: "다음")
     }
@@ -62,7 +62,7 @@ final class NicknameSettingView: UIView {
     }
 
     private func setLayout() {
-        self.addSubviews([navigationBarView, nextButton, nicknameBackgroundView, nickNameTextField])
+        self.addSubviews([navigationBarView, nicknameBackgroundView, nickNameTextField, nextButton])
         
         nicknameBackgroundView.addSubviews([nicknameSetTitleLabel, nicknameSetSubTitleLabel])
         
