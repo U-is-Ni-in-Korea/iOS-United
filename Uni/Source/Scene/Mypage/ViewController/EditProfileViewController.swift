@@ -24,10 +24,6 @@ class EditProfileViewController: BaseViewController, UIImagePickerControllerDele
         anniversaryButtonActions()
         setTextViewConfig()
         editProfileView.changeProfileImageButton.isHidden = true
-        
-//        let tokenUtil = HeaderUtils()
-//        tokenUtil.create(account: "accessToken", value: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhY2Nlc3NUb2tlbiIsImlhdCI6MTY4OTQ0ODMxNiwiZXhwIjoxNjkxMjQ4MzE2LCJ1c2VySWQiOjR9.uZk-_LWrpUgeFCqSKQ8alf8qQy23dVj22kH1dUHovMe9plvifv7lIsh8nn3honqb")
-        
 }
     
     override func loadView() {
