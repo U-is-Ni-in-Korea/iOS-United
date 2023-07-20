@@ -13,11 +13,11 @@ final class MyPageProfileView: UIView {
     
     lazy var userImageView = UIImageView().then {
         $0.layer.cornerRadius = 8
-        $0.backgroundColor = .gray200 //임시
+        $0.image = UIImage(named: "logo") //임시
     }
     
     lazy var userNameLabel = UILabel().then {
-        $0.text = "김유니"
+//        $0.text = "김유니"
         $0.font = SDSFont.title2.font
         $0.textColor = .gray600
     }

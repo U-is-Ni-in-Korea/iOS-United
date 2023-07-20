@@ -42,13 +42,13 @@ class HistoryStatusView: UIView {
     }
     
     //필요o
-    private let missionTitleLabel = UILabel().then {
+    let missionTitleLabel = UILabel().then {
         $0.font = SDSFont.btn2.font
         $0.textColor = .gray600
     }
     
     //필요o
-    private let chipView = HistoryChipView()
+    let chipView = HistoryChipView()
     
     // MARK: - Life Cycle
     

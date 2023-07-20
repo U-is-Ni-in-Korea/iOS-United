@@ -14,16 +14,17 @@ final class HistoryView: UIView {
     
     // MARK: - Property
     
-    var count = 0 {
-        didSet {
-            if count > 0 {
-                hasHistoryData(hasData: true)
-            }
-            else {
-                hasHistoryData(hasData: false)
-            }
-        }
-    }
+//    var count = 0 {
+//        didSet {
+//            if count > 0 {
+//                hasHistoryData(hasData: true)
+//            }
+//            else {
+//                hasHistoryData(hasData: false)
+//            }
+//        }
+//    }
+
 
     // MARK: - UI Property
     
@@ -50,9 +51,9 @@ final class HistoryView: UIView {
         setLayout()
         setStyle()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-            self.count = 5
-        }) // 2초 뒤에 count가 2로 변하면서 앞의 didSet 작동하면서 hasHistoryData(hasData: true)함수 실행
+//        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+//            self.count = 5
+//        }) // 2초 뒤에 count가 2로 변하면서 앞의 didSet 작동하면서 hasHistoryData(hasData: true)함수 실행
     }
     
     // MARK: - Setting
@@ -92,7 +93,7 @@ final class HistoryView: UIView {
     
     // MARK: - Custom Method
 
-    private func hasHistoryData(hasData: Bool) {
+    func hasHistoryData(hasData: Bool) {
         if hasData {
             DispatchQueue.main.async {
                 self.historyEmptyView.isHidden = true
