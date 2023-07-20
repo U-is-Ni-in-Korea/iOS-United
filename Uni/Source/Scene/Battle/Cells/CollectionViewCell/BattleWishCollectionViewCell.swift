@@ -3,6 +3,14 @@ import SDSKit
 import SnapKit
 import Then
 
+protocol CouponTextDelegate: NSObject {
+    func getCouponText(text: String)
+}
+
+protocol CouponTextStateDelegate: NSObject {
+    func checkTextViewState(state: Bool)
+}
+
 class BattleWishCollectionViewCell: UICollectionViewCell {
     var makeButtonTapCompletion: ((SDSButtonState) -> Void)?
     required init?(coder: NSCoder) {
@@ -12,6 +20,7 @@ class BattleWishCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         self.setLayout()
         self.addButtonGesture()
+        self.setCouponConfig()
     }
     
     
@@ -37,12 +46,16 @@ class BattleWishCollectionViewCell: UICollectionViewCell {
         self.creatButton.addGestureRecognizer(tapGesture)
     }
     
+    func setCouponConfig() {
+        self.couponView.textViewStateDelegate = self
+    }
+    
     @objc private func createButtonTap() {
         guard let completion = makeButtonTapCompletion else {return}
         completion(creatButton.buttonState)
     }
     
-    let couponView = SDSCardWishCoupon()
+    let couponView = BattleWishCouponView()
     let creatButton = SDSButton(type: .fill, state: .disabled).then {
         $0.setButtonTitle(title: "한판 승부 만들기")
     }
@@ -50,5 +63,10 @@ class BattleWishCollectionViewCell: UICollectionViewCell {
 extension BattleWishCollectionViewCell: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
+    }
+}
+extension BattleWishCollectionViewCell: CouponTextStateDelegate {
+    func checkTextViewState(state: Bool) {
+        self.creatButton.buttonState = state ? .enabled: .disabled
     }
 }

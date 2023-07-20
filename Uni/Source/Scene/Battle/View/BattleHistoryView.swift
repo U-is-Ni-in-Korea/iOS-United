@@ -3,6 +3,7 @@ import UIKit
 import SDSKit
 import SnapKit
 import Then
+import Kingfisher
 
 final class BattleHistoryView: UIView {
     required init?(coder: NSCoder) {
@@ -15,8 +16,12 @@ final class BattleHistoryView: UIView {
         self.setLayout()
     }
     
-    func bindData() {
-        
+    func bindData(myMission: RoundMission) {
+        self.myMissionTitleLabel.text = myMission.missionContent.missionCategory.title
+        self.myMissionSummaryLabel.text = myMission.missionContent.content
+        if let url = URL(string: myMission.missionContent.missionCategory.image ?? "") {
+            self.myMissionInfoIconImageView.kf.setImage(with: url)
+        }
     }
     
     private func setLayout() {
@@ -81,10 +86,12 @@ final class BattleHistoryView: UIView {
         myMissionTitleLabel.snp.makeConstraints {
             $0.top.equalTo(myMissionInfoIconImageView.snp.top).offset(15.5)
             $0.leading.equalTo(myMissionInfoIconImageView.snp.trailing).offset(20)
+            $0.trailing.equalTo(arrowIconImageView.snp.leading).inset(-20)
         }
         myMissionSummaryLabel.snp.makeConstraints {
-            $0.bottom.equalTo(myMissionInfoIconImageView.snp.top).inset(15.5)
+            $0.top.equalTo(myMissionTitleLabel.snp.bottom).offset(6)
             $0.leading.equalTo(myMissionInfoIconImageView.snp.trailing).offset(20)
+            $0.trailing.equalTo(arrowIconImageView.snp.leading).inset(-20)
         }
         arrowIconImageView.snp.makeConstraints {
             $0.trailing.equalToSuperview().inset(12)
@@ -128,6 +135,7 @@ final class BattleHistoryView: UIView {
     }
     let myMissionSummaryLabel = UILabel().then {
         $0.font = SDSFont.body2.font
+        $0.numberOfLines = 0
         $0.textColor = .gray600
     }
     let arrowIconImageView = UIImageView(image: SDSIcon.icChevron.resize(targetSize: .init(width: 24, height: 24)).withTintColor(.gray250, renderingMode: .alwaysTemplate))
