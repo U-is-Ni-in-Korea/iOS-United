@@ -30,7 +30,7 @@ class EditProfileView: UIView {
         $0.textColor = .gray400
     }
     
-    public lazy var nicknameTextfield = SDSTextfield(placeholder: "", errorMessage: "글자수를 초과했어요", letterLimit: 15).then {
+    public lazy var nicknameTextfield = SDSTextfield(placeholder: "", errorMessage: "글자수를 초과했어요", letterLimit: 10).then {
         $0.sdsTextfield.layer.borderColor = UIColor.lightBlue500.cgColor
     }
     

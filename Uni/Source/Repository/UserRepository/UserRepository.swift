@@ -27,6 +27,27 @@ class UserRepository {
         })
     }
     
+    func patchUserProfile(nickname: String, startDate: String, completion: @escaping((Bool) -> Void)) {
+        let params: Parameters = [
+            "nickname" : "\(nickname)",
+            "startDate": "\(startDate)"
+        ]
+        PatchService.shared.patchMultipartService(with: params,
+                                                  from: Config.baseURL + "api/user/info",
+                                                  callback: { (data: UserDataModel?, error: String?) in
+            if let error = error {
+                print(error.description)
+                print("실패")
+                completion(false)
+            }
+            else if let data = data {
+                print("성공")
+                print(data)
+                completion(true)
+            }
+        })
+    }
+    
     func getUserData(completion: @escaping((UserDataModel) -> Void)) { GetService.shared.getService(from: Config.baseURL + "api/user", isUseHeader: true) { (data: UserDataModel?, error) in
         guard let data = data else {
             print("error: \(error?.debugDescription)")

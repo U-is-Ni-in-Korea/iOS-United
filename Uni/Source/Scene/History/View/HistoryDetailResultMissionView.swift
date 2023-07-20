@@ -24,6 +24,7 @@ final class HistoryDetailResultMissionView: UIView {
     let myHistoryResultView = HistoryStatusView()
     let yourHistoryResultView = HistoryStatusView()
     
+    
     // MARK: - Life Cycle
     
     required init?(coder: NSCoder) {
@@ -35,14 +36,14 @@ final class HistoryDetailResultMissionView: UIView {
         super.init(frame: .zero)
         setLayout()
         setStyle()
-//        bindMyMissionData(missionTitle: "헤드셋", clearAt: "23:22")
-//        bindYourMissionData(missionTitle: "커피")
     }
     
     // MARK: - Setting
     
     private func setStyle() {
         self.backgroundColor = .gray100
+        myHistoryResultView.bindText(sectionTitle: "나의 미션", title: "s", status: .win)
+        yourHistoryResultView.bindText(sectionTitle: "상대의 미션", title: "s", status: .win)
     }
     
     private func setLayout() {
@@ -63,7 +64,6 @@ final class HistoryDetailResultMissionView: UIView {
     // MARK: - Custom Method
     
     func bindMyMissionData(missionTitle: String,
-                           
                            clearAt: String? = nil,
                            status: HistoryStatus = .win) {
         myHistoryResultView.bindText(sectionTitle: "나의 미션", title: missionTitle, status: status)
@@ -71,12 +71,9 @@ final class HistoryDetailResultMissionView: UIView {
     }
     
     func bindYourMissionData(missionTitle: String,
-                              
                               clearAt: String? = nil,
                              status: HistoryStatus = .lose) {
         yourHistoryResultView.bindText(sectionTitle: "상대의 미션", title: missionTitle, status: status)
         yourHistoryResultView.bindChipText(title: clearAt, subTitle: "미션 실패", status: .lose)
     }
-    
-    
 }

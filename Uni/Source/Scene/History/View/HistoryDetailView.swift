@@ -68,7 +68,6 @@ final class HistoryDetailView: UIView {
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(176)
         }
-
     }
     
     // MARK: - Action Helper
@@ -78,5 +77,4 @@ final class HistoryDetailView: UIView {
     func backButtonTapped() {
         delegate?.backButtonTapped()
     }
-    
 }
