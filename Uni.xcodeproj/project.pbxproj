@@ -100,11 +100,11 @@
 		7E6499632A652A5400B2F86C /* WishCouponCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6499622A652A5400B2F86C /* WishCouponCollectionView.swift */; };
 		7E6499652A652A6700B2F86C /* WishCouponYourCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6499642A652A6700B2F86C /* WishCouponYourCollectionView.swift */; };
 		7E6499672A65AD0500B2F86C /* WishCouponEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6499662A65AD0400B2F86C /* WishCouponEmptyView.swift */; };
+		7EACFC432A6826F6005F416A /* HistoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACFC422A6826F6005F416A /* HistoryDataModel.swift */; };
+		7EACFC462A682A7A005F416A /* HistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACFC452A682A7A005F416A /* HistoryRepository.swift */; };
 		7EACFC492A6882A8005F416A /* WishCouponDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACFC482A6882A8005F416A /* WishCouponDataModel.swift */; };
 		7EACFC4C2A6886DB005F416A /* WishCouponRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACFC4B2A6886DB005F416A /* WishCouponRepository.swift */; };
 		7EBAA5352A6928CB000EF883 /* SDSCardWishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBAA5342A6928CB000EF883 /* SDSCardWishView.swift */; };
-		7EACFC432A6826F6005F416A /* HistoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACFC422A6826F6005F416A /* HistoryDataModel.swift */; };
-		7EACFC462A682A7A005F416A /* HistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACFC452A682A7A005F416A /* HistoryRepository.swift */; };
 		7EE3B19F2A604FE900962F4C /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3B19E2A604FE900962F4C /* HistoryView.swift */; };
 		7EE3B1A12A60507F00962F4C /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3B1A02A60507F00962F4C /* HistoryViewController.swift */; };
 		7EE3B1A42A60602A00962F4C /* HistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3B1A32A60602A00962F4C /* HistoryTableViewCell.swift */; };
@@ -257,11 +257,11 @@
 		7E6499622A652A5400B2F86C /* WishCouponCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponCollectionView.swift; sourceTree = "<group>"; };
 		7E6499642A652A6700B2F86C /* WishCouponYourCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponYourCollectionView.swift; sourceTree = "<group>"; };
 		7E6499662A65AD0400B2F86C /* WishCouponEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponEmptyView.swift; sourceTree = "<group>"; };
+		7EACFC422A6826F6005F416A /* HistoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDataModel.swift; sourceTree = "<group>"; };
+		7EACFC452A682A7A005F416A /* HistoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRepository.swift; sourceTree = "<group>"; };
 		7EACFC482A6882A8005F416A /* WishCouponDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponDataModel.swift; sourceTree = "<group>"; };
 		7EACFC4B2A6886DB005F416A /* WishCouponRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponRepository.swift; sourceTree = "<group>"; };
 		7EBAA5342A6928CB000EF883 /* SDSCardWishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDSCardWishView.swift; sourceTree = "<group>"; };
-		7EACFC422A6826F6005F416A /* HistoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDataModel.swift; sourceTree = "<group>"; };
-		7EACFC452A682A7A005F416A /* HistoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRepository.swift; sourceTree = "<group>"; };
 		7EE3B19E2A604FE900962F4C /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
 		7EE3B1A02A60507F00962F4C /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		7EE3B1A32A60602A00962F4C /* HistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -1471,6 +1471,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SPARKLE;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -1527,6 +1528,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SPARKLE;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -1547,7 +1549,7 @@
 				DEVELOPMENT_TEAM = 73J42HCMVV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Uni/Resource/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Uni;
+				INFOPLIST_KEY_CFBundleDisplayName = SPARKLE;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -1579,7 +1581,7 @@
 				DEVELOPMENT_TEAM = 73J42HCMVV;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Uni/Resource/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = Uni;
+				INFOPLIST_KEY_CFBundleDisplayName = SPARKLE;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
