@@ -71,35 +71,27 @@ public class SDSCardWishView: UIView {
             $0.centerX.equalToSuperview()
             $0.bottom.equalTo(chipView.snp.top)
         }
-        //        wishTitleLabel.backgroundColor = .red
         chipView.snp.makeConstraints {
-            //            $0.top.equalTo(wishTitleLabel.snp.bottom)
             $0.height.equalTo(26)
             $0.centerX.equalToSuperview()
             $0.bottom.equalToSuperview().inset(24)
         }
-        //        chipView.backgroundColor = .blue
         chipView.addSubview(chipLabel)
-        
         chipLabel.snp.makeConstraints {
             $0.leading.trailing.equalToSuperview().inset(16)
             $0.centerX.equalToSuperview()
             $0.centerY.equalToSuperview()
         }
-        
-        
     }
     
     func setType(title: String, type: SDSCardWishType) {
         switch type{
         case .title:
-            
             wishImageView.snp.remakeConstraints {
                 $0.width.height.equalTo(80)
                 $0.top.equalToSuperview().offset(28)
                 $0.centerX.equalToSuperview()
             }
-            
             wishTitleLabel.text = title
             wishTitleLabel.isHidden = false
             wishTitleLabel.snp.remakeConstraints {
@@ -117,19 +109,16 @@ public class SDSCardWishView: UIView {
             chipView.layer.cornerRadius = 13
             chipView.layer.masksToBounds = true
             chipView.addSubview(chipLabel)
-            
             chipLabel.snp.makeConstraints {
                 $0.leading.trailing.equalToSuperview().inset(16)
                 $0.centerX.equalToSuperview()
                 $0.centerY.equalToSuperview()
             }
         case .noTitle:
-            
             self.snp.remakeConstraints {
                 $0.width.equalTo(160)
                 $0.height.equalTo(122)
             }
-            
             wishImageView.snp.remakeConstraints {
                 $0.width.height.equalTo(40)
                 $0.top.equalToSuperview().offset(24)

@@ -11,42 +11,14 @@ import SDSKit
 import CHTCollectionViewWaterfallLayout
 
 class WishCouponViewController: BaseViewController {
-    private var myWishCouponData: Int = 0 {
-        didSet {
-            if myWishCouponData == 0 {
-                wishCouponView.wishCouponCollectionView.backgroundColor = .clear
-                wishCouponView.wishCouponData2 = myWishCouponData
-            }
-            else {
-                wishCouponView.wishCouponCollectionView.backgroundColor = .gray100
-                wishCouponView.wishCouponData2 = myWishCouponData
-            }
-        }
-    }
-    var yourWishCouponData: Int = 0 {
-        didSet {
-            if yourWishCouponData == 0 {
-                wishCouponView.wishCouponYourCollectionView.backgroundColor = .clear
-                wishCouponView.wishCouponData2 = yourWishCouponData
-            }
-            else {
-                wishCouponView.wishCouponYourCollectionView.backgroundColor = .gray100
-                wishCouponView.wishCouponYourCollectionView.wishCouponData = yourWishCouponData // wishCouponData가 겹치지 않도록 상대소원권 컬렉션뷰에 따로 뺌
-            }
-        }
-    }
     
     // MARK: - Property
+    
+    // MARK: - UI Property
     
     private var wishCouponView = WishCouponView()
     
     private let wishCouponRepository = WishCouponRepository()
-    
-
-    
-    // MARK: - UI Property
-    
-    
     
     // MARK: - Life Cycle
     
@@ -55,22 +27,32 @@ class WishCouponViewController: BaseViewController {
         setStyle()
         setLayout()
         actions()
-        
+        backButtonTapped()
     }
     
     override func loadView() {
         super.loadView()
         
         wishCouponView = WishCouponView(frame: self.view.frame)
+//        wishCouponView.delegate = self
         self.view = wishCouponView
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        wishCouponRepository.getWishCouponData { data in
+        ///나
+        view.showIndicator()
+        wishCouponRepository.getWishCouponData(userId: 4) { data in
             print(data)
             self.configureData(wishCouponData: data)
-            self.wishCouponView.wishCouponData = data
+            self.wishCouponView.myWishCouponData = data
+            self.view.removeIndicator()
+        }
+        
+        ///너
+        wishCouponRepository.getWishCouponData(userId: 7) { data in
+            print(data)
+            self.wishCouponView.yourWishCouponData = data
         }
     }
     
@@ -80,7 +62,6 @@ class WishCouponViewController: BaseViewController {
     }
     
     override func setLayout() {
-        
     }
     
     // MARK: - Action Helper
@@ -92,13 +73,7 @@ class WishCouponViewController: BaseViewController {
     
     @objc func myButtonTapped() {
         switchToMyWishCouponView(showMyWishCoupon: true)
-//        let data = WishCouponYourCollectionView.wishCouponYourData {
-//            self.configureCell(wishCouponData: data)
-//        }
-        
-
         print("switchMyButton")
-
     }
     
     @objc func yourButtonTapped() {
@@ -106,11 +81,16 @@ class WishCouponViewController: BaseViewController {
         print("switchYourButton")
     }
     
+    func backButtonTapped() {
+        self.wishCouponView.navigationBar.backButtonCompletionHandler = { self.navigationController?.popViewController(animated: true)
+            print("백버튼 클릭해찌!")
+        }
+    }
+    
     // MARK: - Custom Method
     private func switchToMyWishCouponView(showMyWishCoupon: Bool) {
         if showMyWishCoupon {
             /// 나의 소원권
-            
             DispatchQueue.main.async {
                 self.wishCouponView.wishCouponEmptyView.noneLabel.text = ""
                 self.wishCouponView.wishCouponCollectionView.isHidden = false
@@ -125,6 +105,16 @@ class WishCouponViewController: BaseViewController {
         else {
             /// 상대 소원권
             DispatchQueue.main.async {
+                var wishCouponYourData: WishCouponDataModel?
+                if let count = self.wishCouponView.wishCouponYourCollectionView.wishCouponYourData?.wishCouponList.count {
+                    if count == 0 {
+                        self.wishCouponView.wishCouponYourCollectionView.isHidden = true
+                        self.wishCouponView.wishCouponEmptyView.isHidden = false
+                    } else {
+                        self.wishCouponView.wishCouponYourCollectionView.isHidden = false
+                        self.wishCouponView.wishCouponEmptyView.isHidden = true
+                    }
+                }
                 self.wishCouponView.wishCouponEmptyView.noneLabel.text = "아직 상대의 소원권이 없어요!"
                 self.wishCouponView.wishCouponCollectionView.isHidden = true
                 self.wishCouponView.wishCouponYourCollectionView.isHidden = false
@@ -135,13 +125,10 @@ class WishCouponViewController: BaseViewController {
                 self.wishCouponView.wishCouponYourCollectionView.scrollToInitialPosition()
             }
         }
-        
     }
     
     func configureData(wishCouponData: WishCouponDataModel) {
         wishCouponView.wishCouponCountView.countLabel.text = "사용 가능한 소원권이 \(wishCouponData.availableWishCoupon ?? 0)개 있어요"
-    
-        
     }
 }
 

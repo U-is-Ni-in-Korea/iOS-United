@@ -14,8 +14,6 @@ import Kingfisher
 final class WishCouponCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Property
-
-    
     
     static var identifier: String {
         return String(describing: self)
@@ -41,14 +39,7 @@ final class WishCouponCollectionViewCell: UICollectionViewCell {
     }
     
     // MARK: - Life Cycle
-//
-//    init(frame: CGRect, newChipsTitle: String) {
-//        self.newChipsTitle = newChipsTitle
-//        super.init(frame: frame)
-//        setStyle()
-//        setLayout()
-//    }
-//
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setStyle()
@@ -67,7 +58,7 @@ final class WishCouponCollectionViewCell: UICollectionViewCell {
         newWishCouponView.layer.applyDepth2_2Shadow()
         wishCouponListView.layer.applyDepth2_1Shadow()
         wishCouponListView.layer.applyDepth2_2Shadow()
-      
+        
     }
     
     private func setLayout() {
@@ -100,8 +91,6 @@ final class WishCouponCollectionViewCell: UICollectionViewCell {
             $0.centerX.centerY.equalToSuperview()
             $0.leading.trailing.equalToSuperview().inset(16)
         }
-        
-        
     }
     
     // MARK: - Action Helper
@@ -113,43 +102,32 @@ final class WishCouponCollectionViewCell: UICollectionViewCell {
         if type == .noTitle {
             newWishCouponView.isHidden = false
             wishCouponListView.isHidden = true
-            
-//            newWishCouponView.SDSCardWish.wishTitleLabel =  WishCouponDataModel.wishCouponList.content
         } else {
             newWishCouponView.isHidden = true
             wishCouponListView.isHidden = false
-//            wishCouponView.SDSCardWish.wishTitleLabel =  WishCouponDataModel.wishCouponList.content
         }
     }
     
     //내소원권 컬렉션뷰셀에 내용을 붙여주는
     func configureMyNewCell(myWishCouponData: WishCouponDataModel?) {
-        print("dddddlkfsdjflsk")
+        print("새소원권 개수 칩스입니당")
         chipLabel.text = "새 소원권 \(myWishCouponData?.newWishCoupon ?? 0)개"
     }
-
+    
     func configureMyCell(myWishCouponData: WishCouponList?) {
-        print("나나나")
+        print("내소원권 보여죠")
         if let url = URL(string: myWishCouponData?.image ?? "") {
             wishCouponListView.wishImageView.kf.setImage(with: url)
         }
         wishCouponListView.setType(title: myWishCouponData?.content ?? "", type: .title)
-//        wishCouponListView.wishTitleLabel.text = myWishCouponData?.content
-        
         if let isUsed = myWishCouponData?.isUsed {
             wishCouponListView.chipLabel.text = usedCheck(value: isUsed).0
             wishCouponListView.chipView.backgroundColor = usedCheck(value: isUsed).1
             wishCouponListView.chipLabel.textColor = usedCheck(value: isUsed).2
         }
-
-        
-
     }
     
     func usedCheck(value: Bool) -> (String, UIColor, UIColor) {
-        return value ? ("소원권 사용하기", UIColor.green50, UIColor.green600) : ("소원 성취", UIColor.gray100, UIColor.gray400)
+        return value ? ("소원 성취",UIColor.gray100, UIColor.gray400): ("소원권 사용하기", UIColor.green50, UIColor.green600)
     }
-    
 }
-
-

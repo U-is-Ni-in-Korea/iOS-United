@@ -59,7 +59,6 @@ final class WishCouponCountView: UIView {
     // MARK: - Setting
     
     private func setStyle() {
-
     }
     
     private func setLayout() {
@@ -100,5 +99,4 @@ final class WishCouponCountView: UIView {
             $0.leading.equalTo(lineView.snp.trailing)
         }
     }
-
 }

@@ -16,7 +16,6 @@ final class WishCouponCollectionView: UIView {
     
     var wishCouponMyData: WishCouponDataModel?
     
-    
     // MARK: - UI Property
     
     let wishCouponCollectionView = UICollectionView(frame: .zero, collectionViewLayout: CHTCollectionViewWaterfallLayout()).then {
@@ -37,7 +36,6 @@ final class WishCouponCollectionView: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        
     }
     
     override init(frame: CGRect) {
@@ -65,7 +63,6 @@ final class WishCouponCollectionView: UIView {
         }
     }
     
-    
     // MARK: - Action Helper
     
     // MARK: - Custom Method
@@ -74,13 +71,7 @@ final class WishCouponCollectionView: UIView {
         let initialOffset = CGPoint(x: -wishCouponCollectionView.contentInset.left, y: -wishCouponCollectionView.contentInset.top)
         wishCouponCollectionView.setContentOffset(initialOffset, animated: true)
     }
-    
 }
-
-
-// MARK: - UICollectionView Delegate
-//extension WishCouponCollectionView: UICollectionViewDelegate {}
-
 
 // MARK: - UICollectionView Datasource
 extension WishCouponCollectionView: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -111,7 +102,7 @@ extension WishCouponCollectionView: CHTCollectionViewDelegateWaterfallLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         let itemWidthSize = (UIScreen.main.bounds.width - 55) / 2
-        // 셀의 크기를 반환
+        /*셀의 크기를 반환*/
         if indexPath.item == 0 {
             return CGSize(width: itemWidthSize, height: itemWidthSize / 160 * 122)
         } else {

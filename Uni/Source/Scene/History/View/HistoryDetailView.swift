@@ -78,5 +78,4 @@ final class HistoryDetailView: UIView {
     func backButtonTapped() {
         delegate?.backButtonTapped()
     }
-    
 }

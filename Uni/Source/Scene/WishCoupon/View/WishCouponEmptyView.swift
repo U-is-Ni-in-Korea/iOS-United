@@ -53,5 +53,4 @@ final class WishCouponEmptyView: UIView {
     // MARK: - Action Helper
     
     // MARK: - Custom Method
-    
 }

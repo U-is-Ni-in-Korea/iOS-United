@@ -13,18 +13,18 @@ import CHTCollectionViewWaterfallLayout
 final class WishCouponView: UIView {
     
     // MARK: - Property
-    
-    var wishCouponData2: Int = 0 { //내소원권 컬렉션 뷰 데이터
+   
+    var myWishCouponData: WishCouponDataModel? {
         didSet {
-            wishCouponCollectionView.wishCouponMyData = wishCouponData
+            wishCouponCollectionView.wishCouponMyData = myWishCouponData
             wishCouponCollectionView.wishCouponCollectionView.reloadData()
         }
     }
     
-    var wishCouponData: WishCouponDataModel? {
+    var yourWishCouponData: WishCouponDataModel? {
         didSet {
-            wishCouponCollectionView.wishCouponMyData = wishCouponData
-            wishCouponCollectionView.wishCouponCollectionView.reloadData()
+            wishCouponYourCollectionView.wishCouponYourData = yourWishCouponData
+            wishCouponYourCollectionView.wishCouponYourCollectionView.reloadData()
         }
     }
     
@@ -98,4 +98,8 @@ final class WishCouponView: UIView {
             $0.leading.trailing.equalToSuperview()
         }
     }
+    
+    // MARK: - Action Helper
+    
+    // MARK: - Custom Method
 }
