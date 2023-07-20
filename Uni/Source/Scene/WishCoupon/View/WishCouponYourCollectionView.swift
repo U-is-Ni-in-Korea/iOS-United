@@ -13,19 +13,12 @@ final class WishCouponYourCollectionView: UIView {
     
     // MARK: - Property
     
-    var wishCouponData: Int = 0 { //상대소원권 컬렉션뷰 데이터
-        didSet {
-            self.wishCouponYourData = wishCouponData
-            self.wishCouponYourCollectionView.reloadData()
-        }
-    }
-    
-    var wishCouponYourData: Int = 0 // viewDidLoad에서 바뀐 wishCouponData 받기 위한 변수
+    var wishCouponYourData: WishCouponDataModel?
     
     // MARK: - UI Property
     
     let wishCouponFlowLayout = UICollectionViewFlowLayout()
-        
+    
     lazy var wishCouponYourCollectionView = UICollectionView(frame: .zero, collectionViewLayout: wishCouponFlowLayout).then {
         $0.register(WishCouponYourCollectionViewCell.self, forCellWithReuseIdentifier: WishCouponYourCollectionViewCell.identifier)
         $0.isScrollEnabled = true
@@ -39,7 +32,6 @@ final class WishCouponYourCollectionView: UIView {
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        
     }
     
     override init(frame: CGRect) {
@@ -61,8 +53,8 @@ final class WishCouponYourCollectionView: UIView {
         let itemWidthSize = (UIScreen.main.bounds.width - 55) / 2
         wishCouponFlowLayout.scrollDirection = .vertical
         wishCouponFlowLayout.itemSize = .init(width: itemWidthSize, height: itemWidthSize / 160 * 206)
-        wishCouponFlowLayout.minimumLineSpacing = 15 //수직 간격
-        wishCouponFlowLayout.minimumInteritemSpacing = 15 //수평 간격
+        wishCouponFlowLayout.minimumLineSpacing = 15
+        wishCouponFlowLayout.minimumInteritemSpacing = 15
     }
     
     private func setLayout() {
@@ -80,7 +72,6 @@ final class WishCouponYourCollectionView: UIView {
         let initialOffset = CGPoint(x: -wishCouponYourCollectionView.contentInset.left, y: -wishCouponYourCollectionView.contentInset.top)
         wishCouponYourCollectionView.setContentOffset(initialOffset, animated: true)
     }
-    
 }
 
 
@@ -91,12 +82,13 @@ extension WishCouponYourCollectionView: UICollectionViewDelegate {}
 // MARK: - UICollectionView Datasource
 extension WishCouponYourCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return wishCouponYourData
+        return wishCouponYourData?.wishCouponList.count ?? 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         guard let cell = wishCouponYourCollectionView.dequeueReusableCell(withReuseIdentifier: WishCouponYourCollectionViewCell.identifier, for: indexPath) as? WishCouponYourCollectionViewCell
         else { return UICollectionViewCell() }
+        cell.configureYourCell(yourWishCouponData: wishCouponYourData?.wishCouponList[indexPath.row])
         return cell
     }
 }

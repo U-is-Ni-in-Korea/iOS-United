@@ -100,6 +100,9 @@
 		7E6499632A652A5400B2F86C /* WishCouponCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6499622A652A5400B2F86C /* WishCouponCollectionView.swift */; };
 		7E6499652A652A6700B2F86C /* WishCouponYourCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6499642A652A6700B2F86C /* WishCouponYourCollectionView.swift */; };
 		7E6499672A65AD0500B2F86C /* WishCouponEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E6499662A65AD0400B2F86C /* WishCouponEmptyView.swift */; };
+		7EACFC492A6882A8005F416A /* WishCouponDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACFC482A6882A8005F416A /* WishCouponDataModel.swift */; };
+		7EACFC4C2A6886DB005F416A /* WishCouponRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACFC4B2A6886DB005F416A /* WishCouponRepository.swift */; };
+		7EBAA5352A6928CB000EF883 /* SDSCardWishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBAA5342A6928CB000EF883 /* SDSCardWishView.swift */; };
 		7EACFC432A6826F6005F416A /* HistoryDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACFC422A6826F6005F416A /* HistoryDataModel.swift */; };
 		7EACFC462A682A7A005F416A /* HistoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EACFC452A682A7A005F416A /* HistoryRepository.swift */; };
 		7EE3B19F2A604FE900962F4C /* HistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE3B19E2A604FE900962F4C /* HistoryView.swift */; };
@@ -254,6 +257,9 @@
 		7E6499622A652A5400B2F86C /* WishCouponCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponCollectionView.swift; sourceTree = "<group>"; };
 		7E6499642A652A6700B2F86C /* WishCouponYourCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponYourCollectionView.swift; sourceTree = "<group>"; };
 		7E6499662A65AD0400B2F86C /* WishCouponEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponEmptyView.swift; sourceTree = "<group>"; };
+		7EACFC482A6882A8005F416A /* WishCouponDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponDataModel.swift; sourceTree = "<group>"; };
+		7EACFC4B2A6886DB005F416A /* WishCouponRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponRepository.swift; sourceTree = "<group>"; };
+		7EBAA5342A6928CB000EF883 /* SDSCardWishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SDSCardWishView.swift; sourceTree = "<group>"; };
 		7EACFC422A6826F6005F416A /* HistoryDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDataModel.swift; sourceTree = "<group>"; };
 		7EACFC452A682A7A005F416A /* HistoryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryRepository.swift; sourceTree = "<group>"; };
 		7EE3B19E2A604FE900962F4C /* HistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryView.swift; sourceTree = "<group>"; };
@@ -431,6 +437,7 @@
 			isa = PBXGroup;
 			children = (
 				A56C4E602A68FA2700C18C8F /* CoupleJoinRepository */,
+				7EACFC4A2A68869F005F416A /* WishCouponRepository */,
 				A53C63022A68728000AE3B45 /* DDayRepository */,
 				7EACFC442A682A6A005F416A /* HistoryRepository */,
 				A53C62FC2A67DAB500AE3B45 /* UserRepository */,
@@ -497,6 +504,7 @@
 			isa = PBXGroup;
 			children = (
 				A56C4E662A68FB5800C18C8F /* CoupleJoin */,
+				7EACFC472A688289005F416A /* WishCoupon */,
 				A53C63052A68733300AE3B45 /* DDay */,
 				7EACFC412A6826DA005F416A /* History */,
 				A53C62FF2A67DCDB00AE3B45 /* User */,
@@ -744,6 +752,7 @@
 				7E6499622A652A5400B2F86C /* WishCouponCollectionView.swift */,
 				7E6499642A652A6700B2F86C /* WishCouponYourCollectionView.swift */,
 				7E6499662A65AD0400B2F86C /* WishCouponEmptyView.swift */,
+				7EBAA5342A6928CB000EF883 /* SDSCardWishView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -781,6 +790,22 @@
 				7EACFC452A682A7A005F416A /* HistoryRepository.swift */,
 			);
 			path = HistoryRepository;
+			sourceTree = "<group>";
+		};
+		7EACFC472A688289005F416A /* WishCoupon */ = {
+			isa = PBXGroup;
+			children = (
+				7EACFC482A6882A8005F416A /* WishCouponDataModel.swift */,
+			);
+			path = WishCoupon;
+			sourceTree = "<group>";
+		};
+		7EACFC4A2A68869F005F416A /* WishCouponRepository */ = {
+			isa = PBXGroup;
+			children = (
+				7EACFC4B2A6886DB005F416A /* WishCouponRepository.swift */,
+			);
+			path = WishCouponRepository;
 			sourceTree = "<group>";
 		};
 		7EE3B19B2A604FAC00962F4C /* History */ = {
@@ -1302,8 +1327,10 @@
 				36CF2F7B2A65B08B00D8F8E1 /* BattleCategoryView.swift in Sources */,
 				8D17B88A2A659CF00091D7AD /* WriteWishView.swift in Sources */,
 				8D2B2E762A6161A900B75CDD /* SettingTableViewCell.swift in Sources */,
+				7EACFC4C2A6886DB005F416A /* WishCouponRepository.swift in Sources */,
 				7E5C9D8C2A66E74A00488DBD /* HistoryStatusView.swift in Sources */,
 				8D6CB1F42A6501B400FE46C2 /* LogoutView.swift in Sources */,
+				7EBAA5352A6928CB000EF883 /* SDSCardWishView.swift in Sources */,
 				A53C63012A67DE6100AE3B45 /* UserDataModel.swift in Sources */,
 				36012F4D2A55CEF4006B8A39 /* UIButton+.swift in Sources */,
 				A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */,
@@ -1324,6 +1351,7 @@
 				36CF2F792A65B06000D8F8E1 /* SelectBattleCategoryViewController.swift in Sources */,
 				36CF2F6C2A6579B600D8F8E1 /* BattleResultViewController.swift in Sources */,
 				36CF2F842A65C77C00D8F8E1 /* BattleCategoryViewController.swift in Sources */,
+				7EACFC492A6882A8005F416A /* WishCouponDataModel.swift in Sources */,
 				36CF2F682A643C8900D8F8E1 /* BattleHistoryView.swift in Sources */,
 				7EACFC432A6826F6005F416A /* HistoryDataModel.swift in Sources */,
 				361FA34A2A602AC000C3BBFD /* MissionContent.swift in Sources */,

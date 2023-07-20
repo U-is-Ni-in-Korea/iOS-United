@@ -39,8 +39,6 @@ class HistoryDetailViewController: BaseViewController, HistoryDetailViewDelegate
     
     // MARK: - Setting
     
-    
-    
     private func setStyle() {
     }
     
