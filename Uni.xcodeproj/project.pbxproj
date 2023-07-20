@@ -61,6 +61,10 @@
 		361FA3842A628A2100C3BBFD /* BattleWishCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3832A628A2100C3BBFD /* BattleWishCollectionViewCell.swift */; };
 		361FA38A2A62D65800C3BBFD /* BattleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3892A62D65800C3BBFD /* BattleDataModel.swift */; };
 		3698B2142A683C35006314FE /* MakeBattleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B2132A683C35006314FE /* MakeBattleDataModel.swift */; };
+		3698B2162A686209006314FE /* RoundBattleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B2152A686209006314FE /* RoundBattleDataModel.swift */; };
+		3698B2182A686438006314FE /* DeleteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B2172A686438006314FE /* DeleteService.swift */; };
+		3698B21A2A6864B8006314FE /* ErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B2192A6864B8006314FE /* ErrorCode.swift */; };
+		3698B21C2A691B3F006314FE /* BattleWishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B21B2A691B3F006314FE /* BattleWishCouponView.swift */; };
 		36CF2F642A63F31100D8F8E1 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 36CF2F622A63F2FF00D8F8E1 /* Config.xcconfig */; };
 		36CF2F662A643C6900D8F8E1 /* BattleHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F652A643C6900D8F8E1 /* BattleHistoryViewController.swift */; };
 		36CF2F682A643C8900D8F8E1 /* BattleHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F672A643C8900D8F8E1 /* BattleHistoryView.swift */; };
@@ -212,6 +216,10 @@
 		361FA3832A628A2100C3BBFD /* BattleWishCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleWishCollectionViewCell.swift; sourceTree = "<group>"; };
 		361FA3892A62D65800C3BBFD /* BattleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleDataModel.swift; sourceTree = "<group>"; };
 		3698B2132A683C35006314FE /* MakeBattleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeBattleDataModel.swift; sourceTree = "<group>"; };
+		3698B2152A686209006314FE /* RoundBattleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBattleDataModel.swift; sourceTree = "<group>"; };
+		3698B2172A686438006314FE /* DeleteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteService.swift; sourceTree = "<group>"; };
+		3698B2192A6864B8006314FE /* ErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCode.swift; sourceTree = "<group>"; };
+		3698B21B2A691B3F006314FE /* BattleWishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleWishCouponView.swift; sourceTree = "<group>"; };
 		36CF2F622A63F2FF00D8F8E1 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		36CF2F652A643C6900D8F8E1 /* BattleHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryViewController.swift; sourceTree = "<group>"; };
 		36CF2F672A643C8900D8F8E1 /* BattleHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryView.swift; sourceTree = "<group>"; };
@@ -503,6 +511,7 @@
 		36012F3F2A55B650006B8A39 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				3698B2192A6864B8006314FE /* ErrorCode.swift */,
 				361FA33C2A6025E100C3BBFD /* Couple.swift */,
 				361FA33E2A60261000C3BBFD /* ShortGame.swift */,
 				361FA3412A6027B400C3BBFD /* WishCouponList.swift */,
@@ -544,6 +553,7 @@
 				361FA3312A601E7900C3BBFD /* PostService.swift */,
 				361FA3332A601EAA00C3BBFD /* PatchService.swift */,
 				361FA3372A60223200C3BBFD /* HeaderUtils.swift */,
+				3698B2172A686438006314FE /* DeleteService.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -601,6 +611,7 @@
 				36CF2F6F2A657B4D00D8F8E1 /* BattleStatusView.swift */,
 				36CF2F712A657DD400D8F8E1 /* BattleChipView.swift */,
 				36CF2F732A6583D700D8F8E1 /* BattleStatus.swift */,
+				3698B21B2A691B3F006314FE /* BattleWishCouponView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -647,6 +658,7 @@
 			children = (
 				361FA3892A62D65800C3BBFD /* BattleDataModel.swift */,
 				3698B2132A683C35006314FE /* MakeBattleDataModel.swift */,
+				3698B2152A686209006314FE /* RoundBattleDataModel.swift */,
 			);
 			path = Battle;
 			sourceTree = "<group>";
@@ -1224,6 +1236,7 @@
 				7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */,
 				36CF2F7E2A65B0B600D8F8E1 /* CategoryDescriptionView.swift in Sources */,
 				36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */,
+				3698B2162A686209006314FE /* RoundBattleDataModel.swift in Sources */,
 				36CF2F722A657DD400D8F8E1 /* BattleChipView.swift in Sources */,
 				3698B2142A683C35006314FE /* MakeBattleDataModel.swift in Sources */,
 				361FA3842A628A2100C3BBFD /* BattleWishCollectionViewCell.swift in Sources */,
@@ -1236,6 +1249,7 @@
 				8D2B2E882A61778900B75CDD /* MyPageTableViewCell.swift in Sources */,
 				361FA3422A6027B400C3BBFD /* WishCouponList.swift in Sources */,
 				8D6CB1FE2A6509C200FE46C2 /* DisconnectViewController.swift in Sources */,
+				3698B21A2A6864B8006314FE /* ErrorCode.swift in Sources */,
 				36012F3E2A55B64C006B8A39 /* HomeDataModel.swift in Sources */,
 				7E37BAE72A6271DC00A3CF64 /* HistoryDetailView.swift in Sources */,
 				A53C63042A6872D700AE3B45 /* DDayRepository.swift in Sources */,
@@ -1344,6 +1358,7 @@
 				36CF2F742A6583D700D8F8E1 /* BattleStatus.swift in Sources */,
 				7E6499612A65178D00B2F86C /* WishCouponYourCollectionViewCell.swift in Sources */,
 				A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */,
+				3698B2182A686438006314FE /* DeleteService.swift in Sources */,
 				A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */,
 				36012F452A55CDAA006B8A39 /* CGPoint+.swift in Sources */,
 				A56C4E622A68FA3F00C18C8F /* CoupleJoinRepository.swift in Sources */,
@@ -1352,6 +1367,7 @@
 				8DAAB2B82A61CDB700E25CF4 /* DatePickerView.swift in Sources */,
 				361FA32E2A601D1B00C3BBFD /* NetworkResult.swift in Sources */,
 				7E5C9D922A66E83D00488DBD /* HistoryChipView.swift in Sources */,
+				3698B21C2A691B3F006314FE /* BattleWishCouponView.swift in Sources */,
 				36CF2F6A2A643CFB00D8F8E1 /* BattleNavigationBar.swift in Sources */,
 				361FA37D2A6277C300C3BBFD /* BattleView.swift in Sources */,
 				361FA34E2A602B5400C3BBFD /* MyRoundMission.swift in Sources */,

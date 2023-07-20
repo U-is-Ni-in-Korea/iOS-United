@@ -80,7 +80,9 @@ class BattleCollectionViewCell: UICollectionViewCell {
         self.contentView.layer.borderWidth = 1
     }
     
-    private let iconImageView = UIImageView(image: SDSIcon.icAppleLogin)
+    private let iconImageView = UIImageView().then {
+        $0.contentMode = .scaleAspectFill
+    }
     private let titleLabel = UILabel().then {
         $0.font = SDSFont.btn2.font
         $0.textColor = .gray600

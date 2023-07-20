@@ -4,6 +4,11 @@ import SDSKit
 import SnapKit
 import Then
 
+enum ResultButtonType {
+    case showWish
+    case showHome
+}
+
 class BattleResultView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -11,29 +16,38 @@ class BattleResultView: UIView {
     init() {
         super.init(frame: .zero)
         self.setLayout()
-        bindMyMissionData(missionTitle: "나의 미션", clearAt: "23: 22")
-        bindOtherMissionData(missionTitle: "나의 미션", summary: "미션 내용")
     }
     
     func bindMyMissionData(missionTitle: String,
                            summary: String? = nil,
                            clearAt: String? = nil,
                            status: BattleStatus = .win) {
-        myBattleResultView.bindText(sectionTitle: "나의미션", title: missionTitle, summary: summary, status: status)
-        myBattleResultView.bindChipText(title: clearAt, subTitle: "미션성공", status: .win)
+//        myBattleResultView.bindText(sectionTitle: "나의미션", title: missionTitle, summary: summary, status: status)
+//        myBattleResultView.bindChipText(title: clearAt, subTitle: "미션성공", status: .win)
     }
     
     func bindOtherMissionData(missionTitle: String,
                               summary: String? = nil,
                               clearAt: String? = nil,
                               status: BattleStatus = .progress) {
-        otherBattleResultView.bindText(sectionTitle: "상대의 미션", title: missionTitle, summary: summary, status: status)
-        otherBattleResultView.bindChipText(title: clearAt, subTitle: "미션실패", status: status)
+//        otherBattleResultView.bindText(sectionTitle: "상대의 미션", title: missionTitle, summary: summary, status: status)
+//        otherBattleResultView.bindChipText(title: clearAt, subTitle: "미션실패", status: status)
     }
     
-    func setButtonConfig(state: SDSButtonState, buttonTitle: String) {
-        self.resultButton.setButtonTitle(title: buttonTitle)
-        self.resultButton.buttonState = state
+    func setButtonConfig(type: ResultButtonType) {
+        switch type {
+        case .showWish:
+            self.resultButton.buttonState = .enabled
+            self.resultButton.setButtonTitle(title: "소원권 조회하러 가기")
+        case .showHome:
+            var config = self.resultButton.configuration
+            config?.background.backgroundColor = .clear
+            config?.background.strokeColor = .lightBlue500
+            config?.background.strokeWidth = 1
+            config?.attributedTitle = "홈으로 돌아가기".setAttributeString(textColor: .lightBlue600,
+                                                                    font: SDSFont.btn1.font)
+            self.resultButton.configuration = config
+        }
     }
     
     private func setLayout() {
@@ -94,11 +108,10 @@ class BattleResultView: UIView {
     let statusSectionTitle = UILabel().then {
         $0.font = SDSFont.subTitle.font
         $0.textColor = .gray600
-        $0.text = "멋진 승리네요!"
+        $0.text = ""
     }
     let illustImageView = UIImageView().then {
         $0.contentMode = .scaleAspectFill
-        $0.image = SDSIcon.icAppleLogin
     }
     let resultButton = SDSButton(type: .fill, state: .enabled)
 }

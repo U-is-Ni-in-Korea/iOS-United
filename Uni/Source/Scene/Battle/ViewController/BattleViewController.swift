@@ -4,7 +4,6 @@ import SDSKit
 class BattleViewController: BaseViewController {
     
     //MARK: - life cycle
-    
     override func loadView() {
         super.loadView()
         self.view = battleView
@@ -62,11 +61,12 @@ class BattleViewController: BaseViewController {
     }
     
     private func isCanMakeSession() {
-        if self.selectedBattleId != nil {
+        if self.selectedBattleId != nil && self.missionContent.count <= 54{
             self.changeButtonState(state: .enabled)
         } else {
             self.changeButtonState(state: .disabled)
         }
+        self.battleView.collectionView.reloadData()
     }
     
     private func changeButtonState(state: SDSButtonState) {
@@ -85,14 +85,14 @@ class BattleViewController: BaseViewController {
                                                       type: .alert)
                 alert.okButtonTapCompletion = { [weak self] in
                     guard let strongSelf = self else {return}
-                    strongSelf.navigationController?.popViewController(animated: true)
+                    strongSelf.dismiss(animated: true)
                 }
                 alert.cancelButtonTapCompletion = { [weak self] in
                     guard let strongSelf = self else {return}
                     strongSelf.view.hideAlert(view: alert)
                 }
             } else {
-                strongSelf.navigationController?.popViewController(animated: true)
+                strongSelf.dismiss(animated: true)
             }
         }
     }
@@ -103,10 +103,15 @@ class BattleViewController: BaseViewController {
         self.battleRepository.getGameList { [weak self] data in
             guard let strongSelf = self else {return}
             strongSelf.battleData = data
-            strongSelf.battleView.collectionView.reloadData()
-            for _ in 0 ... data.count - 1 {
+            for index in 0 ... data.count - 1 {
+                if index == 0 {
+                    strongSelf.selectedBattleId = data[0].id
+                    strongSelf.selectedCellArray.append(true)
+                }
                 strongSelf.selectedCellArray.append(false)
             }
+            strongSelf.isCanMakeSession()
+            strongSelf.battleView.collectionView.reloadData()
             strongSelf.view.removeIndicator()
         }
     }
@@ -223,6 +228,7 @@ extension BattleViewController: UICollectionViewDataSource {
             return cell
         default: // section 1
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BattleWishCollectionViewCell.reuseIdentifier, for: indexPath) as? BattleWishCollectionViewCell else {return UICollectionViewCell()}
+            cell.couponView.delegate = self
             cell.makeButtonTapCompletion = { [weak self] state in
                 guard let strongSelf = self else {return}
                 if state == .enabled {
@@ -242,8 +248,11 @@ extension BattleViewController: UICollectionViewDataSource {
                             strongSelf.makeBattle { [weak self] roundId in
                                 guard let strongSelf = self else {return}
                                 let battleHistoryVC = BattleHistoryViewController()
-                                battleHistoryVC.roundId = roundId
-                                strongSelf.navigationController?.pushViewController(battleHistoryVC, animated: true)
+                                battleHistoryVC.modalPresentationStyle = .overFullScreen
+                                guard let pvc = strongSelf.presentingViewController else { return }
+                                strongSelf.dismiss(animated: true) {
+                                  pvc.present(battleHistoryVC, animated: true, completion: nil)
+                                }
                             }
                         }
                         
@@ -272,5 +281,10 @@ extension BattleViewController: UICollectionViewDelegateFlowLayout {
             return CGSize(width: UIScreen.main.bounds.width,
                           height: 56)
         }
+    }
+}
+extension BattleViewController: CouponTextDelegate {
+    func getCouponText(text: String) {
+        self.missionContent = text
     }
 }
