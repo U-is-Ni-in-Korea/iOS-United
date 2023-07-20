@@ -1,6 +1,8 @@
 struct WishCoupon: Codable {
     let id: Int
-    let image, content: String
+    let image: String?
+    let content: String
     let isVisible, isUsed: Bool
-    let usedAt, gameType: String
+    let usedAt: String?
+    let gameType: String
 }

@@ -35,8 +35,8 @@ final class HistoryDetailResultMissionView: UIView {
         super.init(frame: .zero)
         setLayout()
         setStyle()
-        bindMyMissionData(missionTitle: "헤드셋", clearAt: "23:22")
-        bindYourMissionData(missionTitle: "커피")
+//        bindMyMissionData(missionTitle: "헤드셋", clearAt: "23:22")
+//        bindYourMissionData(missionTitle: "커피")
     }
     
     // MARK: - Setting

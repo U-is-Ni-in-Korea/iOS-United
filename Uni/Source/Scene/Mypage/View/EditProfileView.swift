@@ -19,7 +19,7 @@ class EditProfileView: UIView {
         $0.contentMode = .scaleToFill
         $0.layer.borderColor = UIColor.clear.cgColor
         $0.layer.borderWidth = 1
-        $0.backgroundColor = .gray200
+        $0.image = UIImage(named: "logo")
     }
 
     var changeProfileImageButton = SDSChips(type: .blue, title: "사진 변경하기")
@@ -31,7 +31,6 @@ class EditProfileView: UIView {
     }
     
     public lazy var nicknameTextfield = SDSTextfield(placeholder: "", errorMessage: "글자수를 초과했어요", letterLimit: 15).then {
-        $0.sdsTextfield.text = "김유니"
         $0.sdsTextfield.layer.borderColor = UIColor.lightBlue500.cgColor
     }
     
@@ -48,8 +47,7 @@ class EditProfileView: UIView {
         $0.backgroundColor = .gray000
     }
     
-    var anniversaryDateLabel = UILabel().then {
-        $0.text = "test" //서버데이터 붙이기
+    public lazy var anniversaryDateLabel = UILabel().then {
         $0.backgroundColor = .clear
         $0.font = SDSFont.body2.font
         $0.textColor = .gray600
@@ -61,11 +59,6 @@ class EditProfileView: UIView {
         
         profileImageView.layer.cornerRadius = 8
         profileImageView.clipsToBounds = true
-        
-        guard let nickname = nicknameTextfield.sdsTextfield.text else {
-            return
-        }
-        nicknameTextfield.textfieldCountLabel.text = "\(nickname.count)/15"
         
     }
     

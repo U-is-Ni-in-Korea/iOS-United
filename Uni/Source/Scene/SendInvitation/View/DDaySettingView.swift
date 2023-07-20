@@ -39,6 +39,7 @@ final class DDaySettingView: UIView {
     let dDayDatePicker = UIDatePicker().then {
         $0.preferredDatePickerStyle = .wheels
         $0.locale = Locale(identifier: "ko-KR")
+        $0.timeZone = NSTimeZone.local
         $0.datePickerMode = .date
         $0.maximumDate = Date()
     }

@@ -8,8 +8,9 @@
 import Foundation
 
 struct UserDataModel: Codable {
-    let id: Int
-    let nickname: String
+    let id: Int?
+    let nickname: String?
     let image: String?
+    let startDate: String?
     let couple: Couple?
 }

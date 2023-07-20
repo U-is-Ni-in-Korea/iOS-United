@@ -19,9 +19,11 @@ final class NicknameSettingViewController: BaseViewController {
             
             if textCount >= 11 {
                 nicknameSettingView.nextButton.buttonState = .disabled
+                nicknameSettingView.nextButton.isEnabled = false
             }
             else {
                 nicknameSettingView.nextButton.buttonState = .enabled
+                nicknameSettingView.nextButton.isEnabled = true
             }
         }
     }
@@ -39,17 +41,6 @@ final class NicknameSettingViewController: BaseViewController {
         setLayout()
         setConfig()
         actions()
-        
-//        let key = keyChains.read(account: "accessToken")
-//        if let key = key {
-//            userRepository.patchUser(token: key, nickname: "창휘창휘") { response in
-//                if response {
-//                    print("성공!")
-//                    let coupleConnectionMethodViewController = CoupleConnectionMethodViewController()
-//                    self.navigationController?.pushViewController(coupleConnectionMethodViewController, animated: true)
-//                }
-//            }
-//        }
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -82,10 +73,29 @@ final class NicknameSettingViewController: BaseViewController {
             }
         }
         
+        let tapGesture = UITapGestureRecognizer(target: self,
+                                                action: #selector(nextButtonTapped))
+        tapGesture.delegate = self
+        nicknameSettingView.nextButton.addGestureRecognizer(tapGesture)
         nicknameSettingView.nextButton.addTarget(self, action: #selector(nextButtonTapped), for: .touchUpInside)
     }
     @objc func nextButtonTapped() {
-        print("dddddd")
+        view.showIndicator()
+        let nickname = nicknameSettingView.nickNameTextField.sdsTextfield.text
+        if let nickname = nickname {
+            userRepository.patchUser(nickname: nickname) { response in
+                if response {
+                    print("성공!")
+                    self.view.removeIndicator()
+                    let coupleConnectionMethodViewController = CoupleConnectionMethodViewController()
+                    self.navigationController?.pushViewController(coupleConnectionMethodViewController, animated: true)
+                }
+                else {
+                    print("실패")
+                    self.view.removeIndicator()
+                }
+            }
+        }
     }
     
     // MARK: - Custom Method
@@ -158,9 +168,8 @@ extension NicknameSettingViewController: UITextFieldDelegate {
         return true
     }
 }
-
 extension NicknameSettingViewController: UIGestureRecognizerDelegate {
-    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldReceive touch: UITouch) -> Bool {
-        return false
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 }

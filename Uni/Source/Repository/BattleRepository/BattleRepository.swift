@@ -40,4 +40,44 @@ class BattleRepository {
             completion(data)
         }
     }
+    
+    func getRoundGameData(roundId: Int,
+                          completion: @escaping ((RoundBattleDataModel) -> Void)) {
+        GetService.shared.getService(from: Config.baseURL + "api/game/short/\(roundId)",
+                                     isUseHeader: true) { (data: RoundBattleDataModel?,
+                                                                  error) in
+            guard let data = data else {
+                print("error: \(error?.debugDescription)")
+                return
+            }
+            completion(data)
+        }
+    }
+    
+    func patchRoundGameData(state: Bool,
+                            roundId: Int,
+                            completion: @escaping ((RoundBattleDataModel) -> Void)) {
+        let param: Parameters = ["result": state]
+        PatchService.shared.patchService(with: param,
+                                         isUseHeader: true,
+                                         from: Config.baseURL + "api/game/short/\(roundId)") { (data: RoundBattleDataModel?, error) in
+            guard let data = data else {
+                print("error: \(error?.debugDescription)")
+                return
+            }
+            completion(data)
+        }
+    }
+    
+    func deleteRoundGameData(roundId: Int, completion: @escaping ((ErrorCode?) -> Void)) {
+        DeleteService.shared.deleteService(from: Config.baseURL + "api/game/short/\(roundId)",
+                                           isUseHeader: true) { (data: ErrorCode? ,error) in
+            guard let data = data else {
+                print("error: \(error?.debugDescription)")
+                completion(nil)
+                return
+            }
+            completion(data)
+        }
+    }
 }
