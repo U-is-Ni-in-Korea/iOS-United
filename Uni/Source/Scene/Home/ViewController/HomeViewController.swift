@@ -3,7 +3,8 @@ import UIKit
 final class HomeViewController: BaseViewController {
     let homeView = HomeView()
     private let homeRepository = HomeRepository()
-
+    private var homeData: HomeDataModel?
+    
     //MARK: - life cycle
     override func loadView() {
         super.loadView()
@@ -37,6 +38,42 @@ final class HomeViewController: BaseViewController {
         self.homeView.battleView.wishCouponButton.addGestureRecognizer(wishGesture)
     }
     
+    private func didProgressGameExist(completion: @escaping ((Bool?) -> Void)) {
+        // if data.shortGame == nil
+        //if data.shortGame?.enable == false -> 입력창
+        //if data.shortGame?.enable == ture -> 결과창
+        if self.homeData?.shortGame == nil {
+            completion(nil)
+        } else {
+            if let roundId = homeData?.roundGameId {
+                self.homeRepository.isWriteGameState(roundGameId: roundId) { [weak self] state in
+                    completion(state)
+                }
+            }
+        }
+    }
+    
+    private func transitionView() {
+        self.didProgressGameExist { [weak self] state in
+            guard let strongSelf = self else {return}
+            if state == nil {
+                let createBattleVC = BattleViewController()
+                createBattleVC.modalPresentationStyle = .overFullScreen
+                strongSelf.present(createBattleVC, animated: true)
+            }
+            else if state! {
+                let historyVC = BattleResultViewController()
+                historyVC.modalPresentationStyle = .overFullScreen
+                strongSelf.present(historyVC, animated: true)
+            } else {
+                let resultVC = BattleHistoryViewController()
+                resultVC.modalPresentationStyle = .overFullScreen
+                strongSelf.present(resultVC, animated: true)
+            }
+        }
+    }
+
+    
     @objc private func battleViewTapped(_ sender: UIGestureRecognizer) {
         //기존의 저장된 밸류와 다르면 화면 전환
         isAlreaydGameFinish { [weak self] state in
@@ -45,9 +82,7 @@ final class HomeViewController: BaseViewController {
                 strongSelf.getHomeList()
                 strongSelf.view.showToast(message: "승부가 이미 완료되었습니다.", hasSafeArea: true)
             } else {
-                let createBattleVC = BattleViewController()
-                createBattleVC.modalPresentationStyle = .overFullScreen
-                strongSelf.navigationController?.pushViewController(createBattleVC, animated: true)
+                strongSelf.transitionView()
             }
         }
     }
@@ -65,7 +100,7 @@ final class HomeViewController: BaseViewController {
             guard let strongSelf = self else {return}
             //비교를 위한 alreadyFinish flag 추가
             UserDefaultsManager.shared.save(value: data.shortGame == nil ? false: true, forkey: .isAlreadyFinish)
-            
+            strongSelf.homeData = data
             strongSelf.homeView.bindData(myScore: data.myScore,
                                          partnerScore: data.partnerScore,
                                          drawScore: data.drawCount,
@@ -85,6 +120,8 @@ final class HomeViewController: BaseViewController {
             completion(state)
         }
     }
+    
+    
     
 }
 extension HomeViewController: UIGestureRecognizerDelegate {

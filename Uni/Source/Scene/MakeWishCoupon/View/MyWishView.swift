@@ -35,7 +35,7 @@ class MyWishView: UIView {
         $0.layer.cornerRadius = 16
     }
     
-    var useWishCouponButton = SDSButton(type: .fill, state: .enabled).then {
+    public var useWishCouponButton = SDSButton(type: .fill, state: .enabled).then {
         $0.titleLabel?.textColor = .gray000
     }
     
@@ -111,9 +111,20 @@ class MyWishView: UIView {
     }
     
     func transformViewToImage() -> UIImage {
+        
+        if let image = UIImage(named: "background")?.resize(targetSize: .init(width: self.myWishCouponView.bounds.width, height: self.myWishCouponView.bounds.height)) {
+            self.myWishCouponView.dashlineStackView.isHidden = true
+            self.myWishCouponView.backgroundColor = UIColor(patternImage: image)
+        }
+        
         let renderer = UIGraphicsImageRenderer(bounds: myWishCouponView.bounds)
         return renderer.image {rendererContext in myWishCouponView.layer.render(in: rendererContext.cgContext)
+            
+            self.myWishCouponView.backgroundColor = .none
+            self.myWishCouponView.dashlineStackView.isHidden = false
+
         }
+        
     }
 
 }

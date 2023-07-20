@@ -10,7 +10,7 @@ import Alamofire
 
 class DDayRepository {
     
-    func postDday(startDate: String, completion: @escaping ((Bool) -> Void)) {
+    func postDday(startDate: String, completion: @escaping ((DDayDataModel) -> Void)) {
         let params: Parameters = [
             "startDate": "\(startDate)"
         ]
@@ -20,10 +20,9 @@ class DDayRepository {
             if let error = error {
                 print(error.description)
                 print("실패")
-                completion(false)
             }
             else if let data = data {
-                completion(true)
+                completion(data)
                 print("성공")
                 
             }

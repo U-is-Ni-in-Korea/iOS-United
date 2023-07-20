@@ -10,14 +10,14 @@ class PatchService {
                                       isUseHeader: Bool,
                                       from url: String,
                                       callback: @escaping (_ data: T?, _ error: String?) -> ()) {
-                                   AF.request(url,
-                           
-                                              method: .patch,
-                                     parameters: param,
-                                     encoding: JSONEncoding.default,
-                                     headers: isUseHeader ? tokenUtils.getAuthorizationHeader(): tokenUtils.getNormalHeader()).response { response in
+        AF.request(url,
+                   method: .patch,
+                   parameters: param,
+                   encoding: JSONEncoding.default,
+                   headers: isUseHeader ? tokenUtils.getAuthorizationHeader(): tokenUtils.getNormalHeader()).response { response in
 
             do {
+                dump(response)
                 print("\n\n 😎 ErrorCode is : \(response.response?.statusCode)\n\n")
                 guard let resData = response.data else {
                     callback(nil, "emptyData")

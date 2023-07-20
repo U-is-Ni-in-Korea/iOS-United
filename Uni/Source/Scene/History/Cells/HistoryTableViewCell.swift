@@ -127,9 +127,9 @@ final class HistoryTableViewCell: UITableViewCell {
     // MARK: - Action Helper
     
     // MARK: - Custom Method
-    func configureCell() { // 내용을 붙여주는 함수
-        gameDateLabel.text = "23.06.20"
-        gameNameLabel.text = "대답 유도하기"
-        gameResultLabel.text = "패배"
+    func configureCell(historyData: HistoryDataModel) { // 내용을 붙여주는 함수
+        gameDateLabel.text = historyData.date ?? ""
+        gameNameLabel.text = historyData.title ?? ""
+        gameResultLabel.text = HistoryStatus(rawValue: historyData.result ?? "")?.getStatusT()
     }
 }

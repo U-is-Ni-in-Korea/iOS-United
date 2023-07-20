@@ -10,9 +10,10 @@ import UIKit
 
 final class EnterInvitationViewController: BaseViewController {
     // MARK: - Property
-    private var enterInvitationView = EnterInvitationView()
+    private let coupleJoinRepository = CoupleJoinRepository()
 
     // MARK: - UI Property
+    private var enterInvitationView = EnterInvitationView()
     
     // MARK: - Life Cycle
     override func loadView() {
@@ -46,9 +47,49 @@ final class EnterInvitationViewController: BaseViewController {
 
     // MARK: - Action Helper
     private func actions() {
+        let tapGesture = UITapGestureRecognizer(target: self,
+                                                action: #selector(connectionButtonTapped))
+        tapGesture.delegate = self
+        enterInvitationView.connectionButton.addGestureRecognizer(tapGesture)
+        enterInvitationView.connectionButton.addTarget(self, action: #selector(connectionButtonTapped), for: .touchUpInside)
+        
+        enterInvitationView.navigationBarView.backButtonCompletionHandler = {
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     // MARK: - Custom Method
+    @objc func connectionButtonTapped() {
+        view.showIndicator()
+        let code = enterInvitationView.invitationTextField.sdsTextfield.text
+        guard let code else { return }
+        coupleJoinRepository.postCoupleJoin(code: code) { value in
+            print(value, "ddddddd")
+            if let value = value {
+                if value == "UE1007" {
+                    ///옳바르지 않은 코드
+                    self.view.removeIndicator()
+                    self.enterInvitationView.invitationTextField.errorLabel.text = "입력하신 코드 정보를 찾을 수 없어요"
+                    self.enterInvitationView.invitationTextField.errorLabel.textColor = .red500
+                    self.enterInvitationView.invitationTextField.sdsTextfield.layer.borderColor = UIColor.red500.cgColor
+                    self.enterInvitationView.invitationTextField.errorLabel.isHidden = false
+                }
+                else {
+                    self.view.removeIndicator()
+                    print("예외")
+                }
+            }
+            /// 성공
+            else {
+                print("성공")
+                self.view.removeIndicator()
+                UserDefaultsManager.shared.save(value: true, forkey: .hasCoupleCode)
+                let homeViewController = HomeViewController()
+                self.changeRootViewController(UINavigationController(rootViewController: homeViewController))
+            }
+        }
+    }
+    
     @objc func keyboardUp(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             let height = -keyboardSize.height - 16
@@ -80,6 +121,17 @@ final class EnterInvitationViewController: BaseViewController {
             })
         }
     }
+    func changeRootViewController(_ viewControllerToPresent: UIViewController) {
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = viewControllerToPresent
+            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil)
+            print("이거")
+        } else {
+            viewControllerToPresent.modalPresentationStyle = .overFullScreen
+            self.present(viewControllerToPresent, animated: true, completion: nil)
+            print("else")
+        }
+    }
 }
 
 // MARK: - UITableView Delegate
@@ -98,8 +150,10 @@ extension EnterInvitationViewController: UITextFieldDelegate {
          guard let currentText = textField.text else { return }
          if currentText.count >= 9 {
              enterInvitationView.connectionButton.buttonState = .enabled
+             enterInvitationView.connectionButton.isEnabled = true
          } else {
              enterInvitationView.connectionButton.buttonState = .disabled
+             enterInvitationView.connectionButton.isEnabled = false
          }
      }
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
@@ -110,4 +164,9 @@ extension EnterInvitationViewController: UITextFieldDelegate {
          }
          return true
      }
+}
+extension EnterInvitationViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
 }

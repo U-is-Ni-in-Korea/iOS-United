@@ -28,6 +28,7 @@ final class EnterInvitationView: UIView {
     
     let connectionButton = SDSButton(type: .fill, state: .disabled).then {
         $0.setButtonTitle(title: "연결하기")
+        $0.isEnabled = false
     }
 
 
@@ -44,7 +45,7 @@ final class EnterInvitationView: UIView {
 
     private func setConfig() {
         self.backgroundColor = UIColor.gray000
-
+        invitationTextField.sdsTextfield.keyboardType = .namePhonePad
 
     }
 

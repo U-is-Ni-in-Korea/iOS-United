@@ -14,10 +14,18 @@ final class CodeGeneratorView: UIView {
 
     // MARK: - UI Property
     
+    let indicatorView = UIActivityIndicatorView().then {
+        $0.backgroundColor = .gray250
+        $0.layer.cornerRadius = 10
+        $0.layer.borderWidth = 1
+        $0.layer.borderColor = UIColor.lightBlue500.cgColor
+        $0.isHidden = true
+    }
+    
     let navigationBarView = SDSNavigationBar(hasBack: true, hasTitleItem: false)
     
     private let logoImageView = UIImageView().then {
-        $0.backgroundColor = .red
+        $0.image = UIImage(named: "symbol")
     }
     
     let nextButton = SDSButton(type: .fill, state: .enabled).then {
@@ -26,14 +34,13 @@ final class CodeGeneratorView: UIView {
     
     let myCodeLabel = SDSChips(type: .blue, title: "나의 코드")
     
-    private let codeLabel = UILabel().then {
-        $0.text = "123 456 789"
+    let codeLabel = UILabel().then {
         $0.textColor = .lightBlue950
         $0.font = SDSFont.subTitle.font
     }
     
-    let codeCodyButton = SDSButton(type: .fill, state: .enabled).then {
-        $0.setButtonTitle(title: "초대코드 복사하기")
+    let shareCodeButton = SDSButton(type: .fill, state: .enabled).then {
+        $0.setButtonTitle(title: "초대코드 공유하기")
     }
     
     let connectionCheckButton = SDSButton(type: .line, state: .enabled).then {
@@ -60,7 +67,7 @@ final class CodeGeneratorView: UIView {
     }
 
     private func setLayout() {
-        self.addSubviews([navigationBarView, logoImageView, connectionCheckButton, codeCodyButton, myCodeLabel, codeLabel])
+        self.addSubviews([navigationBarView, logoImageView, connectionCheckButton, shareCodeButton, myCodeLabel, codeLabel, indicatorView])
 
         navigationBarView.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide)
@@ -69,7 +76,8 @@ final class CodeGeneratorView: UIView {
         }
         
         logoImageView.snp.makeConstraints {
-            $0.height.width.equalTo(158)
+            $0.height.equalTo(140)
+            $0.width.equalTo(120)
             $0.top.equalTo(navigationBarView.snp.bottom).offset(128)
             $0.centerX.equalToSuperview()
         }
@@ -78,14 +86,20 @@ final class CodeGeneratorView: UIView {
         connectionCheckButton.snp.makeConstraints {
             $0.height.equalTo(48)
             $0.leading.trailing.equalToSuperview().inset(20)
-            $0.bottom.equalToSuperview().inset(16)
+            $0.bottom.equalTo(self.safeAreaLayoutGuide).offset(-16)
         }
         
-        codeCodyButton.snp.makeConstraints {
+        shareCodeButton.snp.makeConstraints {
             $0.height.equalTo(48)
             $0.leading.trailing.equalToSuperview().inset(20)
             $0.bottom.equalTo(connectionCheckButton.snp.top).offset(-16)
         }
+        indicatorView.snp.makeConstraints {
+            $0.height.equalTo(48)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.bottom.equalTo(self.safeAreaLayoutGuide).offset(-16)
+        }
+        
         myCodeLabel.snp.makeConstraints {
             $0.top.equalTo(logoImageView.snp.bottom).offset(47)
             $0.centerX.equalToSuperview()

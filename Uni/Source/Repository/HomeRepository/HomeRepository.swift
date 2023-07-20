@@ -31,4 +31,17 @@ class HomeRepository {
             completion(flag)
         }
     }
+    
+    func isWriteGameState(roundGameId: Int,
+                          completion: @escaping ((Bool) -> Void)) {
+        GetService.shared.getService(from: Config.baseURL + "api/game/short/\(roundGameId)",
+                                     isUseHeader: true) { (data: RoundBattleDataModel?, error) in
+            if data?.myRoundMission.result == "UNDECIDED" {
+                completion(false)
+            } else {
+                completion(true)
+            }
+        }
+    }
+    
 }

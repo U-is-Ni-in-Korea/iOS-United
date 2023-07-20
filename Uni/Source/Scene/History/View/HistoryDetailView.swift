@@ -23,9 +23,9 @@ final class HistoryDetailView: UIView {
     
     let navigationBar = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "승부 히스토리")
     
-    private var historyDetailResultView = HistoryDetailResultView()
+    var historyDetailResultView = HistoryDetailResultView()
     
-    private var historyDetailResultMissionView = HistoryDetailResultMissionView()
+    var historyDetailResultMissionView = HistoryDetailResultMissionView()
     
     // MARK: - Life Cycle
     
