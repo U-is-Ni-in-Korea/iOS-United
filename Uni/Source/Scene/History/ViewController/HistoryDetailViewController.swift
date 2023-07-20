@@ -88,20 +88,11 @@ class HistoryDetailViewController: BaseViewController, HistoryDetailViewDelegate
         historyDetailView.historyDetailResultView.gameDateLabel.text = historyDetailData?.date ?? ""
         historyDetailView.historyDetailResultView.gameNameLabel.text = historyDetailData?.title ?? ""
         historyDetailView.historyDetailResultView.gameResultLabel.text = "\(historyDetailData?.winner ?? "")님이 이겼어요"
+        if let url = URL(string: historyData.image ?? "") {
+            historyDetailView.historyDetailResultView.gameImageView.kf.setImage(with: url)
+        }
         historyDetailView.historyDetailResultMissionView.myHistoryResultView.missionTitleLabel.text = historyDetailData?.myMission.content
-//        historyDetailView.historyDetailResultMissionView.myHistoryResultView.chipView.titleLabel.text = historyDetailData?.myMission.time
-//        historyDetailView.historyDetailResultMissionView.myHistoryResultView.chipView.subTitleLabel.text = HistoryStatus(rawValue: historyDetailData?.myMission.result ?? "")?.getStatus()
-//
         historyDetailView.historyDetailResultMissionView.yourHistoryResultView.missionTitleLabel.text = historyDetailData?.partnerMission.content
-//        historyDetailView.historyDetailResultMissionView.yourHistoryResultView.chipView.titleLabel.text = historyDetailData?.partnerMission.time
-//        historyDetailView.historyDetailResultMissionView.yourHistoryResultView.chipView.subTitleLabel.text = HistoryStatus(rawValue: historyDetailData?.partnerMission.result ?? "")?.getStatus()
-        //1. 미션 성공/실패 여부 확인
-        //2. 성공은 타이틀, 서브타이틀 둘다 있어야 하고
-        //2. 실패는 타이틀만 있으면 됨
-//        historyDetailView.historyDetailResultMissionView.yourHistoryResultView.bindChipText(title: historyDetailData?.partnerMission.time,
-//                                                                                            subTitle: HistoryStatus(rawValue: historyDetailData?.partnerMission.result ?? "")?.getStatus(),
-//                                                                                            status: state)
-        
     }
     
 }

@@ -16,13 +16,11 @@ final class HistoryDetailResultView: UIView {
     // MARK: - UI Property
     
     let gameDateLabel = UILabel().then {
-//        $0.text = "23.06.20"
         $0.textColor = .gray400
         $0.font = SDSFont.body2.font
     }
     
     let gameImageView = UIImageView().then {
-        $0.backgroundColor = .gray200 //이미지 변경하기
         $0.layer.cornerRadius = 8
     }
     
@@ -33,13 +31,11 @@ final class HistoryDetailResultView: UIView {
     }
     
     let gameNameLabel = UILabel().then {
-        $0.text = "키워드 스무고개"
         $0.textColor = .gray600
         $0.font = SDSFont.subTitle.font
     }
     
     let gameResultLabel = UILabel().then {
-        $0.text = "철수님이 이겼어요"
         $0.textColor = .lightBlue500
         $0.font = SDSFont.body2.font
     }
@@ -61,7 +57,6 @@ final class HistoryDetailResultView: UIView {
     // MARK: - Setting
     
     private func setStyle() {
-        
     }
     
     private func setLayout() {
@@ -89,7 +84,6 @@ final class HistoryDetailResultView: UIView {
             $0.leading.equalTo(gameImageView.snp.trailing).offset(16)
             $0.trailing.equalToSuperview().inset(18)
         }
-
     }
     
     // MARK: - Action Helper
