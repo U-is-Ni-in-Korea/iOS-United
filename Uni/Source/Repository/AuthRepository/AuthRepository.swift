@@ -3,12 +3,12 @@ import Alamofire
 
 class AuthRepository {
     
-    func postToken(token: String, completion: @escaping ((KakaoLoginDataModel) -> Void)) {
+    func postToken(socialType: String, token: String, completion: @escaping ((KakaoLoginDataModel) -> Void)) {
         let params: Parameters = [
             "code": "\(token)"
         ]
         print("?????????????")
-        PostService.shared.postService(with: params, isUseHeader: false, from: Config.baseURL + "auth/kakao", callback: {
+        PostService.shared.postService(with: params, isUseHeader: false, from: Config.baseURL + "auth/\(socialType)", callback: {
             (data: KakaoLoginDataModel?, error: String?) in
             if let error = error {
                 print(error.description)

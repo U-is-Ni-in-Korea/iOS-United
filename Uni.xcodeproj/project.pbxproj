@@ -158,6 +158,7 @@
 		A56C4E622A68FA3F00C18C8F /* CoupleJoinRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C4E612A68FA3F00C18C8F /* CoupleJoinRepository.swift */; };
 		A56C4E682A68FB6B00C18C8F /* GetCoupleJoinDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C4E672A68FB6B00C18C8F /* GetCoupleJoinDataModel.swift */; };
 		A56C4E6A2A68FD0F00C18C8F /* PostCoupleJoinDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C4E692A68FD0F00C18C8F /* PostCoupleJoinDataModel.swift */; };
+		A56C4E702A69A42500C18C8F /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C4E6F2A69A42500C18C8F /* SplashViewController.swift */; };
 		A578FC142A62D9210021A32E /* DDaySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578FC132A62D9210021A32E /* DDaySettingViewController.swift */; };
 		A578FC162A62D9380021A32E /* DDaySettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578FC152A62D9380021A32E /* DDaySettingView.swift */; };
 		A578FC182A62D9AB0021A32E /* CodeGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578FC172A62D9AB0021A32E /* CodeGeneratorViewController.swift */; };
@@ -315,6 +316,8 @@
 		A56C4E612A68FA3F00C18C8F /* CoupleJoinRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleJoinRepository.swift; sourceTree = "<group>"; };
 		A56C4E672A68FB6B00C18C8F /* GetCoupleJoinDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoupleJoinDataModel.swift; sourceTree = "<group>"; };
 		A56C4E692A68FD0F00C18C8F /* PostCoupleJoinDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCoupleJoinDataModel.swift; sourceTree = "<group>"; };
+		A56C4E6C2A698C2300C18C8F /* Uni.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Uni.entitlements; sourceTree = "<group>"; };
+		A56C4E6F2A69A42500C18C8F /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		A578FC132A62D9210021A32E /* DDaySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDaySettingViewController.swift; sourceTree = "<group>"; };
 		A578FC152A62D9380021A32E /* DDaySettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDaySettingView.swift; sourceTree = "<group>"; };
 		A578FC172A62D9AB0021A32E /* CodeGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeGeneratorViewController.swift; sourceTree = "<group>"; };
@@ -366,6 +369,7 @@
 		36012F0E2A55A9F4006B8A39 /* Uni */ = {
 			isa = PBXGroup;
 			children = (
+				A56C4E6C2A698C2300C18C8F /* Uni.entitlements */,
 				36012F232A55AD0D006B8A39 /* Source */,
 				36012F242A55AD11006B8A39 /* Resource */,
 			);
@@ -408,6 +412,7 @@
 		36012F262A55AE3F006B8A39 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				A56C4E6E2A69A40900C18C8F /* Splash */,
 				36CF2F752A65B00700D8F8E1 /* BattleCategory */,
 				8D17B8862A659A740091D7AD /* MakeWishCoupon */,
 				7E25F6482A632E7B003E82F6 /* WishCoupon */,
@@ -1077,6 +1082,22 @@
 			path = CoupleJoin;
 			sourceTree = "<group>";
 		};
+		A56C4E6E2A69A40900C18C8F /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				A56C4E712A69A43300C18C8F /* ViewController */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		A56C4E712A69A43300C18C8F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A56C4E6F2A69A42500C18C8F /* SplashViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		A578FC102A62D8CF0021A32E /* SendInvitation */ = {
 			isa = PBXGroup;
 			children = (
@@ -1307,6 +1328,7 @@
 				36012F3B2A55B60F006B8A39 /* AuthRepository.swift in Sources */,
 				7E37BAE92A6284EE00A3CF64 /* HistoryDetailResultView.swift in Sources */,
 				361FA3522A602C0900C3BBFD /* Game.swift in Sources */,
+				A56C4E702A69A42500C18C8F /* SplashViewController.swift in Sources */,
 				361FA3742A6268DD00C3BBFD /* HomeView.swift in Sources */,
 				361FA33D2A6025E100C3BBFD /* Couple.swift in Sources */,
 				361FA37B2A62722A00C3BBFD /* BattleViewController.swift in Sources */,
@@ -1544,6 +1566,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Uni/Uni.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 73J42HCMVV;
@@ -1563,6 +1587,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.universe.sparkle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
@@ -1577,6 +1602,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Uni/Uni.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 73J42HCMVV;
@@ -1596,6 +1623,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.universe.sparkle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
