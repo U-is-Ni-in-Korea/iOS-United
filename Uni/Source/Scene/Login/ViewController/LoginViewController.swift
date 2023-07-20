@@ -56,9 +56,7 @@ class LoginViewController: BaseViewController {
                 self.loginView.appleButton.isEnabled = true
                 if let accessToken = data.accessToken {
                     self.keyChains.create(account: "accessToken", value: accessToken)
-                    let nicknameSettingViewController = NicknameSettingViewController()
-                    nicknameSettingViewController.loginCase = "카카오"
-                    self.navigationController?.pushViewController(nicknameSettingViewController, animated: false)
+                    self.hasCouple(loginCase: "카카오")
                 }
             }
         })
@@ -117,6 +115,26 @@ class LoginViewController: BaseViewController {
                 }
         }
     }
+    private func changeRootViewController(_ viewControllerToPresent: UIViewController) {
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = viewControllerToPresent
+            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil)
+        } else {
+            viewControllerToPresent.modalPresentationStyle = .overFullScreen
+            self.present(viewControllerToPresent, animated: true, completion: nil)
+        }
+    }
+    func hasCouple(loginCase : String) {
+        if keyChains.isTokenExists(account: "accessToken") {
+            let homeViewController = HomeViewController()
+            self.changeRootViewController(UINavigationController(rootViewController: homeViewController))
+        }
+        else {
+            let nicknameSettingViewController = NicknameSettingViewController()
+            nicknameSettingViewController.loginCase = loginCase
+            navigationController?.pushViewController(nicknameSettingViewController, animated: false)
+        }
+    }
 }
 extension LoginViewController: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
@@ -131,9 +149,7 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
                     
                     if let accessToken = data.accessToken {
                         self.keyChains.create(account: "accessToken", value: accessToken)
-                        let nicknameSettingViewController = NicknameSettingViewController()
-                        nicknameSettingViewController.loginCase = "Apple"
-                        self.navigationController?.pushViewController(nicknameSettingViewController, animated: false)
+                        self.hasCouple(loginCase: "Apple")
                     }
                 }
             }
