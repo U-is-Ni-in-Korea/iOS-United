@@ -22,7 +22,11 @@ final class MyPageProfileView: UIView {
         $0.textColor = .gray600
     }
     
-    lazy var editProfileButton = SDSChips(type: .blue, title: "프로필 수정")
+    lazy var editProfileButton = UIButton().then {
+        $0.setImage(UIImage(named: "pencil"), for: .normal)
+    }
+    
+//    lazy var editProfileButton = SDSChips(type: .blue, title: "프로필 수정")
         
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -54,7 +58,7 @@ final class MyPageProfileView: UIView {
         }
         
         editProfileButton.snp.makeConstraints {
-            $0.trailing.equalToSuperview().inset(23)
+            $0.trailing.equalToSuperview().inset(16)
             $0.centerY.equalToSuperview()
         }
     }

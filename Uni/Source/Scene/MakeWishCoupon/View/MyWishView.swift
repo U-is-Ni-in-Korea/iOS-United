@@ -112,7 +112,7 @@ class MyWishView: UIView {
     
     func transformViewToImage() -> UIImage {
         
-        if let image = UIImage(named: "background")?.resize(targetSize: .init(width: self.myWishCouponView.bounds.width, height: self.myWishCouponView.bounds.height)) {
+        if let image = UIImage(named: "wishCouponBackground")?.resize(targetSize: .init(width: self.myWishCouponView.bounds.width, height: self.myWishCouponView.bounds.height)) {
             self.myWishCouponView.dashlineStackView.isHidden = true
             self.myWishCouponView.backgroundColor = UIColor(patternImage: image)
         }
