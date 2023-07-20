@@ -18,7 +18,8 @@ class WishCouponViewController: BaseViewController {
     
     private var wishCouponView = WishCouponView()
     private let wishCouponRepository = WishCouponRepository()
-    var userId: Int = 0
+    var myid: Int = 0
+    var partnerId: Int = 0
     
     // MARK: - Life Cycle
     
@@ -41,7 +42,7 @@ class WishCouponViewController: BaseViewController {
         super.viewWillAppear(animated)
         ///나
         view.showIndicator()
-        wishCouponRepository.getWishCouponData(userId: 4) { [weak self] data in
+        wishCouponRepository.getWishCouponData(userId: self.myid) { [weak self] data in
             guard let strongSelf = self else {return}
             print(data)
             strongSelf.configureData(wishCouponData: data)
@@ -52,7 +53,7 @@ class WishCouponViewController: BaseViewController {
         
         ///너
         view.showIndicator()
-        wishCouponRepository.getWishCouponData(userId: 7) { [weak self] data in
+        wishCouponRepository.getWishCouponData(userId: self.partnerId) { [weak self] data in
             guard let strongSelf = self else {return}
             print(data)
             strongSelf.wishCouponView.yourWishCouponData = data

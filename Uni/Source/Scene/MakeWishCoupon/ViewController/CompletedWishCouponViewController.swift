@@ -22,6 +22,7 @@ class CompletedWishCouponViewController: BaseViewController {
         setStyle()
         setLayout()
         setConfig()
+        setNavigationBarCompletion()
 //        completedWishCouponView.makeWishButton.setButtonTitle(title: "소원권 사용하기")
     }
     
@@ -40,8 +41,8 @@ class CompletedWishCouponViewController: BaseViewController {
     }
     
     @objc private func homeButtonTap() {
-        self.dismiss(animated: true)
-        self.navigationController?.popViewController(animated: true)
+        //홈으로 돌아가기
+        
     }
     
     private func setNavigationBarCompletion() {

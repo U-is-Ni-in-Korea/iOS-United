@@ -89,6 +89,10 @@ final class HomeViewController: BaseViewController {
     
     @objc private func wishCouponViewTapped(_ sender: UIGestureRecognizer) {
         let wishCouponVC = WishCouponViewController()
+        if let userId = homeData?.userID, let partnerId = homeData?.partnerId {
+            wishCouponVC.myid = userId
+            wishCouponVC.partnerId = partnerId
+        }
         self.navigationController?.pushViewController(wishCouponVC, animated: true)
     }
     
