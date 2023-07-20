@@ -69,9 +69,9 @@ extension AccountView: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        delegate?.didSelectCell(at: indexPath)
-//    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.didSelectCell(at: indexPath)
+    }
 }
 
 protocol AccountViewDelegate: AnyObject {

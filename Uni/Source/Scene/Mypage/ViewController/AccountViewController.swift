@@ -41,16 +41,16 @@ class AccountViewController: BaseViewController, AccountViewDelegate {
             logoutViewController.modalTransitionStyle = .crossDissolve
             self.present(logoutViewController, animated: true, completion: nil)
 
-        case 1 : let withdrawViewController = WithdrawViewController()
-            withdrawViewController.modalPresentationStyle = .overFullScreen
-            withdrawViewController.modalTransitionStyle = .crossDissolve
-            self.present(withdrawViewController, animated: true, completion: nil)
-            
-        case 2 : let disconnectViewController = DisconnectViewController()
-            disconnectViewController.modalPresentationStyle = .overFullScreen
-            disconnectViewController.modalTransitionStyle = .crossDissolve
-            self.present(disconnectViewController, animated: true, completion: nil)
-
+//        case 1 : let withdrawViewController = WithdrawViewController()
+//            withdrawViewController.modalPresentationStyle = .overFullScreen
+//            withdrawViewController.modalTransitionStyle = .crossDissolve
+//            self.present(withdrawViewController, animated: true, completion: nil)
+//
+//        case 2 : let disconnectViewController = DisconnectViewController()
+//            disconnectViewController.modalPresentationStyle = .overFullScreen
+//            disconnectViewController.modalTransitionStyle = .crossDissolve
+//            self.present(disconnectViewController, animated: true, completion: nil)
+//
         default:
             return
         }
