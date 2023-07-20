@@ -22,6 +22,7 @@ class SettingViewController: BaseViewController, SettingViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        settingViewNaviActions()
         settingViewActions()
     }
     
@@ -32,6 +33,13 @@ class SettingViewController: BaseViewController, SettingViewDelegate {
         settingView = SettingView(frame: self.view.frame)
         settingView.delegate = self
         self.view = settingView
+    }
+    
+    func settingViewNaviActions() {
+        self.settingView.settingViewNavi.backButtonCompletionHandler = { [weak self] in
+            guard let strongSelf = self else {return}
+            strongSelf.navigationController?.popViewController(animated: true)
+        }
     }
     
     func settingViewActions() {

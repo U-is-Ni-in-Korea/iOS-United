@@ -28,7 +28,9 @@ class AccountViewController: BaseViewController, AccountViewDelegate {
     }
     
     func accountNaviActions() {
-        self.accountView.accountViewNavi.backButtonCompletionHandler = { [self] in self.navigationController?.popViewController(animated: true)
+        self.accountView.accountViewNavi.backButtonCompletionHandler = { [weak self] in
+            guard let strongSelf = self else {return}
+            strongSelf.navigationController?.popViewController(animated: true)
         }
     }
     
@@ -40,6 +42,8 @@ class AccountViewController: BaseViewController, AccountViewDelegate {
             logoutViewController.modalPresentationStyle = .overFullScreen
             logoutViewController.modalTransitionStyle = .crossDissolve
             self.present(logoutViewController, animated: true, completion: nil)
+            
+            //탈퇴, 연결해제 미구현으로 주석처리
 
 //        case 1 : let withdrawViewController = WithdrawViewController()
 //            withdrawViewController.modalPresentationStyle = .overFullScreen

@@ -28,6 +28,7 @@ final class HomeViewController: BaseViewController {
     
     //MARK: - controll function
     private func addEvent() {
+        homeView.myPageButton.addTarget(self, action: #selector(myPageButtonTapped), for: .touchUpInside)
         let battleGesture = UITapGestureRecognizer(target: self,
                                                    action: #selector(battleViewTapped(_:)))
         battleGesture.delegate = self
@@ -72,8 +73,12 @@ final class HomeViewController: BaseViewController {
             }
         }
     }
-
     
+    @objc private func myPageButtonTapped() {
+        let myPageVC = SettingViewController()
+        self.navigationController?.pushViewController(myPageVC, animated: true)
+    }
+
     @objc private func battleViewTapped(_ sender: UIGestureRecognizer) {
         //기존의 저장된 밸류와 다르면 화면 전환
         isAlreaydGameFinish { [weak self] state in

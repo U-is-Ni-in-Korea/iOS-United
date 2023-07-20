@@ -20,6 +20,7 @@ class DatePickerView: UIView {
     }
     
     lazy var datePicker = UIDatePicker().then {
+        $0.locale = Locale(identifier: "ko-KR")
         $0.datePickerMode = .date
         $0.preferredDatePickerStyle = .wheels
         $0.timeZone = NSTimeZone.local
@@ -41,14 +42,14 @@ class DatePickerView: UIView {
     
     let cancelButton = UIButton().then {
         $0.setTitle("취소", for: .normal)
-        $0.setTitleColor(.gray600, for: .normal)
+        $0.setTitleColor(.lightBlue600, for: .normal)
         $0.titleLabel?.font = SDSFont.body1.font
         $0.backgroundColor = .gray000
     }
     
     let doneButton = UIButton().then {
         $0.setTitle("확인", for: .normal)
-        $0.setTitleColor(.gray600, for: .normal)
+        $0.setTitleColor(.lightBlue600, for: .normal)
         $0.titleLabel?.font = SDSFont.body1.font
         $0.backgroundColor = .gray000
     }
