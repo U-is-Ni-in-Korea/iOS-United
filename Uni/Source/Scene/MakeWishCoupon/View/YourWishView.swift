@@ -35,7 +35,7 @@ class YourWishView: UIView {
         $0.layer.cornerRadius = 16
     }
     
-    var isCouponUsedLabel = UILabel().then {
+    public var isCouponUsedLabel = UILabel().then {
         $0.font = SDSFont.body1.font
         $0.textColor = .gray300
     }
@@ -105,8 +105,17 @@ class YourWishView: UIView {
     }
     
     func transformViewToImage() -> UIImage {
+        
+        if let image = UIImage(named: "background")?.resize(targetSize: .init(width: self.yourWishCouponView.bounds.width, height: self.yourWishCouponView.bounds.height)) {
+            self.yourWishCouponView.dashlineStackView.isHidden = true
+            self.yourWishCouponView.backgroundColor = UIColor(patternImage: image)
+        }
+                
         let renderer = UIGraphicsImageRenderer(bounds: yourWishCouponView.bounds)
         return renderer.image {rendererContext in yourWishCouponView.layer.render(in: rendererContext.cgContext)
+            
+            self.yourWishCouponView.backgroundColor = .none
+            self.yourWishCouponView.dashlineStackView.isHidden = false
         }
     }
 
