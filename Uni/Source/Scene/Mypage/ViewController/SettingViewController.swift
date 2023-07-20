@@ -15,10 +15,14 @@ class SettingViewController: BaseViewController, SettingViewDelegate {
     
     private let userRepository = UserRepository()
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.getUserList()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         settingViewActions()
-        self.getUserList()
     }
     
     override func loadView() {

@@ -21,13 +21,12 @@ final class HistoryTableViewCell: UITableViewCell {
     // MARK: - UI Property
     
     private let gameDateLabel = UILabel().then {
-        //        $0.text = "23.06.20"
         $0.textColor = .gray400
         $0.font = SDSFont.body2.font
     }
     
     private let gameImageView = UIImageView().then {
-        $0.backgroundColor = .gray200 //이미지 변경하기
+        //이미지 변경하기
         $0.layer.cornerRadius = 8
     }
     
@@ -38,13 +37,11 @@ final class HistoryTableViewCell: UITableViewCell {
     }
     
     private let gameNameLabel = UILabel().then {
-        //        $0.text = "대답 유도하기"
         $0.textColor = .gray600
         $0.font = SDSFont.body1.font
     }
     
     private let gameResultLabel = UILabel().then {
-        //        $0.text = "패배"
         $0.textColor = .lightBlue500
         $0.font = SDSFont.body2.font
     }
@@ -131,5 +128,8 @@ final class HistoryTableViewCell: UITableViewCell {
         gameDateLabel.text = historyData.date ?? ""
         gameNameLabel.text = historyData.title ?? ""
         gameResultLabel.text = HistoryStatus(rawValue: historyData.result ?? "")?.getStatusT()
+        if let url = URL(string: historyData.image ?? "") {
+            gameImageView.kf.setImage(with: url)
+        }
     }
 }

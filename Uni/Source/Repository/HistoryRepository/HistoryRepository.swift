@@ -15,6 +15,7 @@ class HistoryRepository {
                 print("error")
                 return
             }
+            print(error)
             completion(data)
         }
     }

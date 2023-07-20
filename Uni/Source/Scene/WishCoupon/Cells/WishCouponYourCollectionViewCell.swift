@@ -20,7 +20,7 @@ final class WishCouponYourCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI Property
     
-    private let wishCouponView = SDSCardWish(title: "집 데려다주기", type: .title)
+    private let wishCouponListView = SDSCardWishView()
     
     // MARK: - Life Cycle
     
@@ -38,16 +38,16 @@ final class WishCouponYourCollectionViewCell: UICollectionViewCell {
     // MARK: - Setting
     
     private func setStyle() {
-        wishCouponView.layer.applyDepth2_1Shadow()
-        wishCouponView.layer.applyDepth2_2Shadow()
+        wishCouponListView.layer.applyDepth2_1Shadow()
+        wishCouponListView.layer.applyDepth2_2Shadow()
     }
     
     private func setLayout() {
-        [wishCouponView].forEach {
+        [wishCouponListView].forEach {
             self.contentView.addSubview($0)
         }
         
-        wishCouponView.snp.makeConstraints {
+        wishCouponListView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
     }
@@ -56,5 +56,20 @@ final class WishCouponYourCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Custom Method
     
-
+    func configureYourCell(yourWishCouponData: WishCouponList?) {
+        print("상대소원권 보여죠")
+        if let url = URL(string: yourWishCouponData?.image ?? "") {
+            wishCouponListView.wishImageView.kf.setImage(with: url)
+        }
+        wishCouponListView.setType(title: yourWishCouponData?.content ?? "", type: .title)
+        if let isUsed = yourWishCouponData?.isUsed {
+            wishCouponListView.chipLabel.text = usedCheck(value: isUsed).0
+            wishCouponListView.chipView.backgroundColor = usedCheck(value: isUsed).1
+            wishCouponListView.chipLabel.textColor = usedCheck(value: isUsed).2
+        }
+    }
+    
+    func usedCheck(value: Bool) -> (String, UIColor, UIColor) {
+        return value ? ("소원 성취", UIColor.gray100, UIColor.gray400) : ("소원권 사용하기", UIColor.green50, UIColor.green600)
+    }
 }

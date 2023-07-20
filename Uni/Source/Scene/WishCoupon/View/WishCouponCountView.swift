@@ -21,8 +21,7 @@ final class WishCouponCountView: UIView {
         $0.font = SDSFont.subTitle.font
     }
     
-    private let countLabel = UILabel().then {
-        $0.text = "사용 가능한 소원권이 6개 있어요" // 서버에서 받아오는 값 생각하기
+    let countLabel = UILabel().then {
         $0.textColor = .gray350
         $0.font = SDSFont.body2.font
     }
@@ -60,7 +59,6 @@ final class WishCouponCountView: UIView {
     // MARK: - Setting
     
     private func setStyle() {
-
     }
     
     private func setLayout() {
@@ -101,5 +99,4 @@ final class WishCouponCountView: UIView {
             $0.leading.equalTo(lineView.snp.trailing)
         }
     }
-
 }

@@ -7,12 +7,6 @@
 
 import Foundation
 
-//enum HistoryStatus {
-//    case win
-//    case lose
-//    case draw
-//}
-
 enum HistoryStatus: String {
     case win = "WIN"
     case lose = "LOSE"
