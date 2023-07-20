@@ -8,6 +8,7 @@
 import UIKit
 import KakaoSDKAuth
 import KakaoSDKUser
+import AuthenticationServices
 
 class LoginViewController: BaseViewController {
     // MARK: - Property
@@ -44,6 +45,7 @@ class LoginViewController: BaseViewController {
     // MARK: - Action Helper
     private func actions() {
         loginView.kakaoButton.addTarget(self, action: #selector(kakaoButtonTapped), for: .touchUpInside)
+        loginView.appleButton.addTarget(self, action: #selector(appleButtonTapped), for: .touchUpInside)
     }
     @objc func kakaoButtonTapped() {
         loginView.kakaoButton.isEnabled = false
@@ -61,6 +63,18 @@ class LoginViewController: BaseViewController {
                 }
             }
         })
+    }
+    
+    @objc func appleButtonTapped() {
+        loginView.kakaoButton.isEnabled = false
+        loginView.appleButton.isEnabled = false
+        
+        let request = ASAuthorizationAppleIDProvider().createRequest()
+        request.requestedScopes = [.fullName, .email]
+        let controller = ASAuthorizationController(authorizationRequests: [request])
+        controller.delegate = self
+        controller.presentationContextProvider = self as? ASAuthorizationControllerPresentationContextProviding
+        controller.performRequests()
     }
     
     // MARK: - Custom Method
@@ -106,6 +120,17 @@ class LoginViewController: BaseViewController {
                     }
                 }
         }
+    }
+}
+extension LoginViewController: ASAuthorizationControllerDelegate {
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
+        if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
+            
+            
+        }
+    }
+    func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
+        print("애플 로그인 실패")
     }
 }
 
