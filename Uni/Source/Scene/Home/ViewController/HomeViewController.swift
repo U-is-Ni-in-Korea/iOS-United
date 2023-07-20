@@ -15,11 +15,6 @@ final class HomeViewController: BaseViewController {
         super.viewDidLoad()
         self.addEvent()
         self.getHomeList()
-        
-        
-        //        let tokenUtil = HeaderUtils()
-        //        tokenUtil.delete("accessToken")
-        //        tokenUtil.create(account: "accessToken", value: "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhY2Nlc3NUb2tlbiIsImlhdCI6MTY4OTQ1MzY1OCwiZXhwIjoxNjkxMjUzNjU4LCJ1c2VySWQiOjd9.vgY_Iz1OcONRJYzgvRPOL_iUDyyK_JMnlYzs8yn2iP2668bUr8KHplUxX5k6gTog")
     }
     
     //MARK: - set view config
