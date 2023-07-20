@@ -85,12 +85,10 @@ class HistoryStatusView: UIView {
         backGroundStackView.addArrangeSubViews([missionTitleLabel, chipView])
         
         missionTitleLabel.snp.makeConstraints {
-//            $0.top.leading.equalToSuperview()
             $0.height.equalTo(20)
         }
         
         chipView.snp.makeConstraints {
-//            $0.leading.equalToSuperview().inset(20)
             $0.height.equalTo(26)
         }
     }

@@ -13,18 +13,6 @@ import SDSKit
 final class HistoryView: UIView {
     
     // MARK: - Property
-    
-//    var count = 0 {
-//        didSet {
-//            if count > 0 {
-//                hasHistoryData(hasData: true)
-//            }
-//            else {
-//                hasHistoryData(hasData: false)
-//            }
-//        }
-//    }
-
 
     // MARK: - UI Property
     
@@ -50,10 +38,6 @@ final class HistoryView: UIView {
         super.init(frame: .zero)
         setLayout()
         setStyle()
-        
-//        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-//            self.count = 5
-//        }) // 2초 뒤에 count가 2로 변하면서 앞의 didSet 작동하면서 hasHistoryData(hasData: true)함수 실행
     }
     
     // MARK: - Setting
@@ -67,7 +51,6 @@ final class HistoryView: UIView {
     private func setLayout() {
         [navigationBar, historyTableView, historyEmptyView]
             .forEach { addSubview($0) }
-        
         
         navigationBar.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide)
@@ -87,7 +70,6 @@ final class HistoryView: UIView {
             $0.leading.trailing.equalToSuperview()
         }
     }
-    
     
     // MARK: - Action Helper
     
