@@ -45,10 +45,12 @@ class HistoryViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        view.showIndicator()
         historyRepository.getHistoryData { data in
             print(data)
             self.historyData = data
         }
+        view.removeIndicator()
     }
     
     // MARK: - Setting
