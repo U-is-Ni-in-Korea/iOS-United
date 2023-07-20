@@ -15,7 +15,6 @@ class YourWishViewController: BaseViewController {
         super.viewDidLoad()
         yourWishBackActions()
         yourWishShareTapped()
-        isYourWishCouponUsed()
     }
     
     override func loadView() {
@@ -23,6 +22,15 @@ class YourWishViewController: BaseViewController {
         
         yourWishView = YourWishView(frame: self.view.frame)
         self.view = yourWishView
+    }
+    
+    func dataBindYourWish(wishContent: String, isUsed: Bool) {
+        yourWishView.yourWishCouponView.yourWishLabel.text = wishContent
+        isYourWishCouponUsed(isUsed)
+    }
+    
+    func dataBindYourName(nickname: String) {
+        yourWishView.yourWishCouponView.yourWishIsLabel.text = "\(nickname) 소원은"
     }
     
     func yourWishBackActions() {
@@ -37,8 +45,12 @@ class YourWishViewController: BaseViewController {
         yourWishView.isUserInteractionEnabled = true
     }
     
-    func isYourWishCouponUsed() {
-        yourWishView.isCouponUsedLabel.text = "이미 사용한 소원권이에요" //서버 isUsed Boolean 값 받아서 분기 처리 하기
+    func isYourWishCouponUsed(_ isUsed: Bool) {
+        if isUsed {
+            yourWishView.isCouponUsedLabel.text = "이미 사용한 소원권이에요"
+        } else {
+            yourWishView.isCouponUsedLabel.text = "상대가 아직 사용하지 않은 소원권이에요"
+        }
     }
     
     @objc func shareActions(_ gesture: UITapGestureRecognizer) {

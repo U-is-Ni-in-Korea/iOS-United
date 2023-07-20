@@ -25,6 +25,16 @@ class MyWishViewController: BaseViewController {
         self.view = myWishView
     }
     
+    func dataBindMyWish(wishContent: String, isUsed: Bool) {
+        myWishView.myWishCouponView.myWishLabel.text = wishContent
+        if isUsed {
+            myWishView.useWishCouponButton.buttonState = .disabled
+        } else {
+            myWishView.useWishCouponButton.buttonState = .enabled
+        }
+        
+    }
+    
     func myWishNaviActions() {
         self.myWishView.myWishViewNavi.backButtonCompletionHandler = { [weak self] in
             guard let strongSelf = self else {return}

@@ -16,13 +16,13 @@ class YourWishCouponView: UIView {
         $0.image = UIImage(named: "logo")
     }
 
-    let yourWishIsLabel = UILabel().then {
+    public let yourWishIsLabel = UILabel().then {
         $0.text = "상대 소원은"
         $0.font = SDSFont.body2.font
         $0.textColor = .gray400
     }
     
-    var yourWishLabel = UILabel().then {
+    public var yourWishLabel = UILabel().then {
         $0.text = "데모데이행복하자"
         $0.font = SDSFont.subTitle.font
         $0.textColor = .gray600

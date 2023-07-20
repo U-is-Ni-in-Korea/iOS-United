@@ -21,7 +21,7 @@ class MyWishCouponView: UIView {
         $0.textColor = .gray400
     }
     
-    var myWishLabel = UILabel().then {
+    public var myWishLabel = UILabel().then {
         $0.text = "유니행복앱잼"
         $0.font = SDSFont.subTitle.font
         $0.textColor = .gray600
