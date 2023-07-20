@@ -36,7 +36,12 @@ class DatePickerViewController: BaseViewController {
     
     @objc func doneButtonTapped() {
         self.dismiss(animated: true)
-        dateCompletionHandler?(datePickerView.newAnniversaryDate)
+        
+        if let newDate = datePickerView.newAnniversaryDate {
+            dateCompletionHandler?(newDate)
+            print(newDate)
+        }
+        
     }
 
 }

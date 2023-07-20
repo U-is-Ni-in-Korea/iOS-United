@@ -19,12 +19,14 @@ class DatePickerView: UIView {
         $0.backgroundColor = .gray000
     }
     
-    let datePicker = UIDatePicker().then {
+    lazy var datePicker = UIDatePicker().then {
         $0.datePickerMode = .date
         $0.preferredDatePickerStyle = .wheels
         $0.timeZone = NSTimeZone.local
         $0.maximumDate = Date() //오늘 이후 날짜 블러 및 선택 불가
-        $0.addTarget(self, action: #selector(dateChange), for: .valueChanged)
+        $0.addTarget(self,
+                     action: #selector(dateChange),
+                     for: .allEvents)
     }
     
     let buttonStackBackView = UIView().then {
@@ -51,7 +53,7 @@ class DatePickerView: UIView {
         $0.backgroundColor = .gray000
     }
     
-    var newAnniversaryDate: String = "****년 **월 **일" //서버 데이터 넣기
+    var newAnniversaryDate: String?
     
     @objc func dateChange(_ sender: UIDatePicker) {
         newAnniversaryDate = dateFormat(date: sender.date)
@@ -67,6 +69,7 @@ class DatePickerView: UIView {
         super.init(frame: frame)
         setStyle()
         setLayout()
+        self.newAnniversaryDate = dateFormat(date: Date())
     }
     
     required init?(coder: NSCoder) {
