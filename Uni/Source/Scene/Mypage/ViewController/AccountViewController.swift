@@ -10,17 +10,18 @@ import SDSKit
 import Then
 
 class AccountViewController: BaseViewController, AccountViewDelegate {
-    
+
     var accountView = AccountView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         accountNaviActions()
+
     }
     
     override func loadView() {
         super.loadView()
-        
+
         accountView = AccountView(frame: self.view.frame)
         accountView.delegate = self
         self.view = accountView
@@ -54,4 +55,5 @@ class AccountViewController: BaseViewController, AccountViewDelegate {
             return
         }
     }
+
 }

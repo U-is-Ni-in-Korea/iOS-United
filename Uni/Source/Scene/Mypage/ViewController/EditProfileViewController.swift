@@ -9,23 +9,28 @@ import UIKit
 
 class EditProfileViewController: BaseViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
-    var editProfileView = EditProfileView()
+    public var editProfileView = EditProfileView()
+        
+    private let userRepository = UserRepository()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         editProfileNaviActions()
         editProfileViewActions()
         anniversaryButtonActions()
-    }
+}
     
     override func loadView() {
         super.loadView()
-        
-        editProfileView = EditProfileView(frame: self.view.frame)
         self.view = editProfileView
         
         anniversaryButtonActions()
+    }
 
+    func dataBind(userName: String, startDate: String) {
+        editProfileView.nicknameTextfield.sdsTextfield.text = userName
+        editProfileView.nicknameTextfield.textfieldCountLabel.text = "\(userName.count)/15"
+        editProfileView.anniversaryDateLabel.text = startDate
     }
     
     func editProfileNaviActions() {
@@ -42,9 +47,7 @@ class EditProfileViewController: BaseViewController, UIImagePickerControllerDele
     }
     
     func anniversaryButtonActions() {
-        
         editProfileView.anniversaryButton.addTarget(self, action: #selector(anniversaryButtonTapped), for: .touchUpInside)
-
     }
     
     func editProfileViewActions() {
@@ -56,8 +59,6 @@ class EditProfileViewController: BaseViewController, UIImagePickerControllerDele
     }
     
     @objc func changeProfileImageTapped(_ gesture: UITapGestureRecognizer) {
-            print("ProfileTap")
-            
             let myPickerController = UIImagePickerController()
             myPickerController.delegate = self
             myPickerController.sourceType = UIImagePickerController.SourceType.photoLibrary
@@ -76,7 +77,6 @@ class EditProfileViewController: BaseViewController, UIImagePickerControllerDele
         datePickerViewController.modalPresentationStyle = .overFullScreen
         datePickerViewController.modalTransitionStyle = .crossDissolve
         self.present(datePickerViewController, animated: true, completion: nil)
-        print("tapped")
         
         datePickerViewController.dateCompletionHandler = { [weak self] value in
             
@@ -85,6 +85,7 @@ class EditProfileViewController: BaseViewController, UIImagePickerControllerDele
             editProfileView.anniversaryDateLabel.text = value
         }
     }
+    
 }
 
 extension EditProfileViewController: UITextViewDelegate {
@@ -92,7 +93,6 @@ extension EditProfileViewController: UITextViewDelegate {
         guard let nickname = editProfileView.nicknameTextfield.sdsTextfield.text else {
             return
         }
-        
         if nickname.count > 15 {
             editProfileView.nicknameTextfield.sdsTextfield.deleteBackward()
             editProfileView.nicknameTextfield.sdsTextfield.layer.borderWidth = 1

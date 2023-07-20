@@ -40,6 +40,10 @@ final class DDaySettingViewController: BaseViewController {
 
     // MARK: - Action Helper
     private func actions() {
+        dDaySettingView.navigationBarView.backButtonCompletionHandler = {
+            self.navigationController?.popViewController(animated: true)
+        }
+        
         let tapGesture = UITapGestureRecognizer(target: self,
                                                 action: #selector(nextButtonTapped))
         tapGesture.delegate = self
@@ -54,15 +58,13 @@ final class DDaySettingViewController: BaseViewController {
         }
         print(dateString)
         view.showIndicator()
-        dDayRepository.postDday(startDate: dateString) { success in
-            if success {
-                self.view.removeIndicator()
-                let coupleConnectionMethodView = CoupleConnectionMethodViewController()
-                self.navigationController?.pushViewController(coupleConnectionMethodView, animated: true)
+        dDayRepository.postDday(startDate: dateString) { data in
+            self.view.removeIndicator()
+            let codeGeneratorViewController = CodeGeneratorViewController()
+            if let inviteCode = data.inviteCode {
+                codeGeneratorViewController.inviteCode = inviteCode
             }
-            else {
-                self.view.removeIndicator()
-            }
+            self.navigationController?.pushViewController(codeGeneratorViewController, animated: true)
         }
     }
     @objc func dateChanged() {
