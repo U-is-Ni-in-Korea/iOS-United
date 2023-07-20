@@ -27,17 +27,19 @@ class LogoutViewController: BaseViewController {
     }
     
     func logoutViewActions() {
-        self.logoutView.askLogoutAlertView.cancelButtonTapCompletion = { [self] in
-            self.dismiss(animated: true)
+        self.logoutView.askLogoutAlertView.cancelButtonTapCompletion = { [weak self] in
+            guard let strongSelf = self else {return}
+            strongSelf.dismiss(animated: true)
         }
     }
     
     func logoutDoneActions() {
-        self.logoutView.askLogoutAlertView.okButtonTapCompletion = { [self] in
-            if self.keyChains.isTokenExists(account: "accessToken") {
-                self.keyChains.delete("accessToken")
+        self.logoutView.askLogoutAlertView.okButtonTapCompletion = { [weak self] in
+            guard let strongSelf = self else {return}
+            if strongSelf.keyChains.isTokenExists(account: "accessToken") {
+                strongSelf.keyChains.delete("accessToken")
                 let loginViewController = LoginViewController()
-                changeRootViewController(UINavigationController(rootViewController: loginViewController))
+                strongSelf.changeRootViewController(UINavigationController(rootViewController: loginViewController))
             }
         }
     }
