@@ -20,6 +20,7 @@ class WriteWishView: UIView {
     }
     
     lazy var writeWishTextView = UITextView().then {
+        $0.showsVerticalScrollIndicator = false
         $0.font = SDSFont.subTitle.font
         $0.textColor = .gray600
         $0.backgroundColor = .clear
@@ -135,7 +136,10 @@ extension WriteWishView: UITextViewDelegate {
     public func textViewDidChange(_ textView: UITextView) {
         let style = NSMutableParagraphStyle()
         style.lineSpacing = 5
-        textView.attributedText = NSAttributedString(string: textView.text, attributes: [NSAttributedString.Key.paragraphStyle: style])
+        style.alignment = .center
+        textView.attributedText = NSAttributedString(string: textView.text,
+                                                     attributes: [NSAttributedString.Key.paragraphStyle: style,
+                                                                  NSAttributedString.Key.font: SDSFont.subTitle.font])
         
         if writeWishTextView.text.count > 60 {
             writeWishTextView.deleteBackward()
@@ -150,7 +154,6 @@ extension WriteWishView: UITextViewDelegate {
             writeWishTextView.textColor = .gray600
             wishLetterCountLabel.textColor = .gray400
             writeWishTextView.layer.borderWidth = 0
-
         }
         
         wishLetterCountLabel.text = "\(writeWishTextView.text.count)/54"
