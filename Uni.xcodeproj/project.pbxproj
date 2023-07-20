@@ -134,10 +134,10 @@
 		8DAEBB172A66F9BF007B818A /* YourWishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEBB162A66F9BF007B818A /* YourWishViewController.swift */; };
 		A53C62F62A65719600AE3B45 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */; };
 		A53C62F92A6682A600AE3B45 /* KakaoLoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */; };
-		A53C63042A6872D700AE3B45 /* DDayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C63032A6872D700AE3B45 /* DDayRepository.swift */; };
-		A53C63072A68734700AE3B45 /* DDayDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C63062A68734700AE3B45 /* DDayDataModel.swift */; };
 		A53C62FE2A67DAC600AE3B45 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62FD2A67DAC600AE3B45 /* UserRepository.swift */; };
 		A53C63012A67DE6100AE3B45 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C63002A67DE6100AE3B45 /* UserDataModel.swift */; };
+		A53C63042A6872D700AE3B45 /* DDayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C63032A6872D700AE3B45 /* DDayRepository.swift */; };
+		A53C63072A68734700AE3B45 /* DDayDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C63062A68734700AE3B45 /* DDayDataModel.swift */; };
 		A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */; };
 		A54CD6312A5C328500C434B7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */; };
 		A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6332A5C347100C434B7 /* OnboardingCell.swift */; };
@@ -221,9 +221,9 @@
 		36CF2F7D2A65B0B600D8F8E1 /* CategoryDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDescriptionView.swift; sourceTree = "<group>"; };
 		36CF2F812A65BC3500D8F8E1 /* BattleCategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleCategoryType.swift; sourceTree = "<group>"; };
 		36CF2F832A65C77C00D8F8E1 /* BattleCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleCategoryViewController.swift; sourceTree = "<group>"; };
+		36CF2F882A67144F00D8F8E1 /* BattleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleRepository.swift; sourceTree = "<group>"; };
 		7E12E5FD2A67E66A00C656AB /* CompletedWishCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedWishCouponViewController.swift; sourceTree = "<group>"; };
 		7E12E5FF2A67E67F00C656AB /* CompletedWishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedWishCouponView.swift; sourceTree = "<group>"; };
-		36CF2F882A67144F00D8F8E1 /* BattleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleRepository.swift; sourceTree = "<group>"; };
 		7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponViewController.swift; sourceTree = "<group>"; };
 		7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponView.swift; sourceTree = "<group>"; };
 		7E25F6512A6339E8003E82F6 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -279,10 +279,10 @@
 		8DAEBB162A66F9BF007B818A /* YourWishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourWishViewController.swift; sourceTree = "<group>"; };
 		A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginDataModel.swift; sourceTree = "<group>"; };
-		A53C63032A6872D700AE3B45 /* DDayRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDayRepository.swift; sourceTree = "<group>"; };
-		A53C63062A68734700AE3B45 /* DDayDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDayDataModel.swift; sourceTree = "<group>"; };
 		A53C62FD2A67DAC600AE3B45 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		A53C63002A67DE6100AE3B45 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		A53C63032A6872D700AE3B45 /* DDayRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDayRepository.swift; sourceTree = "<group>"; };
+		A53C63062A68734700AE3B45 /* DDayDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDayDataModel.swift; sourceTree = "<group>"; };
 		A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		A54CD6332A5C347100C434B7 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
@@ -900,22 +900,6 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		A53C63022A68728000AE3B45 /* DDayRepository */ = {
-			isa = PBXGroup;
-			children = (
-				A53C63032A6872D700AE3B45 /* DDayRepository.swift */,
-			);
-			path = DDayRepository;
-			sourceTree = "<group>";
-		};
-		A53C63052A68733300AE3B45 /* DDay */ = {
-			isa = PBXGroup;
-			children = (
-				A53C63062A68734700AE3B45 /* DDayDataModel.swift */,
-			);
-			path = DDay;
-			sourceTree = "<group>";
-		};
 		A53C62FC2A67DAB500AE3B45 /* UserRepository */ = {
 			isa = PBXGroup;
 			children = (
@@ -930,6 +914,22 @@
 				A53C63002A67DE6100AE3B45 /* UserDataModel.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		A53C63022A68728000AE3B45 /* DDayRepository */ = {
+			isa = PBXGroup;
+			children = (
+				A53C63032A6872D700AE3B45 /* DDayRepository.swift */,
+			);
+			path = DDayRepository;
+			sourceTree = "<group>";
+		};
+		A53C63052A68733300AE3B45 /* DDay */ = {
+			isa = PBXGroup;
+			children = (
+				A53C63062A68734700AE3B45 /* DDayDataModel.swift */,
+			);
+			path = DDay;
 			sourceTree = "<group>";
 		};
 		A54CD62B2A5C322600C434B7 /* Onboarding */ = {
@@ -1448,7 +1448,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JB8T59WMFR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Uni/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Uni;
@@ -1480,7 +1480,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JB8T59WMFR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Uni/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Uni;
