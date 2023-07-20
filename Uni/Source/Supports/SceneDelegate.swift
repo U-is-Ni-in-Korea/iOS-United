@@ -19,7 +19,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         registerFonts()
         guard let windowScene = (scene as? UIWindowScene) else { return }
         self.window = UIWindow(windowScene: windowScene)
-        
+
         setScene(scene)
     }
     
@@ -63,37 +63,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 }
 extension SceneDelegate {
     private func setScene(_ scene: UIScene) {
-        let userDefaultsManager = UserDefaultsManager.shared
-        
-        ///온보딩 마쳤을 때
-        if userDefaultsManager.hasOnboarded {
-            // MARK: - TODO
-            print("로그인")
-            /// 토큰 여부에 따라 로그인 화면, 커플연결 화면, 홈 화면을 나눠야함
-            
-            if keyChains.isTokenExists(account: "accessToken") {
-                print("존재존재")
-                if userDefaultsManager.hasCoupleCode {
-                    ///홈화면
-                    let homeViewController = HomeViewController()
-                    setRootViewController(scene, viewController: UINavigationController(rootViewController: homeViewController))
-                }
-                else {
-                    ///로그인뷰컨 + nicknameSettingVC로 push
-                    let loginViewController = LoginViewController()
-                    setRootViewController(scene, viewController: UINavigationController(rootViewController: loginViewController))
-                }
-            }
-            else {
-                let loginViewController = LoginViewController()
-                setRootViewController(scene, viewController: UINavigationController(rootViewController: loginViewController))
-            }
-        }
-        ///온보딩이 처음일 때
-        else {
-            print("온보딩")
-            setRootViewController(scene, viewController: OnboardingViewController())
-        }
+        setRootViewController(scene, viewController: SplashViewController())
     }
     
     private func setRootViewController(_ scene: UIScene, viewController: UIViewController) {
