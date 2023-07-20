@@ -51,8 +51,7 @@ class LoginViewController: BaseViewController {
         loginView.kakaoButton.isEnabled = false
         loginView.appleButton.isEnabled = false
         hanldeKakaoLogin(completion: { kakaoToken in
-            print("---------유니토큰!!!!!!!--------------")
-            self.authRepository.postToken(token: kakaoToken) { data in
+            self.authRepository.postToken(socialType: "kakao", token: kakaoToken) { data in
                 self.loginView.kakaoButton.isEnabled = true
                 self.loginView.appleButton.isEnabled = true
                 if let accessToken = data.accessToken {
@@ -92,7 +91,6 @@ class LoginViewController: BaseViewController {
     
     // MARK: - 카카오 로그인
     private func hanldeKakaoLogin(completion: @escaping ((String) -> Void)) {
-        print("KakaoAuthVM - handleKakaoLogin() called()")
         //카카오톡 설치 여부 확인
         if (UserApi.isKakaoTalkLoginAvailable()) {
             UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
@@ -102,7 +100,6 @@ class LoginViewController: BaseViewController {
                 else {
                     if let oauthToken = oauthToken {
                         completion(oauthToken.accessToken)
-                        print(oauthToken.accessToken)
                     }
                 }
             }
@@ -115,7 +112,6 @@ class LoginViewController: BaseViewController {
                         _ = oauthToken
                         if let oauthToken = oauthToken {
                             completion(oauthToken.accessToken)
-                            print(oauthToken.accessToken)
                         }
                     }
                 }
@@ -126,23 +122,26 @@ extension LoginViewController: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
             
+            let identityToken = appleIDCredential.identityToken
+            if let identityToken = identityToken {
+                guard let appleToken = String(data: identityToken, encoding: .utf8) else { return }
+                self.authRepository.postToken(socialType: "apple", token: appleToken) { data in
+                    self.loginView.kakaoButton.isEnabled = true
+                    self.loginView.appleButton.isEnabled = true
+                    
+                    if let accessToken = data.accessToken {
+                        self.keyChains.create(account: "accessToken", value: accessToken)
+                        let nicknameSettingViewController = NicknameSettingViewController()
+                        nicknameSettingViewController.loginCase = "Apple"
+                        self.navigationController?.pushViewController(nicknameSettingViewController, animated: false)
+                    }
+                }
+            }
             
         }
     }
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        print("애플 로그인 실패")
+        self.loginView.kakaoButton.isEnabled = true
+        self.loginView.appleButton.isEnabled = true
     }
 }
-
-// MARK: - UITableView Delegate
-//// MARK: - 로그아웃
-//func kakaoLogOut() {
-//    UserApi.shared.logout {(error) in
-//        if let error = error {
-//            print(error)
-//        }
-//        else {
-//            print("logout() success.")
-//        }
-//    }
-//}
