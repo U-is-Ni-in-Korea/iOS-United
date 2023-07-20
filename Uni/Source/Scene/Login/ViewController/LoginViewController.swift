@@ -46,14 +46,18 @@ class LoginViewController: BaseViewController {
         loginView.kakaoButton.addTarget(self, action: #selector(kakaoButtonTapped), for: .touchUpInside)
     }
     @objc func kakaoButtonTapped() {
+        loginView.kakaoButton.isEnabled = false
+        loginView.appleButton.isEnabled = false
         hanldeKakaoLogin(completion: { kakaoToken in
             print("---------유니토큰!!!!!!!--------------")
             self.authRepository.postToken(token: kakaoToken) { data in
-                print(data.accessToken, "유니토큰!!!!!!!")
-                
+                self.loginView.kakaoButton.isEnabled = true
+                self.loginView.appleButton.isEnabled = true
                 if let accessToken = data.accessToken {
                     self.keyChains.create(account: "accessToken", value: accessToken)
-                    self.pushNicknameSettingViewController()
+                    let nicknameSettingViewController = NicknameSettingViewController()
+                    nicknameSettingViewController.loginCase = "카카오"
+                    self.navigationController?.pushViewController(nicknameSettingViewController, animated: false)
                 }
             }
         })

@@ -10,6 +10,7 @@ import UIKit
 
 final class NicknameSettingViewController: BaseViewController {
     // MARK: - Property
+    var loginCase: String = ""
     private let keyChains = HeaderUtils()
     private let userRepository = UserRepository()
     
@@ -45,6 +46,14 @@ final class NicknameSettingViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardUp), name: UIResponder.keyboardWillShowNotification, object: nil)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2, execute: {
+            let hasSafeArea = self.checkHomeButtonDevice()
+            self.view.showToast(message: "\(self.loginCase) 로그인에 성공했어요", hasSafeArea: hasSafeArea)
+        })
     }
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view.endEditing(true)
@@ -99,6 +108,15 @@ final class NicknameSettingViewController: BaseViewController {
     }
     
     // MARK: - Custom Method
+    func checkHomeButtonDevice() -> Bool {
+        let screenHeight = UIScreen.main.bounds.size.height
+        if screenHeight <= 736 {
+            return false
+        }
+        else {
+            return true
+        }
+    }
     @objc func keyboardUp(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             let height = -keyboardSize.height - 16

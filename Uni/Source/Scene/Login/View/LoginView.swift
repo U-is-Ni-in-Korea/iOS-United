@@ -28,7 +28,7 @@ final class LoginView: UIView {
         $0.configuration = kakaoConfig
         $0.layer.applyDepth1Shadow()
     }
-    private let appleButton = UIButton().then {
+    let appleButton = UIButton().then {
         $0.backgroundColor = UIColor(hex: 0x232323)
         $0.setTitle("Apple 로그인", for: .normal)
         $0.setTitleColor(UIColor.gray000, for: .normal)
