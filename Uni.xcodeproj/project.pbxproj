@@ -134,10 +134,10 @@
 		8DAEBB172A66F9BF007B818A /* YourWishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEBB162A66F9BF007B818A /* YourWishViewController.swift */; };
 		A53C62F62A65719600AE3B45 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */; };
 		A53C62F92A6682A600AE3B45 /* KakaoLoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */; };
-		A53C63042A6872D700AE3B45 /* DDayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C63032A6872D700AE3B45 /* DDayRepository.swift */; };
-		A53C63072A68734700AE3B45 /* DDayDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C63062A68734700AE3B45 /* DDayDataModel.swift */; };
 		A53C62FE2A67DAC600AE3B45 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62FD2A67DAC600AE3B45 /* UserRepository.swift */; };
 		A53C63012A67DE6100AE3B45 /* UserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C63002A67DE6100AE3B45 /* UserDataModel.swift */; };
+		A53C63042A6872D700AE3B45 /* DDayRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C63032A6872D700AE3B45 /* DDayRepository.swift */; };
+		A53C63072A68734700AE3B45 /* DDayDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C63062A68734700AE3B45 /* DDayDataModel.swift */; };
 		A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */; };
 		A54CD6312A5C328500C434B7 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */; };
 		A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CD6332A5C347100C434B7 /* OnboardingCell.swift */; };
@@ -146,6 +146,9 @@
 		A55150BE2A614A2A00481F57 /* CoupleConnectionMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55150BD2A614A2A00481F57 /* CoupleConnectionMethodViewController.swift */; };
 		A555AD9B2A6079790083CD20 /* NicknameSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555AD9A2A6079790083CD20 /* NicknameSettingViewController.swift */; };
 		A555AD9D2A6079840083CD20 /* NicknameSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555AD9C2A6079840083CD20 /* NicknameSettingView.swift */; };
+		A56C4E622A68FA3F00C18C8F /* CoupleJoinRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C4E612A68FA3F00C18C8F /* CoupleJoinRepository.swift */; };
+		A56C4E682A68FB6B00C18C8F /* GetCoupleJoinDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C4E672A68FB6B00C18C8F /* GetCoupleJoinDataModel.swift */; };
+		A56C4E6A2A68FD0F00C18C8F /* PostCoupleJoinDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C4E692A68FD0F00C18C8F /* PostCoupleJoinDataModel.swift */; };
 		A578FC142A62D9210021A32E /* DDaySettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578FC132A62D9210021A32E /* DDaySettingViewController.swift */; };
 		A578FC162A62D9380021A32E /* DDaySettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578FC152A62D9380021A32E /* DDaySettingView.swift */; };
 		A578FC182A62D9AB0021A32E /* CodeGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578FC172A62D9AB0021A32E /* CodeGeneratorViewController.swift */; };
@@ -221,9 +224,9 @@
 		36CF2F7D2A65B0B600D8F8E1 /* CategoryDescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDescriptionView.swift; sourceTree = "<group>"; };
 		36CF2F812A65BC3500D8F8E1 /* BattleCategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleCategoryType.swift; sourceTree = "<group>"; };
 		36CF2F832A65C77C00D8F8E1 /* BattleCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleCategoryViewController.swift; sourceTree = "<group>"; };
+		36CF2F882A67144F00D8F8E1 /* BattleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleRepository.swift; sourceTree = "<group>"; };
 		7E12E5FD2A67E66A00C656AB /* CompletedWishCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedWishCouponViewController.swift; sourceTree = "<group>"; };
 		7E12E5FF2A67E67F00C656AB /* CompletedWishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedWishCouponView.swift; sourceTree = "<group>"; };
-		36CF2F882A67144F00D8F8E1 /* BattleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleRepository.swift; sourceTree = "<group>"; };
 		7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponViewController.swift; sourceTree = "<group>"; };
 		7E25F64F2A6330EB003E82F6 /* WishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponView.swift; sourceTree = "<group>"; };
 		7E25F6512A6339E8003E82F6 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
@@ -279,10 +282,10 @@
 		8DAEBB162A66F9BF007B818A /* YourWishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourWishViewController.swift; sourceTree = "<group>"; };
 		A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginDataModel.swift; sourceTree = "<group>"; };
-		A53C63032A6872D700AE3B45 /* DDayRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDayRepository.swift; sourceTree = "<group>"; };
-		A53C63062A68734700AE3B45 /* DDayDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDayDataModel.swift; sourceTree = "<group>"; };
 		A53C62FD2A67DAC600AE3B45 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
 		A53C63002A67DE6100AE3B45 /* UserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataModel.swift; sourceTree = "<group>"; };
+		A53C63032A6872D700AE3B45 /* DDayRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDayRepository.swift; sourceTree = "<group>"; };
+		A53C63062A68734700AE3B45 /* DDayDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDayDataModel.swift; sourceTree = "<group>"; };
 		A54CD62D2A5C326E00C434B7 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		A54CD6302A5C328500C434B7 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		A54CD6332A5C347100C434B7 /* OnboardingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCell.swift; sourceTree = "<group>"; };
@@ -291,6 +294,9 @@
 		A55150BD2A614A2A00481F57 /* CoupleConnectionMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleConnectionMethodViewController.swift; sourceTree = "<group>"; };
 		A555AD9A2A6079790083CD20 /* NicknameSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingViewController.swift; sourceTree = "<group>"; };
 		A555AD9C2A6079840083CD20 /* NicknameSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingView.swift; sourceTree = "<group>"; };
+		A56C4E612A68FA3F00C18C8F /* CoupleJoinRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleJoinRepository.swift; sourceTree = "<group>"; };
+		A56C4E672A68FB6B00C18C8F /* GetCoupleJoinDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoupleJoinDataModel.swift; sourceTree = "<group>"; };
+		A56C4E692A68FD0F00C18C8F /* PostCoupleJoinDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCoupleJoinDataModel.swift; sourceTree = "<group>"; };
 		A578FC132A62D9210021A32E /* DDaySettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDaySettingViewController.swift; sourceTree = "<group>"; };
 		A578FC152A62D9380021A32E /* DDaySettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDaySettingView.swift; sourceTree = "<group>"; };
 		A578FC172A62D9AB0021A32E /* CodeGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeGeneratorViewController.swift; sourceTree = "<group>"; };
@@ -412,6 +418,7 @@
 		36012F282A55AE4A006B8A39 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				A56C4E602A68FA2700C18C8F /* CoupleJoinRepository */,
 				A53C63022A68728000AE3B45 /* DDayRepository */,
 				A53C62FC2A67DAB500AE3B45 /* UserRepository */,
 				36CF2F872A67144500D8F8E1 /* BattleRepository */,
@@ -476,6 +483,7 @@
 		36012F3C2A55B61E006B8A39 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
+				A56C4E662A68FB5800C18C8F /* CoupleJoin */,
 				A53C63052A68733300AE3B45 /* DDay */,
 				A53C62FF2A67DCDB00AE3B45 /* User */,
 				A53C62F72A66829200AE3B45 /* Login */,
@@ -900,22 +908,6 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
-		A53C63022A68728000AE3B45 /* DDayRepository */ = {
-			isa = PBXGroup;
-			children = (
-				A53C63032A6872D700AE3B45 /* DDayRepository.swift */,
-			);
-			path = DDayRepository;
-			sourceTree = "<group>";
-		};
-		A53C63052A68733300AE3B45 /* DDay */ = {
-			isa = PBXGroup;
-			children = (
-				A53C63062A68734700AE3B45 /* DDayDataModel.swift */,
-			);
-			path = DDay;
-			sourceTree = "<group>";
-		};
 		A53C62FC2A67DAB500AE3B45 /* UserRepository */ = {
 			isa = PBXGroup;
 			children = (
@@ -930,6 +922,22 @@
 				A53C63002A67DE6100AE3B45 /* UserDataModel.swift */,
 			);
 			path = User;
+			sourceTree = "<group>";
+		};
+		A53C63022A68728000AE3B45 /* DDayRepository */ = {
+			isa = PBXGroup;
+			children = (
+				A53C63032A6872D700AE3B45 /* DDayRepository.swift */,
+			);
+			path = DDayRepository;
+			sourceTree = "<group>";
+		};
+		A53C63052A68733300AE3B45 /* DDay */ = {
+			isa = PBXGroup;
+			children = (
+				A53C63062A68734700AE3B45 /* DDayDataModel.swift */,
+			);
+			path = DDay;
 			sourceTree = "<group>";
 		};
 		A54CD62B2A5C322600C434B7 /* Onboarding */ = {
@@ -991,6 +999,23 @@
 				A55150BD2A614A2A00481F57 /* CoupleConnectionMethodViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A56C4E602A68FA2700C18C8F /* CoupleJoinRepository */ = {
+			isa = PBXGroup;
+			children = (
+				A56C4E612A68FA3F00C18C8F /* CoupleJoinRepository.swift */,
+			);
+			path = CoupleJoinRepository;
+			sourceTree = "<group>";
+		};
+		A56C4E662A68FB5800C18C8F /* CoupleJoin */ = {
+			isa = PBXGroup;
+			children = (
+				A56C4E672A68FB6B00C18C8F /* GetCoupleJoinDataModel.swift */,
+				A56C4E692A68FD0F00C18C8F /* PostCoupleJoinDataModel.swift */,
+			);
+			path = CoupleJoin;
 			sourceTree = "<group>";
 		};
 		A578FC102A62D8CF0021A32E /* SendInvitation */ = {
@@ -1170,6 +1195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A56C4E6A2A68FD0F00C18C8F /* PostCoupleJoinDataModel.swift in Sources */,
 				7E5C9D892A66E1B700488DBD /* HistoryDetailResultMissionView.swift in Sources */,
 				A53C62FE2A67DAC600AE3B45 /* UserRepository.swift in Sources */,
 				361FA3302A601D2E00C3BBFD /* GetService.swift in Sources */,
@@ -1269,6 +1295,7 @@
 				36012F512A55CF2D006B8A39 /* UIView+.swift in Sources */,
 				A55150BC2A614A2000481F57 /* CoupleConnectionMethodView.swift in Sources */,
 				36012F472A55CDEE006B8A39 /* Date+.swift in Sources */,
+				A56C4E682A68FB6B00C18C8F /* GetCoupleJoinDataModel.swift in Sources */,
 				361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */,
 				36CF2F6E2A6579CA00D8F8E1 /* BattleResultView.swift in Sources */,
 				8D2B2E7C2A61638000B75CDD /* SettingView.swift in Sources */,
@@ -1295,6 +1322,7 @@
 				A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */,
 				A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */,
 				36012F452A55CDAA006B8A39 /* CGPoint+.swift in Sources */,
+				A56C4E622A68FA3F00C18C8F /* CoupleJoinRepository.swift in Sources */,
 				A578FC1A2A62D9B70021A32E /* CodeGeneratorView.swift in Sources */,
 				361FA37F2A62793B00C3BBFD /* SectionView.swift in Sources */,
 				8DAAB2B82A61CDB700E25CF4 /* DatePickerView.swift in Sources */,
@@ -1448,7 +1476,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JB8T59WMFR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Uni/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Uni;
@@ -1480,7 +1508,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = JB8T59WMFR;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Uni/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Uni;
