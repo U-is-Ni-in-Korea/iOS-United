@@ -53,6 +53,10 @@ final class CodeGeneratorViewController: BaseViewController {
         
         codeGeneratorView.connectionCheckButton.addTarget(self, action: #selector(linkCheckButtonTapped), for: .touchUpInside)
         
+        codeGeneratorView.navigationBarView.backButtonCompletionHandler = { [weak self] in
+            self?.navigationController?.popViewController(animated: true)
+        }
+        
     }
     @objc func shareButtonTapped() {
         

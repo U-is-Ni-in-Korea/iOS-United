@@ -21,7 +21,7 @@ class SplashViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayout()
-        
+        self.view.backgroundColor = .gray000
         DispatchQueue.main.asyncAfter(deadline: .now() + 2 , execute: {
             self.setRootViewController()
         })
