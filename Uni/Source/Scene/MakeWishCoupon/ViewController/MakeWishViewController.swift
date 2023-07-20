@@ -14,8 +14,8 @@ final class MakeWishViewController: BaseViewController, WriteWishViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        makeWishActions()
         addButtonGesture()
+        makeWishActions()
         makeWishView.makeWishButton.setButtonTitle(title: "소원권 만들기")
     }
     
@@ -29,8 +29,11 @@ final class MakeWishViewController: BaseViewController, WriteWishViewDelegate {
     
     private func makeWishCoupon() {
         if let content = makeWishView.writeWishView.writeWishTextView.text {
-            wishRepository.makeWishCoupon(content: content) { [weak self] in
-                guard let strongSelf = self else {return}
+            if content.count > 0 {
+                wishRepository.makeWishCoupon(content: content) { [weak self] _ in
+                    guard let strongSelf = self else {return}
+                    strongSelf.dismiss(animated: true)
+                }
             }
         }
     }
@@ -43,17 +46,13 @@ final class MakeWishViewController: BaseViewController, WriteWishViewDelegate {
     }
     
     @objc private func makeWishButtonTap() {
-        self.makeWishButtonTap()
+        self.makeWishCoupon()
     }
     
     private func makeWishActions() {
-        self.view.showIndicator()
         self.makeWishView.makeWishViewNavi.rightBarRightButtonItemCompletionHandler = { [weak self] in
             guard let strongSelf = self else {return}
-            strongSelf.navigationController?.popViewController(animated: true)
-            strongSelf.view.removeIndicator()
-            
-//            strongSelf.dismiss(animated: true)
+            strongSelf.dismiss(animated: true)
         }
     }
     

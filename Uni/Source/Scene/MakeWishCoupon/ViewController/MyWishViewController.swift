@@ -16,6 +16,7 @@ class MyWishViewController: BaseViewController {
         myWishNaviActions()
         myWishShareTapped()
         setUseWishCouponButton()
+        getWishCouponData()
     }
     
     override func loadView() {
@@ -32,7 +33,6 @@ class MyWishViewController: BaseViewController {
         } else {
             myWishView.useWishCouponButton.buttonState = .enabled
         }
-        
     }
     
     func myWishNaviActions() {
@@ -48,7 +48,9 @@ class MyWishViewController: BaseViewController {
     }
     
     func setUseWishCouponButton() {
-        myWishView.useWishCouponButton.addTarget(self, action: #selector(useWishCouponButtonTapped), for: .touchUpInside)
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(useWishCouponButtonTapped))
+        tapGesture.delegate = self
+        myWishView.useWishCouponButton.addGestureRecognizer(tapGesture)
         
         if myWishView.useWishCouponButton.buttonState == .enabled {
             myWishView.useWishCouponButton.setButtonTitle(title: "소원권 사용하기")
@@ -70,9 +72,57 @@ class MyWishViewController: BaseViewController {
     }
     
     @objc func useWishCouponButtonTapped() {
-        let useWishCouponViewController = UseWishCouponViewController()
-        useWishCouponViewController.modalPresentationStyle = .overFullScreen
-        useWishCouponViewController.modalTransitionStyle = .crossDissolve
-            self.present(useWishCouponViewController, animated: true, completion: nil)
+        let alert = self.view.showAlert(title: "소원권을 사용하시나요?",
+                                        message: "사용하신 소원권은 돌아오지 않아요",
+                                        cancelButtonMessage: "취소",
+                                        okButtonMessage: "확인",
+                                        type: .alert)
+        alert.okButtonTapCompletion = { [weak self] in
+            guard let strongSelf = self else {return}
+            strongSelf.useWishCoupon { [weak self] in
+                strongSelf.view.hideAlert(view: alert)
+                let completVC = CompletedWishCouponViewController()
+                completVC.modalPresentationStyle = .overFullScreen
+                strongSelf.navigationController?.present(completVC, animated: true)
+            }
+        }
+        
+        alert.cancelButtonTapCompletion = { [weak self] in
+            guard let strongSelf = self else {return}
+            strongSelf.view.hideAlert(view: alert)
+        }
+    }
+    
+    private func useWishCoupon(completion: @escaping (() -> Void)) {
+        self.view.showIndicator()
+        wishRepository.useWishCoupon(wishId: wishId) { [weak self] data in
+            guard let strongSelf = self else {return}
+            strongSelf.myWishView.useWishCouponButton.buttonState = .disabled
+            strongSelf.myWishView.useWishCouponButton.isUserInteractionEnabled = false
+            strongSelf.myWishView.useWishCouponButton.setButtonTitle(title: "이미 사용된 소원권이에요")
+            strongSelf.view.removeIndicator()
+            completion()
+        }
+    }
+    
+    private func getWishCouponData() {
+        self.view.showIndicator()
+        wishRepository.getWishCouponDetail(wishId: wishId) { [weak self] data in
+            guard let strongSelf = self else {return}
+            strongSelf.dataBindMyWish(wishContent: data.wishCoupon.content,
+                                      isUsed: data.wishCoupon.isUsed)
+            if data.wishCoupon.isUsed {
+                self?.myWishView.useWishCouponButton.isUserInteractionEnabled = false
+            }
+            strongSelf.view.removeIndicator()
+        }
+    }
+    
+    private let wishRepository = WishRepository()
+    var wishId: Int = 0
+}
+extension MyWishViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
     }
 }

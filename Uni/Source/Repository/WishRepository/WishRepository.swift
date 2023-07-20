@@ -12,6 +12,7 @@ final class WishRepository {
                                          from: Config.baseURL + "api/wish") { (data: ErrorCode?, error) in
             guard let data = data else {
                 print("error: \(error?.debugDescription)")
+                completion(data)
                 return
             }
             completion(data)
@@ -31,11 +32,12 @@ final class WishRepository {
     }
     
     func useWishCoupon(wishId: Int,
-                       completion: @escaping ((ErrorCode) -> Void)) {
+                       completion: @escaping ((ErrorCode?) -> Void)) {
         PatchService.shared.patchService(isUseHeader: true,
                                          from: Config.baseURL + "api/wish/\(wishId)") { (data: ErrorCode?, error) in
             guard let data = data else {
                 print("error: \(error?.debugDescription)")
+                completion(data)
                 return
             }
             completion(data)

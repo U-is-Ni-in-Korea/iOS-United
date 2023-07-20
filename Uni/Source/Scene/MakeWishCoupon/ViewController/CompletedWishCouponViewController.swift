@@ -21,17 +21,36 @@ class CompletedWishCouponViewController: BaseViewController {
         super.viewDidLoad()
         setStyle()
         setLayout()
+        setConfig()
 //        completedWishCouponView.makeWishButton.setButtonTitle(title: "소원권 사용하기")
     }
     
     override func loadView() {
         super.loadView()
-        
         completedWishCouponView = CompletedWishCouponView(frame: self.view.frame)
         self.view = completedWishCouponView
     }
     
     // MARK: - Setting
+    override func setConfig() {
+        super.setConfig()
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(homeButtonTap))
+        tapGesture.delegate = self
+        self.completedWishCouponView.homeButton.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc private func homeButtonTap() {
+        self.dismiss(animated: true)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    private func setNavigationBarCompletion() {
+        self.completedWishCouponView.makeWishViewNavi.rightBarRightButtonItemCompletionHandler = { [weak self] in
+            guard let strongSelf = self else {return}
+            strongSelf.dismiss(animated: true)
+            
+        }
+    }
     
     private func setStyle() {
         
@@ -47,4 +66,9 @@ class CompletedWishCouponViewController: BaseViewController {
     
 
 
+}
+extension CompletedWishCouponViewController: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
 }

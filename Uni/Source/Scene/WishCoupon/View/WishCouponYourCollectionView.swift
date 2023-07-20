@@ -12,8 +12,8 @@ import SDSKit
 final class WishCouponYourCollectionView: UIView {
     
     // MARK: - Property
-    
     var wishCouponYourData: WishCouponDataModel?
+    weak var delegate: WishCouponSelectedCollectionView?
     
     // MARK: - UI Property
     
@@ -90,5 +90,10 @@ extension WishCouponYourCollectionView: UICollectionViewDataSource {
         else { return UICollectionViewCell() }
         cell.configureYourCell(yourWishCouponData: wishCouponYourData?.wishCouponList[indexPath.row])
         return cell
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let wishId = self.wishCouponYourData?.wishCouponList[indexPath.row]?.id {
+            self.delegate?.selectPartnerCouponId(couponId: wishId)
+        }
     }
 }

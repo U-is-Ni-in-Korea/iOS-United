@@ -10,18 +10,29 @@ import UIKit
 class YourWishViewController: BaseViewController {
     
     var yourWishView = YourWishView()
+    let wishRepository = WishRepository()
+    var wishId: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         yourWishBackActions()
         yourWishShareTapped()
+        getWishDetail()
     }
     
     override func loadView() {
         super.loadView()
-        
         yourWishView = YourWishView(frame: self.view.frame)
         self.view = yourWishView
+    }
+    
+    private func getWishDetail() {
+        wishRepository.getWishCouponDetail(wishId: wishId) { [weak self] data in
+            guard let strongSelf = self else {return}
+            strongSelf.dataBindYourWish(wishContent: data.wishCoupon.content, isUsed: data.wishCoupon.isUsed)
+            strongSelf.dataBindYourName(nickname: data.nickname)
+            strongSelf.isYourWishCouponUsed(data.wishCoupon.isUsed)
+        }
     }
     
     func dataBindYourWish(wishContent: String, isUsed: Bool) {

@@ -10,12 +10,18 @@ import Then
 import SDSKit
 import CHTCollectionViewWaterfallLayout
 
+protocol WishCouponSelectedCollectionView: NSObject {
+    func selectCouponId(couponId: Int)
+    func selectMakeCoupon()
+    func selectPartnerCouponId(couponId: Int)
+}
+
 final class WishCouponCollectionView: UIView {
     
     // MARK: - Property
     
     var wishCouponMyData: WishCouponDataModel?
-    
+    var delegate: WishCouponSelectedCollectionView?
     // MARK: - UI Property
     
     let wishCouponCollectionView = UICollectionView(frame: .zero, collectionViewLayout: CHTCollectionViewWaterfallLayout()).then {
@@ -93,6 +99,16 @@ extension WishCouponCollectionView: UICollectionViewDataSource, UICollectionView
             cell.configure(with: .title)
             cell.configureMyCell(myWishCouponData: wishCouponMyData?.wishCouponList[indexPath.row - 1])
             return cell
+        }
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        print(indexPath.row)
+        if indexPath.row != 0 {
+            if let wishId = self.wishCouponMyData?.wishCouponList[indexPath.row - 1]?.id {
+                delegate?.selectCouponId(couponId: wishId)
+            }
+        } else { //쿠폰 생성 클릭
+            delegate?.selectMakeCoupon()
         }
     }
 }

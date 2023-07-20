@@ -17,7 +17,7 @@ final class CompletedWishCouponView: UIView {
     
     let makeWishViewNavi = SDSNavigationBar(hasBack: false, hasTitleItem: false, navigationTitle: "소원권 사용 완료!", rightBarButtonImages: [SDSIcon.icDismiss])
     
-    var makeWishButton = SDSButton(type: .fill, state: .enabled).then {
+    var homeButton = SDSButton(type: .fill, state: .enabled).then {
         $0.setButtonTitle(title: "홈으로 돌아가기")
     }
     
@@ -45,7 +45,7 @@ final class CompletedWishCouponView: UIView {
     }
     
     private func setLayout() {
-        [makeWishViewNavi, completedImageView, makeWishButton].forEach { addSubview($0) }
+        [makeWishViewNavi, completedImageView, homeButton].forEach { addSubview($0) }
         
         makeWishViewNavi.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide)
@@ -59,7 +59,7 @@ final class CompletedWishCouponView: UIView {
             $0.centerY.equalToSuperview()
         }
         
-        makeWishButton.snp.makeConstraints {
+        homeButton.snp.makeConstraints {
             $0.height.equalTo(48)
             $0.centerX.equalToSuperview()
             $0.bottom.equalToSuperview().inset(UIScreen.main.bounds.height/16)
