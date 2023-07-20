@@ -15,19 +15,19 @@ class WishCouponViewController: BaseViewController {
         didSet {
             if myWishCouponData == 0 {
                 wishCouponView.wishCouponCollectionView.backgroundColor = .clear
-                wishCouponView.wishCouponData = myWishCouponData
+                wishCouponView.wishCouponData2 = myWishCouponData
             }
             else {
                 wishCouponView.wishCouponCollectionView.backgroundColor = .gray100
-                wishCouponView.wishCouponData = myWishCouponData
+                wishCouponView.wishCouponData2 = myWishCouponData
             }
         }
     }
-    private var yourWishCouponData: Int = 0 {
+    var yourWishCouponData: Int = 0 {
         didSet {
             if yourWishCouponData == 0 {
                 wishCouponView.wishCouponYourCollectionView.backgroundColor = .clear
-                wishCouponView.wishCouponData = yourWishCouponData
+                wishCouponView.wishCouponData2 = yourWishCouponData
             }
             else {
                 wishCouponView.wishCouponYourCollectionView.backgroundColor = .gray100
@@ -40,7 +40,13 @@ class WishCouponViewController: BaseViewController {
     
     private var wishCouponView = WishCouponView()
     
+    private let wishCouponRepository = WishCouponRepository()
+    
+
+    
     // MARK: - UI Property
+    
+    
     
     // MARK: - Life Cycle
     
@@ -50,13 +56,6 @@ class WishCouponViewController: BaseViewController {
         setLayout()
         actions()
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-            self.myWishCouponData = 8
-        })
-
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-            self.yourWishCouponData = 9
-        })
     }
     
     override func loadView() {
@@ -64,6 +63,15 @@ class WishCouponViewController: BaseViewController {
         
         wishCouponView = WishCouponView(frame: self.view.frame)
         self.view = wishCouponView
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        wishCouponRepository.getWishCouponData { data in
+            print(data)
+            self.configureData(wishCouponData: data)
+            self.wishCouponView.wishCouponData = data
+        }
     }
     
     // MARK: - Setting
@@ -84,6 +92,11 @@ class WishCouponViewController: BaseViewController {
     
     @objc func myButtonTapped() {
         switchToMyWishCouponView(showMyWishCoupon: true)
+//        let data = WishCouponYourCollectionView.wishCouponYourData {
+//            self.configureCell(wishCouponData: data)
+//        }
+        
+
         print("switchMyButton")
 
     }
@@ -99,7 +112,7 @@ class WishCouponViewController: BaseViewController {
             /// 나의 소원권
             
             DispatchQueue.main.async {
-                self.wishCouponView.wishCouponEmptyView.noneLabel.text = "아직 소원권이 없어요!"
+                self.wishCouponView.wishCouponEmptyView.noneLabel.text = ""
                 self.wishCouponView.wishCouponCollectionView.isHidden = false
                 self.wishCouponView.wishCouponYourCollectionView.isHidden = true
                 self.wishCouponView.wishCouponCountView.yourButton.setTitleColor(.gray300, for: .normal)
@@ -122,7 +135,13 @@ class WishCouponViewController: BaseViewController {
                 self.wishCouponView.wishCouponYourCollectionView.scrollToInitialPosition()
             }
         }
+        
     }
     
+    func configureData(wishCouponData: WishCouponDataModel) {
+        wishCouponView.wishCouponCountView.countLabel.text = "사용 가능한 소원권이 \(wishCouponData.availableWishCoupon ?? 0)개 있어요"
+    
+        
+    }
 }
 

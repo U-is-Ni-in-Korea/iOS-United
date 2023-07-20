@@ -14,9 +14,16 @@ final class WishCouponView: UIView {
     
     // MARK: - Property
     
-    var wishCouponData: Int = 0 { //내소원권 컬렉션 뷰 데이터
+    var wishCouponData2: Int = 0 { //내소원권 컬렉션 뷰 데이터
         didSet {
-            wishCouponCollectionView.wishCouponData = wishCouponData
+            wishCouponCollectionView.wishCouponMyData = wishCouponData
+            wishCouponCollectionView.wishCouponCollectionView.reloadData()
+        }
+    }
+    
+    var wishCouponData: WishCouponDataModel? {
+        didSet {
+            wishCouponCollectionView.wishCouponMyData = wishCouponData
             wishCouponCollectionView.wishCouponCollectionView.reloadData()
         }
     }

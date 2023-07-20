@@ -14,7 +14,8 @@ final class WishCouponCollectionView: UIView {
     
     // MARK: - Property
     
-    var wishCouponData: Int = 0
+    var wishCouponMyData: WishCouponDataModel?
+    
     
     // MARK: - UI Property
     
@@ -78,25 +79,30 @@ final class WishCouponCollectionView: UIView {
 
 
 // MARK: - UICollectionView Delegate
-extension WishCouponCollectionView: UICollectionViewDelegate {}
+//extension WishCouponCollectionView: UICollectionViewDelegate {}
 
 
 // MARK: - UICollectionView Datasource
-extension WishCouponCollectionView: UICollectionViewDataSource {
+extension WishCouponCollectionView: UICollectionViewDataSource, UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return wishCouponData
+        
+        return 1 + (wishCouponMyData?.wishCouponList.count ?? 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
         guard let cell = wishCouponCollectionView.dequeueReusableCell(withReuseIdentifier: WishCouponCollectionViewCell.identifier, for: indexPath) as? WishCouponCollectionViewCell
         else { return UICollectionViewCell() }
-        
-        if indexPath.item == 0 {
+        if indexPath.row == 0 {
             cell.configure(with: .noTitle)
-        } else {
-            cell.configure(with: .title)
+            cell.configureMyNewCell(myWishCouponData: wishCouponMyData)
+            return cell
         }
-        return cell
+        else {
+            cell.configure(with: .title)
+            cell.configureMyCell(myWishCouponData: wishCouponMyData?.wishCouponList[indexPath.row - 1])
+            return cell
+        }
     }
 }
 

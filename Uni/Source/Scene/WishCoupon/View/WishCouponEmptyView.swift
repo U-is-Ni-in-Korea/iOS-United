@@ -16,7 +16,7 @@ final class WishCouponEmptyView: UIView {
     // MARK: - UI Property
     
     let noneLabel = UILabel().then {
-        $0.text = "아직 소원권이 없어요!"
+        $0.text = ""
         $0.textColor = .gray400
         $0.font = SDSFont.body1.font
     }
