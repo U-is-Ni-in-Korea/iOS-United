@@ -11,7 +11,9 @@ import Then
 
 class UseWishCouponView: UIView {
 
-    let askUseWishCouponAlertView = AlertView(title: "소원권을 사용하시나요?", message: "사용하신 소원권은 돌아오지 않아요", cancelButtonMessage: "취소", okButtonMessage: "확인", type: .alert)
+    let askUseWishCouponAlertView = AlertView(title: "소원권을 사용하시나요?",
+                                              message: "사용하신 소원권은 돌아오지 않아요",
+                                              cancelButtonMessage: "취소", okButtonMessage: "확인", type: .alert)
     
     override init(frame: CGRect) {
         super.init(frame: frame)

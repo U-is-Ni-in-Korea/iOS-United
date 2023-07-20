@@ -17,8 +17,9 @@ class WishCouponViewController: BaseViewController {
     // MARK: - UI Property
     
     private var wishCouponView = WishCouponView()
-    
     private let wishCouponRepository = WishCouponRepository()
+    var myid: Int = 0
+    var partnerId: Int = 0
     
     // MARK: - Life Cycle
     
@@ -27,14 +28,13 @@ class WishCouponViewController: BaseViewController {
         setStyle()
         setLayout()
         actions()
+        setConfig()
         backButtonTapped()
     }
     
     override func loadView() {
         super.loadView()
-        
         wishCouponView = WishCouponView(frame: self.view.frame)
-//        wishCouponView.delegate = self
         self.view = wishCouponView
     }
     
@@ -42,21 +42,31 @@ class WishCouponViewController: BaseViewController {
         super.viewWillAppear(animated)
         ///나
         view.showIndicator()
-        wishCouponRepository.getWishCouponData(userId: 4) { data in
+        wishCouponRepository.getWishCouponData(userId: self.myid) { [weak self] data in
+            guard let strongSelf = self else {return}
             print(data)
-            self.configureData(wishCouponData: data)
-            self.wishCouponView.myWishCouponData = data
-            self.view.removeIndicator()
+            strongSelf.configureData(wishCouponData: data)
+            strongSelf.wishCouponView.myWishCouponData = data
+            strongSelf.wishCouponView.wishCouponCollectionView.wishCouponCollectionView.reloadData()
+            strongSelf.view.removeIndicator()
         }
         
         ///너
-        wishCouponRepository.getWishCouponData(userId: 7) { data in
+        view.showIndicator()
+        wishCouponRepository.getWishCouponData(userId: self.partnerId) { [weak self] data in
+            guard let strongSelf = self else {return}
             print(data)
-            self.wishCouponView.yourWishCouponData = data
+            strongSelf.wishCouponView.yourWishCouponData = data
+            strongSelf.wishCouponView.wishCouponYourCollectionView.wishCouponYourCollectionView.reloadData()
+            strongSelf.view.removeIndicator()
         }
     }
     
     // MARK: - Setting
+    internal override func setConfig() {
+        self.wishCouponView.wishCouponCollectionView.delegate = self
+        self.wishCouponView.wishCouponYourCollectionView.delegate = self
+    }
     
     private func setStyle() {
     }
@@ -132,3 +142,22 @@ class WishCouponViewController: BaseViewController {
     }
 }
 
+extension WishCouponViewController: WishCouponSelectedCollectionView {
+    func selectPartnerCouponId(couponId: Int) {
+        let couponDetailVC = YourWishViewController()
+        couponDetailVC.wishId = couponId
+        self.navigationController?.pushViewController(couponDetailVC, animated: true)
+    }
+    
+    func selectCouponId(couponId: Int) {
+        let couponDetailVC = MyWishViewController()
+        couponDetailVC.wishId = couponId
+        self.navigationController?.pushViewController(couponDetailVC, animated: true)
+    }
+    
+    func selectMakeCoupon() {
+        let makeCouponVC = MakeWishViewController()
+        makeCouponVC.modalPresentationStyle = .overFullScreen
+        self.present(makeCouponVC, animated: true)
+    }
+}
