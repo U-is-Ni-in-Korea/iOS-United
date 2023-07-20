@@ -12,6 +12,7 @@ final class CodeGeneratorViewController: BaseViewController {
     // MARK: - Property
     var inviteCode: String = ""
     private var codeGeneratorView = CodeGeneratorView()
+    private let coupleJoinRepository = CoupleJoinRepository()
 
     // MARK: - UI Property
     
@@ -54,8 +55,6 @@ final class CodeGeneratorViewController: BaseViewController {
         
     }
     @objc func shareButtonTapped() {
-        print("ddd")
-        
         
         let activityViewController = UIActivityViewController(activityItems: [inviteCode], applicationActivities: nil)
         
@@ -67,16 +66,26 @@ final class CodeGeneratorViewController: BaseViewController {
     }
     
     @objc func linkCheckButtonTapped() {
-        print(">>>>>>")
         codeGeneratorView.indicatorView.startAnimating()
         codeGeneratorView.indicatorView.isHidden = false
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
-            self.codeGeneratorView.indicatorView.stopAnimating()
-            self.codeGeneratorView.indicatorView.isHidden = true
-            let hasSafeArea = self.checkHomeButtonDevice()
-            self.view.showToast(message: "상대가 아직 연결되지 않았어요", hasSafeArea: hasSafeArea)
-        })
+        coupleJoinRepository.getCoupleJoin { value in
+            if value {
+                ///커플 연결
+                self.codeGeneratorView.indicatorView.stopAnimating()
+                UserDefaultsManager.shared.save(value: true, forkey: .hasCoupleCode)
+                let homeViewController = HomeViewController()
+                self.changeRootViewController(UINavigationController(rootViewController: homeViewController))
+            }
+            else {
+                ///커플 대기중
+                self.codeGeneratorView.indicatorView.stopAnimating()
+                self.codeGeneratorView.indicatorView.isHidden = true
+                let hasSafeArea = self.checkHomeButtonDevice()
+                self.view.showToast(message: "상대가 아직 연결되지 않았어요", hasSafeArea: hasSafeArea)
+            }
+        }
+
     }
 
     // MARK: - Custom Method
@@ -87,6 +96,18 @@ final class CodeGeneratorViewController: BaseViewController {
         }
         else {
             return true
+        }
+    }
+    
+    func changeRootViewController(_ viewControllerToPresent: UIViewController) {
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = viewControllerToPresent
+            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil)
+            print("이거")
+        } else {
+            viewControllerToPresent.modalPresentationStyle = .overFullScreen
+            self.present(viewControllerToPresent, animated: true, completion: nil)
+            print("else")
         }
     }
 }
