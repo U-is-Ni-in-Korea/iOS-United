@@ -86,13 +86,13 @@ class EditProfileViewController: BaseViewController, UIImagePickerControllerDele
                                 print (nickname)
                                 print(startDate)
                                 strongSelf.view.removeIndicator()
+                                strongSelf.navigationController?.popViewController(animated: true)
                             } else {
                                 print("닉네임, 기념일 저장 실패")
                                 strongSelf.view.removeIndicator()
                             }
                         }
                     
-                strongSelf.navigationController?.popViewController(animated: true)
                     }
                 }
             }
