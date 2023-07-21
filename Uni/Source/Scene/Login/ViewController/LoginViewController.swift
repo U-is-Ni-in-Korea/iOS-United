@@ -94,6 +94,8 @@ class LoginViewController: BaseViewController {
             UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
                 if let error = error {
                     print(error)
+                    self.loginView.kakaoButton.isEnabled = true
+                    self.loginView.appleButton.isEnabled = true
                 }
                 else {
                     if let oauthToken = oauthToken {
@@ -105,6 +107,8 @@ class LoginViewController: BaseViewController {
             UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
                     if let error = error {
                         print(error)
+                        self.loginView.kakaoButton.isEnabled = true
+                        self.loginView.appleButton.isEnabled = true
                     }
                     else {
                         _ = oauthToken
@@ -125,7 +129,7 @@ class LoginViewController: BaseViewController {
         }
     }
     func hasCouple(loginCase : String) {
-        if keyChains.isTokenExists(account: "accessToken") {
+        if UserDefaultsManager.shared.hasCoupleCode {
             let homeViewController = HomeViewController()
             self.changeRootViewController(UINavigationController(rootViewController: homeViewController))
         }
