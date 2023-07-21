@@ -33,7 +33,7 @@ final class OnboardingView: UIView {
     
     let nextButton = UIButton().then {
         $0.setTitleColor(.lightBlue600, for: .normal)
-        $0.setTitle("시작하기", for: .normal)
+        $0.setTitle("건너뛰기", for: .normal)
         $0.titleLabel?.font = SDSFont.body2.font
     }
     
