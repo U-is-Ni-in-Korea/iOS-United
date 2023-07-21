@@ -42,6 +42,11 @@ final class OnboardingViewController: BaseViewController {
         setConfig()
         actions()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let key = HeaderUtils()
+        key.delete("accessToken")
+    }
     
     //MARK: - set view config
     override func setConfig() {
