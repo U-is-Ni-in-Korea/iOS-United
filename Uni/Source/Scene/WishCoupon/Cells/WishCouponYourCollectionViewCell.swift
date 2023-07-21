@@ -20,7 +20,7 @@ final class WishCouponYourCollectionViewCell: UICollectionViewCell {
     
     // MARK: - UI Property
     
-    private let wishCouponListView = SDSCardWishView()
+    lazy var wishCouponListView = SDSCardWishView()
     
     // MARK: - Life Cycle
     

@@ -20,7 +20,7 @@ public class SDSCardWishView: UIView {
     
     let wishImageView: UIImageView = {
         let image = UIImageView()
-        image.backgroundColor = .gray100
+//        image.backgroundColor = .gray100
         return image
     }()
     
