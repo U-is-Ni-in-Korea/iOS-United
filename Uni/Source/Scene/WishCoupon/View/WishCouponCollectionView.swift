@@ -108,7 +108,9 @@ extension WishCouponCollectionView: UICollectionViewDataSource, UICollectionView
                 delegate?.selectCouponId(couponId: wishId)
             }
         } else { //쿠폰 생성 클릭
-            delegate?.selectMakeCoupon()
+            if wishCouponMyData?.newWishCoupon != 0 {
+                delegate?.selectMakeCoupon()
+            }
         }
     }
 }
