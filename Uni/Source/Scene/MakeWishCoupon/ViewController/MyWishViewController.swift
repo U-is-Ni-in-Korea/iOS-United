@@ -83,6 +83,9 @@ class MyWishViewController: BaseViewController {
                 strongSelf.view.hideAlert(view: alert)
                 let completVC = CompletedWishCouponViewController()
                 completVC.modalPresentationStyle = .overFullScreen
+                completVC.dismissCompletionHandler = {
+                    strongSelf.navigationController?.popToRootViewController(animated: false)
+                }
                 strongSelf.navigationController?.present(completVC, animated: true)
             }
         }

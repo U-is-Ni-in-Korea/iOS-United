@@ -32,10 +32,12 @@ final class BattleResultViewController: BaseViewController {
     }
     
     @objc private func resultButtonTap() {
+        
         if self.battelData?.myRoundMission.finalResult == "WIN" {
-            //소원권으로 이동 완
+            //소원권으로 이동 완, userID 보내야함 todo
+            print("win은인식함")
             let wishCouponVC = WishCouponViewController()
-            self.navigationController?.pushViewController(wishCouponVC, animated: true)
+            navigationController?.pushViewController(wishCouponVC, animated: false)
         } else {
             self.dismiss(animated: true)
         }
@@ -43,8 +45,10 @@ final class BattleResultViewController: BaseViewController {
     
     private func getBattleResult(roundId: Int) {
         self.view.showIndicator()
+        print("getBattleResult 시작전")
         battlerRepository.getRoundGameData(roundId: roundId) { [weak self] data in
             guard let strongSelf = self else {return}
+            print("getBattleResult")
             strongSelf.battelData = data
             strongSelf.bindMyInfoView(data: data)
             strongSelf.bindOtherInfoView(data: data)
@@ -53,9 +57,12 @@ final class BattleResultViewController: BaseViewController {
     }
     private func getRoundMissionId() {
         self.view.showIndicator()
+        print("getRoundMissionId시작전")
         homeRepository.getHomeData { [weak self] data in
             guard let strongSelf = self else {return}
+            print(data, "데이터!!")
             if let roundId = data.roundGameId {
+                print("getRoundMissionId")
                 strongSelf.getBattleResult(roundId: roundId)
                 strongSelf.view.removeIndicator()
             }

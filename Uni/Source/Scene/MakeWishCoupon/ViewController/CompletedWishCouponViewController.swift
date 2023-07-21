@@ -10,6 +10,7 @@ import UIKit
 class CompletedWishCouponViewController: BaseViewController {
 
     // MARK: - Property
+    var dismissCompletionHandler: (() ->())?
     
     private var completedWishCouponView = CompletedWishCouponView()
     
@@ -42,9 +43,8 @@ class CompletedWishCouponViewController: BaseViewController {
     
     @objc private func homeButtonTap() {
         //홈으로 돌아가기
-        let homeVC = HomeViewController()
+        self.dismissCompletionHandler?()
         self.dismiss(animated: true)
-        self.navigationController?.pushViewController(homeVC, animated: true)
     }
     
     private func setNavigationBarCompletion() {

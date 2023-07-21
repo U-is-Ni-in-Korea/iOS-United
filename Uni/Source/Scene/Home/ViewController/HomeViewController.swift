@@ -65,8 +65,9 @@ final class HomeViewController: BaseViewController {
             }
             else if state! {
                 let historyVC = BattleResultViewController()
-                historyVC.modalPresentationStyle = .overFullScreen
-                strongSelf.present(historyVC, animated: true)
+                let navigationController = UINavigationController(rootViewController: historyVC)
+                navigationController.modalPresentationStyle = .overFullScreen
+                strongSelf.present(navigationController, animated: true, completion: nil)
             } else {
                 let resultVC = BattleHistoryViewController()
                 resultVC.modalPresentationStyle = .overFullScreen
