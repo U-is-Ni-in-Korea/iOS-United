@@ -73,12 +73,13 @@ final class NicknameSettingViewController: BaseViewController {
 
     // MARK: - Action Helper
     private func actions() {
-        nicknameSettingView.navigationBarView.backButtonCompletionHandler = {
-            let isTokenExists = self.keyChains.isTokenExists(account: "accessToken")
+        nicknameSettingView.navigationBarView.backButtonCompletionHandler = { [weak self] in
+            guard let storngSelf = self else {return}
+            let isTokenExists = storngSelf.keyChains.isTokenExists(account: "accessToken")
             if isTokenExists {
                 print("존재")
-                self.keyChains.delete("accessToken")
-                self.navigationController?.popViewController(animated: true)
+                storngSelf.keyChains.delete("accessToken")
+                storngSelf.navigationController?.popViewController(animated: true)
             }
         }
         

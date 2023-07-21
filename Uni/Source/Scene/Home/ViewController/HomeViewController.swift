@@ -115,7 +115,7 @@ final class HomeViewController: BaseViewController {
         self.homeRepository.getHomeData { [weak self] data in
             guard let strongSelf = self else {return}
             //비교를 위한 alreadyFinish flag 추가
-            UserDefaultsManager.shared.save(value: data.shortGame == nil ? false: true, forkey: .isAlreadyFinish)
+//            UserDefaultsManager.shared.save(value: data.shortGame == nil ? false: true, forkey: .isAlreadyFinish)
             strongSelf.homeData = data
             strongSelf.homeView.bindData(myScore: data.myScore,
                                          partnerScore: data.partnerScore,

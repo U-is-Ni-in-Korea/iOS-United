@@ -41,9 +41,7 @@ final class OnboardingViewController: BaseViewController {
         super.viewDidLoad()
         setConfig()
         actions()
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        
         let key = HeaderUtils()
         if key.isTokenExists(account: "accessToken") {
             key.delete("accessToken")
