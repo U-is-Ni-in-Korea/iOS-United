@@ -3,7 +3,7 @@ import Foundation
 import Alamofire
 
 class HeaderUtils {
-    private let serviceIdentifier: String = Bundle.main.bundleIdentifier ?? "com.universe.Uni"
+    private let serviceIdentifier: String = Bundle.main.bundleIdentifier ?? "com.universe.sparkle"
     
     func create(account: String, value: String) {
         let keyChainQuery: NSDictionary = [
