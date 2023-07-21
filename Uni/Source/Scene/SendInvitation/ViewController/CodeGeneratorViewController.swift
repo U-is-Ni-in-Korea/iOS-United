@@ -61,12 +61,8 @@ final class CodeGeneratorViewController: BaseViewController {
     @objc func shareButtonTapped() {
         
         let activityViewController = UIActivityViewController(activityItems: [inviteCode], applicationActivities: nil)
-        
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-            if let window = windowScene.windows.first {
-                window.rootViewController?.present(activityViewController, animated: true, completion: nil)
-            }
-        }
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        self.present(activityViewController, animated: true)
     }
     
     @objc func linkCheckButtonTapped() {
