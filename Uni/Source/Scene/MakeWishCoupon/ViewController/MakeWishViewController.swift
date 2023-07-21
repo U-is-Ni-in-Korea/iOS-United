@@ -27,9 +27,13 @@ final class MakeWishViewController: BaseViewController, WriteWishViewDelegate {
         self.view = makeWishView
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.makeWishView.writeWishView.endEditing(true)
+    }
+    
     private func makeWishCoupon() {
         if let content = makeWishView.writeWishView.writeWishTextView.text {
-            if content.count > 0 {
+            if content.count > 0 && content != makeWishView.writeWishView.writeWishPlaceholder{
                 wishRepository.makeWishCoupon(content: content) { [weak self] _ in
                     guard let strongSelf = self else {return}
                     strongSelf.dismiss(animated: true)
