@@ -33,7 +33,9 @@ final class BattleResultViewController: BaseViewController {
     
     @objc private func resultButtonTap() {
         if self.battelData?.myRoundMission.finalResult == "WIN" {
-            //소원권으로 이동
+            //소원권으로 이동 완
+            let wishCouponVC = WishCouponViewController()
+            self.navigationController?.pushViewController(wishCouponVC, animated: true)
         } else {
             self.dismiss(animated: true)
         }

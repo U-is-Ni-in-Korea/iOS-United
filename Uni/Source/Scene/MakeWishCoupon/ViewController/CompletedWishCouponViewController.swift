@@ -42,7 +42,9 @@ class CompletedWishCouponViewController: BaseViewController {
     
     @objc private func homeButtonTap() {
         //홈으로 돌아가기
-        
+        let homeVC = HomeViewController()
+        self.dismiss(animated: true)
+        self.navigationController?.pushViewController(homeVC, animated: true)
     }
     
     private func setNavigationBarCompletion() {
