@@ -70,6 +70,6 @@ final class WishCouponYourCollectionViewCell: UICollectionViewCell {
     }
     
     func usedCheck(value: Bool) -> (String, UIColor, UIColor) {
-        return value ? ("소원 성취", UIColor.gray100, UIColor.gray400) : ("소원권 사용하기", UIColor.green50, UIColor.green600)
+        return value ? ("소원권 보기", UIColor.gray100, UIColor.gray400) : ("소원권 보기", UIColor.green50, UIColor.green600)
     }
 }
