@@ -14,6 +14,8 @@ class WishCouponViewController: BaseViewController {
     
     // MARK: - Property
     
+    
+    
     // MARK: - UI Property
     
     private var wishCouponView = WishCouponView()
@@ -162,15 +164,11 @@ extension WishCouponViewController: WishCouponSelectedCollectionView {
             self.wishCouponRepository.getWishCouponData(userId: self.myid) { [weak self] data in
                 guard let strongSelf = self else {return}
                 
-                if data.newWishCoupon != 0 {
-                    print(data)
-                    strongSelf.configureData(wishCouponData: data)
-                    strongSelf.wishCouponView.myWishCouponData = data
-                    strongSelf.wishCouponView.wishCouponCollectionView.wishCouponCollectionView.reloadData()
-                    strongSelf.view.removeIndicator()
-                    makeCouponVC.modalPresentationStyle = .overFullScreen
-                    strongSelf.present(makeCouponVC, animated: true)
-                }
+                print(data)
+                strongSelf.configureData(wishCouponData: data)
+                strongSelf.wishCouponView.myWishCouponData = data
+                strongSelf.wishCouponView.wishCouponCollectionView.wishCouponCollectionView.reloadData()
+                strongSelf.view.removeIndicator()
             }
             
             ///너
@@ -181,9 +179,9 @@ extension WishCouponViewController: WishCouponSelectedCollectionView {
                 strongSelf.wishCouponView.yourWishCouponData = data
                 strongSelf.wishCouponView.wishCouponYourCollectionView.wishCouponYourCollectionView.reloadData()
                 strongSelf.view.removeIndicator()
-                makeCouponVC.modalPresentationStyle = .overFullScreen
-                strongSelf.present(makeCouponVC, animated: true)
             }
         }
+        makeCouponVC.modalPresentationStyle = .overFullScreen
+        self.present(makeCouponVC, animated: true)
     }
 }
