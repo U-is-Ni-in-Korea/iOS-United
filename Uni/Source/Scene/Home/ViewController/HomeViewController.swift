@@ -29,6 +29,7 @@ final class HomeViewController: BaseViewController {
     //MARK: - controll function
     private func addEvent() {
         homeView.myPageButton.addTarget(self, action: #selector(myPageButtonTapped), for: .touchUpInside)
+        homeView.scoreView.historyButton.addTarget(self, action: #selector(historyButtonTapped), for: .touchUpInside)
         let battleGesture = UITapGestureRecognizer(target: self,
                                                    action: #selector(battleViewTapped(_:)))
         battleGesture.delegate = self
@@ -77,6 +78,11 @@ final class HomeViewController: BaseViewController {
     @objc private func myPageButtonTapped() {
         let myPageVC = SettingViewController()
         self.navigationController?.pushViewController(myPageVC, animated: true)
+    }
+    
+    @objc private func historyButtonTapped() {
+        let historyVC = HistoryViewController()
+        self.navigationController?.pushViewController(historyVC, animated: true)
     }
 
     @objc private func battleViewTapped(_ sender: UIGestureRecognizer) {

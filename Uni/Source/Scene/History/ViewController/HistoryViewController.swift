@@ -33,6 +33,7 @@ class HistoryViewController: BaseViewController {
         setDelegate()
         setLayout()
         setStyle()
+        historyNaviActions()
 
     }
     
@@ -73,6 +74,13 @@ class HistoryViewController: BaseViewController {
     }
     
     // MARK: - Action Helper
+    
+    func historyNaviActions() {
+        self.historyView.navigationBar.backButtonCompletionHandler = { [weak self] in
+            guard let strongSelf = self else {return}
+            strongSelf.navigationController?.popViewController(animated: true)
+        }
+    }
     
     // MARK: - Custom Method
     
