@@ -45,7 +45,7 @@ final class CodeGeneratorView: UIView {
     
     let connectionCheckButton = SDSButton(type: .line, state: .enabled).then {
         $0.setButtonTitle(title: "연결 확인하기")
-        $0.setImage(SDSIcon.icReset.withTintColor(.lightBlue600, renderingMode: .alwaysTemplate), for: .normal)
+        $0.setImage(SDSIcon.icReset.withTintColor(.lightBlue600), for: .normal)
     }
 
 

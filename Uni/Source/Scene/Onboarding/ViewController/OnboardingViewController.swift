@@ -42,6 +42,13 @@ final class OnboardingViewController: BaseViewController {
         setConfig()
         actions()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        let key = HeaderUtils()
+        if key.isTokenExists(account: "accessToken") {
+            key.delete("accessToken")
+        }
+    }
     
     //MARK: - set view config
     override func setConfig() {
@@ -91,6 +98,12 @@ extension OnboardingViewController: UICollectionViewDelegate, UICollectionViewDa
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let currentPage = lround(Double(scrollView.contentOffset.x / scrollView.frame.width))
         onboardingView.pageControl.currentPage = currentPage
+        
+        if currentPage == numberOfPages - 1 {
+            onboardingView.nextButton.setTitle("시작하기", for: .normal)
+        } else {
+            onboardingView.nextButton.setTitle("건너뛰기", for: .normal)
+        }
     }
 
 }
