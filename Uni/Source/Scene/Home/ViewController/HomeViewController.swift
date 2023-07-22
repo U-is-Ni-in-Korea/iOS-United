@@ -30,10 +30,12 @@ final class HomeViewController: BaseViewController {
     private func addEvent() {
         homeView.myPageButton.addTarget(self, action: #selector(myPageButtonTapped), for: .touchUpInside)
         homeView.scoreView.historyButton.addTarget(self, action: #selector(historyButtonTapped), for: .touchUpInside)
+        
         let battleGesture = UITapGestureRecognizer(target: self,
                                                    action: #selector(battleViewTapped(_:)))
         battleGesture.delegate = self
         self.homeView.battleView.shortBattleButton.addGestureRecognizer(battleGesture)
+        
         let wishGesture = UITapGestureRecognizer(target: self,
                                                  action: #selector(wishCouponViewTapped(_:)))
         wishGesture.delegate = self
@@ -51,6 +53,8 @@ final class HomeViewController: BaseViewController {
                 self.homeRepository.isWriteGameState(roundGameId: roundId) { [weak self] state in
                     completion(state)
                 }
+            } else {
+                completion(nil)
             }
         }
     }
@@ -65,6 +69,9 @@ final class HomeViewController: BaseViewController {
             }
             else if state! {
                 let historyVC = BattleResultViewController()
+                if let roundId = strongSelf.homeData?.roundGameId {
+                    historyVC.roundId = roundId
+                }
                 let navigationController = UINavigationController(rootViewController: historyVC)
                 navigationController.modalPresentationStyle = .overFullScreen
                 strongSelf.present(navigationController, animated: true, completion: nil)
@@ -90,7 +97,7 @@ final class HomeViewController: BaseViewController {
         //기존의 저장된 밸류와 다르면 화면 전환
         isAlreaydGameFinish { [weak self] state in
             guard let strongSelf = self else {return}
-            if state {
+            if state { //
                 strongSelf.getHomeList()
                 strongSelf.view.showToast(message: "승부가 이미 완료되었습니다.", hasSafeArea: true)
             } else {
@@ -101,10 +108,10 @@ final class HomeViewController: BaseViewController {
     
     @objc private func wishCouponViewTapped(_ sender: UIGestureRecognizer) {
         let wishCouponVC = WishCouponViewController()
-        if let userId = homeData?.userID, let partnerId = homeData?.partnerId {
-            wishCouponVC.myid = userId
-            wishCouponVC.partnerId = partnerId
-        }
+//        if let userId = homeData?.userID, let partnerId = homeData?.partnerId {
+//            wishCouponVC.myid = userId
+//            wishCouponVC.partnerId = partnerId
+//        }
         self.navigationController?.pushViewController(wishCouponVC, animated: true)
     }
     
@@ -115,6 +122,12 @@ final class HomeViewController: BaseViewController {
         self.homeRepository.getHomeData { [weak self] data in
             guard let strongSelf = self else {return}
             //비교를 위한 alreadyFinish flag 추가
+            if UserDefaultsManager.shared.load(.userId) != nil {
+                UserDefaultsManager.shared.save(value: data.userID, forkey: .userId)
+            }
+            if UserDefaultsManager.shared.load(.partnerId) != nil {
+                UserDefaultsManager.shared.save(value: data.partnerId, forkey: .partnerId)
+            }
 //            UserDefaultsManager.shared.save(value: data.shortGame == nil ? false: true, forkey: .isAlreadyFinish)
             strongSelf.homeData = data
             strongSelf.homeView.bindData(myScore: data.myScore,

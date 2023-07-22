@@ -38,6 +38,12 @@ class LogoutViewController: BaseViewController {
             guard let strongSelf = self else {return}
             if strongSelf.keyChains.isTokenExists(account: "accessToken") {
                 strongSelf.keyChains.delete("accessToken")
+                UserDefaultsManager.shared.delete(.hasOnboarded)
+                UserDefaultsManager.shared.delete(.isAlreadyFinish)
+                UserDefaultsManager.shared.delete(.lastRoundId)
+                UserDefaultsManager.shared.delete(.userId)
+                UserDefaultsManager.shared.delete(.partnerId)
+                
                 let loginViewController = LoginViewController()
                 strongSelf.changeRootViewController(UINavigationController(rootViewController: loginViewController))
             }

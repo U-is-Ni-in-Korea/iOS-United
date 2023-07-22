@@ -11,6 +11,9 @@ enum Key: String {
     case hasOnboarded
     case hasCoupleCode
     case isAlreadyFinish
+    case lastRoundId
+    case userId
+    case partnerId
 }
 
 class UserDefaultsManager {
@@ -44,6 +47,12 @@ class UserDefaultsManager {
             return loadBool(key)
         case .isAlreadyFinish:
             return loadBool(key)
+        case .lastRoundId:
+            return loadInt(key)
+        case .userId:
+            return loadInt(key)
+        case .partnerId:
+            return loadInt(key)
         }
     }
     
@@ -51,7 +60,15 @@ class UserDefaultsManager {
         return defaults.object(forKey: key.rawValue) as? Bool
     }
     
+    func loadInt(_ key: Key) -> Int? {
+        return defaults.integer(forKey: key.rawValue)
+    }
+    
     func save( value: Any, forkey key: Key) {
         defaults.set(value, forKey: key.rawValue)
+    }
+    
+    func delete(_ key: Key) {
+        defaults.removeObject(forKey: key.rawValue)
     }
 }

@@ -74,6 +74,7 @@ final class BattleHistoryViewController: BaseViewController {
             //게임 히스토리로 이동
             strongSelf.view.removeIndicator()
             let resultVC = BattleResultViewController()
+            resultVC.roundId = strongSelf.roundId
             
             resultVC.modalPresentationStyle = .overFullScreen
             guard let pvc = strongSelf.presentingViewController else { return }
@@ -92,6 +93,7 @@ final class BattleHistoryViewController: BaseViewController {
             //게임 히스토리로 이동
             strongSelf.view.removeIndicator()
             let resultVC = BattleResultViewController()
+            resultVC.roundId = strongSelf.roundId
             
             resultVC.modalPresentationStyle = .overFullScreen
             guard let pvc = strongSelf.presentingViewController else { return }

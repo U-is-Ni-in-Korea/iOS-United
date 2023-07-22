@@ -29,6 +29,7 @@ class LoginViewController: BaseViewController {
         setLayout()
         setConfig()
         actions()
+        UserDefaultsManager.shared.save(value: false, forkey: .isAlreadyFinish)
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

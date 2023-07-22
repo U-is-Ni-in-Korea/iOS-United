@@ -12,9 +12,9 @@ final class BattleResultViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getRoundMissionId()
         self.addNavigationButtonAction()
         self.addGesture()
+        self.getBattleResult()
     }
     
     private func addNavigationButtonAction() {
@@ -32,21 +32,25 @@ final class BattleResultViewController: BaseViewController {
     }
     
     @objc private func resultButtonTap() {
-        
         if self.battelData?.myRoundMission.finalResult == "WIN" {
             //소원권으로 이동 완, userID 보내야함 todo
             print("win은인식함")
             let wishCouponVC = WishCouponViewController()
-            navigationController?.pushViewController(wishCouponVC, animated: false)
+            guard let pvc = self.presentingViewController else { return }
+            self.dismiss(animated: true) {
+                if let navigation = pvc as? UINavigationController {
+                    navigation.pushViewController(wishCouponVC, animated: true)
+                }
+            }
         } else {
             self.dismiss(animated: true)
         }
     }
     
-    private func getBattleResult(roundId: Int) {
+    private func getBattleResult() {
         self.view.showIndicator()
         print("getBattleResult 시작전")
-        battlerRepository.getRoundGameData(roundId: roundId) { [weak self] data in
+        battlerRepository.getRoundGameData(roundId: self.roundId) { [weak self] data in
             guard let strongSelf = self else {return}
             print("getBattleResult")
             strongSelf.battelData = data
@@ -63,7 +67,7 @@ final class BattleResultViewController: BaseViewController {
             print(data, "데이터!!")
             if let roundId = data.roundGameId {
                 print("getRoundMissionId")
-                strongSelf.getBattleResult(roundId: roundId)
+//                strongSelf.getBattleResult(roundId: roundId)
                 strongSelf.view.removeIndicator()
             }
         }
@@ -103,7 +107,7 @@ final class BattleResultViewController: BaseViewController {
             self.battleResultView.otherBattleResultView.bindChipText(subTitle: "미션 실패",
                                                                      status: .lose)
         }
-        else if data.partnerRoundMission == nil {
+        else if data.partnerRoundMission?.result == "UNDECIDED" {
             self.battleResultView.otherBattleResultView.bindText(sectionTitle: "상대의 미션",
                                                                  title: "",
                                                                  status: .progress)
@@ -136,6 +140,7 @@ final class BattleResultViewController: BaseViewController {
     private let battlerRepository = BattleRepository()
     private let homeRepository = HomeRepository()
     private var battelData: RoundBattleDataModel?
+    var roundId: Int = 0
 
 }
 extension BattleResultViewController: UIGestureRecognizerDelegate {
