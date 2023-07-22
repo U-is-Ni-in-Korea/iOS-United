@@ -29,13 +29,20 @@ class YourWishViewController: BaseViewController {
     private func getWishDetail() {
         wishRepository.getWishCouponDetail(wishId: wishId) { [weak self] data in
             guard let strongSelf = self else {return}
-            strongSelf.dataBindYourWish(wishContent: data.wishCoupon.content, isUsed: data.wishCoupon.isUsed)
+            strongSelf.dataBindYourWish(wishContent: data.wishCoupon.content,
+                                        isUsed: data.wishCoupon.isUsed,
+                                        iconPath: data.wishCoupon.image ?? "")
             strongSelf.dataBindYourName(nickname: data.nickname)
             strongSelf.isYourWishCouponUsed(data.wishCoupon.isUsed)
         }
     }
     
-    func dataBindYourWish(wishContent: String, isUsed: Bool) {
+    func dataBindYourWish(wishContent: String,
+                          isUsed: Bool,
+                          iconPath: String) {
+        if let url = URL(string: iconPath) {
+            yourWishView.yourWishCouponView.yourWishImageView.kf.setImage(with: url)
+        }
         yourWishView.yourWishCouponView.yourWishLabel.text = wishContent
         isYourWishCouponUsed(isUsed)
     }
