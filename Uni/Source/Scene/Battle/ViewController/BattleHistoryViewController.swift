@@ -78,6 +78,7 @@ final class BattleHistoryViewController: BaseViewController {
             resultVC.modalPresentationStyle = .overFullScreen
             guard let pvc = strongSelf.presentingViewController else { return }
             strongSelf.dismiss(animated: true) {
+                resultVC.bindRoundID(roundID: strongSelf.roundId)
               pvc.present(resultVC, animated: true, completion: nil)
             }
         }
@@ -96,6 +97,7 @@ final class BattleHistoryViewController: BaseViewController {
             resultVC.modalPresentationStyle = .overFullScreen
             guard let pvc = strongSelf.presentingViewController else { return }
             strongSelf.dismiss(animated: true) {
+                resultVC.bindRoundID(roundID: strongSelf.roundId)
               pvc.present(resultVC, animated: true, completion: nil)
             }
         }

@@ -99,7 +99,7 @@ class WishCouponViewController: BaseViewController {
         }
     }
     
-    // MARK: - Custom Method
+    // MARK: - Custom Method    
     private func switchToMyWishCouponView(showMyWishCoupon: Bool) {
         if showMyWishCoupon {
             /// 나의 소원권

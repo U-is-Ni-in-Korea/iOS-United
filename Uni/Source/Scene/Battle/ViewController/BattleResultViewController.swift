@@ -4,6 +4,10 @@ import SnapKit
 import Then
 
 final class BattleResultViewController: BaseViewController {
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
 
     override func loadView() {
         super.loadView()
@@ -12,7 +16,7 @@ final class BattleResultViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.getRoundMissionId()
+//        self.getRoundMissionId()
         self.addNavigationButtonAction()
         self.addGesture()
     }
@@ -34,13 +38,31 @@ final class BattleResultViewController: BaseViewController {
     @objc private func resultButtonTap() {
         
         if self.battelData?.myRoundMission.finalResult == "WIN" {
+            
+            let wishCouponVC = WishCouponViewController()
+            
+            self.view.showIndicator()
+            homeRepository.getHomeData { [weak self] data in
+                guard let strongSelf = self else {return}
+                print(data, "데이터!!")
+                let userID = data.userID
+                let partnerID = data.partnerId
+                print("아이디 불러왔지롱")
+                wishCouponVC.myid = userID
+                wishCouponVC.partnerId = partnerID
+            }
+            self.view.removeIndicator()
             //소원권으로 이동 완, userID 보내야함 todo
             print("win은인식함")
-            let wishCouponVC = WishCouponViewController()
             navigationController?.pushViewController(wishCouponVC, animated: false)
         } else {
             self.dismiss(animated: true)
         }
+    }
+    
+    func bindRoundID(roundID: Int) {
+        self.roundID = roundID
+        self.getBattleResult(roundId: self.roundID)
     }
     
     private func getBattleResult(roundId: Int) {
@@ -55,20 +77,19 @@ final class BattleResultViewController: BaseViewController {
             strongSelf.view.removeIndicator()
         }
     }
-    private func getRoundMissionId() {
-        self.view.showIndicator()
-        print("getRoundMissionId시작전")
-        homeRepository.getHomeData { [weak self] data in
-            guard let strongSelf = self else {return}
-            print(data, "데이터!!")
-            if let roundId = data.roundGameId {
-                print("getRoundMissionId")
-                strongSelf.getBattleResult(roundId: roundId)
-                strongSelf.view.removeIndicator()
-            }
-        }
-    }
-    
+//    private func getRoundMissionId() {
+//        self.view.showIndicator()
+//        print("getRoundMissionId시작전")
+//        homeRepository.getHomeData { [weak self] data in
+//            guard let strongSelf = self else {return}
+//            print(data, "데이터!!")
+//            if let roundId = data.roundGameId {
+//                print("getRoundMissionId")
+//                strongSelf.getBattleResult(roundId: roundId)
+//                strongSelf.view.removeIndicator()
+//            }
+//        }
+//    }
     
     private func bindMyInfoView(data: RoundBattleDataModel) {
         self.setSectionData(state: data.myRoundMission.finalResult)
@@ -136,6 +157,7 @@ final class BattleResultViewController: BaseViewController {
     private let battlerRepository = BattleRepository()
     private let homeRepository = HomeRepository()
     private var battelData: RoundBattleDataModel?
+    private var roundID: Int = 0
 
 }
 extension BattleResultViewController: UIGestureRecognizerDelegate {
