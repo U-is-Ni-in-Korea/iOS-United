@@ -20,8 +20,6 @@ class WishCouponViewController: BaseViewController {
     
     private var wishCouponView = WishCouponView()
     private let wishCouponRepository = WishCouponRepository()
-    var myid: Int = 0
-    var partnerId: Int = 0
     
     // MARK: - Life Cycle
     
@@ -43,24 +41,30 @@ class WishCouponViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         ///나
-        view.showIndicator()
-        wishCouponRepository.getWishCouponData(userId: self.myid) { [weak self] data in
-            guard let strongSelf = self else {return}
-            print(data)
-            strongSelf.configureData(wishCouponData: data)
-            strongSelf.wishCouponView.myWishCouponData = data
-            strongSelf.wishCouponView.wishCouponCollectionView.wishCouponCollectionView.reloadData()
-            strongSelf.view.removeIndicator()
+        
+        if let userId = UserDefaultsManager.shared.loadInt(.userId) {
+            view.showIndicator()
+            wishCouponRepository.getWishCouponData(userId: userId) { [weak self] data in
+                guard let strongSelf = self else {return}
+                print(data)
+                strongSelf.configureData(wishCouponData: data)
+                strongSelf.wishCouponView.myWishCouponData = data
+                strongSelf.wishCouponView.wishCouponCollectionView.wishCouponCollectionView.reloadData()
+                strongSelf.view.removeIndicator()
+            }
         }
         
+        
         ///너
-        view.showIndicator()
-        wishCouponRepository.getWishCouponData(userId: self.partnerId) { [weak self] data in
-            guard let strongSelf = self else {return}
-            print(data)
-            strongSelf.wishCouponView.yourWishCouponData = data
-            strongSelf.wishCouponView.wishCouponYourCollectionView.wishCouponYourCollectionView.reloadData()
-            strongSelf.view.removeIndicator()
+        if let partnerId = UserDefaultsManager.shared.loadInt(.partnerId) {
+            view.showIndicator()
+            wishCouponRepository.getWishCouponData(userId: partnerId) { [weak self] data in
+                guard let strongSelf = self else {return}
+                print(data)
+                strongSelf.wishCouponView.yourWishCouponData = data
+                strongSelf.wishCouponView.wishCouponYourCollectionView.wishCouponYourCollectionView.reloadData()
+                strongSelf.view.removeIndicator()
+            }
         }
     }
     
@@ -160,25 +164,29 @@ extension WishCouponViewController: WishCouponSelectedCollectionView {
     func selectMakeCoupon() {
         let makeCouponVC = MakeWishViewController()
         makeCouponVC.makeWishCompletionHandler = {
-            self.view.showIndicator()
-            self.wishCouponRepository.getWishCouponData(userId: self.myid) { [weak self] data in
-                guard let strongSelf = self else {return}
+            if let userid = UserDefaultsManager.shared.loadInt(.userId),
+               let partnerId = UserDefaultsManager.shared.loadInt(.partnerId) {
                 
-                print(data)
-                strongSelf.configureData(wishCouponData: data)
-                strongSelf.wishCouponView.myWishCouponData = data
-                strongSelf.wishCouponView.wishCouponCollectionView.wishCouponCollectionView.reloadData()
-                strongSelf.view.removeIndicator()
-            }
-            
-            ///너
-            self.view.showIndicator()
-            self.wishCouponRepository.getWishCouponData(userId: self.partnerId) { [weak self] data in
-                guard let strongSelf = self else {return}
-                print(data)
-                strongSelf.wishCouponView.yourWishCouponData = data
-                strongSelf.wishCouponView.wishCouponYourCollectionView.wishCouponYourCollectionView.reloadData()
-                strongSelf.view.removeIndicator()
+                self.view.showIndicator()
+                self.wishCouponRepository.getWishCouponData(userId: userid) { [weak self] data in
+                    guard let strongSelf = self else {return}
+                    
+                    print(data)
+                    strongSelf.configureData(wishCouponData: data)
+                    strongSelf.wishCouponView.myWishCouponData = data
+                    strongSelf.wishCouponView.wishCouponCollectionView.wishCouponCollectionView.reloadData()
+                    strongSelf.view.removeIndicator()
+                }
+                
+                ///너
+                self.view.showIndicator()
+                self.wishCouponRepository.getWishCouponData(userId: partnerId) { [weak self] data in
+                    guard let strongSelf = self else {return}
+                    print(data)
+                    strongSelf.wishCouponView.yourWishCouponData = data
+                    strongSelf.wishCouponView.wishCouponYourCollectionView.wishCouponYourCollectionView.reloadData()
+                    strongSelf.view.removeIndicator()
+                }
             }
         }
         makeCouponVC.modalPresentationStyle = .overFullScreen

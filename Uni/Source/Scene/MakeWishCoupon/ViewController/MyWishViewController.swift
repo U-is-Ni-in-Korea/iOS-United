@@ -26,7 +26,12 @@ class MyWishViewController: BaseViewController {
         self.view = myWishView
     }
     
-    func dataBindMyWish(wishContent: String, isUsed: Bool) {
+    func dataBindMyWish(wishContent: String,
+                        isUsed: Bool,
+                        iconPath: String) {
+        if let url = URL(string: iconPath) {
+            myWishView.myWishCouponView.myWishImageView.kf.setImage(with: url)
+        }
         myWishView.myWishCouponView.myWishLabel.text = wishContent
         if isUsed {
             myWishView.useWishCouponButton.buttonState = .disabled
@@ -113,7 +118,8 @@ class MyWishViewController: BaseViewController {
         wishRepository.getWishCouponDetail(wishId: wishId) { [weak self] data in
             guard let strongSelf = self else {return}
             strongSelf.dataBindMyWish(wishContent: data.wishCoupon.content,
-                                      isUsed: data.wishCoupon.isUsed)
+                                      isUsed: data.wishCoupon.isUsed,
+                                      iconPath: data.wishCoupon.image ?? "")
             if data.wishCoupon.isUsed {
                 self?.myWishView.useWishCouponButton.isUserInteractionEnabled = false
             }

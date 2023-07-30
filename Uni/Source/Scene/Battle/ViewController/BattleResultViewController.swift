@@ -16,9 +16,9 @@ final class BattleResultViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        self.getRoundMissionId()
         self.addNavigationButtonAction()
         self.addGesture()
+        self.getBattleResult()
     }
     
     private func addNavigationButtonAction() {
@@ -36,7 +36,6 @@ final class BattleResultViewController: BaseViewController {
     }
     
     @objc private func resultButtonTap() {
-        
         if self.battelData?.myRoundMission.finalResult == "WIN" {
             
             let wishCouponVC = WishCouponViewController()
@@ -54,21 +53,22 @@ final class BattleResultViewController: BaseViewController {
             self.view.removeIndicator()
             //소원권으로 이동 완, userID 보내야함 todo
             print("win은인식함")
-            navigationController?.pushViewController(wishCouponVC, animated: false)
+            let wishCouponVC = WishCouponViewController()
+            guard let pvc = self.presentingViewController else { return }
+            self.dismiss(animated: true) {
+                if let navigation = pvc as? UINavigationController {
+                    navigation.pushViewController(wishCouponVC, animated: true)
+                }
+            }
         } else {
             self.dismiss(animated: true)
         }
     }
     
-    func bindRoundID(roundID: Int) {
-        self.roundID = roundID
-        self.getBattleResult(roundId: self.roundID)
-    }
-    
-    private func getBattleResult(roundId: Int) {
+    private func getBattleResult() {
         self.view.showIndicator()
         print("getBattleResult 시작전")
-        battlerRepository.getRoundGameData(roundId: roundId) { [weak self] data in
+        battlerRepository.getRoundGameData(roundId: self.roundId) { [weak self] data in
             guard let strongSelf = self else {return}
             print("getBattleResult")
             strongSelf.battelData = data
@@ -77,19 +77,19 @@ final class BattleResultViewController: BaseViewController {
             strongSelf.view.removeIndicator()
         }
     }
-//    private func getRoundMissionId() {
-//        self.view.showIndicator()
-//        print("getRoundMissionId시작전")
-//        homeRepository.getHomeData { [weak self] data in
-//            guard let strongSelf = self else {return}
-//            print(data, "데이터!!")
-//            if let roundId = data.roundGameId {
-//                print("getRoundMissionId")
+    private func getRoundMissionId() {
+        self.view.showIndicator()
+        print("getRoundMissionId시작전")
+        homeRepository.getHomeData { [weak self] data in
+            guard let strongSelf = self else {return}
+            print(data, "데이터!!")
+            if let roundId = data.roundGameId {
+                print("getRoundMissionId")
 //                strongSelf.getBattleResult(roundId: roundId)
-//                strongSelf.view.removeIndicator()
-//            }
-//        }
-//    }
+                strongSelf.view.removeIndicator()
+            }
+        }
+    }
     
     private func bindMyInfoView(data: RoundBattleDataModel) {
         self.setSectionData(state: data.myRoundMission.finalResult)
@@ -124,7 +124,7 @@ final class BattleResultViewController: BaseViewController {
             self.battleResultView.otherBattleResultView.bindChipText(subTitle: "미션 실패",
                                                                      status: .lose)
         }
-        else if data.partnerRoundMission == nil {
+        else if data.partnerRoundMission?.result == "UNDECIDED" {
             self.battleResultView.otherBattleResultView.bindText(sectionTitle: "상대의 미션",
                                                                  title: "",
                                                                  status: .progress)
@@ -157,7 +157,7 @@ final class BattleResultViewController: BaseViewController {
     private let battlerRepository = BattleRepository()
     private let homeRepository = HomeRepository()
     private var battelData: RoundBattleDataModel?
-    private var roundID: Int = 0
+    var roundId: Int = 0
 
 }
 extension BattleResultViewController: UIGestureRecognizerDelegate {
