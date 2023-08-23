@@ -9,8 +9,8 @@ struct AccountTitle {
     let title: String
 }
 
-extension AccountTitle{
-    
+extension AccountTitle {
+
     static func accountTitleList() -> [AccountTitle] {
         return [AccountTitle(title: "로그아웃"),
                 AccountTitle(title: "계정 탈퇴"),

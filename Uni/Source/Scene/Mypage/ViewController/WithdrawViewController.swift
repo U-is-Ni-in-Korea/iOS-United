@@ -7,7 +7,7 @@
 
 import UIKit
 
-class WithdrawViewController: BaseViewController {
+final class WithdrawViewController: BaseViewController {
 
     var withdrawView = WithdrawView()
 
@@ -15,17 +15,25 @@ class WithdrawViewController: BaseViewController {
         super.viewDidLoad()
         withdrawViewActions()
     }
-    
+
     override func loadView() {
         super.loadView()
-        
+        setStyle()
+    }
+
+}
+
+extension WithdrawViewController {
+
+    private func setStyle() {
         withdrawView = WithdrawView(frame: self.view.frame)
         self.view = withdrawView
     }
-    
+
     func withdrawViewActions() {
         self.withdrawView.askWithdrawAlertView.cancelButtonTapCompletion = { [self] in
             self.dismiss(animated: true)
         }
     }
+
 }

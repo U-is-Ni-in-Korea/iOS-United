@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DisconnectViewController: BaseViewController {
+final class DisconnectViewController: BaseViewController {
 
     var disconnectView = DisconnectView()
 
@@ -15,19 +15,24 @@ class DisconnectViewController: BaseViewController {
         super.viewDidLoad()
         disconnectViewActions()
     }
-    
+
     override func loadView() {
         super.loadView()
-        
+    }
+
+}
+
+extension DisconnectViewController {
+
+    private func setStyle() {
         disconnectView = DisconnectView(frame: self.view.frame)
         self.view = disconnectView
     }
-    
+
     func disconnectViewActions() {
         self.disconnectView.askDisconnectAlertView.cancelButtonTapCompletion = { [self] in
             self.dismiss(animated: true)
         }
     }
-
 
 }
