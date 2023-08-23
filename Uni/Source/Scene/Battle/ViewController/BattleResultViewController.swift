@@ -4,10 +4,6 @@ import SnapKit
 import Then
 
 final class BattleResultViewController: BaseViewController {
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
 
     override func loadView() {
         super.loadView()
@@ -37,20 +33,6 @@ final class BattleResultViewController: BaseViewController {
     
     @objc private func resultButtonTap() {
         if self.battelData?.myRoundMission.finalResult == "WIN" {
-            
-            let wishCouponVC = WishCouponViewController()
-            
-            self.view.showIndicator()
-            homeRepository.getHomeData { [weak self] data in
-                guard let strongSelf = self else {return}
-                print(data, "데이터!!")
-                let userID = data.userID
-                let partnerID = data.partnerId
-                print("아이디 불러왔지롱")
-                wishCouponVC.myid = userID
-                wishCouponVC.partnerId = partnerID
-            }
-            self.view.removeIndicator()
             //소원권으로 이동 완, userID 보내야함 todo
             print("win은인식함")
             let wishCouponVC = WishCouponViewController()
@@ -90,6 +72,7 @@ final class BattleResultViewController: BaseViewController {
             }
         }
     }
+    
     
     private func bindMyInfoView(data: RoundBattleDataModel) {
         self.setSectionData(state: data.myRoundMission.finalResult)
