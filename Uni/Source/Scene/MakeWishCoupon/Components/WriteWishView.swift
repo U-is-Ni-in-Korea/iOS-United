@@ -168,7 +168,7 @@ extension WriteWishView: UITextViewDelegate {
     public func textViewDidEndEditing(_ textView: UITextView) {
         writeWishTextView.layer.borderWidth = 0
         
-        if writeWishTextView.text.isEmpty {
+        if writeWishTextView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             writeWishTextView.text = writeWishPlaceholder
             writeWishTextView.textColor = .gray300
             delegate?.disableTextView()
