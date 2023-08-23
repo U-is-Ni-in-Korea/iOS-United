@@ -157,6 +157,7 @@
 		A55150BE2A614A2A00481F57 /* CoupleConnectionMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55150BD2A614A2A00481F57 /* CoupleConnectionMethodViewController.swift */; };
 		A555AD9B2A6079790083CD20 /* NicknameSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555AD9A2A6079790083CD20 /* NicknameSettingViewController.swift */; };
 		A555AD9D2A6079840083CD20 /* NicknameSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555AD9C2A6079840083CD20 /* NicknameSettingView.swift */; };
+		A5667F092A952A1600FC0BA4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A5667F082A952A1600FC0BA4 /* .swiftlint.yml */; };
 		A56C4E622A68FA3F00C18C8F /* CoupleJoinRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C4E612A68FA3F00C18C8F /* CoupleJoinRepository.swift */; };
 		A56C4E682A68FB6B00C18C8F /* GetCoupleJoinDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C4E672A68FB6B00C18C8F /* GetCoupleJoinDataModel.swift */; };
 		A56C4E6A2A68FD0F00C18C8F /* PostCoupleJoinDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C4E692A68FD0F00C18C8F /* PostCoupleJoinDataModel.swift */; };
@@ -317,6 +318,7 @@
 		A55150BD2A614A2A00481F57 /* CoupleConnectionMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleConnectionMethodViewController.swift; sourceTree = "<group>"; };
 		A555AD9A2A6079790083CD20 /* NicknameSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingViewController.swift; sourceTree = "<group>"; };
 		A555AD9C2A6079840083CD20 /* NicknameSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingView.swift; sourceTree = "<group>"; };
+		A5667F082A952A1600FC0BA4 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A56C4E612A68FA3F00C18C8F /* CoupleJoinRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleJoinRepository.swift; sourceTree = "<group>"; };
 		A56C4E672A68FB6B00C18C8F /* GetCoupleJoinDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCoupleJoinDataModel.swift; sourceTree = "<group>"; };
 		A56C4E692A68FD0F00C18C8F /* PostCoupleJoinDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCoupleJoinDataModel.swift; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 		36012F032A55A9F4006B8A39 = {
 			isa = PBXGroup;
 			children = (
+				A5667F082A952A1600FC0BA4 /* .swiftlint.yml */,
 				36012F0E2A55A9F4006B8A39 /* Uni */,
 				36012F0D2A55A9F4006B8A39 /* Products */,
 				36CF2F612A63F2F200D8F8E1 /* Recovered References */,
@@ -1212,6 +1215,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 36012F202A55A9F6006B8A39 /* Build configuration list for PBXNativeTarget "Uni" */;
 			buildPhases = (
+				A5667F072A95298400FC0BA4 /* SwiftLint Script */,
 				36012F082A55A9F4006B8A39 /* Sources */,
 				36012F092A55A9F4006B8A39 /* Frameworks */,
 				36012F0A2A55A9F4006B8A39 /* Resources */,
@@ -1284,6 +1288,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5667F092A952A1600FC0BA4 /* .swiftlint.yml in Resources */,
 				36CF2F642A63F31100D8F8E1 /* Config.xcconfig in Resources */,
 				36012F1C2A55A9F6006B8A39 /* LaunchScreen.storyboard in Resources */,
 				36012F192A55A9F6006B8A39 /* Assets.xcassets in Resources */,
@@ -1291,6 +1296,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A5667F072A95298400FC0BA4 /* SwiftLint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nif test -d \"$HOME/.mint/bin\"; then\n  PATH=\"$HOME/.mint/bin:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, run setup.sh (or download from https://github.com/realm/SwiftLint)\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		36012F082A55A9F4006B8A39 /* Sources */ = {
