@@ -9,8 +9,8 @@ struct MyPageTitle {
     let title: String
 }
 
-extension MyPageTitle{
-    
+extension MyPageTitle {
+
     static func myPageTitleList() -> [MyPageTitle] {
         return [MyPageTitle(title: "계정"),
                 MyPageTitle(title: "서비스 이용약관"),

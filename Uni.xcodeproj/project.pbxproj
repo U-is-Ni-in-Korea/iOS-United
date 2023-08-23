@@ -114,7 +114,6 @@
 		8D17B88A2A659CF00091D7AD /* WriteWishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17B8892A659CF00091D7AD /* WriteWishView.swift */; };
 		8D17B88C2A659D0C0091D7AD /* MakeWishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17B88B2A659D0C0091D7AD /* MakeWishView.swift */; };
 		8D17B88E2A659D2F0091D7AD /* MakeWishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D17B88D2A659D2F0091D7AD /* MakeWishViewController.swift */; };
-		8D2B2E762A6161A900B75CDD /* SettingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E752A6161A900B75CDD /* SettingTableViewCell.swift */; };
 		8D2B2E782A6161D500B75CDD /* MyPageTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E772A6161D500B75CDD /* MyPageTitle.swift */; };
 		8D2B2E7A2A61623300B75CDD /* MyPageProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E792A61623300B75CDD /* MyPageProfileView.swift */; };
 		8D2B2E7C2A61638000B75CDD /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2B2E7B2A61638000B75CDD /* SettingView.swift */; };
@@ -275,7 +274,6 @@
 		8D17B8892A659CF00091D7AD /* WriteWishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteWishView.swift; sourceTree = "<group>"; };
 		8D17B88B2A659D0C0091D7AD /* MakeWishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeWishView.swift; sourceTree = "<group>"; };
 		8D17B88D2A659D2F0091D7AD /* MakeWishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeWishViewController.swift; sourceTree = "<group>"; };
-		8D2B2E752A6161A900B75CDD /* SettingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTableViewCell.swift; sourceTree = "<group>"; };
 		8D2B2E772A6161D500B75CDD /* MyPageTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageTitle.swift; sourceTree = "<group>"; };
 		8D2B2E792A61623300B75CDD /* MyPageProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageProfileView.swift; sourceTree = "<group>"; };
 		8D2B2E7B2A61638000B75CDD /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -926,9 +924,8 @@
 		8D2B2E722A61616900B75CDD /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				8D2B2E752A6161A900B75CDD /* SettingTableViewCell.swift */,
-				8D2B2E772A6161D500B75CDD /* MyPageTitle.swift */,
 				8D2B2E872A61778900B75CDD /* MyPageTableViewCell.swift */,
+				8D2B2E772A6161D500B75CDD /* MyPageTitle.swift */,
 				8D2B2E892A61786A00B75CDD /* AccountTitle.swift */,
 			);
 			path = Cells;
@@ -1397,7 +1394,6 @@
 				8D2B2E822A61643E00B75CDD /* Config.xcconfig in Sources */,
 				36CF2F7B2A65B08B00D8F8E1 /* BattleCategoryView.swift in Sources */,
 				8D17B88A2A659CF00091D7AD /* WriteWishView.swift in Sources */,
-				8D2B2E762A6161A900B75CDD /* SettingTableViewCell.swift in Sources */,
 				7EACFC4C2A6886DB005F416A /* WishCouponRepository.swift in Sources */,
 				7E5C9D8C2A66E74A00488DBD /* HistoryStatusView.swift in Sources */,
 				8D6CB1F42A6501B400FE46C2 /* LogoutView.swift in Sources */,
