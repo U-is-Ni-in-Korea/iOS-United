@@ -6,11 +6,13 @@
 //
 
 import UIKit
-import Then
+
 import SDSKit
+import SnapKit
+import Then
 
 protocol HistoryDetailViewDelegate: AnyObject {
-    func backButtonTapped()
+    func historyDetailViewDidTapBackButton()
 }
 
 final class HistoryDetailView: UIView {
@@ -22,9 +24,7 @@ final class HistoryDetailView: UIView {
     // MARK: - UI Property
     
     let navigationBar = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "승부 히스토리")
-    
     var historyDetailResultView = HistoryDetailResultView()
-    
     var historyDetailResultMissionView = HistoryDetailResultMissionView()
     
     // MARK: - Life Cycle
@@ -34,7 +34,6 @@ final class HistoryDetailView: UIView {
         setLayout()
         setStyle()
     }
-    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         setLayout()
@@ -46,23 +45,19 @@ final class HistoryDetailView: UIView {
     private func setStyle() {
         self.backgroundColor = .gray100
     }
-    
     private func setLayout() {
         [navigationBar, historyDetailResultView, historyDetailResultMissionView]
             .forEach { addSubview($0) }
-        
         navigationBar.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(52)
         }
-        
         historyDetailResultView.snp.makeConstraints {
             $0.top.equalTo(navigationBar.snp.bottom)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(133)
         }
-        
         historyDetailResultMissionView.snp.makeConstraints {
             $0.top.equalTo(historyDetailResultView.snp.bottom)
             $0.leading.trailing.equalToSuperview()
@@ -70,11 +65,9 @@ final class HistoryDetailView: UIView {
         }
     }
     
-    // MARK: - Action Helper
-    
     // MARK: - Custom Method
     
-    func backButtonTapped() {
-        delegate?.backButtonTapped()
+    func didTapBackButton() {
+        delegate?.historyDetailViewDidTapBackButton()
     }
 }
