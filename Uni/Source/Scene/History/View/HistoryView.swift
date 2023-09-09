@@ -29,19 +29,19 @@ final class HistoryView: UIView {
         super.init(coder: coder)
         setLayout()
         setStyle()
+        setHistoryTableViewState()
     }
     override init(frame: CGRect) {
         super.init(frame: .zero)
         setLayout()
         setStyle()
+        setHistoryTableViewState()
     }
     
     // MARK: - Setting
     
     private func setStyle() {
         self.backgroundColor = .gray100
-        self.historyTableView.isHidden = true
-        historyTableView.backgroundColor = .gray100
     }
     private func setLayout() {
         [navigationBar, historyTableView, historyEmptyView]
@@ -61,6 +61,10 @@ final class HistoryView: UIView {
             $0.bottom.equalToSuperview()
             $0.leading.trailing.equalToSuperview()
         }
+    }
+    private func setHistoryTableViewState() {
+        self.historyTableView.isHidden = true
+        historyTableView.backgroundColor = .gray100
     }
     
     // MARK: - Custom Method

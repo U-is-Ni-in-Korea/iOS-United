@@ -32,14 +32,13 @@ final class HistoryDetailResultMissionView: UIView {
         super.init(frame: .zero)
         setLayout()
         setStyle()
+        setBind()
     }
     
     // MARK: - Setting
     
     private func setStyle() {
         self.backgroundColor = .gray100
-        myHistoryResultView.bindText(sectionTitle: "나의 미션", title: "s", status: .win)
-        yourHistoryResultView.bindText(sectionTitle: "상대의 미션", title: "s", status: .win)
     }
     private func setLayout() {
         self.addSubview(battleResultStackView)
@@ -50,6 +49,10 @@ final class HistoryDetailResultMissionView: UIView {
             $0.centerX.equalToSuperview()
         }
         battleResultStackView.addArrangeSubViews([myHistoryResultView, yourHistoryResultView])
+    }
+    private func setBind() {
+        myHistoryResultView.bindText(sectionTitle: "나의 미션", title: "s", status: .win)
+        yourHistoryResultView.bindText(sectionTitle: "상대의 미션", title: "s", status: .win)
     }
     
     // MARK: - Custom Method
