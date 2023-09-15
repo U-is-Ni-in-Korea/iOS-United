@@ -50,6 +50,7 @@ class SelectBattleCategoryViewController: BaseViewController {
     let battleRepository = BattleRepository()
     var battleId: Int = 0
     var selectButtonCompletion: ((Int) -> Void)?
+    var cellTapCompletion: ((Int) -> Void)?
 }
 
 extension SelectBattleCategoryViewController: UIGestureRecognizerDelegate {
