@@ -38,6 +38,12 @@ class BattleViewController: BaseViewController {
     //MARK: -controll function
     private func cellButtonTap(battleId: Int) {
         let battleCategoryView = SelectBattleCategoryViewController()
+        
+        battleCategoryView.selectedBattleId = self.selectedBattleId
+        battleCategoryView.missionContent = self.missionContent
+        battleCategoryView.battleData = self.battleData
+        battleCategoryView.selectedCellArray = self.selectedCellArray
+        
         battleCategoryView.battleId = battleId
         battleCategoryView.modalPresentationStyle = .overFullScreen
         self.present(battleCategoryView, animated: true)
@@ -183,8 +189,8 @@ class BattleViewController: BaseViewController {
     private var battleData: [BattleDataModel] = []
     private var selectedCellArray: [Bool] = []
     
-    private var selectedBattleId: Int?
-    private var missionContent: String = ""
+    var selectedBattleId: Int?
+    var missionContent: String = ""
 }
 extension BattleViewController: UICollectionViewDelegate {}
 extension BattleViewController: UICollectionViewDataSource {
