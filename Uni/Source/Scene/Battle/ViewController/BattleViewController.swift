@@ -160,7 +160,7 @@ class BattleViewController: BaseViewController {
     @objc private func textViewMoveUp(_ notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
             UIView.animate(withDuration: 0.3, animations: {
-                self.view.transform = .init(translationX: 0, y: -keyboardSize.height)
+                self.view.transform = .init(translationX: 0, y: 0)
             })
         }
     }
