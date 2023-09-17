@@ -69,7 +69,7 @@ final class CodeGeneratorViewController: BaseViewController {
         codeGeneratorView.indicatorView.startAnimating()
         codeGeneratorView.indicatorView.isHidden = false
         
-        coupleJoinRepository.getCoupleJoin { value in
+        CoupleJoinRepository.getCoupleJoin { value in
             if value {
                 ///커플 연결
                 self.codeGeneratorView.indicatorView.stopAnimating()

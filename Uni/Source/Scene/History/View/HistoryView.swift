@@ -6,24 +6,21 @@
 //
 
 import UIKit
-import Then
-import SnapKit
+
 import SDSKit
+import SnapKit
+import Then
 
 final class HistoryView: UIView {
-    
-    // MARK: - Property
 
     // MARK: - UI Property
     
     private var historyEmptyView = HistoryEmptyView()
-    
-    let navigationBar = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "승부 히스토리") // 폰트 변경
-    
+    let navigationBar = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "승부 히스토리")
     let historyTableView = UITableView().then {
         $0.register(HistoryTableViewCell.self, forCellReuseIdentifier: HistoryTableViewCell.identifier)
-        $0.rowHeight = 103 // 셀의 높이
-        $0.separatorStyle = .none // 셀의 구분선 없애기
+        $0.rowHeight = 103
+        $0.separatorStyle = .none
     }
     
     // MARK: - Life Cycle
@@ -32,46 +29,43 @@ final class HistoryView: UIView {
         super.init(coder: coder)
         setLayout()
         setStyle()
+        setHistoryTableViewState()
     }
-    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         setLayout()
         setStyle()
+        setHistoryTableViewState()
     }
     
     // MARK: - Setting
     
     private func setStyle() {
         self.backgroundColor = .gray100
-        self.historyTableView.isHidden = true
-        historyTableView.backgroundColor = .gray100
     }
-    
     private func setLayout() {
         [navigationBar, historyTableView, historyEmptyView]
             .forEach { addSubview($0) }
-        
         navigationBar.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(52)
         }
-        
         historyTableView.snp.makeConstraints {
             $0.top.equalTo(navigationBar.snp.bottom)
             $0.bottom.equalToSuperview()
             $0.leading.trailing.equalToSuperview()
         }
-        
         historyEmptyView.snp.makeConstraints {
             $0.top.equalTo(navigationBar.snp.bottom)
             $0.bottom.equalToSuperview()
             $0.leading.trailing.equalToSuperview()
         }
     }
-    
-    // MARK: - Action Helper
+    private func setHistoryTableViewState() {
+        self.historyTableView.isHidden = true
+        historyTableView.backgroundColor = .gray100
+    }
     
     // MARK: - Custom Method
 
@@ -90,4 +84,3 @@ final class HistoryView: UIView {
         }
     }
 }
-

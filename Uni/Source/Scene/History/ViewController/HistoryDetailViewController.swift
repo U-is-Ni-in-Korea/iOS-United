@@ -23,7 +23,7 @@ class HistoryDetailViewController: BaseViewController, HistoryDetailViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        backButtonTapped()
+        historyDetailViewDidTapBackButton()
 
         guard let historyDetailData = historyDetailData else { return }
         dataBind(historyData: historyDetailData)
@@ -50,7 +50,7 @@ class HistoryDetailViewController: BaseViewController, HistoryDetailViewDelegate
     
     // MARK: - Action Helper
     
-    func backButtonTapped() {
+    func historyDetailViewDidTapBackButton() {
         self.historyDetailView.navigationBar.backButtonCompletionHandler = { [self] in self.navigationController?.popViewController(animated: true)
         }
     }
