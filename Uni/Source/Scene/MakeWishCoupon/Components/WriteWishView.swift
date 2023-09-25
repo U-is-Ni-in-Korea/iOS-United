@@ -5,13 +5,17 @@
 //  Created by 홍유정 on 2023/07/17.
 //
 
-import UIKit
 import SDSKit
 import Then
+import UIKit
 
 class WriteWishView: UIView {
 
+    // MARK: - Property
     weak var delegate: WriteWishViewDelegate?
+
+    // MARK: - UI Property
+    let writeWishPlaceholder: String = "소원을 입력해주세요"
 
     let myWishIsLabel = UILabel().then {
         $0.text = "나의 소원은"
@@ -27,12 +31,10 @@ class WriteWishView: UIView {
         $0.textAlignment = .center
     }
 
-    let writeWishPlaceholder: String = "소원을 입력해주세요"
-
     lazy var wishLetterCountLabel = UILabel().then {
+        $0.text = "0/54"
         $0.font = SDSFont.caption.font
         $0.textColor = .gray400
-        $0.text = "0/54"
     }
 
     let dashlineStackView = UIStackView().then {
@@ -54,9 +56,11 @@ class WriteWishView: UIView {
         $0.textColor = .gray600
     }
 
+    // MARK: - Life Cycle
     override init(frame: CGRect) {
         super.init(frame: .zero)
         setTextView()
+        setStyle()
         setLayout()
     }
 
@@ -64,17 +68,23 @@ class WriteWishView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
-    func setTextView() {
+}
+
+extension WriteWishView {
+
+    // MARK: - Setting
+    private func setTextView() {
         writeWishTextView.delegate = self
         writeWishTextView.text = writeWishPlaceholder
         writeWishTextView.textColor = .gray300
     }
 
-    private func setLayout() {
-
+    private func setStyle() {
         self.layer.applyDepthAndDepth3_1Shadow()
         self.applyDepth3_2Shadow()
+    }
 
+    private func setLayout() {
         addSubviews([myWishIsLabel, writeWishTextView, wishLetterCountLabel, dashlineStackView, expirationDateTitleLabel, expirationDateLabel])
 
         for _ in 0...24 {
@@ -111,12 +121,12 @@ class WriteWishView: UIView {
             $0.top.equalTo(dashlineStackView.snp.bottom).offset(UIScreen.main.bounds.height/20)
             $0.centerX.equalToSuperview()
         }
+
         expirationDateLabel.snp.makeConstraints {
             $0.top.equalTo(expirationDateTitleLabel.snp.bottom).offset(4)
             $0.centerX.equalToSuperview()
             $0.bottom.equalToSuperview().inset(UIScreen.main.bounds.height/20)
         }
-
     }
 
 }
