@@ -38,7 +38,7 @@ class BattleView: UIView {
                                          height: 78.adjusted)
         layout.minimumLineSpacing = 9
         layout.minimumInteritemSpacing = 9
-        layout.sectionInset = .init(top: 0, left: 0, bottom: 16, right: 0)
+        layout.sectionInset = .init(top: 0, left: 0, bottom: 48, right: 0)
         self.collectionView.setCollectionViewLayout(layout, animated: false)
         self.collectionView.contentInset = .init(top: 0, left: 20, bottom: 0, right: 20)
     }

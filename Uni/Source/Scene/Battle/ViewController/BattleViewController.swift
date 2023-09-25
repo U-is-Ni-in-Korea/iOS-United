@@ -48,7 +48,7 @@ class BattleViewController: BaseViewController {
                 strongSelf.resetSelectCellArray()
                 strongSelf.selectedCellArray[index].toggle()
                 strongSelf.selectedBattleId = strongSelf.battleData[index].id
-                strongSelf.isCanMakeSession()
+//                strongSelf.isCanMakeSession()
                 strongSelf.battleView.collectionView.reloadData()
             }
         }
@@ -60,19 +60,19 @@ class BattleViewController: BaseViewController {
         }
     }
     
-    private func isCanMakeSession() {
-        if self.selectedBattleId != nil && self.missionContent.count <= 54{
-            self.changeButtonState(state: .enabled)
-        } else {
-            self.changeButtonState(state: .disabled)
-        }
-        self.battleView.collectionView.reloadData()
-    }
-    
-    private func changeButtonState(state: SDSButtonState) {
-        guard let cell = battleView.collectionView.cellForItem(at: .init(row: 0, section: 1)) as? BattleWishCollectionViewCell else { return }
-        cell.creatButton.buttonState = state
-    }
+//    private func isCanMakeSession() {
+//        if self.selectedBattleId != nil && self.missionContent.count <= 54{
+//            self.changeButtonState(state: .enabled)
+//        } else {
+//            self.changeButtonState(state: .disabled)
+//        }
+//        self.battleView.collectionView.reloadData()
+//    }
+//
+//    private func changeButtonState(state: SDSButtonState) {
+//        guard let cell = battleView.collectionView.cellForItem(at: .init(row: 0, section: 1)) as? BattleWishCollectionViewCell else { return }
+////        cell.creatButton.buttonState = state
+//    }
     
     private func naviagationButtonTap() {
         self.battleView.navigationBar.rightBarRightButtonItemCompletionHandler = { [weak self] in
@@ -110,7 +110,7 @@ class BattleViewController: BaseViewController {
                 }
                 strongSelf.selectedCellArray.append(false)
             }
-            strongSelf.isCanMakeSession()
+//            strongSelf.isCanMakeSession()
             strongSelf.battleView.collectionView.reloadData()
             strongSelf.view.removeIndicator()
         }
@@ -197,9 +197,9 @@ extension BattleViewController: UICollectionViewDataSource {
                                                         withReuseIdentifier: SectionView.reuseIdentifier, for: indexPath) as? SectionView else {return UICollectionReusableView()}
         switch indexPath.section {
         case 0:
-            headerView.bindText(title: "미션 카테고리 선택하기", subTitle: "더보기 버튼을 눌러 설명을 볼 수 있어요")
-        default:
             headerView.bindText(title: "소원 정하기", subTitle: nil)
+        default:
+            headerView.bindText(title: "미션 카테고리 선택하기", subTitle: "원하는 카테고리를 선택해 보세요")
         }
         return headerView
     }
@@ -207,58 +207,59 @@ extension BattleViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         switch section{
         case 0:
-            return battleData.count
-        default:
             return 1
+        default:
+            return battleData.count
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         switch indexPath.section {
         case 0:
+            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BattleWishCollectionViewCell.reuseIdentifier, for: indexPath) as? BattleWishCollectionViewCell else {return UICollectionViewCell()}
+            cell.couponView.delegate = self
+            cell.makeButtonTapCompletion = { [weak self] state in
+                guard let strongSelf = self else {return}
+                if state == .enabled {
+                    guard let strongSelf = self else {return}
+                    let alert = strongSelf.view.showAlert(title: "설정된 내용으로 승부를 만들까요?",
+                                                          message: "한번 설정한 내용은 변경할 수 없어요",
+                                                          cancelButtonMessage: "취소",
+                                                          okButtonMessage: "만들기",
+                                                          type: .alert)
+                    
+                    alert.cancelButtonTapCompletion = { [weak self] in
+                        guard let strongSelf = self else {return}
+                        strongSelf.view.hideAlert(view: alert)
+                    }
+                    
+                    alert.okButtonTapCompletion = { [weak self] in
+                        strongSelf.makeBattle { [weak self] roundId in
+                            guard let strongSelf = self else {return}
+                            let battleHistoryVC = BattleHistoryViewController()
+                            battleHistoryVC.modalPresentationStyle = .overFullScreen
+                            guard let pvc = strongSelf.presentingViewController else { return }
+                            strongSelf.dismiss(animated: true) {
+                                pvc.present(battleHistoryVC, animated: true, completion: nil)
+                            }
+                        }
+                    }
+                }
+            }
+            return cell
+        default: // section 1
+            
             guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BattleCollectionViewCell.reuseIdentifier, for: indexPath) as? BattleCollectionViewCell else {return UICollectionViewCell()}
             cell.bindText(iconImage: battleData[indexPath.row].image,
                           title: battleData[indexPath.row].title)
-            cell.update(selectedCellArray[indexPath.item])
+//            cell.update(selectedCellArray[indexPath.item])
             cell.buttonTapCompletion = { [weak self] in
                 guard let strongSelf = self else {return}
                 strongSelf.cellButtonTap(battleId: strongSelf.battleData[indexPath.row].id)
             }
             
             return cell
-        default: // section 1
-            guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: BattleWishCollectionViewCell.reuseIdentifier, for: indexPath) as? BattleWishCollectionViewCell else {return UICollectionViewCell()}
-            cell.couponView.delegate = self
-            cell.makeButtonTapCompletion = { [weak self] state in
-                guard let strongSelf = self else {return}
-                if state == .enabled {
-                        guard let strongSelf = self else {return}
-                        let alert = strongSelf.view.showAlert(title: "설정된 내용으로 승부를 만들까요?",
-                                                              message: "한번 설정한 내용은 변경할 수 없어요",
-                                                              cancelButtonMessage: "취소",
-                                                              okButtonMessage: "만들기",
-                                                              type: .alert)
-                        
-                        alert.cancelButtonTapCompletion = { [weak self] in
-                            guard let strongSelf = self else {return}
-                            strongSelf.view.hideAlert(view: alert)
-                        }
-                        
-                        alert.okButtonTapCompletion = { [weak self] in
-                            strongSelf.makeBattle { [weak self] roundId in
-                                guard let strongSelf = self else {return}
-                                let battleHistoryVC = BattleHistoryViewController()
-                                battleHistoryVC.modalPresentationStyle = .overFullScreen
-                                guard let pvc = strongSelf.presentingViewController else { return }
-                                strongSelf.dismiss(animated: true) {
-                                  pvc.present(battleHistoryVC, animated: true, completion: nil)
-                                }
-                            }
-                        }
-                        
-                }
-            }
-            return cell
+
         }
     }
     
@@ -266,7 +267,7 @@ extension BattleViewController: UICollectionViewDataSource {
         self.resetSelectCellArray()
         self.selectedCellArray[indexPath.item].toggle()
         self.selectedBattleId = battleData[indexPath.row].id
-        self.isCanMakeSession()
+//        self.isCanMakeSession()
         collectionView.reloadData()
         return true
     }
@@ -276,10 +277,10 @@ extension BattleViewController: UICollectionViewDelegateFlowLayout {
         switch section {
         case 0:
             return CGSize(width: UIScreen.main.bounds.width,
-                          height: 82)
+                          height: 56)
         default:
             return CGSize(width: UIScreen.main.bounds.width,
-                          height: 56)
+                          height: 82)
         }
     }
 }

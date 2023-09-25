@@ -19,19 +19,22 @@ class BattleCollectionViewCell: UICollectionViewCell {
 //        }
 //    }
     
-    func update(_ status:Bool?){
-        if let status = status,
-            status {
-            self.contentView.layer.borderColor = UIColor.lightBlue500.cgColor
-            self.contentView.layer.borderWidth = 1
-        } else {
-            self.contentView.layer.borderWidth = 0
-        }
-    }
+//    func update(_ status:Bool?){
+//        if let status = status,
+//            status {
+//            self.contentView.layer.borderColor = UIColor.lightBlue500.cgColor
+//            self.contentView.layer.borderWidth = 1
+//        } else {
+//            self.contentView.layer.borderWidth = 0
+//        }
+//    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         self.setLayout()
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didCellTap))
+        self.contentView.addGestureRecognizer(tapGesture)
     }
     
     required init?(coder: NSCoder) {
@@ -75,10 +78,15 @@ class BattleCollectionViewCell: UICollectionViewCell {
         completion()
     }
     
-    private func updateCell() {
-        self.contentView.layer.borderColor = UIColor.lightBlue500.cgColor
-        self.contentView.layer.borderWidth = 1
+    @objc private func didCellTap() {
+        guard let completion = buttonTapCompletion else {return}
+        completion()
     }
+    
+//    private func updateCell() {
+//        self.contentView.layer.borderColor = UIColor.lightBlue500.cgColor
+//        self.contentView.layer.borderWidth = 1
+//    }
     
     private let iconImageView = UIImageView().then {
         $0.contentMode = .scaleAspectFill
@@ -88,9 +96,9 @@ class BattleCollectionViewCell: UICollectionViewCell {
         $0.textColor = .gray600
     }
     private lazy var arrowButton = UIButton().then {
-        $0.addTarget(self,
-                     action: #selector(didArrowButtonTap),
-                     for: .touchUpInside)
+//        $0.addTarget(self,
+//                     action: #selector(didArrowButtonTap),
+//                     for: .touchUpInside)
         $0.tintColor = .gray250
         $0.setImage(SDSIcon.icChevron.withTintColor(.gray250, renderingMode: .alwaysTemplate), for: .normal)
     }
