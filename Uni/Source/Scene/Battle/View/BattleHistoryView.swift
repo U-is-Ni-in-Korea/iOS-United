@@ -1,172 +1,71 @@
-import Foundation
-import UIKit
-import SDSKit
-import SnapKit
-import Then
-import Kingfisher
+import SwiftUI
 
-final class BattleHistoryView: UIView {
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    init() {
-        super.init(frame: .zero)
-        self.setOtherMissionViewLayout()
-        self.setMyMissionInfoViewLayout()
-        self.setLayout()
-    }
-    
-    func bindData(myMission: RoundMission) {
-        self.myMissionTitleLabel.text = myMission.missionContent.missionCategory.title
-        self.myMissionSummaryLabel.text = myMission.missionContent.content
-        if let url = URL(string: myMission.missionContent.missionCategory.image ?? "") {
-            self.myMissionInfoIconImageView.kf.setImage(with: url)
+import SDSKit
+
+struct BattleHistoryView: View {
+    @ObservedObject var data: BattleHistoryViewData
+    @State private var currentPage = 0
+    var body: some View {
+        VStack(spacing: 0) {
+            BattleNavigationBarView(viewData: data)
+            ScrollView {
+                BattleHistoryCategoryTitleView(title: "나의 미션은")
+                HStack(alignment: .center, spacing: 20) {
+                    AsyncImage(url: URL(string: data.rountBattle?.myRoundMission.missionContent.missionCategory.image ?? "")) { image in
+                        image.image?.resizable()
+                    }
+                        .frame(width: 60, height: 60)
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("\(data.rountBattle?.myRoundMission.missionContent.content ?? "")")
+                            .font(Font(SDSFont.btn2.font))
+                            .foregroundColor(Color(uiColor: .gray600))
+                        Text("\(data.rountBattle?.myRoundMission.missionContent.missionCategory.title ?? "")")
+                            .font(Font(SDSFont.body2.font))
+                            .foregroundColor(Color(uiColor: .gray600))
+                    }
+                    Spacer()
+                }
+                .padding([.leading, .trailing], 20)
+                .frame(height: 100)
+                .background(Color(uiColor: .gray000))
+                .cornerRadius(10)
+                .padding([.leading, .trailing], 20)
+                BattleHistoryCategoryTitleView(title: "게임 사용법")
+                TabView(selection: $currentPage) {
+                    BattleHistoryGameProcessContentView(content: data.rountBattle?.myRoundMission.missionContent.missionCategory.rule ?? "", title: "룰 소개")
+                        .tag(0)
+                    BattleHistoryGameProcessContentView(content: data.rountBattle?.myRoundMission.missionContent.missionCategory.tip ?? "", title: "공략 팁")
+                        .tag(1)
+                }
+                .tabViewStyle(.page(indexDisplayMode: .never))
+                .frame(width: UIScreen.main.bounds.size.width, height: 283)
+                BattleHistoryPageControlView(numberOfPages: 2, currentPage: $currentPage)
+                if data.rountBattle?.myRoundMission.missionContent.missionCategory.missionTool == "TIMER" ||
+                         data.rountBattle?.myRoundMission.missionContent.missionCategory.missionTool == "MEMO" {
+                    BattleHistoryCategoryTitleView(title: "기록하며 플레이")
+                    HStack(alignment: .center, spacing: 0) {
+                        Image(data.rountBattle?.myRoundMission.missionContent.missionCategory.missionTool == "TIMER" ? "icTimer" : (data.rountBattle?.myRoundMission.missionContent.missionCategory.missionTool == "MEMO" ? "icMemo" : ""))
+                            .resizable()
+                            .frame(width: 32, height: 32)
+                            .padding(.leading, 18)
+                        Text(data.rountBattle?.myRoundMission.missionContent.missionCategory.missionTool == "TIMER" ? "타이머" : (data.rountBattle?.myRoundMission.missionContent.missionCategory.missionTool == "MEMO" ? "메모" : ""))
+                            .font(Font(SDSFont.btn2.font))
+                            .padding(.leading, 14)
+                        Spacer()
+                    }
+                    .frame(width: UIScreen.main.bounds.size.width - 40, height: 85)
+                    .shadow(color: Color(red: 0.67, green: 0.73, blue: 0.73).opacity(0.12), radius: 12.5, x: 6, y: 7)
+                    .shadow(color: Color(red: 0.91, green: 0.94, blue: 0.94), radius: 5, x: -3, y: -3)
+                    .background(Color(uiColor: .gray000))
+                    .cornerRadius(10)
+                    .padding(.bottom, 28)
+                    .onTapGesture {
+                        print("??클릭")
+                    }
+                }
+            }
+            BattleHistoryBottomView(viewData: data)
         }
-    }
-    
-    private func setLayout() {
-        self.backgroundColor = .gray100
-        self.addSubviews([scrollView, navigationBar])
-        navigationBar.snp.makeConstraints {
-            $0.top.equalTo(self.safeAreaLayoutGuide)
-            $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(56)
-        }
-        scrollView.snp.makeConstraints {
-            $0.top.equalTo(navigationBar.snp.bottom)
-            $0.leading.trailing.equalTo(self)
-            $0.bottom.equalTo(self.safeAreaLayoutGuide)
-            $0.width.equalTo(UIScreen.main.bounds.width)
-        }
-        scrollView.addSubviews([myMissionSectionTitle, myMissionInfoView, otherMissionSectionTitleLabel, otherMissionView, missionCompleteButton, missionFailButton, quitButton])
-        
-        myMissionSectionTitle.snp.makeConstraints {
-            $0.top.equalTo(scrollView.snp.top).offset(16)
-            $0.leading.equalTo(self.snp.leading).offset(20)
-        }
-        myMissionInfoView.snp.makeConstraints {
-            $0.top.equalTo(myMissionSectionTitle.snp.bottom).offset(16)
-            $0.leading.trailing.equalTo(self).inset(20)
-            $0.height.equalTo(116)
-        }
-        otherMissionSectionTitleLabel.snp.makeConstraints {
-            $0.top.equalTo(myMissionInfoView.snp.bottom).offset(32)
-            $0.leading.equalTo(self.snp.leading).offset(20)
-        }
-        otherMissionView.snp.makeConstraints {
-            $0.top.equalTo(otherMissionSectionTitleLabel.snp.bottom).offset(32)
-            $0.leading.trailing.equalTo(self).inset(20)
-            $0.height.equalTo(116)
-        }
-        missionCompleteButton.snp.makeConstraints {
-            $0.top.equalTo(otherMissionView.snp.bottom).offset(132)
-            $0.leading.trailing.equalTo(self).inset(20)
-            $0.height.equalTo(48)
-        }
-        missionFailButton.snp.makeConstraints {
-            $0.top.equalTo(missionCompleteButton.snp.bottom).offset(16)
-            $0.leading.trailing.equalTo(self).inset(20)
-            $0.height.equalTo(48)
-        }
-        quitButton.snp.makeConstraints {
-            $0.top.equalTo(missionFailButton.snp.bottom).offset(16)
-            $0.trailing.equalTo(self.snp.trailing).inset(20)
-            $0.height.equalTo(38)
-            $0.bottom.equalTo(scrollView.snp.bottom).inset(16)
-        }
-    }
-    
-    private func setMyMissionInfoViewLayout() {
-        myMissionInfoView.addSubviews([myMissionInfoIconImageView, myMissionTitleLabel, myMissionSummaryLabel, arrowIconImageView])
-        
-        myMissionInfoIconImageView.snp.makeConstraints {
-            $0.top.leading.bottom.equalToSuperview().inset(20)
-            $0.width.height.equalTo(77)
-        }
-        myMissionTitleLabel.snp.makeConstraints {
-            $0.top.equalTo(myMissionInfoIconImageView.snp.top).offset(15.5)
-            $0.leading.equalTo(myMissionInfoIconImageView.snp.trailing).offset(20)
-            $0.trailing.equalTo(arrowIconImageView.snp.leading).inset(-20)
-        }
-        myMissionSummaryLabel.snp.makeConstraints {
-            $0.top.equalTo(myMissionTitleLabel.snp.bottom).offset(6)
-            $0.leading.equalTo(myMissionInfoIconImageView.snp.trailing).offset(20)
-            $0.trailing.equalTo(arrowIconImageView.snp.leading).inset(-20)
-        }
-        arrowIconImageView.snp.makeConstraints {
-            $0.trailing.equalToSuperview().inset(12)
-            $0.centerY.equalToSuperview()
-            $0.width.height.equalTo(24)
-        }
-        myMissionInfoView.layer.applyDepth4_2Shadow()
-    }
-    
-    private func setOtherMissionViewLayout() {
-        otherMissionView.addSubview(otherMissionTitleLabel)
-        otherMissionTitleLabel.snp.makeConstraints {
-            $0.centerY.centerX.equalToSuperview()
-        }
-    }
-    
-    
-    let navigationBar = BattleNavigationBar().then {
-        $0.bindText(title: "한판 승부 기록")
-    }
-    let scrollView = UIScrollView().then {
-        $0.alwaysBounceVertical = true
-        $0.contentInsetAdjustmentBehavior = .never
-    }
-    //myMissionInfoView
-    let myMissionSectionTitle = UILabel().then {
-        $0.text = "나의 미션은"
-        $0.font = SDSFont.subTitle.font
-        $0.textColor = .gray600
-    }
-    let myMissionInfoView = UIView().then {
-        $0.layer.cornerRadius = 10
-        $0.backgroundColor = .gray000
-    }
-    let myMissionInfoIconImageView = UIImageView().then {
-        $0.contentMode = .scaleAspectFill
-    }
-    let myMissionTitleLabel = UILabel().then {
-        $0.font = SDSFont.btn2.font
-        $0.textColor = .gray600
-    }
-    let myMissionSummaryLabel = UILabel().then {
-        $0.font = SDSFont.body2.font
-        $0.numberOfLines = 0
-        $0.textColor = .gray600
-    }
-    let arrowIconImageView = UIImageView(image: SDSIcon.icChevron.resize(targetSize: .init(width: 24, height: 24)).withTintColor(.gray250, renderingMode: .alwaysTemplate))
-    
-    //otherMission
-    let otherMissionSectionTitleLabel = UILabel().then {
-        $0.text = "상대의 미션은"
-        $0.font = SDSFont.subTitle.font
-        $0.textColor = .gray600
-    }
-    let otherMissionView = UIView().then {
-        $0.backgroundColor = .gray150
-        $0.layer.cornerRadius = 10
-    }
-    let otherMissionTitleLabel = UILabel().then {
-        $0.text = "상대가 미션을 수행하면 공개"
-        $0.font = SDSFont.body2.font
-        $0.textColor = .gray300
-        $0.textAlignment = .center
-    }
-    
-    let missionCompleteButton = SDSButton(type: .fill, state: .enabled).then {
-        $0.setButtonTitle(title: "미션 완료")
-    }
-    let missionFailButton = SDSButton(type: .line, state: .enabled).then {
-        $0.setButtonTitle(title: "미션 실패")
-    }
-    
-    let quitButton = UIButton().then {
-        $0.setTitle("승부 그만두기", for: .normal)
-        $0.setTitleColor(.gray300, for: .normal)
-        $0.titleLabel?.font = SDSFont.body1.font
+        .background(Color(uiColor: .gray100))
     }
 }

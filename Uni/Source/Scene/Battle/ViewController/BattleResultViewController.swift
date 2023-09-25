@@ -94,26 +94,26 @@ final class BattleResultViewController: BaseViewController {
     }
     //WIN, LOSE, DRAW, UNDECIDED
     private func bindOtherInfoView(data: RoundBattleDataModel) {
-        let date = (data.partnerRoundMission?.updatedAt ?? "").stringToDate(toformat: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", fromFormat: "HH:mm")
-        self.battleResultView.otherBattleResultView.bindText(sectionTitle: "상대의 미션",
-                                                             title: data.partnerRoundMission?.missionContent.content ?? "",
-                                                             summary: data.partnerRoundMission?.missionContent.missionCategory.title)
-        if data.partnerRoundMission?.result == "WIN" {
-            self.battleResultView.otherBattleResultView.bindChipText(title: date,
-                                                                     subTitle: "미션 성공",
-                                                                     status: .win)
-        }
-        else if data.partnerRoundMission?.result == "LOSE" {
-            self.battleResultView.otherBattleResultView.bindChipText(subTitle: "미션 실패",
-                                                                     status: .lose)
-        }
-        else if data.partnerRoundMission?.result == "UNDECIDED" {
-            self.battleResultView.otherBattleResultView.bindText(sectionTitle: "상대의 미션",
-                                                                 title: "",
-                                                                 status: .progress)
-            self.battleResultView.otherBattleResultView.bindChipText(subTitle: "",
-                                                                     status: .progress)
-        }
+//        let date = (data.partnerRoundMission?.updatedAt ?? "").stringToDate(toformat: "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'", fromFormat: "HH:mm")
+//        self.battleResultView.otherBattleResultView.bindText(sectionTitle: "상대의 미션",
+//                                                             title: data.partnerRoundMission?.missionContent.content ?? "",
+//                                                             summary: data.partnerRoundMission?.missionContent.missionCategory.title)
+//        if data.partnerRoundMission?.result == "WIN" {
+//            self.battleResultView.otherBattleResultView.bindChipText(title: date,
+//                                                                     subTitle: "미션 성공",
+//                                                                     status: .win)
+//        }
+//        else if data.partnerRoundMission?.result == "LOSE" {
+//            self.battleResultView.otherBattleResultView.bindChipText(subTitle: "미션 실패",
+//                                                                     status: .lose)
+//        }
+//        else if data.partnerRoundMission?.result == "UNDECIDED" {
+//            self.battleResultView.otherBattleResultView.bindText(sectionTitle: "상대의 미션",
+//                                                                 title: "",
+//                                                                 status: .progress)
+//            self.battleResultView.otherBattleResultView.bindChipText(subTitle: "",
+//                                                                     status: .progress)
+//        }
     }
     
     private func setSectionData(state: String) {
