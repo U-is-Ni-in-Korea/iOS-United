@@ -155,8 +155,6 @@ extension BattleWishCouponView: UITextViewDelegate {
 
     public func textViewDidBeginEditing(_ textView: UITextView) {
         wishCouponTextBackgroundView.layer.borderWidth = 1
-        wishCouponTextBackgroundView.layer.borderColor = UIColor.lightBlue500.cgColor
-
         if textView.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
             wishCouponTextView.textColor = .gray300
             wishCouponTextView.text = wishCouponPlaceholder
@@ -164,6 +162,13 @@ extension BattleWishCouponView: UITextViewDelegate {
             wishCouponTextView.textColor = .gray600
             wishCouponTextView.text = ""
         }
+        
+        if wishCouponTextView.text.count >= 54 {
+            wishCouponTextBackgroundView.layer.borderColor = UIColor.red500.cgColor
+        } else {
+            wishCouponTextBackgroundView.layer.borderColor = UIColor.lightBlue500.cgColor
+        }
+        
     }
 
     public func textViewDidChange(_ textView: UITextView) {
@@ -200,6 +205,9 @@ extension BattleWishCouponView: UITextViewDelegate {
         if wishCouponTextView.text.isEmpty {
             wishCouponTextView.text = wishCouponPlaceholder
             wishCouponTextView.textColor = .gray300
+        } else if wishCouponTextView.text.count >= 54 {
+            wishCouponTextBackgroundView.layer.borderColor = UIColor.red500.cgColor
+            wishCountLabel.textColor = .red500
         }
     }
 }
