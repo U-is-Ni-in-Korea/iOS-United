@@ -67,7 +67,6 @@
 		3698B21C2A691B3F006314FE /* BattleWishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B21B2A691B3F006314FE /* BattleWishCouponView.swift */; };
 		3698B21F2A69A9ED006314FE /* WishRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B21E2A69A9ED006314FE /* WishRepository.swift */; };
 		3698B2222A69ADE9006314FE /* GetWishDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B2212A69ADE9006314FE /* GetWishDataModel.swift */; };
-		36CF2F642A63F31100D8F8E1 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 36CF2F622A63F2FF00D8F8E1 /* Config.xcconfig */; };
 		36CF2F662A643C6900D8F8E1 /* BattleHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F652A643C6900D8F8E1 /* BattleHistoryViewController.swift */; };
 		36CF2F682A643C8900D8F8E1 /* BattleHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F672A643C8900D8F8E1 /* BattleHistoryView.swift */; };
 		36CF2F6A2A643CFB00D8F8E1 /* BattleNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F692A643CFB00D8F8E1 /* BattleNavigationBar.swift */; };
@@ -170,6 +169,9 @@
 		A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */; };
 		A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */; };
 		A5B4B5922A604F43000C7555 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B5912A604F43000C7555 /* LoginView.swift */; };
+		F88894AE2AACDD8F000735CB /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = F88894AD2AACDD8F000735CB /* Config.xcconfig */; };
+		F88894B42AACE078000735CB /* MemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88894B32AACE078000735CB /* MemoView.swift */; };
+		F8B618712ABC3A050009B9FC /* MemoAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B618702ABC3A050009B9FC /* MemoAlertView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -228,7 +230,6 @@
 		3698B21B2A691B3F006314FE /* BattleWishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleWishCouponView.swift; sourceTree = "<group>"; };
 		3698B21E2A69A9ED006314FE /* WishRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishRepository.swift; sourceTree = "<group>"; };
 		3698B2212A69ADE9006314FE /* GetWishDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWishDataModel.swift; sourceTree = "<group>"; };
-		36CF2F622A63F2FF00D8F8E1 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		36CF2F652A643C6900D8F8E1 /* BattleHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryViewController.swift; sourceTree = "<group>"; };
 		36CF2F672A643C8900D8F8E1 /* BattleHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryView.swift; sourceTree = "<group>"; };
 		36CF2F692A643CFB00D8F8E1 /* BattleNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleNavigationBar.swift; sourceTree = "<group>"; };
@@ -331,6 +332,9 @@
 		A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
 		A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5B4B5912A604F43000C7555 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		F88894AD2AACDD8F000735CB /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		F88894B32AACE078000735CB /* MemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoView.swift; sourceTree = "<group>"; };
+		F8B618702ABC3A050009B9FC /* MemoAlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoAlertView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -407,9 +411,9 @@
 		36012F252A55AE35006B8A39 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
-				36CF2F622A63F2FF00D8F8E1 /* Config.xcconfig */,
 				36012F0F2A55A9F4006B8A39 /* AppDelegate.swift */,
 				36012F112A55A9F4006B8A39 /* SceneDelegate.swift */,
+				F88894AD2AACDD8F000735CB /* Config.xcconfig */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -417,6 +421,7 @@
 		36012F262A55AE3F006B8A39 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				F88894AF2AACE001000735CB /* Memo */,
 				A56C4E6E2A69A40900C18C8F /* Splash */,
 				36CF2F752A65B00700D8F8E1 /* BattleCategory */,
 				8D17B8862A659A740091D7AD /* MakeWishCoupon */,
@@ -1205,6 +1210,39 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		F88894AF2AACE001000735CB /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				F88894B12AACE039000735CB /* ViewController */,
+				F88894B02AACE02D000735CB /* Component */,
+				F88894B22AACE042000735CB /* View */,
+			);
+			path = Memo;
+			sourceTree = "<group>";
+		};
+		F88894B02AACE02D000735CB /* Component */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		F88894B12AACE039000735CB /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		F88894B22AACE042000735CB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F88894B32AACE078000735CB /* MemoView.swift */,
+				F8B618702ABC3A050009B9FC /* MemoAlertView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1285,8 +1323,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F88894AE2AACDD8F000735CB /* Config.xcconfig in Resources */,
 				A5667F092A952A1600FC0BA4 /* .swiftlint.yml in Resources */,
-				36CF2F642A63F31100D8F8E1 /* Config.xcconfig in Resources */,
 				36012F1C2A55A9F6006B8A39 /* LaunchScreen.storyboard in Resources */,
 				36012F192A55A9F6006B8A39 /* Assets.xcassets in Resources */,
 			);
@@ -1369,6 +1407,7 @@
 				A53C62F62A65719600AE3B45 /* UserDefaultsManager.swift in Sources */,
 				A578FC162A62D9380021A32E /* DDaySettingView.swift in Sources */,
 				36CF2F822A65BC3500D8F8E1 /* BattleCategoryType.swift in Sources */,
+				F8B618712ABC3A050009B9FC /* MemoAlertView.swift in Sources */,
 				8D2B2E7E2A6163B400B75CDD /* SettingTableViewHeaderView.swift in Sources */,
 				36012F3B2A55B60F006B8A39 /* AuthRepository.swift in Sources */,
 				7E37BAE92A6284EE00A3CF64 /* HistoryDetailResultView.swift in Sources */,
@@ -1455,6 +1494,7 @@
 				3698B2222A69ADE9006314FE /* GetWishDataModel.swift in Sources */,
 				A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */,
 				3698B2182A686438006314FE /* DeleteService.swift in Sources */,
+				F88894B42AACE078000735CB /* MemoView.swift in Sources */,
 				A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */,
 				36012F452A55CDAA006B8A39 /* CGPoint+.swift in Sources */,
 				A56C4E622A68FA3F00C18C8F /* CoupleJoinRepository.swift in Sources */,
@@ -1489,7 +1529,6 @@
 /* Begin XCBuildConfiguration section */
 		36012F1E2A55A9F6006B8A39 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36CF2F622A63F2FF00D8F8E1 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = "http://uni-sparkle.kro.kr/";
@@ -1552,7 +1591,6 @@
 		};
 		36012F1F2A55A9F6006B8A39 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36CF2F622A63F2FF00D8F8E1 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = "http://uni-sparkle.kro.kr/";
