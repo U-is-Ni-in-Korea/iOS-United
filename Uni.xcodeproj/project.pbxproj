@@ -1788,7 +1788,7 @@
 			repositoryURL = "https://github.com/U-is-Ni-in-Korea/iOS-SDS-United";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				minimumVersion = 1.1.1;
 			};
 		};
 		7E64995B2A650C4800B2F86C /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */ = {
