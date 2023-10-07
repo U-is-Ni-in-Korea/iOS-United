@@ -4,4 +4,5 @@ struct MissionContent: Codable {
     let id: Int
     let missionCategory: MissionCategory
     let content: String
+    let image: String?
 }

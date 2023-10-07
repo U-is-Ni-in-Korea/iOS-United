@@ -6,6 +6,7 @@ import Then
 import Kingfisher
 
 final class BattleCategoryView: UIView {
+    var makeButtonTapCompletion: ((SDSButtonState) -> Void)?
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -14,6 +15,7 @@ final class BattleCategoryView: UIView {
     init(type: BattleCategoryType) {
         super.init(frame: .zero)
         self.setLayout(type: type)
+        self.addButtonGesture()
     }
     
     func bindText(missionData: BattleDataModel, contentList: [MissionContentList]? = nil, type: BattleCategoryType) {
@@ -35,6 +37,9 @@ final class BattleCategoryView: UIView {
     }
     
     private func setLayout(type: BattleCategoryType) {
+        
+        
+        
         self.backgroundColor = .gray150
         self.addSubviews([navigationBar, scrollView])
         navigationBar.snp.makeConstraints {
@@ -61,10 +66,13 @@ final class BattleCategoryView: UIView {
         switch type {
         case .select:
             self.setExampleSectionLayout()
-            stackView.addArrangeSubViews([titleSectionView, ruleSectionView, tipSectionView, exmapleSectionView, completeButton])
-            completeButton.snp.makeConstraints {
+            stackView.addArrangeSubViews([titleSectionView, ruleSectionView, tipSectionView, exmapleSectionView, creatButton])
+            creatButton.snp.makeConstraints {
                 $0.top.equalTo(self.exmapleSectionView.snp.bottom).offset(32)
                 $0.height.equalTo(48)
+                $0.centerX.equalToSuperview()
+                $0.bottom.equalToSuperview().inset(16)
+                $0.width.equalTo(UIScreen.main.bounds.width - 40)
             }
         case .none:
             stackView.addArrangeSubViews([titleSectionView, ruleSectionView, tipSectionView])
@@ -132,8 +140,7 @@ final class BattleCategoryView: UIView {
     }
     
     let navigationBar = SDSNavigationBar(hasBack: true,
-                                         hasTitleItem: true,
-                                         navigationTitle: "미션 카테고리 설명")
+                                         hasTitleItem: true)
     let scrollView = UIScrollView().then {
         $0.alwaysBounceVertical = true
         $0.showsVerticalScrollIndicator = false
@@ -193,8 +200,30 @@ final class BattleCategoryView: UIView {
     }
     let firstExampleDescriptionView = CategoryDescriptionView()
     let secondExampleDescriptionView = CategoryDescriptionView()
-    let completeButton = SDSButton(type: .fill, state: .enabled).then {
-        $0.setButtonTitle(title: "선택하기")
+//    let completeButton = SDSButton(type: .fill, state: .enabled).then {
+//        $0.setButtonTitle(title: "선택하기")
+//    }
+    let creatButton = SDSButton(type: .fill, state: .enabled).then {
+        $0.setButtonTitle(title: "한판 승부 만들기")
     }
     
+    @objc private func createButtonTap() {
+        guard let completion = makeButtonTapCompletion else {return}
+        completion(creatButton.buttonState)
+    }
+    
+    func addButtonGesture() {
+        let tapGesture = UITapGestureRecognizer(target: self,
+                                                action: #selector(createButtonTap))
+        tapGesture.delegate = self
+        self.creatButton.addGestureRecognizer(tapGesture)
+    }
+    
+    
+}
+
+extension BattleCategoryView: UIGestureRecognizerDelegate {
+    func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
+        return true
+    }
 }

@@ -174,8 +174,14 @@
 		A58C70302A61CE6300327CD3 /* EnterInvitationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C702F2A61CE6200327CD3 /* EnterInvitationView.swift */; };
 		A58C70322A61D3AC00327CD3 /* EnterInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C70312A61D3AC00327CD3 /* EnterInvitationViewController.swift */; };
 		A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */; };
+		A5A5840E2AC0000E001DEC8B /* BattleNavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A5840D2AC0000E001DEC8B /* BattleNavigationBarView.swift */; };
+		A5A584102AC00062001DEC8B /* BattleHistoryPageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A5840F2AC00062001DEC8B /* BattleHistoryPageControlView.swift */; };
+		A5A584122AC000AE001DEC8B /* BattleHistoryGameProcessContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A584112AC000AE001DEC8B /* BattleHistoryGameProcessContentView.swift */; };
+		A5A584142AC00120001DEC8B /* BattleHistoryBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A584132AC00120001DEC8B /* BattleHistoryBottomView.swift */; };
+		A5A584162AC00697001DEC8B /* BattleHistoryCategoryTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A584152AC00697001DEC8B /* BattleHistoryCategoryTitleView.swift */; };
 		A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */; };
 		A5B4B5922A604F43000C7555 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B5912A604F43000C7555 /* LoginView.swift */; };
+		A5C23DDF2ABAB96900800190 /* BattleHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23DDE2ABAB96900800190 /* BattleHistoryViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -341,8 +347,14 @@
 		A58C702F2A61CE6200327CD3 /* EnterInvitationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInvitationView.swift; sourceTree = "<group>"; };
 		A58C70312A61D3AC00327CD3 /* EnterInvitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInvitationViewController.swift; sourceTree = "<group>"; };
 		A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
+		A5A5840D2AC0000E001DEC8B /* BattleNavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleNavigationBarView.swift; sourceTree = "<group>"; };
+		A5A5840F2AC00062001DEC8B /* BattleHistoryPageControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryPageControlView.swift; sourceTree = "<group>"; };
+		A5A584112AC000AE001DEC8B /* BattleHistoryGameProcessContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryGameProcessContentView.swift; sourceTree = "<group>"; };
+		A5A584132AC00120001DEC8B /* BattleHistoryBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryBottomView.swift; sourceTree = "<group>"; };
+		A5A584152AC00697001DEC8B /* BattleHistoryCategoryTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryCategoryTitleView.swift; sourceTree = "<group>"; };
 		A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5B4B5912A604F43000C7555 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A5C23DDE2ABAB96900800190 /* BattleHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -628,6 +640,7 @@
 		361FA3752A6271F900C3BBFD /* Battle */ = {
 			isa = PBXGroup;
 			children = (
+				A5C23DDD2ABAB95600800190 /* ViewData */,
 				361FA3792A62721700C3BBFD /* ViewController */,
 				361FA3782A62721300C3BBFD /* View */,
 				361FA3772A62720F00C3BBFD /* Cells */,
@@ -645,6 +658,11 @@
 				36CF2F712A657DD400D8F8E1 /* BattleChipView.swift */,
 				36CF2F732A6583D700D8F8E1 /* BattleStatus.swift */,
 				3698B21B2A691B3F006314FE /* BattleWishCouponView.swift */,
+				A5A5840D2AC0000E001DEC8B /* BattleNavigationBarView.swift */,
+				A5A5840F2AC00062001DEC8B /* BattleHistoryPageControlView.swift */,
+				A5A584112AC000AE001DEC8B /* BattleHistoryGameProcessContentView.swift */,
+				A5A584132AC00120001DEC8B /* BattleHistoryBottomView.swift */,
+				A5A584152AC00697001DEC8B /* BattleHistoryCategoryTitleView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1247,6 +1265,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		A5C23DDD2ABAB95600800190 /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+				A5C23DDE2ABAB96900800190 /* BattleHistoryViewModel.swift */,
+			);
+			path = ViewData;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1367,6 +1393,7 @@
 				A53C62FE2A67DAC600AE3B45 /* UserRepository.swift in Sources */,
 				361FA3302A601D2E00C3BBFD /* GetService.swift in Sources */,
 				7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */,
+				A5A584122AC000AE001DEC8B /* BattleHistoryGameProcessContentView.swift in Sources */,
 				36CF2F7E2A65B0B600D8F8E1 /* CategoryDescriptionView.swift in Sources */,
 				36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */,
 				3698B2162A686209006314FE /* RoundBattleDataModel.swift in Sources */,
@@ -1399,6 +1426,7 @@
 				8D17B88E2A659D2F0091D7AD /* MakeWishViewController.swift in Sources */,
 				A555AD9B2A6079790083CD20 /* NicknameSettingViewController.swift in Sources */,
 				8D6CB1F62A6505E300FE46C2 /* LogoutViewController.swift in Sources */,
+				A5A584102AC00062001DEC8B /* BattleHistoryPageControlView.swift in Sources */,
 				8D2B2E8C2A619C0D00B75CDD /* EditProfileViewController.swift in Sources */,
 				8D95A2D22AC869F30053186D /* TimerButtonView.swift in Sources */,
 				7E6499672A65AD0500B2F86C /* WishCouponEmptyView.swift in Sources */,
@@ -1443,6 +1471,7 @@
 				8D6CB1F42A6501B400FE46C2 /* LogoutView.swift in Sources */,
 				7EBAA5352A6928CB000EF883 /* SDSCardWishView.swift in Sources */,
 				A53C63012A67DE6100AE3B45 /* UserDataModel.swift in Sources */,
+				A5C23DDF2ABAB96900800190 /* BattleHistoryViewModel.swift in Sources */,
 				36012F4D2A55CEF4006B8A39 /* UIButton+.swift in Sources */,
 				A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */,
 				361FA3282A60193B00C3BBFD /* HomeRepository.swift in Sources */,
@@ -1475,6 +1504,7 @@
 				36012F472A55CDEE006B8A39 /* Date+.swift in Sources */,
 				A56C4E682A68FB6B00C18C8F /* GetCoupleJoinDataModel.swift in Sources */,
 				361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */,
+				A5A584142AC00120001DEC8B /* BattleHistoryBottomView.swift in Sources */,
 				36CF2F6E2A6579CA00D8F8E1 /* BattleResultView.swift in Sources */,
 				8D2B2E7C2A61638000B75CDD /* SettingView.swift in Sources */,
 				A53C62F92A6682A600AE3B45 /* KakaoLoginDataModel.swift in Sources */,
@@ -1507,10 +1537,12 @@
 				36012F452A55CDAA006B8A39 /* CGPoint+.swift in Sources */,
 				A56C4E622A68FA3F00C18C8F /* CoupleJoinRepository.swift in Sources */,
 				A578FC1A2A62D9B70021A32E /* CodeGeneratorView.swift in Sources */,
+				A5A5840E2AC0000E001DEC8B /* BattleNavigationBarView.swift in Sources */,
 				361FA37F2A62793B00C3BBFD /* SectionView.swift in Sources */,
 				8DAAB2B82A61CDB700E25CF4 /* DatePickerView.swift in Sources */,
 				361FA32E2A601D1B00C3BBFD /* NetworkResult.swift in Sources */,
 				7E5C9D922A66E83D00488DBD /* HistoryChipView.swift in Sources */,
+				A5A584162AC00697001DEC8B /* BattleHistoryCategoryTitleView.swift in Sources */,
 				3698B21C2A691B3F006314FE /* BattleWishCouponView.swift in Sources */,
 				36CF2F6A2A643CFB00D8F8E1 /* BattleNavigationBar.swift in Sources */,
 				361FA37D2A6277C300C3BBFD /* BattleView.swift in Sources */,
@@ -1755,8 +1787,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
+				kind = exactVersion;
+				version = 5.6.0;
 			};
 		};
 		36012F572A55D07D006B8A39 /* XCRemoteSwiftPackageReference "Then" */ = {
@@ -1803,8 +1835,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/U-is-Ni-in-Korea/iOS-SDS-United";
 			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
+				kind = exactVersion;
+				version = 1.1.4;
 			};
 		};
 		7E64995B2A650C4800B2F86C /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */ = {

@@ -25,25 +25,25 @@ class BattleWishCollectionViewCell: UICollectionViewCell {
     
     
     private func setLayout() {
-        self.contentView.addSubviews([couponView, creatButton])
+        self.contentView.addSubviews([couponView]) //, creatButton
         self.couponView.snp.remakeConstraints {
             $0.width.equalTo(UIScreen.main.bounds.width - 40)
             $0.top.centerX.equalToSuperview()
         }
-        self.creatButton.snp.makeConstraints {
-            $0.top.equalTo(self.couponView.snp.bottom).offset(32)
-            $0.centerX.equalToSuperview()
-            $0.bottom.equalToSuperview().inset(16)
-            $0.width.equalTo(UIScreen.main.bounds.width - 40)
-            $0.height.equalTo(48)
-        }
+//        self.creatButton.snp.makeConstraints {
+//            $0.top.equalTo(self.couponView.snp.bottom).offset(32)
+//            $0.centerX.equalToSuperview()
+//            $0.bottom.equalToSuperview().inset(16)
+//            $0.width.equalTo(UIScreen.main.bounds.width - 40)
+//            $0.height.equalTo(48)
+//        }
     }
     
     func addButtonGesture() {
         let tapGesture = UITapGestureRecognizer(target: self,
                                                 action: #selector(createButtonTap))
         tapGesture.delegate = self
-        self.creatButton.addGestureRecognizer(tapGesture)
+//        self.creatButton.addGestureRecognizer(tapGesture)
     }
     
     func setCouponConfig() {
@@ -52,13 +52,13 @@ class BattleWishCollectionViewCell: UICollectionViewCell {
     
     @objc private func createButtonTap() {
         guard let completion = makeButtonTapCompletion else {return}
-        completion(creatButton.buttonState)
+//        completion(creatButton.buttonState)
     }
     
     let couponView = BattleWishCouponView()
-    let creatButton = SDSButton(type: .fill, state: .disabled).then {
-        $0.setButtonTitle(title: "한판 승부 만들기")
-    }
+//    let creatButton = SDSButton(type: .fill, state: .disabled).then {
+//        $0.setButtonTitle(title: "한판 승부 만들기")
+//    }
 }
 extension BattleWishCollectionViewCell: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
@@ -67,6 +67,6 @@ extension BattleWishCollectionViewCell: UIGestureRecognizerDelegate {
 }
 extension BattleWishCollectionViewCell: CouponTextStateDelegate {
     func checkTextViewState(state: Bool) {
-        self.creatButton.buttonState = state ? .enabled: .disabled
+//        self.creatButton.buttonState = state ? .enabled: .disabled
     }
 }
