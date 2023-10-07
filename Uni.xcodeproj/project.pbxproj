@@ -134,6 +134,10 @@
 		8D6CB1FE2A6509C200FE46C2 /* DisconnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB1FD2A6509C200FE46C2 /* DisconnectViewController.swift */; };
 		8D8DB0BE2A67CAC0003E1CA8 /* UseWishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8DB0BD2A67CAC0003E1CA8 /* UseWishCouponView.swift */; };
 		8D8DB0C02A67CB9F003E1CA8 /* UseWishCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8DB0BF2A67CB9F003E1CA8 /* UseWishCouponViewController.swift */; };
+		8D95A2CE2AC8691A0053186D /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A2CD2AC8691A0053186D /* TimerState.swift */; };
+		8D95A2D02AC8695C0053186D /* TimerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A2CF2AC8695C0053186D /* TimerPickerView.swift */; };
+		8D95A2D22AC869F30053186D /* TimerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A2D12AC869F30053186D /* TimerButtonView.swift */; };
+		8D95A2D62AC86A8E0053186D /* TimerProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A2D52AC86A8E0053186D /* TimerProgressView.swift */; };
 		8DAAB2B62A61CD9700E25CF4 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAB2B52A61CD9700E25CF4 /* DatePickerViewController.swift */; };
 		8DAAB2B82A61CDB700E25CF4 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAB2B72A61CDB700E25CF4 /* DatePickerView.swift */; };
 		8DAEBB0D2A66D718007B818A /* MyWishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEBB0C2A66D718007B818A /* MyWishView.swift */; };
@@ -142,6 +146,8 @@
 		8DAEBB132A66E8C8007B818A /* YourWishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEBB122A66E8C8007B818A /* YourWishCouponView.swift */; };
 		8DAEBB152A66E92C007B818A /* YourWishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEBB142A66E92C007B818A /* YourWishView.swift */; };
 		8DAEBB172A66F9BF007B818A /* YourWishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEBB162A66F9BF007B818A /* YourWishViewController.swift */; };
+		8DF24AF12ACC9A54003F4568 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF24AF02ACC9A54003F4568 /* TimerView.swift */; };
+		8DFC07A82AD1485400844676 /* TimerTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC07A72AD1485400844676 /* TimerTipView.swift */; };
 		A53C62F62A65719600AE3B45 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */; };
 		A53C62F92A6682A600AE3B45 /* KakaoLoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */; };
 		A53C62FE2A67DAC600AE3B45 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62FD2A67DAC600AE3B45 /* UserRepository.swift */; };
@@ -294,6 +300,10 @@
 		8D6CB1FD2A6509C200FE46C2 /* DisconnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisconnectViewController.swift; sourceTree = "<group>"; };
 		8D8DB0BD2A67CAC0003E1CA8 /* UseWishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseWishCouponView.swift; sourceTree = "<group>"; };
 		8D8DB0BF2A67CB9F003E1CA8 /* UseWishCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseWishCouponViewController.swift; sourceTree = "<group>"; };
+		8D95A2CD2AC8691A0053186D /* TimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
+		8D95A2CF2AC8695C0053186D /* TimerPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPickerView.swift; sourceTree = "<group>"; };
+		8D95A2D12AC869F30053186D /* TimerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButtonView.swift; sourceTree = "<group>"; };
+		8D95A2D52AC86A8E0053186D /* TimerProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProgressView.swift; sourceTree = "<group>"; };
 		8DAAB2B52A61CD9700E25CF4 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		8DAAB2B72A61CDB700E25CF4 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		8DAEBB0C2A66D718007B818A /* MyWishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWishView.swift; sourceTree = "<group>"; };
@@ -302,6 +312,8 @@
 		8DAEBB122A66E8C8007B818A /* YourWishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourWishCouponView.swift; sourceTree = "<group>"; };
 		8DAEBB142A66E92C007B818A /* YourWishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourWishView.swift; sourceTree = "<group>"; };
 		8DAEBB162A66F9BF007B818A /* YourWishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourWishViewController.swift; sourceTree = "<group>"; };
+		8DF24AF02ACC9A54003F4568 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		8DFC07A72AD1485400844676 /* TimerTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTipView.swift; sourceTree = "<group>"; };
 		A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginDataModel.swift; sourceTree = "<group>"; };
 		A53C62FD2A67DAC600AE3B45 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
@@ -417,6 +429,7 @@
 		36012F262A55AE3F006B8A39 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				8D71931F2ABE8A11000114F5 /* Timer */,
 				A56C4E6E2A69A40900C18C8F /* Splash */,
 				36CF2F752A65B00700D8F8E1 /* BattleCategory */,
 				8D17B8862A659A740091D7AD /* MakeWishCoupon */,
@@ -959,6 +972,35 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		8D71931F2ABE8A11000114F5 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				8D95A2CC2AC868FD0053186D /* Component */,
+				8D7193202ABE8A20000114F5 /* View */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		8D7193202ABE8A20000114F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DF24AF02ACC9A54003F4568 /* TimerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8D95A2CC2AC868FD0053186D /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				8D95A2CD2AC8691A0053186D /* TimerState.swift */,
+				8D95A2CF2AC8695C0053186D /* TimerPickerView.swift */,
+				8D95A2D12AC869F30053186D /* TimerButtonView.swift */,
+				8D95A2D52AC86A8E0053186D /* TimerProgressView.swift */,
+				8DFC07A72AD1485400844676 /* TimerTipView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		8DAEBB0A2A66D5C0007B818A /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -1330,6 +1372,7 @@
 				3698B2162A686209006314FE /* RoundBattleDataModel.swift in Sources */,
 				36CF2F722A657DD400D8F8E1 /* BattleChipView.swift in Sources */,
 				3698B2142A683C35006314FE /* MakeBattleDataModel.swift in Sources */,
+				8D95A2CE2AC8691A0053186D /* TimerState.swift in Sources */,
 				361FA3842A628A2100C3BBFD /* BattleWishCollectionViewCell.swift in Sources */,
 				7E5C9D8E2A66E82400488DBD /* HistoryStatus.swift in Sources */,
 				8D2B2E842A616CDC00B75CDD /* AccountViewController.swift in Sources */,
@@ -1357,6 +1400,7 @@
 				A555AD9B2A6079790083CD20 /* NicknameSettingViewController.swift in Sources */,
 				8D6CB1F62A6505E300FE46C2 /* LogoutViewController.swift in Sources */,
 				8D2B2E8C2A619C0D00B75CDD /* EditProfileViewController.swift in Sources */,
+				8D95A2D22AC869F30053186D /* TimerButtonView.swift in Sources */,
 				7E6499672A65AD0500B2F86C /* WishCouponEmptyView.swift in Sources */,
 				8DAEBB112A66E317007B818A /* MyWishViewController.swift in Sources */,
 				8DAEBB0F2A66D992007B818A /* MyWishCouponView.swift in Sources */,
@@ -1417,6 +1461,7 @@
 				A578FC142A62D9210021A32E /* DDaySettingViewController.swift in Sources */,
 				36CF2F792A65B06000D8F8E1 /* SelectBattleCategoryViewController.swift in Sources */,
 				36CF2F6C2A6579B600D8F8E1 /* BattleResultViewController.swift in Sources */,
+				8D95A2D02AC8695C0053186D /* TimerPickerView.swift in Sources */,
 				36CF2F842A65C77C00D8F8E1 /* BattleCategoryViewController.swift in Sources */,
 				7EACFC492A6882A8005F416A /* WishCouponDataModel.swift in Sources */,
 				36CF2F682A643C8900D8F8E1 /* BattleHistoryView.swift in Sources */,
@@ -1437,7 +1482,9 @@
 				361FA3322A601E7900C3BBFD /* PostService.swift in Sources */,
 				A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */,
 				8D2B2E782A6161D500B75CDD /* MyPageTitle.swift in Sources */,
+				8DF24AF12ACC9A54003F4568 /* TimerView.swift in Sources */,
 				A5B4B5922A604F43000C7555 /* LoginView.swift in Sources */,
+				8DFC07A82AD1485400844676 /* TimerTipView.swift in Sources */,
 				8D2B2E8A2A61786A00B75CDD /* AccountTitle.swift in Sources */,
 				361FA3462A602A2800C3BBFD /* MissionContentList.swift in Sources */,
 				A55150BE2A614A2A00481F57 /* CoupleConnectionMethodViewController.swift in Sources */,
@@ -1447,6 +1494,7 @@
 				8D17B88C2A659D0C0091D7AD /* MakeWishView.swift in Sources */,
 				8D2B2E802A6163E900B75CDD /* SettingViewController.swift in Sources */,
 				7E64995A2A6503B100B2F86C /* WishCouponCollectionViewCell.swift in Sources */,
+				8D95A2D62AC86A8E0053186D /* TimerProgressView.swift in Sources */,
 				361FA3712A6268DD00C3BBFD /* HomeBattleView.swift in Sources */,
 				7E25F6542A633ACA003E82F6 /* WishCouponCountView.swift in Sources */,
 				36012F4B2A55CE87006B8A39 /* String+.swift in Sources */,
