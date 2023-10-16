@@ -182,6 +182,10 @@
 		A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */; };
 		A5B4B5922A604F43000C7555 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B5912A604F43000C7555 /* LoginView.swift */; };
 		A5C23DDF2ABAB96900800190 /* BattleHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23DDE2ABAB96900800190 /* BattleHistoryViewModel.swift */; };
+		F80916352ADC276600237AA3 /* NickNameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80916342ADC276600237AA3 /* NickNameInputView.swift */; };
+		F80916372ADC27C300237AA3 /* NickNameViewLogoutAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80916362ADC27C300237AA3 /* NickNameViewLogoutAlert.swift */; };
+		F80916392ADC281800237AA3 /* QnAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80916382ADC281700237AA3 /* QnAView.swift */; };
+		F809163B2ADC283400237AA3 /* QnAViewAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809163A2ADC283400237AA3 /* QnAViewAlert.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -355,6 +359,10 @@
 		A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5B4B5912A604F43000C7555 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A5C23DDE2ABAB96900800190 /* BattleHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryViewModel.swift; sourceTree = "<group>"; };
+		F80916342ADC276600237AA3 /* NickNameInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameInputView.swift; sourceTree = "<group>"; };
+		F80916362ADC27C300237AA3 /* NickNameViewLogoutAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewLogoutAlert.swift; sourceTree = "<group>"; };
+		F80916382ADC281700237AA3 /* QnAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAView.swift; sourceTree = "<group>"; };
+		F809163A2ADC283400237AA3 /* QnAViewAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAViewAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1134,6 +1142,10 @@
 			children = (
 				A555AD9C2A6079840083CD20 /* NicknameSettingView.swift */,
 				A55150BB2A614A2000481F57 /* CoupleConnectionMethodView.swift */,
+				F80916342ADC276600237AA3 /* NickNameInputView.swift */,
+				F80916362ADC27C300237AA3 /* NickNameViewLogoutAlert.swift */,
+				F80916382ADC281700237AA3 /* QnAView.swift */,
+				F809163A2ADC283400237AA3 /* QnAViewAlert.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1508,7 +1520,9 @@
 				36CF2F6E2A6579CA00D8F8E1 /* BattleResultView.swift in Sources */,
 				8D2B2E7C2A61638000B75CDD /* SettingView.swift in Sources */,
 				A53C62F92A6682A600AE3B45 /* KakaoLoginDataModel.swift in Sources */,
+				F80916392ADC281800237AA3 /* QnAView.swift in Sources */,
 				8DAEBB0D2A66D718007B818A /* MyWishView.swift in Sources */,
+				F809163B2ADC283400237AA3 /* QnAViewAlert.swift in Sources */,
 				361FA3322A601E7900C3BBFD /* PostService.swift in Sources */,
 				A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */,
 				8D2B2E782A6161D500B75CDD /* MyPageTitle.swift in Sources */,
@@ -1523,6 +1537,8 @@
 				A53C63072A68734700AE3B45 /* DDayDataModel.swift in Sources */,
 				8D17B88C2A659D0C0091D7AD /* MakeWishView.swift in Sources */,
 				8D2B2E802A6163E900B75CDD /* SettingViewController.swift in Sources */,
+				F80916372ADC27C300237AA3 /* NickNameViewLogoutAlert.swift in Sources */,
+				F80916352ADC276600237AA3 /* NickNameInputView.swift in Sources */,
 				7E64995A2A6503B100B2F86C /* WishCouponCollectionViewCell.swift in Sources */,
 				8D95A2D62AC86A8E0053186D /* TimerProgressView.swift in Sources */,
 				361FA3712A6268DD00C3BBFD /* HomeBattleView.swift in Sources */,
