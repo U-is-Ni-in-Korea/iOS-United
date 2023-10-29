@@ -17,6 +17,11 @@ struct QnAView: View {
     @State private var showSettingAlert = false
     @Environment(\.presentationMode) var presentationMode
     
+    @ObservedObject var viewModel: QnAViewModel
+    init(viewModel: QnAViewModel) {
+        self.viewModel = viewModel
+    }
+    
     var body: some View {
         
         NavigationView{
@@ -25,7 +30,8 @@ struct QnAView: View {
                     ZStack{
                         HStack{
                             Button(action: {
-                                presentationMode.wrappedValue.dismiss()}, label: {
+                                viewModel.popViewController()
+                            }, label: {
                                 Image(systemName: "chevron.left")
                                     .resizable()
                                     .foregroundColor(Color(uiColor: .gray600))
@@ -94,19 +100,17 @@ struct QnAView: View {
                         .frame(height: 56)
                     }
                     HStack{
-                        Button{
-                            Shown.toggle()
-                        }
-                    label: {
-                        Text("계정 탈퇴")
-                            .font(Font(SDSFont.body2.font))
-                            .foregroundColor(Color(uiColor: .gray600))
-                            .padding(.leading, 20)
-                        Spacer()
+                        Button(action: {
+                            viewModel.showDeleteUserAlert()
+                        }, label: {
+                            Text("계정 탈퇴")
+                                .font(Font(SDSFont.body2.font))
+                                .foregroundColor(Color(uiColor: .gray600))
+                                .padding(.leading, 20)
+                            Spacer()
+                        })
+                        .frame(height: 56)
                     }
-                    }
-                    .frame(height: 56)
-                    
                     ZStack{
                         Color(uiColor: .gray000).ignoresSafeArea()
                         
@@ -178,6 +182,6 @@ struct QnAView: View {
 
 struct Setting_Previews: PreviewProvider {
     static var previews: some View {
-        QnAView()
+        QnAView(viewModel: .init(navigationController: .init()))
     }
 }
