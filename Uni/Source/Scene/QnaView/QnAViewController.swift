@@ -1,29 +1,23 @@
-//
-//  QnAViewController.swift
-//  Uni
-//
-//  Created by 박익범 on 10/30/23.
-//
-
 import UIKit
+import SwiftUI
 
-class QnAViewController: UIViewController {
+class QnAViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.setLayout()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func setLayout() {
+        self.view.backgroundColor = .white
+        let inputNickNameView = UIHostingController(rootView: QnAView(viewModel: QnAViewModel(navigationController: self.navigationController!)))
+        self.view.addSubview(inputNickNameView.view)
+        
+        inputNickNameView.view.snp.makeConstraints {
+            $0.top.leading.trailing.equalTo(self.view.safeAreaLayoutGuide)
+            $0.bottom.equalToSuperview()
+        }
+        
     }
-    */
 
 }
