@@ -40,7 +40,7 @@ struct TimerView: View {
             .navigationTitle("타이머")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItem(placement: .automatic) {
                     Button(action: {
                         print("backbuttontapped")
                     }, label: {
