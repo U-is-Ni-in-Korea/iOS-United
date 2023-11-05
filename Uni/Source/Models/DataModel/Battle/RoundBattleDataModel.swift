@@ -1,5 +1,5 @@
 import Foundation
 
 struct RoundBattleDataModel: Codable {
-    let myRoundMission: RoundMission
+    var myRoundMission: RoundMission?
 }
