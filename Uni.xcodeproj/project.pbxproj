@@ -67,7 +67,6 @@
 		3698B21C2A691B3F006314FE /* BattleWishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B21B2A691B3F006314FE /* BattleWishCouponView.swift */; };
 		3698B21F2A69A9ED006314FE /* WishRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B21E2A69A9ED006314FE /* WishRepository.swift */; };
 		3698B2222A69ADE9006314FE /* GetWishDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B2212A69ADE9006314FE /* GetWishDataModel.swift */; };
-		36CF2F642A63F31100D8F8E1 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 36CF2F622A63F2FF00D8F8E1 /* Config.xcconfig */; };
 		36CF2F662A643C6900D8F8E1 /* BattleHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F652A643C6900D8F8E1 /* BattleHistoryViewController.swift */; };
 		36CF2F682A643C8900D8F8E1 /* BattleHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F672A643C8900D8F8E1 /* BattleHistoryView.swift */; };
 		36CF2F6A2A643CFB00D8F8E1 /* BattleNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F692A643CFB00D8F8E1 /* BattleNavigationBar.swift */; };
@@ -82,6 +81,10 @@
 		36CF2F822A65BC3500D8F8E1 /* BattleCategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F812A65BC3500D8F8E1 /* BattleCategoryType.swift */; };
 		36CF2F842A65C77C00D8F8E1 /* BattleCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F832A65C77C00D8F8E1 /* BattleCategoryViewController.swift */; };
 		36CF2F892A67144F00D8F8E1 /* BattleRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36CF2F882A67144F00D8F8E1 /* BattleRepository.swift */; };
+		36DC47FA2AEE7BD8003DCB36 /* NickNameInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DC47F92AEE7BD8003DCB36 /* NickNameInputViewModel.swift */; };
+		36DC48022AEEACB9003DCB36 /* QnAViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DC48012AEEACB9003DCB36 /* QnAViewController.swift */; };
+		36DC48042AEEAD0D003DCB36 /* QnAViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DC48032AEEAD0D003DCB36 /* QnAViewModel.swift */; };
+		36DC48062AEEBB41003DCB36 /* DeleteUserDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DC48052AEEBB41003DCB36 /* DeleteUserDataModel.swift */; };
 		7E12E5FE2A67E66A00C656AB /* CompletedWishCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12E5FD2A67E66A00C656AB /* CompletedWishCouponViewController.swift */; };
 		7E12E6002A67E67F00C656AB /* CompletedWishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E12E5FF2A67E67F00C656AB /* CompletedWishCouponView.swift */; };
 		7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */; };
@@ -134,6 +137,10 @@
 		8D6CB1FE2A6509C200FE46C2 /* DisconnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB1FD2A6509C200FE46C2 /* DisconnectViewController.swift */; };
 		8D8DB0BE2A67CAC0003E1CA8 /* UseWishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8DB0BD2A67CAC0003E1CA8 /* UseWishCouponView.swift */; };
 		8D8DB0C02A67CB9F003E1CA8 /* UseWishCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8DB0BF2A67CB9F003E1CA8 /* UseWishCouponViewController.swift */; };
+		8D95A2CE2AC8691A0053186D /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A2CD2AC8691A0053186D /* TimerState.swift */; };
+		8D95A2D02AC8695C0053186D /* TimerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A2CF2AC8695C0053186D /* TimerPickerView.swift */; };
+		8D95A2D22AC869F30053186D /* TimerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A2D12AC869F30053186D /* TimerButtonView.swift */; };
+		8D95A2D62AC86A8E0053186D /* TimerProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A2D52AC86A8E0053186D /* TimerProgressView.swift */; };
 		8DAAB2B62A61CD9700E25CF4 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAB2B52A61CD9700E25CF4 /* DatePickerViewController.swift */; };
 		8DAAB2B82A61CDB700E25CF4 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAAB2B72A61CDB700E25CF4 /* DatePickerView.swift */; };
 		8DAEBB0D2A66D718007B818A /* MyWishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEBB0C2A66D718007B818A /* MyWishView.swift */; };
@@ -142,6 +149,8 @@
 		8DAEBB132A66E8C8007B818A /* YourWishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEBB122A66E8C8007B818A /* YourWishCouponView.swift */; };
 		8DAEBB152A66E92C007B818A /* YourWishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEBB142A66E92C007B818A /* YourWishView.swift */; };
 		8DAEBB172A66F9BF007B818A /* YourWishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEBB162A66F9BF007B818A /* YourWishViewController.swift */; };
+		8DF24AF12ACC9A54003F4568 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF24AF02ACC9A54003F4568 /* TimerView.swift */; };
+		8DFC07A82AD1485400844676 /* TimerTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC07A72AD1485400844676 /* TimerTipView.swift */; };
 		A53C62F62A65719600AE3B45 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */; };
 		A53C62F92A6682A600AE3B45 /* KakaoLoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */; };
 		A53C62FE2A67DAC600AE3B45 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62FD2A67DAC600AE3B45 /* UserRepository.swift */; };
@@ -176,6 +185,11 @@
 		A5A584162AC00697001DEC8B /* BattleHistoryCategoryTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A584152AC00697001DEC8B /* BattleHistoryCategoryTitleView.swift */; };
 		A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */; };
 		A5B4B5922A604F43000C7555 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B5912A604F43000C7555 /* LoginView.swift */; };
+		A5C23DDF2ABAB96900800190 /* BattleHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23DDE2ABAB96900800190 /* BattleHistoryViewModel.swift */; };
+		F80916352ADC276600237AA3 /* NickNameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80916342ADC276600237AA3 /* NickNameInputView.swift */; };
+		F80916372ADC27C300237AA3 /* NickNameViewLogoutAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80916362ADC27C300237AA3 /* NickNameViewLogoutAlert.swift */; };
+		F80916392ADC281800237AA3 /* QnAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80916382ADC281700237AA3 /* QnAView.swift */; };
+		F809163B2ADC283400237AA3 /* QnAViewAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809163A2ADC283400237AA3 /* QnAViewAlert.swift */; };
 		A5C23DDF2ABAB96900800190 /* BattleHistoryViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23DDE2ABAB96900800190 /* BattleHistoryViewData.swift */; };
 		A5C6D3862ACD606500C01CA9 /* BattleResultViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C6D3852ACD606500C01CA9 /* BattleResultViewData.swift */; };
 /* End PBXBuildFile section */
@@ -236,7 +250,6 @@
 		3698B21B2A691B3F006314FE /* BattleWishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleWishCouponView.swift; sourceTree = "<group>"; };
 		3698B21E2A69A9ED006314FE /* WishRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishRepository.swift; sourceTree = "<group>"; };
 		3698B2212A69ADE9006314FE /* GetWishDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWishDataModel.swift; sourceTree = "<group>"; };
-		36CF2F622A63F2FF00D8F8E1 /* Config.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		36CF2F652A643C6900D8F8E1 /* BattleHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryViewController.swift; sourceTree = "<group>"; };
 		36CF2F672A643C8900D8F8E1 /* BattleHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryView.swift; sourceTree = "<group>"; };
 		36CF2F692A643CFB00D8F8E1 /* BattleNavigationBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleNavigationBar.swift; sourceTree = "<group>"; };
@@ -251,6 +264,11 @@
 		36CF2F812A65BC3500D8F8E1 /* BattleCategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleCategoryType.swift; sourceTree = "<group>"; };
 		36CF2F832A65C77C00D8F8E1 /* BattleCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleCategoryViewController.swift; sourceTree = "<group>"; };
 		36CF2F882A67144F00D8F8E1 /* BattleRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleRepository.swift; sourceTree = "<group>"; };
+		36DC47F72AEE712B003DCB36 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		36DC47F92AEE7BD8003DCB36 /* NickNameInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameInputViewModel.swift; sourceTree = "<group>"; };
+		36DC48012AEEACB9003DCB36 /* QnAViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAViewController.swift; sourceTree = "<group>"; };
+		36DC48032AEEAD0D003DCB36 /* QnAViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAViewModel.swift; sourceTree = "<group>"; };
+		36DC48052AEEBB41003DCB36 /* DeleteUserDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteUserDataModel.swift; sourceTree = "<group>"; };
 		7E12E5FD2A67E66A00C656AB /* CompletedWishCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedWishCouponViewController.swift; sourceTree = "<group>"; };
 		7E12E5FF2A67E67F00C656AB /* CompletedWishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletedWishCouponView.swift; sourceTree = "<group>"; };
 		7E25F64D2A6330C6003E82F6 /* WishCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponViewController.swift; sourceTree = "<group>"; };
@@ -302,6 +320,10 @@
 		8D6CB1FD2A6509C200FE46C2 /* DisconnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisconnectViewController.swift; sourceTree = "<group>"; };
 		8D8DB0BD2A67CAC0003E1CA8 /* UseWishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseWishCouponView.swift; sourceTree = "<group>"; };
 		8D8DB0BF2A67CB9F003E1CA8 /* UseWishCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseWishCouponViewController.swift; sourceTree = "<group>"; };
+		8D95A2CD2AC8691A0053186D /* TimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
+		8D95A2CF2AC8695C0053186D /* TimerPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPickerView.swift; sourceTree = "<group>"; };
+		8D95A2D12AC869F30053186D /* TimerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButtonView.swift; sourceTree = "<group>"; };
+		8D95A2D52AC86A8E0053186D /* TimerProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProgressView.swift; sourceTree = "<group>"; };
 		8DAAB2B52A61CD9700E25CF4 /* DatePickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
 		8DAAB2B72A61CDB700E25CF4 /* DatePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		8DAEBB0C2A66D718007B818A /* MyWishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyWishView.swift; sourceTree = "<group>"; };
@@ -310,6 +332,8 @@
 		8DAEBB122A66E8C8007B818A /* YourWishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourWishCouponView.swift; sourceTree = "<group>"; };
 		8DAEBB142A66E92C007B818A /* YourWishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourWishView.swift; sourceTree = "<group>"; };
 		8DAEBB162A66F9BF007B818A /* YourWishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourWishViewController.swift; sourceTree = "<group>"; };
+		8DF24AF02ACC9A54003F4568 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		8DFC07A72AD1485400844676 /* TimerTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTipView.swift; sourceTree = "<group>"; };
 		A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginDataModel.swift; sourceTree = "<group>"; };
 		A53C62FD2A67DAC600AE3B45 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
@@ -345,6 +369,11 @@
 		A5A584152AC00697001DEC8B /* BattleHistoryCategoryTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryCategoryTitleView.swift; sourceTree = "<group>"; };
 		A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5B4B5912A604F43000C7555 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A5C23DDE2ABAB96900800190 /* BattleHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryViewModel.swift; sourceTree = "<group>"; };
+		F80916342ADC276600237AA3 /* NickNameInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameInputView.swift; sourceTree = "<group>"; };
+		F80916362ADC27C300237AA3 /* NickNameViewLogoutAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewLogoutAlert.swift; sourceTree = "<group>"; };
+		F80916382ADC281700237AA3 /* QnAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAView.swift; sourceTree = "<group>"; };
+		F809163A2ADC283400237AA3 /* QnAViewAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAViewAlert.swift; sourceTree = "<group>"; };
 		A5C23DDE2ABAB96900800190 /* BattleHistoryViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryViewData.swift; sourceTree = "<group>"; };
 		A5C6D3852ACD606500C01CA9 /* BattleResultViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleResultViewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -423,9 +452,9 @@
 		36012F252A55AE35006B8A39 /* Supports */ = {
 			isa = PBXGroup;
 			children = (
-				36CF2F622A63F2FF00D8F8E1 /* Config.xcconfig */,
 				36012F0F2A55A9F4006B8A39 /* AppDelegate.swift */,
 				36012F112A55A9F4006B8A39 /* SceneDelegate.swift */,
+				36DC47F72AEE712B003DCB36 /* Config.xcconfig */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -433,6 +462,8 @@
 		36012F262A55AE3F006B8A39 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				36DC48002AEEAC93003DCB36 /* QnaView */,
+				8D71931F2ABE8A11000114F5 /* Timer */,
 				A56C4E6E2A69A40900C18C8F /* Splash */,
 				36CF2F752A65B00700D8F8E1 /* BattleCategory */,
 				8D17B8862A659A740091D7AD /* MakeWishCoupon */,
@@ -777,6 +808,23 @@
 			path = BattleRepository;
 			sourceTree = "<group>";
 		};
+		36DC47F82AEE7BCF003DCB36 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				36DC47F92AEE7BD8003DCB36 /* NickNameInputViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		36DC48002AEEAC93003DCB36 /* QnaView */ = {
+			isa = PBXGroup;
+			children = (
+				36DC48012AEEACB9003DCB36 /* QnAViewController.swift */,
+				36DC48032AEEAD0D003DCB36 /* QnAViewModel.swift */,
+			);
+			path = QnaView;
+			sourceTree = "<group>";
+		};
 		7E25F6482A632E7B003E82F6 /* WishCoupon */ = {
 			isa = PBXGroup;
 			children = (
@@ -982,6 +1030,35 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		8D71931F2ABE8A11000114F5 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				8D95A2CC2AC868FD0053186D /* Component */,
+				8D7193202ABE8A20000114F5 /* View */,
+			);
+			path = Timer;
+			sourceTree = "<group>";
+		};
+		8D7193202ABE8A20000114F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DF24AF02ACC9A54003F4568 /* TimerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8D95A2CC2AC868FD0053186D /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				8D95A2CD2AC8691A0053186D /* TimerState.swift */,
+				8D95A2CF2AC8695C0053186D /* TimerPickerView.swift */,
+				8D95A2D12AC869F30053186D /* TimerButtonView.swift */,
+				8D95A2D52AC86A8E0053186D /* TimerProgressView.swift */,
+				8DFC07A72AD1485400844676 /* TimerTipView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
 		8DAEBB0A2A66D5C0007B818A /* Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -1029,6 +1106,7 @@
 			isa = PBXGroup;
 			children = (
 				A53C63002A67DE6100AE3B45 /* UserDataModel.swift */,
+				36DC48052AEEBB41003DCB36 /* DeleteUserDataModel.swift */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -1086,6 +1164,7 @@
 		A555AD972A60782F0083CD20 /* ConnectionCommom */ = {
 			isa = PBXGroup;
 			children = (
+				36DC47F82AEE7BCF003DCB36 /* ViewModel */,
 				A555AD992A6079470083CD20 /* ViewController */,
 				A555AD982A6079420083CD20 /* View */,
 			);
@@ -1097,6 +1176,10 @@
 			children = (
 				A555AD9C2A6079840083CD20 /* NicknameSettingView.swift */,
 				A55150BB2A614A2000481F57 /* CoupleConnectionMethodView.swift */,
+				F80916342ADC276600237AA3 /* NickNameInputView.swift */,
+				F80916362ADC27C300237AA3 /* NickNameViewLogoutAlert.swift */,
+				F80916382ADC281700237AA3 /* QnAView.swift */,
+				F809163A2ADC283400237AA3 /* QnAViewAlert.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1318,7 +1401,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5667F092A952A1600FC0BA4 /* .swiftlint.yml in Resources */,
-				36CF2F642A63F31100D8F8E1 /* Config.xcconfig in Resources */,
 				36012F1C2A55A9F6006B8A39 /* LaunchScreen.storyboard in Resources */,
 				36012F192A55A9F6006B8A39 /* Assets.xcassets in Resources */,
 			);
@@ -1363,6 +1445,7 @@
 				3698B2162A686209006314FE /* RoundBattleDataModel.swift in Sources */,
 				36CF2F722A657DD400D8F8E1 /* BattleChipView.swift in Sources */,
 				3698B2142A683C35006314FE /* MakeBattleDataModel.swift in Sources */,
+				8D95A2CE2AC8691A0053186D /* TimerState.swift in Sources */,
 				361FA3842A628A2100C3BBFD /* BattleWishCollectionViewCell.swift in Sources */,
 				7E5C9D8E2A66E82400488DBD /* HistoryStatus.swift in Sources */,
 				8D2B2E842A616CDC00B75CDD /* AccountViewController.swift in Sources */,
@@ -1391,6 +1474,7 @@
 				8D6CB1F62A6505E300FE46C2 /* LogoutViewController.swift in Sources */,
 				A5A584102AC00062001DEC8B /* BattleHistoryPageControlView.swift in Sources */,
 				8D2B2E8C2A619C0D00B75CDD /* EditProfileViewController.swift in Sources */,
+				8D95A2D22AC869F30053186D /* TimerButtonView.swift in Sources */,
 				7E6499672A65AD0500B2F86C /* WishCouponEmptyView.swift in Sources */,
 				8DAEBB112A66E317007B818A /* MyWishViewController.swift in Sources */,
 				8DAEBB0F2A66D992007B818A /* MyWishCouponView.swift in Sources */,
@@ -1416,6 +1500,7 @@
 				8D8DB0C02A67CB9F003E1CA8 /* UseWishCouponViewController.swift in Sources */,
 				7EE3B1A12A60507F00962F4C /* HistoryViewController.swift in Sources */,
 				8D8DB0BE2A67CAC0003E1CA8 /* UseWishCouponView.swift in Sources */,
+				36DC48042AEEAD0D003DCB36 /* QnAViewModel.swift in Sources */,
 				7E12E5FE2A67E66A00C656AB /* CompletedWishCouponViewController.swift in Sources */,
 				36CF2F892A67144F00D8F8E1 /* BattleRepository.swift in Sources */,
 				8D2B2E8E2A619C2E00B75CDD /* EditProfileView.swift in Sources */,
@@ -1453,6 +1538,7 @@
 				A578FC142A62D9210021A32E /* DDaySettingViewController.swift in Sources */,
 				36CF2F792A65B06000D8F8E1 /* SelectBattleCategoryViewController.swift in Sources */,
 				36CF2F6C2A6579B600D8F8E1 /* BattleResultViewController.swift in Sources */,
+				8D95A2D02AC8695C0053186D /* TimerPickerView.swift in Sources */,
 				36CF2F842A65C77C00D8F8E1 /* BattleCategoryViewController.swift in Sources */,
 				7EACFC492A6882A8005F416A /* WishCouponDataModel.swift in Sources */,
 				36CF2F682A643C8900D8F8E1 /* BattleHistoryView.swift in Sources */,
@@ -1470,11 +1556,16 @@
 				36CF2F6E2A6579CA00D8F8E1 /* BattleResultView.swift in Sources */,
 				8D2B2E7C2A61638000B75CDD /* SettingView.swift in Sources */,
 				A53C62F92A6682A600AE3B45 /* KakaoLoginDataModel.swift in Sources */,
+				F80916392ADC281800237AA3 /* QnAView.swift in Sources */,
 				8DAEBB0D2A66D718007B818A /* MyWishView.swift in Sources */,
+				F809163B2ADC283400237AA3 /* QnAViewAlert.swift in Sources */,
 				361FA3322A601E7900C3BBFD /* PostService.swift in Sources */,
 				A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */,
 				8D2B2E782A6161D500B75CDD /* MyPageTitle.swift in Sources */,
+				8DF24AF12ACC9A54003F4568 /* TimerView.swift in Sources */,
 				A5B4B5922A604F43000C7555 /* LoginView.swift in Sources */,
+				36DC47FA2AEE7BD8003DCB36 /* NickNameInputViewModel.swift in Sources */,
+				8DFC07A82AD1485400844676 /* TimerTipView.swift in Sources */,
 				8D2B2E8A2A61786A00B75CDD /* AccountTitle.swift in Sources */,
 				361FA3462A602A2800C3BBFD /* MissionContentList.swift in Sources */,
 				A55150BE2A614A2A00481F57 /* CoupleConnectionMethodViewController.swift in Sources */,
@@ -1483,10 +1574,15 @@
 				A53C63072A68734700AE3B45 /* DDayDataModel.swift in Sources */,
 				8D17B88C2A659D0C0091D7AD /* MakeWishView.swift in Sources */,
 				8D2B2E802A6163E900B75CDD /* SettingViewController.swift in Sources */,
+				F80916372ADC27C300237AA3 /* NickNameViewLogoutAlert.swift in Sources */,
+				F80916352ADC276600237AA3 /* NickNameInputView.swift in Sources */,
 				7E64995A2A6503B100B2F86C /* WishCouponCollectionViewCell.swift in Sources */,
+				8D95A2D62AC86A8E0053186D /* TimerProgressView.swift in Sources */,
+				36DC48062AEEBB41003DCB36 /* DeleteUserDataModel.swift in Sources */,
 				361FA3712A6268DD00C3BBFD /* HomeBattleView.swift in Sources */,
 				7E25F6542A633ACA003E82F6 /* WishCouponCountView.swift in Sources */,
 				36012F4B2A55CE87006B8A39 /* String+.swift in Sources */,
+				36DC48022AEEACB9003DCB36 /* QnAViewController.swift in Sources */,
 				36CF2F742A6583D700D8F8E1 /* BattleStatus.swift in Sources */,
 				7E6499612A65178D00B2F86C /* WishCouponYourCollectionViewCell.swift in Sources */,
 				3698B2222A69ADE9006314FE /* GetWishDataModel.swift in Sources */,
@@ -1529,7 +1625,6 @@
 /* Begin XCBuildConfiguration section */
 		36012F1E2A55A9F6006B8A39 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36CF2F622A63F2FF00D8F8E1 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = "http://uni-sparkle.kro.kr/";
@@ -1592,7 +1687,6 @@
 		};
 		36012F1F2A55A9F6006B8A39 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 36CF2F622A63F2FF00D8F8E1 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				BASE_URL = "http://uni-sparkle.kro.kr/";
