@@ -44,7 +44,7 @@ struct TimerView: View {
             .navigationTitle(Text("타이머").font(Font(SDSFont.subTitle.font)))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItem(placement: .automatic) {
                     Button(action: {
                         print("backbuttontapped")
                     }, label: {

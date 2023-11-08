@@ -15,6 +15,7 @@ class LoginViewController: BaseViewController {
     private var loginView = LoginView()
     private let authRepository = AuthRepository()
     private let keyChains = HeaderUtils()
+    private var isChekcEnd: Bool = false
     
     // MARK: - UI Property
     
@@ -78,8 +79,9 @@ class LoginViewController: BaseViewController {
     // MARK: - Custom Method
     private func checkAccessToken() {
         let tokenExist = self.keyChains.isTokenExists(account: "accessToken")
-        if tokenExist {
-           pushNicknameSettingViewController()
+        if tokenExist && !self.isChekcEnd {
+            pushNicknameSettingViewController()
+            isChekcEnd = true
         }
     }
     
@@ -106,18 +108,18 @@ class LoginViewController: BaseViewController {
             }
         } else { //카카오톡이 설치가 안되어있으면
             UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
-                    if let error = error {
-                        print(error)
-                        self.loginView.kakaoButton.isEnabled = true
-                        self.loginView.appleButton.isEnabled = true
-                    }
-                    else {
-                        _ = oauthToken
-                        if let oauthToken = oauthToken {
-                            completion(oauthToken.accessToken)
-                        }
+                if let error = error {
+                    print(error)
+                    self.loginView.kakaoButton.isEnabled = true
+                    self.loginView.appleButton.isEnabled = true
+                }
+                else {
+                    _ = oauthToken
+                    if let oauthToken = oauthToken {
+                        completion(oauthToken.accessToken)
                     }
                 }
+            }
         }
     }
     private func changeRootViewController(_ viewControllerToPresent: UIViewController) {

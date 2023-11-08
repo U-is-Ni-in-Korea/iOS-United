@@ -1,5 +1,19 @@
 import Foundation
+
 import Alamofire
+
+enum BattleResultError: String, Error {
+    case notFinish = "UE1009"
+    case emptyData
+    func errorResponse() -> String {
+        switch self {
+        case .notFinish:
+            return "상대가 결과를 입력하기 전이에요"
+        case .emptyData:
+            return ""
+        }
+    }
+}
 
 class BattleRepository {
     func getGameList(completion: @escaping (([BattleDataModel]) -> Void)) {
@@ -78,6 +92,35 @@ class BattleRepository {
                 return
             }
             completion(data)
+        }
+    }
+    
+    func getBattleResultData(roundId: Int, completion: @escaping ((Result<BattleResultDataModel?, BattleResultError>) -> Void)) {
+        let tokenUtils = HeaderUtils()
+        let url = Config.baseURL + "api/game/short/result/\(roundId)"
+        AF.request(url,
+                   method: .get,
+                   parameters: nil,
+                   encoding: JSONEncoding.default,
+                   headers: tokenUtils.getAuthorizationHeader()).response { response in
+            guard let resData = response.data else { return }
+            do {
+                let successData = try? JSONDecoder().decode(BattleResultDataModel.self, from: resData)
+                if let successData = successData {
+                    print(successData, "?????코드아님")
+                    completion(.success(successData))
+                } else {
+                    let data = try? JSONDecoder().decode(BattleResultErrorModel.self, from: resData)
+                    if let data = data {
+                        print(data.code, "코드")
+                        let resultError = BattleResultError(rawValue: data.code) ?? .emptyData
+                        completion(.failure(resultError))
+                    }
+                }
+            }
+            catch {
+                completion(.failure(.emptyData))
+            }
         }
     }
 }

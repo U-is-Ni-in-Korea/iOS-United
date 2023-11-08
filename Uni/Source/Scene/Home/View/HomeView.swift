@@ -4,69 +4,7 @@ import SDSKit
 import Then
 
 final class HomeView: UIView {
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
-    }
-    
-    init() {
-        super.init(frame: .zero)
-        self.setLayout()
-        self.setShadow()
-    }
-    
-    func bindData(myScore: Int,
-                  partnerScore: Int,
-                  drawScore: Int,
-                  dDay: Int,
-                  heartCount: Int,
-                  isPlayingBattle: Bool) {
-        self.scoreView.bindData(myScore: myScore,
-                                partnerScore: partnerScore,
-                                drawScore: drawScore,
-                                dDay: dDay)
-        self.battleView.setHeartCount(count: heartCount)
-        self.battleView.setBattleState(isPlayingBattle: isPlayingBattle)
-    }
-    
-    private func setLayout() {
-        self.backgroundColor = .gray50
-        scoreShadowView.addSubview(scoreView)
-        self.addSubviews([topView, scoreShadowView, battleView])
-        
-        topView.snp.makeConstraints {
-            $0.top.leading.trailing.equalToSuperview()
-            $0.height.equalTo(200)
-        }
-        scoreShadowView.snp.makeConstraints {
-            $0.top.equalTo(self.safeAreaLayoutGuide).offset(72)
-            $0.leading.trailing.equalToSuperview().inset(20)
-            $0.height.equalTo(173)
-        }
-        scoreView.snp.makeConstraints {
-            $0.edges.equalToSuperview()
-        }
-        
-        battleView.snp.makeConstraints {
-            $0.top.equalTo(scoreView.snp.bottom).offset(40)
-            $0.leading.trailing.bottom.equalToSuperview()
-        }
-
-        self.topView.addSubviews([logoImageView, myPageButton])
-        logoImageView.snp.makeConstraints {
-            $0.top.equalTo(self.safeAreaLayoutGuide).offset(15)
-            $0.leading.equalToSuperview().offset(20)
-        }
-        myPageButton.snp.makeConstraints {
-            $0.centerY.equalTo(logoImageView)
-            $0.trailing.equalToSuperview().inset(20)
-            $0.width.height.equalTo(36)
-        }
-    }
-    
-    private func setShadow() {
-        scoreShadowView.layer.applyBlurAndDepth2_1Shadow()
-    }
-    
+    // MARK: - UI Property
     private var topView = UIView().then {
         $0.backgroundColor = .lightBlue500
     }
@@ -87,5 +25,61 @@ final class HomeView: UIView {
     var battleView = HomeBattleView().then {
         $0.isUserInteractionEnabled = true
     }
-    
+    // MARK: - Life Cycle
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+    }
+    init() {
+        super.init(frame: .zero)
+        self.setLayout()
+        self.setShadow()
+    }
+    // MARK: - Setting
+    private func setLayout() {
+        self.backgroundColor = .gray50
+        scoreShadowView.addSubview(scoreView)
+        self.addSubviews([topView, scoreShadowView, battleView])
+        topView.snp.makeConstraints {
+            $0.top.leading.trailing.equalToSuperview()
+            $0.height.equalTo(200)
+        }
+        scoreShadowView.snp.makeConstraints {
+            $0.top.equalTo(self.safeAreaLayoutGuide).offset(72)
+            $0.leading.trailing.equalToSuperview().inset(20)
+            $0.height.equalTo(173)
+        }
+        scoreView.snp.makeConstraints {
+            $0.edges.equalToSuperview()
+        }
+        battleView.snp.makeConstraints {
+            $0.top.equalTo(scoreView.snp.bottom)
+            $0.leading.trailing.bottom.equalToSuperview()
+        }
+        self.topView.addSubviews([logoImageView, myPageButton])
+        logoImageView.snp.makeConstraints {
+            $0.top.equalTo(self.safeAreaLayoutGuide).offset(15)
+            $0.leading.equalToSuperview().offset(20)
+        }
+        myPageButton.snp.makeConstraints {
+            $0.centerY.equalTo(logoImageView)
+            $0.trailing.equalToSuperview().inset(20)
+            $0.width.height.equalTo(36)
+        }
+    }
+    private func setShadow() {
+        scoreShadowView.layer.applyBlurAndDepth2_1Shadow()
+    }
+    // MARK: - Custom Method
+    func bindData(myScore: Int,
+                  partnerScore: Int,
+                  drawScore: Int,
+                  dDay: Int,
+                  heartCount: Int,
+                  isPlayingBattle: Bool) {
+        self.scoreView.bindData(myScore: myScore,
+                                partnerScore: partnerScore,
+                                drawScore: drawScore,
+                                dDay: dDay)
+        self.battleView.setBattleState(isPlayingBattle: isPlayingBattle)
+    }
 }

@@ -2,11 +2,14 @@ import SwiftUI
 
 import SDSKit
 
-struct BattleNavigationBarView: View {
-    var viewData: BattleHistoryViewData
+
+
+struct NavigationBarView: View {
+    var viewData: any NavigationBarProtocol
+    var title: String
     var body: some View {
         HStack(alignment: .center) {
-            Text("한판 승부 진행 중")
+            Text(title)
                 .foregroundColor(Color(uiColor: .gray600))
                 .font(Font(SDSFont.title1.font))
                 .padding(.leading, 20)

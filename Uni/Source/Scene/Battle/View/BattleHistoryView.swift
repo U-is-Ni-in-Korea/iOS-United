@@ -7,19 +7,19 @@ struct BattleHistoryView: View {
     @State private var currentPage = 0
     var body: some View {
         VStack(spacing: 0) {
-            BattleNavigationBarView(viewData: data)
+            NavigationBarView(viewData: data, title: "한판 승부 진행 중")
             ScrollView {
                 BattleHistoryCategoryTitleView(title: "나의 미션은")
                 HStack(alignment: .center, spacing: 20) {
-                    AsyncImage(url: URL(string: data.rountBattle?.myRoundMission.missionContent.missionCategory.image ?? "")) { image in
+                    AsyncImage(url: URL(string: data.rountBattle?.myRoundMission?.missionContent.missionCategory.image ?? "")) { image in
                         image.image?.resizable()
                     }
                         .frame(width: 60, height: 60)
                     VStack(alignment: .leading, spacing: 6) {
-                        Text("\(data.rountBattle?.myRoundMission.missionContent.content ?? "")")
+                        Text("\(data.rountBattle?.myRoundMission?.missionContent.content ?? "")")
                             .font(Font(SDSFont.btn2.font))
                             .foregroundColor(Color(uiColor: .gray600))
-                        Text("\(data.rountBattle?.myRoundMission.missionContent.missionCategory.title ?? "")")
+                        Text("\(data.rountBattle?.myRoundMission?.missionContent.missionCategory.title ?? "")")
                             .font(Font(SDSFont.body2.font))
                             .foregroundColor(Color(uiColor: .gray600))
                     }
@@ -32,23 +32,23 @@ struct BattleHistoryView: View {
                 .padding([.leading, .trailing], 20)
                 BattleHistoryCategoryTitleView(title: "게임 사용법")
                 TabView(selection: $currentPage) {
-                    BattleHistoryGameProcessContentView(content: data.rountBattle?.myRoundMission.missionContent.missionCategory.rule ?? "", title: "룰 소개")
+                    BattleHistoryGameProcessContentView(content: data.rountBattle?.myRoundMission?.missionContent.missionCategory.rule ?? "", title: "룰 소개")
                         .tag(0)
-                    BattleHistoryGameProcessContentView(content: data.rountBattle?.myRoundMission.missionContent.missionCategory.tip ?? "", title: "공략 팁")
+                    BattleHistoryGameProcessContentView(content: data.rountBattle?.myRoundMission?.missionContent.missionCategory.tip ?? "", title: "공략 팁")
                         .tag(1)
                 }
                 .tabViewStyle(.page(indexDisplayMode: .never))
                 .frame(width: UIScreen.main.bounds.size.width, height: 283)
                 BattleHistoryPageControlView(numberOfPages: 2, currentPage: $currentPage)
-                if data.rountBattle?.myRoundMission.missionContent.missionCategory.missionTool == "TIMER" ||
-                         data.rountBattle?.myRoundMission.missionContent.missionCategory.missionTool == "MEMO" {
+                if data.rountBattle?.myRoundMission?.missionContent.missionCategory.missionTool == "TIMER" ||
+                    data.rountBattle?.myRoundMission?.missionContent.missionCategory.missionTool == "MEMO" {
                     BattleHistoryCategoryTitleView(title: "기록하며 플레이")
                     HStack(alignment: .center, spacing: 0) {
-                        Image(data.rountBattle?.myRoundMission.missionContent.missionCategory.missionTool == "TIMER" ? "icTimer" : (data.rountBattle?.myRoundMission.missionContent.missionCategory.missionTool == "MEMO" ? "icMemo" : ""))
+                        Image(data.rountBattle?.myRoundMission?.missionContent.missionCategory.missionTool == "TIMER" ? "icTimer" : (data.rountBattle?.myRoundMission?.missionContent.missionCategory.missionTool == "MEMO" ? "icMemo" : ""))
                             .resizable()
                             .frame(width: 32, height: 32)
                             .padding(.leading, 18)
-                        Text(data.rountBattle?.myRoundMission.missionContent.missionCategory.missionTool == "TIMER" ? "타이머" : (data.rountBattle?.myRoundMission.missionContent.missionCategory.missionTool == "MEMO" ? "메모" : ""))
+                        Text(data.rountBattle?.myRoundMission?.missionContent.missionCategory.missionTool == "TIMER" ? "타이머" : (data.rountBattle?.myRoundMission?.missionContent.missionCategory.missionTool == "MEMO" ? "메모" : ""))
                             .font(Font(SDSFont.btn2.font))
                             .padding(.leading, 14)
                         Spacer()

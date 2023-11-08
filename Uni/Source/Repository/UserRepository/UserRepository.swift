@@ -56,4 +56,17 @@ class UserRepository {
         completion(data)
     }
     }
+    
+    func deleteUserData(completion: @escaping((DeleteUserDataModel) -> Void)) {
+        let param = ["userId": UserDefaultsManager.shared.load(.userId)]
+        DeleteService.shared.deleteService(with: param,
+                                           from: Config.baseURL + "api/user",
+                                           isUseHeader: true) { (data: DeleteUserDataModel?, error) in
+            guard let data = data else {
+                print("error: \(error?.debugDescription)")
+                return
+            }
+            completion(data)
+        }
+    }
 }
