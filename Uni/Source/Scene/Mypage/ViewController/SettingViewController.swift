@@ -24,11 +24,11 @@ final class SettingViewController: BaseViewController {
         super.viewDidLoad()
         settingViewNaviActions()
         settingViewActions()
-        setStyle()
     }
 
     override func loadView() {
         super.loadView()
+        setStyle()
     }
 
 }
