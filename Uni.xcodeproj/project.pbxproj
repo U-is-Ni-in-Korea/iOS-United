@@ -185,13 +185,12 @@
 		A5A584162AC00697001DEC8B /* BattleHistoryCategoryTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A584152AC00697001DEC8B /* BattleHistoryCategoryTitleView.swift */; };
 		A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */; };
 		A5B4B5922A604F43000C7555 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B5912A604F43000C7555 /* LoginView.swift */; };
-		A5C23DDF2ABAB96900800190 /* BattleHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23DDE2ABAB96900800190 /* BattleHistoryViewModel.swift */; };
+		A5C23DDF2ABAB96900800190 /* BattleHistoryViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23DDE2ABAB96900800190 /* BattleHistoryViewData.swift */; };
+		A5C6D3862ACD606500C01CA9 /* BattleResultViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C6D3852ACD606500C01CA9 /* BattleResultViewData.swift */; };
 		F80916352ADC276600237AA3 /* NickNameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80916342ADC276600237AA3 /* NickNameInputView.swift */; };
 		F80916372ADC27C300237AA3 /* NickNameViewLogoutAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80916362ADC27C300237AA3 /* NickNameViewLogoutAlert.swift */; };
 		F80916392ADC281800237AA3 /* QnAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80916382ADC281700237AA3 /* QnAView.swift */; };
 		F809163B2ADC283400237AA3 /* QnAViewAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809163A2ADC283400237AA3 /* QnAViewAlert.swift */; };
-		A5C23DDF2ABAB96900800190 /* BattleHistoryViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23DDE2ABAB96900800190 /* BattleHistoryViewData.swift */; };
-		A5C6D3862ACD606500C01CA9 /* BattleResultViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C6D3852ACD606500C01CA9 /* BattleResultViewData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -369,13 +368,12 @@
 		A5A584152AC00697001DEC8B /* BattleHistoryCategoryTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryCategoryTitleView.swift; sourceTree = "<group>"; };
 		A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5B4B5912A604F43000C7555 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
-		A5C23DDE2ABAB96900800190 /* BattleHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryViewModel.swift; sourceTree = "<group>"; };
+		A5C23DDE2ABAB96900800190 /* BattleHistoryViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryViewData.swift; sourceTree = "<group>"; };
+		A5C6D3852ACD606500C01CA9 /* BattleResultViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleResultViewData.swift; sourceTree = "<group>"; };
 		F80916342ADC276600237AA3 /* NickNameInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameInputView.swift; sourceTree = "<group>"; };
 		F80916362ADC27C300237AA3 /* NickNameViewLogoutAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewLogoutAlert.swift; sourceTree = "<group>"; };
 		F80916382ADC281700237AA3 /* QnAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAView.swift; sourceTree = "<group>"; };
 		F809163A2ADC283400237AA3 /* QnAViewAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAViewAlert.swift; sourceTree = "<group>"; };
-		A5C23DDE2ABAB96900800190 /* BattleHistoryViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryViewData.swift; sourceTree = "<group>"; };
-		A5C6D3852ACD606500C01CA9 /* BattleResultViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleResultViewData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1627,7 +1625,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BASE_URL = "http://uni-sparkle.kro.kr/";
+				BASE_URL = "http://3.37.173.111:8081/";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1689,7 +1687,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BASE_URL = "http://uni-sparkle.kro.kr/";
+				BASE_URL = "http://3.37.173.111:8081/";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
