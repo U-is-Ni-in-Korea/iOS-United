@@ -1,10 +1,3 @@
-//
-//  HistoryView.swift
-//  Uni
-//
-//  Created by 김사랑 on 2023/07/14.
-//
-
 import UIKit
 
 import SDSKit
@@ -12,9 +5,7 @@ import SnapKit
 import Then
 
 final class HistoryView: UIView {
-
     // MARK: - UI Property
-    
     private var historyEmptyView = HistoryEmptyView()
     let navigationBar = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "승부 히스토리")
     let historyTableView = UITableView().then {
@@ -22,29 +13,23 @@ final class HistoryView: UIView {
         $0.rowHeight = 103
         $0.separatorStyle = .none
     }
-    
     // MARK: - Life Cycle
-    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setLayout()
         setStyle()
-        setHistoryTableViewState()
     }
     override init(frame: CGRect) {
         super.init(frame: .zero)
         setLayout()
         setStyle()
-        setHistoryTableViewState()
     }
-    
     // MARK: - Setting
-    
     private func setStyle() {
         self.backgroundColor = .gray100
     }
     private func setLayout() {
-        [navigationBar, historyTableView, historyEmptyView]
+        [navigationBar, historyEmptyView, historyTableView]
             .forEach { addSubview($0) }
         navigationBar.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide)
@@ -62,24 +47,20 @@ final class HistoryView: UIView {
             $0.leading.trailing.equalToSuperview()
         }
     }
-    private func setHistoryTableViewState() {
-        self.historyTableView.isHidden = true
-        historyTableView.backgroundColor = .gray100
-    }
-    
     // MARK: - Custom Method
-
     func hasHistoryData(hasData: Bool) {
         if hasData {
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
                 self.historyEmptyView.isHidden = true
                 self.historyTableView.isHidden = false
             }
-        }
-        else {
-            DispatchQueue.main.async {
+        } else {
+            DispatchQueue.main.async { [weak self] in
+                guard let self = self else { return }
                 self.historyEmptyView.isHidden = false
                 self.historyTableView.isHidden = true
+
             }
         }
     }

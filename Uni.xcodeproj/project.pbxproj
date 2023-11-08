@@ -151,6 +151,7 @@
 		8DAEBB172A66F9BF007B818A /* YourWishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEBB162A66F9BF007B818A /* YourWishViewController.swift */; };
 		8DF24AF12ACC9A54003F4568 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF24AF02ACC9A54003F4568 /* TimerView.swift */; };
 		8DFC07A82AD1485400844676 /* TimerTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC07A72AD1485400844676 /* TimerTipView.swift */; };
+		A500A4482AFB54F300B8593A /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = A500A4472AFB54F300B8593A /* SkeletonView */; };
 		A53C62F62A65719600AE3B45 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */; };
 		A53C62F92A6682A600AE3B45 /* KakaoLoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */; };
 		A53C62FE2A67DAC600AE3B45 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62FD2A67DAC600AE3B45 /* UserRepository.swift */; };
@@ -385,6 +386,7 @@
 				7E64995F2A650C4800B2F86C /* CHTCollectionViewWaterfallLayoutObjC in Frameworks */,
 				36012F5F2A55D0A0006B8A39 /* Kingfisher in Frameworks */,
 				36012F5C2A55D08E006B8A39 /* Alamofire in Frameworks */,
+				A500A4482AFB54F300B8593A /* SkeletonView in Frameworks */,
 				361FA3252A6012A600C3BBFD /* SDSKit in Frameworks */,
 				7E64995D2A650C4800B2F86C /* CHTCollectionViewWaterfallLayout in Frameworks */,
 				36012F562A55D06C006B8A39 /* SnapKit in Frameworks */,
@@ -1345,6 +1347,7 @@
 				361FA3242A6012A600C3BBFD /* SDSKit */,
 				7E64995C2A650C4800B2F86C /* CHTCollectionViewWaterfallLayout */,
 				7E64995E2A650C4800B2F86C /* CHTCollectionViewWaterfallLayoutObjC */,
+				A500A4472AFB54F300B8593A /* SkeletonView */,
 			);
 			productName = Uni;
 			productReference = 36012F0C2A55A9F4006B8A39 /* Uni.app */;
@@ -1383,6 +1386,7 @@
 				36012F632A55D155006B8A39 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				361FA3232A6012A600C3BBFD /* XCRemoteSwiftPackageReference "iOS-SDS-United" */,
 				7E64995B2A650C4800B2F86C /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */,
+				A500A4462AFB54F300B8593A /* XCRemoteSwiftPackageReference "SkeletonView" */,
 			);
 			productRefGroup = 36012F0D2A55A9F4006B8A39 /* Products */;
 			projectDirPath = "";
@@ -1899,6 +1903,14 @@
 				minimumVersion = 0.9.10;
 			};
 		};
+		A500A4462AFB54F300B8593A /* XCRemoteSwiftPackageReference "SkeletonView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Juanpe/SkeletonView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1946,6 +1958,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7E64995B2A650C4800B2F86C /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */;
 			productName = CHTCollectionViewWaterfallLayoutObjC;
+		};
+		A500A4472AFB54F300B8593A /* SkeletonView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A500A4462AFB54F300B8593A /* XCRemoteSwiftPackageReference "SkeletonView" */;
+			productName = SkeletonView;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
