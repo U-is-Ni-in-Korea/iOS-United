@@ -34,10 +34,14 @@ struct TimerView: View {
 
                     TimerTipView()
                         .opacity(timerState.startTimer ? 0 : 1.0)
+
+                    TimerToastView()
+                        .padding(.top, 61)
                 }
                 .environmentObject(timerState)
+                .padding(.top, 32)
             }
-            .navigationTitle("타이머")
+            .navigationTitle(Text("타이머").font(Font(SDSFont.subTitle.font)))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
