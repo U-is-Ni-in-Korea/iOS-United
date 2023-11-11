@@ -36,18 +36,6 @@
 		361FA3322A601E7900C3BBFD /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3312A601E7900C3BBFD /* PostService.swift */; };
 		361FA3342A601EAA00C3BBFD /* PatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3332A601EAA00C3BBFD /* PatchService.swift */; };
 		361FA3382A60223200C3BBFD /* HeaderUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3372A60223200C3BBFD /* HeaderUtils.swift */; };
-		361FA33D2A6025E100C3BBFD /* Couple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA33C2A6025E100C3BBFD /* Couple.swift */; };
-		361FA33F2A60261000C3BBFD /* ShortGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA33E2A60261000C3BBFD /* ShortGame.swift */; };
-		361FA3422A6027B400C3BBFD /* WishCouponList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3412A6027B400C3BBFD /* WishCouponList.swift */; };
-		361FA3442A6029E400C3BBFD /* WishCoupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3432A6029E400C3BBFD /* WishCoupon.swift */; };
-		361FA3462A602A2800C3BBFD /* MissionContentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3452A602A2800C3BBFD /* MissionContentList.swift */; };
-		361FA3482A602A5C00C3BBFD /* RoundMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3472A602A5C00C3BBFD /* RoundMission.swift */; };
-		361FA34A2A602AC000C3BBFD /* MissionContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3492A602AC000C3BBFD /* MissionContent.swift */; };
-		361FA34C2A602ADD00C3BBFD /* MissionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA34B2A602ADD00C3BBFD /* MissionCategory.swift */; };
-		361FA34E2A602B5400C3BBFD /* MyRoundMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA34D2A602B5400C3BBFD /* MyRoundMission.swift */; };
-		361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */; };
-		361FA3522A602C0900C3BBFD /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3512A602C0900C3BBFD /* Game.swift */; };
-		361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3532A602C1C00C3BBFD /* RoundGameList.swift */; };
 		361FA36F2A6268DD00C3BBFD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3662A6268DD00C3BBFD /* HomeViewController.swift */; };
 		361FA3702A6268DD00C3BBFD /* HomeBattleSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3682A6268DD00C3BBFD /* HomeBattleSelectView.swift */; };
 		361FA3712A6268DD00C3BBFD /* HomeBattleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3692A6268DD00C3BBFD /* HomeBattleView.swift */; };
@@ -63,7 +51,6 @@
 		3698B2142A683C35006314FE /* MakeBattleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B2132A683C35006314FE /* MakeBattleDataModel.swift */; };
 		3698B2162A686209006314FE /* RoundBattleDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B2152A686209006314FE /* RoundBattleDataModel.swift */; };
 		3698B2182A686438006314FE /* DeleteService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B2172A686438006314FE /* DeleteService.swift */; };
-		3698B21A2A6864B8006314FE /* ErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B2192A6864B8006314FE /* ErrorCode.swift */; };
 		3698B21C2A691B3F006314FE /* BattleWishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B21B2A691B3F006314FE /* BattleWishCouponView.swift */; };
 		3698B21F2A69A9ED006314FE /* WishRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B21E2A69A9ED006314FE /* WishRepository.swift */; };
 		3698B2222A69ADE9006314FE /* GetWishDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3698B2212A69ADE9006314FE /* GetWishDataModel.swift */; };
@@ -176,6 +163,19 @@
 		A578FC162A62D9380021A32E /* DDaySettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578FC152A62D9380021A32E /* DDaySettingView.swift */; };
 		A578FC182A62D9AB0021A32E /* CodeGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578FC172A62D9AB0021A32E /* CodeGeneratorViewController.swift */; };
 		A578FC1A2A62D9B70021A32E /* CodeGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578FC192A62D9B70021A32E /* CodeGeneratorView.swift */; };
+		A585AB7F2AFE16CB006D3A93 /* Couple.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585AB7E2AFE16CB006D3A93 /* Couple.swift */; };
+		A585AB812AFE172D006D3A93 /* ShortGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585AB802AFE172D006D3A93 /* ShortGame.swift */; };
+		A585AB832AFE17A0006D3A93 /* RoundGameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585AB822AFE17A0006D3A93 /* RoundGameList.swift */; };
+		A585AB862AFE17E7006D3A93 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585AB852AFE17E7006D3A93 /* Game.swift */; };
+		A585AB882AFE1817006D3A93 /* UserGameHistoryList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585AB872AFE1817006D3A93 /* UserGameHistoryList.swift */; };
+		A585AB8A2AFE1839006D3A93 /* MyRoundMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585AB892AFE1839006D3A93 /* MyRoundMission.swift */; };
+		A585AB8C2AFE1881006D3A93 /* MissionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585AB8B2AFE1881006D3A93 /* MissionCategory.swift */; };
+		A585AB8E2AFE18B0006D3A93 /* MissionContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585AB8D2AFE18B0006D3A93 /* MissionContent.swift */; };
+		A585AB902AFE18D7006D3A93 /* RoundMission.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585AB8F2AFE18D7006D3A93 /* RoundMission.swift */; };
+		A585AB922AFE191F006D3A93 /* MissionContentList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585AB912AFE191F006D3A93 /* MissionContentList.swift */; };
+		A585AB942AFE1947006D3A93 /* WishCoupon.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585AB932AFE1947006D3A93 /* WishCoupon.swift */; };
+		A585AB962AFE1A04006D3A93 /* WishCouponList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585AB952AFE1A04006D3A93 /* WishCouponList.swift */; };
+		A585AB982AFE1A2C006D3A93 /* ErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585AB972AFE1A2C006D3A93 /* ErrorCode.swift */; };
 		A58C70302A61CE6300327CD3 /* EnterInvitationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C702F2A61CE6200327CD3 /* EnterInvitationView.swift */; };
 		A58C70322A61D3AC00327CD3 /* EnterInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C70312A61D3AC00327CD3 /* EnterInvitationViewController.swift */; };
 		A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */; };
@@ -219,18 +219,6 @@
 		361FA3312A601E7900C3BBFD /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		361FA3332A601EAA00C3BBFD /* PatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchService.swift; sourceTree = "<group>"; };
 		361FA3372A60223200C3BBFD /* HeaderUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderUtils.swift; sourceTree = "<group>"; };
-		361FA33C2A6025E100C3BBFD /* Couple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Couple.swift; sourceTree = "<group>"; };
-		361FA33E2A60261000C3BBFD /* ShortGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortGame.swift; sourceTree = "<group>"; };
-		361FA3412A6027B400C3BBFD /* WishCouponList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponList.swift; sourceTree = "<group>"; };
-		361FA3432A6029E400C3BBFD /* WishCoupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCoupon.swift; sourceTree = "<group>"; };
-		361FA3452A602A2800C3BBFD /* MissionContentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionContentList.swift; sourceTree = "<group>"; };
-		361FA3472A602A5C00C3BBFD /* RoundMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundMission.swift; sourceTree = "<group>"; };
-		361FA3492A602AC000C3BBFD /* MissionContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionContent.swift; sourceTree = "<group>"; };
-		361FA34B2A602ADD00C3BBFD /* MissionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCategory.swift; sourceTree = "<group>"; };
-		361FA34D2A602B5400C3BBFD /* MyRoundMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRoundMission.swift; sourceTree = "<group>"; };
-		361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGameHistoryList.swift; sourceTree = "<group>"; };
-		361FA3512A602C0900C3BBFD /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		361FA3532A602C1C00C3BBFD /* RoundGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundGameList.swift; sourceTree = "<group>"; };
 		361FA3662A6268DD00C3BBFD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		361FA3682A6268DD00C3BBFD /* HomeBattleSelectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBattleSelectView.swift; sourceTree = "<group>"; };
 		361FA3692A6268DD00C3BBFD /* HomeBattleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeBattleView.swift; sourceTree = "<group>"; };
@@ -246,7 +234,6 @@
 		3698B2132A683C35006314FE /* MakeBattleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeBattleDataModel.swift; sourceTree = "<group>"; };
 		3698B2152A686209006314FE /* RoundBattleDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBattleDataModel.swift; sourceTree = "<group>"; };
 		3698B2172A686438006314FE /* DeleteService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteService.swift; sourceTree = "<group>"; };
-		3698B2192A6864B8006314FE /* ErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCode.swift; sourceTree = "<group>"; };
 		3698B21B2A691B3F006314FE /* BattleWishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleWishCouponView.swift; sourceTree = "<group>"; };
 		3698B21E2A69A9ED006314FE /* WishRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishRepository.swift; sourceTree = "<group>"; };
 		3698B2212A69ADE9006314FE /* GetWishDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetWishDataModel.swift; sourceTree = "<group>"; };
@@ -359,6 +346,19 @@
 		A578FC152A62D9380021A32E /* DDaySettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDaySettingView.swift; sourceTree = "<group>"; };
 		A578FC172A62D9AB0021A32E /* CodeGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeGeneratorViewController.swift; sourceTree = "<group>"; };
 		A578FC192A62D9B70021A32E /* CodeGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeGeneratorView.swift; sourceTree = "<group>"; };
+		A585AB7E2AFE16CB006D3A93 /* Couple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Couple.swift; sourceTree = "<group>"; };
+		A585AB802AFE172D006D3A93 /* ShortGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortGame.swift; sourceTree = "<group>"; };
+		A585AB822AFE17A0006D3A93 /* RoundGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundGameList.swift; sourceTree = "<group>"; };
+		A585AB852AFE17E7006D3A93 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		A585AB872AFE1817006D3A93 /* UserGameHistoryList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGameHistoryList.swift; sourceTree = "<group>"; };
+		A585AB892AFE1839006D3A93 /* MyRoundMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyRoundMission.swift; sourceTree = "<group>"; };
+		A585AB8B2AFE1881006D3A93 /* MissionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionCategory.swift; sourceTree = "<group>"; };
+		A585AB8D2AFE18B0006D3A93 /* MissionContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionContent.swift; sourceTree = "<group>"; };
+		A585AB8F2AFE18D7006D3A93 /* RoundMission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundMission.swift; sourceTree = "<group>"; };
+		A585AB912AFE191F006D3A93 /* MissionContentList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionContentList.swift; sourceTree = "<group>"; };
+		A585AB932AFE1947006D3A93 /* WishCoupon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCoupon.swift; sourceTree = "<group>"; };
+		A585AB952AFE1A04006D3A93 /* WishCouponList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishCouponList.swift; sourceTree = "<group>"; };
+		A585AB972AFE1A2C006D3A93 /* ErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCode.swift; sourceTree = "<group>"; };
 		A58C702F2A61CE6200327CD3 /* EnterInvitationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInvitationView.swift; sourceTree = "<group>"; };
 		A58C70312A61D3AC00327CD3 /* EnterInvitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInvitationViewController.swift; sourceTree = "<group>"; };
 		A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
@@ -420,6 +420,7 @@
 			isa = PBXGroup;
 			children = (
 				A56C4E6C2A698C2300C18C8F /* Uni.entitlements */,
+				A585AB7A2AFE155F006D3A93 /* Domain */,
 				36012F232A55AD0D006B8A39 /* Source */,
 				36012F242A55AD11006B8A39 /* Resource */,
 			);
@@ -510,7 +511,6 @@
 		36012F292A55AE5E006B8A39 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				36012F3F2A55B650006B8A39 /* Entity */,
 				36012F3C2A55B61E006B8A39 /* DataModel */,
 			);
 			path = Models;
@@ -573,26 +573,6 @@
 				A58C70332A627CA900327CD3 /* Onboarding */,
 			);
 			path = DataModel;
-			sourceTree = "<group>";
-		};
-		36012F3F2A55B650006B8A39 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				3698B2192A6864B8006314FE /* ErrorCode.swift */,
-				361FA33C2A6025E100C3BBFD /* Couple.swift */,
-				361FA33E2A60261000C3BBFD /* ShortGame.swift */,
-				361FA3412A6027B400C3BBFD /* WishCouponList.swift */,
-				361FA3432A6029E400C3BBFD /* WishCoupon.swift */,
-				361FA3452A602A2800C3BBFD /* MissionContentList.swift */,
-				361FA3472A602A5C00C3BBFD /* RoundMission.swift */,
-				361FA3492A602AC000C3BBFD /* MissionContent.swift */,
-				361FA34B2A602ADD00C3BBFD /* MissionCategory.swift */,
-				361FA34D2A602B5400C3BBFD /* MyRoundMission.swift */,
-				361FA34F2A602BF100C3BBFD /* UserGameHistoryList.swift */,
-				361FA3512A602C0900C3BBFD /* Game.swift */,
-				361FA3532A602C1C00C3BBFD /* RoundGameList.swift */,
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		36012F432A55B672006B8A39 /* Home */ = {
@@ -1253,6 +1233,50 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		A585AB7A2AFE155F006D3A93 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A585AB7D2AFE1575006D3A93 /* RepositoryInterface */,
+				A585AB7C2AFE156F006D3A93 /* UseCase */,
+				A585AB7B2AFE156A006D3A93 /* Entity */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A585AB7B2AFE156A006D3A93 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				A585AB7E2AFE16CB006D3A93 /* Couple.swift */,
+				A585AB802AFE172D006D3A93 /* ShortGame.swift */,
+				A585AB822AFE17A0006D3A93 /* RoundGameList.swift */,
+				A585AB852AFE17E7006D3A93 /* Game.swift */,
+				A585AB872AFE1817006D3A93 /* UserGameHistoryList.swift */,
+				A585AB892AFE1839006D3A93 /* MyRoundMission.swift */,
+				A585AB8B2AFE1881006D3A93 /* MissionCategory.swift */,
+				A585AB8D2AFE18B0006D3A93 /* MissionContent.swift */,
+				A585AB8F2AFE18D7006D3A93 /* RoundMission.swift */,
+				A585AB912AFE191F006D3A93 /* MissionContentList.swift */,
+				A585AB932AFE1947006D3A93 /* WishCoupon.swift */,
+				A585AB952AFE1A04006D3A93 /* WishCouponList.swift */,
+				A585AB972AFE1A2C006D3A93 /* ErrorCode.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		A585AB7C2AFE156F006D3A93 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		A585AB7D2AFE1575006D3A93 /* RepositoryInterface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = RepositoryInterface;
+			sourceTree = "<group>";
+		};
 		A58C702C2A61CC4F00327CD3 /* EnterInvitation */ = {
 			isa = PBXGroup;
 			children = (
@@ -1451,24 +1475,22 @@
 				361FA3842A628A2100C3BBFD /* BattleWishCollectionViewCell.swift in Sources */,
 				7E5C9D8E2A66E82400488DBD /* HistoryStatus.swift in Sources */,
 				8D2B2E842A616CDC00B75CDD /* AccountViewController.swift in Sources */,
-				361FA3442A6029E400C3BBFD /* WishCoupon.swift in Sources */,
 				361FA36F2A6268DD00C3BBFD /* HomeViewController.swift in Sources */,
 				36012F102A55A9F4006B8A39 /* AppDelegate.swift in Sources */,
 				361FA3822A62861C00C3BBFD /* BattleCollectionViewCell.swift in Sources */,
 				8D2B2E882A61778900B75CDD /* MyPageTableViewCell.swift in Sources */,
-				361FA3422A6027B400C3BBFD /* WishCouponList.swift in Sources */,
+				A585AB962AFE1A04006D3A93 /* WishCouponList.swift in Sources */,
 				8D6CB1FE2A6509C200FE46C2 /* DisconnectViewController.swift in Sources */,
-				3698B21A2A6864B8006314FE /* ErrorCode.swift in Sources */,
 				36012F3E2A55B64C006B8A39 /* HomeDataModel.swift in Sources */,
 				7E37BAE72A6271DC00A3CF64 /* HistoryDetailView.swift in Sources */,
 				A53C63042A6872D700AE3B45 /* DDayRepository.swift in Sources */,
 				A578FC182A62D9AB0021A32E /* CodeGeneratorViewController.swift in Sources */,
 				361FA3382A60223200C3BBFD /* HeaderUtils.swift in Sources */,
+				A585AB7F2AFE16CB006D3A93 /* Couple.swift in Sources */,
 				7EE3B19F2A604FE900962F4C /* HistoryView.swift in Sources */,
 				7E37BAE52A6271B700A3CF64 /* HistoryDetailViewController.swift in Sources */,
 				8DAEBB132A66E8C8007B818A /* YourWishCouponView.swift in Sources */,
 				8D6CB1FA2A65093600FE46C2 /* WithdrawViewController.swift in Sources */,
-				361FA33F2A60261000C3BBFD /* ShortGame.swift in Sources */,
 				8DAEBB172A66F9BF007B818A /* YourWishViewController.swift in Sources */,
 				8D6CB1FC2A6509B300FE46C2 /* DisconnectView.swift in Sources */,
 				8D17B88E2A659D2F0091D7AD /* MakeWishViewController.swift in Sources */,
@@ -1485,17 +1507,18 @@
 				361FA38A2A62D65800C3BBFD /* BattleDataModel.swift in Sources */,
 				361FA3722A6268DD00C3BBFD /* ScoreView.swift in Sources */,
 				361FA3342A601EAA00C3BBFD /* PatchService.swift in Sources */,
-				361FA3482A602A5C00C3BBFD /* RoundMission.swift in Sources */,
+				A585AB8A2AFE1839006D3A93 /* MyRoundMission.swift in Sources */,
+				A585AB8C2AFE1881006D3A93 /* MissionCategory.swift in Sources */,
 				A53C62F62A65719600AE3B45 /* UserDefaultsManager.swift in Sources */,
 				A578FC162A62D9380021A32E /* DDaySettingView.swift in Sources */,
 				36CF2F822A65BC3500D8F8E1 /* BattleCategoryType.swift in Sources */,
 				8D2B2E7E2A6163B400B75CDD /* SettingTableViewHeaderView.swift in Sources */,
+				A585AB832AFE17A0006D3A93 /* RoundGameList.swift in Sources */,
+				A585AB812AFE172D006D3A93 /* ShortGame.swift in Sources */,
 				36012F3B2A55B60F006B8A39 /* AuthRepository.swift in Sources */,
 				7E37BAE92A6284EE00A3CF64 /* HistoryDetailResultView.swift in Sources */,
-				361FA3522A602C0900C3BBFD /* Game.swift in Sources */,
 				A56C4E702A69A42500C18C8F /* SplashViewController.swift in Sources */,
 				361FA3742A6268DD00C3BBFD /* HomeView.swift in Sources */,
-				361FA33D2A6025E100C3BBFD /* Couple.swift in Sources */,
 				361FA37B2A62722A00C3BBFD /* BattleViewController.swift in Sources */,
 				3698B21F2A69A9ED006314FE /* WishRepository.swift in Sources */,
 				8DAEBB152A66E92C007B818A /* YourWishView.swift in Sources */,
@@ -1508,7 +1531,6 @@
 				8D2B2E8E2A619C2E00B75CDD /* EditProfileView.swift in Sources */,
 				8D2B2E862A616CFA00B75CDD /* AccountView.swift in Sources */,
 				8DAAB2B62A61CD9700E25CF4 /* DatePickerViewController.swift in Sources */,
-				361FA34C2A602ADD00C3BBFD /* MissionCategory.swift in Sources */,
 				A5C6D3862ACD606500C01CA9 /* BattleResultViewData.swift in Sources */,
 				36012F122A55A9F4006B8A39 /* SceneDelegate.swift in Sources */,
 				7E25F6502A6330EB003E82F6 /* WishCouponView.swift in Sources */,
@@ -1525,11 +1547,12 @@
 				36012F4D2A55CEF4006B8A39 /* UIButton+.swift in Sources */,
 				A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */,
 				361FA3282A60193B00C3BBFD /* HomeRepository.swift in Sources */,
+				A585AB8E2AFE18B0006D3A93 /* MissionContent.swift in Sources */,
 				7E6499652A652A6700B2F86C /* WishCouponYourCollectionView.swift in Sources */,
 				7E37BAE32A618DE900A3CF64 /* HistoryEmptyView.swift in Sources */,
-				361FA3542A602C1C00C3BBFD /* RoundGameList.swift in Sources */,
 				7EACFC462A682A7A005F416A /* HistoryRepository.swift in Sources */,
 				36012F492A55CE5D006B8A39 /* NSObject+.swift in Sources */,
+				A585AB922AFE191F006D3A93 /* MissionContentList.swift in Sources */,
 				8D2B2E7A2A61623300B75CDD /* MyPageProfileView.swift in Sources */,
 				36012F4F2A55CF18006B8A39 /* UIStackView+.swift in Sources */,
 				361FA3702A6268DD00C3BBFD /* HomeBattleSelectView.swift in Sources */,
@@ -1545,7 +1568,6 @@
 				7EACFC492A6882A8005F416A /* WishCouponDataModel.swift in Sources */,
 				36CF2F682A643C8900D8F8E1 /* BattleHistoryView.swift in Sources */,
 				7EACFC432A6826F6005F416A /* HistoryDataModel.swift in Sources */,
-				361FA34A2A602AC000C3BBFD /* MissionContent.swift in Sources */,
 				36CF2F662A643C6900D8F8E1 /* BattleHistoryViewController.swift in Sources */,
 				36012F532A55CFAF006B8A39 /* UIViewController+.swift in Sources */,
 				8D6CB1F82A65092900FE46C2 /* WithdrawView.swift in Sources */,
@@ -1553,23 +1575,23 @@
 				A55150BC2A614A2000481F57 /* CoupleConnectionMethodView.swift in Sources */,
 				36012F472A55CDEE006B8A39 /* Date+.swift in Sources */,
 				A56C4E682A68FB6B00C18C8F /* GetCoupleJoinDataModel.swift in Sources */,
-				361FA3502A602BF100C3BBFD /* UserGameHistoryList.swift in Sources */,
 				A5A584142AC00120001DEC8B /* BattleHistoryBottomView.swift in Sources */,
 				36CF2F6E2A6579CA00D8F8E1 /* BattleResultView.swift in Sources */,
 				8D2B2E7C2A61638000B75CDD /* SettingView.swift in Sources */,
 				A53C62F92A6682A600AE3B45 /* KakaoLoginDataModel.swift in Sources */,
 				F80916392ADC281800237AA3 /* QnAView.swift in Sources */,
 				8DAEBB0D2A66D718007B818A /* MyWishView.swift in Sources */,
+				A585AB982AFE1A2C006D3A93 /* ErrorCode.swift in Sources */,
 				F809163B2ADC283400237AA3 /* QnAViewAlert.swift in Sources */,
 				361FA3322A601E7900C3BBFD /* PostService.swift in Sources */,
 				A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */,
 				8D2B2E782A6161D500B75CDD /* MyPageTitle.swift in Sources */,
+				A585AB902AFE18D7006D3A93 /* RoundMission.swift in Sources */,
 				8DF24AF12ACC9A54003F4568 /* TimerView.swift in Sources */,
 				A5B4B5922A604F43000C7555 /* LoginView.swift in Sources */,
 				36DC47FA2AEE7BD8003DCB36 /* NickNameInputViewModel.swift in Sources */,
 				8DFC07A82AD1485400844676 /* TimerTipView.swift in Sources */,
 				8D2B2E8A2A61786A00B75CDD /* AccountTitle.swift in Sources */,
-				361FA3462A602A2800C3BBFD /* MissionContentList.swift in Sources */,
 				A55150BE2A614A2A00481F57 /* CoupleConnectionMethodViewController.swift in Sources */,
 				A555AD9D2A6079840083CD20 /* NicknameSettingView.swift in Sources */,
 				A55150BA2A6137ED00481F57 /* Config.xcconfig in Sources */,
@@ -1583,9 +1605,11 @@
 				36DC48062AEEBB41003DCB36 /* DeleteUserDataModel.swift in Sources */,
 				361FA3712A6268DD00C3BBFD /* HomeBattleView.swift in Sources */,
 				7E25F6542A633ACA003E82F6 /* WishCouponCountView.swift in Sources */,
+				A585AB942AFE1947006D3A93 /* WishCoupon.swift in Sources */,
 				36012F4B2A55CE87006B8A39 /* String+.swift in Sources */,
 				36DC48022AEEACB9003DCB36 /* QnAViewController.swift in Sources */,
 				36CF2F742A6583D700D8F8E1 /* BattleStatus.swift in Sources */,
+				A585AB882AFE1817006D3A93 /* UserGameHistoryList.swift in Sources */,
 				7E6499612A65178D00B2F86C /* WishCouponYourCollectionViewCell.swift in Sources */,
 				3698B2222A69ADE9006314FE /* GetWishDataModel.swift in Sources */,
 				A54CD62E2A5C326E00C434B7 /* OnboardingView.swift in Sources */,
@@ -1593,6 +1617,7 @@
 				A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */,
 				36012F452A55CDAA006B8A39 /* CGPoint+.swift in Sources */,
 				A56C4E622A68FA3F00C18C8F /* CoupleJoinRepository.swift in Sources */,
+				A585AB862AFE17E7006D3A93 /* Game.swift in Sources */,
 				A578FC1A2A62D9B70021A32E /* CodeGeneratorView.swift in Sources */,
 				A5A5840E2AC0000E001DEC8B /* NavigationBarView.swift in Sources */,
 				361FA37F2A62793B00C3BBFD /* SectionView.swift in Sources */,
@@ -1604,7 +1629,6 @@
 				3698B21C2A691B3F006314FE /* BattleWishCouponView.swift in Sources */,
 				36CF2F6A2A643CFB00D8F8E1 /* BattleNavigationBar.swift in Sources */,
 				361FA37D2A6277C300C3BBFD /* BattleView.swift in Sources */,
-				361FA34E2A602B5400C3BBFD /* MyRoundMission.swift in Sources */,
 				36CF2F702A657B4D00D8F8E1 /* BattleStatusView.swift in Sources */,
 				361FA3732A6268DD00C3BBFD /* ScoreInfoView.swift in Sources */,
 				7E6499632A652A5400B2F86C /* WishCouponCollectionView.swift in Sources */,
