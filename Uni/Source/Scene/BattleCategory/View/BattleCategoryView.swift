@@ -40,7 +40,7 @@ final class BattleCategoryView: UIView {
         
         
         
-        self.backgroundColor = .gray150
+        self.backgroundColor = .gray100
         self.addSubviews([navigationBar, scrollView])
         navigationBar.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide)
