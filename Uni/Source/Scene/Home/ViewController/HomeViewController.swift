@@ -14,8 +14,11 @@ final class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addEvent()
+//        setNotifications()
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         getHomeList()
-        setNotifications()
     }
     // MARK: - Setting
     override func setConfig() {
@@ -47,15 +50,15 @@ final class HomeViewController: BaseViewController {
         self.navigationController?.pushViewController(historyViewController, animated: true)
     }
     @objc private func battleViewTapped(_ sender: UIGestureRecognizer) {
-        // 기존의 저장된 밸류와 다르면 화면 전환
-        isAlreaydGameFinish { [weak self] state in
-            guard let strongSelf = self else {return}
-            if state { //
-                strongSelf.getHomeList()
-                strongSelf.view.showToast(message: "승부가 이미 완료되었습니다.", hasSafeArea: true)
-            } else {
-                strongSelf.transitionView()
-            }
+        homeRepository.getHomeData { [weak self] data in
+            guard let self = self else { return }
+            self.homeView.bindData(myScore: data.myScore,
+                                         partnerScore: data.partnerScore,
+                                         drawScore: data.drawCount,
+                                         dDay: data.dDay,
+                                         heartCount: data.couple.heartToken,
+                                         isPlayingBattle: data.shortGame == nil ? false: true)
+            self.transitionView(checkHomeData: data)
         }
     }
     @objc private func wishCouponViewTapped(_ sender: UIGestureRecognizer) {
@@ -69,14 +72,14 @@ final class HomeViewController: BaseViewController {
     private func setNotifications() {
         NotificationCenter.default.addObserver(self, selector: #selector(getHomeAPI(_:)), name: NSNotification.Name("sceneDidBecomeActive"), object: nil)
     }
-    private func didProgressGameExist(completion: @escaping ((Bool?) -> Void)) {
+    private func didProgressGameExist(homeDataModel: HomeDataModel?, completion: @escaping ((Bool?) -> Void)) {
         // if data.shortGame == nil
         // if data.shortGame?.enable == false -> 입력창
         // if data.shortGame?.enable == ture -> 결과창
-        if self.homeData?.shortGame == nil {
+        if homeDataModel?.shortGame == nil {
             completion(nil)
         } else {
-            if let roundId = homeData?.roundGameId {
+            if let roundId = homeDataModel?.roundGameId {
                 self.homeRepository.isWriteGameState(roundGameId: roundId) { state in
                     completion(state)
                 }
@@ -85,13 +88,25 @@ final class HomeViewController: BaseViewController {
             }
         }
     }
-    private func transitionView() {
-        self.didProgressGameExist { [weak self] state in
+    private func transitionView(checkHomeData: HomeDataModel?) {
+        self.didProgressGameExist(homeDataModel: checkHomeData
+        ) { [weak self] state in
             guard let strongSelf = self else {return}
             if state == nil {
                 let createBattleViewController = BattleViewController()
-                createBattleViewController.modalPresentationStyle = .overFullScreen
-                strongSelf.present(createBattleViewController, animated: true)
+                let navigationController = UINavigationController(rootViewController: createBattleViewController)
+                navigationController.modalPresentationStyle = .overFullScreen
+                strongSelf.present(navigationController, animated: true)
+                createBattleViewController.completionHandler = { [weak self] in
+                    guard let self = self else { return }
+                    let battleHistoryViewController = BattleHistoryViewController()
+                    DispatchQueue.main.async {
+                        let navigationController = UINavigationController(rootViewController: battleHistoryViewController)
+                        navigationController.modalTransitionStyle = .crossDissolve
+                        navigationController.modalPresentationStyle = .fullScreen
+                        self.present(navigationController, animated: true)
+                    }
+                }
             } else if state! {
                 let historyViewController = BattleResultViewController()
                 if let roundId = strongSelf.homeData?.roundGameId {
@@ -99,10 +114,12 @@ final class HomeViewController: BaseViewController {
                 }
                 let navigationController = UINavigationController(rootViewController: historyViewController)
                 navigationController.modalPresentationStyle = .overFullScreen
+                navigationController.modalTransitionStyle = .crossDissolve
                 strongSelf.present(navigationController, animated: true, completion: nil)
             } else {
                 let resultViewController = BattleHistoryViewController()
                 resultViewController.modalPresentationStyle = .overFullScreen
+                resultViewController.modalTransitionStyle = .crossDissolve
                 strongSelf.present(resultViewController, animated: true)
             }
         }
