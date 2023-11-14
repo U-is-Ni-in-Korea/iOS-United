@@ -16,7 +16,7 @@ final class NicknameSettingViewController: BaseViewController {
         let inputNickNameView = UIHostingController(rootView: NickNameInputView(viewModel: NickNameInputViewModel(navigationController: self.navigationController!)))
         self.addChild(inputNickNameView)
         self.view.addSubview(inputNickNameView.view)
-        self.view.addSubview(inputNickNameView.view)
+        inputNickNameView.didMove(toParent: self)
         inputNickNameView.view.snp.makeConstraints {
             $0.edges.equalTo(self.view.safeAreaLayoutGuide)
         }
