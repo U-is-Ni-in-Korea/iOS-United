@@ -21,6 +21,7 @@ final class BattleHistoryViewController: BaseViewController {
         setLayout()
         addNavigationButtonAction()
         addMissionCompleteButtonAction()
+        addmissionFailureButtonAction()
     }
     // MARK: - Setting
     override func setConfig() {
@@ -62,7 +63,7 @@ final class BattleHistoryViewController: BaseViewController {
         }
         .store(in: &cancellables)
     }
-    private func missionFailureButtonAction() {
+    private func addmissionFailureButtonAction() {
         battleHistoryViewData.missionFailureButtonTapPublisher.sink { [weak self] _ in
             guard let self = self else { return }
             self.view.showIndicator()
