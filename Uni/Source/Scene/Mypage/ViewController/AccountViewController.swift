@@ -26,11 +26,11 @@ final class AccountViewController: BaseViewController {
 
 }
 
-extension AccountViewController: AccountViewDelegate {
+extension AccountViewController {
 
     func setStyle() {
         accountView = AccountView(frame: self.view.frame)
-        accountView.delegate = self
+//        accountView.delegate = self
         self.view = accountView
     }
 

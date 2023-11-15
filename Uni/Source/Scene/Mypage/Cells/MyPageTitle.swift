@@ -15,7 +15,6 @@ extension MyPageTitle {
         return [MyPageTitle(title: "계정"),
                 MyPageTitle(title: "서비스 이용약관"),
                 MyPageTitle(title: "개인정보 처리 방침"),
-                MyPageTitle(title: "오픈소스 라이브러리"),
                 MyPageTitle(title: "개발자 정보")
                 ]
     }
