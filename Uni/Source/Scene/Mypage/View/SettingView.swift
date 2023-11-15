@@ -12,7 +12,7 @@ final class SettingView: UIView {
         $0.rowHeight = 56
         $0.separatorStyle = .none
     }
-    private let settingTableHeaderView = SettingTableViewHeaderView()
+    private let settingTableHeaderView = MyPageHeaderView(title: "서비스 이용")
     // MARK: - Life Cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,7 +24,7 @@ final class SettingView: UIView {
     }
     // MARK: - Setting
     func setLayout() {
-        addSubviews([settingViewNavi, profileView, myPageTableView])
+        addSubviews([settingViewNavi, profileView, myPageTableView, settingTableHeaderView])
 
         settingViewNavi.snp.makeConstraints {
             $0.top.equalTo(safeAreaLayoutGuide)
@@ -37,20 +37,33 @@ final class SettingView: UIView {
             $0.height.equalTo(148)
         }
         myPageTableView.snp.makeConstraints {
-            $0.top.equalTo(profileView.snp.bottom)
+            $0.top.equalTo(settingTableHeaderView.snp.bottom)
             $0.leading.trailing.equalToSuperview()
             $0.bottom.equalTo(self.safeAreaLayoutGuide)
         }
         settingTableHeaderView.snp.makeConstraints {
             $0.height.equalTo(34)
-            $0.width.equalTo(300)
+            $0.top.equalTo(profileView.snp.bottom)
+            $0.leading.trailing.equalToSuperview()
         }
     }
     func setStyle() {
         self.backgroundColor = .gray000
     }
     // MARK: - Custom Method
-    func bindData(userName: String) {
+    func bindData(userName: String, dDay: String) {
         self.profileView.userNameLabel.text = userName
+        self.profileView.dDayLabel.text = formatDateString(rawValue: dDay)
+    }
+    func formatDateString(rawValue: String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        guard let date = dateFormatter.date(from: rawValue) else { return rawValue }
+        dateFormatter.dateFormat = "yyyy.MM.dd (EEEE)"
+        dateFormatter.locale = Locale(identifier: "ko_KR")
+        let formattedDateString = dateFormatter.string(from: date)
+        let shortenedDateString = formattedDateString.replacingOccurrences(of: "요일", with: "")
+
+          return shortenedDateString
     }
 }
