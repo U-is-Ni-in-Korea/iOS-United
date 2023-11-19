@@ -57,9 +57,10 @@ final class SettingViewController: BaseViewController {
         self.view.showIndicator()
         self.userRepository.getUserData { [weak self] data in
             guard let strongSelf = self else {return}
+            print(data, "데이터")
             strongSelf.userData = data
-            if let nickname = data.nickname {
-                strongSelf.settingView.bindData(userName: nickname)
+            if let nickname = data.nickname, let dDay = data.startDate {
+                strongSelf.settingView.bindData(userName: nickname, dDay: dDay)
             }
             strongSelf.view.removeIndicator()
         }
@@ -94,10 +95,12 @@ extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
             self.present(termsOfUseUrlSafariView, animated: true, completion: nil)
         case 2:
             let privacyPolicyUrl = NSURL(string: "https://sparkle-uni.notion.site/aebe71410014461d85c96851bae1d5cb?pvs=4")
-            let privacyPolicyUrlUrlSafariView: SFSafariViewController = SFSafariViewController(url: privacyPolicyUrl! as URL)
-            self.present(privacyPolicyUrlUrlSafariView, animated: true, completion: nil)
+            let privacyPolicyUrlSafariView: SFSafariViewController = SFSafariViewController(url: privacyPolicyUrl! as URL)
+            self.present(privacyPolicyUrlSafariView, animated: true, completion: nil)
         case 3:
-            print("개발자 정보")
+            let devInfoUrl = NSURL(string: "https://sparkle-uni.notion.site/00c8ee4d810e411395c7ff26d22dcffd?pvs=4")
+            let devInfoUrlSafariView: SFSafariViewController = SFSafariViewController(url: devInfoUrl! as URL)
+            self.present(devInfoUrlSafariView, animated: true, completion: nil)
         default:
             return
         }
