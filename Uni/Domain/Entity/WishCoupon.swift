@@ -1,3 +1,5 @@
+import Foundation
+
 struct WishCoupon: Codable {
     let id: Int
     let image: String?

@@ -10,9 +10,6 @@ import SDSKit
 import Then
 
 final class AccountView: UIView {
-
-    weak var delegate: AccountViewDelegate?
-
     public var accountViewNavi = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "계정")
     private let accountTitleList = AccountTitle.accountTitleList()
 
@@ -74,10 +71,7 @@ extension AccountView: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        delegate?.didSelectCell(at: indexPath)
+//        delegate?.didSelectCell(at: indexPath)
+        print(indexPath.row)
     }
-}
-
-protocol AccountViewDelegate: AnyObject {
-    func didSelectCell(at indexPath: IndexPath)
 }
