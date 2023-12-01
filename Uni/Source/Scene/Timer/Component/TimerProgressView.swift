@@ -58,6 +58,8 @@ struct TimerProgressView: View {
                         timerState.timeRemaining -= 1
                     } else if timerState.timeRemaining == 0 {
                         AudioServicesPlaySystemSound(1005)
+                        timerState.startTimer = false
+                        timerState.showToast = true
                     }
                 }
 //            }

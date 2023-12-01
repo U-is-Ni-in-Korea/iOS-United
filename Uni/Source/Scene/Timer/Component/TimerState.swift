@@ -12,6 +12,8 @@ class TimerState: ObservableObject {
 
     @Published var startTimer: Bool = false
     @Published var isTimerRunning: Bool = false
+    @Published var showStopAlert: Bool = false
+    @Published var showToast: Bool = false
 
     @Published var selectedMinute: Int = 5
     @Published var selectedSecond: Int = 0

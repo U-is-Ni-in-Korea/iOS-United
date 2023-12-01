@@ -138,6 +138,7 @@
 		8DAEBB172A66F9BF007B818A /* YourWishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEBB162A66F9BF007B818A /* YourWishViewController.swift */; };
 		8DF24AF12ACC9A54003F4568 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF24AF02ACC9A54003F4568 /* TimerView.swift */; };
 		8DFC07A82AD1485400844676 /* TimerTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC07A72AD1485400844676 /* TimerTipView.swift */; };
+    8DFC07AA2AD1B19B00844676 /* TimerToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC07A92AD1B19B00844676 /* TimerToastView.swift */; };
 		A500A4482AFB54F300B8593A /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = A500A4472AFB54F300B8593A /* SkeletonView */; };
 		A53C62F62A65719600AE3B45 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */; };
 		A53C62F92A6682A600AE3B45 /* KakaoLoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */; };
@@ -325,6 +326,7 @@
 		8DAEBB162A66F9BF007B818A /* YourWishViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourWishViewController.swift; sourceTree = "<group>"; };
 		8DF24AF02ACC9A54003F4568 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		8DFC07A72AD1485400844676 /* TimerTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTipView.swift; sourceTree = "<group>"; };
+		8DFC07A92AD1B19B00844676 /* TimerToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerToastView.swift; sourceTree = "<group>"; };
 		A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginDataModel.swift; sourceTree = "<group>"; };
 		A53C62FD2A67DAC600AE3B45 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
@@ -1045,6 +1047,7 @@
 				8D95A2D12AC869F30053186D /* TimerButtonView.swift */,
 				8D95A2D52AC86A8E0053186D /* TimerProgressView.swift */,
 				8DFC07A72AD1485400844676 /* TimerTipView.swift */,
+				8DFC07A92AD1B19B00844676 /* TimerToastView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1579,6 +1582,7 @@
 				36CF2F6C2A6579B600D8F8E1 /* BattleResultViewController.swift in Sources */,
 				8D95A2D02AC8695C0053186D /* TimerPickerView.swift in Sources */,
 				36CF2F842A65C77C00D8F8E1 /* BattleCategoryViewController.swift in Sources */,
+				8DFC07AA2AD1B19B00844676 /* TimerToastView.swift in Sources */,
 				7EACFC492A6882A8005F416A /* WishCouponDataModel.swift in Sources */,
 				36CF2F682A643C8900D8F8E1 /* BattleHistoryView.swift in Sources */,
 				7EACFC432A6826F6005F416A /* HistoryDataModel.swift in Sources */,

@@ -15,10 +15,8 @@ struct TimerButtonView: View {
     var body: some View {
         HStack {
             Button {
-                if timerState.isTimerRunning {
-                    
-                }
-                timerState.startTimer = false
+                timerState.isTimerRunning = false
+                timerState.showStopAlert = true
             } label: {
                 Text("취소")
             }
@@ -27,6 +25,20 @@ struct TimerButtonView: View {
             .background(timerState.startTimer ? Circle().foregroundColor(Color(uiColor: .gray000)) : Circle().foregroundColor(Color(uiColor: .gray300)))
             .foregroundColor(timerState.startTimer ? Color(uiColor: .gray400) : Color(uiColor: .gray000))
             .clipShape(Circle())
+            .alert(Text("타이머가 아직 끝나지 않았어요").font(Font(SDSFont.subTitle.font)), isPresented: $timerState.showStopAlert) {
+                Button("취소", role: .cancel) {
+                    timerState.isTimerRunning = true
+                }
+                .foregroundStyle(Color(uiColor: .lightBlue500))
+                Button("나가기") {
+                    timerState.startTimer = false
+                }
+                .foregroundStyle(Color(uiColor: .lightBlue500))
+            } message: {
+                Text("타이머는 종료되지 않지만\n종료 알림을 받을 수 없어요")
+                    .font(Font(SDSFont.btn2.font))
+                    .foregroundStyle(Color(uiColor: .gray400))
+            }
 
             Spacer()
 
@@ -55,5 +67,6 @@ struct TimerButtonView: View {
             .foregroundColor(timerState.isTimerRunning ? Color(uiColor: .lightBlue500) : Color(uiColor: .gray000))
             .clipShape(Circle())
         }
+        .font(Font(SDSFont.body1.font))
     }
 }
