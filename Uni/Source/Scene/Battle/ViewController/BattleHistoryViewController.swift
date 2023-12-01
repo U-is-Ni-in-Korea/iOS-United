@@ -22,6 +22,7 @@ final class BattleHistoryViewController: BaseViewController {
         addNavigationButtonAction()
         addMissionCompleteButtonAction()
         addmissionFailureButtonAction()
+        toolButtonAction()
     }
     // MARK: - Setting
     override func setConfig() {
@@ -42,8 +43,19 @@ final class BattleHistoryViewController: BaseViewController {
         }
         .store(in: &cancellables)
     }
+    private func toolButtonAction() {
+        battleHistoryViewData.memoButtonTapSubject.sink { [weak self] _ in
+            let battleMemoViewController = BattleMemoViewController()
+            self?.navigationController?.pushViewController(battleMemoViewController, animated: true)
+        }
+        .store(in: &cancellables)
+        battleHistoryViewData.timerButtonTapSubejct.sink { [weak self] _ in
+
+        }
+        .store(in: &cancellables)
+    }
     private func addMissionCompleteButtonAction() {
-        battleHistoryViewData.missionCompleteButtonTapPublisher.sink { [weak self] _ in
+        battleHistoryViewData.missionCompleteButtonTapSubject.sink { [weak self] _ in
             guard let self = self else { return }
             self.view.showIndicator()
             self.battleRepository.patchRoundGameData(state: true,
@@ -64,7 +76,7 @@ final class BattleHistoryViewController: BaseViewController {
         .store(in: &cancellables)
     }
     private func addmissionFailureButtonAction() {
-        battleHistoryViewData.missionFailureButtonTapPublisher.sink { [weak self] _ in
+        battleHistoryViewData.missionFailureButtonTapSubject.sink { [weak self] _ in
             guard let self = self else { return }
             self.view.showIndicator()
             self.battleRepository.patchRoundGameData(state: false,
