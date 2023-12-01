@@ -12,7 +12,7 @@ struct BattleHistoryBottomView: View {
             Spacer()
             HStack(alignment: .center) {
                 Button {
-                    viewData.missionCompleteButtonTapPublisher.send()
+                    viewData.missionCompleteButtonTapSubject.send()
                 } label: {
                     Text("미션 완료")
                         .font(Font(SDSFont.btn1.font))
@@ -22,7 +22,7 @@ struct BattleHistoryBottomView: View {
                 .background(Color(uiColor: .lightBlue500))
                 .cornerRadius(10)
                 Button {
-                    viewData.missionFailureButtonTapPublisher.send()
+                    viewData.missionFailureButtonTapSubject.send()
                 } label: {
                     Text("미션 실패")
                         .font(Font(SDSFont.btn1.font))

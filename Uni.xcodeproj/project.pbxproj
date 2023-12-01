@@ -187,8 +187,12 @@
 		A5A584162AC00697001DEC8B /* BattleHistoryCategoryTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A584152AC00697001DEC8B /* BattleHistoryCategoryTitleView.swift */; };
 		A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */; };
 		A5B4B5922A604F43000C7555 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B5912A604F43000C7555 /* LoginView.swift */; };
+		A5B70E5E2B19A4C4001FA019 /* BattleMemoViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B70E5D2B19A4C4001FA019 /* BattleMemoViewData.swift */; };
+		A5B70E602B19C69A001FA019 /* MemoTextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B70E5F2B19C69A001FA019 /* MemoTextManager.swift */; };
 		A5C23DDF2ABAB96900800190 /* BattleHistoryViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23DDE2ABAB96900800190 /* BattleHistoryViewData.swift */; };
 		A5C6D3862ACD606500C01CA9 /* BattleResultViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C6D3852ACD606500C01CA9 /* BattleResultViewData.swift */; };
+		A5F26AB02B09EF870026BB58 /* BattleMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F26AAF2B09EF870026BB58 /* BattleMemoView.swift */; };
+		A5F26AB22B09F0FB0026BB58 /* BattleMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F26AB12B09F0FB0026BB58 /* BattleMemoViewController.swift */; };
 		F80916352ADC276600237AA3 /* NickNameInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80916342ADC276600237AA3 /* NickNameInputView.swift */; };
 		F80916372ADC27C300237AA3 /* NickNameViewLogoutAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80916362ADC27C300237AA3 /* NickNameViewLogoutAlert.swift */; };
 		F80916392ADC281800237AA3 /* QnAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80916382ADC281700237AA3 /* QnAView.swift */; };
@@ -371,8 +375,12 @@
 		A5A584152AC00697001DEC8B /* BattleHistoryCategoryTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryCategoryTitleView.swift; sourceTree = "<group>"; };
 		A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A5B4B5912A604F43000C7555 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		A5B70E5D2B19A4C4001FA019 /* BattleMemoViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleMemoViewData.swift; sourceTree = "<group>"; };
+		A5B70E5F2B19C69A001FA019 /* MemoTextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTextManager.swift; sourceTree = "<group>"; };
 		A5C23DDE2ABAB96900800190 /* BattleHistoryViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryViewData.swift; sourceTree = "<group>"; };
 		A5C6D3852ACD606500C01CA9 /* BattleResultViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleResultViewData.swift; sourceTree = "<group>"; };
+		A5F26AAF2B09EF870026BB58 /* BattleMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleMemoView.swift; sourceTree = "<group>"; };
+		A5F26AB12B09F0FB0026BB58 /* BattleMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleMemoViewController.swift; sourceTree = "<group>"; };
 		F80916342ADC276600237AA3 /* NickNameInputView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameInputView.swift; sourceTree = "<group>"; };
 		F80916362ADC27C300237AA3 /* NickNameViewLogoutAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NickNameViewLogoutAlert.swift; sourceTree = "<group>"; };
 		F80916382ADC281700237AA3 /* QnAView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnAView.swift; sourceTree = "<group>"; };
@@ -685,6 +693,7 @@
 				361FA37C2A6277C300C3BBFD /* BattleView.swift */,
 				36CF2F672A643C8900D8F8E1 /* BattleHistoryView.swift */,
 				36CF2F6D2A6579CA00D8F8E1 /* BattleResultView.swift */,
+				A5F26AAF2B09EF870026BB58 /* BattleMemoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -695,6 +704,7 @@
 				361FA37A2A62722A00C3BBFD /* BattleViewController.swift */,
 				36CF2F652A643C6900D8F8E1 /* BattleHistoryViewController.swift */,
 				36CF2F6B2A6579B600D8F8E1 /* BattleResultViewController.swift */,
+				A5F26AB12B09F0FB0026BB58 /* BattleMemoViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1065,6 +1075,7 @@
 			isa = PBXGroup;
 			children = (
 				A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */,
+				A5B70E5F2B19C69A001FA019 /* MemoTextManager.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1343,6 +1354,7 @@
 			children = (
 				A5C23DDE2ABAB96900800190 /* BattleHistoryViewData.swift */,
 				A5C6D3852ACD606500C01CA9 /* BattleResultViewData.swift */,
+				A5B70E5D2B19A4C4001FA019 /* BattleMemoViewData.swift */,
 			);
 			path = ViewData;
 			sourceTree = "<group>";
@@ -1472,6 +1484,7 @@
 				36CF2F7E2A65B0B600D8F8E1 /* CategoryDescriptionView.swift in Sources */,
 				36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */,
 				3698B2162A686209006314FE /* RoundBattleDataModel.swift in Sources */,
+				A5B70E5E2B19A4C4001FA019 /* BattleMemoViewData.swift in Sources */,
 				36CF2F722A657DD400D8F8E1 /* BattleChipView.swift in Sources */,
 				3698B2142A683C35006314FE /* MakeBattleDataModel.swift in Sources */,
 				8D95A2CE2AC8691A0053186D /* TimerState.swift in Sources */,
@@ -1486,6 +1499,7 @@
 				8D6CB1FE2A6509C200FE46C2 /* DisconnectViewController.swift in Sources */,
 				36012F3E2A55B64C006B8A39 /* HomeDataModel.swift in Sources */,
 				7E37BAE72A6271DC00A3CF64 /* HistoryDetailView.swift in Sources */,
+				A5F26AB02B09EF870026BB58 /* BattleMemoView.swift in Sources */,
 				A53C63042A6872D700AE3B45 /* DDayRepository.swift in Sources */,
 				A578FC182A62D9AB0021A32E /* CodeGeneratorViewController.swift in Sources */,
 				361FA3382A60223200C3BBFD /* HeaderUtils.swift in Sources */,
@@ -1572,6 +1586,7 @@
 				7EACFC492A6882A8005F416A /* WishCouponDataModel.swift in Sources */,
 				36CF2F682A643C8900D8F8E1 /* BattleHistoryView.swift in Sources */,
 				7EACFC432A6826F6005F416A /* HistoryDataModel.swift in Sources */,
+				A5B70E602B19C69A001FA019 /* MemoTextManager.swift in Sources */,
 				36CF2F662A643C6900D8F8E1 /* BattleHistoryViewController.swift in Sources */,
 				36012F532A55CFAF006B8A39 /* UIViewController+.swift in Sources */,
 				8D6CB1F82A65092900FE46C2 /* WithdrawView.swift in Sources */,
@@ -1605,6 +1620,7 @@
 				F80916372ADC27C300237AA3 /* NickNameViewLogoutAlert.swift in Sources */,
 				F80916352ADC276600237AA3 /* NickNameInputView.swift in Sources */,
 				7E64995A2A6503B100B2F86C /* WishCouponCollectionViewCell.swift in Sources */,
+				A5F26AB22B09F0FB0026BB58 /* BattleMemoViewController.swift in Sources */,
 				8D95A2D62AC86A8E0053186D /* TimerProgressView.swift in Sources */,
 				36DC48062AEEBB41003DCB36 /* DeleteUserDataModel.swift in Sources */,
 				361FA3712A6268DD00C3BBFD /* HomeBattleView.swift in Sources */,
@@ -1655,9 +1671,9 @@
 /* Begin XCBuildConfiguration section */
 		36012F1E2A55A9F6006B8A39 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36DC47F72AEE712B003DCB36 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BASE_URL = "http://3.37.173.111:8081/";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -1717,9 +1733,9 @@
 		};
 		36012F1F2A55A9F6006B8A39 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 36DC47F72AEE712B003DCB36 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				BASE_URL = "http://3.37.173.111:8081/";
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";

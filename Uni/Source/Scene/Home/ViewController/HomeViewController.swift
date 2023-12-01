@@ -117,10 +117,11 @@ final class HomeViewController: BaseViewController {
                 navigationController.modalTransitionStyle = .crossDissolve
                 strongSelf.present(navigationController, animated: true, completion: nil)
             } else {
-                let resultViewController = BattleHistoryViewController()
-                resultViewController.modalPresentationStyle = .overFullScreen
-                resultViewController.modalTransitionStyle = .crossDissolve
-                strongSelf.present(resultViewController, animated: true)
+                let battleHistoryViewController = BattleHistoryViewController()
+                let navigationController = UINavigationController(rootViewController: battleHistoryViewController)
+                navigationController.modalTransitionStyle = .crossDissolve
+                navigationController.modalPresentationStyle = .fullScreen
+                self?.present(navigationController, animated: true)
             }
         }
     }

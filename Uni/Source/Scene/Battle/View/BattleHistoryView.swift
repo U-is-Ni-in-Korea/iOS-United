@@ -60,7 +60,13 @@ struct BattleHistoryView: View {
                     .cornerRadius(10)
                     .padding(.bottom, 28)
                     .onTapGesture {
-                        print("??클릭")
+                        let tool = data.rountBattle?.myRoundMission?.missionContent.missionCategory.missionTool
+                        if tool == "MEMO" {
+                            data.memoButtonTapSubject.send()
+                        }
+                        else if tool == "TIMER" {
+                            data.timerButtonTapSubejct.send()
+                        }
                     }
                 }
             }

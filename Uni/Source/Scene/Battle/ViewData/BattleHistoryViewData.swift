@@ -7,6 +7,8 @@ protocol NavigationBarProtocol: ObservableObject {
 class BattleHistoryViewData: ObservableObject, NavigationBarProtocol {
     var dismissButtonTapPublisher = PassthroughSubject<Void, Never>()
     @Published var rountBattle: RoundBattleDataModel?
-    let missionCompleteButtonTapPublisher = PassthroughSubject<Void, Never>()
-    let missionFailureButtonTapPublisher = PassthroughSubject<Void, Never>()
+    let missionCompleteButtonTapSubject = PassthroughSubject<Void, Never>()
+    let missionFailureButtonTapSubject = PassthroughSubject<Void, Never>()
+    let timerButtonTapSubejct = PassthroughSubject<Void, Never>()
+    let memoButtonTapSubject = PassthroughSubject<Void, Never>()
 }
