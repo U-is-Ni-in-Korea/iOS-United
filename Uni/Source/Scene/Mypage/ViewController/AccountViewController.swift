@@ -1,64 +1,68 @@
-//
-//  AccountViewController.swift
-//  Uni
-//
-//  Created by 홍유정 on 2023/07/14.
-//
-
 import UIKit
+
 import SDSKit
 import Then
 
 final class AccountViewController: BaseViewController {
-
-    var accountView = AccountView()
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        accountNaviActions()
-
-    }
-
+    // MARK: - Property
+    private let accountTitleList = AccountTitle.accountTitleList()
+    // MARK: - UI Property
+    private var accountView = AccountView()
+    // MARK: - Life Cycle
     override func loadView() {
         super.loadView()
         setStyle()
     }
-
-}
-
-extension AccountViewController {
-
-    func setStyle() {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        accountNaviActions()
+        tableViewSetting()
+    }
+    // MARK: - Setting
+    private func setStyle() {
         accountView = AccountView(frame: self.view.frame)
-//        accountView.delegate = self
         self.view = accountView
     }
-
+    private func tableViewSetting() {
+        accountView.accountTableView.delegate = self
+        accountView.accountTableView.dataSource = self
+    }
+    // MARK: - Action Helper
     func accountNaviActions() {
         self.accountView.accountViewNavi.backButtonCompletionHandler = { [weak self] in
             guard let strongSelf = self else {return}
             strongSelf.navigationController?.popViewController(animated: true)
         }
     }
+}
 
-    func didSelectCell(at indexPath: IndexPath) {
+extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return accountTitleList.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: MyPageTableViewCell.idf, for: indexPath) as? MyPageTableViewCell else { return UITableViewCell() }
+        cell.accountConfigureCell(accountTitleList[indexPath.row])
+        cell.selectionStyle = .none
+        return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.row {
-        case 0: let logoutViewController = LogoutViewController()
-            logoutViewController.modalPresentationStyle = .overFullScreen
+        case 0:
+            let logoutViewController = LogoutViewController()
             logoutViewController.modalTransitionStyle = .crossDissolve
-            self.present(logoutViewController, animated: true, completion: nil)
-            // 탈퇴, 연결해제 미구현으로 주석처리
-
-//        case 1 : let withdrawViewController = WithdrawViewController()
-//            withdrawViewController.modalPresentationStyle = .overFullScreen
-//            withdrawViewController.modalTransitionStyle = .crossDissolve
-//            self.present(withdrawViewController, animated: true, completion: nil)
-//
-//        case 2 : let disconnectViewController = DisconnectViewController()
-//            disconnectViewController.modalPresentationStyle = .overFullScreen
-//            disconnectViewController.modalTransitionStyle = .crossDissolve
-//            self.present(disconnectViewController, animated: true, completion: nil)
-//
+            logoutViewController.modalPresentationStyle = .overFullScreen
+            self.present(logoutViewController, animated: true)
+        case 1:
+            let withdrawViewController = WithdrawViewController()
+            withdrawViewController.modalTransitionStyle = .crossDissolve
+            withdrawViewController.modalPresentationStyle = .overFullScreen
+            self.present(withdrawViewController, animated: true)
+        case 2:
+            let disConnectViewController = DisconnectViewController()
+            disConnectViewController.modalTransitionStyle = .crossDissolve
+            disConnectViewController.modalPresentationStyle = .overFullScreen
+            self.present(disConnectViewController, animated: true)
         default:
             return
         }

@@ -63,8 +63,8 @@ final class DDaySettingViewController: BaseViewController {
             let codeGeneratorViewController = CodeGeneratorViewController()
             if let inviteCode = data.inviteCode {
                 codeGeneratorViewController.inviteCode = inviteCode
+                self.navigationController?.pushViewController(codeGeneratorViewController, animated: true)
             }
-            self.navigationController?.pushViewController(codeGeneratorViewController, animated: true)
         }
     }
     @objc func dateChanged() {
