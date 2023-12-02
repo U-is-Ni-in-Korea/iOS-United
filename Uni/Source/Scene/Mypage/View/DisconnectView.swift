@@ -10,28 +10,21 @@ import SDSKit
 import Then
 
 final class DisconnectView: UIView {
-
+    // MARK: - UI Property
     let askDisconnectAlertView = AlertView(title: "정말 커플 연결을 해제하시겠어요?", message: "해제하면 다시 되돌릴 수 없어요", cancelButtonMessage: "취소", okButtonMessage: "연결 해제", type: .alert)
-
+    // MARK: - Life Cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         setLayout()
     }
-
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
-}
-
-extension DisconnectView {
-
+    // MARK: - Setting
     private func setLayout() {
         addSubview(askDisconnectAlertView)
-
         askDisconnectAlertView.snp.makeConstraints {
             $0.edges.equalToSuperview()
         }
     }
-
 }

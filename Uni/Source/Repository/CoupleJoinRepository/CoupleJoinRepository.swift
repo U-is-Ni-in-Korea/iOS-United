@@ -60,4 +60,14 @@ struct CoupleJoinRepository {
                 }
         }
     }
+    func disconnectCouple(completion: @escaping((DisConnectCoupleDataModel?) -> Void)) {
+        DeleteService.shared.deleteService(from: Config.baseURL + "api/couple", isUseHeader: true) { (data: DisConnectCoupleDataModel?, error) in
+            completion(data)
+        }
+    }
+}
+
+
+struct DisConnectCoupleDataModel: Codable {
+    let code: String
 }

@@ -72,7 +72,6 @@ final class NickNameInputViewModel: ObservableObject {
             if self.keyChains.isTokenExists(account: "accessToken") {
                 self.keyChains.delete("accessToken")
                 UserDefaultsManager.shared.delete(.hasOnboarded)
-                UserDefaultsManager.shared.delete(.isAlreadyFinish)
                 UserDefaultsManager.shared.delete(.lastRoundId)
                 UserDefaultsManager.shared.delete(.userId)
                 UserDefaultsManager.shared.delete(.partnerId)

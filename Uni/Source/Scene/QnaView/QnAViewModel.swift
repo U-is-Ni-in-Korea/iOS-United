@@ -27,7 +27,6 @@ final class QnAViewModel: ObservableObject {
                 self.deleteUser {
                     self.keyChains.delete("accessToken")
                     UserDefaultsManager.shared.delete(.hasOnboarded)
-                    UserDefaultsManager.shared.delete(.isAlreadyFinish)
                     UserDefaultsManager.shared.delete(.lastRoundId)
                     UserDefaultsManager.shared.delete(.userId)
                     UserDefaultsManager.shared.delete(.partnerId)
