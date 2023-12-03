@@ -5,6 +5,6 @@ class BattleResultViewData: ObservableObject, NavigationBarProtocol {
     var checkResultButtonTapPublisher = PassthroughSubject<Void, Never>()
     var findWishCouponButtonTapPublisher = PassthroughSubject<Void, Never>()
     var goHomeButtonTapPublisher = PassthroughSubject<Void, Never>()
-    @Published var battleResultData: BattleResultDataModel?
-    @Published var roundData: RoundBattleDataModel?
+    @Published var battleResultData: BattleResultDataModel? = nil
+    @Published var roundData: RoundBattleDataModel? = nil
 }

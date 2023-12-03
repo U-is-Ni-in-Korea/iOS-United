@@ -79,10 +79,13 @@ final class BattleResultViewController: BaseViewController {
     }
     private func getFinalBattleResult() {
         self.view.showIndicator()
-        battlerRepository.getBattleResultData(roundId: roundId) { result in
+        battlerRepository.getBattleResultData(roundId: roundId) { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case .success(let value):
-                print(result)
+                if value?.partnerRoundMission == nil {
+                    self.showToastMessage(text: "상대가 결과를 입력하기 전이에요")
+                }
                 self.battleResultViewData.battleResultData = value
                 self.view.removeIndicator()
             case .failure(let error):
@@ -91,5 +94,18 @@ final class BattleResultViewController: BaseViewController {
             }
             print(result)
         }
+    }
+    func checkHomeButtonDevice() -> Bool {
+        let screenHeight = UIScreen.main.bounds.size.height
+        if screenHeight <= 736 {
+            return false
+        }
+        else {
+            return true
+        }
+    }
+    func showToastMessage(text: String) {
+        let hasSafeArea = self.checkHomeButtonDevice()
+        self.view.showToast(message: text, hasSafeArea: hasSafeArea)
     }
 }
