@@ -12,7 +12,7 @@ struct BattleResultView: View {
             NavigationBarView(viewData: data, title: "한판 승부 결과")
             HStack(alignment: .center) {
                 ZStack {
-                    if data.battleResultData == nil {
+                    if data.battleResultData?.myRoundMission == nil {
                         BattleResultMisstionView(
                             missionTitle: "나의 미션",
                             mission: data.roundData?.myRoundMission?.missionContent.content,
@@ -30,7 +30,7 @@ struct BattleResultView: View {
                             .padding(.leading, 20)
                     }
                 }
-                if data.battleResultData == nil {
+                if data.battleResultData?.partnerRoundMission == nil {
                     VStack(alignment: .leading, spacing: 0) {
                         BattleResultTitleView(title: "상대의 미션")
                         VStack(alignment: .center, spacing: 0) {
@@ -56,7 +56,7 @@ struct BattleResultView: View {
             }
             .padding(.bottom, 16)
             ZStack {
-                if data.battleResultData == nil {
+                if data.battleResultData?.partnerRoundMission == nil {
                     BattleResultTitleView(title: "승부 결과를 기다리고 있어요")
                         .padding(.leading, 20)
                 } else {
@@ -69,7 +69,7 @@ struct BattleResultView: View {
                 }
             }
             ZStack {
-                if data.battleResultData == nil {
+                if data.battleResultData?.partnerRoundMission == nil {
                     VStack {
                         Image("imgCardProgress")
                         .resizable()
@@ -98,7 +98,7 @@ struct BattleResultView: View {
             }
             Spacer()
             ZStack {
-                if data.battleResultData == nil {
+                if data.battleResultData?.partnerRoundMission == nil {
                     BattleResultBottomButton(buttonTitle: "최종 결과 확인하기", viewData: data)
                         .padding(.leading, 20)
                 } else {
