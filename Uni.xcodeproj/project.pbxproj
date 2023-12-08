@@ -124,7 +124,7 @@
 		8D6CB1FE2A6509C200FE46C2 /* DisconnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB1FD2A6509C200FE46C2 /* DisconnectViewController.swift */; };
 		8D8DB0BE2A67CAC0003E1CA8 /* UseWishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8DB0BD2A67CAC0003E1CA8 /* UseWishCouponView.swift */; };
 		8D8DB0C02A67CB9F003E1CA8 /* UseWishCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8DB0BF2A67CB9F003E1CA8 /* UseWishCouponViewController.swift */; };
-		8D95A2CE2AC8691A0053186D /* TimerState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A2CD2AC8691A0053186D /* TimerState.swift */; };
+		8D95A2CE2AC8691A0053186D /* TimerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A2CD2AC8691A0053186D /* TimerData.swift */; };
 		8D95A2D02AC8695C0053186D /* TimerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A2CF2AC8695C0053186D /* TimerPickerView.swift */; };
 		8D95A2D22AC869F30053186D /* TimerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A2D12AC869F30053186D /* TimerButtonView.swift */; };
 		8D95A2D62AC86A8E0053186D /* TimerProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A2D52AC86A8E0053186D /* TimerProgressView.swift */; };
@@ -138,7 +138,7 @@
 		8DAEBB172A66F9BF007B818A /* YourWishViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAEBB162A66F9BF007B818A /* YourWishViewController.swift */; };
 		8DF24AF12ACC9A54003F4568 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DF24AF02ACC9A54003F4568 /* TimerView.swift */; };
 		8DFC07A82AD1485400844676 /* TimerTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC07A72AD1485400844676 /* TimerTipView.swift */; };
-    8DFC07AA2AD1B19B00844676 /* TimerToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC07A92AD1B19B00844676 /* TimerToastView.swift */; };
+		8DFC07AA2AD1B19B00844676 /* TimerToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC07A92AD1B19B00844676 /* TimerToastView.swift */; };
 		A500A4482AFB54F300B8593A /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = A500A4472AFB54F300B8593A /* SkeletonView */; };
 		A53C62F62A65719600AE3B45 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */; };
 		A53C62F92A6682A600AE3B45 /* KakaoLoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */; };
@@ -164,6 +164,7 @@
 		A578FC162A62D9380021A32E /* DDaySettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578FC152A62D9380021A32E /* DDaySettingView.swift */; };
 		A578FC182A62D9AB0021A32E /* CodeGeneratorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578FC172A62D9AB0021A32E /* CodeGeneratorViewController.swift */; };
 		A578FC1A2A62D9B70021A32E /* CodeGeneratorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A578FC192A62D9B70021A32E /* CodeGeneratorView.swift */; };
+		A57F1EBF2B1CA418006758D9 /* BattleTimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A57F1EBE2B1CA418006758D9 /* BattleTimerViewController.swift */; };
 		A585AB7F2AFE16CB006D3A93 /* Couple.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585AB7E2AFE16CB006D3A93 /* Couple.swift */; };
 		A585AB812AFE172D006D3A93 /* ShortGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585AB802AFE172D006D3A93 /* ShortGame.swift */; };
 		A585AB832AFE17A0006D3A93 /* RoundGameList.swift in Sources */ = {isa = PBXBuildFile; fileRef = A585AB822AFE17A0006D3A93 /* RoundGameList.swift */; };
@@ -180,6 +181,7 @@
 		A58C70302A61CE6300327CD3 /* EnterInvitationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C702F2A61CE6200327CD3 /* EnterInvitationView.swift */; };
 		A58C70322A61D3AC00327CD3 /* EnterInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C70312A61D3AC00327CD3 /* EnterInvitationViewController.swift */; };
 		A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */; };
+		A58CE54F2B22DF9F0074394C /* TimerViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CE54E2B22DF9F0074394C /* TimerViewData.swift */; };
 		A5A5840E2AC0000E001DEC8B /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A5840D2AC0000E001DEC8B /* NavigationBarView.swift */; };
 		A5A584102AC00062001DEC8B /* BattleHistoryPageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A5840F2AC00062001DEC8B /* BattleHistoryPageControlView.swift */; };
 		A5A584122AC000AE001DEC8B /* BattleHistoryGameProcessContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A584112AC000AE001DEC8B /* BattleHistoryGameProcessContentView.swift */; };
@@ -312,7 +314,7 @@
 		8D6CB1FD2A6509C200FE46C2 /* DisconnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisconnectViewController.swift; sourceTree = "<group>"; };
 		8D8DB0BD2A67CAC0003E1CA8 /* UseWishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseWishCouponView.swift; sourceTree = "<group>"; };
 		8D8DB0BF2A67CB9F003E1CA8 /* UseWishCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseWishCouponViewController.swift; sourceTree = "<group>"; };
-		8D95A2CD2AC8691A0053186D /* TimerState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerState.swift; sourceTree = "<group>"; };
+		8D95A2CD2AC8691A0053186D /* TimerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerData.swift; sourceTree = "<group>"; };
 		8D95A2CF2AC8695C0053186D /* TimerPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPickerView.swift; sourceTree = "<group>"; };
 		8D95A2D12AC869F30053186D /* TimerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButtonView.swift; sourceTree = "<group>"; };
 		8D95A2D52AC86A8E0053186D /* TimerProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerProgressView.swift; sourceTree = "<group>"; };
@@ -352,6 +354,7 @@
 		A578FC152A62D9380021A32E /* DDaySettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDaySettingView.swift; sourceTree = "<group>"; };
 		A578FC172A62D9AB0021A32E /* CodeGeneratorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeGeneratorViewController.swift; sourceTree = "<group>"; };
 		A578FC192A62D9B70021A32E /* CodeGeneratorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeGeneratorView.swift; sourceTree = "<group>"; };
+		A57F1EBE2B1CA418006758D9 /* BattleTimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleTimerViewController.swift; sourceTree = "<group>"; };
 		A585AB7E2AFE16CB006D3A93 /* Couple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Couple.swift; sourceTree = "<group>"; };
 		A585AB802AFE172D006D3A93 /* ShortGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortGame.swift; sourceTree = "<group>"; };
 		A585AB822AFE17A0006D3A93 /* RoundGameList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundGameList.swift; sourceTree = "<group>"; };
@@ -368,6 +371,7 @@
 		A58C702F2A61CE6200327CD3 /* EnterInvitationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInvitationView.swift; sourceTree = "<group>"; };
 		A58C70312A61D3AC00327CD3 /* EnterInvitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInvitationViewController.swift; sourceTree = "<group>"; };
 		A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
+		A58CE54E2B22DF9F0074394C /* TimerViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewData.swift; sourceTree = "<group>"; };
 		A5A5840D2AC0000E001DEC8B /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		A5A5840F2AC00062001DEC8B /* BattleHistoryPageControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryPageControlView.swift; sourceTree = "<group>"; };
 		A5A584112AC000AE001DEC8B /* BattleHistoryGameProcessContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryGameProcessContentView.swift; sourceTree = "<group>"; };
@@ -1025,6 +1029,8 @@
 		8D71931F2ABE8A11000114F5 /* Timer */ = {
 			isa = PBXGroup;
 			children = (
+				A58CE5502B22FB390074394C /* ViewData */,
+				A57F1EBD2B1CA40A006758D9 /* ViewController */,
 				8D95A2CC2AC868FD0053186D /* Component */,
 				8D7193202ABE8A20000114F5 /* View */,
 			);
@@ -1034,7 +1040,6 @@
 		8D7193202ABE8A20000114F5 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8DF24AF02ACC9A54003F4568 /* TimerView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1042,12 +1047,12 @@
 		8D95A2CC2AC868FD0053186D /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				8D95A2CD2AC8691A0053186D /* TimerState.swift */,
 				8D95A2CF2AC8695C0053186D /* TimerPickerView.swift */,
 				8D95A2D12AC869F30053186D /* TimerButtonView.swift */,
 				8D95A2D52AC86A8E0053186D /* TimerProgressView.swift */,
 				8DFC07A72AD1485400844676 /* TimerTipView.swift */,
 				8DFC07A92AD1B19B00844676 /* TimerToastView.swift */,
+				A58CE54E2B22DF9F0074394C /* TimerViewData.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -1247,6 +1252,14 @@
 			path = ViewController;
 			sourceTree = "<group>";
 		};
+		A57F1EBD2B1CA40A006758D9 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				A57F1EBE2B1CA418006758D9 /* BattleTimerViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
 		A585AB7A2AFE155F006D3A93 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -1322,6 +1335,15 @@
 				A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */,
 			);
 			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		A58CE5502B22FB390074394C /* ViewData */ = {
+			isa = PBXGroup;
+			children = (
+				8D95A2CD2AC8691A0053186D /* TimerData.swift */,
+				8DF24AF02ACC9A54003F4568 /* TimerView.swift */,
+			);
+			path = ViewData;
 			sourceTree = "<group>";
 		};
 		A5B4B58C2A604C2F000C7555 /* Login */ = {
@@ -1487,7 +1509,7 @@
 				A5B70E5E2B19A4C4001FA019 /* BattleMemoViewData.swift in Sources */,
 				36CF2F722A657DD400D8F8E1 /* BattleChipView.swift in Sources */,
 				3698B2142A683C35006314FE /* MakeBattleDataModel.swift in Sources */,
-				8D95A2CE2AC8691A0053186D /* TimerState.swift in Sources */,
+				8D95A2CE2AC8691A0053186D /* TimerData.swift in Sources */,
 				361FA3842A628A2100C3BBFD /* BattleWishCollectionViewCell.swift in Sources */,
 				7E5C9D8E2A66E82400488DBD /* HistoryStatus.swift in Sources */,
 				8D2B2E842A616CDC00B75CDD /* AccountViewController.swift in Sources */,
@@ -1564,11 +1586,13 @@
 				36012F4D2A55CEF4006B8A39 /* UIButton+.swift in Sources */,
 				A54CD6342A5C347100C434B7 /* OnboardingCell.swift in Sources */,
 				361FA3282A60193B00C3BBFD /* HomeRepository.swift in Sources */,
+				A58CE54F2B22DF9F0074394C /* TimerViewData.swift in Sources */,
 				A585AB8E2AFE18B0006D3A93 /* MissionContent.swift in Sources */,
 				7E6499652A652A6700B2F86C /* WishCouponYourCollectionView.swift in Sources */,
 				7E37BAE32A618DE900A3CF64 /* HistoryEmptyView.swift in Sources */,
 				7EACFC462A682A7A005F416A /* HistoryRepository.swift in Sources */,
 				36012F492A55CE5D006B8A39 /* NSObject+.swift in Sources */,
+				A57F1EBF2B1CA418006758D9 /* BattleTimerViewController.swift in Sources */,
 				A585AB922AFE191F006D3A93 /* MissionContentList.swift in Sources */,
 				8D2B2E7A2A61623300B75CDD /* MyPageProfileView.swift in Sources */,
 				36012F4F2A55CF18006B8A39 /* UIStackView+.swift in Sources */,
