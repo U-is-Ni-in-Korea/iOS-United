@@ -3,6 +3,7 @@ import UIKit
 final class HomeViewController: BaseViewController {
     // MARK: - Property
     private var homeData: HomeDataModel?
+    private let timerViewData = TimerData()
     // MARK: - UI Property
     let homeView = HomeView()
     private let homeRepository = HomeRepository()
@@ -91,15 +92,15 @@ final class HomeViewController: BaseViewController {
     private func transitionView(checkHomeData: HomeDataModel?) {
         self.didProgressGameExist(homeDataModel: checkHomeData
         ) { [weak self] state in
-            guard let strongSelf = self else {return}
             if state == nil {
-                let createBattleViewController = BattleViewController()
+                guard let self = self else {return}
+                let createBattleViewController = BattleViewController(timerViewData: timerViewData)
                 let navigationController = UINavigationController(rootViewController: createBattleViewController)
                 navigationController.modalPresentationStyle = .overFullScreen
-                strongSelf.present(navigationController, animated: true)
+                self.present(navigationController, animated: true)
                 createBattleViewController.completionHandler = { [weak self] in
                     guard let self = self else { return }
-                    let battleHistoryViewController = BattleHistoryViewController()
+                    let battleHistoryViewController = BattleHistoryViewController(timerViewData: timerViewData)
                     DispatchQueue.main.async {
                         let navigationController = UINavigationController(rootViewController: battleHistoryViewController)
                         navigationController.modalTransitionStyle = .crossDissolve
@@ -108,20 +109,22 @@ final class HomeViewController: BaseViewController {
                     }
                 }
             } else if state! {
+                guard let self = self else {return}
                 let historyViewController = BattleResultViewController()
-                if let roundId = strongSelf.homeData?.roundGameId {
+                if let roundId = self.homeData?.roundGameId {
                     historyViewController.roundId = roundId
                 }
                 let navigationController = UINavigationController(rootViewController: historyViewController)
                 navigationController.modalPresentationStyle = .overFullScreen
                 navigationController.modalTransitionStyle = .crossDissolve
-                strongSelf.present(navigationController, animated: true, completion: nil)
+                self.present(navigationController, animated: true, completion: nil)
             } else {
-                let battleHistoryViewController = BattleHistoryViewController()
+                guard let self = self else { return }
+                let battleHistoryViewController = BattleHistoryViewController(timerViewData: timerViewData)
                 let navigationController = UINavigationController(rootViewController: battleHistoryViewController)
                 navigationController.modalTransitionStyle = .crossDissolve
-                navigationController.modalPresentationStyle = .fullScreen
-                self?.present(navigationController, animated: true)
+                navigationController.modalPresentationStyle = .overFullScreen
+                self.present(navigationController, animated: true)
             }
         }
     }

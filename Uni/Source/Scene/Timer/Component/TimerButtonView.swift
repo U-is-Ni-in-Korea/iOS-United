@@ -1,72 +1,58 @@
-//
-//  TimerButtonView.swift
-//  Uni
-//
-//  Created by 홍유정 on 2023/09/30.
-//
-
 import SwiftUI
 import SDSKit
 
 struct TimerButtonView: View {
-
-    @EnvironmentObject var timerState: TimerState
-
+    @ObservedObject var timerState: TimerData
     var body: some View {
         HStack {
             Button {
+                timerState.startTimer = false
                 timerState.isTimerRunning = false
-                timerState.showStopAlert = true
             } label: {
-                Text("취소")
+                ZStack {
+                    Circle()
+                        .foregroundColor(timerState.startTimer ? Color(uiColor: .gray000) : Color(uiColor: .gray300))
+                        .shadow(color: Color(red: 0.06, green: 0.15, blue: 0.15).opacity(0.1), radius: 3, x: -1, y: 1)
+                    Text("취소")
+                        .foregroundColor(timerState.startTimer ? Color(uiColor: .gray400) : Color(uiColor: .gray000))
+                }
+                .frame(width: 80, height: 80)
             }
             .disabled(!timerState.startTimer)
-            .frame(width: 80, height: 80)
             .background(timerState.startTimer ? Circle().foregroundColor(Color(uiColor: .gray000)) : Circle().foregroundColor(Color(uiColor: .gray300)))
             .foregroundColor(timerState.startTimer ? Color(uiColor: .gray400) : Color(uiColor: .gray000))
-            .clipShape(Circle())
-            .alert(Text("타이머가 아직 끝나지 않았어요").font(Font(SDSFont.subTitle.font)), isPresented: $timerState.showStopAlert) {
-                Button("취소", role: .cancel) {
-                    timerState.isTimerRunning = true
-                }
-                .foregroundStyle(Color(uiColor: .lightBlue500))
-                Button("나가기") {
-                    timerState.startTimer = false
-                }
-                .foregroundStyle(Color(uiColor: .lightBlue500))
-            } message: {
-                Text("타이머는 종료되지 않지만\n종료 알림을 받을 수 없어요")
-                    .font(Font(SDSFont.btn2.font))
-                    .foregroundStyle(Color(uiColor: .gray400))
-            }
-
             Spacer()
-
             Button {
                 if timerState.startTimer == false {
-                    timerState.timeRemaining = timerState.selectedMinute * 60 + timerState.selectedSecond
-                    timerState.totalSeconds = timerState.selectedMinute * 60 + timerState.selectedSecond
+                    timerState.makeTime()
                     timerState.isTimerRunning = true
-                    timerState.startTimer.toggle()
+                    timerState.startTimer = true
                 } else {
                     timerState.isTimerRunning.toggle()
                 }
             } label: {
                 if timerState.startTimer {
-                    if timerState.isTimerRunning {
-                        Text("일시정지")
-                    } else {
-                        Text("재개")
+                    ZStack {
+                        Circle()
+                            .foregroundColor(timerState.isTimerRunning ?  Color(uiColor: .gray000) : Color(uiColor: .lightBlue500))
+                            .shadow(color: Color(red: 0.06, green: 0.15, blue: 0.15).opacity(0.1), radius: 3, x: -1, y: 1)
+                        Text(timerState.isTimerRunning ? "일시정지" : "재개")
+                            .foregroundColor(timerState.isTimerRunning ? Color(uiColor: .lightBlue600) : Color(uiColor: .gray000))
                     }
+                    .frame(width: 80, height: 80)
                 } else {
-                    Text("시작")
+                    ZStack {
+                        Circle()
+                            .foregroundColor(Color(uiColor: .lightBlue500))
+                            .shadow(color: Color(red: 0.06, green: 0.15, blue: 0.15).opacity(0.1), radius: 3, x: -1, y: 1)
+                        Text("시작")
+                            .foregroundColor(Color(uiColor: .gray000))
+                    }
+                    .frame(width: 80, height: 80)
                 }
             }
-            .frame(width: 80, height: 80)
-            .background(timerState.isTimerRunning ? Circle().foregroundColor(Color(uiColor: .gray000)) : Circle().foregroundColor(Color(uiColor: .lightBlue500)))
-            .foregroundColor(timerState.isTimerRunning ? Color(uiColor: .lightBlue500) : Color(uiColor: .gray000))
-            .clipShape(Circle())
         }
+        .frame(maxWidth: .infinity)
         .font(Font(SDSFont.body1.font))
     }
 }

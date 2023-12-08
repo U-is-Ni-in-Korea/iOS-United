@@ -4,6 +4,7 @@ import SwiftUI
 
 final class BattleHistoryViewController: BaseViewController {
     // MARK: - Property
+    let timerViewData: TimerData
     private var cancellables: [AnyCancellable] = []
     private var roundId: Int = 0
     private let battleHistoryViewData = BattleHistoryViewData()
@@ -13,6 +14,13 @@ final class BattleHistoryViewController: BaseViewController {
     // MARK: - UI Property
     private var battleHistoryHostingController: UIHostingController<BattleHistoryView>!
     // MARK: - Life Cycle
+    init(timerViewData: TimerData) {
+        self.timerViewData = timerViewData
+        super.init(nibName: nil, bundle: nil)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         getRoundMissionId()
@@ -50,6 +58,9 @@ final class BattleHistoryViewController: BaseViewController {
         }
         .store(in: &cancellables)
         battleHistoryViewData.timerButtonTapSubejct.sink { [weak self] _ in
+            guard let self = self else { return }
+            let battleTimerViewController = BattleTimerViewController(timerViewData: timerViewData)
+            self.navigationController?.pushViewController(battleTimerViewController, animated: true)
 
         }
         .store(in: &cancellables)
@@ -99,7 +110,7 @@ final class BattleHistoryViewController: BaseViewController {
     private func getRoundMissionData(roundId: Int) {
         battleRepository.getRoundGameData(roundId: roundId) { [weak self] data in
             guard let strongSelf = self else { return }
-            strongSelf.battleHistoryViewData.rountBattle = data
+//            strongSelf.battleHistoryViewData.rountBattle = data
         }
     }
     private func getRoundMissionId() {

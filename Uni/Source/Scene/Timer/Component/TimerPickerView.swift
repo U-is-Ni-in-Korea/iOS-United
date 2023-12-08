@@ -9,9 +9,7 @@ import SwiftUI
 import SDSKit
 
 struct TimerPickerView: View {
-
-    @EnvironmentObject var timerState: TimerState
-
+    @ObservedObject var timerState: TimerData
     var body: some View {
         HStack {
             Picker("MinutePicker", selection: $timerState.selectedMinute) {
@@ -19,17 +17,17 @@ struct TimerPickerView: View {
                     Text("\($0)")
                 }
             }
-
             Text("분")
-
+                .font(Font(SDSFont.body1.font))
+                .foregroundColor(Color(.gray600))
             Picker("SecondPicker", selection: $timerState.selectedSecond) {
                 ForEach(0 ..< 59) {
                     Text("\($0)")
                 }
             }
-
             Text("초")
-
+                .font(Font(SDSFont.body1.font))
+                .foregroundColor(Color(.gray600))
         }
     }
 }

@@ -6,12 +6,20 @@ class BattleViewController: BaseViewController {
     var selectedBattleId: Int?
     var missionContent: String = ""
     var completionHandler: (() -> Void)?
+    let timerViewData: TimerData
     private let battleRepository = BattleRepository()
     private var battleData: [BattleDataModel] = []
     private var selectedCellArray: [Bool] = []
     // MARK: - UI Property
     private let battleView = BattleView()
     // MARK: - Life Cycle
+    init(timerViewData: TimerData) {
+        self.timerViewData = timerViewData
+        super.init(nibName: nil, bundle: nil)
+    }
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     override func loadView() {
         super.loadView()
         self.view = battleView
@@ -206,8 +214,8 @@ extension BattleViewController: UICollectionViewDataSource {
                     }
                     alert.okButtonTapCompletion = { [weak self] in
                         strongSelf.makeBattle { [weak self] _ in
-                            guard let strongSelf = self else {return}
-                            let battleHistoryVC = BattleHistoryViewController()
+                            guard let self = self else {return}
+                            let battleHistoryVC = BattleHistoryViewController(timerViewData: timerViewData)
                             battleHistoryVC.modalPresentationStyle = .overFullScreen
                             guard let pvc = strongSelf.presentingViewController else { return }
                             strongSelf.dismiss(animated: true) {
