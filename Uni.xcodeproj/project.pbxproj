@@ -32,7 +32,7 @@
 		361FA3282A60193B00C3BBFD /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3272A60193B00C3BBFD /* HomeRepository.swift */; };
 		361FA32B2A601A4100C3BBFD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA32A2A601A4100C3BBFD /* Config.swift */; };
 		361FA32E2A601D1B00C3BBFD /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */; };
-		361FA3302A601D2E00C3BBFD /* GetService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA32F2A601D2E00C3BBFD /* GetService.swift */; };
+		361FA3302A601D2E00C3BBFD /* GetServiceDeprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA32F2A601D2E00C3BBFD /* GetServiceDeprecated.swift */; };
 		361FA3322A601E7900C3BBFD /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3312A601E7900C3BBFD /* PostService.swift */; };
 		361FA3342A601EAA00C3BBFD /* PatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3332A601EAA00C3BBFD /* PatchService.swift */; };
 		361FA3382A60223200C3BBFD /* HeaderUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3372A60223200C3BBFD /* HeaderUtils.swift */; };
@@ -222,7 +222,7 @@
 		361FA3272A60193B00C3BBFD /* HomeRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRepository.swift; sourceTree = "<group>"; };
 		361FA32A2A601A4100C3BBFD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
-		361FA32F2A601D2E00C3BBFD /* GetService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetService.swift; sourceTree = "<group>"; };
+		361FA32F2A601D2E00C3BBFD /* GetServiceDeprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetServiceDeprecated.swift; sourceTree = "<group>"; };
 		361FA3312A601E7900C3BBFD /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		361FA3332A601EAA00C3BBFD /* PatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchService.swift; sourceTree = "<group>"; };
 		361FA3372A60223200C3BBFD /* HeaderUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderUtils.swift; sourceTree = "<group>"; };
@@ -508,6 +508,7 @@
 		36012F282A55AE4A006B8A39 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				361FA32C2A601C6500C3BBFD /* Base */,
 				3698B21D2A69A9E0006314FE /* WishRepository */,
 				A56C4E602A68FA2700C18C8F /* CoupleJoinRepository */,
 				7EACFC4A2A68869F005F416A /* WishCouponRepository */,
@@ -515,7 +516,6 @@
 				7EACFC442A682A6A005F416A /* HistoryRepository */,
 				A53C62FC2A67DAB500AE3B45 /* UserRepository */,
 				36CF2F872A67144500D8F8E1 /* BattleRepository */,
-				361FA32C2A601C6500C3BBFD /* Base */,
 				361FA3262A60192B00C3BBFD /* HomeRepository */,
 				36012F392A55B5FD006B8A39 /* AuthRepository */,
 			);
@@ -610,7 +610,7 @@
 			children = (
 				361FA32A2A601A4100C3BBFD /* Config.swift */,
 				361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */,
-				361FA32F2A601D2E00C3BBFD /* GetService.swift */,
+				361FA32F2A601D2E00C3BBFD /* GetServiceDeprecated.swift */,
 				361FA3312A601E7900C3BBFD /* PostService.swift */,
 				361FA3332A601EAA00C3BBFD /* PatchService.swift */,
 				361FA3372A60223200C3BBFD /* HeaderUtils.swift */,
@@ -1500,7 +1500,7 @@
 				A56C4E6A2A68FD0F00C18C8F /* PostCoupleJoinDataModel.swift in Sources */,
 				7E5C9D892A66E1B700488DBD /* HistoryDetailResultMissionView.swift in Sources */,
 				A53C62FE2A67DAC600AE3B45 /* UserRepository.swift in Sources */,
-				361FA3302A601D2E00C3BBFD /* GetService.swift in Sources */,
+				361FA3302A601D2E00C3BBFD /* GetServiceDeprecated.swift in Sources */,
 				7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */,
 				A5A584122AC000AE001DEC8B /* BattleHistoryGameProcessContentView.swift in Sources */,
 				36CF2F7E2A65B0B600D8F8E1 /* CategoryDescriptionView.swift in Sources */,

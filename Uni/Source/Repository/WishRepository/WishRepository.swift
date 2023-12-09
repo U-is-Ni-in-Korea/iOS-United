@@ -21,7 +21,7 @@ final class WishRepository {
     
     func getWishCouponDetail(wishId: Int,
                              completion: @escaping ((GetWishDataModel) -> Void)) {
-        GetService.shared.getService(from: Config.baseURL + "api/wish/\(wishId)",
+        GetServiceDeprecated.shared.getService(from: Config.baseURL + "api/wish/\(wishId)",
                                      isUseHeader: true) { (data: GetWishDataModel?, error) in
             guard let data = data else {
                 print("error: \(error?.debugDescription)")

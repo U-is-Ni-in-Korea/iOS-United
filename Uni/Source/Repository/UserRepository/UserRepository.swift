@@ -48,7 +48,7 @@ class UserRepository {
         })
     }
     
-    func getUserData(completion: @escaping((UserDataModel) -> Void)) { GetService.shared.getService(from: Config.baseURL + "api/user", isUseHeader: true) { (data: UserDataModel?, error) in
+    func getUserData(completion: @escaping((UserDataModel) -> Void)) { GetServiceDeprecated.shared.getService(from: Config.baseURL + "api/user", isUseHeader: true) { (data: UserDataModel?, error) in
         guard let data = data else {
             print("error: \(error?.debugDescription)")
             return

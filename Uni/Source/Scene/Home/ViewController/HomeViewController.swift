@@ -15,7 +15,6 @@ final class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addEvent()
-//        setNotifications()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -51,15 +50,30 @@ final class HomeViewController: BaseViewController {
         self.navigationController?.pushViewController(historyViewController, animated: true)
     }
     @objc private func battleViewTapped(_ sender: UIGestureRecognizer) {
-        homeRepository.getHomeData { [weak self] data in
+        homeRepository.getHomeData { [weak self] result in
             guard let self = self else { return }
-            self.homeView.bindData(myScore: data.myScore,
-                                         partnerScore: data.partnerScore,
-                                         drawScore: data.drawCount,
-                                         dDay: data.dDay,
-                                         heartCount: data.couple.heartToken,
-                                         isPlayingBattle: data.shortGame == nil ? false: true)
-            self.transitionView(checkHomeData: data)
+            switch result {
+            case .success(let data):
+                self.homeView.bindData(myScore: data.myScore,
+                                             partnerScore: data.partnerScore,
+                                             drawScore: data.drawCount,
+                                             dDay: data.dDay,
+                                             heartCount: data.couple.heartToken,
+                                             isPlayingBattle: data.shortGame == nil ? false: true)
+                self.transitionView(checkHomeData: data)
+            case .failure(let error):
+                switch error {
+                case .disconnectCouple:
+                    self.view.removeIndicator()
+                    UserDefaultsManager.shared.delete(.partnerId)
+                    UserDefaultsManager.shared.delete(.userId)
+                    UserDefaultsManager.shared.delete(.lastRoundId)
+                    let navigationViewController = UINavigationController(rootViewController: LoginViewController())
+                    self.changeRootViewController(navigationViewController)
+                case .unknown:
+                    self.view.removeIndicator()
+                }
+            }
         }
     }
     @objc private func wishCouponViewTapped(_ sender: UIGestureRecognizer) {
@@ -70,9 +84,6 @@ final class HomeViewController: BaseViewController {
         getHomeList()
     }
     // MARK: - Custom Method
-    private func setNotifications() {
-        NotificationCenter.default.addObserver(self, selector: #selector(getHomeAPI(_:)), name: NSNotification.Name("sceneDidBecomeActive"), object: nil)
-    }
     private func didProgressGameExist(homeDataModel: HomeDataModel?, completion: @escaping ((Bool?) -> Void)) {
         // if data.shortGame == nil
         // if data.shortGame?.enable == false -> 입력창
@@ -81,8 +92,23 @@ final class HomeViewController: BaseViewController {
             completion(nil)
         } else {
             if let roundId = homeDataModel?.roundGameId {
-                self.homeRepository.isWriteGameState(roundGameId: roundId) { state in
-                    completion(state)
+                self.homeRepository.isWriteGameState(roundGameId: roundId) { result in
+                    switch result {
+                    case .success(let data):
+                        completion(data)
+                    case .failure(let error):
+                        switch error {
+                        case .disconnectCouple:
+                            self.view.removeIndicator()
+                            UserDefaultsManager.shared.delete(.partnerId)
+                            UserDefaultsManager.shared.delete(.userId)
+                            UserDefaultsManager.shared.delete(.lastRoundId)
+                            let navigationViewController = UINavigationController(rootViewController: LoginViewController())
+                            self.changeRootViewController(navigationViewController)
+                        case .unknown:
+                            self.view.removeIndicator()
+                        }
+                    }
                 }
             } else {
                 completion(nil)
@@ -131,32 +157,47 @@ final class HomeViewController: BaseViewController {
     // MARK: - DataBinding
     private func getHomeList() {
         view.showIndicator()
-        homeRepository.getHomeData { [weak self] data in
-            guard let strongSelf = self else {return}
-            // 비교를 위한 alreadyFinish flag 추가
-            if UserDefaultsManager.shared.load(.userId) != nil {
-                UserDefaultsManager.shared.save(value: data.userID, forkey: .userId)
+        homeRepository.getHomeData { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let data):
+                if UserDefaultsManager.shared.load(.userId) != nil {
+                    UserDefaultsManager.shared.save(value: data.userID, forkey: .userId)
+                }
+                if UserDefaultsManager.shared.load(.partnerId) != nil {
+                    UserDefaultsManager.shared.save(value: data.partnerId, forkey: .partnerId)
+                }
+                self.homeData = data
+                self.homeView.bindData(myScore: data.myScore,
+                                             partnerScore: data.partnerScore,
+                                             drawScore: data.drawCount,
+                                             dDay: data.dDay,
+                                             heartCount: data.couple.heartToken,
+                                             isPlayingBattle: data.shortGame == nil ? false: true)
+                self.view.removeIndicator()
+            case .failure(let error):
+                print(error.rawValue, "되나")
+                switch error {
+                case .disconnectCouple:
+                    self.view.removeIndicator()
+                    UserDefaultsManager.shared.delete(.partnerId)
+                    UserDefaultsManager.shared.delete(.userId)
+                    UserDefaultsManager.shared.delete(.lastRoundId)
+                    let navigationViewController = UINavigationController(rootViewController: LoginViewController())
+                    self.changeRootViewController(navigationViewController)
+                case .unknown:
+                    self.view.removeIndicator()
+                }
             }
-            if UserDefaultsManager.shared.load(.partnerId) != nil {
-                UserDefaultsManager.shared.save(value: data.partnerId, forkey: .partnerId)
-            }
-            strongSelf.homeData = data
-            strongSelf.homeView.bindData(myScore: data.myScore,
-                                         partnerScore: data.partnerScore,
-                                         drawScore: data.drawCount,
-                                         dDay: data.dDay,
-                                         heartCount: data.couple.heartToken,
-                                         isPlayingBattle: data.shortGame == nil ? false: true)
-            strongSelf.view.removeIndicator()
         }
     }
-    // 이미 끝난 게임인지 확인용
-    private func isAlreaydGameFinish(completion: @escaping ((Bool) -> Void)) {
-        self.view.showIndicator()
-        self.homeRepository.isAlreadyGameFinish { [weak self] state in
-            guard let strongSelf = self else {return}
-            strongSelf.view.removeIndicator()
-            completion(state)
+    func changeRootViewController(_ viewControllerToPresent: UIViewController) {
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = viewControllerToPresent
+            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil)
+        } else {
+            viewControllerToPresent.modalPresentationStyle = .overFullScreen
+            self.present(viewControllerToPresent, animated: true, completion: nil)
         }
     }
 }

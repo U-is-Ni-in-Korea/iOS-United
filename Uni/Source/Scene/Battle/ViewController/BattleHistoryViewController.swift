@@ -110,18 +110,42 @@ final class BattleHistoryViewController: BaseViewController {
     private func getRoundMissionData(roundId: Int) {
         battleRepository.getRoundGameData(roundId: roundId) { [weak self] data in
             guard let strongSelf = self else { return }
-//            strongSelf.battleHistoryViewData.rountBattle = data
+            strongSelf.battleHistoryViewData.rountBattle = data
         }
     }
     private func getRoundMissionId() {
         self.view.showIndicator()
-        homeRepository.getHomeData { [weak self] data in
-            guard let strongSelf = self else {return}
-            if let roundId = data.roundGameId {
-                strongSelf.roundId = roundId
-                strongSelf.getRoundMissionData(roundId: roundId)
-                strongSelf.view.removeIndicator()
+        homeRepository.getHomeData { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let data):
+                if let roundId = data.roundGameId {
+                    self.roundId = roundId
+                    self.getRoundMissionData(roundId: roundId)
+                    self.view.removeIndicator()
+                }
+            case .failure(let error):
+                switch error {
+                case .disconnectCouple:
+                    self.view.removeIndicator()
+                    UserDefaultsManager.shared.delete(.partnerId)
+                    UserDefaultsManager.shared.delete(.userId)
+                    UserDefaultsManager.shared.delete(.lastRoundId)
+                    let navigationViewController = UINavigationController(rootViewController: LoginViewController())
+                    self.changeRootViewController(navigationViewController)
+                case .unknown:
+                    self.view.removeIndicator()
+                }
             }
+        }
+    }
+    func changeRootViewController(_ viewControllerToPresent: UIViewController) {
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = viewControllerToPresent
+            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil)
+        } else {
+            viewControllerToPresent.modalPresentationStyle = .overFullScreen
+            self.present(viewControllerToPresent, animated: true, completion: nil)
         }
     }
 }

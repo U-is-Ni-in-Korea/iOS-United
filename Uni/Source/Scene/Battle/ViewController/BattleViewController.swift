@@ -119,20 +119,46 @@ class BattleViewController: BaseViewController {
         }
     }
     // MARK: - Custom Method
+    func changeRootViewController(_ viewControllerToPresent: UIViewController) {
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = viewControllerToPresent
+            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil)
+        } else {
+            viewControllerToPresent.modalPresentationStyle = .overFullScreen
+            self.present(viewControllerToPresent, animated: true, completion: nil)
+        }
+    }
     private func getBattleList() {
         self.view.showIndicator()
-        self.battleRepository.getGameList { [weak self] data in
-            guard let strongSelf = self else {return}
-            strongSelf.battleData = data
-            for index in 0 ... data.count - 1 {
-                if index == 0 {
-                    strongSelf.selectedBattleId = data[0].id
-                    strongSelf.selectedCellArray.append(true)
+        self.battleRepository.getGameList { [weak self] result in
+            guard let self = self else { return }
+            switch result {
+            case .success(let data):
+                self.battleData = data
+                for index in 0 ... data.count - 1 {
+                    if index == 0 {
+                        self.selectedBattleId = data[0].id
+                        self.selectedCellArray.append(true)
+                    }
+                    self.selectedCellArray.append(false)
                 }
-                strongSelf.selectedCellArray.append(false)
+                self.battleView.collectionView.reloadData()
+                self.view.removeIndicator()
+            case .failure(let error):
+                switch error {
+                case .disconnectCouple:
+                    self.view.removeIndicator()
+                    UserDefaultsManager.shared.delete(.partnerId)
+                    UserDefaultsManager.shared.delete(.userId)
+                    UserDefaultsManager.shared.delete(.lastRoundId)
+                    let navigationViewController = UINavigationController(rootViewController: LoginViewController())
+                    self.changeRootViewController(navigationViewController)
+                case .emptyData:
+                    self.view.removeIndicator()
+                case .notFinish:
+                    self.view.removeIndicator()
+                }
             }
-            strongSelf.battleView.collectionView.reloadData()
-            strongSelf.view.removeIndicator()
         }
     }
     private func makeBattle(completion: @escaping ((Int) -> Void)) {
