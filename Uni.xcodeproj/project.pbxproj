@@ -182,6 +182,7 @@
 		A58C70322A61D3AC00327CD3 /* EnterInvitationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C70312A61D3AC00327CD3 /* EnterInvitationViewController.swift */; };
 		A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */; };
 		A58CE54F2B22DF9F0074394C /* TimerViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CE54E2B22DF9F0074394C /* TimerViewData.swift */; };
+		A58CE5572B24AE6F0074394C /* QnANavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CE5562B24AE6F0074394C /* QnANavigationView.swift */; };
 		A5A5840E2AC0000E001DEC8B /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A5840D2AC0000E001DEC8B /* NavigationBarView.swift */; };
 		A5A584102AC00062001DEC8B /* BattleHistoryPageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A5840F2AC00062001DEC8B /* BattleHistoryPageControlView.swift */; };
 		A5A584122AC000AE001DEC8B /* BattleHistoryGameProcessContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A584112AC000AE001DEC8B /* BattleHistoryGameProcessContentView.swift */; };
@@ -372,6 +373,7 @@
 		A58C70312A61D3AC00327CD3 /* EnterInvitationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterInvitationViewController.swift; sourceTree = "<group>"; };
 		A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
 		A58CE54E2B22DF9F0074394C /* TimerViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewData.swift; sourceTree = "<group>"; };
+		A58CE5562B24AE6F0074394C /* QnANavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnANavigationView.swift; sourceTree = "<group>"; };
 		A5A5840D2AC0000E001DEC8B /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		A5A5840F2AC00062001DEC8B /* BattleHistoryPageControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryPageControlView.swift; sourceTree = "<group>"; };
 		A5A584112AC000AE001DEC8B /* BattleHistoryGameProcessContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryGameProcessContentView.swift; sourceTree = "<group>"; };
@@ -815,8 +817,9 @@
 		36DC48002AEEAC93003DCB36 /* QnaView */ = {
 			isa = PBXGroup;
 			children = (
-				36DC48012AEEACB9003DCB36 /* QnAViewController.swift */,
-				36DC48032AEEAD0D003DCB36 /* QnAViewModel.swift */,
+				A58CE5512B24AD320074394C /* ViewController */,
+				A58CE5542B24AD490074394C /* ViewModel */,
+				A58CE5522B24AD3B0074394C /* View */,
 			);
 			path = QnaView;
 			sourceTree = "<group>";
@@ -1177,8 +1180,6 @@
 				A55150BB2A614A2000481F57 /* CoupleConnectionMethodView.swift */,
 				F80916342ADC276600237AA3 /* NickNameInputView.swift */,
 				F80916362ADC27C300237AA3 /* NickNameViewLogoutAlert.swift */,
-				F80916382ADC281700237AA3 /* QnAView.swift */,
-				F809163A2ADC283400237AA3 /* QnAViewAlert.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1344,6 +1345,40 @@
 				8DF24AF02ACC9A54003F4568 /* TimerView.swift */,
 			);
 			path = ViewData;
+			sourceTree = "<group>";
+		};
+		A58CE5512B24AD320074394C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				36DC48012AEEACB9003DCB36 /* QnAViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A58CE5522B24AD3B0074394C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F80916382ADC281700237AA3 /* QnAView.swift */,
+				A58CE5532B24AD420074394C /* Component */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A58CE5532B24AD420074394C /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				F809163A2ADC283400237AA3 /* QnAViewAlert.swift */,
+				A58CE5562B24AE6F0074394C /* QnANavigationView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		A58CE5542B24AD490074394C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				36DC48032AEEAD0D003DCB36 /* QnAViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A5B4B58C2A604C2F000C7555 /* Login */ = {
@@ -1594,6 +1629,7 @@
 				36012F492A55CE5D006B8A39 /* NSObject+.swift in Sources */,
 				A57F1EBF2B1CA418006758D9 /* BattleTimerViewController.swift in Sources */,
 				A585AB922AFE191F006D3A93 /* MissionContentList.swift in Sources */,
+				A58CE5572B24AE6F0074394C /* QnANavigationView.swift in Sources */,
 				8D2B2E7A2A61623300B75CDD /* MyPageProfileView.swift in Sources */,
 				36012F4F2A55CF18006B8A39 /* UIStackView+.swift in Sources */,
 				361FA3702A6268DD00C3BBFD /* HomeBattleSelectView.swift in Sources */,
