@@ -13,7 +13,7 @@ final class NicknameSettingViewController: BaseViewController {
     // MARK: - Setting
     override func setLayout() {
         self.view.backgroundColor = .white
-        let inputNickNameView = UIHostingController(rootView: NickNameInputView(viewModel: NickNameInputViewModel(navigationController: self.navigationController!)))
+        let inputNickNameView = UIHostingController(rootView: NicknameSettingView(viewModel: NickNameInputViewModel(navigationController: self.navigationController!)))
         self.addChild(inputNickNameView)
         self.view.addSubview(inputNickNameView.view)
         inputNickNameView.didMove(toParent: self)

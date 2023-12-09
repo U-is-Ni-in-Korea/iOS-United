@@ -153,7 +153,6 @@
 		A55150BC2A614A2000481F57 /* CoupleConnectionMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55150BB2A614A2000481F57 /* CoupleConnectionMethodView.swift */; };
 		A55150BE2A614A2A00481F57 /* CoupleConnectionMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55150BD2A614A2A00481F57 /* CoupleConnectionMethodViewController.swift */; };
 		A555AD9B2A6079790083CD20 /* NicknameSettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555AD9A2A6079790083CD20 /* NicknameSettingViewController.swift */; };
-		A555AD9D2A6079840083CD20 /* NicknameSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A555AD9C2A6079840083CD20 /* NicknameSettingView.swift */; };
 		A55A942B2ADC198F007DB3F1 /* BattleResultDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55A942A2ADC198F007DB3F1 /* BattleResultDataModel.swift */; };
 		A5667F092A952A1600FC0BA4 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = A5667F082A952A1600FC0BA4 /* .swiftlint.yml */; };
 		A56C4E622A68FA3F00C18C8F /* CoupleJoinRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A56C4E612A68FA3F00C18C8F /* CoupleJoinRepository.swift */; };
@@ -343,7 +342,6 @@
 		A55150BB2A614A2000481F57 /* CoupleConnectionMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleConnectionMethodView.swift; sourceTree = "<group>"; };
 		A55150BD2A614A2A00481F57 /* CoupleConnectionMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleConnectionMethodViewController.swift; sourceTree = "<group>"; };
 		A555AD9A2A6079790083CD20 /* NicknameSettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingViewController.swift; sourceTree = "<group>"; };
-		A555AD9C2A6079840083CD20 /* NicknameSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicknameSettingView.swift; sourceTree = "<group>"; };
 		A55A942A2ADC198F007DB3F1 /* BattleResultDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleResultDataModel.swift; sourceTree = "<group>"; };
 		A5667F082A952A1600FC0BA4 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		A56C4E612A68FA3F00C18C8F /* CoupleJoinRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleJoinRepository.swift; sourceTree = "<group>"; };
@@ -1176,10 +1174,9 @@
 		A555AD982A6079420083CD20 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				A555AD9C2A6079840083CD20 /* NicknameSettingView.swift */,
-				A55150BB2A614A2000481F57 /* CoupleConnectionMethodView.swift */,
 				F80916342ADC276600237AA3 /* NickNameInputView.swift */,
-				F80916362ADC27C300237AA3 /* NickNameViewLogoutAlert.swift */,
+				A55150BB2A614A2000481F57 /* CoupleConnectionMethodView.swift */,
+				A58CE5582B24C6B10074394C /* Component */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1379,6 +1376,14 @@
 				36DC48032AEEAD0D003DCB36 /* QnAViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A58CE5582B24C6B10074394C /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				F80916362ADC27C300237AA3 /* NickNameViewLogoutAlert.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 		A5B4B58C2A604C2F000C7555 /* Login */ = {
@@ -1672,7 +1677,6 @@
 				8DFC07A82AD1485400844676 /* TimerTipView.swift in Sources */,
 				8D2B2E8A2A61786A00B75CDD /* AccountTitle.swift in Sources */,
 				A55150BE2A614A2A00481F57 /* CoupleConnectionMethodViewController.swift in Sources */,
-				A555AD9D2A6079840083CD20 /* NicknameSettingView.swift in Sources */,
 				A55150BA2A6137ED00481F57 /* Config.xcconfig in Sources */,
 				A53C63072A68734700AE3B45 /* DDayDataModel.swift in Sources */,
 				8D17B88C2A659D0C0091D7AD /* MakeWishView.swift in Sources */,
