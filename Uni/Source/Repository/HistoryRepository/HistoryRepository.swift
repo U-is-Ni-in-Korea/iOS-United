@@ -1,22 +1,20 @@
-//
-//  HistoryRepository.swift
-//  Uni
-//
-//  Created by 김사랑 on 2023/07/19.
-//
-
 import Foundation
 import Alamofire
 
+enum HistoryError: String, Error {
+    case disconnectCouple = "UE1006"
+    case unknown
+}
+
 class HistoryRepository {
-    func getHistoryData(completion: @escaping (([HistoryDataModel]) -> Void)) {
+    func getHistoryData(completion: @escaping ((Result<[HistoryDataModel], HistoryError>) -> Void)) {
         GetService.shared.getService(from: Config.baseURL + "api/history", isUseHeader: true) { (data: [HistoryDataModel]?, error) in
-            guard let data = data else {
-                print("error")
-                return
+            if let data = data {
+                completion(.success(data))
+            } else {
+                let errorCode = HistoryError(rawValue: error ?? "") ?? .unknown
+                completion(.failure(errorCode))
             }
-            print(error)
-            completion(data)
         }
     }
 }

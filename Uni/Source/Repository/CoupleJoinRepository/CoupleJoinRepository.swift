@@ -35,7 +35,7 @@ enum CoupleJoinError: String, Error {
 
 struct CoupleJoinRepository {
     static func getCoupleJoin(completion: @escaping ((Bool) -> Void)) {
-        GetService.shared.getService(from: Config.baseURL + "api/couple/join", isUseHeader: true) { (data: GetCoupleJoinDataModel?, error: String?) in
+        GetServiceDeprecated.shared.getService(from: Config.baseURL + "api/couple/join", isUseHeader: true) { (data: GetCoupleJoinDataModel?, error: String?) in
             if let error = error { print(error.description)
             } else if let data = data?.connection {
                 completion(data)

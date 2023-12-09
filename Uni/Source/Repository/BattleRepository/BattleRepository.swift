@@ -3,6 +3,7 @@ import Foundation
 import Alamofire
 
 enum BattleResultError: String, Error {
+    case disconnectCouple = "UE1006"
     case notFinish = "UE1009"
     case emptyData
     func errorResponse() -> String {
@@ -11,25 +12,27 @@ enum BattleResultError: String, Error {
             return "상대가 결과를 입력하기 전이에요"
         case .emptyData:
             return ""
+        case .disconnectCouple:
+            return ""
         }
     }
 }
 
 class BattleRepository {
-    func getGameList(completion: @escaping (([BattleDataModel]) -> Void)) {
+    func getGameList(completion: @escaping ((Result<[BattleDataModel], BattleResultError>) -> Void)) {
         GetService.shared.getService(from: Config.baseURL + "api/mission",
                                      isUseHeader: true) { (data: [BattleDataModel]?, error) in
-            guard let data = data else {
-                print("error: \(error?.debugDescription)")
-                return
+            if let data = data {
+                completion(.success(data))
+            } else {
+                let errorCode = BattleResultError(rawValue: error ?? "") ?? .emptyData
+                completion(.failure(errorCode))
             }
-            completion(data)
         }
     }
-    
     func getGameDetail(battleId: Int,
                        completion: @escaping ((BattleDataModel) -> Void)) {
-        GetService.shared.getService(from: Config.baseURL + "api/mission/\(battleId)",
+        GetServiceDeprecated.shared.getService(from: Config.baseURL + "api/mission/\(battleId)",
                                      isUseHeader: true) { (data: BattleDataModel?, error) in
             guard let data = data else {
                 print("error: \(error?.debugDescription)")
@@ -38,7 +41,6 @@ class BattleRepository {
             completion(data)
         }
     }
-    
     func makeGame(missionId: Int,
                   wishContent: String,
                   completion: @escaping ((MakeBattleDataModel) -> Void)) {
@@ -54,10 +56,9 @@ class BattleRepository {
             completion(data)
         }
     }
-    
     func getRoundGameData(roundId: Int,
                           completion: @escaping ((RoundBattleDataModel) -> Void)) {
-        GetService.shared.getService(from: Config.baseURL + "api/game/short/\(roundId)",
+        GetServiceDeprecated.shared.getService(from: Config.baseURL + "api/game/short/\(roundId)",
                                      isUseHeader: true) { (data: RoundBattleDataModel?,
                                                                   error) in
             guard let data = data else {
@@ -67,7 +68,6 @@ class BattleRepository {
             completion(data)
         }
     }
-    
     func patchRoundGameData(state: Bool,
                             roundId: Int,
                             completion: @escaping ((RoundBattleDataModel) -> Void)) {
@@ -82,7 +82,6 @@ class BattleRepository {
             completion(data)
         }
     }
-    
     func deleteRoundGameData(roundId: Int, completion: @escaping ((ErrorCode?) -> Void)) {
         DeleteService.shared.deleteService(from: Config.baseURL + "api/game/short/\(roundId)",
                                            isUseHeader: true) { (data: ErrorCode? ,error) in

@@ -37,6 +37,15 @@ final class HistoryViewController: BaseViewController {
         }
     }
     // MARK: - Custom Method
+    func changeRootViewController(_ viewControllerToPresent: UIViewController) {
+        if let window = UIApplication.shared.windows.first {
+            window.rootViewController = viewControllerToPresent
+            UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil)
+        } else {
+            viewControllerToPresent.modalPresentationStyle = .overFullScreen
+            self.present(viewControllerToPresent, animated: true, completion: nil)
+        }
+    }
     func startSkeletonView() {
         self.view.isSkeletonable = true
         historyView.historyTableView.isSkeletonable = true
@@ -46,19 +55,34 @@ final class HistoryViewController: BaseViewController {
     func fetchDataSource() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
             guard let self = self else { return }
-            self.historyRepository.getHistoryData { [weak self] data in
+            self.historyRepository.getHistoryData { [weak self] result in
                 guard let self = self else { return }
-                self.historyData = data
-                if self.historyData.count == 0 {
-                    self.view.hideSkeleton()
-                    self.historyView.hasHistoryData(hasData: false)
-                } else {
-                    self.view.hideSkeleton()
-                    self.historyView.hasHistoryData(hasData: true)
-                    self.historyView.historyTableView.reloadData()
+                switch result {
+                case .success(let data):
+                    self.historyData = data
+                    if self.historyData.count == 0 {
+                        self.view.hideSkeleton()
+                        self.historyView.hasHistoryData(hasData: false)
+                    } else {
+                        self.view.hideSkeleton()
+                        self.historyView.hasHistoryData(hasData: true)
+                        self.historyView.historyTableView.reloadData()
+                    }
+                case .failure(let error):
+                    switch error {
+                    case .disconnectCouple:
+                        UserDefaultsManager.shared.delete(.partnerId)
+                        UserDefaultsManager.shared.delete(.userId)
+                        UserDefaultsManager.shared.delete(.lastRoundId)
+                        let navigationViewController = UINavigationController(rootViewController: LoginViewController())
+                        self.changeRootViewController(navigationViewController)
+                    case .unknown:
+                        let navigationViewController = UINavigationController(rootViewController: LoginViewController())
+                        self.changeRootViewController(navigationViewController)
+                    }
                 }
             }
-          }
+        }
     }
 }
 // MARK: - UITableView Delegate
