@@ -34,7 +34,7 @@ struct BattleResultView: View {
                     VStack(alignment: .leading, spacing: 0) {
                         BattleResultTitleView(title: "상대의 미션")
                         VStack(alignment: .center, spacing: 0) {
-                            Text("승부가 끝난 뒤 \n공개")
+                            Text("승부가 끝난 뒤 \n공개돼요")
                                 .font(Font(SDSFont.body2.font))
                                 .foregroundColor(Color(uiColor: .gray300))
                                 .multilineTextAlignment(.center)
