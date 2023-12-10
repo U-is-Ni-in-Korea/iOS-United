@@ -15,7 +15,7 @@ class DDayRepository {
             "startDate": "\(startDate)"
         ]
         
-        PostService.shared.postService(with: params, isUseHeader: true, from: Config.baseURL + "api/couple", callback: {
+        PostServiceDeprecated.shared.postService(with: params, isUseHeader: true, from: Config.baseURL + "api/couple", callback: {
             (data: DDayDataModel?, error: String?) in
             if let error = error {
                 print(error.description)

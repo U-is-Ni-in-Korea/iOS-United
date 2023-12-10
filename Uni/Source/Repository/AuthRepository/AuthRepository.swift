@@ -8,7 +8,7 @@ class AuthRepository {
             "code": "\(token)"
         ]
         print("?????????????")
-        PostService.shared.postService(with: params, isUseHeader: false, from: Config.baseURL + "auth/\(socialType)", callback: {
+        PostServiceDeprecated.shared.postService(with: params, isUseHeader: false, from: Config.baseURL + "auth/\(socialType)", callback: {
             (data: KakaoLoginDataModel?, error: String?) in
             if let error = error {
                 print(error.description)

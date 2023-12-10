@@ -2,6 +2,12 @@ import Foundation
 
 import Alamofire
 
+enum GameResultError: String, Error {
+    case gameAlreadyMade = "UE1003"
+    case serverError = "UE500"
+    case unknownError
+}
+
 enum BattleResultError: String, Error {
     case disconnectCouple = "UE1006"
     case notFinish = "UE1009"
@@ -43,17 +49,18 @@ class BattleRepository {
     }
     func makeGame(missionId: Int,
                   wishContent: String,
-                  completion: @escaping ((MakeBattleDataModel) -> Void)) {
+                  completion: @escaping ((Result<MakeBattleDataModel, GameResultError>) -> Void)) {
         let params: Parameters = ["missionCategoryId": missionId,
                                   "wishContent": wishContent]
         PostService.shared.postService(with: params,
                                        isUseHeader: true,
                                        from: Config.baseURL + "api/game/short") { (data: MakeBattleDataModel?, error) in
-            guard let data = data else {
-                print("error: \(error?.debugDescription)")
-                return
+            if let data = data {
+                completion(.success(data))
+            } else {
+                let errorCode = GameResultError(rawValue: error ?? "") ?? .unknownError
+                completion(.failure(errorCode))
             }
-            completion(data)
         }
     }
     func getRoundGameData(roundId: Int,

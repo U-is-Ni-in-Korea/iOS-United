@@ -33,7 +33,7 @@
 		361FA32B2A601A4100C3BBFD /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA32A2A601A4100C3BBFD /* Config.swift */; };
 		361FA32E2A601D1B00C3BBFD /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */; };
 		361FA3302A601D2E00C3BBFD /* GetServiceDeprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA32F2A601D2E00C3BBFD /* GetServiceDeprecated.swift */; };
-		361FA3322A601E7900C3BBFD /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3312A601E7900C3BBFD /* PostService.swift */; };
+		361FA3322A601E7900C3BBFD /* PostServiceDeprecated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3312A601E7900C3BBFD /* PostServiceDeprecated.swift */; };
 		361FA3342A601EAA00C3BBFD /* PatchService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3332A601EAA00C3BBFD /* PatchService.swift */; };
 		361FA3382A60223200C3BBFD /* HeaderUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3372A60223200C3BBFD /* HeaderUtils.swift */; };
 		361FA36F2A6268DD00C3BBFD /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3662A6268DD00C3BBFD /* HomeViewController.swift */; };
@@ -221,7 +221,7 @@
 		361FA32A2A601A4100C3BBFD /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
 		361FA32F2A601D2E00C3BBFD /* GetServiceDeprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetServiceDeprecated.swift; sourceTree = "<group>"; };
-		361FA3312A601E7900C3BBFD /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		361FA3312A601E7900C3BBFD /* PostServiceDeprecated.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostServiceDeprecated.swift; sourceTree = "<group>"; };
 		361FA3332A601EAA00C3BBFD /* PatchService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchService.swift; sourceTree = "<group>"; };
 		361FA3372A60223200C3BBFD /* HeaderUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderUtils.swift; sourceTree = "<group>"; };
 		361FA3662A6268DD00C3BBFD /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -607,7 +607,7 @@
 				361FA32A2A601A4100C3BBFD /* Config.swift */,
 				361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */,
 				361FA32F2A601D2E00C3BBFD /* GetServiceDeprecated.swift */,
-				361FA3312A601E7900C3BBFD /* PostService.swift */,
+				361FA3312A601E7900C3BBFD /* PostServiceDeprecated.swift */,
 				361FA3332A601EAA00C3BBFD /* PatchService.swift */,
 				361FA3372A60223200C3BBFD /* HeaderUtils.swift */,
 				3698B2172A686438006314FE /* DeleteService.swift */,
@@ -1659,7 +1659,7 @@
 				8DAEBB0D2A66D718007B818A /* MyWishView.swift in Sources */,
 				A585AB982AFE1A2C006D3A93 /* ErrorCode.swift in Sources */,
 				F809163B2ADC283400237AA3 /* QnAViewAlert.swift in Sources */,
-				361FA3322A601E7900C3BBFD /* PostService.swift in Sources */,
+				361FA3322A601E7900C3BBFD /* PostServiceDeprecated.swift in Sources */,
 				A5B4B5902A604CD3000C7555 /* LoginViewController.swift in Sources */,
 				8D2B2E782A6161D500B75CDD /* MyPageTitle.swift in Sources */,
 				A585AB902AFE18D7006D3A93 /* RoundMission.swift in Sources */,
