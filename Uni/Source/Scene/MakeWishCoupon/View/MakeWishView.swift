@@ -2,7 +2,7 @@ import UIKit
 import SDSKit
 import Then
 
-class MakeWishView: UIView {
+final class MakeWishView: UIView {
     // MARK: - UI Property
     private let leftBackgroundImageView = UIImageView().then {
         $0.image = UIImage(named: "leftBackground")
@@ -16,7 +16,7 @@ class MakeWishView: UIView {
     private let naviBackgroundView = UIView().then {
         $0.applyNavigationBarShadow()
     }
-    let makeWishViewNavi = SDSNavigationBar(hasBack: false, hasTitleItem: false, navigationTitle: "소원권 만들기", rightBarButtonImages: [SDSIcon.icDismiss])
+    let makeWishViewNavi = SDSNavigationBar(hasBack: false, hasTitleItem: false, navigationTitle: "소원권 생성하기", rightBarButtonImages: [SDSIcon.icDismiss])
     let writeWishTitleLabel = UILabel().then {
         $0.text = "소원 작성하기"
         $0.font = SDSFont.subTitle.font
