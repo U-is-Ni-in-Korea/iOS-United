@@ -46,7 +46,7 @@ struct CoupleJoinRepository {
         let params: Parameters = [
             "inviteCode": code
         ]
-        PostService.shared.postService(with: params, isUseHeader: true, from: Config.baseURL + "api/couple/join") { (data: PostCoupleJoinDataModel?, _) in
+        PostServiceDeprecated.shared.postService(with: params, isUseHeader: true, from: Config.baseURL + "api/couple/join") { (data: PostCoupleJoinDataModel?, _) in
             guard let code = data?.code else {
                     completion(.success("성공"))
                     return

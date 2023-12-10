@@ -84,10 +84,7 @@ class BattleViewController: BaseViewController {
             self?.completionHandler?()
             self?.dismiss(animated: false)
         }
-        battleCategoryView.selectedBattleId = self.selectedBattleId
         battleCategoryView.missionContent = self.missionContent
-        battleCategoryView.battleData = self.battleData
-        battleCategoryView.selectedCellArray = self.selectedCellArray
         battleCategoryView.battleId = battleId
         navigationController?.pushViewController(battleCategoryView, animated: true)
         battleCategoryView.selectButtonCompletion = { [weak self] battleId in
@@ -166,11 +163,24 @@ class BattleViewController: BaseViewController {
         guard let missionId = self.selectedBattleId else {return}
         let wishContent = self.missionContent.setRemoveImoji()
         self.battleRepository.makeGame(missionId: missionId,
-                                       wishContent: wishContent) { [weak self] data in
-            guard let strongSelf = self else {return}
-            print(data)
-            strongSelf.view.removeIndicator()
-            completion(data.roundGameID)
+                                       wishContent: wishContent) { [weak self] result in
+            guard let self = self else {return}
+            switch result {
+            case .success(let data):
+                self.view.removeIndicator()
+                completion(data.roundGameID)
+            case .failure(let error):
+                switch error {
+                case .gameAlreadyMade:
+                    self.view.removeIndicator()
+                    self.showToastMessage(text: "이미 생성된 승부가 있어요")
+                case .serverError:
+                    self.view.removeIndicator()
+                    self.showToastMessage(text: "일시적인 오류로 서비스 접속에 실패했습니다")
+                case .unknownError:
+                    self.view.removeIndicator()
+                }
+            }
         }
     }
     private func naviagationButtonTap() {
@@ -194,6 +204,18 @@ class BattleViewController: BaseViewController {
                 strongSelf.dismiss(animated: true)
             }
         }
+    }
+    private func checkHomeButtonDevice() -> Bool {
+        let screenHeight = UIScreen.main.bounds.size.height
+        if screenHeight <= 736 {
+            return false
+        } else {
+            return true
+        }
+    }
+    private func showToastMessage(text: String) {
+        let hasSafeArea = self.checkHomeButtonDevice()
+        self.view.showToast(message: text, hasSafeArea: hasSafeArea)
     }
 }
 extension BattleViewController: UICollectionViewDelegate {}

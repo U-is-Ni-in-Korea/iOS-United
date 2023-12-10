@@ -9,10 +9,7 @@ class SelectBattleCategoryViewController: BaseViewController {
     var selectButtonCompletion: ((Int) -> Void)?
     var cellTapCompletion: ((Int) -> Void)?
     var completionHandler: (() -> Void)?
-    var selectedBattleId: Int? // BattleViewController의 selectedBattleId와 동일한 타입
     var missionContent: String = ""
-    var battleData: [BattleDataModel] = []
-    var selectedCellArray: [Bool] = []
     let battleRepository = BattleRepository()
     // MARK: - UI Property
     let battleCategoryView = BattleCategoryView(type: .select)
@@ -72,15 +69,40 @@ class SelectBattleCategoryViewController: BaseViewController {
     }
     private func makeBattle(completion: @escaping ((Int) -> Void)) {
         self.view.showIndicator()
-        guard let missionId = self.selectedBattleId else {return}
         let wishContent = self.missionContent.setRemoveImoji()
-        self.battleRepository.makeGame(missionId: missionId,
-                                       wishContent: wishContent) { [weak self] data in
-            guard let strongSelf = self else {return}
-            print(data)
-            strongSelf.view.removeIndicator()
-            completion(data.roundGameID)
+        self.battleRepository.makeGame(missionId: battleId,
+                                       wishContent: wishContent) { [weak self] result in
+            guard let self = self else {return}
+            switch result {
+            case .success(let data):
+                self.view.removeIndicator()
+                completion(data.roundGameID)
+            case .failure(let error):
+                switch error {
+                case .gameAlreadyMade:
+                    self.view.removeIndicator()
+                    self.showToastMessage(text: "이미 생성된 승부가 있어요")
+                case .serverError:
+                    self.view.removeIndicator()
+                    self.showToastMessage(text: "일시적인 오류로 서비스 접속에 실패했습니다")
+                case .unknownError:
+                    self.view.removeIndicator()
+                }
+            }
         }
+    }
+    
+    private func checkHomeButtonDevice() -> Bool {
+        let screenHeight = UIScreen.main.bounds.size.height
+        if screenHeight <= 736 {
+            return false
+        } else {
+            return true
+        }
+    }
+    private func showToastMessage(text: String) {
+        let hasSafeArea = self.checkHomeButtonDevice()
+        self.view.showToast(message: text, hasSafeArea: hasSafeArea)
     }
 }
 // MARK: - Extensions
