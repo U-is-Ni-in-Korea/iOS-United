@@ -178,7 +178,7 @@ class BattleViewController: BaseViewController {
             guard let strongSelf = self else {return}
             if strongSelf.selectedBattleId != nil {
                 let alert = strongSelf.view.showAlert(title: "승부 만들기가 완료되지 않았어요",
-                                                      message: "정말 중단하시겠어요?",
+                                                      message: "여기서 나가면 되돌릴 수 없어요",
                                                       cancelButtonMessage: "취소",
                                                       okButtonMessage: "나가기",
                                                       type: .alert)
