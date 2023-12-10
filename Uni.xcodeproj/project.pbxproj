@@ -122,8 +122,6 @@
 		8D6CB1FA2A65093600FE46C2 /* WithdrawViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB1F92A65093600FE46C2 /* WithdrawViewController.swift */; };
 		8D6CB1FC2A6509B300FE46C2 /* DisconnectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB1FB2A6509B300FE46C2 /* DisconnectView.swift */; };
 		8D6CB1FE2A6509C200FE46C2 /* DisconnectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6CB1FD2A6509C200FE46C2 /* DisconnectViewController.swift */; };
-		8D8DB0BE2A67CAC0003E1CA8 /* UseWishCouponView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8DB0BD2A67CAC0003E1CA8 /* UseWishCouponView.swift */; };
-		8D8DB0C02A67CB9F003E1CA8 /* UseWishCouponViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D8DB0BF2A67CB9F003E1CA8 /* UseWishCouponViewController.swift */; };
 		8D95A2CE2AC8691A0053186D /* TimerData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A2CD2AC8691A0053186D /* TimerData.swift */; };
 		8D95A2D02AC8695C0053186D /* TimerPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A2CF2AC8695C0053186D /* TimerPickerView.swift */; };
 		8D95A2D22AC869F30053186D /* TimerButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D95A2D12AC869F30053186D /* TimerButtonView.swift */; };
@@ -312,8 +310,6 @@
 		8D6CB1F92A65093600FE46C2 /* WithdrawViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithdrawViewController.swift; sourceTree = "<group>"; };
 		8D6CB1FB2A6509B300FE46C2 /* DisconnectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisconnectView.swift; sourceTree = "<group>"; };
 		8D6CB1FD2A6509C200FE46C2 /* DisconnectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisconnectViewController.swift; sourceTree = "<group>"; };
-		8D8DB0BD2A67CAC0003E1CA8 /* UseWishCouponView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseWishCouponView.swift; sourceTree = "<group>"; };
-		8D8DB0BF2A67CB9F003E1CA8 /* UseWishCouponViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseWishCouponViewController.swift; sourceTree = "<group>"; };
 		8D95A2CD2AC8691A0053186D /* TimerData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerData.swift; sourceTree = "<group>"; };
 		8D95A2CF2AC8695C0053186D /* TimerPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerPickerView.swift; sourceTree = "<group>"; };
 		8D95A2D12AC869F30053186D /* TimerButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerButtonView.swift; sourceTree = "<group>"; };
@@ -960,7 +956,6 @@
 				8D17B88B2A659D0C0091D7AD /* MakeWishView.swift */,
 				8DAEBB0C2A66D718007B818A /* MyWishView.swift */,
 				8DAEBB142A66E92C007B818A /* YourWishView.swift */,
-				8D8DB0BD2A67CAC0003E1CA8 /* UseWishCouponView.swift */,
 				7E12E5FF2A67E67F00C656AB /* CompletedWishCouponView.swift */,
 			);
 			path = View;
@@ -972,7 +967,6 @@
 				8D17B88D2A659D2F0091D7AD /* MakeWishViewController.swift */,
 				8DAEBB102A66E317007B818A /* MyWishViewController.swift */,
 				8DAEBB162A66F9BF007B818A /* YourWishViewController.swift */,
-				8D8DB0BF2A67CB9F003E1CA8 /* UseWishCouponViewController.swift */,
 				7E12E5FD2A67E66A00C656AB /* CompletedWishCouponViewController.swift */,
 			);
 			path = ViewController;
@@ -1601,9 +1595,7 @@
 				361FA37B2A62722A00C3BBFD /* BattleViewController.swift in Sources */,
 				3698B21F2A69A9ED006314FE /* WishRepository.swift in Sources */,
 				8DAEBB152A66E92C007B818A /* YourWishView.swift in Sources */,
-				8D8DB0C02A67CB9F003E1CA8 /* UseWishCouponViewController.swift in Sources */,
 				7EE3B1A12A60507F00962F4C /* HistoryViewController.swift in Sources */,
-				8D8DB0BE2A67CAC0003E1CA8 /* UseWishCouponView.swift in Sources */,
 				36DC48042AEEAD0D003DCB36 /* QnAViewModel.swift in Sources */,
 				7E12E5FE2A67E66A00C656AB /* CompletedWishCouponViewController.swift in Sources */,
 				36CF2F892A67144F00D8F8E1 /* BattleRepository.swift in Sources */,

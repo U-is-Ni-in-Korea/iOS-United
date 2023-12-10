@@ -1,16 +1,17 @@
-//
-//  MyWishCouponViewController.swift
-//  Uni
-//
-//  Created by 홍유정 on 2023/07/19.
-//
-
 import UIKit
 
 class MyWishViewController: BaseViewController {
-
+    // MARK: - Property
+    var wishId: Int = 0
+    // MARK: - UI Property
+    private let wishRepository = WishRepository()
     var myWishView = MyWishView()
-
+    // MARK: - Life Cycle
+    override func loadView() {
+        super.loadView()
+        myWishView = MyWishView(frame: self.view.frame)
+        self.view = myWishView
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         myWishNaviActions()
@@ -18,40 +19,8 @@ class MyWishViewController: BaseViewController {
         setUseWishCouponButton()
         getWishCouponData()
     }
-
-    override func loadView() {
-        super.loadView()
-        myWishView = MyWishView(frame: self.view.frame)
-        self.view = myWishView
-    }
-
-    func dataBindMyWish(wishContent: String,
-                        isUsed: Bool,
-                        iconPath: String) {
-        if let url = URL(string: iconPath) {
-            myWishView.myWishCouponView.myWishImageView.kf.setImage(with: url)
-        }
-        myWishView.myWishCouponView.myWishLabel.text = wishContent
-        if isUsed {
-            myWishView.useWishCouponButton.buttonState = .disabled
-        } else {
-            myWishView.useWishCouponButton.buttonState = .enabled
-        }
-    }
-
-    func myWishNaviActions() {
-        self.myWishView.myWishViewNavi.backButtonCompletionHandler = { [weak self] in
-            guard let strongSelf = self else {return}
-            strongSelf.navigationController?.popViewController(animated: true)}
-    }
-
-    func myWishShareTapped() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(shareActions(_:)))
-        myWishView.shareWishCouponButton.addGestureRecognizer(tapGesture)
-        myWishView.isUserInteractionEnabled = true
-    }
-
-    func setUseWishCouponButton() {
+    // MARK: - Setting
+    private func setUseWishCouponButton() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(useWishCouponButtonTapped))
         tapGesture.delegate = self
         myWishView.useWishCouponButton.addGestureRecognizer(tapGesture)
@@ -61,7 +30,7 @@ class MyWishViewController: BaseViewController {
             myWishView.useWishCouponButton.setButtonTitle(title: "이미 사용한 소원권이에요")
         }
     }
-
+    // MARK: - @objc Methods
     @objc func shareActions(_ gesture: UITapGestureRecognizer) {
         let myWishCouponImage = myWishView.transformViewToImage()
         let activityViewController = UIActivityViewController(activityItems: [myWishCouponImage], applicationActivities: nil)
@@ -71,10 +40,9 @@ class MyWishViewController: BaseViewController {
             }
         }
     }
-
     @objc func useWishCouponButtonTapped() {
         let alert = self.view.showAlert(title: "소원권을 사용하시나요?",
-                                        message: "사용하신 소원권은 돌아오지 않아요",
+                                        message: "사용한 소원권은 취소할 수 없어요",
                                         cancelButtonMessage: "취소",
                                         okButtonMessage: "확인",
                                         type: .alert)
@@ -90,13 +58,35 @@ class MyWishViewController: BaseViewController {
                 strongSelf.navigationController?.present(completVC, animated: true)
             }
         }
-
         alert.cancelButtonTapCompletion = { [weak self] in
             guard let strongSelf = self else {return}
             strongSelf.view.hideAlert(view: alert)
         }
     }
-
+    // MARK: - Custom Method
+    private func dataBindMyWish(wishContent: String,
+                        isUsed: Bool,
+                        iconPath: String) {
+        if let url = URL(string: iconPath) {
+            myWishView.myWishCouponView.myWishImageView.kf.setImage(with: url)
+        }
+        myWishView.myWishCouponView.myWishLabel.text = wishContent
+        if isUsed {
+            myWishView.useWishCouponButton.buttonState = .disabled
+        } else {
+            myWishView.useWishCouponButton.buttonState = .enabled
+        }
+    }
+    private func myWishNaviActions() {
+        self.myWishView.myWishViewNavi.backButtonCompletionHandler = { [weak self] in
+            guard let strongSelf = self else {return}
+            strongSelf.navigationController?.popViewController(animated: true)}
+    }
+    private func myWishShareTapped() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(shareActions(_:)))
+        myWishView.shareWishCouponButton.addGestureRecognizer(tapGesture)
+        myWishView.isUserInteractionEnabled = true
+    }
     private func useWishCoupon(completion: @escaping (() -> Void)) {
         self.view.showIndicator()
         wishRepository.useWishCoupon(wishId: wishId) { [weak self] _ in
@@ -108,7 +98,6 @@ class MyWishViewController: BaseViewController {
             completion()
         }
     }
-
     private func getWishCouponData() {
         self.view.showIndicator()
         wishRepository.getWishCouponDetail(wishId: wishId) { [weak self] data in
@@ -123,9 +112,8 @@ class MyWishViewController: BaseViewController {
         }
     }
 
-    private let wishRepository = WishRepository()
-    var wishId: Int = 0
 }
+// MARK: - Extensions
 extension MyWishViewController: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
