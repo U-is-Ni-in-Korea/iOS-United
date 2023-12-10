@@ -11,6 +11,11 @@ final class EnterInvitationView: UIView {
         $0.font = SDSFont.subTitle.font
         $0.textColor = UIColor.gray600
     }
+    private let enterInvitationSubTitleLabel = UILabel().then {
+        $0.text = "초대코드는 상대로부터 공유받을 수 있어요"
+        $0.font = SDSFont.body2.font
+        $0.textColor = UIColor.gray350
+    }
     let invitationTextField = SDSTextfield(placeholder: "ag14f0hkl", errorMessage: "입력하신 코드 정보를 찾을 수 없어요", letterLimit: 11).then {
         $0.textfieldCountLabel.isHidden = true
     }
@@ -37,7 +42,7 @@ final class EnterInvitationView: UIView {
 
     }
     private func setLayout() {
-        self.addSubviews([navigationBarView, enterInvitationTitleLabel, invitationTextField, connectionButton])
+        self.addSubviews([navigationBarView, enterInvitationTitleLabel, invitationTextField, connectionButton, enterInvitationSubTitleLabel])
 
         navigationBarView.snp.makeConstraints {
             $0.top.equalTo(self.safeAreaLayoutGuide)
@@ -48,8 +53,12 @@ final class EnterInvitationView: UIView {
             $0.top.equalTo(navigationBarView.snp.bottom).offset(70)
             $0.leading.equalToSuperview().inset(20)
         }
+        enterInvitationSubTitleLabel.snp.makeConstraints {
+            $0.top.equalTo(enterInvitationTitleLabel.snp.bottom).offset(6)
+            $0.leading.equalToSuperview().inset(20)
+        }
         invitationTextField.snp.makeConstraints {
-            $0.top.equalTo(enterInvitationTitleLabel.snp.bottom).offset(40)
+            $0.top.equalTo(enterInvitationSubTitleLabel.snp.bottom).offset(27)
             $0.leading.trailing.equalToSuperview().inset(20)
         }
         connectionButton.snp.makeConstraints {
