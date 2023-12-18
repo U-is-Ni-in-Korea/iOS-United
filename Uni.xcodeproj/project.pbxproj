@@ -180,6 +180,7 @@
 		A58C70352A627CC000327CD3 /* OnboardingDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */; };
 		A58CE54F2B22DF9F0074394C /* TimerViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CE54E2B22DF9F0074394C /* TimerViewData.swift */; };
 		A58CE5572B24AE6F0074394C /* QnANavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CE5562B24AE6F0074394C /* QnANavigationView.swift */; };
+		A58CE55A2B2639110074394C /* AppStoreCheckManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A58CE5592B2639100074394C /* AppStoreCheckManager.swift */; };
 		A5A5840E2AC0000E001DEC8B /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A5840D2AC0000E001DEC8B /* NavigationBarView.swift */; };
 		A5A584102AC00062001DEC8B /* BattleHistoryPageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A5840F2AC00062001DEC8B /* BattleHistoryPageControlView.swift */; };
 		A5A584122AC000AE001DEC8B /* BattleHistoryGameProcessContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5A584112AC000AE001DEC8B /* BattleHistoryGameProcessContentView.swift */; };
@@ -368,6 +369,7 @@
 		A58C70342A627CC000327CD3 /* OnboardingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDataModel.swift; sourceTree = "<group>"; };
 		A58CE54E2B22DF9F0074394C /* TimerViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewData.swift; sourceTree = "<group>"; };
 		A58CE5562B24AE6F0074394C /* QnANavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QnANavigationView.swift; sourceTree = "<group>"; };
+		A58CE5592B2639100074394C /* AppStoreCheckManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreCheckManager.swift; sourceTree = "<group>"; };
 		A5A5840D2AC0000E001DEC8B /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		A5A5840F2AC00062001DEC8B /* BattleHistoryPageControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryPageControlView.swift; sourceTree = "<group>"; };
 		A5A584112AC000AE001DEC8B /* BattleHistoryGameProcessContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryGameProcessContentView.swift; sourceTree = "<group>"; };
@@ -1076,6 +1078,7 @@
 			children = (
 				A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */,
 				A5B70E5F2B19C69A001FA019 /* MemoTextManager.swift */,
+				A58CE5592B2639100074394C /* AppStoreCheckManager.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -1537,6 +1540,7 @@
 				361FA3302A601D2E00C3BBFD /* GetServiceDeprecated.swift in Sources */,
 				7E25F64E2A6330C6003E82F6 /* WishCouponViewController.swift in Sources */,
 				A5A584122AC000AE001DEC8B /* BattleHistoryGameProcessContentView.swift in Sources */,
+				A58CE55A2B2639110074394C /* AppStoreCheckManager.swift in Sources */,
 				36CF2F7E2A65B0B600D8F8E1 /* CategoryDescriptionView.swift in Sources */,
 				36012F382A55B18B006B8A39 /* BaseViewController.swift in Sources */,
 				3698B2162A686209006314FE /* RoundBattleDataModel.swift in Sources */,
