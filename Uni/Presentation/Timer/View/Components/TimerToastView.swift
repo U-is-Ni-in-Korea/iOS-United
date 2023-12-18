@@ -2,6 +2,7 @@ import SwiftUI
 import SDSKit
 
 struct TimerToastView: View {
+    // MARK: - UI Property
     var body: some View {
         VStack {
             Text("타이머가 종료되었어요")

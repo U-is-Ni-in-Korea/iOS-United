@@ -2,7 +2,11 @@ import SwiftUI
 import SDSKit
 
 struct TimerProgressView: View {
-    @ObservedObject var timerState: TimerData
+    // MARK: - Property
+    let remainingTime: Int
+    let totalTime: Int
+    let isTimerRunning: Bool
+    // MARK: - UI Property
     var body: some View {
         ZStack {
             ZStack {
@@ -19,21 +23,21 @@ struct TimerProgressView: View {
                 .overlay(
                     Circle()
                         .trim(from: 0,
-                              to: CGFloat(timerState.remainingTime)/CGFloat(timerState.totalTime)
+                              to: CGFloat(remainingTime)/CGFloat(totalTime)
                              )
                         .stroke(style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .round)
                         )
-                        .foregroundColor(timerState.isTimerRunning ? Color(uiColor: .lightBlue500) : Color(uiColor: .gray150))
+                        .foregroundColor(isTimerRunning ? Color(uiColor: .lightBlue500) : Color(uiColor: .gray150))
                         .animation(.linear(duration: 1))
                 )
                 .rotationEffect(.degrees(-90))
             HStack {
-                Text(String(format: "%02d", timerState.remainingTime/60))
+                Text(String(format: "%02d", remainingTime/60))
                     .foregroundColor(Color(uiColor: .gray600))
                     .frame(width: 100)
                 Text(" : ")
                     .foregroundColor(Color(uiColor: .gray600))
-                Text(String(format: "%02d", timerState.remainingTime%60))
+                Text(String(format: "%02d", remainingTime%60))
                     .foregroundColor(Color(uiColor: .gray600))
                     .frame(width: 100)
             }

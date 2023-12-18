@@ -2,42 +2,46 @@ import SwiftUI
 import SDSKit
 
 struct TimerButtonView: View {
-    @ObservedObject var timerState: TimerData
+    // MARK: - Property
+    @Binding var startTimer: Bool
+    @Binding var isTimerRunning: Bool
+    @Binding var makeTimeTrigger: Bool
+    // MARK: - UI Property
     var body: some View {
         HStack {
             Button {
-                timerState.startTimer = false
-                timerState.isTimerRunning = false
+                startTimer = false
+                isTimerRunning = false
             } label: {
                 ZStack {
                     Circle()
-                        .foregroundColor(timerState.startTimer ? Color(uiColor: .gray000) : Color(uiColor: .gray300))
+                        .foregroundColor(startTimer ? Color(uiColor: .gray000) : Color(uiColor: .gray300))
                         .shadow(color: Color(red: 0.06, green: 0.15, blue: 0.15).opacity(0.1), radius: 3, x: -1, y: 1)
                     Text("취소")
-                        .foregroundColor(timerState.startTimer ? Color(uiColor: .gray400) : Color(uiColor: .gray000))
+                        .foregroundColor(startTimer ? Color(uiColor: .gray400) : Color(uiColor: .gray000))
                 }
                 .frame(width: 80, height: 80)
             }
-            .disabled(!timerState.startTimer)
-            .background(timerState.startTimer ? Circle().foregroundColor(Color(uiColor: .gray000)) : Circle().foregroundColor(Color(uiColor: .gray300)))
-            .foregroundColor(timerState.startTimer ? Color(uiColor: .gray400) : Color(uiColor: .gray000))
+            .disabled(!startTimer)
+            .background(startTimer ? Circle().foregroundColor(Color(uiColor: .gray000)) : Circle().foregroundColor(Color(uiColor: .gray300)))
+            .foregroundColor(startTimer ? Color(uiColor: .gray400) : Color(uiColor: .gray000))
             Spacer()
             Button {
-                if timerState.startTimer == false {
-                    timerState.makeTime()
-                    timerState.isTimerRunning = true
-                    timerState.startTimer = true
+                if startTimer == false {
+                    makeTimeTrigger.toggle()
+                    isTimerRunning = true
+                    startTimer = true
                 } else {
-                    timerState.isTimerRunning.toggle()
+                    isTimerRunning.toggle()
                 }
             } label: {
-                if timerState.startTimer {
+                if startTimer {
                     ZStack {
                         Circle()
-                            .foregroundColor(timerState.isTimerRunning ?  Color(uiColor: .gray000) : Color(uiColor: .lightBlue500))
+                            .foregroundColor(isTimerRunning ?  Color(uiColor: .gray000) : Color(uiColor: .lightBlue500))
                             .shadow(color: Color(red: 0.06, green: 0.15, blue: 0.15).opacity(0.1), radius: 3, x: -1, y: 1)
-                        Text(timerState.isTimerRunning ? "일시정지" : "재개")
-                            .foregroundColor(timerState.isTimerRunning ? Color(uiColor: .lightBlue600) : Color(uiColor: .gray000))
+                        Text(isTimerRunning ? "일시정지" : "재개")
+                            .foregroundColor(isTimerRunning ? Color(uiColor: .lightBlue600) : Color(uiColor: .gray000))
                     }
                     .frame(width: 80, height: 80)
                 } else {

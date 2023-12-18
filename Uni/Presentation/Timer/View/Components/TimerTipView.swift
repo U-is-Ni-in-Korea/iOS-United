@@ -2,6 +2,7 @@ import SwiftUI
 import SDSKit
 
 struct TimerTipView: View {
+    // MARK: - UI Property
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
             Text("타이머 활용법")
