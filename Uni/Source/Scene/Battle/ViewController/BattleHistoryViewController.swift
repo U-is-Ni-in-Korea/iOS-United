@@ -59,7 +59,7 @@ final class BattleHistoryViewController: BaseViewController {
         .store(in: &cancellables)
         battleHistoryViewData.timerButtonTapSubejct.sink { [weak self] _ in
             guard let self = self else { return }
-            let battleTimerViewController = BattleTimerViewController(timerViewData: timerViewData)
+            let battleTimerViewController = TimerViewController(timerViewData: timerViewData)
             self.navigationController?.pushViewController(battleTimerViewController, animated: true)
 
         }

@@ -2,7 +2,7 @@ import Combine
 import UIKit
 import SwiftUI
 
-final class BattleTimerViewController: BaseViewController {
+final class TimerViewController: BaseViewController {
     // MARK: - Property
     let timerData: TimerData
     private let timerViewData = TimerViewData()
