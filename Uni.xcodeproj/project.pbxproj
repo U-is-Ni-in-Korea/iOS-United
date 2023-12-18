@@ -1386,6 +1386,7 @@
 		A58CE55F2B3008F50074394C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A58CE5672B3042140074394C /* MyWish */,
 				A58CE5602B300A6E0074394C /* Timer */,
 			);
 			path = Presentation;
@@ -1438,6 +1439,37 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A58CE5672B3042140074394C /* MyWish */ = {
+			isa = PBXGroup;
+			children = (
+				A58CE5682B3042320074394C /* ViewModel */,
+				A58CE5692B3042380074394C /* ViewController */,
+				A58CE56A2B30423F0074394C /* View */,
+			);
+			path = MyWish;
+			sourceTree = "<group>";
+		};
+		A58CE5682B3042320074394C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A58CE5692B3042380074394C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A58CE56A2B30423F0074394C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A5B4B58C2A604C2F000C7555 /* Login */ = {
