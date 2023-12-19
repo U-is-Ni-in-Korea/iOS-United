@@ -72,7 +72,7 @@ class BattleViewController: BaseViewController {
                                                   object: nil)
     }
     // MARK: - Action Helper
-    func setButtonTarget() {
+    private func setButtonTarget() {
         self.battleView.navigationBar.rightBarRightButtonItemCompletionHandler = { [weak self] in
             guard let strongSelf = self else {return}
             strongSelf.dismiss(animated: true)
@@ -116,7 +116,7 @@ class BattleViewController: BaseViewController {
         }
     }
     // MARK: - Custom Method
-    func changeRootViewController(_ viewControllerToPresent: UIViewController) {
+    private func changeRootViewController(_ viewControllerToPresent: UIViewController) {
         if let window = UIApplication.shared.windows.first {
             window.rootViewController = viewControllerToPresent
             UIView.transition(with: window, duration: 0.5, options: .transitionCrossDissolve, animations: nil)
@@ -218,6 +218,7 @@ class BattleViewController: BaseViewController {
         self.view.showToast(message: text, hasSafeArea: hasSafeArea)
     }
 }
+// MARK: - Extensions
 extension BattleViewController: UICollectionViewDelegate {}
 extension BattleViewController: UICollectionViewDataSource {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -228,7 +229,7 @@ extension BattleViewController: UICollectionViewDataSource {
                                                         withReuseIdentifier: SectionView.reuseIdentifier, for: indexPath) as? SectionView else {return UICollectionReusableView()}
         switch indexPath.section {
         case 0:
-            headerView.bindText(title: "소원 정하기", subTitle: nil)
+            headerView.bindText(title: "소원 작성하기", subTitle: nil)
         default:
             headerView.bindText(title: "미션 카테고리 선택하기", subTitle: "원하는 카테고리를 선택해 보세요")
         }

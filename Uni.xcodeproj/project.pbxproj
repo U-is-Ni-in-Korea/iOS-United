@@ -1201,6 +1201,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A54E0F1A2B317D4D00800AD8 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		A555AD972A60782F0083CD20 /* ConnectionCommom */ = {
 			isa = PBXGroup;
 			children = (
@@ -1421,6 +1428,7 @@
 		A58CE55F2B3008F50074394C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A54E0F1A2B317D4D00800AD8 /* New Group */,
 				A54E0F172B31670E00800AD8 /* EditProfile */,
 				A54E0F132B3159B700800AD8 /* MyPage */,
 				A58CE5672B3042140074394C /* MyWish */,
