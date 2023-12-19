@@ -1147,6 +1147,37 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		A54E0F132B3159B700800AD8 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				A54E0F142B3159BF00800AD8 /* ViewModel */,
+				A54E0F152B3159C400800AD8 /* ViewController */,
+				A54E0F162B3159CA00800AD8 /* View */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		A54E0F142B3159BF00800AD8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A54E0F152B3159C400800AD8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A54E0F162B3159CA00800AD8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A555AD972A60782F0083CD20 /* ConnectionCommom */ = {
 			isa = PBXGroup;
 			children = (
@@ -1367,6 +1398,7 @@
 		A58CE55F2B3008F50074394C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A54E0F132B3159B700800AD8 /* Setting */,
 				A58CE5672B3042140074394C /* MyWish */,
 				A58CE5602B300A6E0074394C /* Timer */,
 			);
