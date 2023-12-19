@@ -4,13 +4,13 @@ import SafariServices
 import SDSKit
 import Then
 
-final class SettingViewController: BaseViewController {
+final class MyPageViewController: BaseViewController {
     // MARK: - Property
     private var userData: UserDataModel?
     private let userRepository = UserRepository()
     private let myPageTitleList = MyPageTitle.myPageTitleList()
     // MARK: - UI Property
-    private var settingView = SettingView()
+    private var myPageView = MyPageView()
     // MARK: - Life Cycle
     override func loadView() {
         super.loadView()
@@ -20,8 +20,8 @@ final class SettingViewController: BaseViewController {
         super.viewDidLoad()
         settingViewNaviActions()
         settingViewActions()
-        settingView.myPageTableView.delegate = self
-        settingView.myPageTableView.dataSource = self
+        myPageView.myPageTableView.delegate = self
+        myPageView.myPageTableView.dataSource = self
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,19 +29,19 @@ final class SettingViewController: BaseViewController {
     }
     // MARK: - Setting
     func setStyle() {
-        settingView = SettingView(frame: self.view.frame)
-        self.view = settingView
+        myPageView = MyPageView(frame: self.view.frame)
+        self.view = myPageView
     }
     func settingViewNaviActions() {
-        self.settingView.settingViewNavi.backButtonCompletionHandler = { [weak self] in
+        self.myPageView.settingViewNavi.backButtonCompletionHandler = { [weak self] in
             guard let strongSelf = self else {return}
             strongSelf.navigationController?.popViewController(animated: true)
         }
     }
     func settingViewActions() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(editProfileTapped(_:)))
-        settingView.profileView.editProfileButton.addGestureRecognizer(tapGesture)
-        settingView.isUserInteractionEnabled = true
+        myPageView.profileView.editProfileButton.addGestureRecognizer(tapGesture)
+        myPageView.isUserInteractionEnabled = true
     }
     // MARK: - @objc Methods
     @objc func editProfileTapped(_ gesture: UITapGestureRecognizer) {
@@ -60,13 +60,13 @@ final class SettingViewController: BaseViewController {
             print(data, "데이터")
             strongSelf.userData = data
             if let nickname = data.nickname, let dDay = data.startDate {
-                strongSelf.settingView.bindData(userName: nickname, dDay: dDay)
+                strongSelf.myPageView.bindData(userName: nickname, dDay: dDay)
             }
             strongSelf.view.removeIndicator()
         }
     }
 }
-extension SettingViewController: UITableViewDelegate, UITableViewDataSource {
+extension MyPageViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return myPageTitleList.count
     }

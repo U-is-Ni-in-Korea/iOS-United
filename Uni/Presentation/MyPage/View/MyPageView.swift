@@ -3,7 +3,7 @@ import UIKit
 import SDSKit
 import Then
 
-final class SettingView: UIView {
+final class MyPageView: UIView {
     // MARK: - UI Property
     let settingViewNavi = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "마이페이지")
     let profileView = MyPageProfileView()
@@ -11,6 +11,7 @@ final class SettingView: UIView {
         $0.register(MyPageTableViewCell.self, forCellReuseIdentifier: MyPageTableViewCell.reuseIdentifier)
         $0.rowHeight = 56
         $0.separatorStyle = .none
+        $0.isScrollEnabled = false
     }
     private let settingTableHeaderView = MyPageHeaderView(title: "서비스 이용")
     // MARK: - Life Cycle
@@ -63,7 +64,6 @@ final class SettingView: UIView {
         dateFormatter.locale = Locale(identifier: "ko_KR")
         let formattedDateString = dateFormatter.string(from: date)
         let shortenedDateString = formattedDateString.replacingOccurrences(of: "요일", with: "")
-
           return shortenedDateString
     }
 }
