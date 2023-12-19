@@ -1034,25 +1034,8 @@
 			isa = PBXGroup;
 			children = (
 				A58CE5502B22FB390074394C /* ViewData */,
-				A57F1EBD2B1CA40A006758D9 /* ViewController */,
-				8D7193202ABE8A20000114F5 /* View */,
-				8D95A2CC2AC868FD0053186D /* Component */,
 			);
 			path = Timer;
-			sourceTree = "<group>";
-		};
-		8D7193202ABE8A20000114F5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		8D95A2CC2AC868FD0053186D /* Component */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Component;
 			sourceTree = "<group>";
 		};
 		8DAEBB0A2A66D5C0007B818A /* Components */ = {
@@ -1244,13 +1227,6 @@
 			children = (
 				A578FC132A62D9210021A32E /* DDaySettingViewController.swift */,
 				A578FC172A62D9AB0021A32E /* CodeGeneratorViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		A57F1EBD2B1CA40A006758D9 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = ViewController;
 			sourceTree = "<group>";

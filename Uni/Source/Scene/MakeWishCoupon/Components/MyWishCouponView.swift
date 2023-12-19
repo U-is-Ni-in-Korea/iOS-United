@@ -1,107 +1,92 @@
-//
-//  MyWishView.swift
-//  Uni
-//
-//  Created by 홍유정 on 2023/07/18.
-//
-
 import UIKit
 import SDSKit
 import Then
 
-class MyWishCouponView: UIView {
-
+final class MyWishCouponView: UIView {
+    // MARK: - UI Property
     var myWishImageView = UIImageView().then {
-        $0.image = UIImage(named: "logo")
+        $0.contentMode = .scaleAspectFill
     }
-
-    let myWishIsLabel = UILabel().then {
+    private let myWishInfoLabel = UILabel().then {
         $0.text = "나의 소원은"
         $0.font = SDSFont.body2.font
         $0.textColor = .gray400
     }
-
-    public var myWishLabel = UILabel().then {
-        $0.text = "유니행복앱잼"
+    var myWishLabel = UILabel().then {
         $0.font = SDSFont.subTitle.font
         $0.textColor = .gray600
+        $0.numberOfLines = 0
         $0.textAlignment = .center
     }
-
     let dashlineStackView = UIStackView().then {
         $0.axis = .horizontal
         $0.distribution = .fillEqually
         $0.spacing = 8
         $0.backgroundColor = .clear
     }
-
-    let expirationDateTitleLabel = UILabel().then {
+    private let expirationEmptyView = UIView()
+    private let expirationStackView = UIStackView().then {
+        $0.axis = .vertical
+        $0.distribution = .fillEqually
+        $0.alignment = .center
+        $0.spacing = 4
+    }
+    private let expirationDateTitleLabel = UILabel().then {
         $0.text = "유효기간"
         $0.font = SDSFont.body2.font
         $0.textColor = .gray400
     }
-
-    let expirationDateLabel = UILabel().then {
+    private let expirationDateLabel = UILabel().then {
         $0.text = "우리가 사랑할때까지"
         $0.font = SDSFont.subTitle.font
         $0.textColor = .gray600
     }
-
+    // MARK: - Life Cycle
     override init(frame: CGRect) {
         super.init(frame: .zero)
         setLayout()
     }
-
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    // MARK: - Setting
     private func setLayout() {
-        self.layer.applyDepthAndDepth3_1Shadow()
-        self.applyDepth3_2Shadow()
-
-        addSubviews([myWishImageView, myWishIsLabel, myWishLabel, dashlineStackView, expirationDateTitleLabel, expirationDateLabel])
-
         for _ in 0...24 {
             let horizontalView = UIView()
             horizontalView.backgroundColor = .gray200
             self.dashlineStackView.addArrangedSubview(horizontalView)
         }
-
+        self.layer.applyDepthAndDepth3_1Shadow()
+        self.applyDepth3_2Shadow()
+        expirationStackView.addArrangeSubViews([expirationDateTitleLabel, expirationDateLabel])
+        addSubviews([myWishImageView, myWishInfoLabel, myWishLabel, dashlineStackView, expirationEmptyView])
+        expirationEmptyView.addSubview(expirationStackView)
         myWishImageView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(UIScreen.main.bounds.height/13)
-            $0.centerX.equalToSuperview()
-            $0.width.height.equalTo(UIScreen.main.bounds.height/6)
+            $0.top.equalToSuperview().offset(52)
+            $0.leading.equalToSuperview().offset(80)
+            $0.trailing.equalToSuperview().offset(-80)
+            $0.height.equalTo(myWishImageView.snp.width)
         }
-
-        myWishIsLabel.snp.makeConstraints {
-            $0.top.equalTo(myWishImageView.snp.bottom).offset(UIScreen.main.bounds.height/80)
+        myWishInfoLabel.snp.makeConstraints {
+            $0.top.equalTo(myWishImageView.snp.bottom).offset(10)
             $0.centerX.equalToSuperview()
-            $0.height.equalTo(20)
         }
-
         myWishLabel.snp.makeConstraints {
-            $0.top.equalTo(myWishIsLabel.snp.bottom).offset(4)
-            $0.height.equalTo(72)
-            $0.width.equalTo(252)
+            $0.top.equalTo(myWishInfoLabel.snp.bottom).offset(4)
             $0.leading.trailing.equalToSuperview().inset(24)
+            $0.height.greaterThanOrEqualTo(72)
         }
-
         dashlineStackView.snp.makeConstraints {
-            $0.bottom.equalToSuperview().inset(UIScreen.main.bounds.height/6)
+            $0.top.equalTo(myWishLabel.snp.bottom).offset(30)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(3)
         }
-
-        expirationDateTitleLabel.snp.makeConstraints {
-            $0.top.equalTo(dashlineStackView.snp.bottom).offset(UIScreen.main.bounds.height/20)
-            $0.centerX.equalToSuperview()
+        expirationEmptyView.snp.makeConstraints {
+            $0.top.equalTo(dashlineStackView)
+            $0.leading.trailing.bottom.equalToSuperview()
         }
-
-        expirationDateLabel.snp.makeConstraints {
-            $0.top.equalTo(expirationDateTitleLabel.snp.bottom).offset(4)
-            $0.centerX.equalToSuperview()
-            $0.bottom.equalToSuperview().inset(UIScreen.main.bounds.height/20)
+        expirationStackView.snp.makeConstraints {
+            $0.centerX.centerY.equalToSuperview()
         }
     }
 }

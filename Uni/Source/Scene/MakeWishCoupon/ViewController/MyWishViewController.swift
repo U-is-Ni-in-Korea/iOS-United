@@ -1,6 +1,6 @@
 import UIKit
 
-class MyWishViewController: BaseViewController {
+final class MyWishViewController: BaseViewController {
     // MARK: - Property
     var wishId: Int = 0
     // MARK: - UI Property
@@ -32,12 +32,11 @@ class MyWishViewController: BaseViewController {
     }
     // MARK: - @objc Methods
     @objc func shareActions(_ gesture: UITapGestureRecognizer) {
-        let myWishCouponImage = myWishView.transformViewToImage()
-        let activityViewController = UIActivityViewController(activityItems: [myWishCouponImage], applicationActivities: nil)
-        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
-            if let window = windowScene.windows.first {
-                window.rootViewController?.present(activityViewController, animated: true, completion: nil)
-            }
+        let image = viewToImage(view: myWishView.captureView)
+        let activityViewController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = self.view
+        DispatchQueue.main.async {
+            self.present(activityViewController, animated: true, completion: nil)
         }
     }
     @objc func useWishCouponButtonTapped() {
@@ -111,7 +110,13 @@ class MyWishViewController: BaseViewController {
             strongSelf.view.removeIndicator()
         }
     }
-
+    func viewToImage(view: UIView) -> UIImage {
+        let renderer = UIGraphicsImageRenderer(size: view.bounds.size)
+        let image = renderer.image { _ in
+            view.drawHierarchy(in: view.bounds, afterScreenUpdates: true)
+        }
+        return image
+    }
 }
 // MARK: - Extensions
 extension MyWishViewController: UIGestureRecognizerDelegate {
