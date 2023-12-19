@@ -12,10 +12,8 @@ final class EditProfileViewController: BaseViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        editProfileViewActions()
         anniversaryButtonActions()
         setTextViewConfig()
-        editProfileView.changeProfileImageButton.isHidden = true
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -38,11 +36,6 @@ final class EditProfileViewController: BaseViewController {
     func anniversaryButtonActions() {
         editProfileView.anniversaryButton.addTarget(self, action: #selector(anniversaryButtonTapped), for: .touchUpInside)
     }
-    func editProfileViewActions() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(changeProfileImageTapped(_:)))
-        editProfileView.changeProfileImageButton.addGestureRecognizer(tapGesture)
-        editProfileView.isUserInteractionEnabled = true
-    }
     // MARK: - @objc Methods
     @objc func anniversaryButtonTapped() {
         let datePickerViewController = DatePickerViewController()
@@ -54,12 +47,6 @@ final class EditProfileViewController: BaseViewController {
         }
         self.present(datePickerViewController, animated: true, completion: nil)
     }
-    @objc func changeProfileImageTapped(_ gesture: UITapGestureRecognizer) {
-            let myPickerController = UIImagePickerController()
-            myPickerController.delegate = self
-            myPickerController.sourceType = UIImagePickerController.SourceType.photoLibrary
-            self.present(myPickerController, animated: true, completion: nil)
-        }
     // MARK: - Custom Method
     func saveButtonStatus(enable: Bool) {
         self.editProfileView.editProfileViewNavi.rightBarSingleButtonItem.isEnabled = enable
@@ -126,14 +113,6 @@ extension EditProfileViewController: UINavigationControllerDelegate {
 
 }
 // MARK: - Extensions
-extension EditProfileViewController: UIImagePickerControllerDelegate {
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey: Any]) {
-        editProfileView.profileImageView.image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage
-        editProfileView.profileImageView.backgroundColor = UIColor.clear
-        editProfileView.profileImageView.contentMode = UIView.ContentMode.scaleToFill
-        picker.dismiss(animated: true, completion: nil)
-    }
-}
 extension EditProfileViewController: UITextFieldDelegate {
     @objc private func textFieldDidChange(_ sender: Any) {
         guard let nickname = editProfileView.nicknameTextfield.sdsTextfield.text else {
@@ -165,6 +144,6 @@ extension EditProfileViewController: UITextFieldDelegate {
             editProfileView.nicknameTextfield.errorLabel.isHidden = true
             saveButtonStatus(enable: true)
         }
-        editProfileView.nicknameTextfield.textfieldCountLabel.text = "\(editProfileView.nicknameTextfield.sdsTextfield.text?.count ?? 0)/5"
+        editProfileView.nicknameTextfield.textfieldCountLabel.text = "\(editProfileView.nicknameTextfield.sdsTextfield.text?.count ?? 0) / 5"
     }
 }

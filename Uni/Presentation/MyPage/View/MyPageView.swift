@@ -3,7 +3,7 @@ import UIKit
 import SDSKit
 import Then
 
-final class SettingView: UIView {
+final class MyPageView: UIView {
     // MARK: - UI Property
     let settingViewNavi = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "마이페이지")
     let profileView = MyPageProfileView()

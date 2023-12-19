@@ -42,7 +42,7 @@ final class HomeViewController: BaseViewController {
     }
     // MARK: - @objc Methods
     @objc private func myPageButtonTapped() {
-        let myPageViewController = SettingViewController()
+        let myPageViewController = MyPageViewController()
         self.navigationController?.pushViewController(myPageViewController, animated: true)
     }
     @objc private func historyButtonTapped() {
