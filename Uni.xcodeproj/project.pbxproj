@@ -963,7 +963,6 @@
 			isa = PBXGroup;
 			children = (
 				8D17B88B2A659D0C0091D7AD /* MakeWishView.swift */,
-				8DAEBB0C2A66D718007B818A /* MyWishView.swift */,
 				8DAEBB142A66E92C007B818A /* YourWishView.swift */,
 				7E12E5FF2A67E67F00C656AB /* CompletedWishCouponView.swift */,
 			);
@@ -974,7 +973,6 @@
 			isa = PBXGroup;
 			children = (
 				8D17B88D2A659D2F0091D7AD /* MakeWishViewController.swift */,
-				8DAEBB102A66E317007B818A /* MyWishViewController.swift */,
 				8DAEBB162A66F9BF007B818A /* YourWishViewController.swift */,
 				7E12E5FD2A67E66A00C656AB /* CompletedWishCouponViewController.swift */,
 			);
@@ -1051,7 +1049,6 @@
 			isa = PBXGroup;
 			children = (
 				8D17B8892A659CF00091D7AD /* WriteWishView.swift */,
-				8DAEBB0E2A66D992007B818A /* MyWishCouponView.swift */,
 				8DAEBB122A66E8C8007B818A /* YourWishCouponView.swift */,
 			);
 			path = Components;
@@ -1140,6 +1137,14 @@
 				A54CD6332A5C347100C434B7 /* OnboardingCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		A54E0F122B3153F600800AD8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8DAEBB0E2A66D992007B818A /* MyWishCouponView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		A555AD972A60782F0083CD20 /* ConnectionCommom */ = {
@@ -1437,6 +1442,7 @@
 		A58CE5692B3042380074394C /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8DAEBB102A66E317007B818A /* MyWishViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1444,6 +1450,8 @@
 		A58CE56A2B30423F0074394C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8DAEBB0C2A66D718007B818A /* MyWishView.swift */,
+				A54E0F122B3153F600800AD8 /* Components */,
 			);
 			path = View;
 			sourceTree = "<group>";
