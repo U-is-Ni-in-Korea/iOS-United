@@ -963,7 +963,6 @@
 			isa = PBXGroup;
 			children = (
 				8D17B88B2A659D0C0091D7AD /* MakeWishView.swift */,
-				8DAEBB0C2A66D718007B818A /* MyWishView.swift */,
 				8DAEBB142A66E92C007B818A /* YourWishView.swift */,
 				7E12E5FF2A67E67F00C656AB /* CompletedWishCouponView.swift */,
 			);
@@ -974,7 +973,6 @@
 			isa = PBXGroup;
 			children = (
 				8D17B88D2A659D2F0091D7AD /* MakeWishViewController.swift */,
-				8DAEBB102A66E317007B818A /* MyWishViewController.swift */,
 				8DAEBB162A66F9BF007B818A /* YourWishViewController.swift */,
 				7E12E5FD2A67E66A00C656AB /* CompletedWishCouponViewController.swift */,
 			);
@@ -1034,25 +1032,8 @@
 			isa = PBXGroup;
 			children = (
 				A58CE5502B22FB390074394C /* ViewData */,
-				A57F1EBD2B1CA40A006758D9 /* ViewController */,
-				8D7193202ABE8A20000114F5 /* View */,
-				8D95A2CC2AC868FD0053186D /* Component */,
 			);
 			path = Timer;
-			sourceTree = "<group>";
-		};
-		8D7193202ABE8A20000114F5 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		8D95A2CC2AC868FD0053186D /* Component */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Component;
 			sourceTree = "<group>";
 		};
 		8DAEBB0A2A66D5C0007B818A /* Components */ = {
@@ -1068,7 +1049,6 @@
 			isa = PBXGroup;
 			children = (
 				8D17B8892A659CF00091D7AD /* WriteWishView.swift */,
-				8DAEBB0E2A66D992007B818A /* MyWishCouponView.swift */,
 				8DAEBB122A66E8C8007B818A /* YourWishCouponView.swift */,
 			);
 			path = Components;
@@ -1159,6 +1139,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		A54E0F122B3153F600800AD8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				8DAEBB0E2A66D992007B818A /* MyWishCouponView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		A555AD972A60782F0083CD20 /* ConnectionCommom */ = {
 			isa = PBXGroup;
 			children = (
@@ -1244,13 +1232,6 @@
 			children = (
 				A578FC132A62D9210021A32E /* DDaySettingViewController.swift */,
 				A578FC172A62D9AB0021A32E /* CodeGeneratorViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		A57F1EBD2B1CA40A006758D9 /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1386,6 +1367,7 @@
 		A58CE55F2B3008F50074394C /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A58CE5672B3042140074394C /* MyWish */,
 				A58CE5602B300A6E0074394C /* Timer */,
 			);
 			path = Presentation;
@@ -1438,6 +1420,40 @@
 			children = (
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A58CE5672B3042140074394C /* MyWish */ = {
+			isa = PBXGroup;
+			children = (
+				A58CE5682B3042320074394C /* ViewModel */,
+				A58CE5692B3042380074394C /* ViewController */,
+				A58CE56A2B30423F0074394C /* View */,
+			);
+			path = MyWish;
+			sourceTree = "<group>";
+		};
+		A58CE5682B3042320074394C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A58CE5692B3042380074394C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8DAEBB102A66E317007B818A /* MyWishViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A58CE56A2B30423F0074394C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DAEBB0C2A66D718007B818A /* MyWishView.swift */,
+				A54E0F122B3153F600800AD8 /* Components */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A5B4B58C2A604C2F000C7555 /* Login */ = {
