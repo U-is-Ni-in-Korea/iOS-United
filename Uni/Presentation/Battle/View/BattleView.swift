@@ -4,17 +4,17 @@ import SDSKit
 import SnapKit
 import Then
 
-class BattleView: UIView {
+final class BattleView: UIView {
+    // MARK: - Life Cycle
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
-    
     init() {
         super.init(frame: .zero)
         self.setLayout()
         self.setCollectionViewFlowLayout()
     }
-    
+    // MARK: - Setting
     private func setLayout() {
         self.backgroundColor = .gray100
         self.addSubviews([collectionView, navigationBar])
@@ -30,7 +30,6 @@ class BattleView: UIView {
         }
         collectionView.backgroundColor = .gray100
     }
-    
     private func setCollectionViewFlowLayout() {
         let layout = UICollectionViewFlowLayout()
         let itemWidth = floor((UIScreen.main.bounds.width / 2) - 25)
@@ -42,7 +41,6 @@ class BattleView: UIView {
         self.collectionView.setCollectionViewLayout(layout, animated: false)
         self.collectionView.contentInset = .init(top: 0, left: 20, bottom: 0, right: 20)
     }
-    
     let navigationBar = SDSNavigationBar(hasBack: false,
                                                  hasTitleItem: false,
                                                  navigationTitle: "한판 승부",
@@ -52,5 +50,4 @@ class BattleView: UIView {
         $0.contentInsetAdjustmentBehavior = .never
         $0.alwaysBounceVertical = true
     }
-    
 }
