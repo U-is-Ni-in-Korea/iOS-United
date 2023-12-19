@@ -6,13 +6,15 @@ import Then
 protocol CouponTextDelegate: NSObject {
     func getCouponText(text: String)
 }
-
 protocol CouponTextStateDelegate: NSObject {
     func checkTextViewState(state: Bool)
 }
-
-class BattleWishCollectionViewCell: UICollectionViewCell {
+final class BattleWishCollectionViewCell: UICollectionViewCell {
+    // MARK: - Property
     var makeButtonTapCompletion: ((SDSButtonState) -> Void)?
+    // MARK: - UI Property
+    let couponView = BattleWishCouponView()
+    // MARK: - Life Cycle
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
@@ -20,53 +22,38 @@ class BattleWishCollectionViewCell: UICollectionViewCell {
         super.init(frame: frame)
         self.setLayout()
         self.addButtonGesture()
-        self.setCouponConfig()
+//        self.setCouponConfig()
     }
-    
-    
+    // MARK: - Setting
     private func setLayout() {
-        self.contentView.addSubviews([couponView]) //, creatButton
+        self.contentView.addSubview(couponView)
         self.couponView.snp.remakeConstraints {
             $0.width.equalTo(UIScreen.main.bounds.width - 40)
             $0.top.centerX.equalToSuperview()
         }
-//        self.creatButton.snp.makeConstraints {
-//            $0.top.equalTo(self.couponView.snp.bottom).offset(32)
-//            $0.centerX.equalToSuperview()
-//            $0.bottom.equalToSuperview().inset(16)
-//            $0.width.equalTo(UIScreen.main.bounds.width - 40)
-//            $0.height.equalTo(48)
-//        }
     }
-    
+    // MARK: - Action Helper
     func addButtonGesture() {
         let tapGesture = UITapGestureRecognizer(target: self,
                                                 action: #selector(createButtonTap))
         tapGesture.delegate = self
-//        self.creatButton.addGestureRecognizer(tapGesture)
     }
-    
-    func setCouponConfig() {
-        self.couponView.textViewStateDelegate = self
-    }
-    
+//    func setCouponConfig() {
+//        self.couponView.textViewStateDelegate = self
+//    }
+    // MARK: - @objc Methods
     @objc private func createButtonTap() {
         guard let completion = makeButtonTapCompletion else {return}
-//        completion(creatButton.buttonState)
     }
-    
-    let couponView = BattleWishCouponView()
-//    let creatButton = SDSButton(type: .fill, state: .disabled).then {
-//        $0.setButtonTitle(title: "한판 승부 만들기")
-//    }
 }
+// MARK: - Extensions
 extension BattleWishCollectionViewCell: UIGestureRecognizerDelegate {
     func gestureRecognizer(_ gestureRecognizer: UIGestureRecognizer, shouldRecognizeSimultaneouslyWith otherGestureRecognizer: UIGestureRecognizer) -> Bool {
         return true
     }
 }
-extension BattleWishCollectionViewCell: CouponTextStateDelegate {
-    func checkTextViewState(state: Bool) {
-//        self.creatButton.buttonState = state ? .enabled: .disabled
-    }
-}
+//extension BattleWishCollectionViewCell: CouponTextStateDelegate {
+//    func checkTextViewState(state: Bool) {
+////        self.creatButton.buttonState = state ? .enabled: .disabled
+//    }
+//}

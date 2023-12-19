@@ -1,7 +1,7 @@
 import UIKit
 import SDSKit
 
-class BattleViewController: BaseViewController {
+final class BattleViewController: BaseViewController {
     // MARK: - Property
     var selectedBattleId: Int?
     var missionContent: String = ""
