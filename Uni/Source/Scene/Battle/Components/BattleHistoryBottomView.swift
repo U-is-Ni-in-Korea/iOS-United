@@ -3,7 +3,7 @@ import SwiftUI
 import SDSKit
 
 struct BattleHistoryBottomView: View {
-    var viewData: BattleHistoryViewData
+    var viewData: BattleProgressViewModel
     var body: some View {
         VStack {
             Rectangle()

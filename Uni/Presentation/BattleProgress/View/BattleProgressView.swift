@@ -2,8 +2,8 @@ import SwiftUI
 
 import SDSKit
 
-struct BattleHistoryView: View {
-    @ObservedObject var data: BattleHistoryViewData
+struct BattleProgressView: View {
+    @ObservedObject var data: BattleProgressViewModel
     @State private var currentPage = 0
     var body: some View {
         VStack(spacing: 0) {

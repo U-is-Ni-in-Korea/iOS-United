@@ -126,7 +126,7 @@ final class HomeViewController: BaseViewController {
                 self.present(navigationController, animated: true)
                 createBattleViewController.completionHandler = { [weak self] in
                     guard let self = self else { return }
-                    let battleHistoryViewController = BattleHistoryViewController(timerViewData: timerViewData)
+                    let battleHistoryViewController = BattleProgressViewController(timerViewData: timerViewData)
                     DispatchQueue.main.async {
                         let navigationController = UINavigationController(rootViewController: battleHistoryViewController)
                         navigationController.modalTransitionStyle = .crossDissolve
@@ -146,7 +146,7 @@ final class HomeViewController: BaseViewController {
                 self.present(navigationController, animated: true, completion: nil)
             } else {
                 guard let self = self else { return }
-                let battleHistoryViewController = BattleHistoryViewController(timerViewData: timerViewData)
+                let battleHistoryViewController = BattleProgressViewController(timerViewData: timerViewData)
                 let navigationController = UINavigationController(rootViewController: battleHistoryViewController)
                 navigationController.modalTransitionStyle = .crossDissolve
                 navigationController.modalPresentationStyle = .overFullScreen
