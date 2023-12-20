@@ -13,7 +13,6 @@ final class BattleHistoryResultViewController: BaseViewController {
     private var historyData: [BattleHistoryResultDTO] = []
     // MARK: - UI Property
     private var historyView = HistoryView()
-    private let historyRepository = HistoryRepository()
     // MARK: - Life Cycle
     override func loadView() {
         super.loadView()
