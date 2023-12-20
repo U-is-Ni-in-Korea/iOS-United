@@ -1,11 +1,5 @@
-//
-//  BaseViewController.swift
-//  Uni
-//
-//  Created by 박익범 on 2023/07/05.
-//
-
 import UIKit
+import Combine
 
 class BaseViewController: UIViewController {
 
@@ -19,5 +13,5 @@ class BaseViewController: UIViewController {
 
     //MARK: - Config
     func setConfig() {}
-    
+    var cancellables: Set<AnyCancellable> = []
 }

@@ -1,13 +1,6 @@
-//
-//  HistoryDataModel.swift
-//  Uni
-//
-//  Created by 김사랑 on 2023/07/19.
-//
-
 import Foundation
 
-struct HistoryDataModel: Codable {
+struct BattleHistoryResultDTO: Codable {
     let roundGameId: Int?
     let date: String?
     let result: String?

@@ -108,12 +108,10 @@ final class HistoryTableViewCell: UITableViewCell {
         }
     }
     // MARK: - Custom Method
-    func configureCell(historyData: HistoryDataModel) { // 내용을 붙여주는 함수
-        gameDateLabel.text = historyData.date ?? ""
-        gameNameLabel.text = historyData.title ?? ""
-        gameResultLabel.text = HistoryStatus(rawValue: historyData.result ?? "")?.getStatusT()
-        if let url = URL(string: historyData.image ?? "") {
-            gameImageView.kf.setImage(with: url)
-        }
+    func configureCell(historyData: BattleHistoryItemViewData) {
+        gameDateLabel.text = historyData.date
+        gameNameLabel.text = historyData.gameTitle
+        gameResultLabel.text = historyData.result
+        gameImageView.kf.setImage(with: historyData.imagePath)
     }
 }

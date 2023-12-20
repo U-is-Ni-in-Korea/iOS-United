@@ -46,7 +46,7 @@ final class HomeViewController: BaseViewController {
         self.navigationController?.pushViewController(myPageViewController, animated: true)
     }
     @objc private func historyButtonTapped() {
-        let historyViewController = HistoryViewController()
+        let historyViewController = BattleHistoryResultViewController()
         self.navigationController?.pushViewController(historyViewController, animated: true)
     }
     @objc private func battleViewTapped(_ sender: UIGestureRecognizer) {

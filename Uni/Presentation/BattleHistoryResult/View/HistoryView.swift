@@ -60,7 +60,6 @@ final class HistoryView: UIView {
                 guard let self = self else { return }
                 self.historyEmptyView.isHidden = false
                 self.historyTableView.isHidden = true
-
             }
         }
     }

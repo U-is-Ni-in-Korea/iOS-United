@@ -1,12 +1,16 @@
 import UIKit
-
+import Combine
 import Then
 import SDSKit
 import SkeletonView
 
-final class HistoryViewController: BaseViewController {
+final class BattleHistoryResultViewController: BaseViewController {
     // MARK: - Property
-    var historyData: [HistoryDataModel] = []
+    private let viewModel = BattleHistoryResultViewModel(battleHistoryResultUsecase: BattleHistoryResultUseCase(battleHistoryResultRepository: BattleHistoryResultRepository(service: GetServiceCombine.shared)))
+    private lazy var loadViewSubject = PassthroughSubject<Void, Never>()
+    private lazy var input =  BattleHistoryResultViewModel.Input(viewLoad: loadViewSubject.eraseToAnyPublisher())
+    private lazy var output = viewModel.transform(input: input)
+    private var historyData: [BattleHistoryResultDTO] = []
     // MARK: - UI Property
     private var historyView = HistoryView()
     private let historyRepository = HistoryRepository()
@@ -22,9 +26,27 @@ final class HistoryViewController: BaseViewController {
         setLayout()
         historyNaviActions()
         startSkeletonView()
-        fetchDataSource()
+        setupBinding()
     }
     // MARK: - Setting
+    private func setupBinding() {
+        output.loadBattleHistoryResultData.sink { [weak self] completion in
+            guard let self = self else { return }
+            print(completion)
+            switch completion {
+            case .failure(let errorType):
+                errorResponse(status: errorType)
+            case .finished:
+                break
+            }
+        } receiveValue: { data in
+            print(data)
+            self.historyData = data
+            let hasData = self.historyListHasData(data: data)
+            self.historyDataHasData(hasData: hasData)
+        }.store(in: &cancellables)
+        loadViewSubject.send(())
+    }
     private func setDelegate() {
         historyView.historyTableView.dataSource = self
         historyView.historyTableView.delegate = self
@@ -37,6 +59,18 @@ final class HistoryViewController: BaseViewController {
         }
     }
     // MARK: - Custom Method
+    private func historyListHasData(data: [BattleHistoryResultDTO]) -> Bool {
+        return data.count == 0 ? false : true
+    }
+    private func historyDataHasData(hasData: Bool) {
+        DispatchQueue.main.async {
+            self.view.hideSkeleton()
+            self.historyView.hasHistoryData(hasData: hasData)
+            if hasData {
+                self.historyView.historyTableView.reloadData()
+            }
+        }
+    }
     func changeRootViewController(_ viewControllerToPresent: UIViewController) {
         if let window = UIApplication.shared.windows.first {
             window.rootViewController = viewControllerToPresent
@@ -52,44 +86,25 @@ final class HistoryViewController: BaseViewController {
         let skeletonAnimation = SkeletonAnimationBuilder().makeSlidingAnimation(withDirection: .leftRight)
         historyView.historyTableView.showAnimatedGradientSkeleton(usingGradient: .init(colors: [.gray150, .gray100]), animation: skeletonAnimation, transition: .crossDissolve(2))
     }
-    func fetchDataSource() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 3) { [weak self] in
-            guard let self = self else { return }
-            self.historyRepository.getHistoryData { [weak self] result in
-                guard let self = self else { return }
-                switch result {
-                case .success(let data):
-                    self.historyData = data
-                    if self.historyData.count == 0 {
-                        self.view.hideSkeleton()
-                        self.historyView.hasHistoryData(hasData: false)
-                    } else {
-                        self.view.hideSkeleton()
-                        self.historyView.hasHistoryData(hasData: true)
-                        self.historyView.historyTableView.reloadData()
-                    }
-                case .failure(let error):
-                    switch error {
-                    case .disconnectCouple:
-                        UserDefaultsManager.shared.delete(.partnerId)
-                        UserDefaultsManager.shared.delete(.userId)
-                        UserDefaultsManager.shared.delete(.lastRoundId)
-                        let navigationViewController = UINavigationController(rootViewController: LoginViewController())
-                        self.changeRootViewController(navigationViewController)
-                    case .unknown:
-                        let navigationViewController = UINavigationController(rootViewController: LoginViewController())
-                        self.changeRootViewController(navigationViewController)
-                    }
-                }
-            }
+    func errorResponse(status: ErrorType) {
+        switch status {
+        case .disconnected:
+            UserDefaultsManager.shared.delete(.partnerId)
+            UserDefaultsManager.shared.delete(.userId)
+            UserDefaultsManager.shared.delete(.lastRoundId)
+            let navigationViewController = UINavigationController(rootViewController: LoginViewController())
+            self.changeRootViewController(navigationViewController)
+        case .unknown:
+            let navigationViewController = UINavigationController(rootViewController: LoginViewController())
+            self.changeRootViewController(navigationViewController)
         }
     }
 }
 // MARK: - UITableView Delegate
-extension HistoryViewController: UITableViewDelegate {
+extension BattleHistoryResultViewController: UITableViewDelegate {
 }
 // MARK: - UITableView DataSource
-extension HistoryViewController: UITableViewDataSource {
+extension BattleHistoryResultViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return historyData.count // 뷰 컨에 보일 셀 수
     }
@@ -99,7 +114,7 @@ extension HistoryViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         cell.selectionStyle = .none // 셀 눌렀을 때 클릭한 거 안 보이게
-        cell.configureCell(historyData: historyData[indexPath.row]) // 셀에 내용을 붙여주는 함수를 불러온 것
+        cell.configureCell(historyData: BattleHistoryItemViewData(battleHistoryItem: historyData[indexPath.row]))
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -110,8 +125,7 @@ extension HistoryViewController: UITableViewDataSource {
         navigationController?.pushViewController(historyDetailViewController, animated: true)
     }
 }
-
-extension HistoryViewController: SkeletonTableViewDataSource {
+extension BattleHistoryResultViewController: SkeletonTableViewDataSource {
     func collectionSkeletonView(_ skeletonView: UITableView, cellIdentifierForRowAt indexPath: IndexPath) -> ReusableCellIdentifier {
         return HistoryTableViewCell.identifier
     }
