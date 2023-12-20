@@ -1,10 +1,3 @@
-//
-//  HistoryEmptyView.swift
-//  Uni
-//
-//  Created by 김사랑 on 2023/07/14.
-//
-
 import UIKit
 
 import SDSKit
@@ -12,9 +5,7 @@ import SnapKit
 import Then
 
 final class HistoryEmptyView: UIView {
-    
     // MARK: - UI Property
-    
     private let gameImageView = UIImageView().then {
         $0.image = SDSIcon.icSad.withTintColor(.lightBlue500)
         $0.layer.cornerRadius = 10
@@ -29,9 +20,7 @@ final class HistoryEmptyView: UIView {
         $0.textColor = .gray400
         $0.font = SDSFont.body2.font
     }
-
     // MARK: - Life Cycle
-    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setLayout()
@@ -42,9 +31,7 @@ final class HistoryEmptyView: UIView {
         setLayout()
         setStyle()
     }
-    
     // MARK: - Setting
-    
     private func setStyle() {
         self.backgroundColor = .gray100
     }

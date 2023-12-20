@@ -4,7 +4,6 @@ import SwiftUI
 
 final class BattleMemoViewController: BaseViewController {
     // MARK: - Property
-    private var cancellables: [AnyCancellable] = []
     private let battleMemoViewData = BattleMemoViewData()
     // MARK: - UI Property
     private var battleMemoHostingController: UIHostingController<BattleMemoView>!

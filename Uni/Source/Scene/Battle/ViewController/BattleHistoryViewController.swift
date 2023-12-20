@@ -5,7 +5,7 @@ import SwiftUI
 final class BattleHistoryViewController: BaseViewController {
     // MARK: - Property
     let timerViewData: TimerData
-    private var cancellables: [AnyCancellable] = []
+//    private var cancellables: [AnyCancellable] = []
     private var roundId: Int = 0
     private let battleHistoryViewData = BattleHistoryViewData()
     private var battleRepository = BattleRepository()

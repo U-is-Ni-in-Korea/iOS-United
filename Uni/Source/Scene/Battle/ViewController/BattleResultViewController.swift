@@ -7,7 +7,7 @@ final class BattleResultViewController: BaseViewController {
     var roundId: Int = 0
     private let battlerRepository = BattleRepository()
 //    private var battelData: RoundBattleDataModel?
-    private var cancellables: [AnyCancellable] = []
+//    private var cancellables: [AnyCancellable] = []
     private let battleResultViewData = BattleResultViewData()
     // MARK: - UI Property
     private var battleResultHostingViewController: UIHostingController<BattleResultView>!

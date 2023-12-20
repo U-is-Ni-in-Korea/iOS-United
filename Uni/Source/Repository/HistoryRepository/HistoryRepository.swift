@@ -7,8 +7,8 @@ enum HistoryError: String, Error {
 }
 
 class HistoryRepository {
-    func getHistoryData(completion: @escaping ((Result<[HistoryDataModel], HistoryError>) -> Void)) {
-        GetService.shared.getService(from: Config.baseURL + "api/history", isUseHeader: true) { (data: [HistoryDataModel]?, error) in
+    func getHistoryData(completion: @escaping ((Result<[BattleHistoryResultDTO], HistoryError>) -> Void)) {
+        GetService.shared.getService(from: Config.baseURL + "api/history", isUseHeader: true) { (data: [BattleHistoryResultDTO]?, error) in
             if let data = data {
                 completion(.success(data))
             } else {

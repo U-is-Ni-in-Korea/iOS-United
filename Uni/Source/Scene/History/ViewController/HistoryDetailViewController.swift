@@ -15,7 +15,7 @@ class HistoryDetailViewController: BaseViewController, HistoryDetailViewDelegate
     
     private var historyDetailView = HistoryDetailView()
     
-    private var historyDetailData: HistoryDataModel?
+    private var historyDetailData: BattleHistoryResultDTO?
     
     // MARK: - UI Property
     
@@ -57,7 +57,7 @@ class HistoryDetailViewController: BaseViewController, HistoryDetailViewDelegate
     
     // MARK: - Custom Method
     
-    func dataBind(historyData: HistoryDataModel) {
+    func dataBind(historyData: BattleHistoryResultDTO) {
         print(historyData, "데이터")
         historyDetailData = historyData
 
