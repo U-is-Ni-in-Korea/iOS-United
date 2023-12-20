@@ -118,9 +118,8 @@ extension BattleHistoryResultViewController: UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let historyDetailViewController = HistoryDetailViewController()
-        let selectedHistoryData = historyData[indexPath.row]
-        historyDetailViewController.dataBind(historyData: selectedHistoryData)
+        let historyDetailViewController = BattleHistoryDetailViewController()
+        historyDetailViewController.connectData(data: historyData[indexPath.row])
         navigationController?.pushViewController(historyDetailViewController, animated: true)
     }
 }

@@ -1,7 +1,7 @@
 import Combine
 import Foundation
 
-final class BattleHistoryResultViewModel {
+struct BattleHistoryResultViewModel {
     private let battleHistoryResultUsecase: BattleHistoryResultUseCaseProtocol
     init(battleHistoryResultUsecase: BattleHistoryResultUseCaseProtocol) {
         self.battleHistoryResultUsecase = battleHistoryResultUsecase
