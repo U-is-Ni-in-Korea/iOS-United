@@ -1,10 +1,3 @@
-//
-//  HistoryDetailView.swift
-//  Uni
-//
-//  Created by 김사랑 on 2023/07/15.
-//
-
 import UIKit
 
 import SDSKit
@@ -16,19 +9,13 @@ protocol HistoryDetailViewDelegate: AnyObject {
 }
 
 final class HistoryDetailView: UIView {
-    
     // MARK: - Property
-    
     weak var delegate: HistoryDetailViewDelegate?
-    
     // MARK: - UI Property
-    
     let navigationBar = SDSNavigationBar(hasBack: true, hasTitleItem: true, navigationTitle: "승부 히스토리")
     var historyDetailResultView = HistoryDetailResultView()
     var historyDetailResultMissionView = HistoryDetailResultMissionView()
-    
     // MARK: - Life Cycle
-    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setLayout()
@@ -39,9 +26,7 @@ final class HistoryDetailView: UIView {
         setLayout()
         setStyle()
     }
-    
     // MARK: - Setting
-    
     private func setStyle() {
         self.backgroundColor = .gray100
     }
@@ -56,7 +41,6 @@ final class HistoryDetailView: UIView {
         historyDetailResultView.snp.makeConstraints {
             $0.top.equalTo(navigationBar.snp.bottom)
             $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(133)
         }
         historyDetailResultMissionView.snp.makeConstraints {
             $0.top.equalTo(historyDetailResultView.snp.bottom)
@@ -64,9 +48,7 @@ final class HistoryDetailView: UIView {
             $0.height.equalTo(176)
         }
     }
-    
     // MARK: - Custom Method
-    
     func didTapBackButton() {
         delegate?.historyDetailViewDidTapBackButton()
     }

@@ -1,10 +1,3 @@
-//
-//  HistoryDetailResultMissionView.swift
-//  Uni
-//
-//  Created by 김사랑 on 2023/07/19.
-//
-
 import UIKit
 
 import SDSKit
@@ -12,9 +5,7 @@ import SnapKit
 import Then
 
 final class HistoryDetailResultMissionView: UIView {
-
     // MARK: - UI Property
-    
     let battleResultStackView = UIStackView().then {
         $0.axis = .horizontal
         $0.distribution = .fillEqually
@@ -22,9 +13,7 @@ final class HistoryDetailResultMissionView: UIView {
     }
     let myHistoryResultView = HistoryStatusView()
     let yourHistoryResultView = HistoryStatusView()
-    
     // MARK: - Life Cycle
-    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
     }
@@ -34,9 +23,7 @@ final class HistoryDetailResultMissionView: UIView {
         setStyle()
         setBind()
     }
-    
     // MARK: - Setting
-    
     private func setStyle() {
         self.backgroundColor = .gray100
     }
@@ -45,7 +32,6 @@ final class HistoryDetailResultMissionView: UIView {
         battleResultStackView.snp.makeConstraints {
             $0.top.equalToSuperview().offset(16)
             $0.leading.trailing.equalToSuperview().inset(20)
-            $0.height.equalTo(144)
             $0.centerX.equalToSuperview()
         }
         battleResultStackView.addArrangeSubViews([myHistoryResultView, yourHistoryResultView])
@@ -54,9 +40,7 @@ final class HistoryDetailResultMissionView: UIView {
         myHistoryResultView.bindText(sectionTitle: "나의 미션", title: "s", status: .win)
         yourHistoryResultView.bindText(sectionTitle: "상대의 미션", title: "s", status: .win)
     }
-    
     // MARK: - Custom Method
-    
     func bindMyMissionData(missionTitle: String,
                            clearAt: String? = nil,
                            status: HistoryStatus = .win) {
