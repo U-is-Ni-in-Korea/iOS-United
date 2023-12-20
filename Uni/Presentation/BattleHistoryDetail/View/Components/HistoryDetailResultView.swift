@@ -1,10 +1,3 @@
-//
-//  HistoryDetailResultView.swift
-//  Uni
-//
-//  Created by 김사랑 on 2023/07/15.
-//
-
 import UIKit
 
 import SDSKit
@@ -12,9 +5,7 @@ import SnapKit
 import Then
 
 final class HistoryDetailResultView: UIView {
-
     // MARK: - UI Property
-    
     let gameDateLabel = UILabel().then {
         $0.textColor = .gray400
         $0.font = SDSFont.body2.font
@@ -35,9 +26,7 @@ final class HistoryDetailResultView: UIView {
         $0.textColor = .lightBlue500
         $0.font = SDSFont.body2.font
     }
-    
     // MARK: - Life Cycle
-    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         setLayout()
@@ -46,9 +35,7 @@ final class HistoryDetailResultView: UIView {
         super.init(frame: .zero)
         setLayout()
     }
-    
     // MARK: - Setting
-
     private func setLayout() {
         [gameDateLabel, gameImageView, textStackView].forEach {
             self.addSubview($0)
@@ -58,18 +45,17 @@ final class HistoryDetailResultView: UIView {
         }
         gameDateLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(10)
-            $0.leading.equalToSuperview().offset(16)
+            $0.leading.equalToSuperview().offset(20)
         }
         gameImageView.snp.makeConstraints {
-            $0.top.equalTo(gameDateLabel.snp.bottom).offset(22)
+            $0.top.equalTo(gameDateLabel.snp.bottom).offset(30)
             $0.bottom.equalToSuperview().inset(20)
-            $0.leading.equalToSuperview().offset(20)
+            $0.leading.equalToSuperview().inset(20)
             $0.height.width.equalTo(64)
         }
         textStackView.snp.makeConstraints {
             $0.centerY.equalTo(gameImageView)
             $0.leading.equalTo(gameImageView.snp.trailing).offset(16)
-            $0.trailing.equalToSuperview().inset(18)
         }
     }
 }
