@@ -2,17 +2,16 @@ import Combine
 import UIKit
 import SwiftUI
 
-final class BattleHistoryViewController: BaseViewController {
+final class BattleProgressViewController: BaseViewController {
     // MARK: - Property
     let timerViewData: TimerData
-//    private var cancellables: [AnyCancellable] = []
     private var roundId: Int = 0
-    private let battleHistoryViewData = BattleHistoryViewData()
+    private let battleHistoryViewData = BattleProgressViewModel(roundBattleMissionUseCase: RoundBattleMissionUseCase(roundBattleMissionRepository: RoundBattleMissionRepository(service: GetServiceCombine.shared)))
     private var battleRepository = BattleRepository()
     private var homeRepository = HomeRepository()
     private var battleData: RoundBattleDataModel?
     // MARK: - UI Property
-    private var battleHistoryHostingController: UIHostingController<BattleHistoryView>!
+    private var battleHistoryHostingController: UIHostingController<BattleProgressView>!
     // MARK: - Life Cycle
     init(timerViewData: TimerData) {
         self.timerViewData = timerViewData
@@ -34,7 +33,7 @@ final class BattleHistoryViewController: BaseViewController {
     }
     // MARK: - Setting
     override func setConfig() {
-        battleHistoryHostingController = UIHostingController(rootView: BattleHistoryView(data: battleHistoryViewData))
+        battleHistoryHostingController = UIHostingController(rootView: BattleProgressView(data: battleHistoryViewData))
         self.addChild(battleHistoryHostingController)
         view.addSubview(battleHistoryHostingController.view)
         battleHistoryHostingController.didMove(toParent: self)

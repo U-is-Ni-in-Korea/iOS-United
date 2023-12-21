@@ -264,7 +264,7 @@ extension BattleViewController: UICollectionViewDataSource {
                     alert.okButtonTapCompletion = { [weak self] in
                         strongSelf.makeBattle { [weak self] _ in
                             guard let self = self else {return}
-                            let battleHistoryVC = BattleHistoryViewController(timerViewData: timerViewData)
+                            let battleHistoryVC = BattleProgressViewController(timerViewData: timerViewData)
                             battleHistoryVC.modalPresentationStyle = .overFullScreen
                             guard let pvc = strongSelf.presentingViewController else { return }
                             strongSelf.dismiss(animated: true) {
