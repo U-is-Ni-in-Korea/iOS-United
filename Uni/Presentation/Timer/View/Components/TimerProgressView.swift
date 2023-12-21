@@ -28,7 +28,6 @@ struct TimerProgressView: View {
                         .stroke(style: StrokeStyle(lineWidth: 8, lineCap: .round, lineJoin: .round)
                         )
                         .foregroundColor(isTimerRunning ? Color(uiColor: .lightBlue500) : Color(uiColor: .gray150))
-                        .animation(.linear(duration: 1))
                 )
                 .rotationEffect(.degrees(-90))
             HStack {

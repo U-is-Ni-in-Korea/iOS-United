@@ -63,5 +63,8 @@ struct TimerView: View {
                 timerData.hideEndTimerAlert()
             }
         }
+        .onAppear {
+            print("온어피어")
+        }
     }
 }
