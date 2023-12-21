@@ -3,8 +3,8 @@ import SwiftUI
 import SDSKit
 
 struct BattleHistoryGameProcessContentView: View {
-    var content: String
-    var title: String
+    let content: String
+    let title: String
     var body: some View {
         VStack(spacing: 0) {
             HStack {
@@ -27,6 +27,8 @@ struct BattleHistoryGameProcessContentView: View {
                 Text(content)
                     .foregroundColor(Color(uiColor: .gray600))
                     .font(Font(SDSFont.body2Long.font))
+                    .multilineTextAlignment(.leading)
+                Spacer()
             }
             Spacer()
         }
