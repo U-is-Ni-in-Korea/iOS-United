@@ -1,10 +1,3 @@
-//
-//  LoginViewController.swift
-//  Uni
-//
-//  Created by 류창휘 on 2023/07/14.
-//
-
 import UIKit
 import KakaoSDKAuth
 import KakaoSDKUser
@@ -12,13 +5,11 @@ import AuthenticationServices
 
 class LoginViewController: BaseViewController {
     // MARK: - Property
-    private var loginView = LoginView()
     private let authRepository = AuthRepository()
     private let keyChains = HeaderUtils()
     private var isChekcEnd: Bool = false
-    
     // MARK: - UI Property
-    
+    private var loginView = LoginView()
     // MARK: - Life Cycle
     override func loadView() {
         super.loadView()
@@ -30,9 +21,6 @@ class LoginViewController: BaseViewController {
         setLayout()
         setConfig()
         actions()
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         checkAccessToken()
     }
     // MARK: - Setting
@@ -42,7 +30,6 @@ class LoginViewController: BaseViewController {
     override func setConfig() {
         super.setConfig()
     }
-    
     // MARK: - Action Helper
     private func actions() {
         loginView.kakaoButton.addTarget(self, action: #selector(kakaoButtonTapped), for: .touchUpInside)
@@ -57,16 +44,14 @@ class LoginViewController: BaseViewController {
                 self.loginView.appleButton.isEnabled = true
                 if let accessToken = data.accessToken {
                     self.keyChains.create(account: "accessToken", value: accessToken)
-                    self.hasCouple(loginCase: "카카오")
+                    self.hasCouple(loginCase: "카카오", coupleCode: data.coupleId)
                 }
             }
         })
     }
-    
     @objc func appleButtonTapped() {
         loginView.kakaoButton.isEnabled = false
         loginView.appleButton.isEnabled = false
-        
         let request = ASAuthorizationAppleIDProvider().createRequest()
         request.requestedScopes = [.fullName, .email]
         let controller = ASAuthorizationController(authorizationRequests: [request])
@@ -74,7 +59,6 @@ class LoginViewController: BaseViewController {
         controller.presentationContextProvider = self as? ASAuthorizationControllerPresentationContextProviding
         controller.performRequests()
     }
-    
     // MARK: - Custom Method
     private func checkAccessToken() {
         let tokenExist = self.keyChains.isTokenExists(account: "accessToken")
@@ -83,12 +67,10 @@ class LoginViewController: BaseViewController {
             isChekcEnd = true
         }
     }
-    
     private func pushNicknameSettingViewController() {
         let nicknameSettingViewController = NicknameSettingViewController()
         navigationController?.pushViewController(nicknameSettingViewController, animated: false)
     }
-    
     // MARK: - 카카오 로그인
     private func hanldeKakaoLogin(completion: @escaping ((String) -> Void)) {
         //카카오톡 설치 여부 확인
@@ -130,12 +112,11 @@ class LoginViewController: BaseViewController {
             self.present(viewControllerToPresent, animated: true, completion: nil)
         }
     }
-    func hasCouple(loginCase : String) {
-        if UserDefaultsManager.shared.hasCoupleCode {
+    func hasCouple(loginCase: String, coupleCode: Int?) {
+        if coupleCode != nil {
             let homeViewController = HomeViewController()
             self.changeRootViewController(UINavigationController(rootViewController: homeViewController))
-        }
-        else {
+        } else {
             let nicknameSettingViewController = NicknameSettingViewController()
             nicknameSettingViewController.loginCase = loginCase
             navigationController?.pushViewController(nicknameSettingViewController, animated: false)
@@ -145,21 +126,18 @@ class LoginViewController: BaseViewController {
 extension LoginViewController: ASAuthorizationControllerDelegate {
     func authorizationController(controller: ASAuthorizationController, didCompleteWithAuthorization authorization: ASAuthorization) {
         if let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential {
-            
             let identityToken = appleIDCredential.identityToken
             if let identityToken = identityToken {
                 guard let appleToken = String(data: identityToken, encoding: .utf8) else { return }
                 self.authRepository.postToken(socialType: "apple", token: appleToken) { data in
                     self.loginView.kakaoButton.isEnabled = true
                     self.loginView.appleButton.isEnabled = true
-                    
                     if let accessToken = data.accessToken {
                         self.keyChains.create(account: "accessToken", value: accessToken)
-                        self.hasCouple(loginCase: "Apple")
+                        self.hasCouple(loginCase: "Apple", coupleCode: data.coupleId)
                     }
                 }
             }
-            
         }
     }
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {

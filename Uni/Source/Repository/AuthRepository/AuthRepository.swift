@@ -16,7 +16,7 @@ class AuthRepository {
             }
             else if let data = data {
                 completion(data)
-                print("성공")
+                print("성공", data, "데이터")
                 
             }
         })

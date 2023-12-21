@@ -7,14 +7,20 @@ enum Key: String {
     case userId
     case partnerId
     case appVersion
+    case inviteCode
 }
 
 class UserDefaultsManager {
-    
     let defaults = UserDefaults.standard
     static let shared = UserDefaultsManager()
     private init() {}
-    
+    var hasPartnerId: Bool {
+        if load(.partnerId) == nil {
+            return false
+        } else {
+            return true
+        }
+    }
     var hasOnboarded: Bool {
         if load(.hasOnboarded) == nil {
             return false
@@ -52,7 +58,12 @@ class UserDefaultsManager {
             return loadInt(key)
         case .appVersion:
             return loadIntArray(key)
+        case .inviteCode:
+            return loadString(key)
         }
+    }
+    func loadString(_ key: Key) -> String? {
+        return defaults.object(forKey: key.rawValue) as? String
     }
     func loadBool(_ key: Key) -> Bool? {
         return defaults.object(forKey: key.rawValue) as? Bool

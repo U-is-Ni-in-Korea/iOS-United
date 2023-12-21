@@ -81,7 +81,6 @@ final class EnterInvitationViewController: BaseViewController {
     }
     private func postCoupleJoinSuccessResponse() {
         self.view.removeIndicator()
-        UserDefaultsManager.shared.save(value: true, forkey: .hasCoupleCode)
         let homeViewController = HomeViewController()
         self.changeRootViewController(UINavigationController(rootViewController: homeViewController))
     }
