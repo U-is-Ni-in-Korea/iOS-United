@@ -85,7 +85,7 @@ extension NicknameSettingView {
         VStack {
             TextField("닉네임", text: $text)
                 .padding(.leading, 14)
-                .frame(width: 335, height: 48)
+                .frame(height: 48)
                 .accentColor(Color(uiColor: .lightBlue500)) // 임의로 지정함
                 .foregroundColor(Color(uiColor: .gray600))
                 .font(Font(SDSFont.body2Long.font))
@@ -100,7 +100,8 @@ extension NicknameSettingView {
         .overlay(
             RoundedRectangle(cornerRadius: 10)
                 .stroke(viewModel.stateColor, lineWidth: 1))
-        .padding(.top, 11)
+        .padding(.top, 27)
+        .padding(.horizontal, 20)
     }
     private var nicknameWarningView: some View {
         HStack(spacing: 4) {
