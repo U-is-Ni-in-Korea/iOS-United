@@ -15,6 +15,7 @@ class TimerData: ObservableObject {
     private var timer: AnyPublisher<Date, Never>!
     init() {
         setupTimer()
+        checkTimeInterval()
     }
     private func setupTimer() {
         timer = Timer.publish(every: 1, on: .main, in: .common)
@@ -36,6 +37,26 @@ class TimerData: ObservableObject {
                 showToast = true
                 startTimer = false
                 endTimerAlert = true
+                UserDefaults.standard.removeObject(forKey: "existingCountData")
+            }
+        }
+    }
+    func checkTimeInterval() {
+        NotificationCenter.default.addObserver(self, selector: #selector(adf(_:)), name: NSNotification.Name("remainTimerTime"), object: nil)
+    }
+    @objc func adf(_ notification: Notification) {
+        let remainTimerTime = notification.userInfo?["time"] as? Int ?? 0
+        print(remainTimerTime, "남아있는지 확인")
+        if remainingTime - remainTimerTime > 0 {
+            remainingTime -= remainTimerTime
+        } else {
+            if let remainTimerTime = UserDefaults.standard.object(forKey: "existingCountData") as? Int {
+                AudioServicesPlaySystemSound(1005)
+                isTimerRunning = false
+                showToast = true
+                startTimer = false
+                endTimerAlert = true
+                UserDefaults.standard.removeObject(forKey: "existingCountData")
             }
         }
     }

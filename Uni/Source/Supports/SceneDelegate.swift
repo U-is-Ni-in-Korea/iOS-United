@@ -18,6 +18,26 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             }
         }
     }
+    func sceneWillEnterForeground(_ scene: UIScene) {
+        guard let timerEnterBackgroundTime = UserDefaults.standard.object(forKey: "sceneDidEnterBackground") as? Date else { return }
+        let timeInterval = Int(Date().timeIntervalSince(timerEnterBackgroundTime))
+        guard let timerCount = UserDefaults.standard.object(forKey: "existingCountData") as? Int else { return }
+        let remainTimerCount = timerCount - timeInterval
+        NotificationCenter.default.post(name: NSNotification.Name("remainTimerTime"), object: nil, userInfo: ["time": timeInterval])
+        UserDefaults.standard.removeObject(forKey: "sceneDidEnterBackground")
+    }
+    func sceneDidEnterBackground(_ scene: UIScene) {
+        NotificationCenter.default.post(name: NSNotification.Name("sceneDidEnterBackground"), object: nil)
+        UserDefaults.standard.setValue(Date(), forKey: "sceneDidEnterBackground")
+        if let navigationController = window?.rootViewController as? UINavigationController {
+            if let homeViewController = navigationController.viewControllers.first as? HomeViewController {
+                let timerCount = homeViewController.timerViewData.remainingTime
+                if timerCount != 0 {
+                    UserDefaults.standard.setValue(timerCount, forKey: "existingCountData")
+                }
+            }
+        }
+    }
 }
 extension SceneDelegate {
     private func setScene(_ scene: UIScene) {

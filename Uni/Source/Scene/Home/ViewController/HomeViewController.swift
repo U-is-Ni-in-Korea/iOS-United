@@ -3,7 +3,7 @@ import UIKit
 final class HomeViewController: BaseViewController {
     // MARK: - Property
     private var homeData: HomeDataModel?
-    private let timerViewData = TimerData()
+    let timerViewData = TimerData()
     // MARK: - UI Property
     let homeView = HomeView()
     private let homeRepository = HomeRepository()

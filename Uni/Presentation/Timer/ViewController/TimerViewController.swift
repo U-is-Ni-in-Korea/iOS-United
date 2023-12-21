@@ -6,7 +6,6 @@ final class TimerViewController: BaseViewController {
     // MARK: - Property
     let timerData: TimerData
     private let timerViewData = TimerViewData()
-//    private var cancellables: [AnyCancellable] = []
     // MARK: - UI Property
     private var battleTimerHostingController: UIHostingController<TimerView>!
     // MARK: - Life Cycle
