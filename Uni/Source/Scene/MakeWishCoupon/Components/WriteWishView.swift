@@ -151,7 +151,7 @@ extension WriteWishView: UITextViewDelegate {
                                                      attributes: [NSAttributedString.Key.paragraphStyle: style,
                                                                   NSAttributedString.Key.font: SDSFont.subTitle.font])
 
-        if writeWishTextView.text.count > 60 {
+        if writeWishTextView.text.count > 54 {
             writeWishTextView.deleteBackward()
             writeWishTextView.layer.borderWidth = 1
             writeWishTextView.layer.borderColor = UIColor.red500.cgColor
