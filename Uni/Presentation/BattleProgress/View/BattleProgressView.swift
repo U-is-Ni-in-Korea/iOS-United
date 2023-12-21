@@ -1,5 +1,5 @@
 import SwiftUI
-
+import UIKit
 import SDSKit
 
 struct BattleProgressView: View {
@@ -17,10 +17,10 @@ struct BattleProgressView: View {
                         .frame(width: 60, height: 60)
                     VStack(alignment: .leading, spacing: 6) {
                         Text("\(data.rountBattle?.myRoundMission?.missionContent.content ?? "")")
-                            .font(Font(SDSFont.btn2.font))
+                            .font(Font(SDSFont.subTitle.font))
                             .foregroundColor(Color(uiColor: .gray600))
                         Text("\(data.rountBattle?.myRoundMission?.missionContent.missionCategory.title ?? "")")
-                            .font(Font(SDSFont.body2.font))
+                            .font(Font(SDSFont.body1.font))
                             .foregroundColor(Color(uiColor: .gray600))
                     }
                     Spacer()
