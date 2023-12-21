@@ -3,7 +3,7 @@ import UIKit
 
 class SplashViewController: BaseViewController {
     // MARK: - Property
-    let keyChains = HeaderUtils()
+    private let keyChains = HeaderUtils()
     // MARK: - UI Property
     private let logoImageView = UIImageView().then {
         $0.image = UIImage(named: "logo")
@@ -31,14 +31,18 @@ class SplashViewController: BaseViewController {
     // MARK: - Custom Method
     private func setRootViewController() {
         let key = keyChains.read(account: "accessToken")
-        print(key)
         let userDefaultsManager = UserDefaultsManager.shared
         if userDefaultsManager.hasOnboarded {
             if keyChains.isTokenExists(account: "accessToken") {
                 ///로그인 + 토큰 존재
                 if userDefaultsManager.hasCoupleCode {
-                    let homeViewController = HomeViewController()
-                    changeRootViewController(UINavigationController(rootViewController: homeViewController))
+                    if userDefaultsManager.hasPartnerId {
+                        let homeViewController = HomeViewController()
+                        changeRootViewController(UINavigationController(rootViewController: homeViewController))
+                    } else {
+                        let loginViewController = LoginViewController()
+                        changeRootViewController(UINavigationController(rootViewController: loginViewController))
+                    }
                 } else {
                     let loginViewController = LoginViewController()
                     changeRootViewController(UINavigationController(rootViewController: loginViewController))

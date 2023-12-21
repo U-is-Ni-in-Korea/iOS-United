@@ -15,6 +15,7 @@ final class HomeViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addEvent()
+        saveHasCoupleStatus()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -28,6 +29,11 @@ final class HomeViewController: BaseViewController {
         super.setLayout()
     }
     // MARK: - Action Helper
+    private func saveHasCoupleStatus() {
+        if !UserDefaultsManager.shared.hasCoupleCode {
+            UserDefaultsManager.shared.save(value: true, forkey: .hasCoupleCode)
+        }
+    }
     private func addEvent() {
         homeView.myPageButton.addTarget(self, action: #selector(myPageButtonTapped), for: .touchUpInside)
         homeView.scoreView.historyButton.addTarget(self, action: #selector(historyButtonTapped), for: .touchUpInside)
@@ -161,11 +167,14 @@ final class HomeViewController: BaseViewController {
             guard let self = self else { return }
             switch result {
             case .success(let data):
+                print(data, "홈데이터, ??????")
                 if UserDefaultsManager.shared.load(.userId) != nil {
                     UserDefaultsManager.shared.save(value: data.userID, forkey: .userId)
                 }
                 if UserDefaultsManager.shared.load(.partnerId) != nil {
-                    UserDefaultsManager.shared.save(value: data.partnerId, forkey: .partnerId)
+                    if let partnerId = data.partnerId {
+                        UserDefaultsManager.shared.save(value: partnerId, forkey: .partnerId)
+                    }
                 }
                 self.homeData = data
                 self.homeView.bindData(myScore: data.myScore,

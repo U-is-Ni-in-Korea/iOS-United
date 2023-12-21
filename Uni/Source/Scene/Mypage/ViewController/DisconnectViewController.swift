@@ -35,6 +35,7 @@ final class DisconnectViewController: BaseViewController {
                     UserDefaultsManager.shared.delete(.partnerId)
                     UserDefaultsManager.shared.delete(.userId)
                     UserDefaultsManager.shared.delete(.lastRoundId)
+                    UserDefaultsManager.shared.delete(.hasCoupleCode)
                     let navigationViewController = UINavigationController(rootViewController: LoginViewController())
                     self.changeRootViewController(navigationViewController)
                 }

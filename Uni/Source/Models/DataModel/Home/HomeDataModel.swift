@@ -1,7 +1,8 @@
 import Foundation
 
 struct HomeDataModel: Codable {
-    let userID, myScore, partnerScore, partnerId: Int
+    let userID, myScore, partnerScore: Int
+    let partnerId: Int?
     let roundGameId: Int?
     let drawCount, dDay: Int
     let couple: Couple

@@ -10,7 +10,7 @@ import UIKit
 
 final class CodeGeneratorViewController: BaseViewController {
     // MARK: - Property
-    var inviteCode: String = ""
+     var inviteCode: String = ""
     private var codeGeneratorView = CodeGeneratorView()
     private let coupleJoinRepository = CoupleJoinRepository()
 
@@ -37,7 +37,6 @@ final class CodeGeneratorViewController: BaseViewController {
         super.setConfig()
         codeGeneratorView.codeLabel.text = inviteCode
     }
-
     // MARK: - Action Helper
     private func actions() {
         let shareButtonTapGesture = UITapGestureRecognizer(target: self,
@@ -73,7 +72,6 @@ final class CodeGeneratorViewController: BaseViewController {
             if value {
                 ///커플 연결
                 self.codeGeneratorView.indicatorView.stopAnimating()
-                UserDefaultsManager.shared.save(value: true, forkey: .hasCoupleCode)
                 let homeViewController = HomeViewController()
                 self.changeRootViewController(UINavigationController(rootViewController: homeViewController))
             }
