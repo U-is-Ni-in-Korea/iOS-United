@@ -32,5 +32,8 @@ struct MyPageView: View {
             }
             Spacer()
         }
+        .task {
+            viewModel.getMyPageData()
+        }
     }
 }
