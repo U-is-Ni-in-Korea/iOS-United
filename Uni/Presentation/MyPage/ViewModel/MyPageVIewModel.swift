@@ -15,7 +15,6 @@ final class MyPageViewModel: ObservableObject {
         self.myPageGetUseCase = myPageGetUseCase
         self.navigationController = navigationController
         self.viewController = viewController
-        getMyPageData()
     }
     // MARK: - Custom Method
     func getMyPageData() {
