@@ -7,7 +7,7 @@ struct BattleProgressView: View {
     @State private var currentPage = 0
     var body: some View {
         VStack(spacing: 0) {
-            SDSNavigationView(style: .leftTitleRightDismissButton(title: "한판 승부 진행 중", dismissImage: Image(uiImage: SDSIcon.icDismiss), action: {
+            SDSNavigationView(style: .leftTitleRightDismissButton(title: "한판 승부 진행 중", dismissImage: SDSIcon.icDismiss, action: {
                 data.dismissButtonTapPublisher.send()
             }))
             ScrollView {
