@@ -22,10 +22,8 @@
 		36012F4F2A55CF18006B8A39 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F4E2A55CF18006B8A39 /* UIStackView+.swift */; };
 		36012F512A55CF2D006B8A39 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F502A55CF2D006B8A39 /* UIView+.swift */; };
 		36012F532A55CFAF006B8A39 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36012F522A55CFAF006B8A39 /* UIViewController+.swift */; };
-		36012F562A55D06C006B8A39 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 36012F552A55D06C006B8A39 /* SnapKit */; };
 		36012F592A55D07D006B8A39 /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 36012F582A55D07D006B8A39 /* Then */; };
 		36012F5C2A55D08E006B8A39 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 36012F5B2A55D08E006B8A39 /* Alamofire */; };
-		36012F5F2A55D0A0006B8A39 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 36012F5E2A55D0A0006B8A39 /* Kingfisher */; };
 		36012F622A55D0F4006B8A39 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 36012F612A55D0F4006B8A39 /* Sentry */; };
 		36012F652A55D155006B8A39 /* KakaoSDK in Frameworks */ = {isa = PBXBuildFile; productRef = 36012F642A55D155006B8A39 /* KakaoSDK */; };
 		361FA3282A60193B00C3BBFD /* HomeRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 361FA3272A60193B00C3BBFD /* HomeRepository.swift */; };
@@ -131,6 +129,7 @@
 		8DFC07A82AD1485400844676 /* TimerTipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC07A72AD1485400844676 /* TimerTipView.swift */; };
 		8DFC07AA2AD1B19B00844676 /* TimerToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC07A92AD1B19B00844676 /* TimerToastView.swift */; };
 		A500A4482AFB54F300B8593A /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = A500A4472AFB54F300B8593A /* SkeletonView */; };
+		A50D2E7B2B3BFB380015970A /* SDSKit in Frameworks */ = {isa = PBXBuildFile; productRef = A50D2E7A2B3BFB380015970A /* SDSKit */; };
 		A53C62F62A65719600AE3B45 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */; };
 		A53C62F92A6682A600AE3B45 /* KakaoLoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */; };
 		A53C62FE2A67DAC600AE3B45 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62FD2A67DAC600AE3B45 /* UserRepository.swift */; };
@@ -201,7 +200,6 @@
 		A5C6D3862ACD606500C01CA9 /* BattleResultViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C6D3852ACD606500C01CA9 /* BattleResultViewData.swift */; };
 		A5F26AB02B09EF870026BB58 /* BattleMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F26AAF2B09EF870026BB58 /* BattleMemoView.swift */; };
 		A5F26AB22B09F0FB0026BB58 /* BattleMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F26AB12B09F0FB0026BB58 /* BattleMemoViewController.swift */; };
-		A5FEB8892B35676600B86072 /* SDSKit in Frameworks */ = {isa = PBXBuildFile; productRef = A5FEB8882B35676600B86072 /* SDSKit */; };
 		A5FEB88B2B35BE5C00B86072 /* MyPageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FEB88A2B35BE5C00B86072 /* MyPageView.swift */; };
 		A5FEB88E2B35BE8300B86072 /* MyPageSubTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FEB88D2B35BE8300B86072 /* MyPageSubTitleView.swift */; };
 		A5FEB8902B35BEAA00B86072 /* MyPageServiceButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5FEB88F2B35BEAA00B86072 /* MyPageServiceButton.swift */; };
@@ -430,14 +428,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5FEB8892B35676600B86072 /* SDSKit in Frameworks */,
+				A50D2E7B2B3BFB380015970A /* SDSKit in Frameworks */,
 				36012F622A55D0F4006B8A39 /* Sentry in Frameworks */,
 				7E64995F2A650C4800B2F86C /* CHTCollectionViewWaterfallLayoutObjC in Frameworks */,
-				36012F5F2A55D0A0006B8A39 /* Kingfisher in Frameworks */,
 				36012F5C2A55D08E006B8A39 /* Alamofire in Frameworks */,
 				A500A4482AFB54F300B8593A /* SkeletonView in Frameworks */,
 				7E64995D2A650C4800B2F86C /* CHTCollectionViewWaterfallLayout in Frameworks */,
-				36012F562A55D06C006B8A39 /* SnapKit in Frameworks */,
 				36012F592A55D07D006B8A39 /* Then in Frameworks */,
 				36012F652A55D155006B8A39 /* KakaoSDK in Frameworks */,
 			);
@@ -1730,16 +1726,14 @@
 			);
 			name = Uni;
 			packageProductDependencies = (
-				36012F552A55D06C006B8A39 /* SnapKit */,
 				36012F582A55D07D006B8A39 /* Then */,
 				36012F5B2A55D08E006B8A39 /* Alamofire */,
-				36012F5E2A55D0A0006B8A39 /* Kingfisher */,
 				36012F612A55D0F4006B8A39 /* Sentry */,
 				36012F642A55D155006B8A39 /* KakaoSDK */,
 				7E64995C2A650C4800B2F86C /* CHTCollectionViewWaterfallLayout */,
 				7E64995E2A650C4800B2F86C /* CHTCollectionViewWaterfallLayoutObjC */,
 				A500A4472AFB54F300B8593A /* SkeletonView */,
-				A5FEB8882B35676600B86072 /* SDSKit */,
+				A50D2E7A2B3BFB380015970A /* SDSKit */,
 			);
 			productName = Uni;
 			productReference = 36012F0C2A55A9F4006B8A39 /* Uni.app */;
@@ -1770,15 +1764,13 @@
 			);
 			mainGroup = 36012F032A55A9F4006B8A39;
 			packageReferences = (
-				36012F542A55D06C006B8A39 /* XCRemoteSwiftPackageReference "SnapKit" */,
 				36012F572A55D07D006B8A39 /* XCRemoteSwiftPackageReference "Then" */,
 				36012F5A2A55D08E006B8A39 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				36012F5D2A55D0A0006B8A39 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				36012F602A55D0F4006B8A39 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 				36012F632A55D155006B8A39 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 				7E64995B2A650C4800B2F86C /* XCRemoteSwiftPackageReference "CHTCollectionViewWaterfallLayout" */,
 				A500A4462AFB54F300B8593A /* XCRemoteSwiftPackageReference "SkeletonView" */,
-				A5FEB8872B35676600B86072 /* XCRemoteSwiftPackageReference "iOS-SDS-United" */,
+				A50D2E792B3BFB380015970A /* XCRemoteSwiftPackageReference "iOS-SDS-United" */,
 			);
 			productRefGroup = 36012F0D2A55A9F4006B8A39 /* Products */;
 			projectDirPath = "";
@@ -2255,14 +2247,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		36012F542A55D06C006B8A39 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SnapKit/SnapKit";
-			requirement = {
-				kind = exactVersion;
-				version = 5.6.0;
-			};
-		};
 		36012F572A55D07D006B8A39 /* XCRemoteSwiftPackageReference "Then" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/devxoul/Then";
@@ -2277,14 +2261,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.0.0;
-			};
-		};
-		36012F5D2A55D0A0006B8A39 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/onevcat/Kingfisher";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 7.0.0;
 			};
 		};
 		36012F602A55D0F4006B8A39 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
@@ -2319,7 +2295,7 @@
 				minimumVersion = 1.0.0;
 			};
 		};
-		A5FEB8872B35676600B86072 /* XCRemoteSwiftPackageReference "iOS-SDS-United" */ = {
+		A50D2E792B3BFB380015970A /* XCRemoteSwiftPackageReference "iOS-SDS-United" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/U-is-Ni-in-Korea/iOS-SDS-United.git";
 			requirement = {
@@ -2330,11 +2306,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		36012F552A55D06C006B8A39 /* SnapKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 36012F542A55D06C006B8A39 /* XCRemoteSwiftPackageReference "SnapKit" */;
-			productName = SnapKit;
-		};
 		36012F582A55D07D006B8A39 /* Then */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 36012F572A55D07D006B8A39 /* XCRemoteSwiftPackageReference "Then" */;
@@ -2344,11 +2315,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 36012F5A2A55D08E006B8A39 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
-		};
-		36012F5E2A55D0A0006B8A39 /* Kingfisher */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 36012F5D2A55D0A0006B8A39 /* XCRemoteSwiftPackageReference "Kingfisher" */;
-			productName = Kingfisher;
 		};
 		36012F612A55D0F4006B8A39 /* Sentry */ = {
 			isa = XCSwiftPackageProductDependency;
@@ -2375,9 +2341,9 @@
 			package = A500A4462AFB54F300B8593A /* XCRemoteSwiftPackageReference "SkeletonView" */;
 			productName = SkeletonView;
 		};
-		A5FEB8882B35676600B86072 /* SDSKit */ = {
+		A50D2E7A2B3BFB380015970A /* SDSKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A5FEB8872B35676600B86072 /* XCRemoteSwiftPackageReference "iOS-SDS-United" */;
+			package = A50D2E792B3BFB380015970A /* XCRemoteSwiftPackageReference "iOS-SDS-United" */;
 			productName = SDSKit;
 		};
 /* End XCSwiftPackageProductDependency section */
