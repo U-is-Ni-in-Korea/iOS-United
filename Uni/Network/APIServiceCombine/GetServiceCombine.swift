@@ -3,7 +3,7 @@ import Combine
 import Alamofire
 import Sentry
 
-final class GetServiceCombine {
+final class GetServiceCombine: GetServiceProtocol {
     static let shared = GetServiceCombine()
     private init() {}
     private let tokenUtils = HeaderUtils()
