@@ -130,6 +130,13 @@
 		8DFC07AA2AD1B19B00844676 /* TimerToastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DFC07A92AD1B19B00844676 /* TimerToastView.swift */; };
 		A500A4482AFB54F300B8593A /* SkeletonView in Frameworks */ = {isa = PBXBuildFile; productRef = A500A4472AFB54F300B8593A /* SkeletonView */; };
 		A50D2E7B2B3BFB380015970A /* SDSKit in Frameworks */ = {isa = PBXBuildFile; productRef = A50D2E7A2B3BFB380015970A /* SDSKit */; };
+		A50D2E7D2B3C2C9B0015970A /* HomeGetDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D2E7C2B3C2C9B0015970A /* HomeGetDTO.swift */; };
+		A50D2E7F2B3C2CD40015970A /* HomeGetUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D2E7E2B3C2CD40015970A /* HomeGetUseCase.swift */; };
+		A50D2E812B3C2D2B0015970A /* HomeGetRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D2E802B3C2D2B0015970A /* HomeGetRepositoryInterface.swift */; };
+		A50D2E832B3C31CC0015970A /* HomeGetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D2E822B3C31CC0015970A /* HomeGetRepository.swift */; };
+		A50D2E862B3C34110015970A /* HomeGetItemViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D2E852B3C34110015970A /* HomeGetItemViewData.swift */; };
+		A50D2E882B3C37B40015970A /* RoundBattleMisstionItemViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D2E872B3C37B40015970A /* RoundBattleMisstionItemViewData.swift */; };
+		A50D2E8F2B3C4ADC0015970A /* PatchServiceCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D2E8E2B3C4ADC0015970A /* PatchServiceCombine.swift */; };
 		A53C62F62A65719600AE3B45 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */; };
 		A53C62F92A6682A600AE3B45 /* KakaoLoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */; };
 		A53C62FE2A67DAC600AE3B45 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62FD2A67DAC600AE3B45 /* UserRepository.swift */; };
@@ -147,9 +154,9 @@
 		A54E0F3A2B32AF9800800AD8 /* BattleHistoryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E0F392B32AF9800800AD8 /* BattleHistoryDetailViewModel.swift */; };
 		A54E0F3D2B32B06400800AD8 /* BattleHistoryDetailItemViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E0F3C2B32B06400800AD8 /* BattleHistoryDetailItemViewData.swift */; };
 		A54E0F452B32D60900800AD8 /* RoundBattleMissionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E0F442B32D60900800AD8 /* RoundBattleMissionDTO.swift */; };
-		A54E0F472B32D6D100800AD8 /* RoundBattleMissionUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E0F462B32D6D100800AD8 /* RoundBattleMissionUseCase.swift */; };
-		A54E0F492B32D74300800AD8 /* RoundBattleMissionRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E0F482B32D74300800AD8 /* RoundBattleMissionRepositoryInterface.swift */; };
-		A54E0F4B2B32D7F300800AD8 /* RoundBattleMissionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E0F4A2B32D7F300800AD8 /* RoundBattleMissionRepository.swift */; };
+		A54E0F472B32D6D100800AD8 /* RoundBattleMissionGetUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E0F462B32D6D100800AD8 /* RoundBattleMissionGetUseCase.swift */; };
+		A54E0F492B32D74300800AD8 /* RoundBattleMissionGetRepositoryInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E0F482B32D74300800AD8 /* RoundBattleMissionGetRepositoryInterface.swift */; };
+		A54E0F4B2B32D7F300800AD8 /* RoundBattleMissionGetRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54E0F4A2B32D7F300800AD8 /* RoundBattleMissionGetRepository.swift */; };
 		A55150BA2A6137ED00481F57 /* Config.xcconfig in Sources */ = {isa = PBXBuildFile; fileRef = A55150B92A6137ED00481F57 /* Config.xcconfig */; };
 		A55150BC2A614A2000481F57 /* CoupleConnectionMethodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55150BB2A614A2000481F57 /* CoupleConnectionMethodView.swift */; };
 		A55150BE2A614A2A00481F57 /* CoupleConnectionMethodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A55150BD2A614A2A00481F57 /* CoupleConnectionMethodViewController.swift */; };
@@ -336,6 +343,13 @@
 		8DF24AF02ACC9A54003F4568 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		8DFC07A72AD1485400844676 /* TimerTipView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTipView.swift; sourceTree = "<group>"; };
 		8DFC07A92AD1B19B00844676 /* TimerToastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerToastView.swift; sourceTree = "<group>"; };
+		A50D2E7C2B3C2C9B0015970A /* HomeGetDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGetDTO.swift; sourceTree = "<group>"; };
+		A50D2E7E2B3C2CD40015970A /* HomeGetUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGetUseCase.swift; sourceTree = "<group>"; };
+		A50D2E802B3C2D2B0015970A /* HomeGetRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGetRepositoryInterface.swift; sourceTree = "<group>"; };
+		A50D2E822B3C31CC0015970A /* HomeGetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGetRepository.swift; sourceTree = "<group>"; };
+		A50D2E852B3C34110015970A /* HomeGetItemViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGetItemViewData.swift; sourceTree = "<group>"; };
+		A50D2E872B3C37B40015970A /* RoundBattleMisstionItemViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBattleMisstionItemViewData.swift; sourceTree = "<group>"; };
+		A50D2E8E2B3C4ADC0015970A /* PatchServiceCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchServiceCombine.swift; sourceTree = "<group>"; };
 		A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginDataModel.swift; sourceTree = "<group>"; };
 		A53C62FD2A67DAC600AE3B45 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
@@ -353,9 +367,9 @@
 		A54E0F392B32AF9800800AD8 /* BattleHistoryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryDetailViewModel.swift; sourceTree = "<group>"; };
 		A54E0F3C2B32B06400800AD8 /* BattleHistoryDetailItemViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryDetailItemViewData.swift; sourceTree = "<group>"; };
 		A54E0F442B32D60900800AD8 /* RoundBattleMissionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBattleMissionDTO.swift; sourceTree = "<group>"; };
-		A54E0F462B32D6D100800AD8 /* RoundBattleMissionUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBattleMissionUseCase.swift; sourceTree = "<group>"; };
-		A54E0F482B32D74300800AD8 /* RoundBattleMissionRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBattleMissionRepositoryInterface.swift; sourceTree = "<group>"; };
-		A54E0F4A2B32D7F300800AD8 /* RoundBattleMissionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBattleMissionRepository.swift; sourceTree = "<group>"; };
+		A54E0F462B32D6D100800AD8 /* RoundBattleMissionGetUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBattleMissionGetUseCase.swift; sourceTree = "<group>"; };
+		A54E0F482B32D74300800AD8 /* RoundBattleMissionGetRepositoryInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBattleMissionGetRepositoryInterface.swift; sourceTree = "<group>"; };
+		A54E0F4A2B32D7F300800AD8 /* RoundBattleMissionGetRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBattleMissionGetRepository.swift; sourceTree = "<group>"; };
 		A55150B92A6137ED00481F57 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		A55150BB2A614A2000481F57 /* CoupleConnectionMethodView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleConnectionMethodView.swift; sourceTree = "<group>"; };
 		A55150BD2A614A2A00481F57 /* CoupleConnectionMethodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoupleConnectionMethodViewController.swift; sourceTree = "<group>"; };
@@ -539,6 +553,7 @@
 		36012F282A55AE4A006B8A39 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				A50D2E8B2B3C4A5B0015970A /* APIServiceCombine */,
 				361FA32C2A601C6500C3BBFD /* Base */,
 				3698B21D2A69A9E0006314FE /* WishRepository */,
 				A56C4E602A68FA2700C18C8F /* CoupleJoinRepository */,
@@ -973,6 +988,23 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		A50D2E842B3C33F40015970A /* ItemViewData */ = {
+			isa = PBXGroup;
+			children = (
+				A50D2E852B3C34110015970A /* HomeGetItemViewData.swift */,
+				A50D2E872B3C37B40015970A /* RoundBattleMisstionItemViewData.swift */,
+			);
+			path = ItemViewData;
+			sourceTree = "<group>";
+		};
+		A50D2E8B2B3C4A5B0015970A /* APIServiceCombine */ = {
+			isa = PBXGroup;
+			children = (
+				A50D2E8E2B3C4ADC0015970A /* PatchServiceCombine.swift */,
+			);
+			path = APIServiceCombine;
+			sourceTree = "<group>";
+		};
 		A53C62F42A65714400AE3B45 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
@@ -1175,8 +1207,9 @@
 			isa = PBXGroup;
 			children = (
 				A54E0F242B3190A100800AD8 /* BattleHistoryResultRepository.swift */,
-				A54E0F4A2B32D7F300800AD8 /* RoundBattleMissionRepository.swift */,
+				A54E0F4A2B32D7F300800AD8 /* RoundBattleMissionGetRepository.swift */,
 				A5FEB89B2B35F19F00B86072 /* MyPageGetRepository.swift */,
+				A50D2E822B3C31CC0015970A /* HomeGetRepository.swift */,
 			);
 			path = AlamofireRepository;
 			sourceTree = "<group>";
@@ -1313,6 +1346,7 @@
 			isa = PBXGroup;
 			children = (
 				A5C23DDE2ABAB96900800190 /* BattleProgressViewModel.swift */,
+				A50D2E842B3C33F40015970A /* ItemViewData */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1434,6 +1468,7 @@
 		A585AB7B2AFE156A006D3A93 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				A50D2E7C2B3C2C9B0015970A /* HomeGetDTO.swift */,
 				A5FEB8952B35EE9900B86072 /* MyPageGetDTO.swift */,
 				A54E0F442B32D60900800AD8 /* RoundBattleMissionDTO.swift */,
 				7EACFC422A6826F6005F416A /* BattleHistoryResultDTO.swift */,
@@ -1458,8 +1493,9 @@
 			isa = PBXGroup;
 			children = (
 				A54E0F1E2B3188F700800AD8 /* BattleHistoryResultUseCase.swift */,
-				A54E0F462B32D6D100800AD8 /* RoundBattleMissionUseCase.swift */,
+				A54E0F462B32D6D100800AD8 /* RoundBattleMissionGetUseCase.swift */,
 				A5FEB8972B35EFE300B86072 /* MyPageGetUseCase.swift */,
+				A50D2E7E2B3C2CD40015970A /* HomeGetUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -1468,8 +1504,9 @@
 			isa = PBXGroup;
 			children = (
 				A54E0F212B3189E200800AD8 /* BattleHistoryResultRepositoryInterface.swift */,
-				A54E0F482B32D74300800AD8 /* RoundBattleMissionRepositoryInterface.swift */,
+				A54E0F482B32D74300800AD8 /* RoundBattleMissionGetRepositoryInterface.swift */,
 				A5FEB8992B35F10B00B86072 /* MyPageGetRepositoryInterface.swift */,
+				A50D2E802B3C2D2B0015970A /* HomeGetRepositoryInterface.swift */,
 			);
 			path = RepositoryInterface;
 			sourceTree = "<group>";
@@ -1834,7 +1871,8 @@
 				A5B70E5E2B19A4C4001FA019 /* BattleMemoViewData.swift in Sources */,
 				3698B2142A683C35006314FE /* MakeBattleDataModel.swift in Sources */,
 				8D95A2CE2AC8691A0053186D /* TimerData.swift in Sources */,
-				A54E0F472B32D6D100800AD8 /* RoundBattleMissionUseCase.swift in Sources */,
+				A54E0F472B32D6D100800AD8 /* RoundBattleMissionGetUseCase.swift in Sources */,
+				A50D2E8F2B3C4ADC0015970A /* PatchServiceCombine.swift in Sources */,
 				361FA3842A628A2100C3BBFD /* BattleWishCollectionViewCell.swift in Sources */,
 				7E5C9D8E2A66E82400488DBD /* HistoryStatus.swift in Sources */,
 				8D2B2E842A616CDC00B75CDD /* AccountViewController.swift in Sources */,
@@ -1869,21 +1907,26 @@
 				8DAEBB0F2A66D992007B818A /* MyWishCouponView.swift in Sources */,
 				A58C70322A61D3AC00327CD3 /* EnterInvitationViewController.swift in Sources */,
 				A58C70302A61CE6300327CD3 /* EnterInvitationView.swift in Sources */,
+				A50D2E7F2B3C2CD40015970A /* HomeGetUseCase.swift in Sources */,
 				A5FEB88E2B35BE8300B86072 /* MyPageSubTitleView.swift in Sources */,
+				A50D2E832B3C31CC0015970A /* HomeGetRepository.swift in Sources */,
 				361FA38A2A62D65800C3BBFD /* BattleDataModel.swift in Sources */,
 				361FA3722A6268DD00C3BBFD /* ScoreView.swift in Sources */,
 				361FA3342A601EAA00C3BBFD /* PatchService.swift in Sources */,
 				A585AB8A2AFE1839006D3A93 /* MyRoundMission.swift in Sources */,
 				A585AB8C2AFE1881006D3A93 /* MissionCategory.swift in Sources */,
+				A50D2E7D2B3C2C9B0015970A /* HomeGetDTO.swift in Sources */,
 				A53C62F62A65719600AE3B45 /* UserDefaultsManager.swift in Sources */,
 				A578FC162A62D9380021A32E /* DDaySettingView.swift in Sources */,
 				36CF2F822A65BC3500D8F8E1 /* BattleCategoryType.swift in Sources */,
 				A5FEB89F2B35F25600B86072 /* MyPageGetItemViewData.swift in Sources */,
 				A585AB832AFE17A0006D3A93 /* RoundGameList.swift in Sources */,
 				A54E0F2D2B31939F00800AD8 /* BattleHistoryResultViewModel.swift in Sources */,
+				A50D2E882B3C37B40015970A /* RoundBattleMisstionItemViewData.swift in Sources */,
 				A585AB812AFE172D006D3A93 /* ShortGame.swift in Sources */,
 				36012F3B2A55B60F006B8A39 /* AuthRepository.swift in Sources */,
 				7E37BAE92A6284EE00A3CF64 /* HistoryDetailResultView.swift in Sources */,
+				A50D2E862B3C34110015970A /* HomeGetItemViewData.swift in Sources */,
 				A56C4E702A69A42500C18C8F /* SplashViewController.swift in Sources */,
 				361FA3742A6268DD00C3BBFD /* HomeView.swift in Sources */,
 				361FA37B2A62722A00C3BBFD /* BattleViewController.swift in Sources */,
@@ -1942,6 +1985,7 @@
 				A54E0F222B3189E200800AD8 /* BattleHistoryResultRepositoryInterface.swift in Sources */,
 				36CF2F842A65C77C00D8F8E1 /* BattleCategoryViewController.swift in Sources */,
 				8DFC07AA2AD1B19B00844676 /* TimerToastView.swift in Sources */,
+				A50D2E812B3C2D2B0015970A /* HomeGetRepositoryInterface.swift in Sources */,
 				7EACFC492A6882A8005F416A /* WishCouponDataModel.swift in Sources */,
 				A54E0F452B32D60900800AD8 /* RoundBattleMissionDTO.swift in Sources */,
 				36CF2F682A643C8900D8F8E1 /* BattleProgressView.swift in Sources */,
@@ -1950,7 +1994,7 @@
 				36CF2F662A643C6900D8F8E1 /* BattleProgressViewController.swift in Sources */,
 				36012F532A55CFAF006B8A39 /* UIViewController+.swift in Sources */,
 				8D6CB1F82A65092900FE46C2 /* WithdrawView.swift in Sources */,
-				A54E0F492B32D74300800AD8 /* RoundBattleMissionRepositoryInterface.swift in Sources */,
+				A54E0F492B32D74300800AD8 /* RoundBattleMissionGetRepositoryInterface.swift in Sources */,
 				36012F512A55CF2D006B8A39 /* UIView+.swift in Sources */,
 				A55150BC2A614A2000481F57 /* CoupleConnectionMethodView.swift in Sources */,
 				36012F472A55CDEE006B8A39 /* Date+.swift in Sources */,
@@ -1983,7 +2027,7 @@
 				7E64995A2A6503B100B2F86C /* WishCouponCollectionViewCell.swift in Sources */,
 				A5F26AB22B09F0FB0026BB58 /* BattleMemoViewController.swift in Sources */,
 				8D95A2D62AC86A8E0053186D /* TimerProgressView.swift in Sources */,
-				A54E0F4B2B32D7F300800AD8 /* RoundBattleMissionRepository.swift in Sources */,
+				A54E0F4B2B32D7F300800AD8 /* RoundBattleMissionGetRepository.swift in Sources */,
 				36DC48062AEEBB41003DCB36 /* DeleteUserDataModel.swift in Sources */,
 				361FA3712A6268DD00C3BBFD /* HomeBattleView.swift in Sources */,
 				7E25F6542A633ACA003E82F6 /* WishCouponCountView.swift in Sources */,
