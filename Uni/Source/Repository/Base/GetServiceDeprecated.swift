@@ -3,11 +3,6 @@ import Alamofire
 import Combine
 import Sentry
 
-enum ErrorType: String, Error {
-    case disconnected = "UE1006"
-    case unknown
-}
-
 class GetServiceCombine {
     static let shared = GetServiceCombine()
     private init() {}
