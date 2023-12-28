@@ -482,6 +482,7 @@
 			isa = PBXGroup;
 			children = (
 				A56C4E6C2A698C2300C18C8F /* Uni.entitlements */,
+				A59468702B3DA03D003BEC7C /* Network */,
 				A58CE55F2B3008F50074394C /* Presentation */,
 				A585AB7A2AFE155F006D3A93 /* Domain */,
 				A54E0F202B31897500800AD8 /* Data */,
@@ -557,7 +558,6 @@
 		36012F282A55AE4A006B8A39 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				A50D2E8B2B3C4A5B0015970A /* APIServiceCombine */,
 				361FA32C2A601C6500C3BBFD /* Base */,
 				3698B21D2A69A9E0006314FE /* WishRepository */,
 				A56C4E602A68FA2700C18C8F /* CoupleJoinRepository */,
@@ -656,14 +656,11 @@
 		361FA32C2A601C6500C3BBFD /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				361FA32A2A601A4100C3BBFD /* Config.swift */,
 				361FA32D2A601D1B00C3BBFD /* NetworkResult.swift */,
 				361FA32F2A601D2E00C3BBFD /* GetServiceDeprecated.swift */,
 				361FA3312A601E7900C3BBFD /* PostServiceDeprecated.swift */,
 				361FA3332A601EAA00C3BBFD /* PatchService.swift */,
-				361FA3372A60223200C3BBFD /* HeaderUtils.swift */,
 				3698B2172A686438006314FE /* DeleteService.swift */,
-				A59468692B3D9E3C003BEC7C /* ErrorType.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1697,6 +1694,25 @@
 				A54E0F122B3153F600800AD8 /* Components */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		A59468702B3DA03D003BEC7C /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				A59468712B3DA06B003BEC7C /* Base */,
+				A50D2E8B2B3C4A5B0015970A /* APIServiceCombine */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A59468712B3DA06B003BEC7C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A59468692B3D9E3C003BEC7C /* ErrorType.swift */,
+				361FA3372A60223200C3BBFD /* HeaderUtils.swift */,
+				361FA32A2A601A4100C3BBFD /* Config.swift */,
+			);
+			path = Base;
 			sourceTree = "<group>";
 		};
 		A5B4B58C2A604C2F000C7555 /* Login */ = {
