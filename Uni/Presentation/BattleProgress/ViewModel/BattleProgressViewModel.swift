@@ -82,6 +82,8 @@ class BattleProgressViewModel: ObservableObject {
         case .unknown:
             let navigationViewController = UINavigationController(rootViewController: LoginViewController())
             self.changeRootViewController(navigationViewController)
+        case .parsingError:
+            return 
         }
     }
     func changeRootViewController(_ viewControllerToPresent: UIViewController) {
