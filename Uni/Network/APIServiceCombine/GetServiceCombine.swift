@@ -5,18 +5,22 @@ import Sentry
 
 final class GetServiceCombine: GetServiceProtocol {
     static let shared = GetServiceCombine()
-    private init() {}
+    private let session: Session
+    init(session: Session = Session.default) {
+          self.session = session
+    }
     private let tokenUtils = HeaderUtils()
     func getService<T: Decodable>(from url: String, isUseHeader: Bool) -> AnyPublisher<T, ErrorType> {
         return Future<T, ErrorType> { promise in
-            AF.request(url,
+            self.session.request(url,
                        method: .get,
                        encoding: JSONEncoding.default,
                        headers: isUseHeader ? self.tokenUtils.getAuthorizationHeader() : self.tokenUtils.getNormalHeader())
                 .response { response in
                     do {
-                        guard let resData = response.data else {
-                        return }
+                        guard let resData = response.data else { promise(.failure(ErrorType.parsingError))
+                            return
+                        }
                         let data = try JSONDecoder().decode(T.self, from: resData)
                         promise(.success(data))
                     } catch {

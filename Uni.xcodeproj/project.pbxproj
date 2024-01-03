@@ -206,6 +206,9 @@
 		A5B4B5922A604F43000C7555 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B4B5912A604F43000C7555 /* LoginView.swift */; };
 		A5B70E5E2B19A4C4001FA019 /* BattleMemoViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B70E5D2B19A4C4001FA019 /* BattleMemoViewData.swift */; };
 		A5B70E602B19C69A001FA019 /* MemoTextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B70E5F2B19C69A001FA019 /* MemoTextManager.swift */; };
+		A5BC3A5C2B4431B100FD369C /* BattleHistoryResultServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BC3A5B2B4431B100FD369C /* BattleHistoryResultServiceTests.swift */; };
+		A5BC3A652B451D8700FD369C /* BattleHistoryResultConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BC3A642B451D8700FD369C /* BattleHistoryResultConstants.swift */; };
+		A5BC3A682B452F4D00FD369C /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BC3A672B452F4D00FD369C /* MockURLProtocol.swift */; };
 		A5C23DDF2ABAB96900800190 /* BattleProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23DDE2ABAB96900800190 /* BattleProgressViewModel.swift */; };
 		A5C6D3862ACD606500C01CA9 /* BattleResultViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C6D3852ACD606500C01CA9 /* BattleResultViewData.swift */; };
 		A5F26AB02B09EF870026BB58 /* BattleMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F26AAF2B09EF870026BB58 /* BattleMemoView.swift */; };
@@ -225,6 +228,16 @@
 		F80916392ADC281800237AA3 /* QnAView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80916382ADC281700237AA3 /* QnAView.swift */; };
 		F809163B2ADC283400237AA3 /* QnAViewAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = F809163A2ADC283400237AA3 /* QnAViewAlert.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5BC3A5D2B4431B100FD369C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 36012F042A55A9F4006B8A39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 36012F0B2A55A9F4006B8A39;
+			remoteInfo = Uni;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		36012F0C2A55A9F4006B8A39 /* Uni.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Uni.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -423,6 +436,10 @@
 		A5B4B5912A604F43000C7555 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		A5B70E5D2B19A4C4001FA019 /* BattleMemoViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleMemoViewData.swift; sourceTree = "<group>"; };
 		A5B70E5F2B19C69A001FA019 /* MemoTextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTextManager.swift; sourceTree = "<group>"; };
+		A5BC3A592B4431B100FD369C /* SparkleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SparkleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5BC3A5B2B4431B100FD369C /* BattleHistoryResultServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryResultServiceTests.swift; sourceTree = "<group>"; };
+		A5BC3A642B451D8700FD369C /* BattleHistoryResultConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryResultConstants.swift; sourceTree = "<group>"; };
+		A5BC3A672B452F4D00FD369C /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		A5C23DDE2ABAB96900800190 /* BattleProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleProgressViewModel.swift; sourceTree = "<group>"; };
 		A5C6D3852ACD606500C01CA9 /* BattleResultViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleResultViewData.swift; sourceTree = "<group>"; };
 		A5F26AAF2B09EF870026BB58 /* BattleMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleMemoView.swift; sourceTree = "<group>"; };
@@ -459,6 +476,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5BC3A562B4431B100FD369C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -467,6 +491,7 @@
 			children = (
 				A5667F082A952A1600FC0BA4 /* .swiftlint.yml */,
 				36012F0E2A55A9F4006B8A39 /* Uni */,
+				A5BC3A5A2B4431B100FD369C /* SparkleAppTests */,
 				36012F0D2A55A9F4006B8A39 /* Products */,
 				36CF2F612A63F2F200D8F8E1 /* Recovered References */,
 			);
@@ -476,6 +501,7 @@
 			isa = PBXGroup;
 			children = (
 				36012F0C2A55A9F4006B8A39 /* Uni.app */,
+				A5BC3A592B4431B100FD369C /* SparkleAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1703,6 +1729,7 @@
 			children = (
 				A59468712B3DA06B003BEC7C /* Base */,
 				A59468722B3DA159003BEC7C /* ServiceProtocol */,
+				A59468752B3EC4C0003BEC7C /* MockService */,
 				A50D2E8B2B3C4A5B0015970A /* APIServiceCombine */,
 			);
 			path = Network;
@@ -1724,6 +1751,13 @@
 				A59468732B3DA17C003BEC7C /* GetServiceProtocol.swift */,
 			);
 			path = ServiceProtocol;
+			sourceTree = "<group>";
+		};
+		A59468752B3EC4C0003BEC7C /* MockService */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MockService;
 			sourceTree = "<group>";
 		};
 		A5B4B58C2A604C2F000C7555 /* Login */ = {
@@ -1749,6 +1783,40 @@
 				A5B4B58F2A604CD3000C7555 /* LoginViewController.swift */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		A5BC3A5A2B4431B100FD369C /* SparkleAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5BC3A622B451D3200FD369C /* BattleHistoryResultTests */,
+			);
+			path = SparkleAppTests;
+			sourceTree = "<group>";
+		};
+		A5BC3A622B451D3200FD369C /* BattleHistoryResultTests */ = {
+			isa = PBXGroup;
+			children = (
+				A5BC3A662B452F4000FD369C /* Mock */,
+				A5BC3A632B451D6D00FD369C /* Constants */,
+				A5BC3A5B2B4431B100FD369C /* BattleHistoryResultServiceTests.swift */,
+			);
+			path = BattleHistoryResultTests;
+			sourceTree = "<group>";
+		};
+		A5BC3A632B451D6D00FD369C /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A5BC3A642B451D8700FD369C /* BattleHistoryResultConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A5BC3A662B452F4000FD369C /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				A5BC3A672B452F4D00FD369C /* MockURLProtocol.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		A5C23DDD2ABAB95600800190 /* ViewData */ = {
@@ -1809,6 +1877,24 @@
 			productReference = 36012F0C2A55A9F4006B8A39 /* Uni.app */;
 			productType = "com.apple.product-type.application";
 		};
+		A5BC3A582B4431B100FD369C /* SparkleAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A5BC3A5F2B4431B100FD369C /* Build configuration list for PBXNativeTarget "SparkleAppTests" */;
+			buildPhases = (
+				A5BC3A552B4431B100FD369C /* Sources */,
+				A5BC3A562B4431B100FD369C /* Frameworks */,
+				A5BC3A572B4431B100FD369C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A5BC3A5E2B4431B100FD369C /* PBXTargetDependency */,
+			);
+			name = SparkleAppTests;
+			productName = SparkleAppTests;
+			productReference = A5BC3A592B4431B100FD369C /* SparkleAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -1816,11 +1902,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1430;
+				LastSwiftUpdateCheck = 1510;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					36012F0B2A55A9F4006B8A39 = {
 						CreatedOnToolsVersion = 14.3;
+					};
+					A5BC3A582B4431B100FD369C = {
+						CreatedOnToolsVersion = 15.1;
+						TestTargetID = 36012F0B2A55A9F4006B8A39;
 					};
 				};
 			};
@@ -1847,6 +1937,7 @@
 			projectRoot = "";
 			targets = (
 				36012F0B2A55A9F4006B8A39 /* Uni */,
+				A5BC3A582B4431B100FD369C /* SparkleAppTests */,
 			);
 		};
 /* End PBXProject section */
@@ -1859,6 +1950,13 @@
 				A5667F092A952A1600FC0BA4 /* .swiftlint.yml in Resources */,
 				36012F1C2A55A9F6006B8A39 /* LaunchScreen.storyboard in Resources */,
 				36012F192A55A9F6006B8A39 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A5BC3A572B4431B100FD369C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2099,7 +2197,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A5BC3A552B4431B100FD369C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5BC3A682B452F4D00FD369C /* MockURLProtocol.swift in Sources */,
+				A5BC3A5C2B4431B100FD369C /* BattleHistoryResultServiceTests.swift in Sources */,
+				A5BC3A652B451D8700FD369C /* BattleHistoryResultConstants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A5BC3A5E2B4431B100FD369C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 36012F0B2A55A9F4006B8A39 /* Uni */;
+			targetProxy = A5BC3A5D2B4431B100FD369C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		36012F1A2A55A9F6006B8A39 /* LaunchScreen.storyboard */ = {
@@ -2254,7 +2370,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.universe.sparkle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2290,7 +2406,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.universe.sparkle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -2300,6 +2416,59 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		A5BC3A602B4431B100FD369C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JB8T59WMFR;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = project.SparkleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Uni.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Uni";
+			};
+			name = Debug;
+		};
+		A5BC3A612B4431B100FD369C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = JB8T59WMFR;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = project.SparkleAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Uni.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Uni";
 			};
 			name = Release;
 		};
@@ -2320,6 +2489,15 @@
 			buildConfigurations = (
 				36012F212A55A9F6006B8A39 /* Debug */,
 				36012F222A55A9F6006B8A39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A5BC3A5F2B4431B100FD369C /* Build configuration list for PBXNativeTarget "SparkleAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5BC3A602B4431B100FD369C /* Debug */,
+				A5BC3A612B4431B100FD369C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
