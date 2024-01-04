@@ -1782,6 +1782,7 @@
 		A5BC3A5A2B4431B100FD369C /* SparkleAppTests */ = {
 			isa = PBXGroup;
 			children = (
+				A5BC3A662B452F4000FD369C /* Mock */,
 				A5BC3A622B451D3200FD369C /* BattleHistoryResultTests */,
 			);
 			path = SparkleAppTests;
@@ -1790,7 +1791,6 @@
 		A5BC3A622B451D3200FD369C /* BattleHistoryResultTests */ = {
 			isa = PBXGroup;
 			children = (
-				A5BC3A662B452F4000FD369C /* Mock */,
 				A5BC3A632B451D6D00FD369C /* Constants */,
 				A5BC3A5B2B4431B100FD369C /* BattleHistoryResultServiceTests.swift */,
 				A5BC3A692B46841800FD369C /* BattleHistoryItemViewDataTests.swift */,
