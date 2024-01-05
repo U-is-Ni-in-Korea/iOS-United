@@ -228,6 +228,7 @@
 		A5BC3D0D2B48276400FD369C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BC3CF82B48276300FD369C /* Domain.framework */; };
 		A5BC3D0E2B48276400FD369C /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5BC3CF82B48276300FD369C /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		A5BC3D162B48285000FD369C /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BC3CF82B48276300FD369C /* Domain.framework */; };
+		A5BC3D232B482E8E00FD369C /* ErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BC3D222B482E8E00FD369C /* ErrorCode.swift */; };
 		A5C23DDF2ABAB96900800190 /* BattleProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C23DDE2ABAB96900800190 /* BattleProgressViewModel.swift */; };
 		A5C6D3862ACD606500C01CA9 /* BattleResultViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5C6D3852ACD606500C01CA9 /* BattleResultViewData.swift */; };
 		A5F26AB02B09EF870026BB58 /* BattleMemoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5F26AAF2B09EF870026BB58 /* BattleMemoView.swift */; };
@@ -538,6 +539,7 @@
 		A5BC3CFB2B48276300FD369C /* Domain.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = Domain.docc; sourceTree = "<group>"; };
 		A5BC3D012B48276300FD369C /* DomainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DomainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5BC3D082B48276400FD369C /* DomainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainTests.swift; sourceTree = "<group>"; };
+		A5BC3D222B482E8E00FD369C /* ErrorCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorCode.swift; sourceTree = "<group>"; };
 		A5C23DDE2ABAB96900800190 /* BattleProgressViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleProgressViewModel.swift; sourceTree = "<group>"; };
 		A5C6D3852ACD606500C01CA9 /* BattleResultViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleResultViewData.swift; sourceTree = "<group>"; };
 		A5F26AAF2B09EF870026BB58 /* BattleMemoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleMemoView.swift; sourceTree = "<group>"; };
@@ -2026,6 +2028,7 @@
 		A5BC3D212B482E4900FD369C /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				A5BC3D222B482E8E00FD369C /* ErrorCode.swift */,
 			);
 			name = Entity;
 			path = "뚜";
@@ -2591,6 +2594,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5BC3CFC2B48276300FD369C /* Domain.docc in Sources */,
+				A5BC3D232B482E8E00FD369C /* ErrorCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3112,6 +3116,7 @@
 		A5BC3D112B48276400FD369C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -3135,6 +3140,7 @@
 		A5BC3D122B48276400FD369C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
