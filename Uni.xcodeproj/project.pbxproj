@@ -2008,6 +2008,7 @@
 		A5BC3CF92B48276300FD369C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				A5BC3D212B482E4900FD369C /* Entity */,
 				A5BC3CFA2B48276300FD369C /* Domain.h */,
 				A5BC3CFB2B48276300FD369C /* Domain.docc */,
 			);
@@ -2020,6 +2021,14 @@
 				A5BC3D082B48276400FD369C /* DomainTests.swift */,
 			);
 			path = DomainTests;
+			sourceTree = "<group>";
+		};
+		A5BC3D212B482E4900FD369C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Entity;
+			path = "뚜";
 			sourceTree = "<group>";
 		};
 		A5C23DDD2ABAB95600800190 /* ViewData */ = {
