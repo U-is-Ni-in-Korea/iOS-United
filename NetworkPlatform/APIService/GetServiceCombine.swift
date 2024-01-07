@@ -10,7 +10,7 @@ public final class GetServiceCombine {
           self.session = session
     }
     private let tokenUtils = HeaderUtils()
-    public func getService2<T: Decodable>(from url: String, isUseHeader: Bool) -> AnyPublisher<T, ErrorType> {
+    public func getService<T: Decodable>(from url: String, isUseHeader: Bool) -> AnyPublisher<T, ErrorType> {
         return Future<T, ErrorType> { promise in
             self.session.request(url,
                        method: .get,
