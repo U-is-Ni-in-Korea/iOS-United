@@ -1,14 +1,13 @@
 //
-//  NetworkPlatformTests.swift
+//  BattleHistoryResultServiceTests.swift
 //  NetworkPlatformTests
 //
-//  Created by 류창휘 on 1/5/24.
+//  Created by 류창휘 on 1/7/24.
 //
 
 import XCTest
-@testable import NetworkPlatform
 
-final class NetworkPlatformTests: XCTestCase {
+final class BattleHistoryResultServiceTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

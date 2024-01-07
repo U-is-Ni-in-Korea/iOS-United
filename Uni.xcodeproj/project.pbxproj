@@ -137,6 +137,12 @@
 		A50D2E862B3C34110015970A /* HomeGetItemViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D2E852B3C34110015970A /* HomeGetItemViewData.swift */; };
 		A50D2E882B3C37B40015970A /* RoundBattleMisstionItemViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D2E872B3C37B40015970A /* RoundBattleMisstionItemViewData.swift */; };
 		A50D2E8F2B3C4ADC0015970A /* PatchServiceCombine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50D2E8E2B3C4ADC0015970A /* PatchServiceCombine.swift */; };
+		A513C0492B49E0D600C00E99 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A513C0482B49E0D600C00E99 /* Alamofire */; };
+		A513C04A2B49E14300C00E99 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BC3CF82B48276300FD369C /* Domain.framework */; };
+		A513C04B2B49E14700C00E99 /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BC3CC62B47FE6900FD369C /* NetworkPlatform.framework */; };
+		A513C0502B49E23100C00E99 /* BattleHistoryResultConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A513C04F2B49E23100C00E99 /* BattleHistoryResultConstants.swift */; };
+		A513C0522B4A8D2F00C00E99 /* BattleHistoryResultServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A513C0512B4A8D2F00C00E99 /* BattleHistoryResultServiceTests.swift */; };
+		A513C0582B4A8DFC00C00E99 /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A513C0572B4A8DFC00C00E99 /* MockURLProtocol.swift */; };
 		A53C62F62A65719600AE3B45 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */; };
 		A53C62F92A6682A600AE3B45 /* KakaoLoginDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */; };
 		A53C62FE2A67DAC600AE3B45 /* UserRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A53C62FD2A67DAC600AE3B45 /* UserRepository.swift */; };
@@ -206,14 +212,12 @@
 		A5B70E5E2B19A4C4001FA019 /* BattleMemoViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B70E5D2B19A4C4001FA019 /* BattleMemoViewData.swift */; };
 		A5B70E602B19C69A001FA019 /* MemoTextManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5B70E5F2B19C69A001FA019 /* MemoTextManager.swift */; };
 		A5BC3A5C2B4431B100FD369C /* BattleHistoryResultServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BC3A5B2B4431B100FD369C /* BattleHistoryResultServiceTests.swift */; };
-		A5BC3A652B451D8700FD369C /* BattleHistoryResultConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BC3A642B451D8700FD369C /* BattleHistoryResultConstants.swift */; };
 		A5BC3A682B452F4D00FD369C /* MockURLProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BC3A672B452F4D00FD369C /* MockURLProtocol.swift */; };
 		A5BC3A6A2B46841800FD369C /* BattleHistoryItemViewDataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BC3A692B46841800FD369C /* BattleHistoryItemViewDataTests.swift */; };
 		A5BC3A6E2B46874800FD369C /* BattleHistoryResultConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BC3A6D2B46874800FD369C /* BattleHistoryResultConstants.swift */; };
 		A5BC3A7A2B46E14500FD369C /* BattleHistoryResultViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BC3A792B46E14500FD369C /* BattleHistoryResultViewModelTests.swift */; };
 		A5BC3CCA2B47FE6900FD369C /* NetworkPlatform.docc in Sources */ = {isa = PBXBuildFile; fileRef = A5BC3CC92B47FE6900FD369C /* NetworkPlatform.docc */; };
 		A5BC3CD02B47FE6900FD369C /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BC3CC62B47FE6900FD369C /* NetworkPlatform.framework */; };
-		A5BC3CD72B47FE6900FD369C /* NetworkPlatformTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5BC3CD62B47FE6900FD369C /* NetworkPlatformTests.swift */; };
 		A5BC3CD82B47FE6900FD369C /* NetworkPlatform.h in Headers */ = {isa = PBXBuildFile; fileRef = A5BC3CC82B47FE6900FD369C /* NetworkPlatform.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A5BC3CDB2B47FE6900FD369C /* NetworkPlatform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5BC3CC62B47FE6900FD369C /* NetworkPlatform.framework */; };
 		A5BC3CDC2B47FE6900FD369C /* NetworkPlatform.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = A5BC3CC62B47FE6900FD369C /* NetworkPlatform.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -451,6 +455,9 @@
 		A50D2E852B3C34110015970A /* HomeGetItemViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeGetItemViewData.swift; sourceTree = "<group>"; };
 		A50D2E872B3C37B40015970A /* RoundBattleMisstionItemViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundBattleMisstionItemViewData.swift; sourceTree = "<group>"; };
 		A50D2E8E2B3C4ADC0015970A /* PatchServiceCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatchServiceCombine.swift; sourceTree = "<group>"; };
+		A513C04F2B49E23100C00E99 /* BattleHistoryResultConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryResultConstants.swift; sourceTree = "<group>"; };
+		A513C0512B4A8D2F00C00E99 /* BattleHistoryResultServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryResultServiceTests.swift; sourceTree = "<group>"; };
+		A513C0572B4A8DFC00C00E99 /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		A53C62F52A65719600AE3B45 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		A53C62F82A6682A600AE3B45 /* KakaoLoginDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoLoginDataModel.swift; sourceTree = "<group>"; };
 		A53C62FD2A67DAC600AE3B45 /* UserRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepository.swift; sourceTree = "<group>"; };
@@ -522,7 +529,6 @@
 		A5B70E5F2B19C69A001FA019 /* MemoTextManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoTextManager.swift; sourceTree = "<group>"; };
 		A5BC3A592B4431B100FD369C /* SparkleAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SparkleAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5BC3A5B2B4431B100FD369C /* BattleHistoryResultServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryResultServiceTests.swift; sourceTree = "<group>"; };
-		A5BC3A642B451D8700FD369C /* BattleHistoryResultConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryResultConstants.swift; sourceTree = "<group>"; };
 		A5BC3A672B452F4D00FD369C /* MockURLProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockURLProtocol.swift; sourceTree = "<group>"; };
 		A5BC3A692B46841800FD369C /* BattleHistoryItemViewDataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryItemViewDataTests.swift; sourceTree = "<group>"; };
 		A5BC3A6D2B46874800FD369C /* BattleHistoryResultConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleHistoryResultConstants.swift; sourceTree = "<group>"; };
@@ -531,7 +537,6 @@
 		A5BC3CC82B47FE6900FD369C /* NetworkPlatform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkPlatform.h; sourceTree = "<group>"; };
 		A5BC3CC92B47FE6900FD369C /* NetworkPlatform.docc */ = {isa = PBXFileReference; lastKnownFileType = folder.documentationcatalog; path = NetworkPlatform.docc; sourceTree = "<group>"; };
 		A5BC3CCF2B47FE6900FD369C /* NetworkPlatformTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkPlatformTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5BC3CD62B47FE6900FD369C /* NetworkPlatformTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkPlatformTests.swift; sourceTree = "<group>"; };
 		A5BC3CE72B47FFED00FD369C /* GetServiceCombine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetServiceCombine.swift; sourceTree = "<group>"; };
 		A5BC3CEA2B48008700FD369C /* ErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorType.swift; sourceTree = "<group>"; };
 		A5BC3CEC2B4800B100FD369C /* HeaderUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderUtils.swift; sourceTree = "<group>"; };
@@ -584,6 +589,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A513C04B2B49E14700C00E99 /* NetworkPlatform.framework in Frameworks */,
+				A513C04A2B49E14300C00E99 /* Domain.framework in Frameworks */,
+				A513C0492B49E0D600C00E99 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1180,6 +1188,22 @@
 				A594686B2B3D9EA9003BEC7C /* GetServiceCombine.swift */,
 			);
 			path = APIServiceCombine;
+			sourceTree = "<group>";
+		};
+		A513C04E2B49E21900C00E99 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				A513C04F2B49E23100C00E99 /* BattleHistoryResultConstants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		A513C0562B4A8DF400C00E99 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				A513C0572B4A8DFC00C00E99 /* MockURLProtocol.swift */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 		A53C62F42A65714400AE3B45 /* Shared */ = {
@@ -1926,20 +1950,11 @@
 		A5BC3A622B451D3200FD369C /* BattleHistoryResultTests */ = {
 			isa = PBXGroup;
 			children = (
-				A5BC3A632B451D6D00FD369C /* Constants */,
 				A5BC3A5B2B4431B100FD369C /* BattleHistoryResultServiceTests.swift */,
 				A5BC3A692B46841800FD369C /* BattleHistoryItemViewDataTests.swift */,
 				A5BC3A792B46E14500FD369C /* BattleHistoryResultViewModelTests.swift */,
 			);
 			path = BattleHistoryResultTests;
-			sourceTree = "<group>";
-		};
-		A5BC3A632B451D6D00FD369C /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				A5BC3A642B451D8700FD369C /* BattleHistoryResultConstants.swift */,
-			);
-			path = Constants;
 			sourceTree = "<group>";
 		};
 		A5BC3A662B452F4000FD369C /* Mock */ = {
@@ -1969,6 +1984,7 @@
 		A5BC3CC72B47FE6900FD369C /* NetworkPlatform */ = {
 			isa = PBXGroup;
 			children = (
+				A513C0562B4A8DF400C00E99 /* Mock */,
 				A5BC3CE92B48001400FD369C /* Base */,
 				A5BC3CE42B47FF2300FD369C /* APIService */,
 				A5BC3CC82B47FE6900FD369C /* NetworkPlatform.h */,
@@ -1980,7 +1996,7 @@
 		A5BC3CD52B47FE6900FD369C /* NetworkPlatformTests */ = {
 			isa = PBXGroup;
 			children = (
-				A5BC3CD62B47FE6900FD369C /* NetworkPlatformTests.swift */,
+				A513C0512B4A8D2F00C00E99 /* BattleHistoryResultServiceTests.swift */,
 			);
 			path = NetworkPlatformTests;
 			sourceTree = "<group>";
@@ -2012,6 +2028,7 @@
 		A5BC3CF92B48276300FD369C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				A513C04E2B49E21900C00E99 /* Constants */,
 				A5BC3D212B482E4900FD369C /* Entity */,
 				A5BC3CFA2B48276300FD369C /* Domain.h */,
 				A5BC3CFB2B48276300FD369C /* Domain.docc */,
@@ -2131,6 +2148,9 @@
 				A5BC3A5E2B4431B100FD369C /* PBXTargetDependency */,
 			);
 			name = SparkleAppTests;
+			packageProductDependencies = (
+				A513C0482B49E0D600C00E99 /* Alamofire */,
+			);
 			productName = SparkleAppTests;
 			productReference = A5BC3A592B4431B100FD369C /* SparkleAppTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -2568,7 +2588,6 @@
 				A5BC3A6A2B46841800FD369C /* BattleHistoryItemViewDataTests.swift in Sources */,
 				A5BC3A682B452F4D00FD369C /* MockURLProtocol.swift in Sources */,
 				A5BC3A5C2B4431B100FD369C /* BattleHistoryResultServiceTests.swift in Sources */,
-				A5BC3A652B451D8700FD369C /* BattleHistoryResultConstants.swift in Sources */,
 				A5BC3A7A2B46E14500FD369C /* BattleHistoryResultViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2579,6 +2598,7 @@
 			files = (
 				A5BC3CE82B47FFED00FD369C /* GetServiceCombine.swift in Sources */,
 				A5BC3CEB2B48008700FD369C /* ErrorType.swift in Sources */,
+				A513C0582B4A8DFC00C00E99 /* MockURLProtocol.swift in Sources */,
 				A5BC3CED2B4800B100FD369C /* HeaderUtils.swift in Sources */,
 				A5BC3CCA2B47FE6900FD369C /* NetworkPlatform.docc in Sources */,
 			);
@@ -2588,7 +2608,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5BC3CD72B47FE6900FD369C /* NetworkPlatformTests.swift in Sources */,
+				A513C0522B4A8D2F00C00E99 /* BattleHistoryResultServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2599,6 +2619,7 @@
 				A5BC3D252B482FBC00FD369C /* BattleHistoryResultDTO.swift in Sources */,
 				A5BC3CFC2B48276300FD369C /* Domain.docc in Sources */,
 				A5BC3D232B482E8E00FD369C /* ErrorCode.swift in Sources */,
+				A513C0502B49E23100C00E99 /* BattleHistoryResultConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2877,11 +2898,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = project.SparkleAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Uni.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Uni";
 			};
 			name = Debug;
@@ -2904,10 +2926,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = project.SparkleAppTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Uni.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Uni";
 			};
 			name = Release;
@@ -2943,10 +2966,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = project.NetworkPlatform;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -2983,9 +3008,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = project.NetworkPlatform;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -3069,10 +3096,12 @@
 				PRODUCT_BUNDLE_IDENTIFIER = project.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -3109,9 +3138,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = project.Domain;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -3331,6 +3362,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A50D2E792B3BFB380015970A /* XCRemoteSwiftPackageReference "iOS-SDS-United" */;
 			productName = SDSKit;
+		};
+		A513C0482B49E0D600C00E99 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 36012F5A2A55D08E006B8A39 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 		A5BC3CF12B4802BF00FD369C /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
