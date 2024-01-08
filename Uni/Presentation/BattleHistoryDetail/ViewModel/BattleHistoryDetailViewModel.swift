@@ -1,5 +1,6 @@
 import Combine
 import Foundation
+import Domain
 
 struct BattleHistoryDetailViewModel {
     struct Input {

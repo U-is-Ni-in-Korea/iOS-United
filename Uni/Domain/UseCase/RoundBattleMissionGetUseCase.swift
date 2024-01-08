@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import NetworkPlatform
 
 protocol RoundBattleMissionUseCaseProtocol {
     func execute(roundId: Int) -> AnyPublisher<RoundBattleMissionDTO, ErrorType>

@@ -2,6 +2,7 @@ import Foundation
 import SafariServices
 import Combine
 import UIKit
+import NetworkPlatform
 
 final class MyPageViewModel: ObservableObject {
     @Published var myPageName: String = ""

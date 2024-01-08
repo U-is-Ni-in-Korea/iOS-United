@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import NetworkPlatform
 
 protocol MyPageGetUseCaseProtocol {
     func excute() -> AnyPublisher<MyPageGetDTO, ErrorType>

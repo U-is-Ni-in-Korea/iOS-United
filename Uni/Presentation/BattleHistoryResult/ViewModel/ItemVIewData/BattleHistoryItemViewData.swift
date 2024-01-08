@@ -1,4 +1,5 @@
 import Foundation
+import Domain
 
 struct BattleHistoryItemViewData {
     let date: String

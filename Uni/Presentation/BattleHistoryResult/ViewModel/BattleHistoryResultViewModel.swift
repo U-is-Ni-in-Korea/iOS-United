@@ -1,5 +1,7 @@
 import Combine
 import Foundation
+import Domain
+import NetworkPlatform
 
 struct BattleHistoryResultViewModel {
     private let battleHistoryResultUsecase: BattleHistoryResultUseCaseProtocol

@@ -1,5 +1,7 @@
 import Foundation
 import Combine
+import Domain
+import NetworkPlatform
 
 protocol BattleHistoryResultUseCaseProtocol {
     func execute() -> AnyPublisher<[BattleHistoryResultDTO], ErrorType>
