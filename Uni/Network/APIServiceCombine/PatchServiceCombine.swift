@@ -2,6 +2,7 @@ import Foundation
 import Combine
 import Alamofire
 import Sentry
+import Domain
 import NetworkPlatform
 
 final class PatchServiceCombine {

@@ -1,5 +1,6 @@
 import Combine
 import UIKit
+import Domain
 import NetworkPlatform
 
 protocol NavigationBarProtocol: ObservableObject {
