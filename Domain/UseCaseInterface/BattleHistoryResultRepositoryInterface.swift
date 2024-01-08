@@ -1,8 +1,6 @@
 import Foundation
 import Combine
-import Domain
-import NetworkPlatform
 
-protocol BattleHistoryResultRepositoryInterface {
+public protocol BattleHistoryResultRepositoryInterface {
     func data() -> AnyPublisher<[BattleHistoryResultDTO], ErrorType>
 }
