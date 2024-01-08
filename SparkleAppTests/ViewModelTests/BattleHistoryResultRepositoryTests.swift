@@ -1,14 +1,17 @@
 import XCTest
 import Combine
 import Alamofire
+import Domain
+import NetworkPlatform
 @testable import Uni
 
-final class BattleHistoryResultViewModelTests: XCTestCase {
+final class BattleHistoryViewModelTests: XCTestCase {
     var sut: BattleHistoryResultViewModel!
     var getServiceCombine: GetServiceCombine!
     var battleHistoryResult: [BattleHistoryResultDTO]!
     var urlString: String!
     var cancellables: Set<AnyCancellable> = []
+
     override func setUpWithError() throws {
         let config = URLSessionConfiguration.af.ephemeral
         config.protocolClasses = [MockURLProtocol.self]
@@ -16,6 +19,7 @@ final class BattleHistoryResultViewModelTests: XCTestCase {
         sut = BattleHistoryResultViewModel(battleHistoryResultUsecase: BattleHistoryResultUseCase(battleHistoryResultRepository: BattleHistoryResultRepository(service: GetServiceCombine(session: urlSesstion))))
         urlString = Config.baseURL + "api/history"
     }
+
     override func tearDownWithError() throws {
         sut = nil
         getServiceCombine = nil

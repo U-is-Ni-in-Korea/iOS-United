@@ -1,6 +1,8 @@
 import XCTest
 import Combine
 import Alamofire
+import Domain
+import NetworkPlatform
 @testable import Uni
 
 final class BattleHistoryResultServiceTests: XCTestCase {

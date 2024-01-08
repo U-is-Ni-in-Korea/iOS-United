@@ -1,5 +1,7 @@
 import Combine
 import Foundation
+import Domain
+import NetworkPlatform
 
 final class BattleHistoryResultRepository: BattleHistoryResultRepositoryInterface {
     private let service: GetServiceCombine

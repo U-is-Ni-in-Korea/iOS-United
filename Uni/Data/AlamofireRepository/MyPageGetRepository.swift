@@ -1,5 +1,6 @@
 import Foundation
 import Combine
+import NetworkPlatform
 
 final class MyPageGetRepository: MyPageGetRepositoryInterface {
     private let service: GetServiceCombine

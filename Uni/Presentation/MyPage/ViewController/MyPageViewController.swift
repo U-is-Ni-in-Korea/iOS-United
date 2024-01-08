@@ -1,7 +1,7 @@
 import UIKit
 import SafariServices
 import SwiftUI
-
+import NetworkPlatform
 import SDSKit
 import Then
 

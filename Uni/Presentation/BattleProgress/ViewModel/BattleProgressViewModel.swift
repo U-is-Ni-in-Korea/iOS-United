@@ -1,5 +1,6 @@
 import Combine
 import UIKit
+import NetworkPlatform
 
 protocol NavigationBarProtocol: ObservableObject {
     var dismissButtonTapPublisher: PassthroughSubject<Void, Never> { get set }

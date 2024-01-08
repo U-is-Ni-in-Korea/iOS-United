@@ -1,4 +1,5 @@
 import XCTest
+import Domain
 @testable import Uni
 
 final class BattleHistoryItemViewDataTests: XCTestCase {

@@ -1,6 +1,7 @@
 import Combine
 import UIKit
 import SwiftUI
+import NetworkPlatform
 
 final class BattleProgressViewController: BaseViewController {
     // MARK: - Property

@@ -3,6 +3,8 @@ import Combine
 import Then
 import SDSKit
 import SkeletonView
+import Domain
+import NetworkPlatform
 
 final class BattleHistoryResultViewController: BaseViewController {
     // MARK: - Property
