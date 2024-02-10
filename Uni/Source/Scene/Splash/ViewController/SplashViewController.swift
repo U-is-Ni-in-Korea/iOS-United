@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-class SplashViewController: BaseViewController {
+final class SplashViewController: BaseViewController {
     // MARK: - Property
     private let keyChains = HeaderUtils()
     // MARK: - UI Property
@@ -12,7 +12,7 @@ class SplashViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayout()
-        self.view.backgroundColor = .gray000
+        setConfig()
         checkAndUpdateIfNeeded()
     }
     // MARK: - Setting
@@ -27,6 +27,7 @@ class SplashViewController: BaseViewController {
     }
     override func setConfig() {
         super.setConfig()
+        self.view.backgroundColor = .gray000
     }
     // MARK: - Custom Method
     private func setRootViewController() {
@@ -95,21 +96,23 @@ extension SplashViewController {
                 }
                 print(splitCurrentProjectVersionArray, "프로젝트 버전")
                 print(splitMarketingVersionArray, "실제 앱스토어 버전")
-
-                if splitCurrentProjectVersionArray.count > 0 && splitMarketingVersionArray.count > 0 {
-                    if splitCurrentProjectVersion[0] < splitMarketingVersionArray[0] {
-                        self.showMajorUpdateAlert()
-                    } else if splitCurrentProjectVersionArray[1] < splitMarketingVersionArray[1] {
-                        self.showMajorUpdateAlert()
-                    } else if splitCurrentProjectVersionArray[2] < splitMarketingVersionArray[2] {
-                        self.checkAppVersion(nowAppVersion: splitMarketingVersionArray)
-                    } else {
-                        print("현재 최신 버전입니다.")
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
-                            self.setRootViewController()
-                        })
-                    }
-                }
+                self.compareProjectVersion(projectVersion: splitCurrentProjectVersionArray, marketingVersion: splitMarketingVersionArray)
+            }
+        }
+    }
+    func compareProjectVersion(projectVersion: [Int], marketingVersion: [Int]) {
+        if projectVersion.count > 0 && marketingVersion.count > 0 {
+            if projectVersion[0] < marketingVersion[0] {
+                self.showMajorUpdateAlert()
+            } else if projectVersion[1] < marketingVersion[1] {
+                self.showMajorUpdateAlert()
+            } else if projectVersion[2] < marketingVersion[2] {
+                self.checkAppVersion(nowAppVersion: marketingVersion)
+            } else {
+                print("현재 최신 버전입니다.")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                    self.setRootViewController()
+                })
             }
         }
     }
@@ -121,20 +124,27 @@ extension SplashViewController {
             if appVersion != nowAppVersion {
                 showMinorUpdateAlert()
                 userDefaultsManager.save(value: nowAppVersion, forkey: .appVersion)
+            } else {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                    self.setRootViewController()
+                })
             }
         } else {
             userDefaultsManager.save(value: nowAppVersion, forkey: .appVersion)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                self.setRootViewController()
+            })
         }
     }
     func showMajorUpdateAlert() {
         let alert = view.showAlert(title: "업데이트 알림", message: "더 나은 서비스로 찾아왔어요!", cancelButtonMessage: "", okButtonMessage: "업데이트", type: .noti)
-        alert.okButtonTapCompletion = { [weak self] in
+        alert.okButtonTapCompletion = {
             AppStoreCheck().openAppStore()
         }
     }
     func showMinorUpdateAlert() {
         let alert = view.showAlert(title: "업데이트 알림", message: "더 나은 서비스로 찾아왔어요!", cancelButtonMessage: "취소", okButtonMessage: "업데이트", type: .alert)
-        alert.okButtonTapCompletion = { [weak self] in
+        alert.okButtonTapCompletion = {
             AppStoreCheck().openAppStore()
         }
         alert.cancelButtonTapCompletion = { [weak self] in
